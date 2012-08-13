@@ -3,7 +3,7 @@
  *  apply to the normal and widescreen layouts. You may override these styles in the normal 
  *  and widescreen CSS files as appropriate. */
  
- #block-nice-menus-1, #block-nice-menus-2 , #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1 {
+ #block-nice-menus-1, #block-nice-menus-2 , #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block-2 {
 	display: block;
 }
 
