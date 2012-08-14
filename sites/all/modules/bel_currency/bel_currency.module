@@ -1,0 +1,75 @@
+<?php 
+
+/**
+* Implements hook_help.
+*
+* Displays help and module information.
+*
+* @param path 
+*   Which path of the site we're using to display help
+* @param arg
+*   Array that holds the current path as returned from arg() function
+*/
+
+function bel_currency_help($path, $arg) {
+   switch ($path) {
+     case "admin/help#bel_currency":
+       return '<p>'.t("Displays current currency").'</p>';
+       break;
+   }
+}
+
+/** 
+* Implements hook_block_info().
+*/
+
+function bel_currency_block_info() {
+  $blocks['bel_currency'] = array(
+    'info' => t('Currency'), //Имя, которое будет показано в списке блоков.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //По умолчанию
+  );
+  return $blocks;
+}
+
+/**
+* Custom parser function
+*/
+
+function bel_currency_parser() {
+    $aCurrencyName = array("USD","EUR","RUB"); // Валюты, которые мониторим
+	$today = date("m/d/y");
+    $xml = simplexml_load_file("http://www.nbrb.by/Services/XmlExRates.aspx?ondate=$today"); // Запрашиваем курсы валют с сайта nbrb.by
+    $answer = '';
+	foreach ($xml->Currency as $item)
+    {     
+        if (in_array($item->CharCode, $aCurrencyName)) // Пройдемся по всем валютам
+        {
+            // Если текущая валюта в списке тех, которая нам нужна - будем анализировать её
+            $curRate = floatval($item->Rate); // Текущий курс валюты
+			$answer .= $item->CharCode.'&nbsp;'.number_format($curRate,2,'.','').';'.'&nbsp;'; // Выведем результат
+        }
+    }
+	return $answer;
+}
+
+/**
+* Display result
+*/
+
+function bel_currency_block_view($delta = '') {
+  switch($delta){
+    case 'bel_currency':
+      $block['subject'] = t('Currency');
+      if(user_access('access content')){  
+        $result = bel_currency_parser(); //Use our function for getting result
+		  if (empty($result)) { 
+          $block['content'] = t('Нет доступных источников.'); 
+        } else {
+          //Передаем данные через функцию theme.
+          $block['content'] = $result;
+        }
+      }
+  }
+  return $block;
+}
+   
