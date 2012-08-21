@@ -1,8 +1,8 @@
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
- #block-views-banners-block {
+ #block-views-banners-block, #block-quicktabs-social-blocks {
 	display: block;
  }
  
- #block-views-banners-block-1 {
+ #block-views-banners-block-1, #block-quicktabs-social-blocks-normal {
 	display: none
  }
