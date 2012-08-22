@@ -6,3 +6,15 @@
  #block-views-banners-block-1, #block-quicktabs-social-blocks-normal {
 	display: none
  }
+ 
+ /*Main Menu Style*/ 
+ 
+ .main-menu {
+	font-size: 2.1em;
+}
+
+/*Secondary Menu Style*/
+
+.secondary-menu {
+	font-size: 1.5em;
+}

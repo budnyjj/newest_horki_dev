@@ -10,3 +10,19 @@
 #block-menu-menu-mobile, #block-menu-menu-second-mobile-menu {
 	display: none;
 }
+
+/*Main Menu Style*/
+
+.main-menu {
+	font-size: 1.2em;
+}
+
+/*Secondary Menu Style*/
+
+.secondary-menu {
+	font-size: 0.8em;
+}
+
+
+
+
