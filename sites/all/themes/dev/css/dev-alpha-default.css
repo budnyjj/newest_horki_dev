@@ -1,1 +1,60 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+#block-nice-menus-4, #block-nice-menus-3 {
+	display: block;
+}
+
+/*Common Menu Style*/
+nav {
+	display: block;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.main-menu, .secondary-menu {
+	clear:left;
+	float:left;
+	position:relative;
+	left:50%;
+	text-align:center;
+}
+
+.inline li {
+	margin: 0;
+	display:block;
+	float:left;
+	list-style:none;
+	padding:0;
+	position:relative;
+	right:50%;
+} 
+
+/*Comments Links*/
+.node ul.inline {
+	float: left;
+	left: 50%;
+	position: relative;
+}
+
+/*Text Styles*/
+
+h2.block-title {
+	font-family: "Georgia";
+    font-style: normal;
+    font-weight: normal;
+	
+	color: #51626f;
+	font-size: 1.6em; 
+    text-align: right;
+	padding: 5px 10px;
+}
+
+.view-display-id-block_1 {
+	font-size: 1.8em;
+	font-family: 'Georgia';
+    font-style: normal;
+    font-weight: normal;
+}	
+	
