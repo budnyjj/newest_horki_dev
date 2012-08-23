@@ -5,6 +5,18 @@
 	display: none;
 }
 
+/*Standart Zones Settings*/
+
+.zone {
+	margin-top: 10px;
+}
+
+.node {
+	margin: 10px 0px;
+	padding: 0px 10px;
+}
+
+
 /*Common Menu Style*/
 nav {
 	display: none;
@@ -20,18 +32,29 @@ nav {
 }
 
 #block-views-front-block-1 {
-	margin: 10px 0;
 	background-color: #F7DEB6;
 	padding: 5px 15px;
 }
 
+.main-menu, .secondary-menu {
+	font-family: "Tahoma";
+	font-style: normal;
+	font-weight: normal;
+}
+
 /*Text Styles*/
 
-a, p  {
+html {
+	font-family: "Tahoma";
+    font-style: normal;
+    font-weight: normal;
 	color: #04202e;
 }
 
 a:link {
+	font-family: "Tahoma";
+    font-style: normal;
+    font-weight: normal;
 	color: #394a59;
 }
 
@@ -50,7 +73,6 @@ h2.block-title {
 	font-family: "Tahoma";
     font-style: normal;
     font-weight: normal;
-	
 	color: #51626f;
 	font-size: 1.6em; 
     text-align: right;
@@ -67,24 +89,38 @@ h2.block-title {
 	color: #04202e !important;
 }
 
+.field-label {
+	font-family: "Tahoma";
+    font-style: normal;
+    font-weight: normal;
+	color: #394A59;
+}
+
+.field-items {
+	font-family: "Tahoma";
+	font-style: normal;
+	font-weight: normal;
+	color: #04202e;
+}
+
+
 .view-footer {
 	padding: 10px;
 	text-align: right;
-	font-size: 0.8em;
+/*	font-size: 0.8em;*/
 }
 
 .ds-2col-stacked-fluid {
-	margin: 30px 0px;
 }
 
 .group-footer {
 	text-align: right;
 }	
 
-.view-content {
+/*.view-content {
 	padding: 5px 10px;
 }
-
+*/
 #section-footer {
 	background-color: #04202e;
 }

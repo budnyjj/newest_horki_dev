@@ -14,15 +14,49 @@
 /*Main Menu Style*/
 
 .main-menu {
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 
 /*Secondary Menu Style*/
 
 .secondary-menu {
+	font-size: 1.0em;
+}
+
+h2.block-title {
+	color: #51626f;
+	font-size: 1.1em;
+	text-align: right;
+}
+
+.view-display-id-block_1 {
+	font-size: 1.1em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+a:link {
+	font-size: 0.8em;  
+}
+
+.group-left, .views-label-name, .views-field-field-where {
 	font-size: 0.8em;
 }
 
+.username {
+	font-size: 0.8em;
+}
+
+#quicktabs-tab-social_blocks_narrow-0, #quicktabs-tab-social_blocks_narrow-1 {
+	font-size: 1.4em; 
+}
+
+#edit-custom-search-blocks-form-1--2 {
+	width: 120px;
+
+}
 
 
 
