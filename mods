@@ -1,0 +1,305 @@
+ Package        Імя                                Тып     Стату�     Вер�    
+                                                           �          �ія     
+ @font-your-fa  @font-your-face (fontyourface)     Module  Enabled    7.x-2.4 
+ ce                                                                           
+ @font-your-fa  @font-your-face UI                 Module  Enabled    7.x-2.4 
+ ce             (fontyourface_ui)                                             
+ @font-your-fa  Font Squirrel API (fontsquirrel)   Module  Enabled    7.x-2.4 
+ ce                                                                           
+ @font-your-fa  Fontdeck (fontdeck)                Module  Enabled    7.x-2.4 
+ ce                                                                           
+ @font-your-fa  Fonts.com (fonts_com)              Module  Enabled    7.x-2.4 
+ ce                                                                           
+ @font-your-fa  Google Fonts API                   Module  Enabled    7.x-2.4 
+ ce             (google_fonts_api)                                            
+ @font-your-fa  Local Fonts (local_fonts)          Module  Enabled    7.x-2.4 
+ ce                                                                           
+ @font-your-fa  Typekit API (typekit_api)          Module  Enabled    7.x-2.4 
+ ce                                                                           
+ Access         Content Access (content_access)    Module  Enabled    7.x-1.2 
+ control                                                              -beta1  
+ Access         Content Access Rules Integrations  Module  Not        7.x-1.2 
+ control        (content_access_rules)                     installed  -beta1  
+ Administratio  Administration Development tools   Module  Not        7.x-3.0 
+ n              (admin_devel)                              installed  -rc3    
+ Administratio  Administration menu (admin_menu)   Module  Enabled    7.x-3.0 
+ n                                                                    -rc3    
+ Administratio  Administration menu Toolbar style  Module  Enabled    7.x-3.0 
+ n              (admin_menu_toolbar)                                  -rc3    
+ Chaos tool     Bulk Export (bulk_export)          Module  Not        7.x-1.0 
+ suite                                                     installed          
+ Chaos tool     Chaos tools (ctools)               Module  Enabled    7.x-1.0 
+ suite                                                                        
+ Chaos tool     Chaos Tools (CTools) AJAX Example  Module  Not        7.x-1.0 
+ suite          (ctools_ajax_sample)                       installed          
+ Chaos tool     Chaos Tools (CTools) Plugin        Module  Not        7.x-1.0 
+ suite          Example (ctools_plugin_example)            installed          
+ Chaos tool     Custom content panes               Module  Not        7.x-1.0 
+ suite          (ctools_custom_content)                    installed          
+ Chaos tool     Custom rulesets                    Module  Not        7.x-1.0 
+ suite          (ctools_access_ruleset)                    installed          
+ Chaos tool     Page manager (page_manager)        Module  Not        7.x-1.0 
+ suite                                                     installed          
+ Chaos tool     Stylizer (stylizer)                Module  Not        7.x-1.0 
+ suite                                                     installed          
+ Chaos tool     Views content panes                Module  Not        7.x-1.0 
+ suite          (views_content)                            installed          
+ Core           Aggregator (aggregator)            Module  Not        7.15    
+                                                           installed          
+ Core           Block (block)                      Module  Enabled    7.15    
+ Core           Blog (blog)                        Module  Enabled    7.15    
+ Core           Book (book)                        Module  Not        7.15    
+                                                           installed          
+ Core           Color (color)                      Module  Not        7.15    
+                                                           installed          
+ Core           Comment (comment)                  Module  Enabled    7.15    
+ Core           Contact (contact)                  Module  Not        7.15    
+                                                           installed          
+ Core           Content translation (translation)  Module  Not        7.15    
+                                                           installed          
+ Core           Contextual links (contextual)      Module  Enabled    7.15    
+ Core           Dashboard (dashboard)              Module  Not        7.15    
+                                                           installed          
+ Core           Database logging (dblog)           Module  Enabled    7.15    
+ Core           Field (field)                      Module  Enabled    7.15    
+ Core           Field SQL storage                  Module  Enabled    7.15    
+                (field_sql_storage)                                           
+ Core           Field UI (field_ui)                Module  Enabled    7.15    
+ Core           File (file)                        Module  Enabled    7.15    
+ Core           Filter (filter)                    Module  Enabled    7.15    
+ Core           Forum (forum)                      Module  Not        7.15    
+                                                           installed          
+ Core           Help (help)                        Module  Not        7.15    
+                                                           installed          
+ Core           Image (image)                      Module  Enabled    7.15    
+ Core           List (list)                        Module  Enabled    7.15    
+ Core           Locale (locale)                    Module  Enabled    7.15    
+ Core           Menu (menu)                        Module  Enabled    7.15    
+ Core           Node (node)                        Module  Enabled    7.15    
+ Core           Number (number)                    Module  Enabled    7.15    
+ Core           OpenID (openid)                    Module  Not        7.15    
+                                                           installed          
+ Core           Options (options)                  Module  Enabled    7.15    
+ Core           Overlay (overlay)                  Module  Disabled   7.15    
+ Core           Path (path)                        Module  Enabled    7.15    
+ Core           PHP filter (php)                   Module  Enabled    7.15    
+ Core           Poll (poll)                        Module  Not        7.15    
+                                                           installed          
+ Core           RDF (rdf)                          Module  Not        7.15    
+                                                           installed          
+ Core           Search (search)                    Module  Enabled    7.15    
+ Core           Shortcut (shortcut)                Module  Not        7.15    
+                                                           installed          
+ Core           Statistics (statistics)            Module  Enabled    7.15    
+ Core           Syslog (syslog)                    Module  Enabled    7.15    
+ Core           System (system)                    Module  Enabled    7.15    
+ Core           Taxonomy (taxonomy)                Module  Enabled    7.15    
+ Core           Testing (simpletest)               Module  Not        7.15    
+                                                           installed          
+ Core           Text (text)                        Module  Enabled    7.15    
+ Core           Toolbar (toolbar)                  Module  Not        7.15    
+                                                           installed          
+ Core           Tracker (tracker)                  Module  Enabled    7.15    
+ Core           Trigger (trigger)                  Module  Not        7.15    
+                                                           installed          
+ Core           Update manager (update)            Module  Enabled    7.15    
+ Core           User (user)                        Module  Enabled    7.15    
+ Custom Search  Custom Search (custom_search)      Module  Enabled    7.x-1.1 
+                                                                      0       
+ Custom Search  Custom Search Blocks               Module  Enabled    7.x-1.1 
+                (custom_search_blocks)                                0       
+ Custom Search  Custom Search                      Module  Not        7.x-1.1 
+                Internationalization                       installed  0       
+                (custom_search_i18n)                                          
+ Custom Search  Custom Search Taxonomy             Module  Enabled    7.x-1.1 
+                (custom_search_taxonomy)                              0       
+ Development    Devel (devel)                      Module  Enabled    7.x-1.3 
+ Development    Devel generate (devel_generate)    Module  Not        7.x-1.3 
+                                                           installed          
+ Development    Devel node access                  Module  Enabled    7.x-1.3 
+                (devel_node_access)                                           
+ Display suite  Display suite (ds)                 Module  Enabled    7.x-1.5 
+ Display suite  Extras (ds_extras)                 Module  Enabled    7.x-1.5 
+ Display suite  Forms (ds_forms)                   Module  Not        7.x-1.5 
+                                                           installed          
+ Display suite  Search display (ds_search)         Module  Not        7.x-1.5 
+                                                           installed          
+ Features       Features (features)                Module  Enabled    7.x-1.0 
+ Fields         Email (email)                      Module  Enabled    7.x-1.1 
+ Fields         Font Reference (font_reference)    Module  Not        7.x-2.4 
+                                                           installed          
+ Fields         Link (link)                        Module  Enabled    7.x-1.0 
+ Fields         Node Reference (node_reference)    Module  Enabled    7.x-2.0 
+ Fields         Phone (phone)                      Module  Enabled    7.x-1.x 
+                                                                      -dev    
+ Fields         References (references)            Module  Enabled    7.x-2.0 
+ Fields         User Reference (user_reference)    Module  Enabled    7.x-2.0 
+ Form Elements  Hierarchical Select                Module  Enabled    7.x-3.0 
+                (hierarchical_select)                                 -alpha5 
+ Form Elements  Hierarchical Select Flat List      Module  Disabled   7.x-3.0 
+                (hs_flatlist)                                         -alpha5 
+ Form Elements  Hierarchical Select Menu           Module  Disabled   7.x-3.0 
+                (hs_menu)                                             -alpha5 
+ Form Elements  Hierarchical Select Small          Module  Disabled   7.x-3.0 
+                Hierarchy (hs_smallhierarchy)                         -alpha5 
+ Form Elements  Hierarchical Select Taxonomy       Module  Enabled    7.x-3.0 
+                (hs_taxonomy)                                         -alpha5 
+ Form Elements  Hierarchical Select Taxonomy       Module  Enabled    7.x-3.0 
+                Views (hs_taxonomy_views)                             -alpha5 
+ Insight        Insight (insight)                  Module  Disabled   7.x-1.0 
+                                                                      -alpha2 
+ Media          File entity (file_entity)          Module  Enabled    7.x-1.2 
+ Media          Media (media)                      Module  Enabled    7.x-1.2 
+ Media          Media Internet Sources             Module  Enabled    7.x-1.2 
+                (media_internet)                                              
+ Media          Media: Flickr (media_flickr)       Module  Enabled    7.x-1.0 
+                                                                      -alpha1 
+ Media          Media: YouTube (media_youtube)     Module  Enabled    7.x-1.0 
+                                                                      -beta3  
+ Media          Plupload integration module        Module  Enabled    7.x-1.0 
+                (plupload)                                                    
+ Meta tags      Meta tags (metatag)                Module  Enabled    7.x-1.0 
+                                                                      -alpha7 
+ Meta tags      Open Graph meta tags               Module  Not        7.x-1.0 
+                (metatag_opengraph)                        installed  -alpha7 
+ OneAll Social  OneAll Social Login                Module  Enabled    7.x-1.1 
+ Login          (oneall_social_login)                                         
+ OneAll Social  OneAll Social Login Core           Module  Enabled    7.x-1.1 
+ Login          (oneall_social_login_core)                                    
+ OneAll Social  OneAll Social Login Widget         Module  Enabled    7.x-1.1 
+ Login          (oneall_social_login_widget)                                  
+ Organic        Profile2 group access              Module  Not        7.x-1.2 
+ groups         (profile2_og_access)                       installed          
+ Other          Adaptive Image (adaptive_image)    Module  Enabled    7.x-1.4 
+ Other          Advanced help (advanced_help)      Module  Enabled    7.x-1.0 
+ Other          Advanced help example              Module  Not        7.x-1.0 
+                (help_example)                             installed          
+ Other          AJAX Comments (ajax_comments)      Module  Disabled   7.x-1.0 
+                                                                      -alpha1 
+ Other          AJAX Comments Nodejs Integration   Module  Not        7.x-1.0 
+                (ajax_comments_nodejs)                     installed  -alpha1 
+ Other          Better Formats (better_formats)    Module  Enabled    7.x-1.0 
+                                                                      -beta1  
+ Other          Colorbox (colorbox)                Module  Enabled    7.x-1.3 
+ Other          Currency (bel_currency)            Module  Enabled            
+ Other          Entity API (entity)                Module  Enabled    7.x-1.0 
+                                                                      -rc3    
+ Other          Entity tokens (entity_token)       Module  Enabled    7.x-1.0 
+                                                                      -rc3    
+ Other          Libraries (libraries)              Module  Enabled    7.x-2.0 
+ Other          LoginToboggan (logintoboggan)      Module  Enabled    7.x-1.3 
+ Other          LoginToboggan Content Access       Module  Enabled    7.x-1.3 
+                Integration                                                   
+                (logintoboggan_content_access_int                             
+                egration)                                                     
+ Other          LoginToboggan Rules Integration    Module  Not        7.x-1.3 
+                (logintoboggan_rules)                      installed          
+ Other          LoginToboggan Variable             Module  Not        7.x-1.3 
+                Integration                                installed          
+                (logintoboggan_variable)                                      
+ Other          Media Colorbox (media_colorbox)    Module  Disabled   7.x-1.0 
+                                                                      -rc1    
+ Other          Menu breadcrumb (menu_breadcrumb)  Module  Enabled    7.x-1.3 
+ Other          Mollom (mollom)                    Module  Enabled    7.x-2.2 
+ Other          Multiple forms (multiform)         Module  Enabled    7.x-1.0 
+ Other          Nice Menus (nice_menus)            Module  Enabled    7.x-2.1 
+ Other          Pathauto (pathauto)                Module  Enabled    7.x-1.1 
+ Other          Profile2 (profile2)                Module  Enabled    7.x-1.2 
+ Other          Profile2 pages (profile2_page)     Module  Disabled   7.x-1.2 
+ Other          Quicktabs (quicktabs)              Module  Enabled    7.x-3.4 
+ Other          Quicktabs Styles                   Module  Enabled    7.x-3.4 
+                (quicktabs_tabstyles)                                         
+ Other          Redirect (redirect)                Module  Enabled    7.x-1.0 
+                                                                      -beta4  
+ Other          Search 404 (search404)             Module  Enabled    7.x-1.2 
+ Other          Strongarm (strongarm)              Module  Enabled    7.x-2.0 
+ Other          Token (token)                      Module  Enabled    7.x-1.1 
+ Path           Global Redirect (globalredirect)   Module  Enabled    7.x-1.5 
+ management                                                                   
+ SEO            Page Title (page_title)            Module  Disabled   7.x-2.7 
+ Service Links  Service links (service_links)      Module  Enabled    7.x-2.1 
+ Service Links  Service Links Displays             Module  Enabled    7.x-2.1 
+                (service_links_displays)                                      
+ Service Links  Service Links Share                Module  Not        7.x-2.1 
+                (service_links_share)                      installed          
+ Service Links  Service Links Sprites              Module  Enabled    7.x-2.1 
+                (service_links_sprites)                                       
+ Service Links  Basque Services (basque_services)  Module  Not        7.x-2.1 
+ - Services                                                installed          
+ Service Links  Dutch Services (dutch_services)    Module  Not        7.x-2.1 
+ - Services                                                installed          
+ Service Links  Farsi Services (farsi_services)    Module  Not        7.x-2.1 
+ - Services                                                installed          
+ Service Links  Favorite Services                  Module  Not        7.x-2.1 
+ - Services     (favorite_services)                        installed          
+ Service Links  Forward Services                   Module  Not        7.x-2.1 
+ - Services     (forward_services)                         installed          
+ Service Links  General Services                   Module  Not        7.x-2.1 
+ - Services     (general_services)                         installed          
+ Service Links  German Services (german_services)  Module  Not        7.x-2.1 
+ - Services                                                installed          
+ Service Links  Hungarian Services                 Module  Not        7.x-2.1 
+ - Services     (hungarian_services)                       installed          
+ Service Links  Italian Services                   Module  Not        7.x-2.1 
+ - Services     (italian_services)                         installed          
+ Service Links  Polish Services (polish_services)  Module  Not        7.x-2.1 
+ - Services                                                installed          
+ Service Links  Print Services (print_services)    Module  Not        7.x-2.1 
+ - Services                                                installed          
+ Service Links  Russian Services                   Module  Enabled    7.x-2.1 
+ - Services     (russian_services)                                            
+ Service Links  Spanish Services                   Module  Not        7.x-2.1 
+ - Services     (spanish_services)                         installed          
+ Service Links  Swedish Services                   Module  Not        7.x-2.1 
+ - Services     (swedish_services)                         installed          
+ Service Links  Widget Services (widget_services)  Module  Enabled    7.x-2.1 
+ - Services                                                                   
+ Statistics     Google Analytics                   Module  Enabled    7.x-1.2 
+                (googleanalytics)                                             
+ Theme Tools    Delta API (delta)                  Module  Enabled    7.x-3.0 
+                                                                      -beta11 
+ Theme Tools    Delta Blocks (delta_blocks)        Module  Not        7.x-3.0 
+                                                           installed  -beta11 
+ Theme Tools    Delta Color (delta_color)          Module  Not        7.x-3.0 
+                                                           installed  -beta11 
+ Theme Tools    Delta UI (delta_ui)                Module  Enabled    7.x-3.0 
+                                                                      -beta11 
+ Theme Tools    Omega Tools (omega_tools)          Module  Enabled    7.x-3.0 
+                                                                      -rc4    
+ User           CKEditor (ckeditor)                Module  Enabled    7.x-1.9 
+ interface                                                                    
+ User           jQuery Update (jquery_update)      Module  Enabled    7.x-2.2 
+ interface                                                                    
+ User           Lightbox2 (lightbox2)              Module  Disabled   7.x-1.0 
+ interface                                                            -beta1  
+ Views          Views (views)                      Module  Enabled    7.x-3.3 
+ Views          Views Slideshow (views_slideshow)  Module  Enabled    7.x-3.0 
+ Views          Views Slideshow: Cycle             Module  Enabled    7.x-3.0 
+                (views_slideshow_cycle)                                       
+ Views          Views UI (views_ui)                Module  Enabled    7.x-3.3 
+ Webform        Webform (webform)                  Module  Enabled    7.x-3.1 
+                                                                      8       
+ XML sitemap    XML sitemap (xmlsitemap)           Module  Enabled    7.x-2.0 
+                                                                      -rc1    
+ XML sitemap    XML sitemap custom                 Module  Enabled    7.x-2.0 
+                (xmlsitemap_custom)                                   -rc1    
+ XML sitemap    XML sitemap engines                Module  Enabled    7.x-2.0 
+                (xmlsitemap_engines)                                  -rc1    
+ XML sitemap    XML sitemap internationalization   Module  Not        7.x-2.0 
+                (xmlsitemap_i18n)                          installed  -rc1    
+ XML sitemap    XML sitemap menu                   Module  Enabled    7.x-2.0 
+                (xmlsitemap_menu)                                     -rc1    
+ XML sitemap    XML sitemap node                   Module  Enabled    7.x-2.0 
+                (xmlsitemap_node)                                     -rc1    
+ XML sitemap    XML sitemap taxonomy               Module  Enabled    7.x-2.0 
+                (xmlsitemap_taxonomy)                                 -rc1    
+ XML sitemap    XML sitemap user                   Module  Enabled    7.x-2.0 
+                (xmlsitemap_user)                                     -rc1    
+ Core           Bartik (bartik)                    Theme   Enabled    7.15    
+ Core           Garland (garland)                  Theme   Disabled   7.15    
+ Core           Seven (seven)                      Theme   Enabled    7.15    
+ Core           Stark (stark)                      Theme   Disabled   7.15    
+ Other          Alpha (alpha)                      Theme   Disabled   7.x-3.1 
+ Other          dev (dev)                          Theme   Enabled    1.x     
+ Other          Omega (omega)                      Theme   Disabled   7.x-3.1 
+
