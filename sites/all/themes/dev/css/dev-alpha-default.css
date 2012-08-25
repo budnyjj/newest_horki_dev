@@ -4,16 +4,95 @@
 	display: block;
 }
 
-/*Common Menu Style*/
-nav {
-	display: block;
-}
+/*Initial Links & Text Settings*/
 
-a:link {
+a:link, h2.block-title{
 	font-family: "Georgia";
 	font-style: normal;
 	font-weight: normal;
 	text-decoration: none;
+}
+
+a:hover {
+	color: #d6492a;
+	text-decoration: underline;
+}
+
+li a.active {
+	color: #d6492a;
+	text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, .breadcrumb {
+	font-family: "Georgia";
+	font-style: normal;
+	font-weight: normal;
+}
+
+/*Blocks Colors Settings*/
+
+#zone-menu, #block-block-2, #block-block-3, #block-views-banners-block, #block-custom-search-blocks-1, #block-views-banners-block-2, #block-views-banners-block-1, #block-views-banners-block, #block-quicktabs-social-blocks-narrow , #block-nice-menus-3, #block-nice-menus-4 {
+	background-color: #fff;
+}
+
+#block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system {
+	background-color: #04202e;
+}
+
+/*Information Block's Float Settings*/
+
+#block-block-2, #block-bel-currency-bel-currency {
+	float: right;
+}
+
+/*Weather Block Settings*/
+
+#block-block-2 {
+	padding: 0px;
+	margin: 5px;
+}
+
+/*Social Links & Search Blocks' Settings*/
+#block-block-3, #block-custom-search-blocks-1 {
+	padding: 0px;
+}
+ 
+/*Currency Block Settings*/
+
+#block-bel-currency-bel-currency {
+	width: 86px;
+	height: 56px;
+	margin-right: 5px;
+	padding: 2px;
+}
+
+.bel_currency_char, .bel_currency_num {
+	display: inline;
+}
+
+.bel_currency_char {
+	color: #51626f;
+}
+
+.bel_currency_row {
+	font-family: "Tahoma";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	float: right;
+}
+
+/*Search Block Positioning*/
+
+#edit-actions, .form-item-custom-search-blocks-form-1 {
+	float: left;
+	margin: 0px 2px;
+}
+
+/* Main Menu Positioning*/
+
+nav {
+	display: block;
 }
 
 .main-menu, .secondary-menu {
@@ -22,6 +101,7 @@ a:link {
 	position:relative;
 	left:50%;
 	text-align:center;
+	text-decoration: none;
 }
 
 .inline li {
@@ -34,14 +114,21 @@ a:link {
 	right:50%;
 } 
 
-/*Comments Links*/
 .node ul.inline {
 	float: left;
 	left: 50%;
 	position: relative;
 }
 
-/*Text Styles*/
+.group-footer {
+	margin-top: 10px;
+}
+
+#quicktabs-tab-social_blocks-0, #quicktabs-tab-social_blocks-1, #quicktabs-tab-social_blocks_normal-0, #quicktabs-tab-social_blocks_normal-1, #quicktabs-tab-social_blocks_narrow-0, #quicktabs-tab-social_blocks_narrow-1 {
+	color: #04202e;
+}
+
+/*
 
 h2.block-title {
 	font-family: "Georgia";
@@ -88,32 +175,5 @@ li .a {
 	float: right;
 }
 
-#block-bel-currency-bel-currency {
-	width: 80px;
-	height: 50px;
-	padding: 6px;
-	margin-right: 5px;
-}
 
-#block-bel-currency-bel-currency, #block-views-ads-block, #block-views-front-block-2, #block-views-blocks-block-1, .quicktabs_main {
-	background-color: #f3f3f3;
-	padding: 5px;
-	margin-bottom: 20px;
-}
-
-.bel_currency_char, .bel_currency_num {
-	display: inline;
-}
-
-.bel_currency_char {
-	color: #51626f;
-}
-
-.bel_currency_row {
-	font-family: "Tahoma";
-	font-style: normal;
-	font-weight: normal;
-	font-size: 0.8em;
-	float: right;
-}
 

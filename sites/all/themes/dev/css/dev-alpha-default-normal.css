@@ -2,7 +2,7 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
  
- #block-views-banners-block-1, #block-quicktabs-social-blocks-normal {
+ #block-bel-currency-bel-currency, #block-views-banners-block-1, #block-quicktabs-social-blocks-normal {
 	display: block;
  }
  
@@ -10,14 +10,50 @@
 	display: none
  }
  
-/*Main Menu Style*/ 
- 
- .main-menu {
-	font-size: 1.6em;
+/*Text Styles Settings*/
+
+body, .breadcrumb, .username, .views-field-view-comment.group-left, .views-label-name, .views-field-field-where {
+	font-size: 14px;
 }
 
-/*Secondary Menu Style*/
+h2, h2.block-title {
+	font-size: 18px;
+}
+
+h3 {
+	text-align: center;
+	font-size: 16px;
+	margin: 5px 0px;
+}
+
+
+/*Main News Block*/
+
+#block-views-front-block-1 {
+	font-size: 18px;
+}
+
+/*Main Menu Style*/
+
+.main-menu {
+	font-size: 24px;
+}
 
 .secondary-menu {
-	font-size: 1.2em;
+	font-size: 18px;
+}
+
+/*Quicktabs Settings*/
+
+#quicktabs-tab-social_blocks_normal-0, #quicktabs-tab-social_blocks_normal-1 {
+	font-size: 18px; 
+}
+
+ul.quicktabs-tabs {
+	width: 200px; 
+	margin: 0 auto;
+}
+
+ul.quicktabs-tabs  li{
+	margin: 40px;
 }

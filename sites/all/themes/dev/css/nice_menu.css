@@ -25,6 +25,7 @@ ul.nice-menu li {
 }
 
 ul.nice-menu a {
+  color: #394a59;
   text-decoration: none;
   padding: 0.3em 5px 0.3em 5px;
 }
@@ -105,6 +106,7 @@ ul.nice-menu-left a, ul.nice-menu-left ul a {
 ******************************/
 
 ul.nice-menu-down {
+  background-color: #f3f3f3;
 /*display: block;
   margin-left: auto;
   margin-right: auto;
@@ -136,48 +138,18 @@ ul.nice-menu-down .menuparent a {
 }
 
 ul.nice-menu-down li.menuparent {
-  background: #eee url(arrow-down.png) right center no-repeat; /* LTR */
+
 }
 
 ul.nice-menu-down li.menuparent:hover {
-  background: #ccc url(arrow-down.png) right center no-repeat; /* LTR */
+  
 }
 
 ul.nice-menu-down li li.menuparent {
-  background: #eee url(arrow-right.png) right center no-repeat; /* LTR */
+ 
 }
 
 ul.nice-menu-down li li.menuparent:hover {
-  background: #ccc url(arrow-right.png) right center no-repeat; /* LTR */
-}
-/*
-#nice-menu-1, #nice-menu-2 {
-clear:left;
-float:left;
-list-style:none;
-margin:0;
-padding:0;
-position:relative;
-left:50%;
-text-align:center;
+  
 }
 
-
-ul.nice-menu-down li {
-display:block;
-float:left;
-list-style:none;
-margin:0;
-padding:0;
-position:relative;
-right:50%;
-}
-
-#nice-menu-1 {
-  font-size: 1.8em;
-}
-
-#nice-menu-2 {
-  font-size: 1.2em;
-}
-*/

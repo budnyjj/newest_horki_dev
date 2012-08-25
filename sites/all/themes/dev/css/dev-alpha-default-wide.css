@@ -7,14 +7,87 @@
 	display: none
  }
  
- /*Main Menu Style*/ 
- 
- .main-menu {
-	font-size: 2.1em;
+/*Text Styles Settings*/
+
+h3 {
+	text-align: center;
+	font-size: 18px;
+	margin: 10px 0px;
 }
 
-/*Secondary Menu Style*/
+h2 {
+	font-size: 22px;
+}
+
+/*Main News Block*/
+
+#block-views-front-block-1 {
+	font-size: 18px;
+}
+
+/*Main Menu Style*/
+
+.main-menu {
+	font-size: 28px;
+}
 
 .secondary-menu {
-	font-size: 1.5em;
+	font-size: 20px;
+}
+
+ul.inline li {
+	padding: 0 12px;
+}
+
+/*Standart Margin & Padding & Color Settings*/
+
+	.block {
+		padding: 15px;
+		margin-bottom: 20px 0px;
+	}
+
+	.node-teaser {
+		margin-bottom: 20px;
+	}
+
+	/*Weather Block Settings*/
+
+	#block-block-2 {
+		padding: 0px;
+		margin: 5px;
+	}
+
+	/*Social Links & Search Blocks' Settings*/
+	#block-nice-menus-3, #block-nice-menus-4, #block-block-3, #block-custom-search-blocks-1 {
+		padding: 0px;
+		margin: 0px;
+	}
+	
+ 
+	/*Currency Block Settings*/
+
+	#block-bel-currency-bel-currency {
+		margin-right: 5px;
+		padding: 2px;
+	}
+
+	/*Search Block Positioning*/
+
+	#edit-actions, .form-item-custom-search-blocks-form-1 {
+		margin: 0px 2px;
+	}
+
+/*Quicktabs Settings*/
+
+#quicktabs-tab-social_blocks-0, #quicktabs-tab-social_blocks-1 {
+	font-size: 20px; 
+}
+
+ul.quicktabs-tabs {
+	width: 200px; 
+	margin: 0 auto;
+}
+
+ul.quicktabs-tabs  li{
+	margin: 40px;
 }

@@ -1,60 +1,20 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-#block-nice-menus-1, #block-nice-menus-2 , #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block, #block-views-banners-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks, #block-quicktabs-social-blocks-narrow, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-4, #block-nice-menus-3 {
+nav, #block-nice-menus-1, #block-nice-menus-2 , #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block, #block-views-banners-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks, #block-quicktabs-social-blocks-narrow, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-4, #block-nice-menus-3 {
 	display: none;
 }
 
-/*Standart Zones Settings*/
+/*Initial Links & Text Settings*/
 
-.zone {
-	margin-top: 10px;
-}
-
-.node {
-	margin: 10px 0px;
-	padding: 0px 10px;
-}
-
-
-/*Common Menu Style*/
-nav {
-	display: none;
-}
-
-/*Mobile Menus Style*/
-
-#block-menu-menu-mobile {
-	background-color: #e0e6e6;
-	padding: 10px 70px 20px 70px;
-	font-size: 2.1em;
-	color: #04202e;
-}
-
-#block-views-front-block-1 {
-	background-color: #F7DEB6;
-	padding: 5px 15px;
-}
-
-.main-menu, .secondary-menu {
+a, h1, h2, h3, h4, h5, h6, p {
 	font-family: "Tahoma";
 	font-style: normal;
 	font-weight: normal;
-}
-
-/*Text Styles*/
-
-html {
-	font-family: "Tahoma";
-    font-style: normal;
-    font-weight: normal;
 	color: #04202e;
 }
 
-a:link {
-	font-family: "Tahoma";
-    font-style: normal;
-    font-weight: normal;
+a:link, a:visited {
 	color: #394a59;
 }
 
@@ -63,80 +23,88 @@ a:hover {
 	text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Tahoma";
-    font-style: normal;
-    font-weight: normal;
+a:active {
+	text-decoration: underline;
 }
 
 h2.block-title {
-	font-family: "Tahoma";
-    font-style: normal;
-    font-weight: normal;
-	color: #51626f;
-	font-size: 1.6em; 
+	color: #8996a0;
+	font-size: 14px; 
     text-align: right;
+	padding-right: 10px;
+	padding-bottom: 10px;
 }
-
-.view-display-id-block_1 {
-	font-size: 1.8em;
-	font-family: 'Tahoma';
-    font-style: normal;
-    font-weight: normal;
-}
-
-.views-field-title {
-	color: #04202e !important;
-}
-
-.field-label {
-	font-family: "Tahoma";
-    font-style: normal;
-    font-weight: normal;
-	color: #394A59;
-}
-
-.field-items {
-	font-family: "Tahoma";
-	font-style: normal;
-	font-weight: normal;
-	color: #04202e;
-}
-
 
 .view-footer {
+	font-size: 14px;
+	float: right;
+	margin-top: 10px;
+}
+
+ul li.leaf {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+
+
+/*Standart Margin & Padding & Color Settings*/
+
+.zone-content {
+	margin: 10px 0px;
+}
+
+.block {
 	padding: 10px;
-	text-align: right;
-/*	font-size: 0.8em;*/
+	background-color: #f3f3f3;
+	margin: 5px 0px;
 }
 
-.ds-2col-stacked-fluid {
+.node-teaser {
+	margin-bottom: 10px;
 }
 
-.group-footer {
-	text-align: right;
-}	
+/*Custom Margin & Padding & Color Settings*/
 
-/*.view-content {
-	padding: 5px 10px;
+#block-views-logo-block {
+	padding: 0px;
+	background-color: #fff;
 }
-*/
-#section-footer {
+	/*Custom block's colors*/
+	
+	#section-footer {
 	background-color: #04202e;
-}
+	}
 
-#block-menu-menu-second-mobile-menu {
-	padding: 10px 70px 20px 70px;
-	font-size: 2.1em;
-	font-family: 'Tahoma';
-    font-style: normal;
-    font-weight: normal;
-}
+	#zone-menu  {
+		background-color: #e0e6e6;
+	}
+
+	#block-menu-menu-second-mobile-menu {
+		font-size: 24px;
+		background-color: #04202e;
+		width: 320px;
+		margin: 0 auto;
+	}
+
+	#block-menu-menu-mobile {
+		background-color: #e0e6e6;
+		font-size: 24px;
+		width: 320px;
+		margin: 0 auto;
+	}
 	
+	.block-main {
+	background-color: #fff;
+	}
 	
-	
-	
-/*Настройки галереи*/
+	#block-views-front-block-1 {
+	background-color: #F7DEB6;
+	font-size: 18px;
+	}
+
+
+/*Gallery Settings*/
 
 .gallery-item {
 	display: block;
@@ -144,19 +112,24 @@ h2.block-title {
 	margin: 5px;
 }
 
-/* Сброс отображения пунктов меню */
 
-ul li.leaf {
-	list-style-type: none;
-	list-style-image: none;
-}
 
-/*Отображение блока поиска*/
+	
+	
+	
+	
+
+
+/* Сброс отображения пунктов меню
+
+
+
+/*Отображение блока поиска
 .form-item-custom-search-blocks-form-1, #edit-actions--2 {
 	display: block;
 	float: left;
 	margin: 0px;
 	padding: 0px;
 }
-
+*/
 

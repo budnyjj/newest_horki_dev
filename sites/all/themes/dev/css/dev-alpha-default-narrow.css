@@ -7,55 +7,112 @@
 	display: block;
 }
 
-#block-menu-menu-mobile, #block-menu-menu-second-mobile-menu {
+#block-bel-currency-bel-currency, #block-menu-menu-mobile, #block-menu-menu-second-mobile-menu {
 	display: none;
 }
+/*Text Styles Settings*/
+
+body, .breadcrumb, .username, .views-field-view-comment.group-left, .views-label-name, .views-field-field-where{
+	font-size: 10px;
+}
+
+h2, h2.block-title {
+	font-size: 14px;
+}
+
+h3 {
+	text-align: center;
+	font-size: 12px;
+	margin: 5px 0px;
+}
+
+.view-footer {
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+#block-views-front-block-1 {
+	background-color: #F7DEB6;
+	font-size: 14px;
+}
+
+/*Standart Margin & Padding & Color Settings*/
+
+	.block {
+		padding: 10px;
+		margin-bottom: 20px; 
+	}
+
+	.node-teaser {
+		margin-bottom: 15px;
+	}
+
+	/*Weather Block Settings*/
+
+	#block-block-2 {
+		padding: 0px;
+		margin: 5px;
+	}
+
+	/*Social Links & Search Blocks' Settings*/
+	#block-logintoboggan-logintoboggan-logged-in, #block-nice-menus-3, #block-nice-menus-4, #block-block-3, #block-custom-search-blocks-1 {
+		padding: 0px;
+		margin: 0px;
+	}
+ 
+	/*Currency Block Settings*/
+
+	#block-bel-currency-bel-currency {
+		margin-right: 5px;
+		padding: 2px;
+	}
+
+	/*Search Block Positioning*/
+
+	#edit-actions, .form-item-custom-search-blocks-form-1 {
+		margin: 0px 2px;
+	}
+
+
+/*Search Blocks Width Settings*/
+
+#block-custom-search-blocks-1 {
+	width: 200px;
+	margin: 25px auto;
+}
+
+#edit-custom-search-blocks-form-1--2 {
+	width: 150px;
+}
+
 
 /*Main Menu Style*/
 
 .main-menu {
-	font-size: 1.4em;
+	font-size: 18px;
 }
-
-/*Secondary Menu Style*/
 
 .secondary-menu {
-	font-size: 1.0em;
+	font-size: 11px;
 }
 
-h2.block-title {
-	color: #51626f;
-	font-size: 1.1em;
-	text-align: right;
+ul.inline li {
+	padding: 0 5px;
 }
 
-.view-display-id-block_1 {
-	font-size: 1.1em;
-}
-
-h2 {
-	font-size: 1.3em;
-}
-
-a:link {
-	font-size: 0.8em;  
-}
-
-.group-left, .views-label-name, .views-field-field-where {
-	font-size: 0.8em;
-}
-
-.username {
-	font-size: 0.8em;
-}
+/*Quicktabs Settings*/
 
 #quicktabs-tab-social_blocks_narrow-0, #quicktabs-tab-social_blocks_narrow-1 {
-	font-size: 1.4em; 
+	font-size: 14px; 
 }
 
-#edit-custom-search-blocks-form-1--2 {
-	width: 120px;
+ul.quicktabs-tabs {
+	width: 150px; 
+	margin: 0 auto;
+}
 
+ul.quicktabs-tabs  li{
+	margin: 20px;
 }
 
 
