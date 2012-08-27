@@ -6,16 +6,27 @@
 
 /*Initial Links & Text Settings*/
 
-a:link, h2.block-title{
-	font-family: "Georgia";
-	font-style: normal;
-	font-weight: normal;
-	text-decoration: none;
-}
+	h2.block-title, nav.navigation li a, div.field-name-title a {
+		font-family: "Georgia";
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	
+	div.view-display-id-block_1 a {
+		font-family: "Georgia";
+		font-style: normal;
+		font-weight: normal;
+	}
 
-a:hover {
+	div.view-footer a:link {
+		font-family: "Tahoma";
+		font-style: normal;
+		font-weight: normal;
+	}
+
+a:hover, div.view-display-id-block_1 a:hover {
 	color: #d6492a;
-	text-decoration: underline;
 }
 
 li a.active {
@@ -23,13 +34,11 @@ li a.active {
 	text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6, .breadcrumb {
-	font-family: "Georgia";
-	font-style: normal;
-	font-weight: normal;
-}
-
 /*Blocks Colors Settings*/
+
+#block-views-front-block-1 {
+	background-color: #F7DEB6;
+}
 
 #zone-menu, #block-block-2, #block-block-3, #block-views-banners-block, #block-custom-search-blocks-1, #block-views-banners-block-2, #block-views-banners-block-1, #block-views-banners-block, #block-quicktabs-social-blocks-narrow , #block-nice-menus-3, #block-nice-menus-4 {
 	background-color: #fff;
@@ -89,91 +98,52 @@ h1, h2, h3, h4, h5, h6, .breadcrumb {
 	margin: 0px 2px;
 }
 
-/* Main Menu Positioning*/
+/* Main Menu Positioning */
 
-nav {
-	display: block;
-}
+	nav {
+		display: block;
+	}
 
-.main-menu, .secondary-menu {
-	clear:left;
-	float:left;
-	position:relative;
-	left:50%;
-	text-align:center;
+	.main-menu, .secondary-menu {
+		clear:left;
+		float:left;
+		position:relative;
+		left:50%;
+		text-align:center;
+		text-decoration: none;
+	}
+
+	nav.navigation li a:link {
+		color: #04202e;
+		text-decoration: none;
+	}
+
+	nav.navigation li a:visited {
+	color: #04202e;
 	text-decoration: none;
-}
+	}
 
-.inline li {
-	margin: 0;
-	display:block;
-	float:left;
-	list-style:none;
-	padding:0;
-	position:relative;
-	right:50%;
-} 
-
-.node ul.inline {
-	float: left;
-	left: 50%;
-	position: relative;
-}
+	nav.navigation li {
+		margin: 0;
+		display:block;
+		float:left;
+		list-style:none;
+		padding:0;
+		position:relative;
+		right:50%;
+	} 
 
 .group-footer {
 	margin-top: 10px;
 }
 
+
+/*Quick Color Setting*/
+
 #quicktabs-tab-social_blocks-0, #quicktabs-tab-social_blocks-1, #quicktabs-tab-social_blocks_normal-0, #quicktabs-tab-social_blocks_normal-1, #quicktabs-tab-social_blocks_narrow-0, #quicktabs-tab-social_blocks_narrow-1 {
 	color: #04202e;
 }
 
-/*
-
-h2.block-title {
-	font-family: "Georgia";
-    font-style: normal;
-    font-weight: normal;
-	
-	color: #51626f;
-	font-size: 1.6em; 
-    text-align: right;
-}
-
-.view-display-id-block_1 {
-	font-family: 'Georgia';
-    font-style: normal;
-    font-weight: normal;
-}	
-
-.views-row {
-	margin-bottom: 5px;
-}
-
-h1, h2, h3 {
-	font-family: "Georgia";
-	font-style: normal;
-	font-weight: normal;
-	font-size: 1.0em;
-}
-
-h3 {
-	text-align: center;
-	margin-bottom: 5px;
-}
-
-li .a {
-	font-family: "Tahoma";
-	font-style: normal;
-	font-weight: normal;
-
-
-}
-
-.block-block-2, #block-bel-currency-bel-currency {
-	display: block;
-	float: right;
-}
 
 
 

@@ -5,131 +5,275 @@ nav, #block-nice-menus-1, #block-nice-menus-2 , #block-views-front-block-2, #blo
 	display: none;
 }
 
+ul li.leaf {
+	list-style-type: none;
+	list-style-image: none;
+}
+
 /*Initial Links & Text Settings*/
 
-a, h1, h2, h3, h4, h5, h6, p {
+a {
 	font-family: "Tahoma";
 	font-style: normal;
 	font-weight: normal;
 	color: #04202e;
+	font-size: 13px;
 }
 
 a:link, a:visited {
 	color: #394a59;
 }
 
-a:hover {
+a:hover, a:active {
 	color: #d6492a;
 	text-decoration: underline;
 }
 
-a:active {
-	text-decoration: underline;
+h2, h2 a {
+	font-family: "Tahoma";
+	font-style: normal;
+	font-weight: normal;
+	color: #394a59;
+	font-size: 28px;
+	letter-spacing: 0.05ex;
+	margin-bottom: 5px;
 }
 
-h2.block-title {
-	color: #8996a0;
-	font-size: 14px; 
-    text-align: right;
-	padding-right: 10px;
-	padding-bottom: 10px;
+li a.active {
+	color: #d6492a;
 }
 
+label {
+	color: #394a59;
+}
+
+/*Standart Margin & Padding & Color Settings*/
+
+	.zone {
+		margin-bottom: 10px;
+	}
+
+	.views-row {
+		margin: 10px 0px;
+	}
+
+	.block {
+		padding: 10px;
+	}
+
+/*Mobile Menu's Elements*/
+
+	ul.menu li {
+		text-align: center;
+	}
+	
+	ul.menu li  a {
+		font-size: 24px;
+	}
+	
+
+
+/*Block Titles*/	
+
+	h2.block-title {
+		color: #8996a0;
+		font-size: 16px;
+		font-variant: small-caps;
+		text-align: right;
+		padding-right: 10px;
+		padding-bottom: 10px;
+	}
+
+/*Logo Block*/
+
+	div.zone-branding {
+		margin: 0px;
+	}
+	
+	#block-views-logo-block {
+		padding: 0px;
+	}
+
+/*Mobile Menu Block*/
+
+	#zone-menu  {
+		background-color: #e0e6e6;
+	}
+
+	#block-menu-menu-mobile {
+		background-color: transparent;
+		font-size: 24px;
+	}
+	
+	
+
+/*Main News Block*/
+
+	#block-views-front-block-1 {
+		background-color: #F7DEB6;
+	}
+
+	div.view-display-id-block_1 a {
+		font-size: 18px;
+		color: #04202e;
+	}
+	
+	div.view-display-id-block_1 a:hover, div.view-display-id-block_1 a:active {
+		color: #d6492a;
+	}	
+	
+	div.view-footer a {
+		font-size: 13px;
+		float: right;
+	}
+
+	div.view-footer a:link, div.view-footer a:visited {
+		text-decoration: underline;	
+		color: #394a59;
+	}
+	
+	div.view-footer a:hover, div.view-footer a:active {
+		text-decoration: underline;
+		color: #d6492a;
+	}	
+
+/*Node Settings*/
+
+div.field-name-field-author {
+
+}
+
+div.field-name-post-date {
+	font-size: 13px;
+	color: #394a59;
+}
+
+div.field-name-field-pics {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+div.group-footer ul {
+	margin: 10px;
+	float: right;
+}	
+
+div.field {
+	margin: 10px 0px;
+}
+
+div.field-item{
+	margin: 0px 2px;
+}
+
+div.field-name-service-links-displays-group {
+	margin: 20px 0px;
+}
+
+
+/*Comment Settings*/
+
+#comments {
+	background-color: #f3f3f3;
+	padding: 10px;
+}
+
+div.comment {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+div.field-name-comment-body {
+	font-family: "Tahoma";
+	font-style: normal;
+	font-weight: normal;
+	color: #04202e;
+	font-size: 18px;
+	letter-spacing: 0.05ex;
+	margin-bottom: 5px;
+}
+
+/*Footer Menu Block*/	
+	
+	#block-menu-menu-second-mobile-menu {
+		background-color: transparent;
+	}
+
+	#section-footer {
+		background-color: #04202e;
+	}
+	
+	div.field-label {
+		margin-left: 10px;
+		color: #394a59;
+	}
+
+	
+/*
 .view-footer {
 	font-size: 14px;
 	float: right;
 	margin-top: 10px;
 }
 
-ul li.leaf {
-	list-style-type: none;
-	list-style-image: none;
+.field-label {
+	color: #394a59;
 }
 
 
 
-/*Standart Margin & Padding & Color Settings*/
-
+/*
 .zone-content {
 	margin: 10px 0px;
 }
 
 .block {
-	padding: 10px;
-	background-color: #f3f3f3;
-	margin: 5px 0px;
+}
+.field {
+	margin-bottom: 10px;
 }
 
 .node-teaser {
 	margin-bottom: 10px;
 }
 
-/*Custom Margin & Padding & Color Settings*/
+.group-footer {
+	margin-top: 10px;
+}
 
+/*Custom Margin & Padding & Color Settings*/
+/*
 #block-views-logo-block {
 	padding: 0px;
 	background-color: #fff;
 }
+	/*Social Widgets*/
+/*	#___plusone_0 {
+		width: 70px !important;
+	}
+	
+	.twitter-share-button {
+		width: 80px !important;
+	}
+
 	/*Custom block's colors*/
 	
-	#section-footer {
-	background-color: #04202e;
-	}
-
-	#zone-menu  {
-		background-color: #e0e6e6;
-	}
-
-	#block-menu-menu-second-mobile-menu {
-		font-size: 24px;
-		background-color: #04202e;
-		width: 320px;
-		margin: 0 auto;
-	}
-
-	#block-menu-menu-mobile {
-		background-color: #e0e6e6;
-		font-size: 24px;
-		width: 320px;
-		margin: 0 auto;
-	}
+/*	
 	
 	.block-main {
 	background-color: #fff;
 	}
 	
-	#block-views-front-block-1 {
-	background-color: #F7DEB6;
-	font-size: 18px;
-	}
+
 
 
 /*Gallery Settings*/
 
-.gallery-item {
+/*.gallery-item {
 	display: block;
 	float: left;
 	margin: 5px;
 }
 
 
-
-	
-	
-	
-	
-
-
-/* Сброс отображения пунктов меню
-
-
-
-/*Отображение блока поиска
-.form-item-custom-search-blocks-form-1, #edit-actions--2 {
-	display: block;
-	float: left;
-	margin: 0px;
-	padding: 0px;
-}
-*/
 

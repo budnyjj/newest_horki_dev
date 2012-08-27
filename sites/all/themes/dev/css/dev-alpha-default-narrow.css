@@ -32,7 +32,6 @@ h3 {
 }
 
 #block-views-front-block-1 {
-	background-color: #F7DEB6;
 	font-size: 14px;
 }
 
@@ -88,17 +87,26 @@ h3 {
 
 /*Main Menu Style*/
 
-.main-menu {
-	font-size: 18px;
-}
+	.main-menu {
+		font-size: 18px;
+	}
 
-.secondary-menu {
-	font-size: 11px;
-}
+	.secondary-menu {
+		font-size: 11px;
+	}
 
-ul.inline li {
-	padding: 0 5px;
-}
+	nav.navigation li a:hover, nav.navigation li a:active {
+		padding-bottom: 5px;
+		border-bottom: 3px solid #04202e;
+	}
+
+	ul.main-menu li {
+		padding: 0 5px;
+	}
+
+	ul.secondary-menu li {
+		padding: 0 5px;
+	}	
 
 /*Quicktabs Settings*/
 

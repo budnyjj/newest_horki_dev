@@ -27,17 +27,25 @@ h2 {
 
 /*Main Menu Style*/
 
-.main-menu {
-	font-size: 28px;
-}
+	.main-menu {
+		font-size: 28px;
+	}
 
-.secondary-menu {
-	font-size: 20px;
-}
+	.secondary-menu {
+		font-size: 20px;
+	}
 
-ul.inline li {
-	padding: 0 12px;
-}
+	nav.navigation li a:hover, nav.navigation li a:active {
+		padding-bottom: 10px;
+	}
+
+	ul.main-menu li {
+		padding: 0 12px;
+	}
+
+	ul.secondary-menu li {
+		padding: 0 12px;
+	}	
 
 /*Standart Margin & Padding & Color Settings*/
 
