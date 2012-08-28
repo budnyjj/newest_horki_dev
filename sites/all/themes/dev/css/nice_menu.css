@@ -113,7 +113,13 @@ ul.nice-menu-down {
   float: left;  LTR */
 }
 
-ul.nice-menu-down li {
+ul.nice-menu-down li a:link{
+	text-decoration: underline;
+}
+
+ul.nice-menu-down li a:hover{
+	text-decoration: underline;
+	color: #d6492a;
 }
 
 ul.nice-menu-down li li {

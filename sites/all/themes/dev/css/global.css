@@ -1,7 +1,7 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-nav, #block-nice-menus-1, #block-nice-menus-2 , #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block, #block-views-banners-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks, #block-quicktabs-social-blocks-narrow, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-4, #block-nice-menus-3 {
+nav, #block-nice-menus-1, #block-nice-menus-2 , #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block, #block-views-banners-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks, #block-quicktabs-social-blocks-narrow, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-3 {
 	display: none;
 }
 
@@ -29,7 +29,15 @@ a:hover, a:active {
 	text-decoration: underline;
 }
 
-h2, h2 a {
+p {
+	margin-bottom: 0.5em;
+}
+
+p::first-letter {
+	margin-left: 1em;
+}
+
+h2, h2 a, div.node-ads div.field-item {
 	font-family: "Tahoma";
 	font-style: normal;
 	font-weight: normal;
@@ -84,10 +92,22 @@ label {
 		padding-bottom: 10px;
 	}
 
+/*Login Block*/	
+
+	#block-nice-menus-4 {
+		width: 200px;
+		padding: 0px;
+		margin: 0 auto;
+	}
+	
+	ul#nice-menu-4 li {
+		padding: 0px 15px; 
+	}
+	
 /*Logo Block*/
 
 	div.zone-branding {
-		margin: 0px;
+		margin: 0px auto;
 	}
 	
 	#block-views-logo-block {
@@ -148,11 +168,6 @@ div.field-name-post-date {
 	color: #394a59;
 }
 
-div.field-name-field-pics {
-	margin-right: 10px;
-	margin-bottom: 10px;
-}
-
 div.group-footer ul {
 	margin: 10px;
 	float: right;
@@ -166,8 +181,57 @@ div.field-item{
 	margin: 0px 2px;
 }
 
+	/*Node Ads Settings*/
+	
+	div.views-exposed-widgets {
+		background-color: #f7deb6;
+		padding: 10px 20px;
+	}
+	
+	div.views-row div.node-ads {
+		padding: 0px 10px;
+	}
+	
+	div.views-row-odd div.node-ads {
+		background-color: #f3f3f3;
+	}
+
+	/*Node Reference Settings*/
+	
+	div.field-type-node-reference, div.field-name-field-links {
+		background-color: #f3f3f3;
+		padding: 10px 20px;
+	}
+
+	/*Node Pictures Settings*/
+
+	div.field-name-field-pics, div.field-name-field-gallery , div.media-youtube-outer-wrapper, div.field-name-field-movies {
+		margin: 10px;
+	}
+
+
+
+	/*Gallery Settings*/
+
+	div.field-name-field-gallery  img {
+		display: block;
+		float: left;
+		margin: 5px 2px; 
+	}
+	
+/*Social Widgets*/
+
 div.field-name-service-links-displays-group {
-	margin: 20px 0px;
+	padding: 10px 0px;
+	clear: both;
+}
+
+#___plusone_0 {
+	width: 70px !important;
+}
+	
+.twitter-share-button {
+	width: 80px !important;
 }
 
 
@@ -175,7 +239,9 @@ div.field-name-service-links-displays-group {
 
 #comments {
 	background-color: #f3f3f3;
+	margin: 10px;
 	padding: 10px;
+	clear: both;
 }
 
 div.comment {
@@ -191,6 +257,18 @@ div.field-name-comment-body {
 	font-size: 18px;
 	letter-spacing: 0.05ex;
 	margin-bottom: 5px;
+}
+
+div.form-item-subject, #edit-comment-body-und-0-format {
+	display: none;
+}
+
+div.form-item {
+	margin-left: 10px;
+}
+
+#edit-actions {
+	margin: 10px;
 }
 
 /*Footer Menu Block*/	
@@ -247,14 +325,7 @@ div.field-name-comment-body {
 	padding: 0px;
 	background-color: #fff;
 }
-	/*Social Widgets*/
-/*	#___plusone_0 {
-		width: 70px !important;
-	}
 	
-	.twitter-share-button {
-		width: 80px !important;
-	}
 
 	/*Custom block's colors*/
 	
@@ -267,13 +338,7 @@ div.field-name-comment-body {
 
 
 
-/*Gallery Settings*/
 
-/*.gallery-item {
-	display: block;
-	float: left;
-	margin: 5px;
-}
 
 
 
