@@ -1,116 +1,141 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
 
-#block-nice-menus-4, #block-nice-menus-3 {
+nav, #block-nice-menus-4, #block-nice-menus-3, #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-custom-search-blocks-1, #block-quicktabs-social-blocks-narrow {
 	display: block;
+}
+
+#block-menu-menu-mobile, #block-menu-menu-second-mobile-menu {
+	display: none;
 }
 
 /*Initial Links & Text Settings*/
 
-	h2.block-title, nav.navigation li a, div.field-name-title a {
-		font-family: "Georgia";
-		font-style: normal;
-		font-weight: normal;
-		text-decoration: none;
-	}
-	
-	div.view-display-id-block_1 a {
-		font-family: "Georgia";
-		font-style: normal;
-		font-weight: normal;
-	}
-
-	div.view-footer a:link {
-		font-family: "Tahoma";
-		font-style: normal;
-		font-weight: normal;
-	}
-
-a:hover, div.view-display-id-block_1 a:hover {
-	color: #d6492a;
+h2, h2 a, div.node-ads div.field-item {
+	font-family: "Georgia";
 }
 
-li a.active {
-	color: #d6492a;
+h2 a:link {
+	text-decoration: none;
+}
+
+h2 a:hover {
 	text-decoration: underline;
 }
 
-/*Blocks Colors Settings*/
-
-#block-views-front-block-1 {
-	background-color: #F7DEB6;
+h3 {
+	font-family: "Georgia";
 }
 
-#zone-menu, #block-block-2, #block-block-3, #block-views-banners-block, #block-custom-search-blocks-1, #block-views-banners-block-2, #block-views-banners-block-1, #block-views-banners-block, #block-quicktabs-social-blocks-narrow , #block-nice-menus-3, #block-nice-menus-4 {
-	background-color: #fff;
-}
+/*Footer Menu's Elements*/
 
-#block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system {
-	background-color: #04202e;
-}
-
-/*Information Block's Float Settings*/
-
-#block-block-2, #block-bel-currency-bel-currency {
-	float: right;
-}
-
-/*Weather Block Settings*/
-
-#block-block-2 {
-	padding: 0px;
-	margin: 5px;
-}
-
-/*Social Links & Search Blocks' Settings*/
-#block-block-3, #block-custom-search-blocks-1 {
-	padding: 0px;
-}
- 
-/*Currency Block Settings*/
-
-#block-bel-currency-bel-currency {
-	width: 86px;
-	height: 56px;
-	margin-right: 5px;
-	padding: 2px;
-}
-
-.bel_currency_char, .bel_currency_num {
-	display: inline;
-}
-
-.bel_currency_char {
-	color: #51626f;
-}
-
-.bel_currency_row {
-	font-family: "Tahoma";
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	float: right;
-}
-
-/*Search Block Positioning*/
-
-#edit-actions, .form-item-custom-search-blocks-form-1 {
-	float: left;
-	margin: 0px 2px;
-}
-
-/* Main Menu Positioning */
-
-	nav {
-		display: block;
+	ul.menu li {
+		text-align: left;
 	}
 
-	.main-menu, .secondary-menu {
+/*Login Block*/	
+
+	#block-nice-menus-4 {
+		float: right;
+	}
+	
+	#block-nice-menus-3 {
+		padding: 0px;
+		float: left;
+	}
+	
+/*Logo Block*/
+
+	div.zone-branding {
+		margin: 0px auto;
+	}
+	
+	#block-views-logo-block {
+		padding: 0px;
+	}
+	
+/*Information Block's Float Settings*/
+
+	#block-block-2, #block-bel-currency-bel-currency {
+		float: right;
+	}
+	
+	/*Social Links Block Settings*/
+	
+	#block-block-3 {
+		height: 60px;
+		overflow: hidden;
+	}
+	
+	/*Weather Block Settings*/
+
+		#block-block-2 {
+			padding: 0px;
+		}
+
+	/*Social Links & Search Blocks' Settings*/
+		#block-block-3, #block-custom-search-blocks-1 {
+			padding: 0px;
+		}
+ 
+	/*Currency Block Settings*/
+
+		#block-bel-currency-bel-currency {
+			width: 86px;
+			height: 56px;
+			margin-right: 5px;
+			padding: 2px;
+			background-color: #f3f3f3;
+		}
+
+		.bel_currency_char, .bel_currency_num {
+			display: inline;
+		}
+
+		.bel_currency_char {
+			color: #51626f;
+		}
+
+		.bel_currency_row {
+			font-family: "Tahoma";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			float: right;
+		}
+
+	/*Search Block Positioning*/
+
+		div.block-custom-search-blocks-1 {
+			float: right;
+		}
+		
+		#edit-actions, .form-item-custom-search-blocks-form-1 {
+			float: left;
+			margin: 0px 2px;
+		}
+		
+		.search-form {
+			width: 180px;
+			margin-bottom: 20px;
+		}
+		
+/* Main Menu Positioning */
+
+	#region-menu {
+		margin: 0px;
+	}
+
+	ul.main-menu, ul.secondary-menu {
 		clear:left;
 		float:left;
 		position:relative;
 		left:50%;
 		text-align:center;
 		text-decoration: none;
+	}
+	
+	nav.navigation li a {
+		font-family: "Georgia";
 	}
 
 	nav.navigation li a:link {
@@ -119,8 +144,8 @@ li a.active {
 	}
 
 	nav.navigation li a:visited {
-	color: #04202e;
-	text-decoration: none;
+		color: #04202e;
+		text-decoration: none;
 	}
 
 	nav.navigation li {
@@ -133,16 +158,61 @@ li a.active {
 		right:50%;
 	} 
 
-.group-footer {
-	margin-top: 10px;
-}
+/*Main News Block*/
 
+	#zone-menu  {
+		background-color: transparent;
+	}
 
-/*Quick Color Setting*/
+	div.view-display-id-block_1 a {
+		font-family: "Georgia";
+	}
+	
+	div.view-footer a {
+		font-family: "Tahoma";
+	}
+	
+/*Last Comments Block*/
 
-#quicktabs-tab-social_blocks-0, #quicktabs-tab-social_blocks-1, #quicktabs-tab-social_blocks_normal-0, #quicktabs-tab-social_blocks_normal-1, #quicktabs-tab-social_blocks_narrow-0, #quicktabs-tab-social_blocks_narrow-1 {
-	color: #04202e;
-}
+	#block-views-ads-block {
+		background-color: #f3f3f3;
+	}
+	
+/*Ads Block*/
+
+	#block-views-blocks-block-1 {
+		background-color: #f3f3f3;
+	}
+	
+	#block-views-blocks-block-1 h3 {
+		text-align: center;
+	}
+
+/*Last News Block*/
+
+	#block-views-front-block-2 {
+		background-color: #f3f3f3;		
+	}
+	
+	/* QuickTabs Block Setting */
+
+	#quicktabs-container-social_blocks_narrow {
+		background-color: #f3f3f3;
+	}
+	
+	ul.quicktabs-tabs li a {
+		font-family: "Georgia";
+	}
+
+	ul.quicktabs-tabs li a:link {
+		color: #04202e;
+		text-decoration: none;
+	}
+	
+	ul.quicktabs-tabs li a:visited {
+		color: #04202e;
+		text-decoration: none;
+	}
 
 
 

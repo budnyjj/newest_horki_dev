@@ -6,96 +6,123 @@
  #block-views-banners-block-1, #block-quicktabs-social-blocks-normal {
 	display: none
  }
+ /* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+
+/*Initial Links & Text Settings*/
  
-/*Text Styles Settings*/
-
-h3 {
-	text-align: center;
-	font-size: 18px;
-	margin: 10px 0px;
+body, a {
+	font-size: 14px;
 }
-
-h2 {
-	font-size: 22px;
-}
-
-/*Main News Block*/
-
-#block-views-front-block-1 {
-	font-size: 18px;
-}
-
-/*Main Menu Style*/
-
-	.main-menu {
-		font-size: 28px;
+ 
+/*Footer Menu's Elements*/
+	
+	ul.menu li  a {
+		font-size: 12px;
 	}
 
-	.secondary-menu {
-		font-size: 20px;
+/*Block Titles*/	
+
+	h2.block-title {
+		font-size: 18px;
+	}
+
+/*Login Block*/	
+	
+	#block-nice-menus-3 {
+		width: 400px;
+	}
+	
+	#block-nice-menus-4 {
+		width: 210px;
+	}
+
+/* Main Menu Style */
+
+	ul.main-menu  li a {
+		font-size: 29px;
+	}
+
+	ul.secondary-menu li a {
+		font-size: 21px;
 	}
 
 	nav.navigation li a:hover, nav.navigation li a:active {
-		padding-bottom: 10px;
+		padding-bottom: 7px;
+		border-bottom: 4px solid #04202e;
 	}
 
 	ul.main-menu li {
-		padding: 0 12px;
+		padding: 0 10px;
 	}
 
 	ul.secondary-menu li {
-		padding: 0 12px;
+		padding: 0 10px;
 	}	
 
-/*Standart Margin & Padding & Color Settings*/
-
-	.block {
-		padding: 15px;
-		margin-bottom: 20px 0px;
-	}
-
-	.node-teaser {
-		margin-bottom: 20px;
-	}
-
-	/*Weather Block Settings*/
-
-	#block-block-2 {
-		padding: 0px;
-		margin: 5px;
-	}
-
-	/*Social Links & Search Blocks' Settings*/
-	#block-nice-menus-3, #block-nice-menus-4, #block-block-3, #block-custom-search-blocks-1 {
-		padding: 0px;
-		margin: 0px;
+/*Main News Block*/
+	
+	div.view-display-id-block_1 a {
+		font-size: 24px;
 	}
 	
- 
-	/*Currency Block Settings*/
+	div.view-footer a {
+		font-size: 14px;
+	}
+	
+/*Last Comments Block*/
 
-	#block-bel-currency-bel-currency {
-		margin-right: 5px;
-		padding: 2px;
+	#block-views-ads-block {
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	
+	#block-views-ads-block span.username, #block-views-ads-block span.views-field-view-comment  a {
+		font-size: 13px;
+	}
+	
+/*Ads Block*/
+	
+	#block-views-blocks-block-1 a {
+		font-size: 14px;
+	} 
+	
+	#block-views-blocks-block-1 span.views-field-field-where, #block-views-blocks-block-1 span.views-field-field-cost {
+		font-size: 13px;
+	}
+	
+/* QuickTabs Block Setting */
+
+	#quicktabs-container-social_blocks_narrow {
+		padding: 10px;
+		height: 260px;
+	}
+	
+	#vkwidget3, #vkwidget2 {
+		display: none;
+	}
+	
+	ul.quicktabs-tabs {
+		width: 190px;
+		margin: 0px auto 15px auto;
+	}
+	
+	ul.quicktabs-tabs li {
+		margin: 0px 25px;
+	}
+	
+	ul.quicktabs-tabs li a {
+		font-size: 21px;
+	}
+	
+	ul.quicktabs-tabs li a:hover {
+		padding-bottom: 7px;
+		border-bottom: 4px solid #04202e;
 	}
 
-	/*Search Block Positioning*/
 
-	#edit-actions, .form-item-custom-search-blocks-form-1 {
-		margin: 0px 2px;
-	}
 
-/*Quicktabs Settings*/
 
-#quicktabs-tab-social_blocks-0, #quicktabs-tab-social_blocks-1 {
-	font-size: 20px; 
-}
 
-ul.quicktabs-tabs {
-	width: 200px; 
-	margin: 0 auto;
-}
-
-ul.quicktabs-tabs  li{
-	margin: 40px;
-}

@@ -2,96 +2,67 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the normal and widescreen layouts. You may override these styles in the normal 
  *  and widescreen CSS files as appropriate. */
- 
- #block-nice-menus-1, #block-nice-menus-2 , #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-custom-search-blocks-1, #block-quicktabs-social-blocks-narrow {
-	display: block;
-}
 
-#block-bel-currency-bel-currency, #block-menu-menu-mobile, #block-menu-menu-second-mobile-menu {
-	display: none;
-}
-/*Text Styles Settings*/
 
-body, .breadcrumb, .username, .views-field-view-comment.group-left, .views-label-name, .views-field-field-where{
-	font-size: 10px;
-}
+/*Initial Links & Text Settings*/
 
-h2, h2.block-title {
-	font-size: 14px;
-}
-
-h3 {
-	text-align: center;
-	font-size: 12px;
-	margin: 5px 0px;
-}
-
-.view-footer {
-	font-size: 12px;
-	margin-top: 10px;
-}
-
-#block-views-front-block-1 {
-	font-size: 14px;
+h2, h2 a, div.node-ads div.field-item {
+	font-size: 24px;
 }
 
 /*Standart Margin & Padding & Color Settings*/
 
-	.block {
-		padding: 10px;
-		margin-bottom: 20px; 
+	.zone {
+		margin-bottom: 10px;
 	}
 
-	.node-teaser {
-		margin-bottom: 15px;
+	.views-row {
+		margin: 20px 0px;
+	}
+	
+	div.views-row-first {
+		margin: 0px 0px 20px 0px;
 	}
 
-	/*Weather Block Settings*/
-
-	#block-block-2 {
-		padding: 0px;
-		margin: 5px;
+/*Footer Menu's Elements*/
+	
+	ul.menu li  a {
+		font-size: 11px;
 	}
 
-	/*Social Links & Search Blocks' Settings*/
-	#block-logintoboggan-logintoboggan-logged-in, #block-nice-menus-3, #block-nice-menus-4, #block-block-3, #block-custom-search-blocks-1 {
-		padding: 0px;
-		margin: 0px;
-	}
- 
-	/*Currency Block Settings*/
+/*Block Titles*/	
 
-	#block-bel-currency-bel-currency {
-		margin-right: 5px;
-		padding: 2px;
+	h2.block-title {
+		font-size: 14px;
 	}
 
-	/*Search Block Positioning*/
+/*Login Block*/	
 
-	#edit-actions, .form-item-custom-search-blocks-form-1 {
-		margin: 0px 2px;
+	#block-nice-menus-4 {
+		float: right;
+	}
+	
+	#block-nice-menus-3 {
+		width: 375px;
+	}
+	
+	ul#nice-menu-4 li, ul#nice-menu-3 li {
+		padding: 0px 15px; 
+	}
+	
+/*Information Block's Float Settings*/
+
+	#block-block-2, #block-bel-currency-bel-currency {
+		float: right;
 	}
 
+/* Main Menu Style */
 
-/*Search Blocks Width Settings*/
-
-#block-custom-search-blocks-1 {
-	width: 200px;
-	margin: 25px auto;
-}
-
-#edit-custom-search-blocks-form-1--2 {
-	width: 150px;
-}
-
-
-/*Main Menu Style*/
-
-	.main-menu {
+	ul.main-menu  li a {
 		font-size: 18px;
 	}
 
-	.secondary-menu {
+	ul.secondary-menu li a {
 		font-size: 11px;
 	}
 
@@ -108,20 +79,93 @@ h3 {
 		padding: 0 5px;
 	}	
 
-/*Quicktabs Settings*/
+/*Main News Block*/
+	
+	div.view-display-id-block_1 a {
+		font-size: 20px;
+	}
+	
+	div.view-footer a {
+		font-size: 13px;
+	}
+	
+/*Last Comments Block*/
 
-#quicktabs-tab-social_blocks_narrow-0, #quicktabs-tab-social_blocks_narrow-1 {
-	font-size: 14px; 
-}
+	#block-views-ads-block {
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	
+	#block-views-ads-block span.username, #block-views-ads-block span.views-field-view-comment  a {
+		font-size: 11px;
+	}
+	
+/*Ads Block*/
 
-ul.quicktabs-tabs {
-	width: 150px; 
-	margin: 0 auto;
-}
+	#block-views-blocks-block-1 {
+		padding: 10px;
+	}
 
-ul.quicktabs-tabs  li{
-	margin: 20px;
-}
+	#block-views-blocks-block-1 div.views-row {
+		margin: 5px 0px;
+	}
+	
+	#block-views-blocks-block-1 a {
+		font-size: 13px;
+	} 
+	
+	#block-views-blocks-block-1 div.view-footer {
+		margin-top: 10px;
+	}
+	
+	#block-views-blocks-block-1 span.views-field-field-where, #block-views-blocks-block-1 span.views-field-field-cost {
+		font-size: 11px;
+	}
+	
+/*Last News Block*/
+
+	#block-views-front-block-2 {
+		padding: 10px;		
+	}
+	
+	#block-views-front-block-2 div.views-row {
+		margin: 5px 0px;
+	}
+	
+	#block-views-front-block-2 div.view-footer {
+		margin-top: 10px;
+	}
+	
+	/* QuickTabs Block Setting */
+
+	#quicktabs-container-social_blocks_narrow {
+		padding: 10px;
+		height: 260px;
+	}
+	
+	#vkwidget3, #vkwidget2 {
+		display: none;
+	}
+	
+	ul.quicktabs-tabs {
+		width: 190px;
+		margin: 0px auto 15px auto;
+	}
+	
+	ul.quicktabs-tabs li {
+		margin: 0px 25px;
+	}
+	
+	ul.quicktabs-tabs li a {
+		font-size: 18px;
+	}
+	
+	ul.quicktabs-tabs li a:hover {
+		padding-bottom: 5px;
+		border-bottom: 3px solid #04202e;
+	}
+
+
 
 
 

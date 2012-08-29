@@ -1,7 +1,7 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-nav, #block-nice-menus-1, #block-nice-menus-2 , #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block, #block-views-banners-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks, #block-quicktabs-social-blocks-narrow, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-3 {
+nav, #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block, #block-views-banners-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks, #block-quicktabs-social-blocks-narrow, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-3 {
 	display: none;
 }
 
@@ -12,7 +12,7 @@ ul li.leaf {
 
 /*Initial Links & Text Settings*/
 
-a {
+body, a {
 	font-family: "Tahoma";
 	font-style: normal;
 	font-weight: normal;
@@ -47,6 +47,20 @@ h2, h2 a, div.node-ads div.field-item {
 	margin-bottom: 5px;
 }
 
+h2 a {
+	margin-left: 10px;
+}
+
+h3 {
+	font-family: "Tahoma";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: #394a59;
+	letter-spacing: 0ex;
+	margin: 5px 0px;
+}	
+
 li a.active {
 	color: #d6492a;
 }
@@ -66,7 +80,7 @@ label {
 	}
 
 	.block {
-		padding: 10px;
+		padding: 10px 0px;
 	}
 
 /*Mobile Menu's Elements*/
@@ -95,7 +109,7 @@ label {
 /*Login Block*/	
 
 	#block-nice-menus-4 {
-		width: 200px;
+		width: 195px;
 		padding: 0px;
 		margin: 0 auto;
 	}
@@ -125,16 +139,20 @@ label {
 		font-size: 24px;
 	}
 	
-	
 
 /*Main News Block*/
 
+	section#block-views-front-block-1 div.content {
+		padding: 5px 10px;
+	}
+
 	#block-views-front-block-1 {
 		background-color: #F7DEB6;
+		padding: 10px;
 	}
 
 	div.view-display-id-block_1 a {
-		font-size: 18px;
+		font-size: 28px;
 		color: #04202e;
 	}
 	
@@ -168,7 +186,7 @@ div.field-name-post-date {
 	color: #394a59;
 }
 
-div.group-footer ul {
+div.group-footer ul, .node ul.inline {
 	margin: 10px;
 	float: right;
 }	
@@ -202,6 +220,7 @@ div.field-item{
 		background-color: #f3f3f3;
 		padding: 10px 20px;
 	}
+
 
 	/*Node Pictures Settings*/
 

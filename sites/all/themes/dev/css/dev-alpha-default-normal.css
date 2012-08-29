@@ -10,63 +10,63 @@
 	display: none
  }
  
-/*Text Styles Settings*/
+/*Initial Links & Text Settings*/
 
-body, .breadcrumb, .username, .views-field-view-comment.group-left, .views-label-name, .views-field-field-where {
-	font-size: 14px;
+h2, h2 a, div.node-ads div.field-item {
+	font-size: 24px;
 }
 
-h2, h2.block-title {
-	font-size: 18px;
-}
+/*Block Titles*/	
 
-h3 {
-	text-align: center;
-	font-size: 16px;
-	margin: 5px 0px;
-}
+	h2.block-title {
+		font-size: 16px;
+	}	
+	
+/* Main Menu Style */
 
-
-/*Main News Block*/
-
-#block-views-front-block-1 {
-	font-size: 18px;
-}
-
-/*Main Menu Style*/
-
-	.main-menu {
+	ul.main-menu  li a {
 		font-size: 24px;
 	}
 
-	.secondary-menu {
-		font-size: 18px;
-	}
-
-	nav.navigation li a:hover, nav.navigation li a:active {
-		padding-bottom: 7px;
-		border-bottom: 5px solid #04202e;
+	ul.secondary-menu li a {
+		font-size: 17px;
 	}
 
 	ul.main-menu li {
-		padding: 0 6px;
+		padding: 0 7px;
 	}
 
 	ul.secondary-menu li {
-		padding: 0 5px;
+		padding: 0 7px;
 	}	
+	
+/*Last Comments Block*/
 
-/*Quicktabs Settings*/
+	#block-views-ads-block span.username, #block-views-ads-block span.views-field-view-comment  a {
+		font-size: 12px;
+	}
+	
+/*Ads Block*/
+	
+	#block-views-blocks-block-1 span.views-field-field-where, #block-views-blocks-block-1 span.views-field-field-cost {
+		font-size: 12px;
+	}
+		
+/* QuickTabs Block Setting */
 
-#quicktabs-tab-social_blocks_normal-0, #quicktabs-tab-social_blocks_normal-1 {
-	font-size: 18px; 
-}
-
-ul.quicktabs-tabs {
-	width: 200px; 
-	margin: 0 auto;
-}
-
-ul.quicktabs-tabs  li{
-	margin: 40px;
-}
+	#quicktabs-container-social_blocks_narrow {
+		padding: 10px;
+		height: 260px;
+	}
+	
+	#vkwidget3, #vkwidget1 {
+		display: none;
+	}
+	
+	#vkvidget2 {
+		display: block;
+	}
+	
+	ul.quicktabs-tabs li a {
+		font-size: 24px;
+	}
