@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd /home/budnyjj/public_html/horki.dev/new
+cd /home/public_html/www/horki
 
 drush sql-dump --gzip > databases/NEWEST-HORKI-DEV-`date '+%m-%d-%H-%M'`.sql.gz

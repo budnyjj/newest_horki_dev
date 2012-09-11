@@ -14,9 +14,17 @@
 /*Initial Links & Text Settings*/
  
 body, a {
-	font-size: 15px;
+	font-size: 14px;
 }
  
+h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
 /*Footer Menu's Elements*/
 	
 	ul.menu li  a {
@@ -26,7 +34,7 @@ body, a {
 /*Block Titles*/	
 
 	h2.block-title {
-		font-size: 18px;
+		font-size: 16px;
 	}
 
 /*Login Block*/	
@@ -36,17 +44,17 @@ body, a {
 	}
 	
 	#block-nice-menus-4 {
-		width: 210px;
+		width: 240px;
 	}
 
 /* Main Menu Style */
 
 	ul.main-menu  li a {
-		font-size: 29px;
+		font-size: 25px;
 	}
 
 	ul.secondary-menu li a {
-		font-size: 21px;
+		font-size: 18px;
 	}
 
 	nav.navigation li a:hover, nav.navigation li a:active {

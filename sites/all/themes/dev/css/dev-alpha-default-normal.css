@@ -12,24 +12,32 @@
  
 /*Initial Links & Text Settings*/
 
-h2, h2 a, div.node-ads div.field-item {
+body, a {
+	font-size: 13px;
+}
+
+h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
 	font-size: 24px;
+}
+
+h3 {
+	font-size: 16px;
 }
 
 /*Block Titles*/	
 
 	h2.block-title {
-		font-size: 16px;
+		font-size: 14px;
 	}	
 	
 /* Main Menu Style */
 
 	ul.main-menu  li a {
-		font-size: 22px;
+		font-size: 21px;
 	}
 
 	ul.secondary-menu li a {
-		font-size: 16px;
+		font-size: 15px;
 	}
 
 	ul.main-menu li {
@@ -39,7 +47,14 @@ h2, h2 a, div.node-ads div.field-item {
 	ul.secondary-menu li {
 		padding: 0 7px;
 	}	
+
+/*Main News Block Settings*/
+
+div.view-display-id-block_1 a {
+		font-size: 18px;
+	}
 	
+
 /*Last Comments Block*/
 
 	#block-views-ads-block span.username, #block-views-ads-block span.views-field-view-comment  a {

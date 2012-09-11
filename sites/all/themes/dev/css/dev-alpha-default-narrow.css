@@ -6,8 +6,16 @@
 
 /*Initial Links & Text Settings*/
 
-h2, h2 a, div.node-ads div.field-item {
-	font-size: 24px;
+body, a {
+	font-size: 12px;
+}
+
+h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 14px;
 }
 
 /*Standart Margin & Padding & Color Settings*/
@@ -33,17 +41,13 @@ h2, h2 a, div.node-ads div.field-item {
 /*Block Titles*/	
 
 	h2.block-title {
-		font-size: 14px;
+		font-size: 11px;
 	}
 
 /*Login Block*/	
 
 	#block-nice-menus-4 {
 		float: right;
-	}
-	
-	ul#nice-menu-4 li, ul#nice-menu-3 li {
-		padding: 0px 15px; 
 	}
 	
 /*Information Block's Float Settings*/
@@ -55,7 +59,7 @@ h2, h2 a, div.node-ads div.field-item {
 /* Main Menu Style */
 
 	ul.main-menu  li a {
-		font-size: 18px;
+		font-size: 15px;
 	}
 
 	ul.secondary-menu li a {
@@ -77,8 +81,12 @@ h2, h2 a, div.node-ads div.field-item {
 
 /*Main News Block*/
 	
+	section#block-views-front-block-1 div.content {
+		padding: 5px 0;
+	}
+
 	div.view-display-id-block_1 a {
-		font-size: 20px;
+		font-size: 16px;
 	}
 	
 	div.view-footer a {
@@ -149,7 +157,7 @@ h2, h2 a, div.node-ads div.field-item {
 	}
 	
 	ul.quicktabs-tabs li a {
-		font-size: 18px;
+		font-size: 15px;
 	}
 	
 	ul.quicktabs-tabs li a:hover {

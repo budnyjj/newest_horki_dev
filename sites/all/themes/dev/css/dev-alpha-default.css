@@ -10,7 +10,7 @@ nav, #block-nice-menus-4, #block-nice-menus-3, #block-views-front-block-2, #bloc
 
 /*Initial Links & Text Settings*/
 
-h2, h2 a, div.node-ads div.field-item {
+h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
 	font-family: "Georgia";
 }
 
@@ -36,13 +36,21 @@ h3 {
 
 	#block-nice-menus-4 {
 		float: right;
+		background-color: transparent;
 	}
 	
 	#block-nice-menus-3 {
 		padding: 0px;
 		float: left;
 	}
-	
+
+/*Login Menu Elements*/
+	#block-logintoboggan-logintoboggan-logged-in {
+		width: 100%;
+		background-color: transparent;
+		text-align: right;
+		padding: 5px;
+	}
 /*Logo Block*/
 
 	div.zone-branding {
@@ -55,10 +63,6 @@ h3 {
 	
 /*Information Block's Float Settings*/
 
-	#block-block-2, #block-bel-currency-bel-currency {
-		float: right;
-	}
-	
 	/*Social Links Block Settings*/
 	
 	#block-block-3 {
@@ -70,7 +74,6 @@ h3 {
 
 		#block-block-2 {
 			padding: 0px;
-			margin: 0px 10px;
 		}
 
 	/*Social Links & Search Blocks' Settings*/
@@ -81,7 +84,7 @@ h3 {
 	/*Currency Block Settings*/
 
 		#block-bel-currency-bel-currency {
-			width: 86px;
+			width: 90px;
 			height: 56px;
 			margin-right: 5px;
 			padding: 2px;
@@ -100,7 +103,7 @@ h3 {
 			font-family: "Tahoma", sans-serif;
 			font-style: normal;
 			font-weight: normal;
-			font-size: 12px;
+			font-size: 11px;
 			float: right;
 		}
 
@@ -170,9 +173,14 @@ h3 {
 	}
 	
 	div.view-footer a {
+		text-align: right;
 		font-family: "Tahoma", sans-serif;
 	}
-	
+
+h2.block-title {
+		padding-bottom: 10px;
+	}
+
 /*Last Comments Block*/
 
 	#block-views-ads-block {

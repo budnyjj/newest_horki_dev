@@ -106,7 +106,6 @@ ul.nice-menu-left a, ul.nice-menu-left ul a {
 ******************************/
 
 ul.nice-menu-down {
-  background-color: #f3f3f3;
 /*display: block;
   margin-left: auto;
   margin-right: auto;
@@ -128,6 +127,7 @@ ul.nice-menu-down li li {
 
 ul.nice-menu-down ul {
   left: 0; /* LTR */
+  background-color: #fff;
 }
 
 ul.nice-menu-down ul li {

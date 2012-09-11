@@ -34,10 +34,9 @@ p {
 }
 
 p::first-letter {
-	margin-left: 1em;
 }
 
-h2, h2 a, div.node-ads div.field-item {
+h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
 	font-family: "Tahoma", sans-serif;
 	font-style: normal;
 	font-weight: normal;
@@ -84,7 +83,10 @@ label {
 	}
 /*Login Menu Elements*/
 #block-logintoboggan-logintoboggan-logged-in {
-	float: right;
+	width: 110px;
+	padding: 0.3em 15px;
+	margin: 0 auto;
+	background-color: #F3F3F3;
 }
 
 /*Mobile Menu's Elements*/
@@ -107,20 +109,21 @@ label {
 		text-transform: uppercase;
 		text-align: right;
 		padding-right: 10px;
-		padding-bottom: 10px;
 	}
 
 /*Login Block*/	
 
 	#block-nice-menus-4 {
 		padding: 0px;
+		width: 180px;
 		margin: 0 auto;
+		background-color: #f3f3f3;
 	}
-	
+
 	ul#nice-menu-4 li {
-		padding: 0px 15px; 
+		margin: 0 5px;
 	}
-	
+
 /*Logo Block*/
 
 	div.zone-branding {
@@ -184,15 +187,23 @@ div.field-name-field-author {
 
 }
 
+div.field-name-news-from-readers {
+	color: #D6492A;
+}
+
 div.field-name-post-date {
 	font-size: 13px;
 	color: #394a59;
 }
 
-div.group-footer ul, .node ul.inline {
+.node ul.inline {
+	margin: 10px;
+}	
+
+div.group-footer ul, .node-teaser ul.inline {
 	margin: 10px;
 	float: right;
-}	
+}
 
 div.field {
 	margin: 10px 0px;
@@ -206,8 +217,20 @@ ul.inline li.comment-new-comments {
 	display: none;
 }
 
-	/*Node Ads Settings*/
+div.field-name-field-what, div.field-name-field-where, div.field-name-field-when {
+	margin-left: 20px;
+}
+
+	/*Node Ads Page Settings*/
 	
+	div.view-header, div.view-footer {
+	margin: 10px;
+	}
+	
+	div#block-system-main div.view-footer a {
+		float: none;
+	}
+
 	div.views-exposed-widgets {
 		background-color: #f7deb6;
 		padding: 10px 20px;
@@ -224,10 +247,15 @@ ul.inline li.comment-new-comments {
 	/*Node Reference Settings*/
 	
 	div.field-type-node-reference, div.field-name-field-links {
-		background-color: #f3f3f3;
-		padding: 10px 20px;
+		background-color: #F7DEB6;
+		padding: 10px;
 	}
 
+	/*Related content settings*/
+
+	div.field-name-field-related {
+		background-color: #f7deb6;
+	}
 
 	/*Node Pictures Settings*/
 
@@ -235,7 +263,11 @@ ul.inline li.comment-new-comments {
 		margin: 10px;
 	}
 
+	/*description's settings*/
 
+	div.description {
+		margin: 20px;
+	}
 
 	/*Gallery Settings*/
 
@@ -265,7 +297,6 @@ div.field-name-service-links-displays-group {
 
 #comments {
 	background-color: #f3f3f3;
-	margin: 10px;
 	padding: 10px;
 	clear: both;
 }
@@ -307,11 +338,6 @@ div.form-item {
 		background-color: #04202e;
 	}
 	
-	div.field-label {
-		margin-left: 10px;
-		color: #394a59;
-	}
-
 	
 /*
 .view-footer {
