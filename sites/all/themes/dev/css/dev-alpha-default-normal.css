@@ -2,11 +2,11 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
  
- #block-bel-currency-bel-currency, #block-views-banners-block-1, #block-quicktabs-social-blocks-normal {
+ #block-bel-currency-bel-currency, #block-views-banners-block-1 {
 	display: block;
  }
  
- #block-views-banners-block-2, #block-quicktabs-social-blocks-narrow  {
+ #block-views-banners-block-2 {
 	display: none
  }
  
@@ -25,11 +25,11 @@ h2, h2 a, div.node-ads div.field-item {
 /* Main Menu Style */
 
 	ul.main-menu  li a {
-		font-size: 24px;
+		font-size: 22px;
 	}
 
 	ul.secondary-menu li a {
-		font-size: 17px;
+		font-size: 16px;
 	}
 
 	ul.main-menu li {
@@ -54,17 +54,8 @@ h2, h2 a, div.node-ads div.field-item {
 		
 /* QuickTabs Block Setting */
 
-	#quicktabs-container-social_blocks_narrow {
-		padding: 10px;
-		height: 260px;
-	}
-	
-	#vkwidget3, #vkwidget1 {
-		display: none;
-	}
-	
-	#vkvidget2 {
-		display: block;
+	#quicktabs-container-social_blocks_normal {
+		height: 380px;
 	}
 	
 	ul.quicktabs-tabs li a {

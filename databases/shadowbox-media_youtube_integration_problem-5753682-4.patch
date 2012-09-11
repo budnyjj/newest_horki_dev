@@ -1,0 +1,18 @@
+diff --git a/file_shadowbox/file_shadowbox.module b/file_shadowbox/file_shadowbox.module
+index b4f6f99..f5c568f 100644
+--- a/file_shadowbox/file_shadowbox.module
++++ b/file_shadowbox/file_shadowbox.module
+@@ -243,10 +243,11 @@ function file_shadowbox_field_formatter_view($entity_type, $entity, $field, $ins
+ 
+     switch ($item['filemime']) {
+       case 'video/youtube':
+-        $url = 'http://www.youtube.com/embed/' . $item['filename'];
++        $youtube_id = substr($item['uri'], strrpos($item['uri'],"/") + 1);
++        $url = 'http://www.youtube.com/embed/' . $youtube_id;
+         $url = $autoplay ? $url . '?autoplay=1' : $url;
+         $ico = 'youtube.png';
+-        $path = 'http://img.youtube.com/vi/' . $item['filename'] . '/0.jpg';
++        $path = 'http://img.youtube.com/vi/' . $youtube_id . '/0.jpg';
+         $image_style = '';
+         $attributes = array(
+ 	      'width' => $display['settings']['video_thumb'] . 'px',

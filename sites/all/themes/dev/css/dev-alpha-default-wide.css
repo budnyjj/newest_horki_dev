@@ -1,9 +1,9 @@
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
- #block-views-banners-block, #block-quicktabs-social-blocks {
+ #block-views-banners-block {
 	display: block;
  }
  
- #block-views-banners-block-1, #block-quicktabs-social-blocks-normal {
+ #block-views-banners-block-1 {
 	display: none
  }
  /* This file will hold styles that are loaded using the same media query as the narrow grid. */
@@ -14,7 +14,7 @@
 /*Initial Links & Text Settings*/
  
 body, a {
-	font-size: 14px;
+	font-size: 15px;
 }
  
 /*Footer Menu's Elements*/
@@ -63,19 +63,25 @@ body, a {
 	}	
 
 /*Main News Block*/
-	
+
+	#block-views-front-block-1 {
+		background-color: #F7DEB6;
+		padding: 20px;
+	}	
+
 	div.view-display-id-block_1 a {
 		font-size: 24px;
 	}
 	
 	div.view-footer a {
-		font-size: 14px;
+		font-size: 15px;
 	}
-	
-/*Last Comments Block*/
 
+
+/*Last Comments Block*/
+	
 	#block-views-ads-block {
-		padding: 10px;
+		padding: 20px;
 		margin-bottom: 20px;
 	}
 	
@@ -83,11 +89,23 @@ body, a {
 		font-size: 13px;
 	}
 	
-/*Ads Block*/
+
+/*Last News Block*/
+
+	#block-views-front-block-2 {
+		padding: 20px;		
+	}
 	
+
+/*Ads Block*/
+
 	#block-views-blocks-block-1 a {
-		font-size: 14px;
-	} 
+		font-size: 15px;
+	}
+
+	#block-views-blocks-block-1 {
+		padding: 20px;
+	}
 	
 	#block-views-blocks-block-1 span.views-field-field-where, #block-views-blocks-block-1 span.views-field-field-cost {
 		font-size: 13px;
@@ -95,15 +113,10 @@ body, a {
 	
 /* QuickTabs Block Setting */
 
-	#quicktabs-container-social_blocks_narrow {
-		padding: 10px;
-		height: 260px;
+	#quicktabs-container-social_blocks_normal {
+		height: 420px;
 	}
-	
-	#vkwidget3, #vkwidget2 {
-		display: none;
-	}
-	
+
 	ul.quicktabs-tabs {
 		width: 190px;
 		margin: 0px auto 15px auto;

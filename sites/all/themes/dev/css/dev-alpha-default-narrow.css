@@ -42,10 +42,6 @@ h2, h2 a, div.node-ads div.field-item {
 		float: right;
 	}
 	
-	#block-nice-menus-3 {
-		width: 375px;
-	}
-	
 	ul#nice-menu-4 li, ul#nice-menu-3 li {
 		padding: 0px 15px; 
 	}
@@ -89,7 +85,7 @@ h2, h2 a, div.node-ads div.field-item {
 		font-size: 13px;
 	}
 	
-/*Last Comments Block*/
+	/*Ads Block*/
 
 	#block-views-ads-block {
 		padding: 10px;
@@ -100,7 +96,6 @@ h2, h2 a, div.node-ads div.field-item {
 		font-size: 11px;
 	}
 	
-/*Ads Block*/
 
 	#block-views-blocks-block-1 {
 		padding: 10px;
@@ -138,19 +133,16 @@ h2, h2 a, div.node-ads div.field-item {
 	
 	/* QuickTabs Block Setting */
 
-	#quicktabs-container-social_blocks_narrow {
+	#quicktabs-container-social_blocks_normal {
 		padding: 10px;
 		height: 260px;
-	}
-	
-	#vkwidget3, #vkwidget2 {
-		display: none;
 	}
 	
 	ul.quicktabs-tabs {
 		width: 190px;
 		margin: 0px auto 15px auto;
 	}
+	
 	
 	ul.quicktabs-tabs li {
 		margin: 0px 25px;

@@ -1,7 +1,7 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-nav, #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block, #block-views-banners-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks, #block-quicktabs-social-blocks-narrow, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-3 {
+nav, #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block, #block-views-banners-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-3 {
 	display: none;
 }
 
@@ -13,7 +13,7 @@ ul li.leaf {
 /*Initial Links & Text Settings*/
 
 body, a {
-	font-family: "Tahoma";
+	font-family: "Tahoma", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	color: #04202e;
@@ -38,7 +38,7 @@ p::first-letter {
 }
 
 h2, h2 a, div.node-ads div.field-item {
-	font-family: "Tahoma";
+	font-family: "Tahoma", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	color: #394a59;
@@ -52,7 +52,7 @@ h2 a {
 }
 
 h3 {
-	font-family: "Tahoma";
+	font-family: "Tahoma", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
@@ -82,6 +82,10 @@ label {
 	.block {
 		padding: 10px 0px;
 	}
+/*Login Menu Elements*/
+#block-logintoboggan-logintoboggan-logged-in {
+	float: right;
+}
 
 /*Mobile Menu's Elements*/
 
@@ -100,7 +104,7 @@ label {
 	h2.block-title {
 		color: #8996a0;
 		font-size: 16px;
-		font-variant: small-caps;
+		text-transform: uppercase;
 		text-align: right;
 		padding-right: 10px;
 		padding-bottom: 10px;
@@ -109,7 +113,6 @@ label {
 /*Login Block*/	
 
 	#block-nice-menus-4 {
-		width: 195px;
 		padding: 0px;
 		margin: 0 auto;
 	}
@@ -199,6 +202,10 @@ div.field-item{
 	margin: 0px 2px;
 }
 
+ul.inline li.comment-new-comments {
+	display: none;
+}
+
 	/*Node Ads Settings*/
 	
 	div.views-exposed-widgets {
@@ -269,7 +276,7 @@ div.comment {
 }
 
 div.field-name-comment-body {
-	font-family: "Tahoma";
+	font-family: "Tahoma", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	color: #04202e;
