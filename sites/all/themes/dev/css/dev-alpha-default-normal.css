@@ -16,13 +16,19 @@ body, a {
 	font-size: 13px;
 }
 
-h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
+h2, h2 a, div.field-name-field-related div.field-label {
 	font-size: 24px;
 }
 
 h3 {
 	font-size: 16px;
 }
+
+/*Footer Menu's Elements*/
+
+	ul.menu li a {
+		font-size: 11px;
+	}
 
 /*Block Titles*/	
 
@@ -48,12 +54,26 @@ h3 {
 		padding: 0 7px;
 	}	
 
+	nav.navigation li a:hover, nav.navigation li a:active {
+		padding-bottom: 5px;
+		border-bottom: 3px solid #04202e;
+	}
+
 /*Main News Block Settings*/
 
 div.view-display-id-block_1 a {
 		font-size: 18px;
 	}
-	
+
+section#block-views-front-block-1 div.content {
+	padding: 5px 0;
+}
+ 
+div.view-footer a {
+	font-size: 13px;
+}
+
+
 
 /*Last Comments Block*/
 
@@ -71,8 +91,15 @@ div.view-display-id-block_1 a {
 
 	#quicktabs-container-social_blocks_normal {
 		height: 380px;
+		padding: 10px;
 	}
 	
 	ul.quicktabs-tabs li a {
 		font-size: 24px;
 	}
+
+	ul.quicktabs-tabs li a:hover {
+		padding-bottom: 5px;
+		border-bottom: 3px solid #04202e;
+	}
+

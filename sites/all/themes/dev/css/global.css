@@ -36,7 +36,7 @@ p {
 p::first-letter {
 }
 
-h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
+h2, h2 a, div.node-ads div.field-name-field-cost, div.field-name-field-related div.field-label {
 	font-family: "Tahoma", sans-serif;
 	font-style: normal;
 	font-weight: normal;
@@ -44,10 +44,6 @@ h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-la
 	font-size: 28px;
 	letter-spacing: 0.05ex;
 	margin-bottom: 5px;
-}
-
-h2 a {
-	margin-left: 10px;
 }
 
 h3 {
@@ -66,6 +62,10 @@ li a.active {
 
 label {
 	color: #394a59;
+}
+
+ul.links li.blog_usernames_blog {
+	display: none;
 }
 
 /*Standart Margin & Padding & Color Settings*/
@@ -182,9 +182,9 @@ label {
 	}	
 
 /*Node Settings*/
-
-div.field-name-field-author {
-
+div.node div.field-name-post-date {
+	text-align: right;
+	font-size: 12px;
 }
 
 div.field-name-news-from-readers {
@@ -217,8 +217,11 @@ ul.inline li.comment-new-comments {
 	display: none;
 }
 
-div.field-name-field-what, div.field-name-field-where, div.field-name-field-when {
+div.node-afisha div.field-name-field-what,
+div.node-afisha div.field-name-field-where,
+div.node-afisha div.field-name-field-when {
 	margin-left: 20px;
+	color: #394A59;
 }
 
 	/*Node Ads Page Settings*/
@@ -244,6 +247,13 @@ div.field-name-field-what, div.field-name-field-where, div.field-name-field-when
 		background-color: #f3f3f3;
 	}
 
+	div.view-mode-full div.field-name-field-cost,
+	div.view-mode-full div.field-name-field-where,
+	div.view-mode-full div.field-name-field-phone {
+		font-size: 16px;
+		color: #394A59;
+	}
+
 	/*Node Reference Settings*/
 	
 	div.field-type-node-reference, div.field-name-field-links {
@@ -261,12 +271,6 @@ div.field-name-field-what, div.field-name-field-where, div.field-name-field-when
 
 	div.field-name-field-pics, div.field-name-field-gallery , div.media-youtube-outer-wrapper, div.field-name-field-movies {
 		margin: 10px;
-	}
-
-	/*description's settings*/
-
-	div.description {
-		margin: 20px;
 	}
 
 	/*Gallery Settings*/
@@ -337,60 +341,4 @@ div.form-item {
 	#section-footer {
 		background-color: #04202e;
 	}
-	
-	
-/*
-.view-footer {
-	font-size: 14px;
-	float: right;
-	margin-top: 10px;
-}
-
-.field-label {
-	color: #394a59;
-}
-
-
-
-/*
-.zone-content {
-	margin: 10px 0px;
-}
-
-.block {
-}
-.field {
-	margin-bottom: 10px;
-}
-
-.node-teaser {
-	margin-bottom: 10px;
-}
-
-.group-footer {
-	margin-top: 10px;
-}
-
-/*Custom Margin & Padding & Color Settings*/
-/*
-#block-views-logo-block {
-	padding: 0px;
-	background-color: #fff;
-}
-	
-
-	/*Custom block's colors*/
-	
-/*	
-	
-	.block-main {
-	background-color: #fff;
-	}
-	
-
-
-
-
-
-
 
