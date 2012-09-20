@@ -114,7 +114,7 @@ h3 {
 			height: 56px;
 			margin-right: 5px;
 			padding: 2px;
-			background-color: #f3f3f3;
+			background-color: #f8f8f8;
 		}
 
 		.bel_currency_char, .bel_currency_num {
@@ -142,6 +142,8 @@ h3 {
 
 		div.block-custom-search-blocks-1 {
 			float: right;
+			height: 60px;
+			width: 200px;
 		}
 		
 		.form-item-custom-search-blocks-form-1 {
@@ -150,7 +152,6 @@ h3 {
 		}
 		
 		.search-form {
-			width: 200px;
 			margin-bottom: 20px;
 		}
 		
@@ -213,13 +214,13 @@ h2.block-title {
 /*Last Comments Block*/
 
 	#block-views-ads-block {
-		background-color: #f3f3f3;
+		background-color: #f8f8f8;
 	}
 	
 /*Ads Block*/
 
 	#block-views-blocks-block-1 {
-		background-color: #f3f3f3;
+		background-color: #f8f8f8;
 		padding: 10px;
 	}
 	
@@ -233,7 +234,7 @@ h2.block-title {
 	}
 	
 	#block-views-ads-block span.username, #block-views-ads-block span.views-field-view-comment  a {
-		font-size: 11px;
+		font-size: 13px;
 	}
 	
 
@@ -242,16 +243,17 @@ h2.block-title {
 	}
 	
 	#block-views-blocks-block-1 a {
-		font-size: 13px;
+		font-family: tahoma, sans-serif;
+		font-size: 14px;
 	} 
 	
 	#block-views-blocks-block-1 div.view-footer {
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 /*Last News Block*/
 
 	#block-views-front-block-2 {
-		background-color: #f3f3f3;		
+		background-color: #f8f8f8;		
 		padding: 10px;		
 	}
 
@@ -260,22 +262,43 @@ h2.block-title {
 	}
 	
 	#block-views-front-block-2 div.view-footer {
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 /*Last Poll Block*/
+
+	.poll .bar .foreground {
+		background-color: #04202E;
+	}
+
+	.poll .total {
+		display: none;
+	}
+
 	#block-poll-recent {
-		background-color: #f3f3f3;		
+		background-color: #f8f8f8;		
 		padding: 10px;		
 		margin-top: 20px;	
 	}
+
+	div.poll div.title {
+			margin-bottom: 5px;
+	}
 	
 	#block-poll-recent ul {
-		margin: 10px 0px 10px 20px;
+		list-style: none;
+		text-align: right;
+		margin-top: 20px;
+		margin-bottom: 5px;
+		margin-right: 10px;
+	}
+
+	#block-poll-recent ul li a {
+		font-size: 14px;
 	}
 /* QuickTabs Block Setting */
 
 	#quicktabs-container-social_blocks_normal {
-		background-color: #f3f3f3;
+		background-color: #f8f8f8;
 	}
 	
 	ul.quicktabs-tabs li a {

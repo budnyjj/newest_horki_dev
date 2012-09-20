@@ -117,7 +117,7 @@ ul.links li.blog_usernames_blog {
 		padding: 0px;
 		width: 180px;
 		margin: 0 auto;
-		background-color: #f3f3f3;
+		background-color: #f8f8f8;
 	}
 
 	ul#nice-menu-4 li {
@@ -153,7 +153,7 @@ ul.links li.blog_usernames_blog {
 	}
 
 	#block-views-front-block-1 {
-		background-color: #F7DEB6;
+		background-color: #ffecac;
 		padding: 10px;
 	}
 
@@ -184,7 +184,7 @@ ul.links li.blog_usernames_blog {
 /*Node Settings*/
 div.node div.field-name-post-date {
 	text-align: right;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 div.field-name-news-from-readers {
@@ -224,18 +224,29 @@ div.node-afisha div.field-name-field-when {
 	color: #394A59;
 }
 
+	/*Forms Settings*/
+
+	form#news-from-readers-node-form,
+	form#ads-node-form {
+		padding: 20px;
+		background-color: #fdfdfd;
+	}
+
 	/*Node Ads Page Settings*/
 	
 	div.view-header, div.view-footer {
-	margin: 10px;
+		margin: 10px;
+		text-align: right;
 	}
 	
-	div#block-system-main div.view-footer a {
-		float: none;
+	div#block-system-main div.view-header a, div#block-system-main div.view-footer a {
+		font-size: 14px;
+		color: #D6492A;
 	}
 
+
 	div.views-exposed-widgets {
-		background-color: #f7deb6;
+		background-color: #ffecac;
 		padding: 10px 20px;
 	}
 	
@@ -244,12 +255,18 @@ div.node-afisha div.field-name-field-when {
 	}
 	
 	div.views-row-odd div.node-ads {
-		background-color: #f3f3f3;
+		background-color: #f8f8f8;
 	}
 
+	div.views-row-even div.node-ads {
+		background-color: #fdfdfd;
+	}
+	
+	div.view-mode-full div.field-name-field-when,
+	div.view-mode-full div.field-name-field-what,
 	div.view-mode-full div.field-name-field-cost,
 	div.view-mode-full div.field-name-field-where,
-	div.view-mode-full div.field-name-field-phone {
+	div.view-mode-full div.field-name-field-phone-number {
 		font-size: 16px;
 		color: #394A59;
 	}
@@ -257,14 +274,14 @@ div.node-afisha div.field-name-field-when {
 	/*Node Reference Settings*/
 	
 	div.field-type-node-reference, div.field-name-field-links {
-		background-color: #F7DEB6;
+		background-color: #ffecac;
 		padding: 10px;
 	}
 
 	/*Related content settings*/
 
 	div.field-name-field-related {
-		background-color: #f7deb6;
+		background-color: #ffecac;
 	}
 
 	/*Node Pictures Settings*/
@@ -299,15 +316,22 @@ div.field-name-service-links-displays-group {
 
 /*Comment Settings*/
 
+ul.links li.comment-add, ul.links li.comment-comments {
+	display: none;
+}
+
+
 #comments {
-	background-color: #f3f3f3;
+	background-color: #f8f8f8;
 	padding: 10px;
 	clear: both;
 }
 
 div.comment {
-	margin-left: 10px;
-	margin-bottom: 10px;
+	padding: 5px 10px;
+	margin: 5px 0px;
+	background-color: #fdfdfd;
+	border-left: 5px solid #394A59;
 }
 
 div.field-name-comment-body {
@@ -324,13 +348,24 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 	display: none;
 }
 
-div.form-item {
-	margin-left: 10px;
-}
-
 #edit-actions {
-	margin: 10px;
+	margin: 20px 10px;
 }
+/*Postscript Block Settings*/
+
+	#zone-postscript-wrapper {
+		background-color: #04202e;
+	}
+
+	div#block-block-9 {
+		background-color: #fdfdfd;
+		padding: 5px 0 0 0;
+	}
+
+	div#block-block-9 p {
+		font-size: 10px;
+		color: #8996A0;
+	}
 
 /*Footer Menu Block*/	
 	
@@ -339,6 +374,13 @@ div.form-item {
 	}
 
 	#section-footer {
-		background-color: #04202e;
+		/*background-color: #04202e;*/
+	}
+
+
+/*Webform Setiings*/
+
+	article.node-webform footer.submitted {
+		display: none;
 	}
 
