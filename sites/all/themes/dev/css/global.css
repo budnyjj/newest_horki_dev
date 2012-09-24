@@ -81,6 +81,58 @@ ul.links li.blog_usernames_blog {
 	.block {
 		padding: 10px 0px;
 	}
+
+/*Pager Style*/
+
+.pager {
+	background: none;
+	border: none;
+}
+
+.item-list .pager {
+	text-align: center;
+}
+.item-list .pager li, .item-list .pager ul li {
+	float: none;
+}
+
+.pager li.pager-current {
+	background: none;
+	color: #394A59;
+	text-decoration: underline;
+	border: none;
+}
+
+.pager li {
+	color: #394A59;
+	border: none;
+}
+
+.pager li a {
+	background: none;
+	text-decoration: underline;
+	color: #394A59;
+}
+
+.pager li a:hover {
+	color: #D6492A;
+}
+
+.pager li.pager-next {
+	border: none;
+	position: static;
+}
+
+.pager li.pager-last {
+	position: static;
+}
+
+.pager li.pager-first a, .pager li.pager-previous a, .pager li.pager-next a, .pager li.pager-last a {
+	width: 100px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
 /*Login Menu Elements*/
 #block-logintoboggan-logintoboggan-logged-in {
 	width: 110px;
@@ -155,6 +207,7 @@ ul.links li.blog_usernames_blog {
 	#block-views-front-block-1 {
 		background-color: #ffecac;
 		padding: 10px;
+		margin-bottom: 20px;
 	}
 
 	div.view-display-id-block_1 a {
@@ -182,6 +235,15 @@ ul.links li.blog_usernames_blog {
 	}	
 
 /*Node Settings*/
+
+div#block-system-main {
+	padding: 0 0 10px 0;
+}
+
+div.node div.field-name-title {
+	margin: 0 0 10px 0;
+}
+
 div.node div.field-name-post-date {
 	text-align: right;
 	font-size: 10px;
@@ -217,13 +279,24 @@ ul.inline li.comment-new-comments {
 	display: none;
 }
 
+/*Afisha Fields*/
+
 div.node-afisha div.field-name-field-what,
 div.node-afisha div.field-name-field-where,
 div.node-afisha div.field-name-field-when {
-	margin-left: 20px;
+	margin: 0;
+	padding: 5px 20px;
 	color: #394A59;
+	background-color: #FFECAC;
 }
 
+div.node-afisha div.group-left div.field-name-field-what,
+div.node-afisha div.group-left div.field-name-field-where,
+div.node-afisha div.group-left div.field-name-field-when {
+	padding: 0;
+	margin: 10px;
+	background-color: transparent;
+}
 	/*Forms Settings*/
 
 	form#news-from-readers-node-form,
@@ -286,18 +359,50 @@ div.node-afisha div.field-name-field-when {
 
 	/*Node Pictures Settings*/
 
-	div.field-name-field-pics, div.field-name-field-gallery , div.media-youtube-outer-wrapper, div.field-name-field-movies {
+	div.node-teaser div.field-name-field-gallery ,div.node-teaser div.field-name-field-pics, div.media-youtube-outer-wrapper, div.field-name-field-movies {
 		margin: 10px;
 	}
 
 	/*Gallery Settings*/
 
+	div.view-photoblog div.views-row {
+		margin: 2px;
+		float: left;
+	}
+
+	div.view-photoblog div.views-field-title {
+		padding: 0 5px;
+		background-color: #F8F8F8;
+		position: relative;
+		bottom: -18px;
+		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE 5.5+*/
+		-moz-opacity: 0.9; /* Mozilla 1.6 и ниже */
+		-khtml-opacity: 0.9; /* Konqueror 3.1, Safari 1.1 */
+		opacity: 0.9; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9 */
+	}
+
 	div.field-name-field-gallery  img {
 		display: block;
 		float: left;
-		margin: 5px 2px; 
+		margin: 2px 2px; 
 	}
-	
+
+	div.node-photo ul.inline {
+		display: block;
+		clear: both;
+		margin: 0;
+		padding: 5px;
+	}
+
+	div.view-photoblog div.views-field-title a {
+		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); /* IE 5.5+*/
+		-moz-opacity: 1; /* Mozilla 1.6 и ниже */
+		-khtml-opacity: 1; /* Konqueror 3.1, Safari 1.1 */
+		opacity: 1; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9 */
+		color: #04202E;
+	}
+	/*Youtube video settings*/
+
 /*Social Widgets*/
 
 div.field-name-service-links-displays-group {
