@@ -358,9 +358,12 @@ div.node-afisha div.group-left div.field-name-field-when {
 	}
 
 	/*Node Pictures Settings*/
+	div.node-teaser div.field-name-field-gallery, div.node-teaser div.field-name-field-pics, div.node-teaser div.field-name-field-movies {
+		margin: 10px 10px 10px 0;
+	}
 
-	div.node-teaser div.field-name-field-gallery ,div.node-teaser div.field-name-field-pics, div.media-youtube-outer-wrapper, div.field-name-field-movies {
-		margin: 10px;
+	div.media-youtube-outer-wrapper {
+		margin: 10px 0px; 
 	}
 
 	/*Gallery Settings*/
