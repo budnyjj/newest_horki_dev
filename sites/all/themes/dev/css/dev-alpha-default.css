@@ -324,3 +324,8 @@ h2.block-title {
 	ul.quicktabs-tabs li {
 		margin: 0px 25px;
 	}
+
+/*Footer settings*/
+	#zone-footer-wrapper {
+		background-color: #F8F8F8;
+	}
