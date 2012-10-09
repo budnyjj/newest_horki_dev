@@ -1,0 +1,43 @@
+[06-Oct-2012 11:36:05] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home5/horkiinf/public_html/new/sites/default/settings.php on line 212
+[06-Oct-2012 11:36:07] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home5/horkiinf/public_html/new/sites/default/settings.php on line 212
+[06-Oct-2012 11:36:09] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home5/horkiinf/public_html/new/sites/default/settings.php on line 212
+[06-Oct-2012 11:36:12] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home5/horkiinf/public_html/new/sites/default/settings.php on line 212
+[06-Oct-2012 11:36:22] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home5/horkiinf/public_html/new/sites/default/settings.php on line 212
+[06-Oct-2012 21:40:34] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 89 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 66
+[06-Oct-2012 21:40:37] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:40:52] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:41:01] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 79 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:43:05] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:43:12] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:44:31] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:44:55] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 76 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:45:50] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 80 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:50:05] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:52:49] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:54:05] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 21:54:08] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 80 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 22:01:35] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 89 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 66
+[06-Oct-2012 22:03:30] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 79 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 22:03:32] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 79 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 22:06:30] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 22:35:15] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 80 bytes) in /home5/horkiinf/public_html/new/includes/module.inc on line 101
+[06-Oct-2012 23:01:32] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/views/plugins/views_plugin_display.inc on line 685
+[07-Oct-2012 10:36:36] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 79 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/views/plugins/views_plugin_display.inc on line 699
+[07-Oct-2012 10:36:54] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 64 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/views/plugins/views_plugin_display.inc on line 680
+[07-Oct-2012 11:05:13] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 79 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/views/plugins/views_plugin_display.inc on line 691
+[07-Oct-2012 13:13:43] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 173075 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 463
+[07-Oct-2012 13:13:51] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 232583 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 463
+[07-Oct-2012 13:13:56] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 521538 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 463
+[07-Oct-2012 13:14:58] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 521795 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 463
+[07-Oct-2012 13:15:05] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 521795 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 463
+[07-Oct-2012 13:15:22] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 521666 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 463
+[07-Oct-2012 13:15:51] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 521795 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 463
+[07-Oct-2012 13:16:05] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 521538 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 463
+[07-Oct-2012 13:17:13] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 521538 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 463
+[07-Oct-2012 13:27:19] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 8192 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/views/theme/views-view-fields.tpl.php on line 1
+[07-Oct-2012 13:27:26] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 71 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 447
+[07-Oct-2012 13:27:42] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 71 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 447
+[07-Oct-2012 13:27:59] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 89 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 447
+[07-Oct-2012 13:28:07] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 92 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 447
+[07-Oct-2012 13:30:49] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 85 bytes) in /home5/horkiinf/public_html/new/includes/bootstrap.inc on line 3261
+[07-Oct-2012 13:41:45] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 30720 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/views/includes/base.inc on line 320

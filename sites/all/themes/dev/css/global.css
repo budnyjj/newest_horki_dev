@@ -459,6 +459,39 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 #edit-actions {
 	margin: 20px 10px;
 }
+
+/*Poll settings*/
+
+        .poll .bar .foreground {
+                background-color: #04202E;
+        }
+
+        .poll .total {
+                display: none;
+        }
+
+        #block-poll-recent {
+                background-color: #f8f8f8;
+                padding: 10px;
+                margin-top: 20px;
+        }
+
+        div.poll div.title {
+                        margin-bottom: 5px;
+        }
+
+        #block-poll-recent ul {
+                list-style: none;
+                text-align: right;
+                margin-top: 20px;
+                margin-bottom: 5px;
+                margin-right: 10px;
+        }
+
+        #block-poll-recent ul li a {
+                font-size: 14px;
+        }
+
 /*Postscript Block Settings*/
 
 	#zone-postscript-wrapper {
