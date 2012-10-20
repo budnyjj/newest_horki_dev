@@ -174,21 +174,15 @@ h3 {
 	nav.navigation {
 		margin-top: 10px;
 		margin-bottom: 15px;
-		margin-left: -20px;
-		margin-right: -20px;
-		width: 980px;
-		overflow: visible;
 	}
 
 	ul#main-menu, ul#secondary-menu {
 		display: block;
 		margin-bottom: 10px;
+		overflow: visible;
 	}
+	   
 
-	ul#secondary-menu {
-		margin-left: 7px;
-	}
-	
 	nav.navigation li {
 	} 
 
