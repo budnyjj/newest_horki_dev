@@ -46,7 +46,7 @@ function bel_currency_parser() {
         {
             // Если текущая валюта в списке тех, которая нам нужна - будем анализировать её
             $curRate = floatval($item->Rate); // Текущий курс валюты
-			$answer .= '<div class="bel_currency_row">'.'<div class="bel_currency_char">'.$item->CharCode.'</div>'.'&nbsp;'.'<div class="bel_currency_num">'.number_format($curRate,2,'.','').'</div>'.'&nbsp;'.'</div>'; // Выведем результат
+			$answer .= '<div class="bel_currency_row">'.'<div class="bel_currency_char">'.$item->CharCode.'</div>'.'&nbsp;'.'|'.'&nbsp;'.'<div class="bel_currency_num">'.number_format($curRate,2,'.','').'</div>'.'&nbsp;'.'</div>'; // Выведем результат
         }
     }
 	return $answer;

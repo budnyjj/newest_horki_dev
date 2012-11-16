@@ -11,7 +11,7 @@ nav, #block-nice-menus-4, #block-nice-menus-3, #block-views-front-block-2, #bloc
 /*Initial Links & Text Settings*/
 
 h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
-	font-family: "Georgia";
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 h2 a:link {
@@ -23,7 +23,7 @@ h2 a:hover {
 }
 
 h3 {
-	font-family: "Georgia";
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 /*Standart Margin & Padding & Color Settings*/
@@ -86,7 +86,7 @@ h3 {
 /*Information Block's Float Settings*/
 
 	#block-block-2, #block-bel-currency-bel-currency {
-		float: right;
+/*		float: right; */
 	}
 
 	/*Social Links Block Settings*/
@@ -110,8 +110,8 @@ h3 {
 	/*Currency Block Settings*/
 
 		#block-bel-currency-bel-currency {
-			width: 90px;
-			height: 56px;
+	/*		width: 90px; */
+	/*		height: 56px;*/
 			margin-right: 5px;
 			padding: 2px;
 			background-color: #f8f8f8;
@@ -126,7 +126,7 @@ h3 {
 		}
 
 		.bel_currency_row {
-			font-family: "Tahoma", sans-serif;
+			font-family: Verdana, Arial, Helvetica, sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			font-size: 11px;
@@ -158,7 +158,7 @@ h3 {
 /* Main Menu Positioning */
 
 	nav.navigation li a {
-		font-family: "Georgia", serif;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
 	}
 
 	nav.navigation li a:link {
@@ -192,13 +192,11 @@ h3 {
 		background-color: transparent;
 	}
 
-	div.view-display-id-block_1 a {
-		font-family: "Georgia";
-	}
+
 	
 	div.view-footer a {
 		text-align: right;
-		font-family: "Tahoma", sans-serif;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
 	}
 
 h2.block-title {
@@ -237,7 +235,7 @@ h2.block-title {
 	}
 	
 	#block-views-blocks-block-1 a {
-		font-family: tahoma, sans-serif;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
 		font-size: 14px;
 	} 
 	
@@ -266,7 +264,7 @@ h2.block-title {
 	}
 	
 	ul.quicktabs-tabs li a {
-		font-family: "Georgia";
+		font-family: Verdana, Arial, Helvetica, sans-serif;
 	}
 
 	ul.quicktabs-tabs li a:link {

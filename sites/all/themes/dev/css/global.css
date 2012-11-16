@@ -22,19 +22,26 @@ body, a {
 
 a:link, a:visited {
 	color: #394a59;
+	text-decoration: none;
 }
 
-a:hover, a:active {
+a:active {
+	text-decoration: none;
+	color: #d6492a;
+}
+
+ a:hover {
 	color: #d6492a;
 	text-decoration: underline;
 }
-
 p {
 	margin-bottom: 0.5em;
 }
 
 p::first-letter {
 }
+
+.page-node .field-name-field-text {font-size: 15px;}
 
 h2, h2 a, div.node-ads div.field-name-field-cost, div.field-name-field-related div.field-label {
 	font-family: "Tahoma", sans-serif;
@@ -210,10 +217,11 @@ ul.links li.blog_usernames_blog {
 		margin-bottom: 20px;
 	}
 
-	div.view-display-id-block_1 a {
-		font-size: 28px;
-		color: #04202e;
-	}
+.block-clone-of-clone-of-towns, .block-panels-mini-towns, .block-clone-of-towns {border-bottom: 1px solid #ccc;}
+.block-clone-of-clone-of-towns .panel-col-first, .block-panels-mini-towns .panel-col-first, .block-clone-of-towns .panel-col-first {width: 38%;}
+.block-clone-of-clone-of-towns .panel-col-last, .block-panels-mini-towns .panel-col-last, .block-clone-of-towns .panel-col-last {width: 58%;}
+
+.block-clone-of-clone-of-towns .panel-col-last a, .block-panels-mini-towns .panel-col-last a, .block-clone-of-towns .panel-col-last a {font-size: 110%;}
 	
 	div.view-display-id-block_1 a:hover, div.view-display-id-block_1 a:active {
 		color: #d6492a;

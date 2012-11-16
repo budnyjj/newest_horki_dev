@@ -62,9 +62,7 @@ h3 {
 
 /*Main News Block Settings*/
 
-div.view-display-id-block_1 a {
-		font-size: 24px;
-	}
+
 
 section#block-views-front-block-1 div.content {
 	padding: 5px 0;
