@@ -34,6 +34,15 @@ h3 {
 		font-size: 14px;
 	}	
 	
+	
+.view-id-testingrepresentative_node  h3 a{color: #8996a0;
+font-size: 16px;
+text-transform: uppercase;
+
+padding-right: 10px;}	
+
+.view-id-testingrepresentative_node  h3 {text-align: right;}
+	
 /* Main Menu Style */
 
 	ul#secondary-menu {

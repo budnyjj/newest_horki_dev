@@ -211,7 +211,7 @@ padding: 9px;
 	}
 
 #block-views-front-block-1 .views-field-field-pics	{margin-top: 10px;}
-#block-views-front-block-1 h2.block-title  {float: right;}
+#block-views-front-block-1 h2.block-title  {float: right; padding-left: 20px;}
 	
 .block-clone-of-clone-of-towns, .block-panels-mini-towns, .block-clone-of-towns {border-bottom: 1px solid #ccc;}
 .block-clone-of-clone-of-towns .panel-col-first, .block-panels-mini-towns .panel-col-first, .block-clone-of-towns .panel-col-first {width: 38%;}
@@ -529,7 +529,7 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 		display: none;
 	}
 
-.view-id-testingrepresentative_node a  {font-size: 20px;}
+
 .zahalovak_navin a {font-weight:bold; font-size: 14px; padding-bottom: 5px;}
 .region-header-first .block {padding: 0!important;}
 
