@@ -42,6 +42,10 @@ div.messages.oneall_social_login {
   background-position: -224px -1px;
 }
 
+.oneall_social_login_provider.oneall_social_login_provider_windowslive {
+  background-position: -261px -1px;
+}
+
 .oneall_social_login_provider.oneall_social_login_provider_livejournal {
   background-position: -298px -1px;
 }
@@ -82,10 +86,6 @@ div.messages.oneall_social_login {
   background-position: -816px -1px;
 }
 
-.oneall_social_login_provider.oneall_social_login_provider_windowslive {
-  background-position: -261px -1px;
-}
-
 .oneall_social_login_provider.oneall_social_login_provider_mailru {
   background-position: -853px -1px;
 }
@@ -98,6 +98,10 @@ div.messages.oneall_social_login {
   background-position: -927px -1px;
 }
 
-.oneall_social_login_provider.oneall_social_login_provider_foursquare {
-  background-position: -113px -1px;
+.oneall_social_login_provider.oneall_social_login_provider_youtube {
+  background-position: -1001px -1px;
+}
+
+.oneall_social_login_provider.oneall_social_login_provider_odnoklassniki {
+  background-position: -1038px -1px;
 }

@@ -80,7 +80,7 @@ function oneall_social_login_core_schema() {
         'not null' => TRUE,
       ),
       'value' => array(
-        'description' => 'The value of this setting.',
+        'description' => 'The value of the setting.',
         'type' => 'varchar',
         'length' => '64',
         'not null' => TRUE,
@@ -126,6 +126,6 @@ function oneall_social_login_core_uninstall() {
   drupal_uninstall_schema('oneall_social_login_identities');
   drupal_uninstall_schema('oneall_social_login_settings');
 
-  // Remove entries that module might have created.
+  // Remove entries that the module might have created.
   db_delete('authmap')->condition('module', 'oneall_social_login')->execute();
 }

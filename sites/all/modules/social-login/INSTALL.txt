@@ -18,6 +18,8 @@ here: https://app.oneall.com/signup/.
 
 You will obtain the "API Settings" after having created a new Site.
 
+More information is available here:
+http://docs.oneall.com/plugins/guide/social-login-drupal/
 
 Feel free to contact us if you have any questions. 
 http://www.oneall.com/company/contact-us/

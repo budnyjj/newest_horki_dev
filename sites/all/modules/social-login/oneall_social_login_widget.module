@@ -6,24 +6,24 @@
  */
 
 /**
- * Add the javascript library.
+ * Adds the javascript library.
  */
 function oneall_social_login_widget_add_js_library ($subdomain, $https_enabled = FALSE) {
   drupal_add_js(($https_enabled ? 'https' : 'http') . '://' . $subdomain . '.api.oneall.com/socialize/library.js', 'external');
 }
 
 /**
- * Add the social network buttons.
+ * Adds the social network buttons.
  */
 function oneall_social_login_widget_add_js_plugin ($plugin_type, $subdomain, $providers, $containerid, $token = NULL) {
-  GLOBAL $is_https;
+  GLOBAL $is_https, $base_url;
 
-  // Build the callback uri.
-  $callback_uri = url('oneall_social_login/callback', array(
-    'absolute' => TRUE,
-  ));
-
+  // Check required settings.
   if (!empty($containerid) AND !empty($subdomain)) {
+
+  	// Build the callback uri.
+  	$callback_uri = url('oneall_social_login/callback', array('absolute' => TRUE, 'query' => array('origin' => check_plain($base_url.request_uri()))));
+
     // Add social library.
     oneall_social_login_widget_add_js_library($subdomain, $is_https);
 
@@ -44,6 +44,7 @@ function oneall_social_login_widget_add_js_plugin ($plugin_type, $subdomain, $pr
   }
 }
 
+
 /**
  * Implements hook_block_info().
  */
@@ -54,6 +55,7 @@ function oneall_social_login_widget_block_info () {
   );
   return $blocks;
 }
+
 
 /**
  * Implements hook_block_view().
@@ -78,13 +80,12 @@ function oneall_social_login_widget_block_view ($delta = '') {
 
       // Setup Block.
       $block['subject'] = t('Login with your Social Network account.');
-      $block['content'] = theme('oneall_social_login_widget_provider_container_block', array(
-        'containerid' => $containerid,
-      ));
+      $block['content'] = theme('oneall_social_login_widget_provider_container_block', array('containerid' => $containerid));
     }
   }
   return $block;
 }
+
 
 /**
  * Implements hook_form_alter().
@@ -97,7 +98,7 @@ function oneall_social_login_widget_form_alter (&$form, &$form_state) {
       oneall_social_login_widget_show_providers($form, $form_state, 'login_page');
       break;
 
-    // Hook into registration page.
+    // Hook into edit profile page.
     case 'user_profile_form':
       oneall_social_login_widget_show_providers($form, $form_state, 'edit_profile_page');
       break;
@@ -111,12 +112,14 @@ function oneall_social_login_widget_form_alter (&$form, &$form_state) {
   }
 }
 
+
 /**
  * Implements hook_form_USER_LOGIN_BLOCK_alter().
  */
 function oneall_social_login_widget_form_user_login_block_alter (&$form, &$form_state) {
   oneall_social_login_widget_show_providers($form, $form_state, 'side_panel');
 }
+
 
 /**
  * Generic function called to display the social providers.
@@ -209,7 +212,7 @@ function oneall_social_login_widget_show_providers (&$form, &$form_state, $targe
     default:
       $plugin_type = 'social_login';
 
-      // Widget is enables.
+      // Widget is enabled.
       $widget_enabled = TRUE;
 
       // Default title.
@@ -254,6 +257,7 @@ function oneall_social_login_widget_show_providers (&$form, &$form_state, $targe
   }
 }
 
+
 /**
  * Implements hook_theme().
  */
@@ -277,6 +281,7 @@ function oneall_social_login_widget_theme () {
   );
 }
 
+
 /**
  * Returns the settings.
  */
@@ -288,20 +293,25 @@ function oneall_social_login_widget_get_settings () {
 
   // Default values.
   $settings['api_subdomain'] = '';
+  $settings['api_key'] = '';
+  $settings['api_secret'] = '';
 
-  $settings['side_panel_icons'] = 'enable';
+  $settings['http_handler'] = 'curl';
+  $settings['http_protocol'] = 'https';
+
   $settings['side_panel_icons'] = 'below';
   $settings['side_panel_caption'] = '';
 
-  $settings['registration_page_icons'] = 'enable';
   $settings['registration_page_icons'] = 'below';
   $settings['registration_page_caption'] = '';
 
-  $settings['login_page_icons'] = 'enable';
+  $settings['registration_retrieve_avatars'] = 'enable';
+  $settings['registration_approval'] = 'inherit';
+  $settings['registration_method'] = 'manual';
+
   $settings['login_page_icons'] = 'above';
   $settings['login_page_caption'] = '';
 
-  $settings['profile_page_icons'] = 'enable';
   $settings['profile_page_icons'] = 'below';
   $settings['profile_page_caption'] = '';
 

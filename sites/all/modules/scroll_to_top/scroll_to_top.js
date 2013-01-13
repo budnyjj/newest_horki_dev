@@ -5,8 +5,11 @@
  
 Drupal.behaviors.scroll_to_top = {
   attach: function (context, settings) {
-	// append  back to top link top body
-	$("body").append("<p id='back-top'><a href='#top'><span id='button'></span><span id='link'>" + settings.scroll_to_top.label + "</span></a></p>");
+	// append  back to top link top body if it is not
+	var exist= jQuery('#back-top').length; // exist = 0 if element doesn't exist
+	if(exist == 0){ // this test is for fixing the ajax bug 
+		$("body").append("<p id='back-top'><a href='#top'><span id='button'></span><span id='link'>" + settings.scroll_to_top.label + "</span></a></p>");
+	}
 	// Preview function
 	$("input").change(function () {
 		// building the style for preview
