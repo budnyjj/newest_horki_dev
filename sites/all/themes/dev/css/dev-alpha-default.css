@@ -77,13 +77,11 @@ h3 {
 	}
 /*Information Block's Float Settings*/
 
-	#block-block-2, #block-bel-currency-bel-currency {
-/*		float: right; */
-	}
 
 	/*Social Links Block Settings*/
 	
-	#block-block-3 {
+	#block-block-2 {
+	    
 	}
 	/* Current Date Block*/
 		#block-block-16 {
@@ -109,6 +107,7 @@ h3 {
 
 		#block-bel-currency-bel-currency {
 			width: 370px;
+			margin: 0 5px;
 		}
 
 		#block-bel-currency-bel-currency  a {
@@ -132,9 +131,17 @@ h3 {
 			display: inline-block;		
 		}
 
+		#block-block-2 {
+		    position: relative;
+		    top: 5px;
+		}
+
 	/*Search Block Positioning*/
 
 		div.block-custom-search-blocks-1 {
+		    float: right;
+		    position: relative;
+		    top: 5px;
 		}
 		
 		.form-item-custom-search-blocks-form-1 {
@@ -338,12 +345,6 @@ h3 {
 	#block-nice-menus-4 {
 		float: right;
 	}
-	
-/*Information Block's Float Settings*/
-
-	#block-block-2, #block-bel-currency-bel-currency {
-		float: right;
-	}
 
 /* Main Menu Style */
 
@@ -457,13 +458,7 @@ h3 {
 
 /*NORMAL PART*/
 
- 
- #block-bel-currency-bel-currency, #block-views-banners-block-1 {
- }
- 
- #block-views-banners-block-2 {
- }
- 
+
 /*Initial Links & Text Settings*/
 
 body, a {

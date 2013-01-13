@@ -462,6 +462,7 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 
 #edit-actions {
 	margin: 20px 10px;
+	display: inline;
 }
 
 /*Poll settings*/
