@@ -204,11 +204,15 @@ ul.links li.blog_usernames_blog {
 	}
 
 	#block-views-front-block-1 {
-		background-color: #ffecac;
-		padding: 10px;
-		margin-bottom: 20px;
+border: 1px solid #c7cdd1;
+box-shadow: 0 0 3px #939fa7;
+border-radius: 3px;
+padding: 9px;
 	}
 
+#block-views-front-block-1 .views-field-field-pics	{margin-top: 10px;}
+#block-views-front-block-1 h2.block-title  {float: right;}
+	
 .block-clone-of-clone-of-towns, .block-panels-mini-towns, .block-clone-of-towns {border-bottom: 1px solid #ccc;}
 .block-clone-of-clone-of-towns .panel-col-first, .block-panels-mini-towns .panel-col-first, .block-clone-of-towns .panel-col-first {width: 38%;}
 .block-clone-of-clone-of-towns .panel-col-last, .block-panels-mini-towns .panel-col-last, .block-clone-of-towns .panel-col-last {width: 58%;}
@@ -537,6 +541,9 @@ font: bold 14px/14px 'PT Sans',Arial,sans-serif;
 margin-bottom: 6px;
 }
 
-.block-custom-search-blocks-1 .form-type-textfield {width: 100px !important;}
+.view-id-aposhnija_naviny .views-field-title a {font-weight: bold; font-size: 14px;}
 
-.block-custom-search-blocks-1 .custom-search-box input {width: 100px !important;}
+.mc-recent-meta a{font-weight: bold;}
+
+#main-menu {padding-top: 10px;border-top: 2px solid #671b1d; }
+#secondary-menu {padding-bottom: 10px; border-bottom: 1px solid #939fa7;}

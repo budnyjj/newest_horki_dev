@@ -285,7 +285,6 @@ h2.block-title {
 		background-color: #F8F8F8;
 	}
 
-
 /* NARROW PART */
 
 /* This file will hold styles that are loaded using the same media query as the narrow grid. */
@@ -455,10 +454,9 @@ h3 {
 		border-bottom: 3px solid #04202e;
 	}
 
+
 /*NORMAL PART*/
-/* This file will hold styles that are loaded using the same media query as the normal grid. */
-/* If you are using the default media queries provided by Omega, these styles will also
- *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+
  
  #block-bel-currency-bel-currency, #block-views-banners-block-1 {
  }
@@ -569,5 +567,4 @@ div.comment {
 	width: 560px;
 	margin-left: 20px;
 }
-
 
