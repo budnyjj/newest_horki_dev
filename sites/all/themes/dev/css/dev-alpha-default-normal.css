@@ -65,7 +65,8 @@ h3 {
 /*Main News Block Settings*/
 
 .block-views-front-block-1 a {
-		font-size: 24px;
+		font-size: 27px;
+		font-weight: bold;
 	}
 
 section#block-views-front-block-1 div.content {
