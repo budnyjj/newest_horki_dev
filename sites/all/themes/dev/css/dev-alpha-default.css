@@ -490,6 +490,15 @@ h3 {
 		font-size: 14px;
 	}	
 	
+	
+.view-id-testingrepresentative_node  h3 a{color: #8996a0;
+font-size: 16px;
+text-transform: uppercase;
+
+padding-right: 10px;}	
+
+.view-id-testingrepresentative_node  h3 {text-align: right;}
+	
 /* Main Menu Style */
 
 	ul#secondary-menu {
@@ -521,7 +530,8 @@ h3 {
 /*Main News Block Settings*/
 
 .block-views-front-block-1 a {
-		font-size: 24px;
+		font-size: 27px;
+		font-weight: bold;
 	}
 
 section#block-views-front-block-1 div.content {
@@ -567,4 +577,3 @@ div.comment {
 	width: 560px;
 	margin-left: 20px;
 }
-
