@@ -41,3 +41,9 @@
 [07-Oct-2012 13:28:07] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 92 bytes) in /home5/horkiinf/public_html/new/includes/cache.inc on line 447
 [07-Oct-2012 13:30:49] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 85 bytes) in /home5/horkiinf/public_html/new/includes/bootstrap.inc on line 3261
 [07-Oct-2012 13:41:45] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 30720 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/views/includes/base.inc on line 320
+[18-Nov-2012 01:02:21] PHP Parse error:  syntax error, unexpected '<' in /home5/horkiinf/public_html/new/sites/all/themes/dev/templates/views-view-fields--testingrepresentative-node--page.tpl.php on line 30
+[18-Nov-2012 01:02:29] PHP Parse error:  syntax error, unexpected '<' in /home5/horkiinf/public_html/new/sites/all/themes/dev/templates/views-view-fields--testingrepresentative-node--page.tpl.php on line 30
+[18-Nov-2012 01:02:55] PHP Parse error:  syntax error, unexpected '<' in /home5/horkiinf/public_html/new/sites/all/themes/dev/templates/views-view-fields--testingrepresentative-node--page.tpl.php on line 30
+[18-Nov-2012 01:42:51] PHP Fatal error:  Cannot access empty property in /home5/horkiinf/public_html/new/sites/all/themes/dev/templates/views-view-field--testingrepresentative-node--page--field-pics.tpl.php on line 25
+[18-Nov-2012 01:42:53] PHP Fatal error:  Cannot access empty property in /home5/horkiinf/public_html/new/sites/all/themes/dev/templates/views-view-field--testingrepresentative-node--page--field-pics.tpl.php on line 25
+[18-Nov-2012 01:42:57] PHP Fatal error:  Cannot access empty property in /home5/horkiinf/public_html/new/sites/all/themes/dev/templates/views-view-field--testingrepresentative-node--page--field-pics.tpl.php on line 25

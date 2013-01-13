@@ -1,7 +1,7 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-nav, #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-views-banners-block, #block-views-banners-block-1, #block-views-banners-block-2, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-3, #block-menu-menu-old {
+nav, #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-3, #block-menu-menu-old {
 	display: none;
 }
 
@@ -78,7 +78,6 @@ ul.links li.blog_usernames_blog {
 /*Standart Margin & Padding & Color Settings*/
 
 	.zone {
-		margin-bottom: 10px;
 	}
 
 	.views-row {
@@ -86,7 +85,6 @@ ul.links li.blog_usernames_blog {
 	}
 
 	.block {
-		padding: 10px 0px;
 	}
 
 /*Pager Style*/
@@ -141,15 +139,9 @@ ul.links li.blog_usernames_blog {
 }
 
 /*Login Menu Elements*/
-#block-logintoboggan-logintoboggan-logged-in {
-	width: 110px;
-	padding: 0.3em 15px;
-	margin: 0 auto;
-	background-color: #F3F3F3;
-}
 
 /*Mobile Menu's Elements*/
-
+/*
 	ul.menu li {
 		text-align: center;
 	}
@@ -158,7 +150,7 @@ ul.links li.blog_usernames_blog {
 		font-size: 24px;
 	}
 	
-
+*/
 
 /*Block Titles*/	
 
@@ -172,15 +164,15 @@ ul.links li.blog_usernames_blog {
 
 /*Login Block*/	
 
-	#block-nice-menus-4 {
-		padding: 0px;
-		width: 180px;
-		margin: 0 auto;
-		background-color: #f8f8f8;
+	#block-block-15 a {
+		display: block;
 	}
 
-	ul#nice-menu-4 li {
-		margin: 0 5px;
+
+/*Add News Block*/
+
+	#block-block-14 a {
+		display: block;
 	}
 
 /*Logo Block*/
@@ -533,3 +525,18 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 		display: none;
 	}
 
+.view-id-testingrepresentative_node a  {font-size: 20px;}
+.zahalovak_navin a {font-weight:bold; font-size: 14px; padding-bottom: 5px;}
+.region-header-first .block {padding: 0!important;}
+
+.view-id-aposhnija_naviny h3 {
+clear: both;
+color: #939FA7;
+display: block;
+font: bold 14px/14px 'PT Sans',Arial,sans-serif;
+margin-bottom: 6px;
+}
+
+.block-custom-search-blocks-1 .form-type-textfield {width: 100px !important;}
+
+.block-custom-search-blocks-1 .custom-search-box input {width: 100px !important;}

@@ -29,7 +29,6 @@ h3 {
 /*Standart Margin & Padding & Color Settings*/
 
 	.zone {
-		margin-bottom: 10px;
 	}
 
 	.views-row {
@@ -60,16 +59,9 @@ h3 {
 	}
 
 /*Login Menu Elements*/
-	#block-logintoboggan-logintoboggan-logged-in {
-		width: 100%;
-		background-color: transparent;
-		text-align: right;
-		padding: 5px;
-	}
 /*Logo Block*/
 
 	div#block-block-8 {
-		padding: 0 0 10px 0; 
 	}
 
 	div.zone-branding {
@@ -81,7 +73,7 @@ h3 {
 	}
 	
 	img.wide-logo {
-		width: 300px;
+		width: 230px;
 	}
 /*Information Block's Float Settings*/
 
@@ -92,33 +84,37 @@ h3 {
 	/*Social Links Block Settings*/
 	
 	#block-block-3 {
-		height: 60px;
-		overflow: hidden;
 	}
+	/* Current Date Block*/
+		#block-block-16 {
+			width: 150px;
+			height: 23px;
+		}
+
+		#block-block-16 a {
+			vertical-align: middle;
+			text-align: center;
+			font-size: 11px;
+		}
+
 	
 	/*Weather Block Settings*/
 
 		#block-block-2 {
-			padding: 0px;
+			width: 170px;
+			height: 23px;
 		}
 
-	/*Social Links & Search Blocks' Settings*/
-		#block-block-3, #block-custom-search-blocks-1 {
-			padding: 0px;
-		}
- 
 	/*Currency Block Settings*/
 
 		#block-bel-currency-bel-currency {
-	/*		width: 90px; */
-	/*		height: 56px;*/
-			margin-right: 5px;
-			padding: 2px;
-			background-color: #f8f8f8;
+			width: 370px;
 		}
 
-		.bel_currency_char, .bel_currency_num {
-			display: inline;
+		#block-bel-currency-bel-currency  a {
+			text-align: center;
+			vertical-align: middle;
+			font-size: 11px;
 		}
 
 		.bel_currency_char {
@@ -129,30 +125,27 @@ h3 {
 			font-family: Verdana, Arial, Helvetica, sans-serif;
 			font-style: normal;
 			font-weight: normal;
-			font-size: 11px;
-			float: right;
-			margin-bottom: 1px;
+			display: inline-block;
 		}
 
-		#block-block-2, #block-bel-currency-bel-currency {
-			float: right;
+		#block-block-16, #block-block-2, #block-bel-currency-bel-currency {
+			display: inline-block;		
 		}
 
 	/*Search Block Positioning*/
 
 		div.block-custom-search-blocks-1 {
-			float: right;
-			height: 60px;
-			width: 200px;
 		}
 		
 		.form-item-custom-search-blocks-form-1 {
-			float: left;
-			margin: 0px 2px;
+			display: inline;
+		}
+
+		#edit-actions--2 {	
+			display: inline;
 		}
 		
 		.search-form {
-			margin-bottom: 20px;
 		}
 		
 /* Main Menu Positioning */
