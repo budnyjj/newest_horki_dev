@@ -39,14 +39,14 @@ function bel_currency_parser() {
     $aCurrencyName = array("USD","EUR","RUB"); // Валюты, которые мониторим
 	$today = date("m/d/y");
     $xml = simplexml_load_file("http://www.nbrb.by/Services/XmlExRates.aspx?ondate=$today"); // Запрашиваем курсы валют с сайта nbrb.by
-    $answer = '<a>'.t("currency rates").'</a>'.'&nbsp;';
+    $answer = '<div class="bel_currency_name">'.t("currency rates").'</div>';
 	foreach ($xml->Currency as $item)
     {     
         if (in_array($item->CharCode, $aCurrencyName)) // Пройдемся по всем валютам
         {
             // Если текущая валюта в списке тех, которая нам нужна - будем анализировать её
             $curRate = floatval($item->Rate); // Текущий курс валюты
-			$answer .= '|'.'&nbsp;'.'<div class="bel_currency_row">'.'<a class="bel_currency_char">'.$item->CharCode.'</a>'.'&nbsp;'.'<a class="bel_currency_num">'.number_format($curRate,2,'.','').'</a>'.'&nbsp;'.'</div>'; // Выведем результат
+			$answer .= '<div class="bel_currency_delimiter">'.'|'.'</div>'.'<div class="bel_currency_row">'.'<div class="bel_currency_char">'.$item->CharCode.'</div>'.'<div class="bel_currency_num">'.number_format($curRate,2,'.','').'</div>'.'</div>'; // Выведем результат
         }
     }
 	return $answer;

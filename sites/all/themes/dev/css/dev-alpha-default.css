@@ -81,13 +81,8 @@ img.wide-logo {
 /*Social Links Block Settings*/
 
 /* Current Date Block*/
-#block-block-16 {
-    height: 23px;
-}
 
-#block-block-16 a {
-    vertical-align: middle;
-    text-align: center;
+#block-block-16 {
     font-size: 11px;
 }
 
@@ -95,13 +90,6 @@ img.wide-logo {
 /*Currency Block Settings*/
 
 #block-bel-currency-bel-currency {
-/* width: 320px; */
-/* margin: 0 5px;  */
-}
-
-#block-bel-currency-bel-currency  a {
-    text-align: center;
-    vertical-align: middle;
     font-size: 11px;
 }
 
@@ -113,7 +101,16 @@ img.wide-logo {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
+}
+
+.bel_currency_delimiter, .bel_currency_name, .bel_currency_row {
     display: inline-block;
+    margin: 0 2px;
+}
+
+.bel_currency_char, .bel_currency_num {
+    display: inline-block;
+    margin: 0 1px;
 }
 
 #block-block-16, #block-block-2, #block-bel-currency-bel-currency {
@@ -127,13 +124,10 @@ img.wide-logo {
 
 #block-block-2 {
     /* width: 250px; */
-    height: 23px;
-    
+    /* height: 23px; */
+    font-size: 11px; 
 }
 
-#block-block-2 a {
-    font-size: 11px;
-}
 
 #block-block-2 object {
     position: relative;
