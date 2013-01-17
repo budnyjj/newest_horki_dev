@@ -1,9 +1,12 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-.zone {
-margin-bottom: 0px !important;
+/*nav, #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-3, #block-menu-menu-old*/
+
+#block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-photoblog-main-block, #block-views-videoblog-main-block, #block-block-17, #block-views-aposhnija-naviny-block, #block-views-blocks-block-1, #block-poll-recent, #quicktabs-social_blocks_normal, #block-menu-menu-old, #block-menu-menu-geografic, #block-menu-menu-system, #block-menu-menu-small-genres {
+	display: none;
 }
+
 #zone-content, #zone-menu, #zone-branding, #zone-preface  {background-color: white; 
 border-left: 1px dashed #edeeef;
 border-right: 1px dashed #edeeef;
@@ -13,9 +16,6 @@ border-right: 1px dashed #edeeef;
 
 #zone-content-wrapper {background-color:#ccc;}
 
-nav, #block-views-front-block-2, #block-menu-menu-geografic, #block-menu-menu-small-genres, #block-menu-menu-system, #block-views-ads-block, #block-views-blocks-block-1, #block-bel-currency-bel-currency, #block-block-2, #block-block-3, #block-quicktabs-social-blocks-normal, #block-custom-search-blocks-1, #block-nice-menus-3, #block-menu-menu-old {
-	display: none;
-}
 
 ul li.leaf {
 	list-style-type: none;
@@ -476,38 +476,6 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 	display: inline;
 }
 
-/*Poll settings*/
-
-        .poll .bar .foreground {
-                background-color: #04202E;
-        }
-
-        .poll .total {
-                display: none;
-        }
-
-        #block-poll-recent {
-                background-color: #f8f8f8;
-                padding: 10px;
-                margin-top: 20px;
-        }
-
-        div.poll div.title {
-                        margin-bottom: 5px;
-        }
-
-        #block-poll-recent ul {
-                list-style: none;
-                text-align: right;
-                margin-top: 20px;
-                margin-bottom: 5px;
-                margin-right: 10px;
-        }
-
-        #block-poll-recent ul li a {
-                font-size: 14px;
-        }
-
 /*Postscript Block Settings*/
 
 	#zone-postscript-wrapper {
@@ -559,3 +527,4 @@ margin-bottom: 6px;
 
 #main-menu {padding-top: 10px;border-top: 2px solid #671b1d; }
 #secondary-menu {padding-bottom: 10px; border-bottom: 1px solid #939fa7;}
+#block-block-14  a {font-size: 14px; background-color: #404040; color: white; padding: 5px 10px; margin: 15px 0;}
