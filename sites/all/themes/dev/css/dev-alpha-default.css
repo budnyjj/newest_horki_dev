@@ -59,6 +59,8 @@ ul.menu li a {
     font-size: 11px;
 }
 
+/*MAIN PAGE STYLE*/
+
 /*Login Block*/	
 
 #block-nice-menus-4 {
@@ -228,7 +230,7 @@ ul#secondary-menu {
 }
 
 ul.secondary-menu li {
-    padding: 0 7px;
+    padding: 0 6px;
 }	
 
 ul.secondary-menu li a {
@@ -383,5 +385,16 @@ ul.quicktabs-tabs {
 
 }
 
+/*@end MAIN PAGE STYLE*/
 
+/*TEASERS STYLE*/
+
+.node-teaser .field-type-image, .node-teaser .field-type-video-embed-field {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+
+
+/*@end TEASERS STYLE*/
  
