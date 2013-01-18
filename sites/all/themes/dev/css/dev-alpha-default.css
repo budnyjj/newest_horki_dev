@@ -358,6 +358,26 @@ ul.quicktabs-tabs {
     text-align: center;
 }
 
+/*@end Quicktabs Block Settings*/
+
+/* Videoblog Blog Settings*/
+
+#block-views-videoblog-block-1 {
+    margin-bottom: 20px;
+}
+
+/*@end Videoblog Blog Settings*/
+
+/* Photoblog Blog Settings */
+
+#block-views-photoblog-block-1 {
+    margin-bottom: 20px;
+}
+
+/*@end Photoblog Blog Settings */
+
+
+
 /*Footer settings*/
 #zone-footer-wrapper {
 

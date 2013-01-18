@@ -389,17 +389,6 @@ div.node-afisha div.group-left div.field-name-field-when {
 		float: left;
 	}
 
-	div.view-photoblog div.views-field-title {
-		padding: 0 5px;
-		background-color: #F8F8F8;
-		position: relative;
-		bottom: -18px;
-		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE 5.5+*/
-		-moz-opacity: 0.9; /* Mozilla 1.6 и ниже */
-		-khtml-opacity: 0.9; /* Konqueror 3.1, Safari 1.1 */
-		opacity: 0.9; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9 */
-	}
-
 	div.field-name-field-gallery  img {
 		display: block;
 		float: left;
