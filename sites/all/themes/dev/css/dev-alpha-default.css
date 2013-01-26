@@ -203,7 +203,7 @@ nav.navigation li a:hover, nav.navigation li a:active {
 
 ul#main-menu, ul#secondary-menu {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     overflow: visible;
 }
 
@@ -224,6 +224,7 @@ ul.main-menu  li a {
 /*Secondary menu Settings*/
 
 ul#secondary-menu {
+
     width: 920px;
     margin-left: auto;
     margin-right: auto;
@@ -360,6 +361,10 @@ ul.quicktabs-tabs {
     text-align: center;
 }
 
+#twitter-widget-0 {
+   width: 460px;
+}
+
 /*@end Quicktabs Block Settings*/
 
 /* Videoblog Blog Settings*/
@@ -394,7 +399,32 @@ ul.quicktabs-tabs {
 	margin: 0 10px 10px 0;
 }
 
-
-
 /*@end TEASERS STYLE*/
- 
+
+/*NODES STYLE*/
+
+/* news style */
+
+article p img {
+	margin: 10px;
+}
+
+/*@end news style*/
+
+/*Photoblog style*/
+/*@end photoblog style*/
+
+/*Ads style*/
+
+.node-ads .field-type-image {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.node-ads .field-type-text-with-summary {
+	clear: both;
+}
+/*@end Ads style*/
+
+
+/*@end NODES STYLE*/ 

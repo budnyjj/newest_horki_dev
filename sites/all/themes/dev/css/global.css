@@ -11,10 +11,13 @@
 border-left: 1px dashed #edeeef;
 border-right: 1px dashed #edeeef;
 }
+body {
+background-image:url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
+
+}
+#zone-menu {background-color:#fff !important;}
 
 #zone-branding {padding-top:10px;}
-
-#zone-content-wrapper {background-color:#ccc;}
 
 
 ul li.leaf {
@@ -30,6 +33,11 @@ body, a {
 	font-weight: normal;
 	color: #04202e;
 	font-size: 13px;
+}
+
+#region-menu li .active {
+ padding-bottom: 5px;
+    border-bottom: 3px solid #04202e;
 }
 
 a:link, a:visited {

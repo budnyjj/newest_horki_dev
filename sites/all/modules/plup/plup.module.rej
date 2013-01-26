@@ -1,0 +1,12 @@
+--- plup.module
++++ plup.module
+@@ -599,7 +599,8 @@
+   $bundleKey = (isset($entityInfo['entity keys']['bundle']) && !empty($entityInfo['entity keys']['bundle'])) ? $entityInfo['entity keys']['bundle'] : $entity_type;
+   $bundle = isset($entity->{$bundleKey}) ? $entity->{$bundleKey} : $entity_type;
+   $instances = field_info_instances();
+-  $entityFields = $instances[$entity_type][$bundle];
++  // $bundle can be equal to "undefined", see http://drupal.org/node/1856030
++  $entityFields = isset($instances[$entity_type][$bundle]) ? $instances[$entity_type] : NULL;
+ 
+   if (!is_array($entityFields) || empty($entityFields)) {
+     return;
