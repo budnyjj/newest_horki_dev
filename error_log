@@ -47,3 +47,14 @@
 [18-Nov-2012 01:42:51] PHP Fatal error:  Cannot access empty property in /home5/horkiinf/public_html/new/sites/all/themes/dev/templates/views-view-field--testingrepresentative-node--page--field-pics.tpl.php on line 25
 [18-Nov-2012 01:42:53] PHP Fatal error:  Cannot access empty property in /home5/horkiinf/public_html/new/sites/all/themes/dev/templates/views-view-field--testingrepresentative-node--page--field-pics.tpl.php on line 25
 [18-Nov-2012 01:42:57] PHP Fatal error:  Cannot access empty property in /home5/horkiinf/public_html/new/sites/all/themes/dev/templates/views-view-field--testingrepresentative-node--page--field-pics.tpl.php on line 25
+[06-Feb-2013 17:01:15] PHP Parse error:  syntax error, unexpected '.' in /home5/horkiinf/public_html/new/sites/all/modules/bel_currency/bel_currency.module on line 85
+[06-Feb-2013 17:01:15] PHP Fatal error:  [] operator not supported for strings in /home5/horkiinf/public_html/new/includes/common.inc on line 2426
+[06-Feb-2013 17:01:18] PHP Parse error:  syntax error, unexpected '.' in /home5/horkiinf/public_html/new/sites/all/modules/bel_currency/bel_currency.module on line 85
+[06-Feb-2013 17:01:18] PHP Fatal error:  [] operator not supported for strings in /home5/horkiinf/public_html/new/includes/common.inc on line 2426
+[06-Feb-2013 17:01:20] PHP Parse error:  syntax error, unexpected '.' in /home5/horkiinf/public_html/new/sites/all/modules/bel_currency/bel_currency.module on line 85
+[06-Feb-2013 17:01:20] PHP Fatal error:  [] operator not supported for strings in /home5/horkiinf/public_html/new/includes/common.inc on line 2426
+[06-Feb-2013 17:02:04] PHP Parse error:  syntax error, unexpected '.' in /home5/horkiinf/public_html/new/sites/all/modules/bel_currency/bel_currency.module on line 85
+[06-Feb-2013 17:02:04] PHP Fatal error:  [] operator not supported for strings in /home5/horkiinf/public_html/new/includes/common.inc on line 2426
+[06-Feb-2013 17:02:31] PHP Parse error:  syntax error, unexpected '.' in /home5/horkiinf/public_html/new/sites/all/modules/bel_currency/bel_currency.module on line 85
+[06-Feb-2013 17:02:31] PHP Fatal error:  [] operator not supported for strings in /home5/horkiinf/public_html/new/includes/common.inc on line 2426
+[06-Feb-2013 17:20:26] PHP Parse error:  syntax error, unexpected T_IF, expecting T_CATCH in /home5/horkiinf/public_html/new/sites/all/modules/bel_currency/bel_currency.module on line 68

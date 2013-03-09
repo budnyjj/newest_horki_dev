@@ -131,3 +131,7 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
+
+RewriteCond %{HTTP_HOST} ^www\.new\.horki\.info$
+RewriteRule ^(.*)$ "http\:\/\/new\.horki\.info\/$1" [R=301,L]
+

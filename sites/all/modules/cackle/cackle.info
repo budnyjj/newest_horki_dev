@@ -1,4 +1,0 @@
-name = Cackle
-description = This plugin integrates "Cackle" social commenting system (Google+, Twitter, Facebook, Vkontakte, Mail.ru e.t.c.) right into your website
-core = 7.x
-configure = admin/config/cackle

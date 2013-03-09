@@ -25,8 +25,8 @@ function bel_currency_help($path, $arg) {
 
 function bel_currency_block_info() {
   $blocks['bel_currency'] = array(
-    'info' => t('Currency'), //Имя, которое будет показано в списке блоков.
-    'cache' => DRUPAL_CACHE_PER_ROLE, //По умолчанию
+    'info' => t('Currency'), 
+    'cache' => DRUPAL_CACHE_PER_ROLE, 
   );
   return $blocks;
 }
@@ -36,17 +36,17 @@ function bel_currency_block_info() {
 */
 
 function bel_currency_parser() {
-    $aCurrencyName = array("USD","EUR","RUB"); // Валюты, которые мониторим
-	$today = date("m/d/y");
-    $xml = simplexml_load_file("http://www.nbrb.by/Services/XmlExRates.aspx?ondate=$today"); // Запрашиваем курсы валют с сайта nbrb.by
+    $aCurrencyName = array("USD","EUR","RUB"); 
+    $today = date("m/d/y");
+    $xml = simplexml_load_file("http://www.nbrb.by/Services/XmlExRates.aspx?ondate=$today");
     $answer = '<div class="bel_currency_name">'.t("currency rates").'</div>';
-	foreach ($xml->Currency as $item)
-    {     
-        if (in_array($item->CharCode, $aCurrencyName)) // Пройдемся по всем валютам
+    foreach ($xml->Currency as $item)
+      {     
+        if (in_array($item->CharCode, $aCurrencyName)) 
         {
-            // Если текущая валюта в списке тех, которая нам нужна - будем анализировать её
-            $curRate = floatval($item->Rate); // Текущий курс валюты
-			$answer .= '<div class="bel_currency_delimiter">'.'|'.'</div>'.'<div class="bel_currency_row">'.'<div class="bel_currency_char">'.$item->CharCode.'</div>'.'<div class="bel_currency_num">'.number_format($curRate,2,'.','').'</div>'.'</div>'; // Выведем результат
+           $curRate = floatval($item->Rate); 
+	   $answer .= '<div class="bel_currency_delimiter">'.'|'.'</div>';
+	   $answer .= '<div class="bel_currency_row">'.'<div class="bel_currency_char">'.$item->CharCode.'</div>'.'<div class="bel_currency_num">'.number_format($curRate,2,'.','').'</div>'.'</div>'; 
         }
     }
 	return $answer;
@@ -61,11 +61,16 @@ function bel_currency_block_view($delta = '') {
     case 'bel_currency':
       $block['subject'] = t('Currency');
       if(user_access('access content')){  
-        $result = bel_currency_parser(); //Use our function for getting result
-		  if (empty($result)) { 
-          $block['content'] = t('Нет доступных источников.'); 
+        $cache = cache_get('bel_currency_info', 'cache');
+	if ($cache) {
+	  $result = $cache->data; }
+	else {
+	  $result = bel_currency_parser(); //Use our function for getting result
+	  cache_set('bel_currency_info', $result, 'cache', 43200);
+	}
+	if (empty($result)) {
+          $block['content'] = t('Нет доступных источников.');
         } else {
-          //Передаем данные через функцию theme.
           $block['content'] = $result;
         }
       }
@@ -73,3 +78,16 @@ function bel_currency_block_view($delta = '') {
   return $block;
 }
    
+
+/* $cache = cache_get('your-cache-id'); */
+/* $xml = $cache->data; */
+
+/* if (!$xml) { */
+/*   $xml = ... // perform your code to generate your XML */
+
+/*     cache_set('your-cache-id', $xml); */
+/* } */
+
+/* drupal_set_header("Content-Type:text/xml"); */
+/* print $xml; */
+/* exit(); */
