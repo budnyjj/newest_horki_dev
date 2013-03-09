@@ -82,7 +82,7 @@ function printfriendly_node_view($node, $view_mode) {
       $js = key($block['#attached']['js']);
       drupal_add_js($js, $block['#attached']['js'][$js]);
 
-      $links['printfriendly_button'] = array(
+      $links['printfriendly'] = array(
         'title' => $block['#markup'],
         'attributes' => array('class' => array('printfriendly-node', $node->type)),
         'html' => TRUE,
@@ -94,6 +94,17 @@ function printfriendly_node_view($node, $view_mode) {
       );
     }
   }
+}
+
+
+/**
+ * Register module with views api.
+ */
+function printfriendly_views_api() {
+  return array(
+    'api' => '3.0',
+    'path' => drupal_get_path('module', 'printfriendly') . '/views',
+  );
 }
 
 /**
@@ -116,7 +127,7 @@ function printfriendly_create_button() {
 
   $options = array(
     'attributes' => array(
-      'class' => 'printfriendlyLink',
+      'class' => 'printfriendly',
       'onclick' => 'window.print(); return false;',
       'title' => variable_get('printfriendly_description', 'Printer Friendly and PDF'),
     ),
