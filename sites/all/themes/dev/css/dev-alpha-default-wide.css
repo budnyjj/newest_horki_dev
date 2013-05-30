@@ -3,3 +3,11 @@
  * If you are using the default media queries provided by Omega, these styles will also
  *  apply to the normal and widescreen layouts. You may override these styles in the normal 
  *  and widescreen CSS files as appropriate. */
+#block-block-16 {
+color: red;
+    display: inline-block;	
+    margin: 5px;
+    font-size: 11px;
+}
+
+.view-taxonomy-term .views-field-field-lead, .view-taxonomy-term.views-field-title {position: relative; margin-top: -4px; float: right; width: 55%; }

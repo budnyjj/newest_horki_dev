@@ -11,3 +11,14 @@
  * for more information on this topic.
  */
  
+function dev_preprocess_views_exposed_form(&$vars, $hook)
+     {
+        // only alter the required form based on id
+            if ($vars['form']['#id'] == 'views-exposed-form-blocks-page-1') {
+              // Change the text on the submit button
+              $vars['form']['submit']['#value'] = t('Пошук');
+              // Rebuild the rendered version (submit button, rest remains unchanged)
+              unset($vars['form']['submit']['#printed']);
+              $vars['button'] = drupal_render($vars['form']['submit']);
+         }
+      }

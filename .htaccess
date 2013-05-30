@@ -11,7 +11,9 @@
 Options -Indexes
 
 # Follow symbolic links in this directory.
-Options +FollowSymLinks
+# For security reasons, Option followsymlinks cannot be overridden.
+#Options +FollowSymLinks
+Options +SymLinksIfOwnerMatch
 
 # Make Drupal handle any 404 errors.
 ErrorDocument 404 /index.php
@@ -128,4 +130,8 @@ DirectoryIndex index.php index.html index.htm
       Header append Vary Accept-Encoding
     </FilesMatch>
   </IfModule>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript application/json
 </IfModule>

@@ -1,10 +1,16 @@
 /* Ts file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
 
-#block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-photoblog-main-block, #block-views-videoblog-main-block, #block-block-17, #block-views-aposhnija-naviny-block, #block-views-blocks-block-1, #block-poll-recent, #quicktabs-social_blocks_normal, #block-menu-menu-old, #block-menu-menu-geografic, #block-menu-menu-system, #block-menu-menu-small-genres {
+#region-sidebar-first, #region-sidebar-second, #region-social-blocks, #zone-preview-wrapper, #zone-postscript-wrapper {
+        display: block;
+}
+
+#block-block-16, #block-block-18,  #block-block-15, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal {
     display: block;
 }
 
-#block-menu-menu-mobile, #block-menu-menu-second-mobile-menu {
+.block-block-3 img{padding-left: 3px;}
+
+#block-block-20, #block-menu-menu-mobile, #block-menu-menu-second-mobile-menu{
     display: none;
 }
 
@@ -12,7 +18,10 @@
 
 body, a {
     font-size: 13px;
+    
 }
+
+h1 {font-size: 36px; letter-spacing: 0px !important;}
 
 h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
     font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -29,7 +38,7 @@ h2 a:hover {
 
 h3 {
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /*Node Style*/
@@ -44,6 +53,15 @@ div.comment {
 .views-row {
     margin: 15px 0px;
 }
+
+.view-similarterms .views-row {
+margin: 3px 0px;
+}
+.view-similarterms .views-field-title a {
+color: #671A1D;
+}
+
+#mc-container {margin-top: 20px;}
 
 /* div.views-row-first { */
 /*     margin: 0px 0px 20px 0px; */
@@ -100,21 +118,35 @@ div.zone-branding {
 }
 
 img.wide-logo {
-    width: 230px;
+    width: 210px;
+    text-align: center;
 }
 
 /*Information Block's Float Settings*/
 
-/* Current Date Block*/
+#region-preface-third {
+	position: relative;
+	left: 35px;
+}
 
+/* Current Date Block*/
 #block-block-16 {
-    font-size: 11px;
+	display: inline-block;
+	margin-right: 13px;
+}
+
+#block-block-16 .content {
+        color: #D2232A;
+        font-size: 11px;
+        font-weight: bold;
+	margin-right: 0px;
 }
 
 /*Currency Block Settings*/
 
 #block-bel-currency-bel-currency {
     font-size: 11px;
+    font-stretch: condensed;
 }
 
 .bel_currency_row {
@@ -137,9 +169,9 @@ img.wide-logo {
     font-weight: bold;
 }
 
-#block-block-16, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1 {
+#block-block-2, #block-bel-currency-bel-currency {
     display: inline-block;	
-    margin: 5px;
+    margin: 0px 8px;
 }
 
 /*Weather Block Settings*/
@@ -153,12 +185,18 @@ img.wide-logo {
     top: 5px;
 }
 
+#block-block-2 {margin-left: 9px;}
+
 /*Search Block Positioning*/
 
 div.block-custom-search-blocks-1 {
-    float: right;
-    position: relative;
-    top: 5px;
+	background-color: #808080;
+	border-radius: 3px 3px 3px 3px;
+	margin-bottom: 25px;
+	padding: 10px;
+	position: relative;
+	width: 190px;
+	left: -30px;
 }
 
 .form-item-custom-search-blocks-form-1 {
@@ -172,6 +210,9 @@ div.block-custom-search-blocks-1 {
 .search-form {
     margin-bottom: 0;
 }
+
+.search-form .form-type-textfield input {width: 150px;}
+
 /*Social Links Block*/
 
 .block-block-3 img {
@@ -194,22 +235,22 @@ div.block-custom-search-blocks-1 {
 /* Common navigation settings */
 
 nav.navigation {
-    margin-top: 10px;
-    border-bottom: 1px dashed #EDEEEF;
+	margin-top: 10px;
 }
 
 nav.navigation li a {
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    padding: 0px 4px 3px 4px;
+
 }
 
+
 nav.navigation li a:link {
-    color: #04202e;
+    color: #fff;
     text-decoration: none;
 }
 
 nav.navigation li a:visited {
-    color: #04202e;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -220,29 +261,56 @@ nav.navigation li a:visited {
  border-radius: 3px;
 }
 
-nav.navigation li a:hover, nav.navigation li a:active {
+
+.active-trail a{ background-color:#666;
+ color:#fff !important;
+  -moz-border-radius: 3px;
+ border-radius: 3px;
+
+ }
+
+ 
+#secondary-menu .active-trail a {background-color:#231F20!important;}
+
+#main-menu li a:hover, nav.navigation li a:active {
  background-color:#666;
  color:#fff;
  -moz-border-radius: 3px;
  border-radius: 3px;
 }
 
+#secondary-menu li a:hover {background-color:#231F20;
+  -moz-border-radius: 3px;
+ border-radius: 3px;
+}
+
 ul#main-menu, ul#secondary-menu {
     display: block;
-    margin-bottom: 16px;
     overflow: visible;
+	text-align: center;
 }
+
+ul#secondary-menu {background-color: #505050; padding-top: 1px; padding-bottom: 3px;}
 
 /*@end common navigation settings*/
 
 /*Main Menu settings*/
 
+#main-menu ul {text-align: center;}
+#main-menu {padding-top: 3px; padding-bottom: 7px; text-align: center; background-color: #231F20;}
+
 ul.main-menu li {
-    padding: 0 5px 0 0;
+margin-left: 4px;
+margin-right: 4px; 
+margin-bottom: 3px;
 }
 
+ul.inline li {padding: 0px;}
+
 ul.main-menu  li a {
-    font-size: 22px;
+padding-left: 5px; padding-right: 5px;
+padding-bottom: 4px;
+    font-size: 23px;
 }
 
 /* @end Main menu settings */
@@ -251,16 +319,15 @@ ul.main-menu  li a {
 
 ul#secondary-menu {
 
-    width: 920px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 ul.secondary-menu li {
-    padding: 0 3px;
+margin-right: 0; padding: 0 8px; 
 }	
 
 ul.secondary-menu li a {
+padding-left: 2px; padding-right: 2px;
+padding-bottom: 1px;
     font-size: 14px;
 }
 
@@ -306,7 +373,7 @@ div.view-footer a {
 
 /*Banner Block*/
 
-#block-block-17 {
+#block-block-17, #block-block-19, #block-block-22 {
     margin-bottom: 20px;
 }
 
@@ -316,10 +383,18 @@ div.view-footer a {
 
 #block-poll-recent {
     margin-bottom: 20px;
+	border-top: 1px dashed #EDEEEF;
+	border-bottom: 1px dashed #EDEEEF;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
+.poll .bar {
+	background-color: #ddd;
+
+}
 .poll .bar .foreground {
-    background-color: #04202E;
+    background-color: #231F20;
 }
 
 .poll .total {
@@ -383,40 +458,20 @@ div.poll div.title {
     font-size: 12px;
 }
 
-
-/* QuickTabs Block Setting */
-#quicktabs-social_blocks_normal a, #quicktabs-social_blocks_normal a:link, #quicktabs-social_blocks_normal a:hover, #quicktabs-social_blocks_normal a:visited {
-    color: #04202e;
-}
-
-ul.quicktabs-tabs {
-    text-align: center;
-}
-
-#twitter-widget-0 {
-   width: 460px;
-}
-
-/*@end Quicktabs Block Settings*/
-
 /* Preview zone settings */
 
-#zone-preview-wrapper {
+#zone-preview {
     background-color: #231F20;  
 }
 
 
-#zone-preview {
-    border-bottom: 1px dashed #666;
-}
-
 #zone-preview a {
-    color: #666;
+    color: #bbb;
     text-align: center;
 }
 
 #zone-preview a:hover, #zone-preview a:active {
-    color: #666;
+    color: #fff;
 }
 
 
@@ -435,7 +490,7 @@ ul.quicktabs-tabs {
 /*@end Videoblog Blog Settings*/
 
 #block-views-videoblog-block, #block-views-photoblog-block {
-    display: inline-block;
+    float: left;
     padding: 0 5px;
 }
 
@@ -470,17 +525,7 @@ ul.quicktabs-tabs {
 
 /* news style */
 
-article p img {
-	margin: 10px;
-}
 
-.group-tags legend {
-	float: left;
-}
-
-.field-name-field-placement-by-taxonomy .field-item, .field-name-field-rubric-by-taxonomy .field-item, .field field-name-field-additional-taxonomy .field-item {
-	float: left;
-}
 
 /*@end news style*/
 
@@ -508,3 +553,16 @@ article p img {
 
 
 /*@end NODES STYLE*/ 
+
+.view-taxonomy-term .views-field-field-lead{position: relative; margin-top: -12px; float: right; width: 55%; }
+.view-taxonomy-term .views-field-created {margin-bottom: 10px;}
+.view-taxonomy-term .views-field-title {margin-top: 5px;}
+.view-genres .views-field-field-what, .view-genres .views-field-field-where, .view-genres .views-field-field-when,.view-genres  .views-field-field-placement-by-taxonomy {position: relative; float: right; width: 55%; }
+#block-block-16 {
+color: red;
+    display: inline-block;	
+    margin: 5px;
+    font-size: 11px;
+}
+
+.view-taxonomy-term .views-field-field-lead, .view-taxonomy-term.views-field-title {position: relative; margin-top: -4px; float: right; width: 55%; }

@@ -4,13 +4,13 @@
 <div style="margin-right: 10px; float:left;"><?php
 print $fields['field_pics']->content; 
 ?></div>
-
-<p><?php
+<div style="position:relative; margin-top: -6px;">
+<?php
 print $fields['title']->content; 
-?>
-</p>
+?></div>
+<div style="margin-top: 8px;">
 <?php
 print $fields['field_text']->content; 
-?>
+?></div>
 
-<div style="clear:both;"></div>
+<div style="margin-bottom: 20px; clear:both;"></div>
