@@ -44,7 +44,7 @@ Authcache.init.preprocess = function() {
   jQuery("a.authcache-user-link").each(function() {
     $this = jQuery(this);
     $this.html($this.html().replace('!username', jQuery.cookie("drupal_user")))
-         .attr("href", Drupal.settings.basePath + 'user');
+         .attr("href", Drupal.settings.basePath + Drupal.settings.pathPrefix + 'user');
   });
 
   // Find forms that need tokens
@@ -71,7 +71,7 @@ Authcache.init.preprocess = function() {
   });
 
   // Set Drupal core link to user profile instead of using cached link
-  jQuery("a:contains('My account')").attr("href",Drupal.settings.basePath+"user");
+  jQuery("a:contains('My account')").attr("href",Drupal.settings.basePath + Drupal.settings.pathPrefix + "user");
 
   if (Authcache.ajax.q) {
     // Dynamically theme local task tab items for logged-in users (nodes, etc)
@@ -120,13 +120,16 @@ Authcache.init.preprocess = function() {
   });
 
   // Number of new comments link on node-teaser
-  Authcache.ajax.comment_num_new = new Array();
-  jQuery(".authcache-comment-num-new").each(function(i, elSpan) {
-    var nid = elSpan.getAttribute("data-node-nid");
-    jQuery(this).hide();
+  var num_new_links = jQuery(".authcache-comment-num-new");
+  if (num_new_links.length > 0) {
+    Authcache.ajax.comment_num_new = new Array();
+    num_new_links.each(function(i, elSpan) {
+      var nid = elSpan.getAttribute("data-node-nid");
+      jQuery(this).hide();
 
-    Authcache.ajax.comment_num_new.push(nid);
-  });
+      Authcache.ajax.comment_num_new.push(nid);
+    });
+  }
 
   // Authcache blocks
   jQuery(".authcache-block").each(function(i, el) {
@@ -167,7 +170,7 @@ Authcache.init.preprocess = function() {
 Authcache.ajaxRequest = function(jsonData) {
 
   jQuery.ajax({
-    url: Drupal.settings.basePath, // index.php
+    url: Drupal.settings.basePath + Drupal.settings.pathPrefix, // index.php
     type: ((Drupal.settings.Authcache && Drupal.settings.Authcache.post) || jQuery.param(jsonData).length > 2000) ? "POST" : "GET",
     dataType: "json",
     data: jsonData,

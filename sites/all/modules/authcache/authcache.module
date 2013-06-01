@@ -26,6 +26,7 @@ civicrm*
 cart*
 system/files/*
 system/temporary*
+file/ajax/*
 ');
 
 // Default non-HTML caching rules (don't append JS to page content)
@@ -174,15 +175,13 @@ function authcache_init() {
     // Forcibly disable Drupal's built-in SQL caching
     // (No need to cache page twice for anonymous users)
     if (!$user->uid && variable_get('cache', CACHE_DISABLED) != CACHE_DISABLED) {
-      variable_set('cache', CACHE_DISABLED);
+      $conf['cache'] = CACHE_DISABLED;
     }
 
     // Status messages prevent pages from being cached.
     if (variable_get('authcache_debug_page', FALSE)) {
       drupal_set_message(t('Caching disabled by') . ' ' . l('Authcache Config.', 'admin/config/development/performance/authcache/config'));
     }
-    
-    ob_start();
   } 
 
   // Remove debug cookies
@@ -199,7 +198,7 @@ function authcache_init() {
  * Implements hook_user().
  */
 
-function authcache_user_login(&$edit, $account) {
+function authcache_user_login(&$edit_ignored, $account) {
   global $_authcache_is_cacheable;
   // Cookie expiration
   $expires = ini_get('session.cookie_lifetime');
@@ -335,20 +334,23 @@ function authcache_form_alter(&$form, &$form_state, $form_id) {
 
       $form['block_settings']['#weight'] = 50; //simg: changed from -10. why would you want authcache settings at top of block page?
 
-      $form['authcache_settings'] = array(
-        '#type'  => 'fieldset',
+      $form['visibility']['authcache_settings'] = array(
+        '#type' => 'fieldset',
         '#title' => t('Authcache Ajax'),
         '#collapsible' => TRUE,
-        '#collapsed' => FALSE,
-        '#weight' => -5,
+        '#collapsed' => TRUE,
+        '#group' => 'visibility',
+        '#attached' => array(
+          'js' => array(drupal_get_path('module', 'authcache') . '/authcache.admin.js'),
+        ),
       );
-      $form['authcache_settings']['authcache'] = array(
+      $form['visibility']['authcache_settings']['authcache'] = array(
         '#type' => 'checkbox',
         '#title' => t('Load block with Ajax on cached Authcache pages'),
         '#description' => t('This is useful for dynamic or user-centric content, however it places additional load on the server.'),
         '#default_value' => (isset($authcache_block[$block_id])),
       );
-      $form['authcache_settings']['authcache_lifetime'] = array(
+      $form['visibility']['authcache_settings']['authcache_lifetime'] = array(
         '#type'  => 'textfield',
         '#title' => t('Minimum cache lifetime'),
         '#description' => t('Enter the number of seconds to locally cache the block in the user\'s browser. This improves performance and prevents jumpiness.'),

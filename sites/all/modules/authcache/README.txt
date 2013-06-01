@@ -66,10 +66,18 @@ Installation
   
   If you are experimenting with multiple caching systems (db, apc, memcache),
   make sure to clear the cache each time you switch to remove stale data.
-    
-4. Goto Configuration > Development > Performance > Authcache and enable with appropriate settings
 
-5. Modify your theme by tweaking user-customized elements (the final HTML
+4. (Optional) If a third-party cache-class is in place it is possible to avoid
+   hitting the database completely. Add the following line to settings.php:
+
+   $conf['page_cache_without_database'] = TRUE;
+
+   Please note that it is necessary to hard-code all the settings affecting
+   delivery of cached pages in settings.php in that case.
+
+5. Goto Configuration > Development > Performance > Authcache and enable with appropriate settings
+
+6. Modify your theme by tweaking user-customized elements (the final HTML
    must be the same for each user role). Template files (e.g., page.tpl.php)
    will have several new variables:
 

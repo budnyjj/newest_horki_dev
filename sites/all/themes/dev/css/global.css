@@ -659,7 +659,7 @@ margin: 0px;}
 .context-davedkahtml .cboxLoadedContent {width: 560px;}
 
 .context-davedkahtml .field-name-field-placement-by-taxonomy, .context-davedkahtml .field-name-field-daviedka-punkt-menu, .context-davedkahtml  #socsetki {display: none;}
-
+#socsetki p {margin-bottom: 2px;}
 #quicktabs-davedka .views-field-field-daviedka-punkt-menu .field-content {
 	text-align: center;
 	margin: 5px 0;

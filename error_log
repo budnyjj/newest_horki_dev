@@ -80,3 +80,4 @@
 [25-May-2013 12:40:37] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 3146010 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/devel/devel.module on line 1572
 [25-May-2013 15:33:30] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 2883741 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/devel/devel.module on line 1572
 [29-May-2013 00:59:35] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 30720 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/ctools/views_content/plugins/content_types/views_row.inc on line 129
+[31-May-2013 11:31:11 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197

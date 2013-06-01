@@ -20,7 +20,9 @@ function authcache_enable() {
   drupal_set_message(st('Authcache has been enabled. Please configure your caching settings under <a href="@url">Site Configuration -> Performance -> Authcache</a>.', array('@url' => base_path() . 'admin/config/development/performance/authcache')), 'warning');
 
   // Set authcache cookie for user so they don't receive cached anon pages.
-  authcache_user_login($user, $user);
+  if (!drupal_is_cli()) {
+    authcache_user_login($user, $user);
+  }
 }
 
 /**
@@ -89,7 +91,8 @@ function authcache_uninstall() {
  */
 function _authcache_backendstatus() {
   // Check whether authcache.inc is last in cache_backends.
-  $last_in_backends = end(variable_get('cache_backends', array()));
+  $backends = variable_get('cache_backends', array());
+  $last_in_backends = end($backends);
   $authcache_inc = drupal_get_path('module', 'authcache') . '/authcache.inc';
   return $authcache_inc == $last_in_backends;
 }

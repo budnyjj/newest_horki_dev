@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^new\.horki\.info$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.new\.horki\.info$
+RewriteRule ^(.*)$ "http\:\/\/horki\.info\/$1" [R=301,L]
+

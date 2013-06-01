@@ -173,7 +173,8 @@ function authcache_admin_config_submit($form, &$form_state) {
       ->condition('sid', session_id(), '<>')
       ->execute();
     // Set cookie for current user
-    authcache_user_login($edit = NULL, $user);
+    $edit_ignored = NULL;
+    authcache_user_login($edit_ignored, $user);
     drupal_set_message(t('%num user sessions have been invalidated.', array('%num' => $num_deleted)));
   }
 

@@ -5,11 +5,15 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 
+sites/default/tmp/*
 
 *.swp
 *.swo
 
-\#*
-*.\#
+\#*\#
 
-sites/default/tmp/*
+old
+old/*
+
+dev
+dev/*

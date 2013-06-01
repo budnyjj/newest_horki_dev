@@ -62,10 +62,10 @@ function authcache_retrieve_cache_page(){
 	// Attempt to retrieve page from cache
 	if (empty($_POST)) {
 		
-		// Connect to database if default database cache hander is
-		// selected
-		if (get_class(_cache_get_object('cache_page')) == 'DrupalDatabaseCache') {
-			drupal_bootstrap(DRUPAL_BOOTSTRAP_DATABASE, FALSE);
+		// Connect to database and initialzie configuration if not
+		// disabled from within settings.php
+		if (!variable_get('page_cache_without_database')) {
+			drupal_bootstrap(DRUPAL_BOOTSTRAP_VARIABLES, FALSE);
 		}
 
 		// Authenticated cache role(s) key
