@@ -132,7 +132,6 @@ img.wide-logo {
 /* Current Date Block*/
 #block-block-16 {
 	display: inline-block;
-	margin-right: 13px;
 }
 
 #block-block-16 .content {
@@ -171,21 +170,19 @@ img.wide-logo {
 
 #block-block-2, #block-bel-currency-bel-currency {
     display: inline-block;	
-    margin: 0px 8px;
 }
 
 /*Weather Block Settings*/
 
 #block-block-2 {
     font-size: 11px; 
+	margin: 0 34px;
 }
 
 #block-block-2 object {
     position: relative;
     top: 5px;
 }
-
-#block-block-2 {margin-left: 9px;}
 
 /*Search Block Positioning*/
 
@@ -554,15 +551,8 @@ div.poll div.title {
 
 /*@end NODES STYLE*/ 
 
-.view-taxonomy-term .views-field-field-lead{position: relative; margin-top: -12px; float: right; width: 55%; }
 .view-taxonomy-term .views-field-created {margin-bottom: 10px;}
 .view-taxonomy-term .views-field-title {margin-top: 5px;}
 .view-genres .views-field-field-what, .view-genres .views-field-field-where, .view-genres .views-field-field-when,.view-genres  .views-field-field-placement-by-taxonomy {position: relative; float: right; width: 55%; }
-#block-block-16 {
-color: red;
-    display: inline-block;	
-    margin: 5px;
-    font-size: 11px;
-}
 
-.view-taxonomy-term .views-field-field-lead, .view-taxonomy-term.views-field-title {position: relative; margin-top: -4px; float: right; width: 55%; }
+.view-taxonomy-term .views-field-field-lead, .view-taxonomy-term.views-field-title {position: relative; margin-top: -10px; float: right; width: 55%; }
