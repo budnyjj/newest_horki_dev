@@ -405,7 +405,9 @@ div.view-footer a {
 }
 
 div.poll div.title {
-    margin-bottom: 5px;
+    font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 5px;
 }
 
 #block-poll-recent ul {
