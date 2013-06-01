@@ -16,11 +16,6 @@
 
 /*Initial Links & Text Settings*/
 
-body, a {
-    font-size: 15px;
-    
-}
-
 h1 {font-size: 36px; letter-spacing: 0px !important;}
 
 h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
@@ -143,25 +138,16 @@ img.wide-logo {
 
 /*Currency Block Settings*/
 
-#block-bel-currency-bel-currency {
-    font-size: 11px;
-    font-stretch: condensed;
-}
-
-.bel_currency_row {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-}
-
 .bel_currency_delimiter, .bel_currency_name, .bel_currency_row {
     display: inline-block;
     margin: 0 2px;
+	font-size: 11px;
 }
 
 .bel_currency_char, .bel_currency_num {
     display: inline-block;
     margin: 0 1px;
+	font-size: 11px;
 }
 
 .bel_currency_char, .bel_currency_name {
@@ -175,8 +161,11 @@ img.wide-logo {
 /*Weather Block Settings*/
 
 #block-block-2 {
-    font-size: 11px; 
 	margin: 0 27px;
+}
+
+#block-block-2 .content {
+	font-size: 11px;
 }
 
 #block-block-2 object {

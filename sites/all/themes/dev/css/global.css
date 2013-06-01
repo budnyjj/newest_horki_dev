@@ -49,7 +49,6 @@ font-weight: bold;
 margin: 0px;}
 
 .group-tags legend {
-font-size: 12px;
 float: left !important;
 color: #8996A0;
 text-transform: uppercase;
@@ -94,7 +93,7 @@ ul li.leaf {
 
 /*Initial Links & Text Settings*/
 
-body, a {
+html, body, div, a {
 	font-family: Verdana, Geneva, sans-serif;
 	font-style: normal;
 	font-weight: normal;
@@ -103,6 +102,9 @@ body, a {
 	line-height: normal;
 }
 
+article a, article p, article span, #node_news_full_group_tags a {
+	font-size: 15px;
+}
 
 a:link, a:visited {
 	color: #231F20;
@@ -130,7 +132,8 @@ p {
 	margin-bottom: 1 em;
 }
 
-p::first-letter {
+#socsetki {
+	color: #8996A0;
 }
 
 .page-node .field-name-field-text {font-size: 15px; line-height: 150%;}
