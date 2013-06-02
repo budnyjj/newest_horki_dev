@@ -216,7 +216,13 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
 	-moz-border-radius: 3px;
 }
 
+.form-actions input {
+	margin-right: 0px;
+}
 
+.form-actions input:hover {
+	background-color: #505050;
+}
 /*Standart Margin & Padding & Color Settings*/
 
 	.zone {
