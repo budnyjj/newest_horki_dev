@@ -544,6 +544,6 @@ div.poll div.title {
 
 .view-taxonomy-term .views-field-created {margin-bottom: 10px;}
 .view-taxonomy-term .views-field-title {margin-top: 5px;}
-.view-genres .views-field-field-what, .view-genres .views-field-field-where, .view-genres .views-field-field-when,.view-genres  .views-field-field-placement-by-taxonomy {position: relative; float: right; width: 55%; }
+.view-genres .views-field-field-what, .view-genres .views-field-field-where, .view-genres .views-field-field-when,.view-genres  .views-field-field-placement-by-taxonomy {position: relative; float: right; width: 55%; margin-bottom: 5px; }
 
 .view-taxonomy-term .views-field-field-lead, .view-taxonomy-term.views-field-title {position: relative; margin-top: -10px; float: right; width: 55%; }
