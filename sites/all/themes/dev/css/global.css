@@ -204,6 +204,19 @@ ul.links li.blog_usernames_blog {
 	display: none;
 }
 
+/*Button styles*/
+
+button, input[type="reset"], input[type="submit"], input[type="button"] {
+	text-shadow: none;
+	font-size: 13px;
+	color: #fff;
+	background: none;
+	background-color: #231F20;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+
 /*Standart Margin & Padding & Color Settings*/
 
 	.zone {
