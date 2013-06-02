@@ -8,7 +8,7 @@
     display: block;
 }
 
-.block-block-3 img{padding-left: 3px;}
+.block-block-3 img {margin: 0px 5px;}
 
 #block-block-20, #block-menu-menu-mobile, #block-menu-menu-second-mobile-menu{
     display: none;

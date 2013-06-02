@@ -463,12 +463,6 @@ div.node-afisha div.group-left div.field-name-field-when {
 }
 	/*Forms Settings*/
 
-	form#news-from-readers-node-form,
-	form#ads-node-form {
-		padding: 20px;
-		background-color: #fdfdfd;
-	}
-
 	/*Node Ads Page Settings*/
 	
 	div.view-header, div.view-footer {
@@ -774,11 +768,14 @@ margin-bottom: 0px;
     font-size: 14px;
     background-color: #808080;
     color: white;
-    padding: 5px 10px;
-    margin: 28px 0 5px;
+    padding: 9px 10px;
     width: 190px;
     position: relative;
     left: -30px;
+}
+
+#block-block-14 .content a:hover {
+	background-color: #231F20;
 }
 #block-block-16 {display:none;}
 /* .view-id-photoblog .views-field-field-pics img, .view-id-videoblog img {height: 200px; width: 200px;} */
