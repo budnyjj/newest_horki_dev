@@ -9,6 +9,8 @@
     display: none;
 }
 
+.page-search #block-system-main ul, .page-poll #block-system-main ul {padding-left: 16px;}
+
 
 #zone-content, #zone-menu, #zone-branding, #zone-preface  {background-color: white; 
 border-left: 1px dashed #edeeef;
@@ -72,10 +74,8 @@ text-transform: uppercase;
 padding: 0px 0px 0px 4px;
 }
 
-.region-sidebar-first-inner {background-image: url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
+.region-sidebar-first-inner { background-image: url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
 border-left: 1px dashed #ccc; border-right: 1px dashed #ccc; padding: 0 5px;
-margin-bottom: -1000px;
-padding-bottom: 1000px;
 padding-top: 10px;
 }
 
@@ -134,6 +134,10 @@ p {
 
 #socsetki {
 	color: #8996A0;
+}
+
+.block-13 { 
+ overflow:hidden !important;
 }
 
 .page-node .field-name-field-text {font-size: 15px; line-height: 150%;}
@@ -668,7 +672,7 @@ margin: 0px;}
 
 .context-davedkahtml .cboxLoadedContent {width: 560px;}
 
-.context-davedkahtml .field-name-field-placement-by-taxonomy, .context-davedkahtml .field-name-field-daviedka-punkt-menu, .context-davedkahtml  #socsetki {display: none;}
+.context-davedkahtml .field-name-field-placement-by-taxonomy, .context-davedkahtml .field-name-field-daviedka-punkt-menu, .context-davedkahtml  #socsetki, .node-type-webform  #socsetki{display: none;}
 #socsetki p {margin-bottom: 2px;}
 #quicktabs-davedka .views-field-field-daviedka-punkt-menu .field-content {
 	text-align: center;
@@ -783,7 +787,7 @@ margin-bottom: 0px;
 
 .topnews .views-field-title a{font-size: 19px; font-weight:bold;}
 
-.view-id-photoblog td, .view-id-daviedka td, .view-taxonomy-term td, .view-genres td  {vertical-align:top !important;}
+.view-id-photoblog td, .view-id-daviedka td, .view-taxonomy-term td, .view-genres td,  .view-id-videoblog td {vertical-align:top !important;}
 
 .page-photobloghtml .view-header a{ font-weight: bold !important; font-size: 36px !important; color: black !important;}
 .page-photobloghtml .view-header {text-align: left !important;}
@@ -836,3 +840,13 @@ tr.odd:hover td.active {
 background: #FFFFFF;
 }
 .view-id-videoblog  table, .view-id-photoblog table, .view-id-taxonomy_term table, .view-genres table{border: 0px!important;}
+
+.form-item-mollom-captcha label {display: none;}
+
+.table-teaser {
+	position: relative; 
+	margin-top: -10px; 
+	float: right; 
+	width: 55%;
+}
+

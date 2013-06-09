@@ -39,17 +39,33 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-<!--Akavita counter start-->
-<script type="text/javascript">var AC_ID=23312;var AC_TR=false;
-(function(){var l='http://adlik.akavita.com/acode.js'; var t='text/javascript';
-try {var h=document.getElementsByTagName('head')[0];
-var s=document.createElement('script'); s.src=l;s.type=t;h.appendChild(s);}catch(e){
-document.write(unescape('%3Cscript src="'+l+'" type="'+t+'"%3E%3C/script%3E'));}})();
-</script><span id="AC_Image"></span>
-<noscript><a target='_blank' href='http://www.akavita.by/'>
-<img src='http://adlik.akavita.com/bin/lik?id=23312&it=1'
-border='0' height='1' width='1' alt='Akavita'/>
-</a></noscript>
-<!--Akavita counter end-->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter21451765 = new Ya.Metrika({id:21451765,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/21451765" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 </body>
 </html>

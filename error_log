@@ -81,3 +81,21 @@
 [25-May-2013 15:33:30] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 2883741 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/devel/devel.module on line 1572
 [29-May-2013 00:59:35] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 30720 bytes) in /home5/horkiinf/public_html/new/sites/all/modules/ctools/views_content/plugins/content_types/views_row.inc on line 129
 [31-May-2013 11:31:11 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
+[02-Jun-2013 23:15:20 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 2006 MySQL server has gone away' in /home5/horkiinf/public_html/includes/database/database.inc:2168
+Stack trace:
+#0 /home5/horkiinf/public_html/includes/database/database.inc(2168): PDOStatement->execute(Array)
+#1 /home5/horkiinf/public_html/includes/database/database.inc(680): DatabaseStatementBase->execute(Array, Array)
+#2 /home5/horkiinf/public_html/includes/database/database.inc(2347): DatabaseConnection->query('SELECT s.lid, t...', Array, Array)
+#3 /home5/horkiinf/public_html/modules/locale/locale.module(720): db_query('SELECT s.lid, t...', Array)
+#4 /home5/horkiinf/public_html/includes/bootstrap.inc(1477): locale('Drush command t...', '', 'be')
+#5 /home5/horkiinf/drush/includes/output.inc(152): t('Drush command t...', Array)
+#6 /home5/horkiinf/drush/includes/bootstrap.inc(1076): dt('Drush command t...', Array)
+#7 [internal function]: drush_shutdown()
+#8 {main}
+  thrown in /home5/horkiinf/public_html/includes/database/database.inc on line 2168
+[03-Jun-2013 16:28:03 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
+[05-Jun-2013 17:38:35 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
+[05-Jun-2013 17:44:13 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
+[08-Jun-2013 22:38:30 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
+[08-Jun-2013 23:56:07 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
+[09-Jun-2013 05:39:19 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
