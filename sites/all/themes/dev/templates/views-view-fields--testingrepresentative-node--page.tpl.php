@@ -1,12 +1,12 @@
-
-
-
 <div style="margin-right: 10px; float:left;"><?php
 print $fields['field_pics']->content; 
 ?></div>
-<div style="position:relative; margin-top: -6px;">
+<div class="field-title-main-page">
 <?php
 print $fields['title']->content; 
+?></div>
+<div class="views-count"><?php
+print $fields['daycount']->content;
 ?></div>
 <div style="margin-top: 8px;">
 <?php

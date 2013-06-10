@@ -126,6 +126,25 @@ a:hover {
 	font-weight: bold;
 }
 
+.field-title-main-page {
+	position:relative;
+	margin-top: -6px;
+}
+
+.field-title-main-page, .views-count {
+	display: inline;
+}
+
+.views-count .field-content {
+	font-size: 11px;
+	background-color: #bbb;
+	position: relative;
+	top: -5px;
+	padding: 1px 2px;
+	color: #fff;
+	margin-left: 2px;
+}
+
 .field-name-field-text a{color: #D2232A;}
 
 p {
