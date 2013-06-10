@@ -871,3 +871,7 @@ background: #FFFFFF;
 }
 
 .page-taxonomy .title, .page-libraryhtml .title, .page-uzgorakhtml .title, .page-narodnyjahtml .title, .page-photohtml .title, .page-videohtml .title, .page-afishahtml .title {display: none;}
+
+#block-poll-recent ul li.last {
+	display: none;
+}
