@@ -690,6 +690,7 @@ margin: 0px;}
 .view-daviedka .col-1, .view-daviedka .col-2, .view-daviedka .col-3, .view-daviedka .col-4, .view-daviedka .col-5, .view-daviedka .col-6 {width: 130px; text-align: center;}
 
 .context-davedkahtml .cboxLoadedContent {width: 560px;}
+.context-davedkahtml  .field-name-field-text p {margin-bottom: 20px !important;}
 
 .context-davedkahtml .field-name-field-placement-by-taxonomy, .context-davedkahtml .field-name-field-daviedka-punkt-menu, .context-davedkahtml  #socsetki, .node-type-webform  #socsetki{display: none;}
 #socsetki p {margin-bottom: 2px;}
@@ -869,3 +870,4 @@ background: #FFFFFF;
 	width: 55%;
 }
 
+.page-taxonomy .title, .page-libraryhtml .title, .page-uzgorakhtml .title, .page-narodnyjahtml .title, .page-photohtml .title, .page-videohtml .title, .page-afishahtml .title {display: none;}
