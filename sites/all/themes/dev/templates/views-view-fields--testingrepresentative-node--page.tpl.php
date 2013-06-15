@@ -5,9 +5,6 @@ print $fields['field_pics']->content;
 <?php
 print $fields['title']->content; 
 ?></div>
-<div class="views-count"><?php
-print $fields['daycount']->content;
-?></div>
 <div style="margin-top: 8px;">
 <?php
 print $fields['field_text']->content; 
