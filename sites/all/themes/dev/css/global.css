@@ -466,6 +466,9 @@ ul.inline li.comment-new-comments {
 	display: none;
 }
 
+nav.node-links {
+	margin : 10px 0;
+}
 /*Afisha Fields*/
 
 div.node-afisha div.field-name-field-what,
