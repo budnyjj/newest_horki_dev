@@ -4,6 +4,11 @@
 	font-size: 18px;
 	color:#b22222;
 	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.text-chapter span {
+	font-size: 18px;
 }
 
 /* Urezka tekstu */
@@ -12,6 +17,7 @@
 	font-size: 16px;
 	font-weight: bold;
 	color:#808080;
+	margin-bottom: 20px;
 } 
 
 /* Podpis autara */
@@ -19,5 +25,6 @@
 .text-signature {
 	font-size: 15px;
 	font-weight: bold;
+	margin-bottom: 20px;
 }
 
