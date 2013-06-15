@@ -10,32 +10,8 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 if(typeof(CKEDITOR) !== 'undefined') {
     CKEDITOR.addStylesSet( 'drupal',
     [
-            /*
-            { name : 'Paragraph'		, element : 'p' },
-            { name : 'Heading 1'		, element : 'h1' },
-            { name : 'Heading 2'		, element : 'h2' },
-            { name : 'Heading 3'		, element : 'h3' },
-            { name : 'Heading 4'		, element : 'h4' },
-            { name : 'Heading 5'		, element : 'h5' },
-            { name : 'Heading 6'		, element : 'h6' },
-            { name : 'Preformatted Text', element : 'pre' },
-            { name : 'Address'			, element : 'address' },
-            */
-			{name : 'Падраздзел'		, element : 'div', attributes: {'class' : 'text-chapter'} },
- 			{name : 'Урэзка'			, element : 'div', attributes: {'class' : 'text-accent'} },
-           { name : 'Подпіс'			, element : 'div', attributes: {'class' : 'text-signature'} }
-
-            /* Inline Styles */
-
-            // These are core styles available as toolbar buttons. You may opt enabling
-            // some of them in the "Styles" drop-down list, removing them from the toolbar.
-            /*
-            { name : 'Strong'			, element : 'strong', overrides : 'b' },
-            { name : 'Emphasis'			, element : 'em'	, overrides : 'i' },
-            { name : 'Underline'		, element : 'u' },
-            { name : 'Strikethrough'	, element : 'strike' },
-            { name : 'Subscript'		, element : 'sub' },
-            { name : 'Superscript'		, element : 'sup' },
-            */
+			{name : 'Падраздзел'		, element : 'h3', attributes: {'class' : 'text-chapter'} },
+ 			{name : 'Урэзка'			, element : 'h3', attributes: {'class' : 'text-accent'} },
+           { name : 'Подпіс'			, element : 'h3', attributes: {'class' : 'text-signature'} }
     ]);
 }
