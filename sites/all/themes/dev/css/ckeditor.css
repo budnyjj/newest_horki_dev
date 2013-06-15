@@ -1,0 +1,23 @@
+/* Padrazdziel */
+
+.text-chapter {
+	font-size: 18px;
+	color:#b22222;
+	font-weight: bold;
+}
+
+/* Urezka tekstu */
+
+.text-accent {
+	font-size: 16px;
+	font-weight: bold;
+	color:#808080;
+} 
+
+/* Podpis autara */
+
+.text-signature {
+	font-size: 15px;
+	font-weight: bold;
+}
+

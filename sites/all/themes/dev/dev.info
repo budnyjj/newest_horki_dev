@@ -347,3 +347,7 @@ settings[alpha_region_footer_second_suffix] = ''
 settings[alpha_region_footer_second_weight] = '2'
 settings[alpha_region_footer_second_css] = ''
 version = '1.1'
+
+css[ckeditor.css][name] = 'CKEditor styles'
+css[ckeditor.css][description] = 'CKEditor custom styles css'
+css[ckeditor.css][options][weight] = '11'
