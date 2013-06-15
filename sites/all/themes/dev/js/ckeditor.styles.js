@@ -10,6 +10,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 if(typeof(CKEDITOR) !== 'undefined') {
     CKEDITOR.addStylesSet( 'drupal',
     [
+			{name : 'Тэкст'				, element : 'p' },
 			{name : 'Падраздзел'		, element : 'h3', attributes: {'class' : 'text-chapter'} },
  			{name : 'Урэзка'			, element : 'h3', attributes: {'class' : 'text-accent'} },
            { name : 'Подпіс'			, element : 'h3', attributes: {'class' : 'text-signature'} }
