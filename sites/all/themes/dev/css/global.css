@@ -187,6 +187,15 @@ h3 {
 	margin: 5px 0px;
 }
 
+.block-main .view-header {
+	border-bottom: 1px dashed #ccc;
+} 
+
+.block-main .view-footer {
+	padding-top: 10px;
+	border-top: 1px dashed #ccc;
+} 
+
 
 /* accent */
 h5 {
@@ -419,7 +428,13 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
 		color: #671A1D;
 	}	
 	
-#region-photo-blog .block{position: relative; margin-top: 0px !important;}
+#region-photo-blog .block{
+	margin-top: 10px;
+}
+
+#region-photo-blog .view-header {
+	text-align: right;
+}
 
 /*Node Settings*/
 
@@ -490,11 +505,6 @@ div.node-afisha div.group-left div.field-name-field-when {
 	/*Forms Settings*/
 
 	/*Node Ads Page Settings*/
-	
-	div.view-header, div.view-footer {
-		margin: 10px;
-		text-align: right;
-	}
 	
 	div#block-system-main div.view-header a, div#block-system-main div.view-footer a {
 		font-size: 14px;
