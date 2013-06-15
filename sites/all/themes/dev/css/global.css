@@ -762,7 +762,7 @@ color:#671A1D;
 
 .view-id-aposhnija_naviny h3, #block-views-blocks-block-1 h3 {
 background-color:#671b1d;
-				-moz-border-radius: 3px;
+-moz-border-radius: 3px;
 border-radius: 3px;
 padding: 1px;
 clear: both;
@@ -874,4 +874,8 @@ background: #FFFFFF;
 
 #block-poll-recent ul li.last {
 	display: none;
+}
+
+.ui-datepicker {
+	width: 25em;
 }
