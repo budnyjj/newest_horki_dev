@@ -104,3 +104,6 @@ Stack trace:
 [14-Jun-2013 11:37:55 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
 [14-Jun-2013 11:38:11 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
 [14-Jun-2013 11:38:11 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
+[15-Jun-2013 19:20:38 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
+[15-Jun-2013 19:20:48 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
+[15-Jun-2013 19:21:29 Europe/Moscow] PHP Fatal error:  Call to undefined function drupal_get_path_alias() in /home5/horkiinf/public_html/sites/all/modules/authcache/authcache.helpers.inc on line 197
