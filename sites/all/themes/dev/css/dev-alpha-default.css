@@ -224,6 +224,10 @@ nav.navigation {
 	margin-top: 10px;
 }
 
+nav #main-menu {
+	margin-bottom: 0px;
+}
+
 nav.navigation li a {
     font-family: Verdana, Arial, Helvetica, sans-serif;
 

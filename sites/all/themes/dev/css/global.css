@@ -9,7 +9,9 @@
     display: none;
 }
 
-.page-search #block-system-main ul, .page-poll #block-system-main ul {padding-left: 16px;}
+.content ul {
+	padding-left: 1.2em;
+}
 
 
 #zone-content, #zone-menu, #zone-branding, #zone-preface  {background-color: white; 
@@ -487,6 +489,8 @@ ul.inline li.comment-new-comments {
 nav.node-links {
 	margin : 10px 0;
 }
+
+
 /*Afisha Fields*/
 
 div.node-afisha div.field-name-field-what,
@@ -798,10 +802,6 @@ margin-bottom: 6px;
 #region-menu {margin-left: 0px !important; margin-right: 0px !important; width: 100% !important;}
 
 
-
-ul {
-margin-bottom: 0px;
-}
 #block-block-14 .content a {
     -moz-border-radius: 3px;
     border-radius: 3px;
