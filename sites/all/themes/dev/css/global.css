@@ -827,7 +827,7 @@ margin-bottom: 6px;
 
 .page-photobloghtml .view-header a{ font-weight: bold !important; font-size: 36px !important; color: black !important;}
 .page-photobloghtml .view-header {text-align: left !important;}
-}
+
 
 /*Library*/	
 
@@ -837,7 +837,6 @@ margin-bottom: 6px;
 .context-davedkahtml .block-main, .context-davedkahtml .title  {display: none;}
 
 .links .node-readmore {display: none;}
-.view-taxonomy-term  img, .view-genres  img{max-width: 100%; height: auto;}
 .view-taxonomy-term .views-field-field-pics{margin-top:-8px; width: 40%;}
 .view-genres .views-field-field-pics {padding-top: 5px; width: 40%;}
 .view-taxonomy-term.views-field-title,  .view-genres .views-field-title{clear: both; margin-bottom: 10px;}
