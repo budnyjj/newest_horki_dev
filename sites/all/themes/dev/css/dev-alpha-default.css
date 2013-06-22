@@ -224,7 +224,7 @@ nav.navigation {
 	margin-top: 10px;
 }
 
-nav #main-menu {
+nav #main-menu, nav #secondary-menu {
 	margin-bottom: 0px;
 }
 
