@@ -164,6 +164,11 @@ p {
 
 .page-node .field-name-field-text {font-size: 15px; line-height: 150%;}
 
+.description, .tips, .fieldset-description {
+	color: #666;
+	font-size: 0.85em;
+}
+
 
 h1 {
 	font-family: Verdana, Geneva, sans-serif;
