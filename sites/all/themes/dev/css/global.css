@@ -241,6 +241,30 @@ ul.links li.blog_usernames_blog {
 	display: none;
 }
 
+/*Options tabs styles*/
+
+
+ul.primary {
+	margin: 0 0 20px;
+	padding: 0;
+	border: none;
+}
+
+ul.primary li a {
+	background-color: #231F20; 
+	color: #fff;
+	padding: 0.3em 1em;
+	border: none;
+	border-radius: 3px;
+}
+
+ul.primary li.active a, ul.primary li a:hover {
+	background-color: #666;
+	border: none;
+	
+
+}
+
 /*Button styles*/
 
 button, input[type="reset"], input[type="submit"], input[type="button"] {
@@ -250,7 +274,6 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
 	background: none;
 	background-color: #231F20;
 	border-radius: 3px;
-	-moz-border-radius: 3px;
 }
 
 .form-actions input {
@@ -403,7 +426,6 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
 	#block-menu-menu-mobile .content li a:hover, #block-menu-menu-mobile .content li a:active {
 		background-color: #666;
 		border-radius: 3px;
-		-moz-border-radius: 3px;
 		text-decoration: none;
 	}
 /*Main News Block*/
@@ -647,23 +669,39 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 
 
 #quicktabs-social_blocks_normal .quicktabs-tabs {
-	width: 420px;
+	width: 390px;
 	margin: 0 auto;
 	position: relative;
 	left: 15px;
+	height: auto;
 }
 
 #quicktabs-social_blocks_normal .quicktabs-tabs a {
     color: #fff;
 	border: none;
 	background-image: none;
-	background-color: #505050;
-	padding: 0 25px;
+	background-color: #231F20;
+	padding: 0.3em 1em;
+	border-radius: 3px;
+	font-size: 13px;
 }
 
-#quicktabs-social_blocks_normal .quicktabs-tabs a:hover, ul.quicktabs-tabs.quicktabs-style-sky li.active a, ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
+ul.quicktabs-tabs.quicktabs-style-sky li {
+	margin: 0 1em 0 0; 
+}
 
-	background-color: #231F20 !important; 
+ul.quicktabs-tabs.quicktabs-style-sky li.active {
+	margin: -0.2em 1em 0 0;
+}
+
+ul.quicktabs-tabs.quicktabs-style-sky li a, ul.quicktabs-tabs.quicktabs-style-sky li a:visited, ul.quicktabs-tabs.quicktabs-style-sky li.active a, ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
+	height: auto;
+	min-height: auto;
+	line-height: normal;
+}
+
+ul.quicktabs-tabs.quicktabs-style-sky li a:hover, ul.quicktabs-tabs.quicktabs-style-sky li.active a, ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
+	background-color: #666 !important; 
 	font-weight: normal;
 }
 
@@ -674,22 +712,18 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 }
 
 #quicktabs-davedka .quicktabs-tabs {
-	width: 400px;
+	width: 280px;
 	margin: 0 auto;
 }
 
-#quicktabs-davedka .quicktabs-tabs a {
+#quicktabs-davedka .quicktabs-tabs li a {
     color: #fff;
 	border: none;
+	border-radius: 3px;
 	background-image: none;
-	background-color: #505050;
-	padding: 0 40px;
-}
-
-#quicktabs-davedka .quicktabs-tabs a:hover, ul.quicktabs-tabs.quicktabs-style-sky li.active a, ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
-
-	background-color: #231F20 !important; 
-	font-weight: normal;
+	background-color: #231F20;
+	padding: 0.3em 1em;
+	font-size: 13px;
 }
 
 .view-daviedka table {
@@ -782,7 +816,6 @@ color:#671A1D;
 
 .view-id-aposhnija_naviny h3, #block-views-blocks-block-1 h3 {
 background-color:#671b1d;
--moz-border-radius: 3px;
 border-radius: 3px;
 padding: 1px;
 clear: both;
@@ -803,7 +836,6 @@ margin-bottom: 6px;
 
 
 #block-block-14 .content a {
-    -moz-border-radius: 3px;
     border-radius: 3px;
     font-size: 14px;
     background-color: #808080;
@@ -886,8 +918,4 @@ background: #FFFFFF;
 }
 
 .page-taxonomy .title, .page-libraryhtml .title, .page-uzgorakhtml .title, .page-narodnyjahtml .title, .page-photohtml .title, .page-videohtml .title, .page-afishahtml .title {display: none;}
-
-#block-poll-recent ul li.last {
-	display: none;
-}
 

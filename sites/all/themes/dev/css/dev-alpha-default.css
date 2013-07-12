@@ -247,14 +247,12 @@ nav.navigation li a:visited {
 #region-menu li .active {
  background-color:#666;
  color:#fff;
- -moz-border-radius: 3px;
  border-radius: 3px;
 }
 
 
 .active-trail a{ background-color:#666;
  color:#fff !important;
-  -moz-border-radius: 3px;
  border-radius: 3px;
 
  }
@@ -265,12 +263,10 @@ nav.navigation li a:visited {
 #main-menu li a:hover, nav.navigation li a:active {
  background-color:#666;
  color:#fff;
- -moz-border-radius: 3px;
  border-radius: 3px;
 }
 
 #secondary-menu li a:hover {background-color:#231F20;
-  -moz-border-radius: 3px;
  border-radius: 3px;
 }
 
