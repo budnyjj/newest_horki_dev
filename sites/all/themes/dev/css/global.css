@@ -705,7 +705,7 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 	height: auto;
 }
 
-#quicktabs-social_blocks_normal .quicktabs-tabs a {
+#quicktabs-social_blocks_normal .quicktabs-tabs li a {
     color: #fff;
 	border: none;
 	background-image: none;
@@ -713,6 +713,7 @@ div.form-item-subject, #edit-comment-body-und-0-format {
 	padding: 0.3em 1em;
 	border-radius: 3px;
 	font-size: 13px;
+	min-height: 0px;
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li {
@@ -753,6 +754,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li a:hover, ul.quicktabs-tabs.quicktabs-st
 	background-color: #231F20;
 	padding: 0.3em 1em;
 	font-size: 13px;
+	min-height: 0px;
 }
 
 .view-daviedka table {
