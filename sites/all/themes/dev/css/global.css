@@ -302,6 +302,15 @@ td {
 	border: 1px dashed #ccc;
 }
 
+thead th, th {
+	background-color: #231F20;
+	border-top: 1px solid #231F20;
+	border-bottom: 1px solid #231F20;
+	border-right: 1px solid #666;
+	border-left: 1px solid #666;
+	color: #fff;
+}
+
 /*Standart Margin & Padding & Color Settings*/
 
 	.zone {
