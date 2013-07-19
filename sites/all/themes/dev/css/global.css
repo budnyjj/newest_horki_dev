@@ -294,15 +294,15 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
 
 /*Table styles*/
 
-table{
+article table{
 	border: 1px solid #ccc;
 }
 
-td {
+article td {
 	border: 1px dashed #ccc;
 }
 
-thead th, th {
+article thead th, th {
 	background-color: #231F20;
 	border-top: 1px solid #231F20;
 	border-bottom: 1px solid #231F20;
