@@ -155,7 +155,7 @@ p {
 
 #socsetki {
 	color: #8996A0;
-	margin: 20px 0;
+	margin: 10px 0;
 }
 
 .block-13 { 
@@ -171,8 +171,10 @@ p {
 
 
 h1 {
+	font-size: 36px;
 	font-family: Verdana, Geneva, sans-serif;
 	color: #671A1D;
+	margin-bottom: 20px;
 }
 
 h2, h2 a, div.node-ads div.field-name-field-cost, div.field-name-field-related div.field-label {
@@ -289,6 +291,17 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
 .form-actions input:hover {
 	background-color: #505050;
 }
+
+/*Table styles*/
+
+table{
+	border: 1px solid #ccc;
+}
+
+td {
+	border: 1px dashed #ccc;
+}
+
 /*Standart Margin & Padding & Color Settings*/
 
 	.zone {
