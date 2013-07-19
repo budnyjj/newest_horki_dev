@@ -309,6 +309,7 @@ article thead th, th {
 	border-right: 1px solid #666;
 	border-left: 1px solid #666;
 	color: #fff;
+	font-weight: bold;
 }
 
 /*Standart Margin & Padding & Color Settings*/
