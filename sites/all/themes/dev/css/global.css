@@ -178,8 +178,7 @@ h1 {
 }
 
 h2, h2 a, div.node-ads div.field-name-field-cost, div.field-name-field-related div.field-label {
-	font-family: "Tahoma", sans-serif;
-	font-style: normal;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	color: #394a59;
 	font-size: 28px;
