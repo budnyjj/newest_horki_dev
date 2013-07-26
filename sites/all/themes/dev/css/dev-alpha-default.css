@@ -325,17 +325,6 @@ padding-bottom: 1px;
     background-color: transparent;
 }
 
-div.view-footer a {
-    text-align: right;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 14px;
-}
-
-#block-views-front-block-1 a {
-    /* font-size: 27px; */
-    /* font-weight: bold; */
-}
-
 #block-views-front-block-1 div.content {
     padding: 5px 0;
 }
@@ -384,12 +373,6 @@ div.view-footer a {
     display: none;
 }
 
-#block-poll-recent {
-    /* background-color: #f8f8f8; */
-    /* padding: 10px; */
-    /* margin-top: 20px; */
-}
-
 div.poll div.title {
     font-size: 14px;
 	font-weight: bold;
@@ -409,9 +392,9 @@ div.poll div.title {
 }
 
 #block-poll-recent ul li a {
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: underline;;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 /*@end Block Poll*/

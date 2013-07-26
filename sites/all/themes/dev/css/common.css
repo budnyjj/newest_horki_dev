@@ -1,0 +1,15 @@
+/* This file contains common styles for element groups of our site */
+
+.flush-right-all {
+	text-align: right;
+}
+
+.flush-right-this {
+	float: right;
+}
+
+a.rich-link {
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: underline !important;
+}
