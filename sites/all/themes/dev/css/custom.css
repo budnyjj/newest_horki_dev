@@ -920,3 +920,18 @@ margin-bottom: 6px;
 		margin-right: 10px;
 }
 
+/*Library page styles */
+
+.library .views-row {
+		min-height: 180px;
+}
+
+.library-preview {
+		float: left;
+		margin-right: 30px;
+}
+
+.library-link a {
+		margin-right: 10px;
+}
+
