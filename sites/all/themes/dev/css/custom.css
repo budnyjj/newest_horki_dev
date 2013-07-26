@@ -905,3 +905,18 @@ margin-bottom: 6px;
 
 .page-taxonomy .title, .page-libraryhtml .title, .page-uzgorakhtml .title, .page-narodnyjahtml .title, .page-photohtml .title, .page-videohtml .title, .page-afishahtml .title {display: none;}
 
+/*Uzgorak page styles */
+
+.uzgorak .views-row {
+		min-height: 180px;
+}
+
+.uzgorak-preview {
+		float: left;
+		margin-right: 30px;
+}
+
+.uzgorak-link a {
+		margin-right: 10px;
+}
+

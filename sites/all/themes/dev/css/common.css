@@ -11,6 +11,17 @@
 	float: right;
 }
 
+.flush-left-this {
+		float: left;
+}
+
+.clear {
+		clear: both;
+}
+
+/* Text styles */
+
+
 /*Link styles*/
 
 .title-bold a {
@@ -21,6 +32,13 @@
 a:link.rich-link {
 	font-size: 14px;
 	font-weight: bold;
+	text-decoration: underline !important;
+}
+
+.rich-red-link a {
+  font-size: 14px;
+	font-weight: bold;
+	color: #D2232A !important; 
 	text-decoration: underline !important;
 }
 
@@ -46,4 +64,20 @@ article thead th, th {
 
 tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 		background: #FFFFFF;
+}
+
+/* Views Styles */
+
+.zebra .views-row {
+		padding: 10px;
+		margin: 0;
+}
+
+.zebra .views-row-odd {
+		background-color: #fbfbfb;
+}
+
+.zebra .views-row-even {
+		background-color: #edeeef;
+		
 }
