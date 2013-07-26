@@ -31,8 +31,8 @@ border-right: 1px dashed #edeeef;
 
 body {
 background-image:url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
-
 }
+
 #zone-menu {background-color:#fff !important;}
 
 #zone-branding {padding-top:10px;}
@@ -123,10 +123,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-.title-bold a {
-	font-size: 14px !important;
-	font-weight: bold;
-}
 
 .field-title-main-page {
 	position:relative;
@@ -289,26 +285,6 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
 
 .form-actions input:hover {
 	background-color: #505050;
-}
-
-/*Table styles*/
-
-article table{
-	border: 1px solid #ccc;
-}
-
-article td {
-	border: 1px dashed #ccc;
-}
-
-article thead th, th {
-	background-color: #231F20;
-	border-top: 1px solid #231F20;
-	border-bottom: 1px solid #231F20;
-	border-right: 1px solid #666;
-	border-left: 1px solid #666;
-	color: #fff;
-	font-weight: bold;
 }
 
 /*Standart Margin & Padding & Color Settings*/
@@ -915,11 +891,7 @@ margin-bottom: 6px;
 
 /*Tables*/	
 
-tr:hover td,
-tr.even:hover td.active,
-tr.odd:hover td.active {
-background: #FFFFFF;
-}
+
 .view-id-videoblog  table, .view-id-photoblog table, .view-id-taxonomy_term table, .view-genres table{border: 0px!important;}
 
 .form-item-mollom-captcha label {display: none;}

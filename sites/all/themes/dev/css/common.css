@@ -1,15 +1,49 @@
 /* This file contains common styles for element groups of our site */
 
+/*Position styles*/
+
 .flush-right-all {
 	text-align: right;
 }
+
 
 .flush-right-this {
 	float: right;
 }
 
-a.rich-link {
+/*Link styles*/
+
+.title-bold a {
+	font-size: 14px !important;
+	font-weight: bold;
+}
+
+a:link.rich-link {
 	font-size: 14px;
 	font-weight: bold;
 	text-decoration: underline !important;
+}
+
+/* Table styles */
+
+article table {
+	border: 1px solid #ccc;
+}
+
+article td {
+	border: 1px dashed #ccc;
+}
+
+article thead th, th {
+	background-color: #231F20;
+	border-top: 1px solid #231F20;
+	border-bottom: 1px solid #231F20;
+	border-right: 1px solid #666;
+	border-left: 1px solid #666;
+	color: #fff;
+	font-weight: bold;
+}
+
+tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
+		background: #FFFFFF;
 }
