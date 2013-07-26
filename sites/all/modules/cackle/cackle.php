@@ -65,7 +65,9 @@ class Cackle {
    * Comment sync function.
    */
   public function commentSync($account_api_key, $site_api_key, $cackle_last_modified = 0) {
-    $cackle_last_modified = $this->to_i(variable_get('cackle_last_modified',0));
+    $mod1 = variable_get('cackle_last_modified',0);
+      $cackle_last_modified = $this->to_i($mod1);
+
     $params1 = "accountApiKey=$account_api_key&siteApiKey=$site_api_key&modified=$cackle_last_modified";
     $host = "cackle.me/api/comment/mutable_list?$params1";
     $response = $this->curl($host);

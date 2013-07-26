@@ -7,12 +7,20 @@
 /**
  * Implements hook_help().
  */
+define('COMMENT_NODE_OPEN1',1);
+define('COMMENT_NODE_CLOSED1',0);
 function cackle_help($path, $arg) {
   switch ($path) {
     case "admin/help#cackle":
       return '<div><h1>' . t("Installation") . '</h1><p>' . t("1. Upload  folder `cackle` to the `drupal->sites->all-modules` directory") . '</p>' . '<p>' . t("2. Enable Cackle in drupal's admin") . '</p>' . '<p>' . t("3. Register your site at <a href='http://cackle.me'>cackle.me</a>") . '</p>' . '<p>' . t("4. Enter siteId and api Keys in Configuration/Web services/Cackle comments confuguration from cackle.me") . '</p>' . t("5. Select 'Content' region for Cackle in drupal's admin (Structure=>Blocks)") . '</p>' . '<p>' . t("6. In Cofiguration => Performance => Clear all caches") . '</p>';
   }
 }
+
+function cackle_some(){
+		return "test";
+}
+
+
 
 /**
  * Implements hook_block_info().
@@ -43,7 +51,10 @@ function cackle_in() {
         'nodeid' => $nodeid,
         'has_curl' => $has_curl)
     );
-    return $template;
+    $comments_enabled = db_query('SELECT comment FROM {node_revision} WHERE nid = :nid', array(':nid' => $nodeid))->fetchField();
+    if ($comments_enabled){
+      return $template;
+    }
   }
 }
 
@@ -104,27 +115,52 @@ function cackle_node_view($node, $view_mode) {
       'scope' => 'footer',
     )
   );
-  switch ($view_mode) {
-    case 'teaser':
-      $links['cackle_comments_num'] = array(
-        'title' => t('Comments'),
-        'href' => 'node/' . $node->nid,
-        'fragment' => 'mc-container',
-        'attributes' => array(
-          'cackle-channel' => $node->nid,
-        ),
-      );
-      $node->content['links']['cackle'] = array(
-        '#theme' => 'links',
-        '#links' => $links,
-        '#attributes' => array(
-          'class' => array('links', 'inline'),
-        ),
-      );
-      break;
-  }
+    $comments_enabled = db_query('SELECT comment FROM {node_revision} WHERE nid = :nid', array(':nid' => $node->nid))->fetchField();
+
+    $node_type = '';
+    $cackle_types = variable_get('cackle_nodetypes', array());
+    if (node_type_get_type($node)) {
+        $node_type = $node->type;
+    }
+
+    if($comments_enabled&&!empty($cackle_types[$node_type])){
+    switch ($view_mode) {
+
+        case 'teaser':
+          $links['cackle_comments_num'] = array(
+            'title' => t('Comments'),
+            'href' => 'node/' . $node->nid,
+            'fragment' => 'mc-container',
+            'attributes' => array(
+              'cackle-channel' => $node->nid,
+            ),
+          );
+          $node->content['links']['cackle'] = array(
+            '#theme' => 'links',
+            '#links' => $links,
+            '#attributes' => array(
+              'class' => array('links', 'inline'),
+            ),
+          );
+          break;
+      }
+    }
+
+
 }
 
+function theme_preprocess_node(&$variables) {
+    // if readmore link is set
+    if (isset($variables['content']['links']['node']['#links']['node-readmore'])) {
+
+        // remove the old link
+        unset($variables['content']['links']['node']['#links']['node-readmore']);
+
+        // Create new link variable
+        $variables['content']['links']['node']['#links']['node-readmore-custom'] =  l(t('More >'), $variables['node_url'], array('attributes' => array('class' => t('colorbox'))));
+
+    }
+}
 /**
  * Implements hook_menu().
  */
@@ -156,3 +192,77 @@ function cackle_permission() {
     ),
   );
 }
+
+/**
+ * Disable comments on node_type
+
+function cackle_node_insert($node){
+    if (variable_get('cackle_default_comments')){
+    $comment_data = array(
+        'comment' => 0,
+    );
+    db_update('node_revision')
+        ->fields($comment_data)
+        ->condition('nid', 0,'>')
+        ->execute();
+
+
+    db_update('node')
+        ->fields($comment_data)
+        ->condition('nid', 0,'>')
+        ->execute();
+    }
+}
+ */
+function cackle_form_node_form_alter(&$form, $form_state) {
+
+    $node = $form['#node'];
+    $node_type = '';
+    $cackle_types = variable_get('cackle_nodetypes', array());
+    if (node_type_get_type($node)) {
+        $node_type = $node->type;
+    }
+    if (!empty($cackle_types[$node_type])) {
+    $form['cackle_settings'] = array(
+        '#type' => 'fieldset',
+        '#access' => user_access('administer cackle settings'),
+        '#title' => t('Comment settings'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+        '#group' => 'additional_settings',
+        '#attributes' => array(
+            'class' => array('cackle-node-settings-form'),
+        ),
+        '#weight' => 30,
+    );
+    //$comment_count = isset($node->nid) ? db_query('SELECT comment_count FROM {node_comment_statistics} WHERE nid = :nid', array(':nid' => $node->nid))->fetchField() : 0;
+    if (!isset($node->nid)){
+        $comment_settings = 1;
+    }
+    else{
+        $comment_settings = $node->comment;
+    }
+
+    $form['cackle_settings']['comment'] = array(
+        '#type' => 'radios',
+        '#title' => t('Comments'),
+        '#title_display' => 'invisible',
+
+        '#default_value' => $comment_settings,
+        '#options' => array(
+            COMMENT_NODE_OPEN1 => t('Open'),
+            COMMENT_NODE_CLOSED1 => t('Closed'),
+
+        ),
+        COMMENT_NODE_OPEN1 => array(
+            '#description' => t('Users with the "Post comments" permission can post comments.'),
+        ),
+        COMMENT_NODE_CLOSED1 => array(
+            '#description' => t('Users cannot post comments, and existing comments will not be displayed.'),
+        ),
+
+    );
+    }
+
+}
+

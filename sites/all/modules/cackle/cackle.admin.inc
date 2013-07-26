@@ -35,6 +35,7 @@ function cackle_admin_settings() {
     '#size' => 64, '#maxlength' => 64,
     '#description' => t('Enter Account Api Key.'),
     '#required' => TRUE);
+
   $types = node_type_get_types();
   $options = array();
   foreach ($types as $type) {
