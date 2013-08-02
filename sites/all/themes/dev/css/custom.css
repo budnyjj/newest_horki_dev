@@ -838,8 +838,6 @@ margin-bottom: 6px;
 /* .view-id-photoblog .views-field-field-pics img, .view-id-videoblog img {height: 200px; width: 200px;} */
 .view-id-photoblog .col-1, .view-id-photoblog .col-2, .view-id-videoblog .col-1, .view-id-videoblog .col-2 {width: 50%; vertical-align:top;}
 
-.topnews .views-field-title a{font-size: 19px; font-weight:bold;}
-
 .view-id-photoblog td, .view-id-daviedka td, .view-taxonomy-term td, .view-genres td,  .view-id-videoblog td {vertical-align:top !important;}
 
 .page-photobloghtml .view-header a{ font-weight: bold !important; font-size: 36px !important; color: black !important;}
