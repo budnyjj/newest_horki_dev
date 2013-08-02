@@ -149,11 +149,6 @@ p {
 	margin-bottom: 1em;
 }
 
-#socsetki {
-	color: #8996A0;
-	margin: 10px 0;
-}
-
 .block-13 { 
  overflow:hidden !important;
 }
@@ -939,3 +934,10 @@ margin-bottom: 6px;
 		margin-right: 10px;
 }
 
+/*Addthis styles*/
+
+.field-type-addthis .field-label {
+	font-size: 15px;
+	color: #8996A0;
+	text-transform: uppercase;
+}
