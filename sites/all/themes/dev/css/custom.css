@@ -9,7 +9,7 @@
     display: none;
 }
 
-.node ul, .node ol {
+.content ul, .content ol {
 	padding-left: 1.2em;
 }
 
@@ -941,3 +941,9 @@ margin-bottom: 6px;
 	color: #8996A0;
 	text-transform: uppercase;
 }
+
+/*Admin menu style*/
+
+#admin-menu a {
+	font-size: 11px;
+} 
