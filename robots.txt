@@ -104,4 +104,3 @@ Host: horki.info
 User-agent: Yandex
 Allow: /
 Sitemap: http://horki.info/sitemap.xml
-Sitemap: http://old.horki.info/index2.php?option=com_sefservicemap&task=xmlmap&no_html=1
