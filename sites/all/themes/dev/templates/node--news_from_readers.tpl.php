@@ -8,7 +8,13 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($display_submitted): ?>
-  <footer class="submitted"><?php print $date; ?> </footer>
+  <footer class="submitted">
+	<?php print $date; ?>
+	<?php if ($page): ?>
+		<span class="by-readers-delimiter">|</span>
+		<span class="by-readers">Даслана чытачом</span>
+	<?php endif; ?>
+  </footer>
   <?php endif; ?>  
   
   <div<?php print $content_attributes; ?>>

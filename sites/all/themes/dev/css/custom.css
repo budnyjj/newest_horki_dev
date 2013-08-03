@@ -944,4 +944,13 @@ margin-bottom: 6px;
 
 #admin-menu a {
 	font-size: 11px;
-} 
+}
+
+/*Narodnyja naviny style*/
+
+.by-readers-delimiter {
+	color: #666;
+}
+.by-readers {
+	color: #D2232A;
+}
