@@ -21,6 +21,57 @@
 
 /* Text styles */
 
+h1, h1 a {
+	font-size: 36px;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #671A1D;
+	margin-bottom: 20px;
+}
+
+h2, h2 a {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-weight: normal;
+		color: #394a59;
+		font-size: 20px;
+		letter-spacing: 0.05ex;
+		margin-bottom: 5px;
+}
+
+
+h3, h3 a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: #394a59;
+	letter-spacing: 0ex;
+	margin: 5px 0px;
+}
+
+h4, h4 a {
+font-size: 14px;
+font-weight: bold;
+color: #003366;
+}
+
+h5, h5 a {
+margin-left: 20px;
+padding-left: 20px;
+font-size: 16px;
+border-left: 2px solid #00FF00;
+color: #003366;
+background-color: #F1F1F1;
+font-weight: normal;
+}
+
+h6, h6 a {
+font-size: 14px;
+font-weight: bold;
+color:
+}
+
+
+
 
 /*Link styles*/
 
@@ -67,6 +118,10 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 }
 
 /* Views Styles */
+
+.views-row {
+    margin: 10px 0px;
+}
 
 .zebra .views-row {
 		padding: 10px;

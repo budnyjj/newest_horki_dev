@@ -1,4 +1,4 @@
-/* Ts file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
 
 #region-sidebar-first, #region-social-blocks, #zone-preview-wrapper, #zone-postscript-wrapper {
         display: block;
@@ -8,87 +8,54 @@
     display: block;
 }
 
-.block-block-3 img {margin: 0px 5px;}
 
 #block-block-20, #block-menu-menu-mobile, #block-menu-menu-second-mobile-menu{
     display: none;
 }
 
-/*Initial Links & Text Settings*/
-
-h2, h2 a, div.node-ads div.field-item, div.field-name-field-related div.field-label {
-    font-size: 20px;
-}
-
-h2 a:link {
-    text-decoration: none;
-}
-
-h2 a:hover {
-    text-decoration: underline;
-}
-
-h3 {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 14px;
-}
-
-/*Node Style*/
-
-div.comment {
-    width: 560px;
-    margin-left: 20px;
-}
 
 /*Standart Margin & Padding & Color Settings*/
 
-.views-row {
-    margin: 15px 0px;
+
+/*Postscript  styles*/
+
+#zone-postscript {
+		background-color: #231F20;
+		padding: 5px 0 10px 0;
 }
 
-.view-similarterms .views-row {
-margin: 3px 0px;
-}
-.view-similarterms .views-field-title a {
-color: #671A1D;
+.page-main #zone-postscript {
+		background-color: #505050;
 }
 
-#mc-container {margin-top: 20px;}
-
-/* div.views-row-first { */
-/*     margin: 0px 0px 20px 0px; */
-/* } */
-
-/*footer Menu's Elements*/
-
-ul.menu li {
+#zone-postscript .content {
     text-align: left;
 }
 
-ul.menu li a {
-    font-size: 11px;
+#zone-postscript .content a {
+    color: #fff;
+		font-size: 11px;
 }
 
-/*MAIN PAGE STYLE*/
+/*Main news block style*/
 
-/*Login Block*/	
-
-#block-nice-menus-4 {
-    float: right;
-    background-color: transparent;
+#block-views-front-block-1 h2.block-title {
+		padding: 0;
 }
 
-#block-nice-menus-3 {
-    padding: 0px;
-    float: left;
+#block-views-front-block-1 .views-row {
+		margin: 0;
 }
 
-/*Block Titles*/	
+#block-views-front-block-1 .views-field-field-pics	{
+		margin-top: 10px;
+}
 
-h2.block-title {
-    padding-bottom: 10px;
-    font-size: 14px;
-}	
+#block-views-front-block-1 .view-footer a {
+		margin: 10px 0 5px;
+}
+
+/*Main page content style*/
 
 .view-id-testingrepresentative_node h3 a {
     color: #8996a0;
@@ -98,23 +65,62 @@ h2.block-title {
     text-align: right;
 }	
 
-/*Logo Block*/
+.view-testingrepresentative-node .views-limit-grouping-group h3 {
+		border-top: 1px dashed #ccc;
+		padding-top: 10px;
+}	
 
-
-div.zone-branding {
-    margin: 0px auto;
+.view-testingrepresentative-node .field-content img {
+		margin-top:2px;
 }
 
-#block-views-logo-block {
-    padding: 0px;
+
+/*Header banner styles*/
+
+#block-block-18 {
+		height: 60px;
+		margin-bottom: 10px;
 }
 
-img.wide-logo {
-    width: 210px;
-    text-align: center;
+/*Add News Block*/
+
+#block-block-14 {
+		width: 190px;
+		height: 35px;
+    position: relative;
+    left: -30px;
 }
 
-/*Information Block's Float Settings*/
+#block-block-14 .content a {
+    font-size: 14px;
+    color: #fff;
+		padding: 9px 10px;
+    border-radius: 3px;
+		position: absolute;
+    background-color: #808080;
+		width: 100%;
+}
+
+#block-block-14:hover .content a:hover {
+		background-color: #231F20;
+}
+
+/*Social Links Block*/
+
+#block-block-3 {
+		height: 35px;
+}
+
+#block-block-3 .content img {
+		margin: 0px 5px;
+    opacity: 0.9;
+}
+
+#block-block-3 .content img:hover {
+    opacity: 1;
+}
+
+/*Information block's Float Settings*/
 
 #region-preface-third {
 	position: relative;
@@ -172,41 +178,32 @@ img.wide-logo {
 
 /*Search Block Positioning*/
 
-div.block-custom-search-blocks-1 {
+#block-custom-search-blocks-1 {
 	background-color: #808080;
 	border-radius: 3px 3px 3px 3px;
-	margin-bottom: 25px;
-	padding: 10px;
+	margin-bottom: 10px;
+	width: 210px;
+	height: 60px;
 	position: relative;
-	width: 190px;
 	left: -30px;
 }
 
-.form-item-custom-search-blocks-form-1 {
-    display: inline;
-}
-
-#edit-actions--2 {	
-    display: inline;
+#block-custom-search-blocks-1 .form-item, #block-custom-search-blocks-1 .form-actions {
+    display: inline-block;
+		margin: 0 0 0 10px;
 }
 
 .search-form {
-    margin-bottom: 0;
+    margin: 0;
+		position: absolute;
+		top: 30%;
 }
 
-.search-form .form-type-textfield input {width: 150px;}
-
-/*Social Links Block*/
-
-.block-block-3 img {
-    opacity: 0.9;
+#edit-custom-search-blocks-form-1--2 {
+		width: 140px;
 }
 
-.block-block-3 img:hover {
-    opacity: 1;
-}
 
-/* @end Social Links Block*/
 
 
 /* @end Information Block's Float Settings*/
@@ -323,10 +320,6 @@ padding-bottom: 1px;
 
 #zone-menu  {
     background-color: transparent;
-}
-
-#block-views-front-block-1 div.content {
-    padding: 5px 0;
 }
 
 /*Last Comments Block*/
