@@ -15,7 +15,7 @@
 
 
 #zone-content, #zone-menu, #zone-branding, #zone-preface  {
-		background-color: white; 
+		background-color: #fff; 
 		border-left: 1px dashed #edeeef;
 		border-right: 1px dashed #edeeef;
 }
@@ -34,7 +34,6 @@ body {
 background-image:url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
 }
 
-#zone-menu {background-color:#fff !important;}
 
 #zone-branding {padding-top:10px;}
 
@@ -150,10 +149,6 @@ p {
 	margin-bottom: 1em;
 }
 
-.block-13 { 
- overflow:hidden !important;
-}
-
 .page-node .field-name-field-text {font-size: 15px; line-height: 150%;}
 
 .description, .tips, .fieldset-description {
@@ -247,9 +242,6 @@ h2.block-title {
 	
 /*Mobile Menu Block*/
 
-	#zone-menu  {
-		background-color: #e0e6e6;
-	}
 
 	#block-menu-menu-mobile {
 		background-color: #231F20;
@@ -271,16 +263,8 @@ h2.block-title {
 		border-radius: 3px;
 		text-decoration: none;
 	}
-/*Main News Block*/
 
 
-#region-photo-blog .block{
-	margin-top: 10px;
-}
-
-#region-photo-blog .view-header {
-	text-align: right;
-}
 
 /*Node Settings*/
 
@@ -407,26 +391,6 @@ div.node-afisha div.group-left div.field-name-field-when {
 
 	div.media-youtube-outer-wrapper {
 		margin: 10px 0px; 
-	}
-
-	/*Gallery Settings*/
-
-	div.view-photoblog div.views-row {
-		margin: 2px;
-		float: left;
-	}
-
-	div.field-name-field-gallery  img {
-		display: block;
-		float: left;
-		margin: 2px 2px; 
-	}
-
-	div.node-photo ul.inline {
-		display: block;
-		clear: both;
-		margin: 0;
-		padding: 5px;
 	}
 
 
@@ -556,28 +520,26 @@ ul.quicktabs-tabs {
 	}
 
 
-.zahalovak_navin a {
-font-weight:bold; 
-font-size: 16px; 
-color:#671A1D; 
-}
 
 
-
+/* Last News Block Style */
 
 .view-id-aposhnija_naviny h3, #block-views-blocks-block-1 h3 {
-background-color:#671b1d;
-border-radius: 3px;
-padding: 1px;
-clear: both;
-color: white;
-font-family: Arial, Helvetica, sans-serif;
-text-align: center;
-display: block;
-font-weight: normal;
-margin-bottom: 6px;
-
+			background-color:#671b1d;
+			border-radius: 3px;
+			padding: 1px;
+			clear: both;
+			color: white;
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+			display: block;
+			font-weight: normal;
+			margin-bottom: 6px;
 }
+
+
+
+
 
 .addthis_toolbox {position: relative; margin-left: -2px;}
 
@@ -585,16 +547,6 @@ margin-bottom: 6px;
 
 #region-menu {margin-left: 0px !important; margin-right: 0px !important; width: 100% !important;}
 
-
-
-#block-block-16 {display:none;}
-/* .view-id-photoblog .views-field-field-pics img, .view-id-videoblog img {height: 200px; width: 200px;} */
-.view-id-photoblog .col-1, .view-id-photoblog .col-2, .view-id-videoblog .col-1, .view-id-videoblog .col-2 {width: 50%; vertical-align:top;}
-
-.view-id-photoblog td, .view-id-daviedka td, .view-taxonomy-term td, .view-genres td,  .view-id-videoblog td {vertical-align:top !important;}
-
-.page-photobloghtml .view-header a{ font-weight: bold !important; font-size: 36px !important; color: black !important;}
-.page-photobloghtml .view-header {text-align: left !important;}
 
 
 /*Library*/	
@@ -605,11 +557,8 @@ margin-bottom: 6px;
 .context-davedkahtml .block-main, .context-davedkahtml .title  {display: none;}
 
 .links .node-readmore {display: none;}
-.view-taxonomy-term .views-field-field-pics{margin-top:-8px; width: 40%;}
-.view-genres .views-field-field-pics {padding-top: 5px; width: 40%;}
-.view-taxonomy-term.views-field-title,  .view-genres .views-field-title{clear: both; margin-bottom: 10px;}
-.view-taxonomy-term .col-1, .view-taxonomy-term .col-2, .view-genres .col-1, .view-genres .col-2 {width: 45%;} 
-.view-id-photoblog .views-field-field-pics, .view-id-videoblog .views-field-field-video  {margin-bottom: 10px; }
+
+
 
 .page-node-add-news-from-readers  #page-title {display: none;}
 .view-taxonomy-term .views-field-created {color: #585858; font-size: 11px;}
@@ -638,7 +587,6 @@ margin-bottom: 6px;
 /*Tables*/	
 
 
-.view-id-videoblog  table, .view-id-photoblog table, .view-id-taxonomy_term table, .view-genres table{border: 0px!important;}
 
 .form-item-mollom-captcha label {display: none;}
 
@@ -649,7 +597,6 @@ margin-bottom: 6px;
 	width: 55%;
 }
 
-.page-taxonomy .title, .page-libraryhtml .title, .page-uzgorakhtml .title, .page-narodnyjahtml .title, .page-photohtml .title, .page-videohtml .title, .page-afishahtml .title {display: none;}
 
 /*Uzgorak page styles */
 
@@ -736,4 +683,99 @@ margin-bottom: 6px;
 img.wide-logo {
     width: 210px;
     text-align: center;
+}
+
+/*Teasers style*/
+
+.node-teaser .field-type-image, .node-teaser .field-type-video-embed-field {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+/*Navina style*/
+
+.field-name-field-photos .field-item {
+	float: left;
+	margin: 1px;
+}
+
+
+
+
+/*Views tables styles*/
+
+.page-taxonomy .title, .page-libraryhtml .title, .page-uzgorakhtml .title, .page-narodnyjahtml .title, .page-photohtml .title, .page-videohtml .title, .page-afishahtml .title {
+		display: none;
+}
+
+.view-id-videoblog  table, .view-id-photoblog table, .view-id-taxonomy_term table, .view-genres table {
+		border: 0px!important;
+}
+
+/*Rubrics Views styles*/
+
+.view-taxonomy-term td, .view-genres td {
+		padding: 0 0 20px 0;
+		width: 340px;
+} 
+
+.view-taxonomy-term .col-2, .view-genres .col-2 {
+		padding-left: 20px;
+}
+
+.view-taxonomy-term.views-field-title,  .view-genres .views-field-title {
+		clear: both;
+		margin-bottom: 10px;
+}
+
+
+.view-taxonomy-term .views-field-field-pics {
+		margin-top:-8px;
+		width: 40%;
+}
+
+.view-genres .views-field-field-what, .view-genres .views-field-field-where, .view-genres .views-field-field-when,.view-genres  .views-field-field-placement-by-taxonomy {
+		position: relative;
+		float: right;
+		width: 55%;
+		margin-bottom: 5px;
+ }
+
+.view-genres .views-field-field-pics {
+		padding-top: 5px;
+		width: 40%;
+}
+
+/*Photoblog & Videoblog styles*/
+
+
+
+.view-id-photoblog td, .view-id-videoblog td {
+
+		width: 230px;
+}
+
+
+.view-id-photoblog .col-2, .view-id-videoblog .col-2 {
+		padding-left: 5px;
+		padding-right: 5px;
+}
+
+
+.view-id-photoblog .views-field-field-pics, .view-id-videoblog .views-field-field-video  {
+		margin-bottom: 10px; 
+}
+
+
+.view-id-photoblog td {
+		padding: 0 0 10px 0;
+}
+
+
+.view-id-photoblog td, .view-id-daviedka td, .view-taxonomy-term td, .view-genres td,  .view-id-videoblog td {
+		vertical-align:top;
+}
+
+.view-id-videoblog td { 
+		padding: 0 0 20px 0;
 }

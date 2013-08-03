@@ -354,8 +354,8 @@ css[ckeditor.css][options][weight] = '11'
 
 css[common.css][name] = 'Common styles'
 css[common.css][description] = 'Common styles for site'
-css[common.css][options][weight] = '12'
+css[common.css][options][weight] = '13'
 
 css[custom.css][name] = 'Custom styles'
 css[custom.css][description] = 'Custom styles for site'
-css[custom.css][options][weight] = '13'
+css[custom.css][options][weight] = '12'
