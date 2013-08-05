@@ -86,7 +86,7 @@ color:
 	text-decoration: underline !important;
 }
 
-a:link.rich-link {
+a.rich-link {
 	font-size: 14px;
 	font-weight: bold;
 	text-decoration: underline !important;
@@ -99,7 +99,7 @@ a:link.rich-link {
 	text-decoration: underline !important;
 }
 
-a:link.rich-red-link {
+a.rich-red-link {
   font-size: 14px;
 	font-weight: bold;
 	color: #D2232A !important; 
