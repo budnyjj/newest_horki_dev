@@ -180,145 +180,49 @@ h2.block-title {
 }
 
 
-
-
-
-	/*Node Reference Settings*/
-	
-	div.field-type-node-reference, div.field-name-field-links {
-		background-color: #ffecac;
-		padding: 10px;
-	}
-
-	/*Related content settings*/
-
-	div.field-name-field-related {
-		background-color: #ffecac;
-	}
-
-	/*Node Pictures Settings*/
-	div.node-teaser div.field-name-field-gallery, div.node-teaser div.field-name-field-pics, div.node-teaser div.field-name-field-movies {
-		margin: 10px 10px 10px 0;
-	}
-
-	div.media-youtube-outer-wrapper {
-		margin: 10px 0px; 
-	}
-
-
-/*Social Widgets*/
-
-div.field-name-service-links-displays-group {
-	padding: 10px 0px;
-	clear: both;
-}
-
-#___plusone_0 {
-	width: 70px !important;
-}
-	
-.twitter-share-button {
-	width: 80px !important;
-}
-
-/* QuickTabs Block Setting */
-
+/*Social Widget Block*/
 
 #quicktabs-social_blocks_normal .quicktabs-tabs {
-	width: 390px;
-	margin: 0 auto;
-	position: relative;
-	left: 15px;
-	height: auto;
+		width: 390px;
+		margin: 0 auto;
+		position: relative;
+		left: 15px;
+		height: auto;
 }
 
 #quicktabs-social_blocks_normal .quicktabs-tabs li a {
     color: #fff;
-	border: none;
-	background-image: none;
-	background-color: #231F20;
-	padding: 0.3em 1em 0.5em;
-	border-radius: 3px;
-	font-size: 13px;
-	min-height: 0px;
+		border: none;
+		background-image: none;
+		background-color: #231F20;
+		padding: 0.3em 1em 0.5em;
+		border-radius: 3px;
+		font-size: 13px;
+		min-height: 0px;
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li {
-	margin: 0 1em 0 0; 
+		margin: 0 1em 0 0; 
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li.active {
-	margin: -0.2em 1em 0 0;
+		margin: -0.2em 1em 0 0;
 }
 
-ul.quicktabs-tabs.quicktabs-style-sky li a, ul.quicktabs-tabs.quicktabs-style-sky li a:visited, ul.quicktabs-tabs.quicktabs-style-sky li.active a, ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
-	height: auto;
-	min-height: auto;
-	line-height: normal;
+ul.quicktabs-tabs.quicktabs-style-sky li a,
+ul.quicktabs-tabs.quicktabs-style-sky li a:visited,
+ul.quicktabs-tabs.quicktabs-style-sky li.active a,
+ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
+		height: auto;
+		min-height: auto;
+		line-height: normal;
 }
 
-ul.quicktabs-tabs.quicktabs-style-sky li a:hover, ul.quicktabs-tabs.quicktabs-style-sky li.active a, ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
-	background-color: #666 !important; 
-	font-weight: normal;
-}
-
-/*Davedka*/	
-
-#quicktabs-davedka {
-	margin-top: 10px;
-}
-
-#quicktabs-davedka .quicktabs-tabs {
-	width: 280px;
-	margin: 0 auto;
-}
-
-#quicktabs-davedka .quicktabs-tabs li a {
-    color: #fff;
-	border: none;
-	border-radius: 3px;
-	background-image: none;
-	background-color: #231F20;
-	padding: 0.3em 1em 0.5em;
-	font-size: 13px;
-	min-height: 0px;
-}
-
-.view-daviedka table {
-	border-top: 1px dashed #edeeef;
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
-}
-
-.views-field-field-daviedka-punkt-menu a{font-size: 9px;
-text-align: center;
-color: #8996A0;
-text-transform: uppercase;
-font-weight: bold;
-margin: 0px;}
-
-.view-daviedka img{width: 130px; text-align: center; }
-.view-daviedka .col-1, .view-daviedka .col-2, .view-daviedka .col-3, .view-daviedka .col-4, .view-daviedka .col-5, .view-daviedka .col-6 {width: 130px; text-align: center;}
-
-.context-davedkahtml .cboxLoadedContent {width: 560px;}
-.context-davedkahtml  .field-name-field-text p {margin-bottom: 20px !important;}
-
-.context-davedkahtml .field-name-field-placement-by-taxonomy, .context-davedkahtml .field-name-field-daviedka-punkt-menu, .context-davedkahtml  #socsetki, .node-type-webform  #socsetki{display: none;}
-#socsetki p {margin-bottom: 2px;}
-#quicktabs-davedka .views-field-field-daviedka-punkt-menu .field-content {
-	text-align: center;
-	margin: 5px 0;
-}
-
-.quicktabs-tabs a {font-weight: normal; font-size: 14px;}
-
-ul.quicktabs-tabs {
-    text-align: center;
-}
-
-#twitter-widget-0 {
-   width: 460px;
+ul.quicktabs-tabs.quicktabs-style-sky li a:hover,
+ul.quicktabs-tabs.quicktabs-style-sky li.active a,
+ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
+		background-color: #666 !important; 
+		font-weight: normal;
 }
 
 /*@end Quicktabs Block Settings*/
@@ -707,8 +611,54 @@ nav.node-links {
 		padding: 0 0 20px 0;
 }
 
+/*Davedka*/	
 
+#quicktabs-davedka {
+		margin-top: 10px;
+}
 
+#quicktabs-davedka .quicktabs-tabs {
+		width: 280px;
+		margin: 0 auto;
+}
+
+#quicktabs-davedka .quicktabs-tabs li a {
+    color: #fff;
+		border: none;
+		border-radius: 3px;
+		background-image: none;
+		background-color: #231F20;
+		padding: 0.3em 1em 0.5em;
+		font-size: 13px;
+		min-height: 0px;
+}
+
+.view-daviedka table {
+	border-top: 1px dashed #edeeef;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+.views-field-field-daviedka-punkt-menu a{font-size: 9px;
+text-align: center;
+color: #8996A0;
+text-transform: uppercase;
+font-weight: bold;
+margin: 0px;}
+
+.view-daviedka img{width: 130px; text-align: center; }
+.view-daviedka .col-1, .view-daviedka .col-2, .view-daviedka .col-3, .view-daviedka .col-4, .view-daviedka .col-5, .view-daviedka .col-6 {width: 130px; text-align: center;}
+
+.context-davedkahtml .cboxLoadedContent {width: 560px;}
+.context-davedkahtml  .field-name-field-text p {margin-bottom: 20px !important;}
+
+.context-davedkahtml .field-name-field-placement-by-taxonomy, .context-davedkahtml .field-name-field-daviedka-punkt-menu, .context-davedkahtml  #socsetki, .node-type-webform  #socsetki{display: none;}
+
+#quicktabs-davedka .views-field-field-daviedka-punkt-menu .field-content {
+	text-align: center;
+	margin: 5px 0;
+}
 
 
 
@@ -720,3 +670,8 @@ nav.node-links {
 	color: #666;
 	font-size: 0.85em;
 }
+
+
+
+
+
