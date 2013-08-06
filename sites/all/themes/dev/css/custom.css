@@ -400,13 +400,18 @@ div#block-system-main {
 		margin: 0px;
 }
 
+.group-tags legend {
+		float: left;
+		color: #8996A0;
+		text-transform: uppercase;
+}
+
 .field-name-field-placement-by-taxonomy .field-item, .field-name-field-rubric-by-taxonomy .field-item, .field field-name-field-additional-taxonomy .field-item {
 		float: left;
 }
 
 .group-tags .field-item a {
 		float: left;
-		font-size: 12px;
 		color: #8996A0;
 		text-transform: uppercase;
 		padding: 0px 0px 0px 4px;
