@@ -404,6 +404,7 @@ div#block-system-main {
 		float: left;
 		color: #8996A0;
 		text-transform: uppercase;
+		font-weight: bold;
 }
 
 .field-name-field-placement-by-taxonomy .field-item, .field-name-field-rubric-by-taxonomy .field-item, .field field-name-field-additional-taxonomy .field-item {
