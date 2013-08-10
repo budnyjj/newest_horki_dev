@@ -9,7 +9,6 @@ sites/default/tmp/*
 
 *.swp
 *.swo
-
 \#*\#
 
 old
@@ -19,4 +18,3 @@ maps
 maps/*
 
 *error_log
-

@@ -214,6 +214,7 @@ li.plupload_droptext {
 
 .plupload_start,
 a.plupload_start:hover {
-  background: transparent url(../plupload/images/up_arrow.png) no-repeat 0 center !important;
+  background: transparent url(images/up_arrow.png) no-repeat 0 center !important;
+  display: none !important;
   z-index: 100000 !important;
 }

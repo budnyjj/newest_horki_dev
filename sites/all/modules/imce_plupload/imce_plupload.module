@@ -46,7 +46,7 @@ function imce_plupload_upload_submit($form, &$form_state) {
     $tmp = plupload_file_uri_to_object($upload['tmppath']);
     if ($file = file_move($tmp, $diruri . $upload['name'], $replace)) {
 
-      // Core bug #54223.
+      // Core bug #54223: Original filename shown to user instead of renamed filename
       if ($replace == FILE_EXISTS_RENAME) {
         $name = $upload['name'];
         if ($name != $file->filename) {

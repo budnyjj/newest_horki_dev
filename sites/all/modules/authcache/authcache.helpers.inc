@@ -423,7 +423,15 @@ function _authcache_key($account) {
      return '';
     }
     $keys = implode('.', array_keys($account->roles));
-    return substr(md5($keys . drupal_get_private_key()), 0, 6);
+    $key = md5($keys . drupal_get_private_key());
+
+    // Make sure superuser has its own key not shared with anyone else (though
+    // it would be better if superuser would'nt be allowed to use the cache in
+    // the first place).
+    if ($account->uid == 1) {
+      $key = md5($key . $keys . drupal_get_private_key());
+    }
+    return substr($key, 0, 6);
   }
 }
 
