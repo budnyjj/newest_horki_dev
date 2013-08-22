@@ -60,10 +60,6 @@ div.field {
 	margin: 10px 0px;
 }
 
-div.field-item{
-	margin: 0px 2px;
-}
-
 
 /*Initial Links & Text Settings*/
 
@@ -319,8 +315,6 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 
 /* Node styles */
-
-
 
 div#block-system-main {
 	padding: 0 0 10px 0;
@@ -658,6 +652,10 @@ article.node-webform footer.submitted {
 	font-size: 15px;
 	color: #8996A0;
 	text-transform: uppercase;
+}
+
+.field-type-addthis .at300b {
+    padding: 0 4px 0 0;
 }
 
 /*Admin menu style*/
