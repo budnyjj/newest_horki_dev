@@ -2,7 +2,7 @@
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
 #region-sidebar-first, #region-social-blocks, #zone-preview-wrapper, #zone-postscript-wrapper {
-		display: none;
+    display: none;
 }
 
 #block-block-18,  #block-block-15, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content {
@@ -13,18 +13,23 @@
 /*Global Positioning styles*/
 
 body {
-		background-image:url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
+    background-image:url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
 }
 
 
-#zone-content, #zone-menu, #zone-branding, #zone-preface  {
-		background-color: #fff; 
-		border-left: 1px dashed #edeeef;
-		border-right: 1px dashed #edeeef;
+#zone-content, #zone-branding, #zone-preface  {
+    background-color: #fff; 
+    border-left: 1px dashed #ccc;
+    border-right: 1px dashed #ccc;
 }
+
+#zone-menu {
+     background-color: #fff;
+     width: 962px;
+} 
 
 #zone-content-wrapper {
-		overflow: hidden;
+    overflow: hidden;
 }
 
 #zone-content {
@@ -32,24 +37,25 @@ body {
 }
 
 #zone-branding {
-		padding-top:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
 #region-menu {
-		margin-left: 0px !important;
-		margin-right: 0px !important;
-		width: 100% !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 100% !important;
 }
 
 .region-content-inner {
-		padding-top: 10px;
+    padding-top: 10px;
 }
 
 .region-sidebar-first-inner {
-		background-image: url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
-		border-left: 1px dashed #ccc; border-right: 1px dashed #ccc; padding: 0 5px;
-		padding-top: 10px;
+    background-image: url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
+    border-left: 1px dashed #ccc; border-right: 1px dashed #ccc; padding: 0 5px;
+    padding-top: 10px;
 }
 
 .region-sidebar-second-inner {
@@ -57,121 +63,121 @@ body {
 }
 
 div.field {
-	margin: 10px 0px;
+    margin: 10px 0px;
 }
 
 
 /*Initial Links & Text Settings*/
 
 html, body, div, a {
-		font-family: Verdana, Geneva, sans-serif;
-		font-style: normal;
-		font-weight: normal;
-		color: #231F20;
-		font-size: 13px;
-		line-height: normal;
+    font-family: Verdana, Geneva, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #231F20;
+    font-size: 13px;
+    line-height: normal;
 }
 
 article a, article p, article span, #node_news_full_group_tags a {
-		font-size: 15px;
+    font-size: 15px;
 }
 
 a:link, a:visited {
-		color: #231F20;
-		text-decoration: none;
+    color: #231F20;
+    text-decoration: none;
 }
 
 a:active {
-		color: #D2232A;
-		text-decoration: none;
+    color: #D2232A;
+    text-decoration: none;
 }
 
 a:hover {
-		color: #D2232A;
-		text-decoration: underline;
+    color: #D2232A;
+    text-decoration: underline;
 }
 
 p {
-		margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 label {
-		color: #231F20;
+    color: #231F20;
 }
 
 
 /*List styles*/
 
 .content ul, .content ol {
-		padding-left: 1.2em;
+    padding-left: 1.2em;
 }
 
 ul li.leaf {
-		list-style-type: none;
-		list-style-image: none;
+    list-style-type: none;
+    list-style-image: none;
 }
 
 li a.active {
-		color: #671A1D;
+    color: #671A1D;
 }
 
 ul.primary {
-		margin: 0 0 20px;
-		padding: 0;
-		border: none;
+    margin: 0 0 20px;
+    padding: 0;
+    border: none;
 }
 
 ul.primary li a {
-		background-color: #231F20; 
-		color: #fff;
-		padding: 0.3em 1em;
-		border: none;
-		border-radius: 3px;
+    background-color: #231F20; 
+    color: #fff;
+    padding: 0.3em 1em;
+    border: none;
+    border-radius: 3px;
 }
 
 ul.primary li.active a, ul.primary li a:hover {
-		background-color: #666;
-		border: none;
+    background-color: #666;
+    border: none;
 }
 
 .node ul.inline {
-	margin: 10px;
+    margin: 10px;
 }	
 
 div.group-footer ul, .node-teaser ul.inline {
-	margin: 10px;
-	float: right;
+    margin: 10px;
+    float: right;
 }
 
 /*Buttons styles*/
 
 button, input[type="reset"], input[type="submit"], input[type="button"] {
-		text-shadow: none;
-		font-size: 13px;
-		color: #fff;
-		background: none;
-		background-color: #231F20;
-		border-radius: 3px;
+    text-shadow: none;
+    font-size: 13px;
+    color: #fff;
+    background: none;
+    background-color: #231F20;
+    border-radius: 3px;
 }
 
 .form-actions input {
-		margin-right: 0px;
+    margin-right: 0px;
 }
 
 .form-actions input:hover {
-		background-color: #505050;
+    background-color: #505050;
 }
 
 
 /*Block Titles*/	
 
 h2.block-title {
-		color: #8996a0;
-		text-transform: uppercase;
-		text-align: right;
-		padding-right: 10px;
-		padding-bottom: 10px;
-		font-size: 14px;
+    color: #8996a0;
+    text-transform: uppercase;
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
 }
 
 /*Logo Block Styles*/
@@ -184,458 +190,458 @@ img.wide-logo {
 /*Mobile Menu Block*/
 
 #block-menu-menu-mobile {
-		background-color: #231F20;
+    background-color: #231F20;
 }
 
 #block-menu-menu-mobile .content li {
-		padding: 10px;
-		margin: 0px;
+    padding: 10px;
+    margin: 0px;
 }
 
 #block-menu-menu-mobile .content li a {
-		color: #fff;
-		padding: 5px;
-		font-size: 24px;
+    color: #fff;
+    padding: 5px;
+    font-size: 24px;
 }
 
 #block-menu-menu-mobile .content li a:hover, #block-menu-menu-mobile .content li a:active {
-		background-color: #666;
-		border-radius: 3px;
-		text-decoration: none;
+    background-color: #666;
+    border-radius: 3px;
+    text-decoration: none;
 }
 
 
 /*Social Widget Block*/
 
 #quicktabs-social_blocks_normal .quicktabs-tabs {
-		width: 390px;
-		margin: 0 auto;
-		position: relative;
-		left: 15px;
-		height: auto;
+    width: 390px;
+    margin: 0 auto;
+    position: relative;
+    left: 15px;
+    height: auto;
 }
 
 #quicktabs-social_blocks_normal .quicktabs-tabs li a {
     color: #fff;
-		border: none;
-		background-image: none;
-		background-color: #231F20;
-		padding: 0.3em 1em 0.5em;
-		border-radius: 3px;
-		font-size: 13px;
-		min-height: 0px;
+    border: none;
+    background-image: none;
+    background-color: #231F20;
+    padding: 0.3em 1em 0.5em;
+    border-radius: 3px;
+    font-size: 13px;
+    min-height: 0px;
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li {
-		margin: 0 1em 0 0; 
+    margin: 0 1em 0 0; 
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li.active {
-		margin: -0.2em 1em 0 0;
+    margin: -0.2em 1em 0 0;
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li a,
 ul.quicktabs-tabs.quicktabs-style-sky li a:visited,
 ul.quicktabs-tabs.quicktabs-style-sky li.active a,
 ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
-		height: auto;
-		min-height: auto;
-		line-height: normal;
+    height: auto;
+    min-height: auto;
+    line-height: normal;
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li a:hover,
 ul.quicktabs-tabs.quicktabs-style-sky li.active a,
 ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
-		background-color: #666 !important; 
-		font-weight: normal;
+    background-color: #666 !important; 
+    font-weight: normal;
 }
 
 
 /* Last News Block Style */
 
 .view-id-aposhnija_naviny h3, #block-views-blocks-block-1 h3 {
-			background-color:#671b1d;
-			border-radius: 3px;
-			padding: 1px;
-			clear: both;
-			color: white;
-			font-family: Arial, Helvetica, sans-serif;
-			text-align: center;
-			display: block;
-			font-weight: normal;
-			margin-bottom: 6px;
+    background-color:#671b1d;
+    border-radius: 3px;
+    padding: 1px;
+    clear: both;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: block;
+    font-weight: normal;
+    margin-bottom: 6px;
 }
 
 
 /*Last Comments Block Style*/
 
 .mc-recent-meta a {
-		font-weight: bold;
+    font-weight: bold;
 }
 
 /*Similar terms block styles*/
 
 .view-similarterms .views-row {
-		margin: 3px 0px;
+    margin: 3px 0px;
 }
 .view-similarterms .views-field-title a {
-		color: #671A1D;
+    color: #671A1D;
 }
 
 /*Comment block styles*/
 
 #mc-container {
-		margin-top: 20px;
+    margin-top: 20px;
 }
 
 /*Footer Block styles*/
 
 #block-block-9 {
-		padding: 5px 0 0 0;
+    padding: 5px 0 0 0;
 }
 
 #block-block-9 .content p, #block-block-9 .content p a {
-		color: #8996A0;
+    color: #8996A0;
 }
 
 
 /*Teasers style*/
 
 .node-teaser .field-type-image, .node-teaser .field-type-video-embed-field {
-	float: left;
-	margin: 0 10px 10px 0;
+    float: left;
+    margin: 0 10px 10px 0;
 }
 
 .table-teaser {
-	position: relative; 
-	margin-top: -10px; 
-	float: right; 
-	width: 55%;
+    position: relative; 
+    margin-top: -10px; 
+    float: right; 
+    width: 55%;
 }
 
 
 /* Node styles */
 
 div#block-system-main {
-	padding: 0 0 10px 0;
+    padding: 0 0 10px 0;
 }
 
 
 .submitted {
-		font-size: 12px;
-		padding-left: 2px;
-		color: #8996A0;
-		text-transform: uppercase;
-		font-weight: bold;
-		margin: 0px;
+    font-size: 12px;
+    padding-left: 2px;
+    color: #8996A0;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0px;
 }
 
 .by-readers-delimiter {
-	color: #666;
+    color: #666;
 }
 .by-readers {
-	color: #D2232A;
+    color: #D2232A;
 }
 
 
 .field-name-field-text img {
-		max-width: 100%;
-		width: 100%;
-		min-width: 100px;
-		height: auto !important; 
+    max-width: 100%;
+    width: 100%;
+    min-width: 100px;
+    height: auto !important; 
 }
 
 .field-name-field-photos .field-item {
-	float: left;
-	margin: 1px;
+    float: left;
+    margin: 1px;
 }
 
 
 .jcarousel-clip ul li  {
-		width: 140px !important;
+    width: 140px !important;
 }
 
 .jcarousel-skin-dev .jcarousel-item-horizontal {
-		margin-left: 0px !important;
+    margin-left: 0px !important;
 }
 
 
 .embedded-video {
-		position: relative;
-		padding-bottom: 56.25%;
-		padding-top: 30px;
-		height: 0;
-		overflow: hidden;
-		margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .player iframe,  
 .player object,  
 .player embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100% !important;
-		height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 
 .page-node .field-name-field-text {
-		font-size: 15px; 
-		line-height: 150%;
+    font-size: 15px; 
+    line-height: 150%;
 }
 
 .field-name-field-text a {
-		color: #D2232A;
+    color: #D2232A;
 }
 
 
 .group-tags .field {
-		margin: 0px;
+    margin: 0px;
 }
 
 .group-tags legend {
-		float: left;
-		color: #8996A0;
-		text-transform: uppercase;
-		font-weight: bold;
+    float: left;
+    color: #8996A0;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .field-name-field-placement-by-taxonomy .field-item, .field-name-field-rubric-by-taxonomy .field-item, .field field-name-field-additional-taxonomy .field-item {
-		float: left;
+    float: left;
 }
 
 .group-tags .field-item a {
-		float: left;
-		color: #8996A0;
-		text-transform: uppercase;
-		padding: 0px 0px 0px 4px;
+    float: left;
+    color: #8996A0;
+    text-transform: uppercase;
+    padding: 0px 0px 0px 4px;
 }
 
 nav.node-links {
-	margin : 10px 0;
+    margin : 10px 0;
 }
 
 
 /*Common Views styles*/
 
 .block-main .view-header {
-	border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
 } 
 
 .block-main .view-footer {
-	padding-top: 10px;
-	border-top: 1px dashed #ccc;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
 } 
 
 
 /*Rubrics Views styles*/
 
 .page-taxonomy .title, .page-libraryhtml .title, .page-uzgorakhtml .title, .page-narodnyjahtml .title, .page-photohtml .title, .page-videohtml .title, .page-afishahtml .title {
-		display: none;
+    display: none;
 }
 
 .view-id-videoblog  table, .view-id-photoblog table, .view-taxonomy-term table, .view-genres table {
-		border: 0px!important;
+    border: 0px!important;
 }
 
 .view-taxonomy-term td, .view-genres td {
-		padding: 0 0 20px 0;
-		width: 340px;
+    padding: 0 0 20px 0;
+    width: 340px;
 } 
 
 .view-taxonomy-term .col-2, .view-genres .col-2 {
-		padding-left: 20px;
+    padding-left: 20px;
 }
 
 .view-taxonomy-term.views-field-title,  .view-genres .views-field-title {
-		clear: both;
-		margin-bottom: 10px;
+    clear: both;
+    margin-bottom: 10px;
 }
 
 .view-taxonomy-term .views-field-field-pics {
-		margin-top:-8px;
-		width: 40%;
+    margin-top:-8px;
+    width: 40%;
 }
 
 .view-taxonomy-term .views-field-created {
-		color: #585858;
-		font-size: 11px;
+    color: #585858;
+    font-size: 11px;
 }
 
 .view-genres .views-field-field-what, .view-genres .views-field-field-where, .view-genres .views-field-field-when,.view-genres  .views-field-field-placement-by-taxonomy {
-		position: relative;
-		float: right;
-		width: 55%;
-		margin-bottom: 5px;
- }
+    position: relative;
+    float: right;
+    width: 55%;
+    margin-bottom: 5px;
+}
 
 .view-genres .views-field-field-pics {
-		padding-top: 5px;
-		width: 40%;
+    padding-top: 5px;
+    width: 40%;
 }
 
 /*Photoblog & Videoblog styles*/
 
 .view-id-photoblog td, .view-id-videoblog td {
-		width: 230px;
+    width: 230px;
 }
 
 
 .view-id-photoblog .col-2, .view-id-videoblog .col-2 {
-		padding-left: 5px;
-		padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 
 .view-id-photoblog .views-field-field-pics, .view-id-videoblog .views-field-field-video  {
-		margin-bottom: 10px; 
+    margin-bottom: 10px; 
 }
 
 
 .view-id-photoblog td {
-		padding: 0 0 10px 0;
+    padding: 0 0 10px 0;
 }
 
 
 .view-id-photoblog td, .view-id-daviedka td, .view-taxonomy-term td, .view-genres td,  .view-id-videoblog td {
-		vertical-align:top;
+    vertical-align:top;
 }
 
 .view-id-videoblog td { 
-		padding: 0 0 20px 0;
+    padding: 0 0 20px 0;
 }
 
 /*Uzgorak page styles */
 
 .uzgorak .views-row {
-		min-height: 180px;
+    min-height: 180px;
 }
 
 .uzgorak-preview {
-		float: left;
-		margin-right: 30px;
+    float: left;
+    margin-right: 30px;
 }
 
 .uzgorak-link a {
-		margin-right: 10px;
+    margin-right: 10px;
 }
 
 .uzgorak-title {
-		margin-top: 20px;
+    margin-top: 20px;
 }
 
 /*Library page styles */
 
 .library .views-row {
-		min-height: 200px;
+    min-height: 200px;
 }
 
 .library-preview {
-		float: left;
-		margin-right: 30px;
+    float: left;
+    margin-right: 30px;
 }
 
 .library-link a {
-		margin-right: 10px;
+    margin-right: 10px;
 }
 
 
 /*Davedka Page Styles*/	
 
 .context-davedkahtml .cboxLoadedContent {
-		width: 560px;
+    width: 560px;
 }
 
 .context-davedkahtml  .field-name-field-text p {
-		margin-bottom: 20px !important;
+    margin-bottom: 20px !important;
 }
 
 .context-davedkahtml .block-main, .context-davedkahtml .title  {
-		display: none;
+    display: none;
 }
 
 .context-davedkahtml .field-name-field-placement-by-taxonomy,
 .context-davedkahtml .field-name-field-daviedka-punkt-menu {
-		display: none;
+    display: none;
 }
 
 #quicktabs-davedka {
-		margin-top: 10px;
+    margin-top: 10px;
 }
 
 #quicktabs-davedka .quicktabs-tabs {
-		width: 280px;
-		margin: 0 auto;
+    width: 280px;
+    margin: 0 auto;
 }
 
 #quicktabs-davedka .quicktabs-tabs li a {
     color: #fff;
-		border: none;
-		border-radius: 3px;
-		background-image: none;
-		background-color: #231F20;
-		padding: 0.3em 1em 0.5em;
-		font-size: 13px;
-		min-height: 0px;
+    border: none;
+    border-radius: 3px;
+    background-image: none;
+    background-color: #231F20;
+    padding: 0.3em 1em 0.5em;
+    font-size: 13px;
+    min-height: 0px;
 }
 
 .view-daviedka table {
-		border-top: 1px dashed #edeeef;
-		border-left: none;
-		border-right: none;
-		border-bottom: none;
+    border-top: 1px dashed #edeeef;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
 }
 
 .view-daviedka td {
-		width: 156px;
-		text-align: center;
-		padding: 10px 0 0 0;
+    width: 156px;
+    text-align: center;
+    padding: 10px 0 0 0;
 }
 
 .view-daviedka img{
-		width: 130px; text-align: center;
+    width: 130px; text-align: center;
 }
 
 .views-field-field-daviedka-punkt-menu {
-		width: 130px;
-		margin: 0 auto;
+    width: 130px;
+    margin: 0 auto;
 }
 
 .views-field-field-daviedka-punkt-menu a {
-		font-size: 9px;
-		text-align: center;
-		color: #8996A0;
-		text-transform: uppercase;
-		font-weight: bold;
-		margin: 0px;
+    font-size: 9px;
+    text-align: center;
+    color: #8996A0;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0px;
 }
 
 
 #quicktabs-davedka .views-field-field-daviedka-punkt-menu .field-content {
-		text-align: center;
-		margin: 5px 0;
+    text-align: center;
+    margin: 5px 0;
 }
 
 
 /*Library Page Styles*/	
 
 .field-name-field-pdf a {
-		font-weight: bold;
+    font-weight: bold;
 }
 
 
 /*Add news-from-readers Page styles*/
 
 .page-node-add-news-from-readers  #page-title {
-		display: none;
+    display: none;
 }
 
 
 /*Webform Page Settings*/
 
 article.node-webform footer.submitted {
-		display: none;
+    display: none;
 }
 
 
@@ -643,15 +649,15 @@ article.node-webform footer.submitted {
 /*Mollom styles*/
 
 .form-item-mollom-captcha label {
-		display: none;
+    display: none;
 }
 
 /*Addthis styles*/
 
 .field-type-addthis .field-label {
-	font-size: 15px;
-	color: #8996A0;
-	text-transform: uppercase;
+    font-size: 15px;
+    color: #8996A0;
+    text-transform: uppercase;
 }
 
 .field-type-addthis .at300b {
@@ -661,7 +667,7 @@ article.node-webform footer.submitted {
 /*Admin menu style*/
 
 #admin-menu a {
-	font-size: 11px;
+    font-size: 11px;
 }
 
 /* Misc Styles */
@@ -669,7 +675,7 @@ article.node-webform footer.submitted {
 .views-field-field-pics, #logo {text-align: center;}
 
 .description, .tips, .fieldset-description {
-	color: #666;
-	font-size: 0.85em;
+    color: #666;
+    font-size: 0.85em;
 }
 

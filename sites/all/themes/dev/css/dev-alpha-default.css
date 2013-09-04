@@ -154,9 +154,6 @@ ul.inline li {
 		padding: 0px;
 }
 
-nav.navigation {
-	margin-top: 10px;
-}
 
 nav.navigation li a:link, nav.navigation li a:visited {
     color: #fff;
@@ -327,6 +324,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
 
 #zone-preview {
     background-color: #231F20;  
+    width: 962px;
 }
 
 #zone-preview .block{
@@ -381,6 +379,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
 #zone-postscript {
 		background-color: #231F20;
 		padding: 5px 0 10px 0;
+		width: 962px;
 }
 
 .page-main #zone-postscript {
