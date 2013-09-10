@@ -54,12 +54,12 @@ body {
 
 .region-sidebar-first-inner {
     background-image: url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
-    border-left: 1px dashed #ccc; border-right: 1px dashed #ccc; padding: 0 5px;
-    padding-top: 10px;
+    border-left: 1px dashed #ccc; border-right: 1px dashed #ccc;
+    padding: 10px 5px;
 }
 
 .region-sidebar-second-inner {
-    padding-top: 10px;
+    padding: 10px 0px;
 }
 
 div.field {
@@ -175,8 +175,8 @@ h2.block-title {
     color: #8996a0;
     text-transform: uppercase;
     text-align: right;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    padding-right: 2px;
     font-size: 14px;
 }
 
