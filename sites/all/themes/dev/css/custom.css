@@ -32,10 +32,6 @@ body {
     overflow: hidden;
 }
 
-#zone-content {
-    padding-bottom: 50px;
-}
-
 #zone-branding {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -290,9 +286,11 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 /*Comment block styles*/
 
-#mc-container {
+#block-block-11 {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 
 /*Footer Block styles*/
 
@@ -421,7 +419,6 @@ div#block-system-main {
 nav.node-links {
     margin : 10px 0;
 }
-
 
 /*Common Views styles*/
 
