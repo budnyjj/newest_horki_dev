@@ -104,6 +104,11 @@ label {
 
 /*List styles*/
 
+ul {
+    list-style: disc;
+    margin-bottom: 20px;
+}
+
 .content ul, .content ol {
     padding-left: 1.2em;
 }
@@ -206,6 +211,12 @@ img.wide-logo {
     text-decoration: none;
 }
 
+/* Uzgorak Banner Block */
+
+ul.uzgorak-banner {
+    list-style: none;
+    margin-bottom: 0px;
+}
 
 /*Social Widget Block*/
 

@@ -11,6 +11,10 @@
 	float: right;
 }
 
+.flush-left-all {
+	text-align: left;
+}
+
 .flush-left-this {
 		float: left;
 }
@@ -105,6 +109,15 @@ a.rich-red-link {
 	color: #D2232A !important; 
 	text-decoration: underline !important;
 }
+
+a.small-link {
+    font-size: 11px;
+}
+
+.small-link a {
+    font-size: 11px;
+}
+
 /* Table styles */
 
 article table {
