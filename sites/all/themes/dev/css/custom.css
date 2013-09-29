@@ -214,6 +214,8 @@ img.wide-logo {
 /* Uzgorak Banner Block */
 
 ul.uzgorak-banner {
+    margin-top: 5px;
+    padding-left: 0px;
     margin-bottom: 0px;
     list-style-position: inside;
 }
