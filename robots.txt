@@ -61,6 +61,9 @@ Disallow: /?q=user/logout/
 
 
 User-agent: Yandex
+
+Disallow: /news/
+
 Disallow: /includes/
 Disallow: /misc/
 Disallow: /modules/
