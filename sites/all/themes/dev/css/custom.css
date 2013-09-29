@@ -214,8 +214,8 @@ img.wide-logo {
 /* Uzgorak Banner Block */
 
 ul.uzgorak-banner {
-    list-style: none;
     margin-bottom: 0px;
+    list-style-position: inside;
 }
 
 /*Social Widget Block*/
