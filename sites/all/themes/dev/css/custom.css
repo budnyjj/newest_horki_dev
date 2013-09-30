@@ -106,7 +106,6 @@ label {
 
 ul {
     list-style: disc;
-    margin-bottom: 20px;
 }
 
 .content ul, .content ol {
@@ -120,6 +119,10 @@ ul li.leaf {
 
 li a.active {
     color: #671A1D;
+}
+
+article ul {
+    margin-bottom: 20px;
 }
 
 ul.primary {
