@@ -74,7 +74,7 @@ html, body, div, a {
     line-height: normal;
 }
 
-article a, article p, article span, #node_news_full_group_tags a {
+article a, article p, #node_news_full_group_tags a {
     font-size: 15px;
 }
 

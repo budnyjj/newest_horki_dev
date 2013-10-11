@@ -9,7 +9,7 @@
   <?php print render($title_suffix); ?>
   <?php if ($display_submitted): ?>
   <footer class="submitted">
-	<?php print $date; ?>
+  <?php print date("d.m.Y", $node->created); ?> &ndash; <?php print date("H:i", $node->created); ?>
 	<?php if ($page): ?>
 		<span class="by-readers-delimiter">|</span>
 		<span class="by-readers">Даслана чытачом</span>
