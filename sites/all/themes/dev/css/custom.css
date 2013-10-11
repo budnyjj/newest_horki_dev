@@ -337,7 +337,6 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     width: 55%;
 }
 
-
 /* Node styles */
 
 div#block-system-main {
@@ -346,16 +345,15 @@ div#block-system-main {
 
 
 .submitted {
-    font-size: 12px;
+    font-size: 15px;
     color: #8996A0;
-    text-transform: uppercase;
     font-weight: bold;
-    margin: 0px;
 }
 
 .by-readers-delimiter {
     color: #666;
 }
+
 .by-readers {
     color: #D2232A;
 }
@@ -419,9 +417,10 @@ div#block-system-main {
 
 .group-tags legend {
     float: left;
+    font-size: 15px;
     color: #8996A0;
-    text-transform: uppercase;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .field-name-field-placement-by-taxonomy .field-item, .field-name-field-rubric-by-taxonomy .field-item, .field field-name-field-additional-taxonomy .field-item {
@@ -430,13 +429,19 @@ div#block-system-main {
 
 .group-tags .field-item a {
     float: left;
-    color: #8996A0;
     text-transform: uppercase;
     padding: 0px 0px 0px 4px;
+    color: #8996A0;
+    font-weight: bold;
+
 }
 
 nav.node-links {
     margin : 10px 0;
+}
+
+.statistics_counter {
+    display: none !important;
 }
 
 /*Common Views styles*/

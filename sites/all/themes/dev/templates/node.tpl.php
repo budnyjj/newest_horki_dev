@@ -8,7 +8,13 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($display_submitted): ?>
-	<footer class="submitted"><?php print date("d.m.Y", $node->created); ?> &ndash; <?php print date("H:i", $node->created); ?></footer>
+	<footer class="submitted"><?php print date("d.m.Y", $node->created); ?> &ndash; <?php print date("H:i", $node->created); ?> 
+  <?php if ($page): ?>
+	<span class="by-readers-delimiter">|</span>
+	<?php print $content['links']['statistics']['#links']['statistics_counter']['title'] ?>
+  <?php endif; ?>
+
+	</footer>
   <?php endif; ?>  
   
   <div<?php print $content_attributes; ?>>
@@ -26,6 +32,8 @@
 	  <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
     <?php endif; ?>
 	 <?php }; ?>
+
+	
 
     <?php print render($content['comments']); ?>
   </div>

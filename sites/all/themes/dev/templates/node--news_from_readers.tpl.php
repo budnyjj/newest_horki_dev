@@ -12,7 +12,10 @@
   <?php print date("d.m.Y", $node->created); ?> &ndash; <?php print date("H:i", $node->created); ?>
 	<?php if ($page): ?>
 		<span class="by-readers-delimiter">|</span>
-		<span class="by-readers">Даслана чытачом</span>
+                <?php print $content['links']['statistics']['#links']['statistics_counter']['title'] ?>
+		<span class="by-readers-delimiter">|</span>
+		<span class="by-readers">даслана чытачом</span>
+   
 	<?php endif; ?>
   </footer>
   <?php endif; ?>  
