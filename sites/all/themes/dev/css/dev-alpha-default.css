@@ -1,7 +1,7 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
 
 #region-sidebar-first, #region-social-blocks, #zone-preview-wrapper, #zone-postscript-wrapper {
-        display: block;
+    display: block;
 }
 
 #block-block-16, #block-block-18,  #block-block-15, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content {
@@ -17,47 +17,47 @@
 /*Header banner styles*/
 
 #block-block-18 {
-		height: 60px;
-		margin-bottom: 10px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
 
 /*Search Block Positioning*/
 
 #block-custom-search-blocks-1 {
-	background-color: #808080;
-	border-radius: 3px 3px 3px 3px;
-	margin-bottom: 10px;
-	width: 210px;
-	height: 60px;
-	position: relative;
-	left: -30px;
+    background-color: #808080;
+    border-radius: 3px 3px 3px 3px;
+    margin-bottom: 10px;
+    width: 210px;
+    height: 60px;
+    position: relative;
+    left: -30px;
 }
 
 #block-custom-search-blocks-1 .form-item, #block-custom-search-blocks-1 .form-actions {
     display: inline-block;
-		margin: 0 0 0 10px;
+    margin: 0 0 0 10px;
 }
 
-.search-form {
+#block-custom-search-blocks-1 .search-form {
     margin: 0;
-		position: absolute;
-		top: 30%;
+    position: absolute;
+    top: 30%;
 }
 
 #edit-custom-search-blocks-form-1--2 {
-		width: 140px;
+    width: 140px;
 }
 
 
 /*Social Links Block*/
 
 #block-block-3 {
-		height: 35px;
+    height: 35px;
 }
 
 #block-block-3 .content img {
-		margin: 0px 5px;
+    margin: 0px 5px;
     opacity: 0.9;
 }
 
@@ -69,8 +69,8 @@
 /*Add News Block*/
 
 #block-block-14 {
-		width: 190px;
-		height: 35px;
+    width: 190px;
+    height: 35px;
     position: relative;
     left: -30px;
 }
@@ -78,36 +78,36 @@
 #block-block-14 .content a {
     font-size: 14px;
     color: #fff;
-		padding: 9px 10px;
+    padding: 9px 10px;
     border-radius: 3px;
-		position: absolute;
+    position: absolute;
     background-color: #808080;
-		width: 100%;
+    width: 100%;
 }
 
 #block-block-14:hover .content a:hover {
-		background-color: #505050;
+    background-color: #505050;
 }
 
 
 /*Information block's Float Settings*/
 
 #region-preface-third {
-	position: relative;
-	left: 35px;
+    position: relative;
+    left: 35px;
 }
 
 
 /* Current Date Block*/
 #block-block-16 {
-	display: inline-block;
+    display: inline-block;
 }
 
 #block-block-16 .content {
-        color: #D2232A;
-        font-size: 11px;
-        font-weight: bold;
-	margin-right: 0px;
+    color: #D2232A;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 0px;
 }
 
 /*Currency Block Settings*/
@@ -115,13 +115,13 @@
 .bel_currency_delimiter, .bel_currency_name, .bel_currency_row {
     display: inline-block;
     margin: 0 2px;
-	font-size: 11px;
+    font-size: 11px;
 }
 
 .bel_currency_char, .bel_currency_num {
     display: inline-block;
     margin: 0 1px;
-	font-size: 11px;
+    font-size: 11px;
 }
 
 .bel_currency_char, .bel_currency_name {
@@ -135,11 +135,11 @@
 /*Weather Block Settings*/
 
 #block-block-2 {
-	margin: 0 27px;
+    margin: 0 27px;
 }
 
 #block-block-2 .content {
-	font-size: 11px;
+    font-size: 11px;
 }
 
 #block-block-2 object {
@@ -151,7 +151,7 @@
 /* Main Menu Positioning */
 
 ul.inline li {
-		padding: 0px;
+    padding: 0px;
 }
 
 
@@ -161,76 +161,76 @@ nav.navigation li a:link, nav.navigation li a:visited {
 }
 
 #main-menu, #secondary-menu {
-	margin-bottom: 0px;
-	display: block;
-  overflow: visible;
-	text-align: center;
+    margin-bottom: 0px;
+    display: block;
+    overflow: visible;
+    text-align: center;
 }
 
 #main-menu {
-		padding-top: 3px;
-		padding-bottom: 7px;
-		text-align: center;
-		background-color: #231F20;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    text-align: center;
+    background-color: #231F20;
 }
 
 #main-menu li {
-		margin-left: 4px;
-		margin-right: 4px; 
-		margin-bottom: 3px;
+    margin-left: 4px;
+    margin-right: 4px; 
+    margin-bottom: 3px;
 }
 
 #main-menu li a {
-		padding-left: 5px;
-		padding-right: 5px;
-		padding-bottom: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
     font-size: 23px;
 }
 
 #main-menu li a:hover, #main-menu li a:active, #main-menu .active-trail a {
-		background-color:#666;
-		border-radius: 3px;
+    background-color:#666;
+    border-radius: 3px;
 }
 
 #secondary-menu {
-		background-color: #505050; 
-		padding-top: 1px; 
-		padding-bottom: 3px;}
+    background-color: #505050; 
+    padding-top: 1px; 
+    padding-bottom: 3px;}
 
 #secondary-menu li {
-		margin-right: 0;
-		padding: 0 8px; 
+    margin-right: 0;
+    padding: 0 8px; 
 }	
 
 #secondary-menu li a {
-		padding-left: 2px;
-		padding-right: 2px;
-		padding-bottom: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 1px;
     font-size: 14px;
 }
- 
+
 #secondary-menu .active-trail a, #secondary-menu li a:hover {
-		background-color:#231F20;
-		border-radius: 3px;
+    background-color:#231F20;
+    border-radius: 3px;
 }
 
 
 /*Main news block style*/
 
 #block-views-front-block-1 h2.block-title {
-		padding: 0;
+    padding: 0;
 }
 
 #block-views-front-block-1 .views-row {
-		margin: 0;
+    margin: 0;
 }
 
 #block-views-front-block-1 .views-field-field-pics	{
-		margin-top: 10px;
+    margin-top: 10px;
 }
 
 #block-views-front-block-1 .view-footer a {
-		margin: 10px 0 5px;
+    margin: 10px 0 5px;
 }
 
 
@@ -245,18 +245,18 @@ nav.navigation li a:link, nav.navigation li a:visited {
 }	
 
 .view-testingrepresentative-node .views-limit-grouping-group h3 {
-		border-top: 1px dashed #ccc;
-		padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    padding-top: 10px;
 }	
 
 .view-testingrepresentative-node .field-content img {
-		margin-top: 2px;
+    margin-top: 2px;
 }
 
 .zahalovak_navin a {
-		font-weight:bold; 
-		font-size: 16px; 
-		color:#671A1D; 
+    font-weight:bold; 
+    font-size: 16px; 
+    color:#671A1D; 
 }
 
 /*First Sidebar*/
@@ -283,7 +283,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
 /*Block Poll*/
 
 .poll .bar {
-		background-color: #ddd;
+    background-color: #ddd;
 
 }
 .poll .bar .foreground {
@@ -317,9 +317,9 @@ nav.navigation li a:link, nav.navigation li a:visited {
 }
 
 #block-poll-recent ul li a {
-		font-size: 14px;
-		font-weight: bold;
-		text-decoration: underline;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 /* Preview zone settings */
@@ -330,11 +330,11 @@ nav.navigation li a:link, nav.navigation li a:visited {
 }
 
 #zone-preview .block{
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 #zone-preview .view-header {
-	text-align: right;
+    text-align: right;
 }
 
 #zone-preview .content a {
@@ -379,13 +379,13 @@ nav.navigation li a:link, nav.navigation li a:visited {
 /*Postscript  styles*/
 
 #zone-postscript {
-		background-color: #231F20;
-		padding: 5px 0 10px 0;
-		width: 962px;
+    background-color: #231F20;
+    padding: 5px 0 10px 0;
+    width: 962px;
 }
 
 .page-main #zone-postscript {
-		background-color: #505050;
+    background-color: #505050;
 }
 
 #zone-postscript .content {
@@ -394,6 +394,6 @@ nav.navigation li a:link, nav.navigation li a:visited {
 
 #zone-postscript .content a {
     color: #fff;
-		font-size: 11px;
+    font-size: 11px;
 }
 
