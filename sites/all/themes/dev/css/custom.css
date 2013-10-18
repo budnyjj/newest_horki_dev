@@ -384,6 +384,23 @@ div#block-system-main {
     margin-left: 0px !important;
 }
 
+.caption {
+    position: relative;
+}
+
+.caption p {
+    opacity: 0.8;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0px;
+    padding: 2px 0px;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    font-weight: bold;
+    text-align: center;
+
+}
 
 .embedded-video {
     position: relative;

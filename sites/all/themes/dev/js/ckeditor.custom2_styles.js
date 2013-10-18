@@ -13,6 +13,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
 			{name : 'Тэкст'				, element : 'p', attributes: {'class' : '' } },
 			{name : 'Падраздзел'		, element : 'h3', attributes: {'class' : 'text-chapter'} },
  			{name : 'Урэзка'			, element : 'h3', attributes: {'class' : 'text-accent'} },
-           { name : 'Подпіс'			, element : 'h3', attributes: {'class' : 'text-signature'} }
+            {name : 'Подпіс'			, element : 'h3', attributes: {'class' : 'text-signature'} }
     ]);
 }
