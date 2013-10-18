@@ -227,6 +227,10 @@ ul.uzgorak-banner {
     list-style-position: inside;
 }
 
+ul.uzgorak-banner > li {
+    margin-left: 5px;
+}
+
 /*Social Widget Block*/
 
 #quicktabs-social_blocks_normal .quicktabs-tabs {
