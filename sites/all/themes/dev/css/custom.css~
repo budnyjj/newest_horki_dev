@@ -13,7 +13,7 @@
 /*Global Positioning styles*/
 
 body {
-    background-image:url('/sites/all/themes/dev/images/grey_texture.jpg');
+    background-image:url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
 }
 
 
