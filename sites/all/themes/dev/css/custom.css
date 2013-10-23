@@ -363,10 +363,8 @@ div#block-system-main {
 }
 
 
-.field-name-field-text img {
+.field-name-field-text img, .caption {
     max-width: 100%;
-    width: 100%;
-    min-width: 100px;
     height: auto !important; 
 }
 
@@ -399,7 +397,6 @@ div#block-system-main {
     background-color: #000;
     font-weight: bold;
     text-align: center;
-
 }
 
 .embedded-video {
