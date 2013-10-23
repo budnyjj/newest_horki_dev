@@ -13,7 +13,7 @@
 /*Global Positioning styles*/
 
 body {
-    background-image:url('/sites/all/themes/dev/images/grey_texture.jpg');
+    background-image:url('http://new.horki.info/sites/all/themes/dev/images/grey_texture.jpg');
 }
 
 
@@ -363,8 +363,10 @@ div#block-system-main {
 }
 
 
-.field-name-field-text img, .caption {
+.field-name-field-text img {
     max-width: 100%;
+    width: 100%;
+    min-width: 100px;
     height: auto !important; 
 }
 
@@ -397,6 +399,7 @@ div#block-system-main {
     background-color: #000;
     font-weight: bold;
     text-align: center;
+
 }
 
 .embedded-video {

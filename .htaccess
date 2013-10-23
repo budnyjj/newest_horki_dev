@@ -1,11 +1,3 @@
-# Use PHP5.3 Single php.ini as default
-AddHandler application/x-httpd-php53s .php
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^drybin\.info$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.drybin\.info$
-RewriteRule ^(.*)$ "http\:\/\/horki\.info\/drybin\.html$1" [R=301,L]
-
 #
 # Apache/PHP/Drupal settings:
 #
@@ -19,7 +11,8 @@ RewriteRule ^(.*)$ "http\:\/\/horki\.info\/drybin\.html$1" [R=301,L]
 Options -Indexes
 
 # Follow symbolic links in this directory.
-Options +FollowSymLinks
+# For security reasons, Option followsymlinks cannot be overridden.
+Options +SymLinksIfOwnerMatch
 
 # Make Drupal handle any 404 errors.
 ErrorDocument 404 /index.php
@@ -149,3 +142,10 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
+#AuthUserFile "/home/horki/domains/new.horki.info/public_html/htusers"
+#AuthType Basic
+#AuthName "dev-zone"
+#require valid-user
+#<Files htusers>
+#deny from all
+#</Files>
