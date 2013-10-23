@@ -5,7 +5,7 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 
-sites/default/tmp/*
+sites/default/tmp
 
 *.swp
 *.swo
@@ -17,4 +17,6 @@ old/*
 maps
 maps/*
 
-*error_log
+log
+htusers
+.htaccess
