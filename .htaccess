@@ -142,10 +142,13 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
-#AuthUserFile "/home/horki/domains/new.horki.info/public_html/htusers"
-#AuthType Basic
-#AuthName "dev-zone"
-#require valid-user
-#<Files htusers>
-#deny from all
-#</Files>
+<Files htusers>
+deny from all
+</Files>
+AuthUserFile "/home/horki/domains/new.horki.info/public_html/htusers"
+AuthType Basic
+AuthName "dev-zone!"
+require valid-user
+<Files htusers>
+deny from all
+</Files>
