@@ -1,0 +1,12 @@
+name = View: news from readers
+description = Спіс народных навінаў
+core = 7.x
+package = Custom
+version = 7.x-1.0
+project = view_news_from_readers
+dependencies[] = views
+dependencies[] = views_infinite_scroll
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = news_from_readers
+features_exclude[dependencies][ctools] = ctools

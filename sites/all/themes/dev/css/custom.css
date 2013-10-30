@@ -45,7 +45,7 @@ body {
 }
 
 .region-content-inner {
-    padding-top: 10px;
+    padding: 10px 0;
 }
 
 .region-sidebar-first-inner {
@@ -346,7 +346,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 .table-teaser {
     position: relative; 
-    margin-top: -10px; 
+    margin-top: -5px; 
     float: right; 
     width: 55%;
 }
@@ -492,32 +492,30 @@ article .node-links
     display: none;
 }
 
-.view-id-videoblog  table, .view-id-photoblog table, .view-taxonomy-term table, .view-genres table {
+.view-id-videoblog  .views-field-title,
+.view-id-photoblog .views-field-title,
+.view-taxonomy-term .views-field-title,
+.view-genres .views-field-title,
+.view-news-from-readers .views-field-title {
+    margin-bottom: 0.7em;
+}
+
+.view-id-videoblog  table, .view-id-photoblog table, .view-taxonomy-term table, .view-genres table, .view-news-from-readers table {
     border: 0px!important;
 }
 
-.view-taxonomy-term td, .view-genres td {
+.view-taxonomy-term td, .view-genres td, .view-news-from-readers td {
     padding: 0 0 20px 0;
     width: 340px;
 } 
 
-.view-taxonomy-term .col-2, .view-genres .col-2 {
+.view-taxonomy-term .col-2, .view-genres .col-2, .view-news-from-readers .col-2 {
     padding-left: 20px;
 }
 
 .view-taxonomy-term.views-field-title,  .view-genres .views-field-title {
     clear: both;
     margin-bottom: 10px;
-}
-
-.view-taxonomy-term .views-field-field-pics {
-    margin-top:-8px;
-    width: 40%;
-}
-
-.view-taxonomy-term .views-field-created {
-    color: #585858;
-    font-size: 11px;
 }
 
 .view-genres .views-field-field-what, .view-genres .views-field-field-where, .view-genres .views-field-field-when,.view-genres  .views-field-field-placement-by-taxonomy {
@@ -527,9 +525,17 @@ article .node-links
     margin-bottom: 5px;
 }
 
-.view-genres .views-field-field-pics {
-    padding-top: 5px;
+.view-id-photoblog td, .view-id-daviedka td, .view-taxonomy-term td, .view-genres td,  .view-id-videoblog td, .view-news-from-readers td {
+    vertical-align:top;
+}
+
+.pic-list {
     width: 40%;
+}
+
+.date-list {
+    color: #585858;
+    font-size: 11px;
 }
 
 /*Photoblog & Videoblog styles*/
@@ -555,9 +561,7 @@ article .node-links
 }
 
 
-.view-id-photoblog td, .view-id-daviedka td, .view-taxonomy-term td, .view-genres td,  .view-id-videoblog td {
-    vertical-align:top;
-}
+
 
 .view-id-videoblog td { 
     padding: 0 0 20px 0;
