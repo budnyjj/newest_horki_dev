@@ -59,7 +59,7 @@ body {
 }
 
 div.field {
-    margin: 10px 0px;
+    margin: 1em 0;
 }
 
 
@@ -74,7 +74,7 @@ html, body, div, a {
     line-height: normal;
 }
 
-article a, article p, #node_news_full_group_tags a {
+article a, article p, article ul, article ol {
     font-size: 15px;
 }
 
@@ -94,7 +94,7 @@ a:hover {
 }
 
 p {
-    margin-bottom: 1em;
+    margin-bottom: 0.7em;
 }
 
 label {
@@ -126,7 +126,7 @@ li a.active {
 }
 
 article ul {
-    margin-bottom: 20px;
+    margin-bottom: 0.7em;
 }
 
 ul.primary {
@@ -183,9 +183,10 @@ h2.block-title {
     color: #8996a0;
     text-transform: uppercase;
     text-align: right;
-    padding-bottom: 5px;
+    font-size: 15px;
+    padding-bottom: 0.2em;
     padding-right: 2px;
-    font-size: 14px;
+    font-weight: bold;
 }
 
 /*Logo Block Styles*/
@@ -301,8 +302,17 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 /*Similar terms block styles*/
 
+#block-views-similarterms-block {
+    padding: 0.7em 0;
+    border-top: 1px dashed #ccc;
+}
+
+#block-views-similarterms-block .block-title {
+    text-align: left;
+}
+
 .view-similarterms .views-row {
-    margin: 3px 0px;
+    margin: 0.2em 0;
 }
 .view-similarterms .views-field-title a {
     color: #671A1D;
@@ -311,8 +321,8 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 /*Comment block styles*/
 
 #block-block-11 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border-top: 1px dashed #ccc;
+    margin-bottom: 1em;
 }
 
 
@@ -343,15 +353,11 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 /* Node styles */
 
-div#block-system-main {
-    padding: 0 0 10px 0;
-}
-
-
 .submitted {
     font-size: 15px;
     color: #8996A0;
     font-weight: bold;
+    margin-bottom: 0.7em;
 }
 
 .by-readers-delimiter {
@@ -418,10 +424,20 @@ div#block-system-main {
     height: 100% !important;
 }
 
+article .field-name-field-text {
+    margin: 0;
+}
 
-.page-node .field-name-field-text {
-    font-size: 15px; 
-    line-height: 150%;
+article .group-tags,
+article .field-name-field-add-this {
+    border-top: 1px dashed #ccc;
+    padding: 0.7em 0;
+    margin: 0;
+}
+
+article .node-links
+{
+    display: none;
 }
 
 .field-name-field-text a {
@@ -430,7 +446,7 @@ div#block-system-main {
 
 
 .group-tags .field {
-    margin: 0px;
+    margin: 0px; 
 }
 
 .group-tags legend {
@@ -448,19 +464,15 @@ div#block-system-main {
 .group-tags .field-item a {
     float: left;
     text-transform: uppercase;
-    padding: 0px 0px 0px 4px;
+
     color: #8996A0;
     font-weight: bold;
-
+    font-size: 15px;
+    padding-left: 4px;    
 }
 
-nav.node-links {
-    margin : 10px 0;
-}
 
-.statistics_counter {
-    display: none !important;
-}
+
 
 /*Common Views styles*/
 
@@ -469,7 +481,7 @@ nav.node-links {
 } 
 
 .block-main .view-footer {
-    padding-top: 10px;
+    padding: 0.7em 0 1em;
     border-top: 1px dashed #ccc;
 } 
 
@@ -697,6 +709,7 @@ article.node-webform footer.submitted {
     font-size: 15px;
     color: #8996A0;
     text-transform: uppercase;
+    margin-bottom: 0.2em;
 }
 
 .field-type-addthis .at300b {

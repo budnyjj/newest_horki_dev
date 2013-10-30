@@ -145,7 +145,7 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 /* Views Styles */
 
 .views-row {
-    margin: 10px 0px;
+    margin: 0.7em 0;
 }
 
 .zebra .views-row {
