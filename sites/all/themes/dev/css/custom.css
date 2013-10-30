@@ -497,7 +497,7 @@ article .node-links
 .view-taxonomy-term .views-field-title,
 .view-genres .views-field-title,
 .view-news-from-readers .views-field-title {
-    margin-bottom: 0.7em;
+    margin-bottom: 0.5em;
 }
 
 .view-id-videoblog  table, .view-id-photoblog table, .view-taxonomy-term table, .view-genres table, .view-news-from-readers table {

@@ -201,7 +201,11 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
@@ -293,7 +297,6 @@ function views_news_lists_views_default_views() {
   /* Display: Народныя навiны */
   $handler = $view->new_display('page', 'Народныя навiны', 'page_9');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Народныя навіны';
   $handler->display->display_options['display_description'] = 'Народныя навiны';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
@@ -349,7 +352,6 @@ function views_news_lists_views_default_views() {
     t('апошняя »'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/letter_small.png"></a>'),
     t('Народныя навiны'),
-    t('Народныя навіны'),
     t('Дадаць сваю навіну!'),
     t('<a href="/node/add/news-from-readers" class="rich-red-link">Дадаць сваю навiну!</a>'),
   );
@@ -536,9 +538,9 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '3600';
+  $handler->display->display_options['cache']['results_lifespan'] = '300';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '3600';
+  $handler->display->display_options['cache']['output_lifespan'] = '300';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
