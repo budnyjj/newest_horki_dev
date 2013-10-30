@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the View: news from readers feature.
- */
-
-include_once 'view_news_from_readers.features.inc';
