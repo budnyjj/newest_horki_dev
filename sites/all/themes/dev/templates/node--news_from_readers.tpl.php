@@ -11,8 +11,10 @@
   <footer class="submitted">
   <?php print date("d.m.Y", $node->created); ?> &ndash; <?php print date("H:i", $node->created); ?>
 	<?php if ($page): ?>
-		<span class="by-readers-delimiter">|</span>
-                <?php print $content['links']['statistics']['#links']['statistics_counter']['title'] ?>
+		<?php if ($node_views_cntr): ?>
+			<span class="by-readers-delimiter">|</span>
+			<?php print $node_views_cntr . " праглядаў"; ?>
+		<?php endif; ?>
 		<span class="by-readers-delimiter">|</span>
 		<span class="by-readers">даслана чытачом</span>
    

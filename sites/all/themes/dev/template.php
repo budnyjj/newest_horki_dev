@@ -21,4 +21,13 @@ function dev_preprocess_views_exposed_form(&$vars, $hook)
               unset($vars['form']['submit']['#printed']);
               $vars['button'] = drupal_render($vars['form']['submit']);
          }
-      }
+	 }
+
+function dev_preprocess_node(&$variables)
+{
+	$query = db_select('jstats_node', 'jn')
+						->fields('jn', array('recentcount'))
+						->condition('jn.nid', $variables['nid'], '=');
+	$result = $query->execute();
+	$variables['node_views_cntr'] = $result->fetchField();
+}

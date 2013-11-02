@@ -9,9 +9,9 @@
   <?php print render($title_suffix); ?>
   <?php if ($display_submitted): ?>
 	<footer class="submitted"><?php print date("d.m.Y", $node->created); ?> &ndash; <?php print date("H:i", $node->created); ?> 
-  <?php if ($page): ?>
+  <?php if ($page && $node_views_cntr): ?>
 	<span class="by-readers-delimiter">|</span>
-	<?php print $content['links']['statistics']['#links']['statistics_counter']['title'] ?>
+	<?php print $node_views_cntr . " праглядаў"; ?>
   <?php endif; ?>
 
 	</footer>
