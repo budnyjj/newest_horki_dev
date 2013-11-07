@@ -13,7 +13,7 @@
 	<?php if ($page): ?>
 		<?php if ($node_views_cntr): ?>
 			<span class="by-readers-delimiter">|</span>
-			<?php print $node_views_cntr . " праглядаў"; ?>
+			<?php print $node_views_cntr; ?>
 		<?php endif; ?>
 		<span class="by-readers-delimiter">|</span>
 		<span class="by-readers">даслана чытачом</span>

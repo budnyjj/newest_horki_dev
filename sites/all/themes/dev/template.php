@@ -28,6 +28,30 @@ function dev_preprocess_node(&$variables)
 	$query = db_select('jstats_node', 'jn')
 						->fields('jn', array('recentcount'))
 						->condition('jn.nid', $variables['nid'], '=');
-	$result = $query->execute();
-	$variables['node_views_cntr'] = $result->fetchField();
+	$result = $query->execute()->fetchField();
+	$last_digit = $result % 10;
+	$views_translated = "";
+	if ($result > 0)
+	{
+		switch	($last_digit)
+		{
+			case 1:
+			     $views_translated = " прагляд";
+			     break;
+			case 2:
+			case 3:
+			case 4:
+			     $views_translated = " прагляды";
+			     break;
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 0:
+				     $views_translated = " праглядаў";
+		     	     break;
+		     }
+	}	
+	$variables['node_views_cntr'] = $result . $views_translated;
 }

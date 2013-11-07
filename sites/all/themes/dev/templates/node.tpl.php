@@ -11,7 +11,7 @@
 	<footer class="submitted"><?php print date("d.m.Y", $node->created); ?> &ndash; <?php print date("H:i", $node->created); ?> 
   <?php if ($page && $node_views_cntr): ?>
 	<span class="by-readers-delimiter">|</span>
-	<?php print $node_views_cntr . " праглядаў"; ?>
+	<?php print $node_views_cntr; ?>
   <?php endif; ?>
 
 	</footer>
