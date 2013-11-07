@@ -4,9 +4,9 @@
  */
 
 .quicktabs_main.quicktabs-style-sky {
-  border: 0px solid #eee;
+  border: 1px solid #eee;
   clear: both;
-  padding: 10px 0px 0 0px;
+  padding: 10px 5px 0 5px;
   position: relative;
   top: -0.1em;
   background: #fff;
@@ -22,7 +22,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li {
   float: left;
   font-weight: normal;
   list-style: none;
-  margin: 0em 0 0 0;
+  margin: 0.3em 0 0 0;
   height: 2.65em;
   min-height: 2.95em;
   padding: 0;
@@ -37,11 +37,12 @@ ul.quicktabs-tabs.quicktabs-style-sky li a:visited {
   float: left;
   display: block;
   height: 2.65em;
-  min-height: 2.77em;
-  line-height: 2.76em;
+  min-height: 2.95em;
+  line-height: 2.95em;
   padding: 0 8px;
   text-decoration: none;
-  border: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
   font-size: .95em;
   background: #fff url('images/bg-shade-light.png') repeat-x bottom left;
   color: #777;
@@ -58,16 +59,17 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:hover {
 
 ul.quicktabs-tabs.quicktabs-style-sky li.active a,
 ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
-  height: 2.65em;
-  min-height: 2.77em;
-  line-height: 2.76em;
-  font-weight: bold;
+  height: 3.05em;
+  min-height: 3.35em;
+  line-height: 3.35em;
+  font-weight: normal;
   border: 1px solid #eee;
   background: #858585 url('images/bg-shade-dark.png') repeat-x bottom left;
   border-color: #555;
   color: #fff;
   font-size: .95em;
-  top: 0.18em;
+  font-weight: normal;
+  top: -0.025em;
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li:first-child a {
