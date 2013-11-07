@@ -195,6 +195,11 @@ img.wide-logo {
     width: 210px;
     text-align: center;
 }
+/* User Login Block Styles */
+#block-block-15 .content, #block-block-27 .content {
+	text-align: right;
+	margin-bottom: 5px;
+}
 
 /*Mobile Menu Block*/
 
@@ -435,8 +440,11 @@ article .field-name-field-add-this {
     margin: 0;
 }
 
-article .node-links
-{
+article .node-links {
+    display: none;
+}
+
+article .user-picture {
     display: none;
 }
 
@@ -692,7 +700,11 @@ article .node-links
     display: none;
 }
 
-/* User profile Page styles */
+/* User profile & registration Page styles */
+
+#user-register-form #edit-picture legend {
+	display: none;
+}
 
 .profile .user-picture {
 	float: left;

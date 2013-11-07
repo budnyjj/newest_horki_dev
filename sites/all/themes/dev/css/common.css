@@ -115,6 +115,14 @@ a.small-link {
     font-size: 11px;
 }
 
+a.system-link {
+    text-decoration: underline;
+}
+
+.system-link a {
+
+}
+
 /* Table styles */
 
 article table {

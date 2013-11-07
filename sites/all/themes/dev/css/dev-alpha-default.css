@@ -26,27 +26,24 @@
 
 #block-custom-search-blocks-1 {
     background-color: #808080;
-    border-radius: 3px 3px 3px 3px;
+    border-radius: 3px;
     margin-bottom: 10px;
     width: 210px;
-    height: 60px;
     position: relative;
     left: -30px;
 }
 
 #block-custom-search-blocks-1 .form-item, #block-custom-search-blocks-1 .form-actions {
-    display: inline-block;
-    margin: 0 0 0 10px;
+    margin: 0 auto;
 }
 
 #block-custom-search-blocks-1 .search-form {
     margin: 0;
-    position: absolute;
-    top: 30%;
+    padding: 8px 9px;
 }
 
 #edit-custom-search-blocks-form-1--2 {
-    width: 140px;
+    width: 190px;
 }
 
 
