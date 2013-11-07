@@ -692,6 +692,11 @@ article .node-links
     display: none;
 }
 
+/* User profile Page styles */
+
+.profile .user-picture {
+	float: left;
+}
 
 /*Webform Page Settings*/
 
