@@ -17,14 +17,17 @@
 .text-accent {
 	font-size: 16px;
 	font-weight: bold;
+	letter-spacing: 0.01em;
 	color:#808080;
 	margin-bottom: 0.7em;
 } 
 
 .text-accent a {
 	font-size: 16px;
+	letter-spacing: 0.01em;
 	margin-bottom: 0.7em;
 }
+
 /* Podpis autara */
 
 .text-signature, .field-name-field-author .field-item {

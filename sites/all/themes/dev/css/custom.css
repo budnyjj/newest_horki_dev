@@ -65,25 +65,21 @@ div.field {
 
 /*Initial Links & Text Settings*/
 
-html, body, div, a {
+body {
     font-family: Verdana, Geneva, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #231F20;
     font-size: 13px;
+    color: #231F20;
     line-height: normal;
 }
 
-article a, article p, article ul, article ol {
+article
+{
     font-size: 15px;
 }
 
-a:link, a:visited {
-    color: #231F20;
-    text-decoration: none;
-}
-
-a:active {
+a:link,
+a:active,
+a:visited {
     color: #D2232A;
     text-decoration: none;
 }
@@ -195,6 +191,7 @@ img.wide-logo {
     width: 210px;
     text-align: center;
 }
+
 /* User Login Block Styles */
 #block-block-15 .content, #block-block-27 .content {
 	text-align: right;
@@ -258,6 +255,11 @@ ul.uzgorak-banner > li {
     min-height: 0px;
 }
 
+.quicktabs_main.quicktabs-style-sky {
+    border: none;
+    padding: 0;3
+}
+
 ul.quicktabs-tabs.quicktabs-style-sky li {
     margin: 0 1em 0 0; 
 }
@@ -301,8 +303,18 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 /*Last Comments Block Style*/
 
-.mc-recent-meta a {
-    font-weight: bold;
+#block-views-comments-block-block-1 .views-field-name {
+    position: relative;
+    top: -4px;
+}
+
+#block-views-comments-block-block-1 .views-field-comment-body {
+    overflow: hidden;
+    padding: 0.2em 0;
+}
+
+#block-views-comments-block-block-1 .views-field-title {
+    font-size: 0.85em;
 }
 
 /*Similar terms block styles*/
@@ -323,13 +335,109 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     color: #671A1D;
 }
 
-/*Comment block styles*/
+/*Comment form styles*/
 
-#block-block-11 {
-    border-top: 1px dashed #ccc;
-    margin-bottom: 1em;
+.cke_toolbox_collapser {
+    display: none;
 }
 
+
+/*Comment block styles*/
+
+#block-commentsblock-comment-form-block {
+    border-top: 1px dashed #ccc;
+}
+
+#block-commentsblock-comment-form-block #edit-comment-body-und-0-format,
+#comment-form #edit-comment-body-und-0-format {
+    display: none;
+}
+
+#edit-author--2 {
+    display: none;
+}
+
+#block-views-comments-block-block {
+    border-top: 1px dashed #ccc;
+    padding-top: 0.7em;
+}
+
+#block-views-comments-block-block .view-header {
+    font-size: 0.85em;
+    padding: 0.5em 0;
+}
+
+#block-views-comments-block-block .views-row {
+    clear: both;
+}
+
+#block-views-comments-block-block .block-title {
+    text-align: left;
+}
+
+#block-views-comments-block-block .views-field-comment-body {
+    margin: 0.5em 0 0.2em 0;
+    clear: both;
+}
+
+#block-views-comments-block-block .views-field-nothing {
+    position: relative;
+    top: 10px;
+}
+
+.comment-avatar {
+    margin: 0 5px 5px 0;
+}
+
+.comment-depth-1 {
+    width: 95%;
+    float: right;
+}
+
+.comment-depth-2 {
+    width: 93%;
+    float: right;
+}
+
+.comment-depth-3 {
+    width: 91%;
+    float: right;
+}
+
+.comment-depth-4 {
+    width: 89%;
+    float: right;
+}
+
+.comment-depth-5 {
+    width: 87%;
+    float: right;
+}
+
+.comment-depth-6 {
+    width: 85%;
+    float: right;
+}
+
+.comment-depth-7 {
+    width: 83%;
+    float: right;
+}
+
+.comment-depth-8 {
+    width: 81%;
+    float: right;
+}
+
+.comment-depth-9 {
+    width: 79%;
+    float: right;
+}
+
+.comment-depth-10 {
+    width: 77%;
+    float: right;
+}
 
 /*Footer Block styles*/
 
@@ -446,10 +554,6 @@ article .node-links {
 
 article .user-picture {
     display: none;
-}
-
-.field-name-field-text a {
-    color: #D2232A;
 }
 
 
@@ -703,7 +807,7 @@ article .user-picture {
 /* User profile & registration Page styles */
 
 #user-register-form #edit-picture legend {
-	display: none;
+
 }
 
 .profile .user-picture {
