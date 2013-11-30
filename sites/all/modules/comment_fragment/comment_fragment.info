@@ -1,0 +1,12 @@
+name = Comment Fragment
+description = Rewrite the comment permalink to use fragment for SEO purposes.
+core=7.x
+files[] = comment_fragment.module
+dependencies[] = comment
+package = SEO
+; Information added by drupal.org packaging script on 2013-03-05
+version = "7.x-1.0"
+core = "7.x"
+project = "comment_fragment"
+datestamp = "1362497718"
+
