@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the User registration feature.
- */
-
-include_once 'user_registration.features.inc';

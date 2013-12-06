@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Comments suite feature.
+ */
+
+include_once 'comments_suite.features.inc';
