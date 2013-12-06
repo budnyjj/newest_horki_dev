@@ -806,12 +806,17 @@ article .user-picture {
 
 /* User profile & registration Page styles */
 
-#user-register-form #edit-picture legend {
-
+#user-register-form, #user-profile-form, #user-pass {
+    width: 50%;
 }
 
 .profile .user-picture {
 	float: left;
+}
+
+#hybridauth-additional-info-form {
+    width: 450px;
+    margin: 50px auto;
 }
 
 /*Webform Page Settings*/
