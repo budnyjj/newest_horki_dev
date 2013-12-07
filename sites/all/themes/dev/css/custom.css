@@ -439,6 +439,13 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     float: right;
 }
 
+
+/*Comment block styles*/
+
+article.comment .comment-links {
+    display: none;
+}
+
 /*Footer Block styles*/
 
 #block-block-9 {
