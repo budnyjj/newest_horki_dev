@@ -11,8 +11,7 @@
 Options -Indexes
 
 # Follow symbolic links in this directory.
-# For security reasons, Option followsymlinks cannot be overridden.
-Options +SymLinksIfOwnerMatch
+Options +FollowSymLinks
 
 # Make Drupal handle any 404 errors.
 ErrorDocument 404 /index.php
@@ -142,6 +141,3 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
-<Files htusers>
-deny from all
-</Files>
