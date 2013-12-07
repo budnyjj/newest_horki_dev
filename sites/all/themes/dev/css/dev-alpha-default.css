@@ -235,10 +235,11 @@ nav.navigation li a:link, nav.navigation li a:visited {
 
 .view-id-testingrepresentative_node h3 a {
     color: #8996a0;
-    font-size: 14px;
+    font-size: 15px;
     text-transform: uppercase;
     padding-right: 10px;
     text-align: right;
+    font-weight: bold;
 }	
 
 .view-testingrepresentative-node .views-limit-grouping-group h3 {

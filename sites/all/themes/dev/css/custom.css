@@ -336,16 +336,13 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 }
 
 /*Comment form styles*/
-
-.cke_toolbox_collapser {
-    display: none;
+#comments {
+    margin-top: 0;
 }
-
-
-/*Comment block styles*/
 
 #block-commentsblock-comment-form-block {
     border-top: 1px dashed #ccc;
+    padding-top: 0.7em;
 }
 
 #block-commentsblock-comment-form-block #edit-comment-body-und-0-format,
@@ -356,6 +353,14 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 #edit-author--2 {
     display: none;
 }
+
+.cke_toolbox_collapser {
+    display: none;
+}
+
+
+/*Comments block styles*/
+
 
 #block-views-comments-block-block {
     border-top: 1px dashed #ccc;
@@ -439,10 +444,18 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     float: right;
 }
 
+/* Comments message for anonymous block styles */
 
-/*Comment block styles*/
+#block-block-28 {
+    border-top: 1px dashed #ccc;
+    padding-top: 0.7em;
+    padding-bottom: 1em;
+}
 
-article.comment .comment-links {
+/*Comment page block styles*/
+
+article.comment .comment-links,
+article.comment .permalink {
     display: none;
 }
 
@@ -819,6 +832,10 @@ article .user-picture {
 
 .profile .user-picture {
 	float: left;
+}
+
+.profile h3 {
+    border-bottom: 1px dashed #ccc;
 }
 
 #hybridauth-additional-info-form {
