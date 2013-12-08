@@ -5,7 +5,7 @@
     display: none;
 }
 
-#block-block-18,  #block-block-15, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content {
+#block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content {
     display: none;
 }
 
@@ -194,7 +194,6 @@ h2.block-title {
 
 /* User Login Block Styles */
 #block-block-15 .content, #block-block-27 .content {
-	text-align: right;
 	margin-bottom: 5px;
 }
 
