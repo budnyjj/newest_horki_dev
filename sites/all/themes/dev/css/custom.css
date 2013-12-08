@@ -187,9 +187,9 @@ h2.block-title {
 
 /*Logo Block Styles*/
 
-img.wide-logo {
+#block-block-8 {
     width: 210px;
-    text-align: center;
+    margin: 0 auto;
 }
 
 /* User Login Block Styles */

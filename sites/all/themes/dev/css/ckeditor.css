@@ -34,10 +34,12 @@
 	font-size: 15px;
 	font-weight: bold;
 	margin-bottom: 0.7em;
+	color: #231F20;
 }
 
 .text-signature a, .field-name-field-author .field-item a {
         font-size: 15px;
         margin-bottom: 0.7em;
+	color: #231F20;
 }
 
