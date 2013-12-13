@@ -382,6 +382,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 #block-views-comments-block-block .views-field-comment-body {
     margin: 0.5em 0 0.2em 0;
     clear: both;
+    overflow: hidden;
 }
 
 #block-views-comments-block-block .views-field-nothing {
