@@ -185,6 +185,15 @@ h2.block-title {
     font-weight: bold;
 }
 
+/* Block More Link */
+
+.block .more-link a {
+    color: #231F20;
+    font-size: 1.1em !important;
+    font-weight: bold;
+    text-decoration: underline !important;
+}
+
 /*Logo Block Styles*/
 
 #block-block-8 {
@@ -316,6 +325,33 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     font-size: 0.85em;
 }
 
+/* Comments Page Style */
+
+.view-comments-block .view-header {
+    font-size: 0.85em;
+    padding: 0.5em 0;
+}
+
+.view-comments-block .views-row {
+    clear: both;
+}
+
+.view-comments-block .block-title {
+    text-align: left;
+}
+
+.view-comments-block .views-field-comment-body {
+    margin: 0.5em 0 0.2em 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.view-comments-block .views-field-nothing {
+    position: relative;
+    top: 10px;
+}
+
+
 /*Similar terms block styles*/
 
 #block-views-similarterms-block {
@@ -358,9 +394,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 }
 
 
-/*Comments block styles*/
-
-
+/* Comments to node block styles*/
 #block-views-comments-block-block {
     border-top: 1px dashed #ccc;
     padding-top: 0.7em;
