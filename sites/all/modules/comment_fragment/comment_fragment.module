@@ -70,10 +70,10 @@ function comment_fragment_permalink($cid) {
 	
     // Redirect the old comment permalink.
     if ($page > 0) {
-      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid,'query' => array('page'=> $page)), 301);
+      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid,'query' => array('items_per_page'=> 'All', 'page'=> $page)), 301);
     }
     else{
-      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid), 301);
+      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid, 'query' => array('items_per_page'=> 'All')), 301);
     }
   }
   drupal_not_found();
