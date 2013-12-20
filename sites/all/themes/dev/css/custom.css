@@ -327,28 +327,28 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 /* Comments Page Style */
 
-.view-comments-block .view-header {
+.view-comments-page .view-header {
     font-size: 0.85em;
     padding: 0.5em 0;
 }
 
-.view-comments-block .views-row {
+.view-comments-page .views-row {
     clear: both;
 }
 
-.view-comments-block .block-title {
+.view-comments-page .page-title {
     text-align: left;
 }
 
-.view-comments-block .views-field-comment-body {
+.view-comments-page .views-field-comment-body {
     margin: 0.5em 0 0.2em 0;
     clear: both;
     overflow: hidden;
 }
 
-.view-comments-block .views-field-nothing {
+.view-comments-page .views-field-nothing {
     position: relative;
-    top: 10px;
+    top: 3px;
 }
 
 
