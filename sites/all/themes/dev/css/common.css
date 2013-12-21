@@ -133,3 +133,22 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 .zebra .views-row-even {
 		background-color: #fbfbfb;
 }
+
+/* Misc styles */
+
+.comments-counter {
+    color: #fff;
+    font-size: 0.7em;
+    vertical-align: super;
+    margin-left: 0.3em;
+    color: #671B1D;
+}
+
+.comments-counter-highlight {
+    color: #fff;
+    background-color: #808080;
+    font-size: 0.7em;
+    vertical-align: super;
+    padding: 0.1em 0.3em;
+    margin-left: 0.3em;
+}

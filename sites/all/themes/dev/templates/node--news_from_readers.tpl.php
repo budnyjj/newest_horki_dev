@@ -15,9 +15,12 @@
 			<span class="by-readers-delimiter">|</span>
 			<?php print $node_views_cntr; ?>
 		<?php endif; ?>
+		<?php if ($node_comments_cntr): ?>
+		      <span class="by-readers-delimiter">|</span>
+		      <?php print $node_comments_cntr; ?>
+  		<?php endif; ?>
 		<span class="by-readers-delimiter">|</span>
 		<span class="by-readers">даслана чытачом</span>
-   
 	<?php endif; ?>
   </footer>
   <?php endif; ?>  

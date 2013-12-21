@@ -9,11 +9,17 @@
   <?php print render($title_suffix); ?>
   <?php if ($display_submitted): ?>
 	<footer class="submitted"><?php print date("d.m.Y", $node->created); ?> &ndash; <?php print date("H:i", $node->created); ?> 
-  <?php if ($page && $node_views_cntr): ?>
-	<span class="by-readers-delimiter">|</span>
-	<?php print $node_views_cntr; ?>
-  <?php endif; ?>
 
+  	<?php if ($page): ?> 
+  	      <?php if ($node_views_cntr): ?>
+	      	    <span class="by-readers-delimiter">|</span>
+	      	    <?php print $node_views_cntr; ?>
+  	      <?php endif; ?>
+  	      <?php if ($node_comments_cntr): ?>
+	      	    <span class="by-readers-delimiter">|</span>
+	      	    <?php print $node_comments_cntr; ?>
+  	      <?php endif; ?>
+  	<?php endif; ?>
 	</footer>
   <?php endif; ?>  
   

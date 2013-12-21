@@ -25,6 +25,7 @@ function dev_preprocess_views_exposed_form(&$vars, $hook)
 
 function dev_preprocess_node(&$variables)
 {
+	/* Views count */
 	$query = db_select('jstats_node', 'jn')
 						->fields('jn', array('recentcount'))
 						->condition('jn.nid', $variables['nid'], '=');
@@ -62,4 +63,43 @@ function dev_preprocess_node(&$variables)
 		}
 	}	
 	$variables['node_views_cntr'] = $result . $views_translated;
+
+	/* Comments counter */
+	$comments_translated = "";
+	$comments_count = $variables['comment_count'];
+
+	if ($comments_count > 0)
+	{
+		$penultimate_digit = (int) (($comments_count % 100) / 10);
+		if ($penultimate_digit == 1)
+		{
+			$comments_translated = " каментароў";
+		}
+		else
+		{
+			$last_digit = $comments_count % 10;		
+			switch	($last_digit)
+			{
+				case 1:
+				     $comments_translated = " каментар";
+				     break;
+				case 2:
+				case 3:
+				case 4:
+				     $comments_translated = " каментары";
+				     break;
+				case 5:
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+				case 0:
+					     $comments_translated = " каментароў";
+			     	     break;
+			     }
+		}
+	}	
+	
+	$variables['node_comments_cntr'] = $comments_count . $comments_translated;	
+
 }
