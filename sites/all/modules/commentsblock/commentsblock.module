@@ -160,11 +160,14 @@ function comment_block_static_comments($nid, $build = false, $node = false) {
     // @todo Would add $links above the comments title. Useful?
     // $comments[$nid]['links'] = $build['links']['comment'];
     $comments[$nid]['comments'] = $build['comments'];
-  } else {
+  }
+  else {
     // Normal behavior will be that the node calls this function before.
     if (!isset($comments[$nid])) {
       $comments[$nid]['links'] = '';
-      $comments[$nid]['comments'] = comment_node_page_additions($node);
+      if ($node) {
+        $comments[$nid]['comments'] = comment_node_page_additions($node);
+      }
     }
     return $comments[$nid];
   }
