@@ -103,7 +103,7 @@ function commentsblock_block_view($delta) {
       if (($node->comment !== 0) && (arg(2) == NULL)) {
         // Render the comments and comment form (access checks, etc. are done
         // by comment_node_page_additions()).
-        $block['content'] = drupal_render(comment_block_static_comments($node->nid, false, $node));
+        $block['content'] = comment_block_static_comments($node->nid, false, $node);
       }
     }
   }
@@ -169,7 +169,7 @@ function comment_block_static_comments($nid, $build = false, $node = false) {
         $comments[$nid]['comments'] = comment_node_page_additions($node);
       }
     }
-    return $comments[$nid];
+    return empty($comments[$nid]['comments']) ? NULL : $comments[$nid];
   }
 
   // We remove the comments and only load the form if the user wants this.
