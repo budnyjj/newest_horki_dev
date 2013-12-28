@@ -322,6 +322,8 @@ nav.navigation li a:link, nav.navigation li a:visited {
     font-size: 14px;
     font-weight: bold;
     text-decoration: underline;
+    color: #231F20;
+    text-align: center;
 }
 
 /* Preview zone settings */
