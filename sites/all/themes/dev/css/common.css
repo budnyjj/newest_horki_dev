@@ -138,17 +138,21 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 
 .comments-counter {
     color: #fff;
-    font-size: 0.7em;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
     vertical-align: super;
     margin-left: 0.3em;
-    color: #671B1D;
+    color: #D2232A;
 }
 
 .comments-counter-highlight {
     color: #fff;
     background-color: #808080;
-    font-size: 0.7em;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
     vertical-align: super;
-    padding: 0.1em 0.3em;
+    padding: 1px 3px 2px;
     margin-left: 0.3em;
 }
