@@ -351,6 +351,13 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     top: 3px;
 }
 
+.view-comments-page .views-field-value {
+    position: relative;
+    top: -15px;
+    float: right;
+}
+
+
 
 /*Similar terms block styles*/
 
@@ -424,6 +431,12 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     top: 10px;
 }
 
+#block-views-comments-block-block .views-field-value {
+    position: relative;
+    top: -15px;
+    float: right;
+}
+
 .comment-avatar {
     margin: 0 5px 5px 0;
 }
@@ -478,6 +491,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     float: right;
 }
 
+
 /* Comments message for anonymous block styles */
 
 #block-block-28 {
@@ -491,6 +505,34 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 article.comment .comment-links,
 article.comment .permalink {
     display: none;
+}
+
+/* Like button styles */
+
+
+.rate-number-up-down-rating {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #808080;
+    padding: 0 0.5em;
+}
+
+.rate-number-up-down-rating.negative {
+    color: #D2232A;
+}
+
+.rate-number-up-down-rating.positive {
+    color: green;
+}
+
+.rate-number-up-down-btn-up {
+    margin-top: 0px;
+    background: url('/sites/default/files/default_images/like.png')
+}
+
+.rate-number-up-down-btn-down {
+    margin-top: 5px;
+    background: url('/sites/default/files/default_images/dislike.png')
 }
 
 /*Footer Block styles*/
