@@ -352,11 +352,10 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 .view-comments-page .views-field-nothing {
     position: relative;
     top: 3px;
+    display: inline;
 }
 
 .view-comments-page .views-field-value {
-    position: relative;
-    top: -15px;
     float: right;
 }
 
@@ -432,11 +431,10 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 #block-views-comments-block-block .views-field-nothing {
     position: relative;
     top: 10px;
+    display: inline;
 }
 
 #block-views-comments-block-block .views-field-value {
-    position: relative;
-    top: -15px;
     float: right;
 }
 
