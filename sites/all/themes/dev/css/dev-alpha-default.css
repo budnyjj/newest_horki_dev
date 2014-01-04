@@ -4,7 +4,7 @@
     display: block;
 }
 
-#block-block-16, #block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content {
+#block-block-16, #block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31 {
     display: block;
 }
 
@@ -13,6 +13,10 @@
     display: none;
 }
 
+#zone-menu {
+     background-color: #fff;
+     width: 962px;
+} 
 
 /*Header banner styles*/
 
@@ -218,6 +222,12 @@ nav.navigation li a:link, nav.navigation li a:visited {
 
 /*Main news block style*/
 
+#block-views-front-block-1 .content {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+
 #block-views-front-block-1 h2.block-title {
     padding: 0;
 }
@@ -230,12 +240,17 @@ nav.navigation li a:link, nav.navigation li a:visited {
     margin-top: 10px;
 }
 
-#block-views-front-block-1 .view-footer a {
-    margin: 10px 0 5px;
+#block-views-front-block-1 .view-footer {
+    padding-top: 10px;
 }
 
 
 /*Main page content style*/
+
+.view-id-testingrepresentative_node .views-limit-grouping-group {
+    border-bottom: 1px dashed #ccc;
+    padding: 10px 0 5px;
+}
 
 .view-id-testingrepresentative_node h3 a {
     color: #8996a0;
@@ -244,11 +259,6 @@ nav.navigation li a:link, nav.navigation li a:visited {
     padding-right: 10px;
     text-align: right;
     font-weight: bold;
-}	
-
-.view-testingrepresentative-node .views-limit-grouping-group h3 {
-    border-top: 1px dashed #ccc;
-    padding-top: 10px;
 }	
 
 .view-testingrepresentative-node .field-content img {
@@ -398,5 +408,26 @@ nav.navigation li a:link, nav.navigation li a:visited {
 #zone-postscript .content a {
     color: #fff;
     font-size: 11px;
+}
+
+
+/* Banner Styles */
+
+#block-block-29 .content {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+#block-block-29 p,
+#block-block-30 p,
+#block-block-31 p {
+    margin: 0;
+    padding: 0;
+}
+
+#block-block-30 .content,
+#block-block-31 .content {
+    width: 200px;
+    margin: 0 auto;
 }
 

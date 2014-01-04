@@ -9,5 +9,3 @@ print $fields['title']->content;
 <?php
 print $fields['field_text']->content; 
 ?></div>
-
-<div style="margin-bottom: 20px; clear:both;"></div>

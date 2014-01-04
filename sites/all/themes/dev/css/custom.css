@@ -5,7 +5,7 @@
     display: none;
 }
 
-#block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content {
+#block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31 {
     display: none;
 }
 
@@ -22,11 +22,6 @@ body {
     border-left: 1px dashed #ccc;
     border-right: 1px dashed #ccc;
 }
-
-#zone-menu {
-     background-color: #fff;
-     width: 962px;
-} 
 
 #zone-content-wrapper {
     overflow: hidden;
@@ -247,6 +242,11 @@ ul.uzgorak-banner > li {
 
 /*Social Widget Block*/
 
+#quicktabs-social_blocks_normal {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
 #quicktabs-social_blocks_normal .quicktabs-tabs {
     width: 390px;
     margin: 0 auto;
@@ -276,7 +276,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li {
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li.active {
-    margin: -0.2em 1em 0 0;
+    margin: 0 1em 0 0;
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li a,
