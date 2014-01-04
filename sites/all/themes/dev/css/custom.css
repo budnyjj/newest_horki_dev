@@ -62,6 +62,9 @@ div.field {
     margin: 1em 0;
 }
 
+.more-link {
+    text-align: center;
+}
 
 /*Initial Links & Text Settings*/
 
@@ -349,7 +352,13 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 .view-comments-page .views-field-nothing {
     position: relative;
     top: 3px;
+    display: inline;
 }
+
+.view-comments-page .views-field-value {
+    float: right;
+}
+
 
 
 /*Similar terms block styles*/
@@ -422,6 +431,11 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 #block-views-comments-block-block .views-field-nothing {
     position: relative;
     top: 10px;
+    display: inline;
+}
+
+#block-views-comments-block-block .views-field-value {
+    float: right;
 }
 
 .comment-avatar {
@@ -478,6 +492,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     float: right;
 }
 
+
 /* Comments message for anonymous block styles */
 
 #block-block-28 {
@@ -491,6 +506,34 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 article.comment .comment-links,
 article.comment .permalink {
     display: none;
+}
+
+/* Like button styles */
+
+
+.rate-number-up-down-rating {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #808080;
+    padding: 0 0.5em;
+}
+
+.rate-number-up-down-rating.negative {
+    color: #D2232A;
+}
+
+.rate-number-up-down-rating.positive {
+    color: green;
+}
+
+.rate-number-up-down-btn-up {
+    margin-top: 0px;
+    background: url('/sites/default/files/default_images/like.png')
+}
+
+.rate-number-up-down-btn-down {
+    margin-top: 5px;
+    background: url('/sites/default/files/default_images/dislike.png')
 }
 
 /*Footer Block styles*/

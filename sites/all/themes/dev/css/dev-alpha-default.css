@@ -308,7 +308,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
 
 #block-poll-recent ul {
     list-style: none;
-    text-align: right;
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 5px;
     margin-right: 10px;
@@ -322,6 +322,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
     font-size: 14px;
     font-weight: bold;
     text-decoration: underline;
+    color: #231F20;
 }
 
 /* Preview zone settings */
