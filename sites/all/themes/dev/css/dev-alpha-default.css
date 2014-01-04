@@ -418,16 +418,29 @@ nav.navigation li a:link, nav.navigation li a:visited {
     border-bottom: 1px dashed #ccc;
 }
 
+#block-block-32 .content {
+    padding: 10px 0;
+    border-top: 1px dashed #ccc;
+}
+
 #block-block-29 p,
 #block-block-30 p,
-#block-block-31 p {
+#block-block-31 p,
+#block-block-32 p,
+#block-block-33 p {
     margin: 0;
     padding: 0;
 }
 
 #block-block-30 .content,
-#block-block-31 .content {
+#block-block-31 .content,
+#block-block-33 .content {
     width: 200px;
+    margin: 0 auto;
+}
+
+#block-block-32 .content {
+    width: 700px;
     margin: 0 auto;
 }
 

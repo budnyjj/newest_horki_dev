@@ -673,11 +673,10 @@ article .user-picture {
 .group-tags .field-item a {
     float: left;
     text-transform: uppercase;
-
     color: #8996A0;
     font-weight: bold;
     font-size: 15px;
-    padding-left: 4px;    
+    padding-left: 0.5em;    
 }
 
 
