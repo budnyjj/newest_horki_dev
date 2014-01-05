@@ -65,7 +65,7 @@ function jstats_schema() {
         'unsigned' => TRUE,
         'not null' => FALSE,
         'default' => 0,
-        'description' => 'Number of time this node has been viewed recently.',
+        'description' => 'Number of time this node has been viewed.',
       ),
     ),
     'indexes' => array(

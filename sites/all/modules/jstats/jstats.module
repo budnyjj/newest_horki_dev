@@ -48,61 +48,45 @@ function jstats_menu() {
  * Implementation of hook_cron().
  */
 function jstats_cron() {
-  $now = time();
-  // Get the last time our cron job was executed.
-  $last = variable_get('jstats_cron_last', 0);
+  // Calculate our stats
+  jstats_aggregate();
 
-  // How often we want to recompute the node access statistics.
-  $period = variable_get('jstats_cron_period', 900);
-
-  // How long access logs should be kept.
-  $keep = variable_get('jstats_flush_accesslogs_after', 604800);
-
-
-  // If our last cron job if more than $period seconds ago, then it's time
-  // to recalculate our statistics.
-  if ($now - $last > $period) {
-    // Flush old log entries
-    if ($keep) {
-      db_delete('jstats_accesslog')
-        ->condition('timestamp', ($now - $keep), '<')
-        ->execute();
-    }
-
-    // Calculate our stats
-    jstats_aggregate($now);
-
-    // Flag that we've updated the statistics count
-    variable_set('jstats_cron_last', $now);
-  }
+  // Flush old log entries
+  db_delete('jstats_accesslog')->execute();
 }
 
 /**
  * Aggregates access statistics.
  */
-function jstats_aggregate($now) {
-  // How long an access is considerered "recent".
-  $recent = variable_get('jstats_cron_recent', 172800);
-
+function jstats_aggregate() {
   // Start a transaction
   $transaction = db_transaction();
 
   try {
     // Define the subquery
     $query = db_select('jstats_accesslog', 'ja')
-      ->condition('timestamp', $now - $recent, '>')
       ->condition('nid', 0, '>')
       ->groupBy('nid');
     $query->addField('ja', 'nid');
     $query->addExpression('COUNT(aid)', 'recentcount');
 
-    // Truncate the old table
-    db_truncate('jstats_node')->execute();
+    $result = $query->execute();
 
-    // Insert the result of the subquery into our new table
-    db_insert('jstats_node')
-      ->from($query)
-      ->execute();
+    foreach($result as $record) {
+    		    
+      // Insert or update the result of the subquery into our stat table
+      db_merge('jstats_node')
+	->key(array(
+	  'nid' => $record->nid,
+ 	))
+	->fields(array(
+	  'nid' => $record->nid,
+	  'recentcount' => $record->recentcount,
+	))
+	->expression('recentcount', 'recentcount + :recentcnt',
+	  array(':recentcnt' => $record->recentcount))	     
+	->execute();
+    }     
   }
   catch (Exception $e) {
     $transaction->rollback();
@@ -128,7 +112,7 @@ function jstats_views_data() {
     ),
     'recentcount' => array(
       'title' => t('Recent count'),
-      'help' => t('Number of time this node has been viewed recently'),
+      'help' => t('Number of time this node has been viewed'),
       'field' => array(
         'handler' => 'views_handler_field_numeric',
         'click sortable' => TRUE,

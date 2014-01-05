@@ -20,6 +20,9 @@ function jstats_drush_command() {
  * Drush command callback.
  */
 function drush_jstats_aggregate() {
-  $now = time();
-  jstats_aggregate($now);
+  // calculate statistics
+  jstats_aggregate();
+
+  // Flush old log entries
+  db_delete('jstats_accesslog')->execute();
 }

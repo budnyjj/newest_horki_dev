@@ -27,7 +27,7 @@ function dev_preprocess_node(&$variables)
 {
 	/* Views count */
 	$query = db_select('jstats_node', 'jn')
-						->fields('jn', array('viewscount'))
+						->fields('jn', array('recentcount'))
 						->condition('jn.nid', $variables['nid'], '=');
 	$result = $query->execute()->fetchField();
 	$views_translated = "";
