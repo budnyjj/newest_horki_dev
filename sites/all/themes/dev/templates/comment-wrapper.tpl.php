@@ -37,8 +37,8 @@
  */
 ?>
 <div id="comments" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-   <?php if (isset($content['comments']) && $content['comments'] && $node->type != 'forum'): ?>
-   <?php print render($title_prefix); ?>
+  <?php if (isset($content['comments']) && $content['comments'] && $node->type != 'forum'): ?>
+    <?php print render($title_prefix); ?>
     <h2 class="title"><?php print t('Comments'); ?></h2>
     <?php print render($title_suffix); ?>
   <?php endif; ?>
