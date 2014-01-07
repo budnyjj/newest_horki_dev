@@ -34,13 +34,6 @@ function jstats_menu() {
     'access arguments' => array('access content'),
     'file' => 'jstats.inc'
   );
-  $items['admin/config/system/jstats'] = array(
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('jstats_settings_form'),
-    'access arguments' => array('administer site configuration'),
-    'file' => 'jstats.admin.inc',
-    'title' => 'JStats'
-  );
   return $items;
 }
 
