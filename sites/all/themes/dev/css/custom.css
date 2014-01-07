@@ -398,6 +398,12 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     display: none;
 }
 
+#edit-comment-body-und-0-value-counter {
+    text-align: center;
+    font-size: 0.85em;
+    color: #666;
+}
+
 .cke_toolbox_collapser {
     display: none;
 }
