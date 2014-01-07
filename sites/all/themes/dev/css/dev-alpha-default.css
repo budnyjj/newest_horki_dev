@@ -253,6 +253,10 @@ nav.navigation li a:link, nav.navigation li a:visited {
     padding: 10px 0 5px;
 }
 
+.view-testingrepresentative-node .views-row {
+    min-height: 55px;
+}
+
 .view-id-testingrepresentative_node h3 a {
     color: #8996a0;
     font-size: 15px;

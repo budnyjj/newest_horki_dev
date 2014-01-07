@@ -696,64 +696,47 @@ article .user-picture {
 
 /*Rubrics Views styles*/
 
-.page-taxonomy .title, .page-libraryhtml .title, .page-uzgorakhtml .title, .page-narodnyjahtml .title, .page-photohtml .title, .page-videohtml .title, .page-afishahtml .title {
+.page-taxonomy .title,
+.page-libraryhtml .title,
+.page-uzgorakhtml .title,
+.page-narodnyjahtml .title,
+.page-photohtml .title,
+.page-videohtml .title,
+.page-afishahtml .title {
     display: none;
 }
 
-.view-id-videoblog  .views-field-title,
-.view-id-photoblog .views-field-title,
-.view-taxonomy-term .views-field-title,
-.view-genres .views-field-title,
-.view-news-from-readers .views-field-title,
-.view-last-news .views-field-title {
+.content-grid .views-field-title {
     margin-bottom: 0.5em;
 }
 
-.view-id-videoblog  table,
-.view-id-photoblog table,
-.view-taxonomy-term table,
-.view-genres table,
-.view-news-from-readers table,
-.view-last-news table {
+.content-grid table {
     border: 0px!important;
 }
 
-.view-taxonomy-term td,
-.view-genres td,
-.view-news-from-readers td,
-.view-last-news td {
+.content-grid td {
     padding: 0 0 20px 0;
     width: 340px;
 } 
 
 .view-taxonomy-term .col-2,
 .view-genres .col-2,
-.view-news-from-readers .col-2,
 .view-last-news .col-2 {
     padding-left: 20px;
-}
-
-.view-taxonomy-term.views-field-title,  .view-genres .views-field-title {
-    clear: both;
-    margin-bottom: 10px;
 }
 
 .view-genres .views-field-field-what,
 .view-genres .views-field-field-where,
 .view-genres .views-field-field-when,
-.view-genres  .views-field-field-placement-by-taxonomy {
+.view-genres .views-field-field-placement-by-taxonomy {
     position: relative;
     float: right;
     width: 55%;
     margin-bottom: 5px;
 }
 
-.view-id-photoblog td,
-.view-id-daviedka td,
-.view-taxonomy-term td,
-.view-genres td,
-.view-id-videoblog td,
-.view-news-from-readers td {
+.content-grid td,
+.view-id-daviedka td {
     vertical-align:top;
 }
 
