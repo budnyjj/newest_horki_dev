@@ -41,9 +41,9 @@ function commentsblock_permission() {
 /**
  * Implements hook_views_api().
  *
- * The view is automatically included via commentsblock_views_default_views() 
+ * The view is automatically included via commentsblock_views_default_views()
  * if path is correct see docs:
- * 
+ *
  * @link http://drupalcontrib.org/api/drupal/contributions--views--docs--views.api.php/function/hook_views_default_views/7
  */
 function commentsblock_views_api() {
@@ -148,8 +148,8 @@ function commentsblock_block_view($delta) {
 /***************************************** HELPER ******************************/
 
 /**
- * This breaks just about every rule in the book, but our choices are to either 
- * rebuild the content or to have the node put the content into this static variable, 
+ * This breaks just about every rule in the book, but our choices are to either
+ * rebuild the content or to have the node put the content into this static variable,
  * then retrieve it from the block view.
  * For sake of performance, we choose the static variable
  */
@@ -165,6 +165,8 @@ function comment_block_static_comments($nid, $build = false, $node = false) {
     // Normal behavior will be that the node calls this function before.
     if (!isset($comments[$nid])) {
       $comments[$nid]['links'] = '';
+
+      //check if we have a node object, otherwise we can not load comments
       if ($node) {
         $comments[$nid]['comments'] = comment_node_page_additions($node);
       }
