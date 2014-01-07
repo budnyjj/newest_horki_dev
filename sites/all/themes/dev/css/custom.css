@@ -268,7 +268,7 @@ ul.uzgorak-banner > li {
 
 .quicktabs_main.quicktabs-style-sky {
     border: none;
-    padding: 0;3
+    padding: 0;
 }
 
 ul.quicktabs-tabs.quicktabs-style-sky li {
@@ -284,7 +284,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li a:visited,
 ul.quicktabs-tabs.quicktabs-style-sky li.active a,
 ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     height: auto;
-    min-height: auto;
+    min-height: 0;
     line-height: normal;
 }
 

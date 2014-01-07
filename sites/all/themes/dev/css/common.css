@@ -65,7 +65,6 @@ h5 {
 h6 {
     font-size: 14px;
     font-weight: bold;
-    color:
 }
 
 /*Link styles*/
@@ -104,7 +103,7 @@ article td {
 article thead th, th {
 	background-color: #231F20;
 	border-top: 1px solid #231F20;
-	border-bottom: 1px solid #6663;
+	border-bottom: 1px solid #666;
 	border-right: 1px solid #666;
 	border-left: 1px solid #666;
 	color: #fff;
