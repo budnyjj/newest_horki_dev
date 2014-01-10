@@ -201,24 +201,31 @@ h2.block-title {
 
 /* User Login Block Styles */
 #block-block-15 .content, #block-block-27 .content {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 /*Mobile Menu Block*/
 
-#block-menu-menu-mobile {
+#block-menu-menu-mobile .content {
     background-color: #231F20;
+    padding: 5px 10px;
+}
+
+#block-menu-menu-mobile .content ul.menu {
+    margin: 0;
+    padding: 0;
 }
 
 #block-menu-menu-mobile .content li {
-    padding: 10px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-menu-menu-mobile .content li a {
     color: #fff;
-    padding: 5px;
-    font-size: 24px;
+    display: block;
+    padding: 0.2em 5px 0.4em;
+    font-size: 20px;
 }
 
 #block-menu-menu-mobile .content li a:hover, #block-menu-menu-mobile .content li a:active {
