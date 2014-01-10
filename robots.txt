@@ -59,6 +59,11 @@ Disallow: /?q=user/register/
 Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
 
+# Disallow all URL variables except for page
+Disallow: /*?
+Allow: /*?page=
+Disallow: /*?page=*&*
+Disallow: /*?page=0*
 
 User-agent: Yandex
 
@@ -103,6 +108,13 @@ Disallow: /?q=user/password/
 Disallow: /?q=user/register/
 Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
+
+# Disallow all URL variables except for page
+Disallow: /*?
+Allow: /*?page=
+Disallow: /*?page=*&*
+Disallow: /*?page=0*
+
 Host: horki.info
 
 User-agent: Yandex

@@ -13,6 +13,10 @@
     display: none;
 }
 
+#zone-branding .region-preface-third {
+     height: 130px;
+} 
+
 #zone-menu {
      background-color: #fff;
      width: 962px;
@@ -21,11 +25,26 @@
 /*Header banner styles*/
 
 #block-block-18 {
+    width: 468px;
     height: 60px;
-    width: 460px;
-    margin: 0 auto 10px auto;
+    position: absolute;
+    top: 0;
+    left: 235px;
 }
 
+#block-block-18 p {
+    margin: 0;
+}
+
+/*Logo Block Styles*/
+
+#block-block-8 .desktop-logo {
+    display: block;
+}
+
+#block-block-8 .mobile-logo {
+    display: none;
+}
 
 /*Search Block Positioning*/
 
@@ -34,8 +53,9 @@
     border-radius: 3px;
     margin-bottom: 10px;
     width: 210px;
-    position: relative;
-    left: -30px;
+    position: absolute;
+    right: 0;
+    top: 20px;
 }
 
 #block-custom-search-blocks-1 .form-item, #block-custom-search-blocks-1 .form-actions {
@@ -55,11 +75,15 @@
 /*Social Links Block*/
 
 #block-block-3 {
+    width: 475px;
     height: 35px;
+    position: absolute;
+    top: 70px;
+    left: 235px;
 }
 
 #block-block-3 .content img {
-    margin: 0px 5px;
+    margin-right: 10px;
     opacity: 0.9;
 }
 
@@ -68,45 +92,39 @@
 }
 
 /* User Login Block Styles */
-#block-block-15 .content, #block-block-27 .content {
-    text-align: right;
+
+#block-block-15, #block-block-27 {
+    width: 210px;
 }
 
 /*Add News Block*/
 
 #block-block-14 {
-    width: 190px;
+    width: 210px;
     height: 35px;
-    position: relative;
-    left: -30px;
+    position: absolute;
+    right: 0;
+    top: 70px;
 }
 
 #block-block-14 .content a {
+    display: block;
     font-size: 14px;
     color: #fff;
     padding: 9px 10px;
     border-radius: 3px;
-    position: absolute;
     background-color: #808080;
-    width: 100%;
 }
 
 #block-block-14:hover .content a:hover {
     background-color: #505050;
 }
 
-
-/*Information block's Float Settings*/
-
-#region-preface-third {
-    position: relative;
-    left: 35px;
-}
-
-
 /* Current Date Block*/
 #block-block-16 {
-    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 235px;
 }
 
 #block-block-16 .content {
@@ -117,6 +135,12 @@
 }
 
 /*Currency Block Settings*/
+
+#block-bel-currency-bel-currency {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
 .bel_currency_delimiter, .bel_currency_name, .bel_currency_row {
     display: inline-block;
@@ -134,14 +158,12 @@
     font-weight: bold;
 }
 
-#block-block-2, #block-bel-currency-bel-currency {
-    display: inline-block;	
-}
-
 /*Weather Block Settings*/
 
 #block-block-2 {
-    margin: 0 27px;
+    position: absolute;
+    left: 375px;
+    bottom: 0;
 }
 
 #block-block-2 .content {

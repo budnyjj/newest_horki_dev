@@ -5,7 +5,7 @@
     display: none;
 }
 
-#block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31, #block-block-32 {
+#block-block-16, #block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31, #block-block-32 {
     display: none;
 }
 
@@ -32,6 +32,9 @@ body {
     padding-bottom: 10px;
 }
 
+#zone-branding .region-preface-third {
+     height: 70px;
+} 
 
 #region-menu {
     margin-left: 0px !important;
@@ -195,13 +198,30 @@ h2.block-title {
 /*Logo Block Styles*/
 
 #block-block-8 {
-    width: 210px;
-    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#block-block-8 .desktop-logo {
+    display: none;
+}
+
+#block-block-8 .mobile-logo {
+    display: block;
 }
 
 /* User Login Block Styles */
-#block-block-15 .content, #block-block-27 .content {
-    margin-bottom: 5px;
+
+#block-block-15, #block-block-27 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#block-block-15 .content,
+#block-block-27 .content {
+    text-align: right;
 }
 
 /*Mobile Menu Block*/
