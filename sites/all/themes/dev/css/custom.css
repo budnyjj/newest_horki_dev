@@ -173,6 +173,34 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
     background-color: #505050;
 }
 
+/* Pager styles */
+
+.view .pager {
+    padding: 0.7em 0;
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.view .pager li {
+    margin: 0 0.5em;
+}
+
+.view .pager li a {
+    color: #231F20;
+    text-decoration: underline;
+}
+
+.view .pager li.pager-current {
+    color: #D2232A;
+    text-decoration: underline;
+}
+
+.view .pager li.pager-first a,
+.view .pager li.pager-last a {
+    color: #666;
+}
+
 
 /*Block Titles*/	
 
