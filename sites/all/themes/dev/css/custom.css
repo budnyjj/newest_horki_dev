@@ -106,7 +106,7 @@ sup {
 /*List styles*/
 
 ul {
-    list-style: disc;
+    list-style: disc inside none;
 }
 
 .content ul, .content ol {
