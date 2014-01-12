@@ -4,7 +4,7 @@
     display: block;
 }
 
-#block-block-16, #block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31, #block-block-32 {
+#block-block-16, #block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31, #block-block-32, #akavita {
     display: block;
 }
 
@@ -343,19 +343,18 @@ nav.navigation li a:link, nav.navigation li a:visited {
     margin-bottom: 20px;
 }
 
-#block-poll-recent ul {
+#block-poll-recent .content ul {
     list-style: none;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    margin-right: 10px;
+    margin-top: 10px;
+    padding: 0;
 }
 
-#block-poll-recent ul li {
+#block-poll-recent .content li {
     margin: 2px 0;
 }
 
-#block-poll-recent ul li a {
+#block-poll-recent .content li a {
     font-size: 14px;
     font-weight: bold;
     text-decoration: underline;
@@ -471,3 +470,10 @@ nav.navigation li a:link, nav.navigation li a:visited {
     margin: 0 auto;
 }
 
+
+/* Footer styles */
+
+#akavita {
+    float: right;
+    padding: 0 0 10px 10px;
+}
