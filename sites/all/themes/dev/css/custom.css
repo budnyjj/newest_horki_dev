@@ -715,7 +715,7 @@ article.comment .permalink {
     margin-bottom: 0px;
     position: absolute;
     bottom: 0px;
-    padding: 2px 0px;
+    padding: 0.1em 0 0.3em 0;
     width: 100%;
     color: #fff;
     background-color: #000;
@@ -742,12 +742,24 @@ article.comment .permalink {
     height: 100% !important;
 }
 
-article .field-slideshow {
+.field-slideshow {
     border: 1px solid #ccc;
 }
 
-article .field-slideshow:hover {
+.field-slideshow:hover {
     border: 1px solid #D2232A;
+}
+
+.field-slideshow-caption {
+    position: absolute;
+    bottom: 0px;
+    padding: 0.1em 0 0.3em 0;
+    width: 100%;
+    color: #fff;
+    opacity: 0.8;
+    background-color: #000;
+    font-weight: bold;
+    text-align: center;
 }
 
 article .field-name-field-text {
