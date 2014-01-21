@@ -75,7 +75,6 @@
 /*Social Links Block*/
 
 #block-block-3 {
-    width: 475px;
     height: 35px;
     position: absolute;
     top: 70px;
@@ -83,7 +82,7 @@
 }
 
 #block-block-3 .content img {
-    margin-right: 10px;
+    margin-right: 0.83em;
     opacity: 0.9;
 }
 
