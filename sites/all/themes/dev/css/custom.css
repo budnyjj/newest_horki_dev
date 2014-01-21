@@ -5,7 +5,7 @@
     display: none;
 }
 
-#block-block-16, #block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31, #block-block-32 {
+#block-block-16, #block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31, #block-block-32, #akavita {
     display: none;
 }
 
@@ -552,6 +552,57 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     width: 77%;
     float: right;
 }
+
+.comment-depth-11 {
+    width: 75%;
+    float: right;
+}
+
+.comment-depth-12 {
+    width: 73%;
+    float: right;
+}
+
+.comment-depth-13 {
+    width: 71%;
+    float: right;
+}
+
+.comment-depth-14 {
+    width: 69%;
+    float: right;
+}
+
+.comment-depth-15 {
+    width: 67%;
+    float: right;
+}
+
+.comment-depth-16 {
+    width: 65%;
+    float: right;
+}
+
+.comment-depth-17 {
+    width: 63%;
+    float: right;
+}
+
+.comment-depth-18 {
+    width: 61%;
+    float: right;
+}
+
+.comment-depth-19 {
+    width: 59%;
+    float: right;
+}
+
+.comment-depth-20 {
+    width: 57%;
+    float: right;
+}
+
 
 
 /* Comments message for anonymous block styles */
