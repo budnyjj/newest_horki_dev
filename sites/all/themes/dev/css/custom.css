@@ -742,6 +742,14 @@ article.comment .permalink {
     height: 100% !important;
 }
 
+article .field-slideshow {
+    border: 1px solid #ccc;
+}
+
+article .field-slideshow:hover {
+    border: 1px solid #D2232A;
+}
+
 article .field-name-field-text {
     margin: 0;
 }
