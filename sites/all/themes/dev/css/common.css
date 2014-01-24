@@ -22,10 +22,9 @@
 /* Text styles */
 
 h1 {
-    font-size: 36px;
     font-family: Verdana, Geneva, sans-serif;
     color: #671A1D;
-    margin-bottom: 20px;
+    margin-bottom: 0.5em;
 }
 
 h2 {

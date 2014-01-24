@@ -33,7 +33,7 @@ body {
 }
 
 #region-header-first {
-     height: 60px;
+     height: 80px;
 } 
 
 #region-menu {
@@ -102,6 +102,12 @@ sup {
     vertical-align: super;
     font-size: smaller;
 }
+
+/* Headers size */
+
+h1 {
+    font-size: 20px;
+};
 
 /*List styles*/
 
@@ -243,8 +249,8 @@ h2.block-title {
 
 #block-block-15, #block-block-27 {
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 #block-block-15 .content,
@@ -273,7 +279,8 @@ h2.block-title {
     color: #fff;
     display: block;
     padding: 0.2em 5px 0.4em;
-    font-size: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 #block-menu-menu-mobile .content li a:hover, #block-menu-menu-mobile .content li a:active {

@@ -22,6 +22,12 @@
      width: 962px;
 } 
 
+/* Headers size */
+
+h1 {
+    font-size: 36px;
+}
+
 /*Header banner styles*/
 
 #block-block-18 {
@@ -95,6 +101,9 @@
 
 #block-block-15, #block-block-27 {
     width: 210px;
+    top: 0;
+    left: auto;
+    right: 0;
 }
 
 /*Add News Block*/
