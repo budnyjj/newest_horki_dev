@@ -863,9 +863,6 @@ article .user-picture {
     padding-left: 0.5em;    
 }
 
-
-
-
 /*Common Views styles*/
 
 .block-main .view-header {
@@ -876,7 +873,6 @@ article .user-picture {
     padding: 0.7em 0 1em;
     border-top: 1px dashed #ccc;
 } 
-
 
 /*Rubrics Views styles*/
 
@@ -955,8 +951,6 @@ article .user-picture {
 .view-id-photoblog td {
     padding: 0 0 10px 0;
 }
-
-
 
 
 .view-id-videoblog td { 
@@ -1097,6 +1091,13 @@ article .user-picture {
     font-weight: bold;
 }
 
+
+/*Companies View Styles*/
+
+.view-catalog-company .view-header {
+    padding-bottom: 10px;
+    text-align: right;
+}
 
 /*Add news-from-readers Page styles*/
 
