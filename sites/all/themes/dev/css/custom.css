@@ -940,6 +940,7 @@ article .user-picture {
 }
 
 .library-preview {
+    margin-bottom: 
     float: left;
     margin-right: 30px;
 }
@@ -948,6 +949,21 @@ article .user-picture {
     margin-right: 10px;
 }
 
+
+/*Companies page styles */
+
+.companies .views-row {
+    min-height: 200px;
+}
+
+.company-preview {
+    float: left;
+    margin-right: 20px;
+}
+
+.company-description {
+    margin-top: -5px;
+}
 
 /*Davedka Page Styles*/	
 

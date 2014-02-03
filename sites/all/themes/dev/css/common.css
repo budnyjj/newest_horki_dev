@@ -91,32 +91,39 @@ h6 {
 
 /* Table styles */
 
+th {
+    background-color: #231F20;
+    border-top: 1px solid #231F20;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+    border-left: 1px solid #666;
+    color: #fff;
+    font-weight: bold;
+}
+
 article table {
-	border: 1px solid #ccc;
+    border: 1px solid #ccc;
+}
+
+article th {
+    padding: 0.2em;
 }
 
 article td {
-	border: 1px dashed #ccc;
+    padding: 0.2em;
+    border: 1px dashed #ccc;
 }
 
-article thead th, th {
-	background-color: #231F20;
-	border-top: 1px solid #231F20;
-	border-bottom: 1px solid #666;
-	border-right: 1px solid #666;
-	border-left: 1px solid #666;
-	color: #fff;
-	font-weight: bold;
-}
-
-tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
-		background: #FFFFFF;
-}
-
-/* Views Styles */
+/* views Styles */
 
 .views-row {
     margin: 0.7em 0;
+}
+
+.zebra .view-header {
+		padding-bottom: 10px;
+		margin: 0;
+		text-align: right;
 }
 
 .zebra .views-row {
@@ -153,4 +160,8 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
     vertical-align: super;
     padding: 1px 3px 2px;
     margin-left: 0.3em;
+}
+
+.views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: 1.2em;
 }
