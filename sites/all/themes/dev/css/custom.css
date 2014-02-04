@@ -107,16 +107,17 @@ sup {
 
 h1 {
     font-size: 20px;
-};
+}
 
 /*List styles*/
 
 ul {
-    list-style: disc inside none;
+    list-style-type: disc;
+    list-style-position: inside;
 }
 
-.content ul, .content ol {
-    padding-left: 1.2em;
+ol {
+    list-style-position: inside;
 }
 
 ul li.leaf {
