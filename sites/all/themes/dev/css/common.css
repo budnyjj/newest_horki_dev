@@ -32,7 +32,7 @@ h2 {
     font-weight: normal;
     color: #808080;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 0.3em;
 }
 
 
@@ -68,6 +68,13 @@ h6 {
 
 /*Link styles*/
 
+.no-underline-text, .no-underline-text a, a.no-underline-text,
+.no-underline-text:hover,
+.no-underline-text a:hover,
+a.no-underline-text:hover {
+    text-decoration: none;
+}
+
 .black-text, .black-text a, a.black-text {
 	color: #231F20;
 }
@@ -99,20 +106,20 @@ th {
     border-left: 1px solid #666;
     color: #fff;
     font-weight: bold;
+    padding: 0.2em;
 }
 
-article table {
+table {
     border: 1px solid #ccc;
 }
 
-article th {
-    padding: 0.2em;
-}
-
-article td {
+td {
     padding: 0.2em;
     border: 1px dashed #ccc;
+    background-color: #fff;
 }
+
+
 
 /* views Styles */
 
@@ -121,16 +128,21 @@ article td {
 }
 
 .zebra .views-row {
-		padding: 10px;
-		margin: 0;
+    padding: 0.5em 10px 10px 10px;
+    margin: 0;
+    overflow: auto;
 }
 
 .zebra .views-row-odd {
-		background-color: #edeeef;
+    background-color: #edeeef;
 }
 
 .zebra .views-row-even {
-		background-color: #fbfbfb;
+    background-color: #fbfbfb;
+}
+
+.zebra .rating-1 {
+    background-color: #fff0d3 !important;
 }
 
 /* Misc styles */
