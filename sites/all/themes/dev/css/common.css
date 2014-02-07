@@ -66,6 +66,10 @@ h6 {
     font-weight: bold;
 }
 
+label {
+    font-weight: bold;
+}
+
 /*Link styles*/
 
 .no-underline-text, .no-underline-text a, a.no-underline-text,
@@ -118,8 +122,6 @@ td {
     border: 1px dashed #ccc;
     background-color: #fff;
 }
-
-
 
 /* views Styles */
 

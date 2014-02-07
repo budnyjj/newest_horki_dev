@@ -1194,11 +1194,7 @@ article .user-picture {
 
 /* Add narodnaja navina Page Styles */
 
-.page-node-add-news-from-readers .form-item-title > label,
-.page-node-add-news-from-readers .field-name-field-pics label,
 .page-node-add-news-from-readers .field-name-field-photos .fieldset-legend,
-.page-node-add-news-from-readers .field-name-field-text label,
-.page-node-add-news-from-readers .field-name-field-author label
 {
     font-weight: bold;
 }
@@ -1233,13 +1229,34 @@ article .user-picture {
     color: #fff;
 }
 
-.page-node-add-news-from-readers .field-name-field-email table {
-
-}
-
 .page-node-add-news-from-readers .filter-wrapper {
     display: none;
 }
+
+/* Registration page styles */
+
+#user-register-form .form-item-pass {
+    background-color: #edeeef;
+    padding: 10px;
+    border-radius: 3px;
+    width: 480px;
+}
+
+#user-register-form #edit-picture {
+    background-color: #edeeef;
+    padding: 10px;
+    border-radius: 3px;
+    width: 480px;
+}
+
+#user-register-form #edit-picture legend {
+    font-weight: bold;
+}
+
+#user-register-form #edit-picture .form-item-files-picture-upload {
+    margin: 0;
+}
+
 
 /*Library Page Styles*/	
 
@@ -1285,8 +1302,6 @@ article .user-picture {
 article.node-webform footer.submitted {
     display: none;
 }
-
-
 
 /*Mollom styles*/
 
