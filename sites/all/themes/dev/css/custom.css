@@ -1042,22 +1042,24 @@ article .user-picture {
 
 /* Company Page Styles */
 
-#node_company_full_group_info {
-    width: 680px;
-    padding: 0.1em 10px 0.3em;
-    background-color: #edeeef;
-    border-radius: 3px;
+#block-block-35 {
+    border-bottom: 1px dashed #ccc;
 }
 
-.node-company .field-name-field-company-full-name,
-.node-company .field-name-field-tax-number,
-.node-company .field-name-field-address,
-.node-company .field-name-field-operation-time,
-.node-company .field-name-field-company-phone,
-.node-company .field-name-field-email {
-    font-size: 0.85em;
+#block-block-35 .content {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+#node_company_full_group_info {
+    width: 680px;
+}
+
+#node_company_full_group_info > div {
     margin: 0.5em 0;
 }
+
+
 
 .node-company .field-name-field-company-full-name .field-label,
 .node-company .field-name-field-company-full-name .field-items {
@@ -1089,6 +1091,12 @@ article .user-picture {
     vertical-align: top;
 }
 
+.node-company .field-name-field-company-web-site .field-label,
+.node-company .field-name-field-company-web-site .field-items {
+    display: inline-block;
+    vertical-align: top;
+}
+
 #node_company_full_group_info p {
     margin: 0;
 }
@@ -1097,9 +1105,6 @@ article .user-picture {
     position: absolute;
     right: 0;
     width: 110px;
-
-    background-color: #fff0d3;
-    padding: 10px;
     border-radius: 3px;
 }
 
