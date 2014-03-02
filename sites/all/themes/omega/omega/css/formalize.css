@@ -100,20 +100,6 @@ textarea:-moz-placeholder {
   color: #888;
 }
 
-button:focus,
-button:active,
-input:focus,
-input:active,
-select:focus,
-select:active,
-textarea:focus,
-textarea:active {
-  -moz-box-shadow: #06f 0 0 7px;
-  -webkit-box-shadow: #06f 0 0 7px;
-  box-shadow: #06f 0 0 7px;
-  z-index: 1; /* For Opera */
-}
-
 input[type="file"]:focus,
 input[type="file"]:active,
 input[type="radio"]:focus,

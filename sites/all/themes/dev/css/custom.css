@@ -148,7 +148,7 @@ ul.primary li a {
 }
 
 ul.primary li.active a, ul.primary li a:hover {
-    background-color: #666;
+    background-color: #505050;
     border: none;
 }
 
@@ -163,7 +163,15 @@ div.group-footer ul, .node-teaser ul.inline {
 
 /*Buttons styles*/
 
-button, input[type="reset"], input[type="submit"], input[type="button"] {
+button:hover,
+input:hover {
+    background-color: #505050;
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
     text-shadow: none;
     font-size: 13px;
     color: #fff;
@@ -172,12 +180,15 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
     border-radius: 3px;
 }
 
-.form-actions input {
-    margin-right: 0px;
+button:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #505050;
 }
 
-.form-actions input:hover {
-    background-color: #505050;
+.form-actions input {
+    margin-right: 0px;
 }
 
 /* Pager styles */
@@ -1119,6 +1130,11 @@ article .user-picture {
     font-size: 11px;
 }
 
+/* Votes page styles */
+
+#edit-vote {
+    margin: 1em 0;
+}
 
 
 /*Davedka Page Styles*/	
@@ -1340,3 +1356,38 @@ article.node-webform footer.submitted {
     font-size: 0.85em;
 }
 
+/* Status messages */
+
+.absolute-messages-status {
+    background-color: #fbfbfb;
+    border-bottom: 1px dashed #ccc;
+    color: #231F20;
+}
+
+.absolute-messages-status a:link,
+.absolute-messages-status a:visited {
+    color: #D2232A;
+}
+
+.absolute-messages-status .absolute-messages-dismiss {
+    background-color: #edeeef;
+    border: 2px solid #808080;
+    color: #808080;
+}
+
+.absolute-messages-error {
+    background-color: #fbfbfb;
+    border-bottom: 1px dashed #ccc;
+    color: #231F20;
+}
+
+.absolute-messages-error a:link,
+.absolute-messages-error a:visited {
+    color: #D2232A;
+}
+
+.absolute-messages-error .absolute-messages-dismiss {
+    background-color: #edeeef;
+    border: 2px solid #808080;
+    color: #808080;
+}
