@@ -387,9 +387,8 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 /*Last Comments Block Style*/
 
-#block-views-comments-block-block-1 .views-field-name {
-    position: relative;
-    top: -4px;
+#block-views-comments-block-block-1 .views-field-picture {
+    vertical-align: middle;
 }
 
 #block-views-comments-block-block-1 .views-field-comment-body {
