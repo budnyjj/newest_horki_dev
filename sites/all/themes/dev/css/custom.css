@@ -1245,12 +1245,13 @@ article .user-picture {
     display: none;
 }
 
-.page-node-add-news-from-readers .field-name-field-email label {
-    color: #fff;
-}
-
 .page-node-add-news-from-readers .filter-wrapper {
     display: none;
+}
+
+.page-node-add-news-from-readers .mollom-image-captcha-instructions {
+	font-size: 0.85em;
+	color: #666;
 }
 
 /* Registration page styles */
