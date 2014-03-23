@@ -65,6 +65,10 @@ Allow: /*?page=
 Disallow: /*?page=*&*
 Disallow: /*?page=0*
 
+# Disallow user pages
+Disallow: /user/
+
+
 User-agent: Yandex
 
 Disallow: /news/
@@ -114,6 +118,9 @@ Disallow: /*?
 Allow: /*?page=
 Disallow: /*?page=*&*
 Disallow: /*?page=0*
+
+# Disallow user pages
+Disallow: /user/
 
 Host: horki.info
 
