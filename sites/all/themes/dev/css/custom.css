@@ -904,10 +904,6 @@ article .user-picture {
     display: none;
 }
 
-.content-grid .views-field-title {
-    margin-bottom: 0.5em;
-}
-
 .content-grid table {
     border: 0px!important;
 }
@@ -1214,7 +1210,7 @@ article .user-picture {
 
 /* Add narodnaja navina Page Styles */
 
-.page-node-add-news-from-readers .field-name-field-photos .fieldset-legend,
+.page-node-add-news-from-readers .field-name-field-photos .fieldset-legend
 {
     font-weight: bold;
 }
@@ -1240,7 +1236,6 @@ article .user-picture {
     padding: 0.2em 0;
 }
 
-
 .page-node-add-news-from-readers .tabledrag-toggle-weight-wrapper {
     display: none;
 }
@@ -1249,10 +1244,37 @@ article .user-picture {
     display: none;
 }
 
-.page-node-add-news-from-readers .mollom-image-captcha-instructions {
+.mollom-image-captcha-instructions {
 	font-size: 0.85em;
 	color: #666;
 }
+
+/* Add ads page style */
+
+.page-node-add-ads .field-name-field-ads-photo {
+    background-color: #edeeef;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 1em 0;
+    width: 700px;
+}
+
+#edit-field-ads-description-und-0-value-counter {
+    text-align: center;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.page-node-add-ads .tabledrag-toggle-weight-wrapper {
+    display: none;
+}
+
+.page-node-add-ads .field-multiple-table label {
+    margin-left: 0.5em;
+    color: #fff;
+}
+
+
 
 /* Registration page styles */
 
