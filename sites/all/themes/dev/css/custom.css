@@ -904,6 +904,10 @@ article .user-picture {
     display: none;
 }
 
+.content-grid .views-field-title {
+    padding-bottom: 0.2em;
+}
+
 .content-grid table {
     border: 0px!important;
 }
