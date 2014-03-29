@@ -5,6 +5,7 @@
 <title><?php print $head_title; ?></title>  
 <link rel="icon" href="http://horki.info/favicon.ico" type="image/x-icon" />
 <?php print $styles; ?>
+
 <meta name="verify-v1" content="A29kVzxMcO/zSJlO3EeJzU6vnTgF5KY1HcgHqId0+qA=" />
 <meta name="google-site-verification" content="I50q2z2FdQZMKZ_SPHbi7dyjnjn7FD4wLkfEWkks0ZI" />
 
@@ -26,7 +27,7 @@
   </div>
   <?php print $page_top; ?>
   <?php print $page; ?>
-  
+ 
   <?php print $scripts; ?>
   <?php print $page_bottom; ?>
 
