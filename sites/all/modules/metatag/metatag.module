@@ -804,11 +804,6 @@ function metatag_entity_view($entity, $entity_type, $view_mode, $langcode, $forc
       }
     }
 
-    // Failover. Not sure why this would happen, but just in case.
-    if (empty($langcode)) {
-      $langcode = $entity_language;
-    }
-
     // All applicable pieces for this current page.
     $cid_parts = array(
       'entity_type' => $entity_type,
