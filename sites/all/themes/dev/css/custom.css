@@ -1053,12 +1053,8 @@ article .user-picture {
 /* Company Page Styles */
 
 #block-block-34 {
+    padding: 0.7em 0;
     border-bottom: 1px dashed #ccc;
-}
-
-#block-block-34 .content {
-    text-align: right;
-    padding-bottom: 10px;
 }
 
 #node_company_full_group_info {
@@ -1206,10 +1202,14 @@ article .user-picture {
     margin: 0px;
 }
 
-
 #quicktabs-davedka .views-field-field-daviedka-punkt-menu .field-content {
     text-align: center;
     margin: 5px 0;
+}
+
+#block-block-36 {
+    padding: 0.7em 0;
+    border-top: 1px dashed #ccc;
 }
 
 /* Add narodnaja navina Page Styles */
