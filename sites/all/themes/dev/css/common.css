@@ -19,6 +19,10 @@
     float: left;
 }
 
+.no-margin {
+	margin: 0;
+}
+
 /* Text styles */
 
 h1 {
@@ -32,7 +36,7 @@ h2 {
     font-weight: normal;
     color: #808080;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 0.3em;
 }
 
 
@@ -66,7 +70,18 @@ h6 {
     font-weight: bold;
 }
 
+label {
+    font-weight: bold;
+}
+
 /*Link styles*/
+
+.no-underline-text, .no-underline-text a, a.no-underline-text,
+.no-underline-text:hover,
+.no-underline-text a:hover,
+a.no-underline-text:hover {
+    text-decoration: none;
+}
 
 .black-text, .black-text a, a.black-text {
 	color: #231F20;
@@ -91,7 +106,12 @@ h6 {
 
 /* Table styles */
 
-th {
+article table {
+    border: 1px solid #ccc;
+    margin-bottom: 0.7em;
+}
+
+article th {
     background-color: #231F20;
     border-top: 1px solid #231F20;
     border-bottom: 1px solid #666;
@@ -99,19 +119,20 @@ th {
     border-left: 1px solid #666;
     color: #fff;
     font-weight: bold;
-}
-
-article table {
-    border: 1px solid #ccc;
-}
-
-article th {
     padding: 0.2em;
 }
 
 article td {
     padding: 0.2em;
     border: 1px dashed #ccc;
+}
+
+th label {
+    color: #fff;
+}
+
+table {
+    border: 1px solid #ccc;
 }
 
 /* views Styles */
@@ -121,16 +142,17 @@ article td {
 }
 
 .zebra .views-row {
-		padding: 10px;
-		margin: 0;
+    padding: 0.5em 10px 10px 10px;
+    margin: 0;
+    overflow: auto;
 }
 
 .zebra .views-row-odd {
-		background-color: #edeeef;
+    background-color: #edeeef;
 }
 
 .zebra .views-row-even {
-		background-color: #fbfbfb;
+    background-color: #fbfbfb;
 }
 
 /* Misc styles */

@@ -66,7 +66,12 @@ function dev_preprocess_node(&$variables)
 
 	/* Comments counter */
 	$comments_translated = "";
-	$comments_count = $variables['comment_count'];
+	$comments_count = 0;
+	
+	if (isset($variables['comment_count'])) 
+	{
+		$comments_count = $variables['comment_count'];
+	}
 
 	if ($comments_count > 0)
 	{

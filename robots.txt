@@ -16,6 +16,8 @@
 # For syntax checking, see:
 # http://www.sxw.org.uk/computing/robots/check.html
 
+Host: horki.info
+
 User-agent: *
 Crawl-delay: 10
 # Directories
@@ -64,6 +66,11 @@ Disallow: /*?
 Allow: /*?page=
 Disallow: /*?page=*&*
 Disallow: /*?page=0*
+
+# Disallow user pages
+Disallow: /user/
+
+Sitemap: http://horki.info/sitemap.xml
 
 User-agent: Yandex
 
@@ -115,7 +122,8 @@ Allow: /*?page=
 Disallow: /*?page=*&*
 Disallow: /*?page=0*
 
-Host: horki.info
+# Disallow user pages
+Disallow: /user/
 
 User-agent: Yandex
 Allow: /

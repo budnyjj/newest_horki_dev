@@ -148,7 +148,7 @@ ul.primary li a {
 }
 
 ul.primary li.active a, ul.primary li a:hover {
-    background-color: #666;
+    background-color: #505050;
     border: none;
 }
 
@@ -161,9 +161,21 @@ div.group-footer ul, .node-teaser ul.inline {
     float: right;
 }
 
+form .field-multiple-table th.field-label {
+    padding-left: 0.2em;
+}
+
 /*Buttons styles*/
 
-button, input[type="reset"], input[type="submit"], input[type="button"] {
+button:hover,
+input:hover {
+    background-color: #505050;
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
     text-shadow: none;
     font-size: 13px;
     color: #fff;
@@ -172,12 +184,15 @@ button, input[type="reset"], input[type="submit"], input[type="button"] {
     border-radius: 3px;
 }
 
-.form-actions input {
-    margin-right: 0px;
+button:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #505050;
 }
 
-.form-actions input:hover {
-    background-color: #505050;
+.form-actions input {
+    margin-right: 0px;
 }
 
 /* Pager styles */
@@ -216,7 +231,6 @@ h2.block-title {
     text-transform: uppercase;
     text-align: right;
     font-size: 15px;
-    padding-bottom: 0.2em;
     padding-right: 2px;
     font-weight: bold;
 }
@@ -377,9 +391,8 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 /*Last Comments Block Style*/
 
-#block-views-comments-block-block-1 .views-field-name {
-    position: relative;
-    top: -4px;
+#block-views-comments-block-block-1 .views-field-picture {
+    vertical-align: middle;
 }
 
 #block-views-comments-block-block-1 .views-field-comment-body {
@@ -426,19 +439,23 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 /*Similar terms block styles*/
 
-#block-views-similarterms-block {
+#block-views-similarterms-block,
+#block-views-similar-ads-block {
     padding: 0.7em 0;
     border-top: 1px dashed #ccc;
 }
 
-#block-views-similarterms-block .block-title {
+#block-views-similarterms-block .block-title,
+#block-views-similar-ads-block .block-title {
     text-align: left;
 }
 
-.view-similarterms .views-row {
+.view-similarterms .views-row,
+.view-similar-ads .views-row {
     margin: 0.2em 0;
 }
-.view-similarterms .views-field-title a {
+.view-similarterms .views-field-title a,
+.view-similar-ads .views-field-title a {
     color: #671A1D;
 }
 
@@ -875,6 +892,14 @@ article .user-picture {
     border-top: 1px dashed #ccc;
 } 
 
+.view table {
+    border: 0px;
+}
+
+.view td {
+    border: 0px;
+}
+
 /*Rubrics Views styles*/
 
 .page-taxonomy .title,
@@ -888,7 +913,7 @@ article .user-picture {
 }
 
 .content-grid .views-field-title {
-    margin-bottom: 0.5em;
+    padding-bottom: 0.2em;
 }
 
 .content-grid table {
@@ -984,7 +1009,6 @@ article .user-picture {
 }
 
 .library-preview {
-    margin-bottom: 
     float: left;
     margin-right: 30px;
 }
@@ -996,8 +1020,11 @@ article .user-picture {
 
 /*Companies page styles */
 
-.companies .views-row {
-    min-height: 200px;
+.companies-page .views-field-value {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    margin-top: 5px;
 }
 
 .company-preview {
@@ -1006,8 +1033,112 @@ article .user-picture {
 }
 
 .company-description {
-    margin-top: -5px;
+    position: relative;
+    top: -0.3em;
 }
+
+.companies-page .views-field-title {
+    max-width: 580px;
+}
+
+.rate-user .rate-fivestar-btn-filled {
+    background: url('/sites/default/files/default_images/fivestar.png') no-repeat 0 0;
+    margin: 0 1px;
+}
+
+.rate-fivestar-btn-filled {
+    background: url('/sites/default/files/default_images/fivestar.png') no-repeat 0 -16px;
+    margin: 0 1px;
+}
+
+.rate-fivestar-btn-empty {
+    background: url('/sites/default/files/default_images/fivestar.png') no-repeat 0 -32px;
+    margin: 0 1px;
+}
+
+
+
+/* Company Page Styles */
+
+#block-block-34 {
+    padding: 0.7em 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+#node_company_full_group_info {
+    width: 680px;
+}
+
+#node_company_full_group_info > div {
+    margin: 0.5em 0;
+}
+
+
+
+.node-company .field-name-field-company-full-name .field-label,
+.node-company .field-name-field-company-full-name .field-items {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.node-company .field-name-field-address .field-label,
+.node-company .field-name-field-address .field-items {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.node-company .field-name-field-operation-time .field-label,
+.node-company .field-name-field-operation-time .field-items {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.node-company .field-name-field-company-phone .field-label,
+.node-company .field-name-field-company-phone .field-items {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.node-company .field-name-field-email .field-label,
+.node-company .field-name-field-email .field-items {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.node-company .field-name-field-company-web-site .field-label,
+.node-company .field-name-field-company-web-site .field-items {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#node_company_full_group_info p {
+    margin: 0;
+}
+
+.node-company .rate-widget-fivestar {
+    position: absolute;
+    right: 0;
+    width: 110px;
+    border-radius: 3px;
+}
+
+.node-company .item-list {
+    width: 90px;
+    margin: 0 auto;
+}
+
+.node-company .rate-widget-fivestar .rate-info {
+    text-align: center;
+    color: #666;
+    font-size: 11px;
+}
+
+/* Votes page styles */
+
+#edit-vote {
+    margin: 1em 0;
+}
+
 
 /*Davedka Page Styles*/	
 
@@ -1079,10 +1210,141 @@ article .user-picture {
     margin: 0px;
 }
 
-
 #quicktabs-davedka .views-field-field-daviedka-punkt-menu .field-content {
     text-align: center;
     margin: 5px 0;
+}
+
+#block-block-36 {
+    padding: 0.7em 0;
+    border-top: 1px dashed #ccc;
+}
+
+/* Add narodnaja navina Page Styles */
+
+.page-node-add-news-from-readers .field-name-field-photos .fieldset-legend
+{
+    font-weight: bold;
+}
+
+.page-node-add-news-from-readers .field-name-field-pics,
+.page-node-add-news-from-readers .field-name-field-photos {
+    background-color: #edeeef;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 1em 0;
+    width: 700px;
+}
+
+.page-node-add-news-from-readers .field-name-field-pics .form-item {
+    margin: 0;
+}
+
+.page-node-add-news-from-readers .field-name-field-photos table {
+    width: 100%;
+}
+
+.page-node-add-news-from-readers .fieldset-description {
+    padding: 0.2em 0;
+}
+
+.page-node-add-news-from-readers .tabledrag-toggle-weight-wrapper {
+    display: none;
+}
+
+.page-node-add-news-from-readers .filter-wrapper {
+    display: none;
+}
+
+.mollom-image-captcha-instructions {
+	font-size: 0.85em;
+	color: #666;
+}
+
+/* Add ads page style */
+
+.page-node-add-ads .field-name-field-ads-photo {
+    background-color: #edeeef;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 1em 0;
+    width: 700px;
+}
+
+#edit-field-ads-description-und-0-value-counter {
+    text-align: center;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.page-node-add-ads .tabledrag-toggle-weight-wrapper {
+    display: none;
+}
+
+.page-node-add-ads .field-multiple-table label {
+    margin-left: 0.5em;
+    color: #fff;
+}
+
+/* List of ads page style */
+
+.view-id-blocks .view-header {
+	padding-bottom: 10px;
+	text-align: right;
+}
+
+.view-id-blocks #edit-field-ads-placement-tid,
+.view-id-blocks #edit-field-ads-type-tid,
+.view-id-blocks #edit-field-ads-topic-tid {
+	width: 130px;
+}
+
+.view-id-blocks .views-widget-filter-field_ads_description_value {
+	clear: left;
+}
+
+.view-id-blocks #edit-field-ads-description-value {
+	width: 415px;
+}
+
+.view-id-blocks .views-field-title {
+	width: 65%;
+	float: left;
+}
+
+.view-id-blocks .views-field-field-price {	
+	top: 0px;
+	right: 0px;
+	font-size: 20px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-weight: normal;
+	width: 30%;
+	text-align: right;
+	float: right;
+}
+
+/* Registration page styles */
+
+#user-register-form .form-item-pass {
+    background-color: #edeeef;
+    padding: 10px;
+    border-radius: 3px;
+    width: 480px;
+}
+
+#user-register-form #edit-picture {
+    background-color: #edeeef;
+    padding: 10px;
+    border-radius: 3px;
+    width: 480px;
+}
+
+#user-register-form #edit-picture legend {
+    font-weight: bold;
+}
+
+#user-register-form #edit-picture .form-item-files-picture-upload {
+    margin: 0;
 }
 
 
@@ -1131,8 +1393,6 @@ article.node-webform footer.submitted {
     display: none;
 }
 
-
-
 /*Mollom styles*/
 
 .form-item-mollom-captcha label {
@@ -1165,3 +1425,38 @@ article.node-webform footer.submitted {
     font-size: 0.85em;
 }
 
+/* Status messages */
+
+.absolute-messages-status {
+    background-color: #fbfbfb;
+    border-bottom: 1px dashed #ccc;
+    color: #231F20;
+}
+
+.absolute-messages-status a:link,
+.absolute-messages-status a:visited {
+    color: #D2232A;
+}
+
+.absolute-messages-status .absolute-messages-dismiss {
+    background-color: #edeeef;
+    border: 2px solid #808080;
+    color: #808080;
+}
+
+.absolute-messages-error {
+    background-color: #fbfbfb;
+    border-bottom: 1px dashed #ccc;
+    color: #231F20;
+}
+
+.absolute-messages-error a:link,
+.absolute-messages-error a:visited {
+    color: #D2232A;
+}
+
+.absolute-messages-error .absolute-messages-dismiss {
+    background-color: #edeeef;
+    border: 2px solid #808080;
+    color: #808080;
+}

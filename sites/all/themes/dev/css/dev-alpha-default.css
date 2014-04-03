@@ -89,7 +89,7 @@ h1 {
 }
 
 #block-block-3 .content img {
-    margin: 0 4px;
+    margin: 0 2px;
     opacity: 0.9;
 }
 
@@ -301,9 +301,13 @@ nav.navigation li a:link, nav.navigation li a:visited {
     margin-top: 2px;
 }
 
-.zahalovak_navin a {
+h2.zahalovak_navin {
     font-weight:bold; 
     font-size: 16px; 
+    color:#671A1D; 
+}
+
+.zahalovak_navin a {
     color:#671A1D; 
 }
 
@@ -462,7 +466,8 @@ nav.navigation li a:link, nav.navigation li a:visited {
 #block-block-30 p,
 #block-block-31 p,
 #block-block-32 p,
-#block-block-33 p {
+#block-block-33 p,
+#block-block-35 p {
     margin: 0;
     padding: 0;
 }
@@ -474,7 +479,8 @@ nav.navigation li a:link, nav.navigation li a:visited {
     margin: 0 auto;
 }
 
-#block-block-32 .content {
+#block-block-32 .content,
+#block-block-35 .content {
     width: 700px;
     margin: 0 auto;
 }
