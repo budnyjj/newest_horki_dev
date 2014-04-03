@@ -1362,12 +1362,6 @@ article .user-picture {
     text-align: right;
 }
 
-/*Add news-from-readers Page styles*/
-
-.page-node-add-news-from-readers  #page-title {
-    display: none;
-}
-
 /* User profile & registration Page styles */
 
 #user-register-form, #user-profile-form, #user-pass {
