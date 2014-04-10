@@ -868,7 +868,9 @@ article .user-picture {
     text-transform: uppercase;
 }
 
-.field-name-field-placement-by-taxonomy .field-item, .field-name-field-rubric-by-taxonomy .field-item, .field field-name-field-additional-taxonomy .field-item {
+.field-name-field-placement-by-taxonomy .field-item,
+.field-name-field-rubric-by-taxonomy .field-item,
+.field field-name-field-additional-taxonomy .field-item {
     float: left;
 }
 
@@ -1061,12 +1063,8 @@ article .user-picture {
 /* Company Page Styles */
 
 #block-block-34 {
+    padding: 0.7em 0;
     border-bottom: 1px dashed #ccc;
-}
-
-#block-block-34 .content {
-    text-align: right;
-    padding-bottom: 10px;
 }
 
 #node_company_full_group_info {
@@ -1214,11 +1212,16 @@ article .user-picture {
     margin: 0px;
 }
 
-
 #quicktabs-davedka .views-field-field-daviedka-punkt-menu .field-content {
     text-align: center;
     margin: 5px 0;
 }
+
+#block-block-36 {
+    padding: 0.7em 0;
+    border-top: 1px dashed #ccc;
+}
+
 
 /* Disable table-drag wrapper*/
 
@@ -1378,12 +1381,6 @@ article .user-picture {
 .view-catalog-company .view-header {
     padding-bottom: 10px;
     text-align: right;
-}
-
-/*Add news-from-readers Page styles*/
-
-.page-node-add-news-from-readers  #page-title {
-    display: none;
 }
 
 /* User profile & registration Page styles */
