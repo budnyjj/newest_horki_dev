@@ -19,6 +19,10 @@
     float: left;
 }
 
+.center-this {
+    text-align: center;
+}
+
 .no-margin {
 	margin: 0;
 }

@@ -277,7 +277,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
 }
 
 
-/*Main page content style*/
+/*Main page content style OLD STYLE */
 
 .view-id-testingrepresentative_node .views-limit-grouping-group {
     border-bottom: 1px dashed #ccc;
@@ -311,7 +311,32 @@ h2.zahalovak_navin {
     color:#671A1D; 
 }
 
+/* Main page content NEW STYLE */
+
+.main-page-view .views-row {
+    overflow: auto;
+}
+
+
+.main-page-view .view-content > h3 {
+    color: #8996A0;
+    font-size: 15px; 
+    font-weight: bold;
+    padding: 0.5em 0 0.2em;
+    border-bottom: 1px dashed #ccc;
+}
+
+.main-page-view .views-field-field-pics {
+    float: left;
+    margin: 5px 5px 0 0;
+}
+
+.main-page-view .view-footer {
+    text-align: center;
+}
+
 /*First Sidebar*/
+
 #region-sidebar-first .block {
     margin-bottom: 10px;
     padding-bottom: 10px;
