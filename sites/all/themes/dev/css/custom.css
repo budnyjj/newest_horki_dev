@@ -168,7 +168,7 @@ form .field-multiple-table th.field-label {
 /*Buttons styles*/
 
 button:hover,
-input:hover {
+input[type="button"]:hover {
     background-color: #505050;
 }
 
