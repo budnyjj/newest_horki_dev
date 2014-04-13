@@ -435,8 +435,6 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     float: right;
 }
 
-
-
 /*Similar terms block styles*/
 
 #block-views-similarterms-block,
@@ -874,6 +872,7 @@ article .user-picture {
     float: left;
 }
 
+.group-tags .field-item,
 .group-tags .field-item a {
     float: left;
     text-transform: uppercase;
