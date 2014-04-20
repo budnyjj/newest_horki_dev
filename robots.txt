@@ -68,7 +68,7 @@ Disallow: /*?page=*&*
 Disallow: /*?page=0*
 
 # Disallow user pages
-Disallow: /user/
+Disallow: /users/
 
 Sitemap: http://horki.info/sitemap.xml
 
@@ -123,7 +123,7 @@ Disallow: /*?page=*&*
 Disallow: /*?page=0*
 
 # Disallow user pages
-Disallow: /user/
+Disallow: /users/
 
 User-agent: Yandex
 Allow: /

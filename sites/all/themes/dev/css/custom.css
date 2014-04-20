@@ -836,8 +836,10 @@ article.comment .permalink {
     text-align: center;
 }
 
+article .field-body,
 article .field-name-field-text {
     margin: 0;
+    overflow: auto;
 }
 
 article .group-tags,
@@ -1020,6 +1022,10 @@ article .user-picture {
 
 /*Companies page styles */
 
+.companies-page .views-field-title {
+    /* padding-bottom: 0.2em; */
+}
+
 .companies-page .views-field-value {
     position: absolute;
     right: 0;
@@ -1029,16 +1035,22 @@ article .user-picture {
 
 .company-preview {
     float: left;
-    margin-right: 20px;
+    padding-top: 0.3em;
+    padding-right: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .company-description {
-    position: relative;
-    top: -0.3em;
+
+}
+
+.company-description p {
+    margin-bottom: 0.2em;
 }
 
 .companies-page .views-field-title {
-    max-width: 580px;
+    max-width: 80%;
 }
 
 .rate-user .rate-fivestar-btn-filled {
@@ -1072,8 +1084,6 @@ article .user-picture {
 #node_company_full_group_info > div {
     margin: 0.5em 0;
 }
-
-
 
 .node-company .field-name-field-company-full-name .field-label,
 .node-company .field-name-field-company-full-name .field-items {
@@ -1109,6 +1119,10 @@ article .user-picture {
 .node-company .field-name-field-company-web-site .field-items {
     display: inline-block;
     vertical-align: top;
+}
+
+.node-company .field-name-body .field-label {
+    margin-bottom: 0.7em;
 }
 
 #node_company_full_group_info p {
