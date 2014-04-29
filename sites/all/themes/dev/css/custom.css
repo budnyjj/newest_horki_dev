@@ -435,8 +435,6 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     float: right;
 }
 
-
-
 /*Similar terms block styles*/
 
 #block-views-similarterms-block,
@@ -870,10 +868,13 @@ article .user-picture {
     text-transform: uppercase;
 }
 
-.field-name-field-placement-by-taxonomy .field-item, .field-name-field-rubric-by-taxonomy .field-item, .field field-name-field-additional-taxonomy .field-item {
+.field-name-field-placement-by-taxonomy .field-item,
+.field-name-field-rubric-by-taxonomy .field-item,
+.field field-name-field-additional-taxonomy .field-item {
     float: left;
 }
 
+.group-tags .field-item,
 .group-tags .field-item a {
     float: left;
     text-transform: uppercase;
@@ -1230,6 +1231,13 @@ article .user-picture {
     border-top: 1px dashed #ccc;
 }
 
+
+/* Disable table-drag wrapper*/
+
+.tabledrag-toggle-weight-wrapper {
+    display: none;
+}
+
 /* Add narodnaja navina Page Styles */
 
 .page-node-add-news-from-readers .field-name-field-photos .fieldset-legend
@@ -1258,10 +1266,6 @@ article .user-picture {
     padding: 0.2em 0;
 }
 
-.page-node-add-news-from-readers .tabledrag-toggle-weight-wrapper {
-    display: none;
-}
-
 .page-node-add-news-from-readers .filter-wrapper {
     display: none;
 }
@@ -1272,6 +1276,16 @@ article .user-picture {
 }
 
 /* Add ads page style */
+
+.page-node-add-ads .form-item-title {
+    width: 450px;
+}
+
+#edit-title-counter {
+    font-size: 0.85em;
+    color: #666;
+    text-align: center;
+}
 
 .page-node-add-ads .field-name-field-ads-photo {
     background-color: #edeeef;
@@ -1298,39 +1312,45 @@ article .user-picture {
 
 /* List of ads page style */
 
-.view-id-blocks .view-header {
+.abvestki .view-header {
 	padding-bottom: 10px;
 	text-align: right;
 }
 
-.view-id-blocks #edit-field-ads-placement-tid,
-.view-id-blocks #edit-field-ads-type-tid,
-.view-id-blocks #edit-field-ads-topic-tid {
+.abvestki #edit-field-ads-placement-tid,
+.abvestki #edit-field-ads-type-tid,
+.abvestki #edit-field-ads-topic-tid {
 	width: 130px;
 }
 
-.view-id-blocks .views-widget-filter-field_ads_description_value {
+.abvestki .views-widget-filter-title {
 	clear: left;
 }
 
-.view-id-blocks #edit-field-ads-description-value {
+.abvestki #edit-title {
 	width: 415px;
 }
 
-.view-id-blocks .views-field-title {
-	width: 65%;
-	float: left;
-}
+/* .abvestki .views-field-title { */
+/* 	width: 65%; */
+/* 	float: left; */
+/* } */
 
-.view-id-blocks .views-field-field-price {	
-	top: 0px;
-	right: 0px;
-	font-size: 20px;
-	font-family: Verdana,Arial,Helvetica,sans-serif;
-	font-weight: normal;
-	width: 30%;
-	text-align: right;
-	float: right;
+/* .abvestki .views-field-field-price {	 */
+/* 	top: 0px; */
+/* 	right: 0px; */
+/* 	font-size: 20px; */
+/* 	font-family: Verdana,Arial,Helvetica,sans-serif; */
+/* 	font-weight: normal; */
+/* 	width: 30%; */
+/* 	text-align: right; */
+/* 	float: right; */
+/* } */
+
+/* Abvestki block styles */
+
+.abvestki-block .view-footer {
+    text-align: center;
 }
 
 /* Registration page styles */
