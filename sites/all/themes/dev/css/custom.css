@@ -872,7 +872,6 @@ article .user-picture {
     float: left;
 }
 
-.group-tags .field-item,
 .group-tags .field-item a {
     float: left;
     text-transform: uppercase;
@@ -1265,8 +1264,9 @@ article .user-picture {
 	color: #666;
 }
 
-/* Add ads page style */
+/* Add/Edit ads page style */
 
+.page-node-edit .form-item-title,
 .page-node-add-ads .form-item-title {
     width: 450px;
 }
@@ -1277,6 +1277,12 @@ article .user-picture {
     text-align: center;
 }
 
+.page-node-edit .field-name-field-ads-photo .form-item,
+.page-node-add-ads .field-name-field-ads-photo .form-item {
+    margin: 0;
+}
+
+.page-node-edit .field-name-field-ads-photo,
 .page-node-add-ads .field-name-field-ads-photo {
     background-color: #edeeef;
     padding: 10px;
@@ -1291,16 +1297,51 @@ article .user-picture {
     color: #666;
 }
 
+#edit-field-ads-description-und-0-format {
+    display: none;
+}
+
+.page-node-edit .tabledrag-toggle-weight-wrapper,
 .page-node-add-ads .tabledrag-toggle-weight-wrapper {
     display: none;
 }
 
-.page-node-add-ads .field-multiple-table label {
+.page-node-edit thead,
+.page-node-add-ads thead {
+    background-color: #231F20;
+}
+
+.page-node-edit th,
+.page-node-add-ads th {
+    padding: 0.2em;
+}
+
+.page-node-edit thead label,
+.page-node-add-ads thead label {
     margin-left: 0.5em;
     color: #fff;
 }
 
-/* List of ads page style */
+.page-node-edit td,
+.page-node-add-ads td {
+    padding: 5px;
+}
+
+.page-node-edit tbody .text-full,
+.page-node-add-ads tbody .text-full {
+    width: 400px;
+}
+
+/* Delete ads page style */
+
+#node-delete-confirm #edit-actions a {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 0.7em;
+}
+
+/* Lists of ads page style */
 
 .abvestki .view-header {
 	padding-bottom: 10px;
@@ -1308,9 +1349,12 @@ article .user-picture {
 }
 
 .abvestki #edit-field-ads-placement-tid,
-.abvestki #edit-field-ads-type-tid,
-.abvestki #edit-field-ads-topic-tid {
+.abvestki #edit-field-ads-type-tid {
 	width: 130px;
+}
+
+.abvestki #edit-field-ads-topic-tid {
+	width: 150px;
 }
 
 .abvestki .views-widget-filter-title {
@@ -1318,28 +1362,67 @@ article .user-picture {
 }
 
 .abvestki #edit-title {
-	width: 415px;
+	width: 435px;
 }
 
-/* .abvestki .views-field-title { */
-/* 	width: 65%; */
-/* 	float: left; */
-/* } */
+.abvestki table {
+    width: 100%;
+}
 
-/* .abvestki .views-field-field-price {	 */
-/* 	top: 0px; */
-/* 	right: 0px; */
-/* 	font-size: 20px; */
-/* 	font-family: Verdana,Arial,Helvetica,sans-serif; */
-/* 	font-weight: normal; */
-/* 	width: 30%; */
-/* 	text-align: right; */
-/* 	float: right; */
-/* } */
+.abvestki thead {
+    background-color: #231F20;
+    color: #fff;
+    font-weight: bold;
+}
 
-/* Abvestki block styles */
+.abvestki th {
+    padding: 0.2em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.abvestki tr {
+    border: none;
+}
+
+.abvestki td {
+    vertical-align: middle;
+}
+
+.abvestki td.views-field-field-ads-photo {
+    width: 50px;
+}
+
+.abvestki td.views-field-title {
+    padding: 0 0.7em;
+}
+.abvestki td.views-field-field-price {
+    padding: 0 0.7em;
+    width: 15%;
+}
+
+.page-user .profile h3 {
+    color: #8996A0;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+    text-transform: uppercase;
+}
+
+.page-user .block-title {
+    text-align: left;
+}
+
+/* Aposhnija Abvestki block styles */
 
 .abvestki-block .view-footer {
+    text-align: center;
+}
+
+/* User abvestki block styles */
+
+.abvestki-user-block .view-footer {
+    padding: 0.7em 0;
     text-align: center;
 }
 

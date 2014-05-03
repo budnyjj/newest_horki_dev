@@ -152,10 +152,13 @@ table {
     overflow: auto;
 }
 
+.zebra tr.odd,
 .zebra .views-row-odd {
     background-color: #edeeef;
 }
 
+
+.zebra tr.even,
 .zebra .views-row-even {
     background-color: #fbfbfb;
 }
