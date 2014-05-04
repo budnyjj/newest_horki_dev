@@ -373,9 +373,10 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 }
 
 
-/* Last News Block Style */
+/* Last News and Ads Block Style */
 
-.view-id-aposhnija_naviny h3, #block-views-blocks-block-1 h3 {
+.view-id-aposhnija_naviny h3,
+.ads-block h3 {
     background-color:#671b1d;
     border-radius: 3px;
     padding: 1px;
@@ -435,26 +436,19 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     float: right;
 }
 
-/*Similar terms block styles*/
+/*Similar articles block styles*/
 
-#block-views-similarterms-block,
-#block-views-similar-ads-block {
+#block-views-similarterms-block {
     padding: 0.7em 0;
     border-top: 1px dashed #ccc;
 }
 
-#block-views-similarterms-block .block-title,
-#block-views-similar-ads-block .block-title {
+#block-views-similarterms-block .block-title {
     text-align: left;
 }
 
-.view-similarterms .views-row,
-.view-similar-ads .views-row {
+.view-similarterms .views-row {
     margin: 0.2em 0;
-}
-.view-similarterms .views-field-title a,
-.view-similar-ads .views-field-title a {
-    color: #671A1D;
 }
 
 /*Comment form styles*/
@@ -1272,6 +1266,7 @@ article .user-picture {
 .mollom-image-captcha-instructions {
 	font-size: 0.85em;
 	color: #666;
+	max-width: 700px;
 }
 
 /* Add/Edit ads page style */
@@ -1301,13 +1296,13 @@ article .user-picture {
     width: 700px;
 }
 
-#edit-field-ads-description-und-0-value-counter {
+#edit-field-text-und-0-value-counter {
     text-align: center;
     font-size: 0.85em;
     color: #666;
 }
 
-#edit-field-ads-description-und-0-format {
+#edit-field-text-und-0-format {
     display: none;
 }
 
@@ -1353,60 +1348,60 @@ article .user-picture {
 
 /* Lists of ads page style */
 
-.abvestki .view-header {
+.ads .view-header {
 	padding-bottom: 10px;
 	text-align: right;
 }
 
-.abvestki #edit-field-ads-placement-tid,
-.abvestki #edit-field-ads-type-tid {
+.ads #edit-field-ads-placement-tid,
+.ads #edit-field-ads-type-tid {
 	width: 130px;
 }
 
-.abvestki #edit-field-ads-topic-tid {
+.ads #edit-field-ads-topic-tid {
 	width: 150px;
 }
 
-.abvestki .views-widget-filter-title {
+.ads .views-widget-filter-title {
 	clear: left;
 }
 
-.abvestki #edit-title {
+.ads #edit-title {
 	width: 435px;
 }
 
-.abvestki table {
+.ads table {
     width: 100%;
 }
 
-.abvestki thead {
+.ads thead {
     background-color: #231F20;
     color: #fff;
     font-weight: bold;
 }
 
-.abvestki th {
+.ads th {
     padding: 0.2em;
     vertical-align: middle;
     text-align: center;
 }
 
-.abvestki tr {
+.ads tr {
     border: none;
 }
 
-.abvestki td {
+.ads td {
     vertical-align: middle;
 }
 
-.abvestki td.views-field-field-ads-photo {
+.ads td.views-field-field-ads-photo {
     width: 50px;
 }
 
-.abvestki td.views-field-title {
+.ads td.views-field-title {
     padding: 0 0.7em;
 }
-.abvestki td.views-field-field-price {
+.ads td.views-field-field-price {
     padding: 0 0.7em;
     width: 15%;
 }
@@ -1423,15 +1418,21 @@ article .user-picture {
     text-align: left;
 }
 
+/* Similar ads block-styles */
+
+.similar-ads-block .view-footer {
+    text-align: center;
+}
+
 /* Aposhnija Abvestki block styles */
 
-.abvestki-block .view-footer {
+.ads-block .view-footer {
     text-align: center;
 }
 
 /* User abvestki block styles */
 
-.abvestki-user-block .view-footer {
+.ads-user-block .view-footer {
     padding: 0.7em 0;
     text-align: center;
 }

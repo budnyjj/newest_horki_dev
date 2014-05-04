@@ -116,7 +116,7 @@ function dev_preprocess_node(&$variables)
 		       'absolute' => TRUE,
 		       'query' => array('field_ads_type_tid' => $info['tid'])
 		       );
-      $content['field_ads_type'][$index]['#href'] = url('abvestki.html', $options);
+      $content['field_ads_type'][$index]['#href'] = url('ads.html', $options);
     }
   }
   if (array_key_exists('field_ads_topic', $content)) {
@@ -125,7 +125,7 @@ function dev_preprocess_node(&$variables)
 		       'absolute' => TRUE,
 		       'query' => array('field_ads_topic_tid' => $info['tid'])
 		       );
-      $content['field_ads_topic'][$index]['#href'] = url('abvestki.html', $options);
+      $content['field_ads_topic'][$index]['#href'] = url('ads.html', $options);
     }
   }
   if (array_key_exists('field_ads_placement', $content)) {
@@ -134,7 +134,7 @@ function dev_preprocess_node(&$variables)
 		       'absolute' => TRUE,
 		       'query' => array('field_ads_placement_tid' => $info['tid'])
 		       );
-      $content['field_ads_placement'][$index]['#href'] = url('abvestki.html', $options);
+      $content['field_ads_placement'][$index]['#href'] = url('ads.html', $options);
     }
   }
 }
