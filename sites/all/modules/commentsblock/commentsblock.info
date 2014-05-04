@@ -8,9 +8,9 @@ dependencies[] = comment
 dependencies[] = views
 
 
-; Information added by Drupal.org packaging script on 2014-01-03
-version = "7.x-2.3"
+; Information added by Drupal.org packaging script on 2014-04-29
+version = "7.x-2.5"
 core = "7.x"
 project = "commentsblock"
-datestamp = "1388777941"
+datestamp = "1398766445"
 

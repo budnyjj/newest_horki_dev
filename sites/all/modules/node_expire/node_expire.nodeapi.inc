@@ -113,6 +113,12 @@ function _node_expire_node_update_insert(&$ntype, $node) {
     $node_expire = new stdClass();
     $node_expire->nid = $node->nid;
 
+    // For compatibility with Node Clone module
+    // Set default $node->expire value if it is not set
+    if (!isset($node->expire)) {
+      _node_expire_node_prepare($ntype, $node);
+    }
+
     // Expire
     $date_expire = _node_expire_date_str_to_db($node->expire, $ntype);
     $node_expire->expire = $date_expire;

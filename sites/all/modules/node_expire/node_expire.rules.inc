@@ -123,32 +123,30 @@ function node_expire_rules_expired_check_lastnotify_is_set($node) {
 /**
  * Unset the "Expired" flag on nodes.
  *
- * @param $nids
+ * @param $node
  *   Object. The Node object with all node IDs
  *   that should unset the expired flag.
  */
-function node_expire_unset_expired($nids) {
-  // TODO Please convert this statement to the D7 database API syntax.
-//   db_query("UPDATE {node_expire} SET expired = '0', lastnotify = '0' WHERE nid = '" . $nids->nid . "'");
-    db_update('node_expire')
-      ->fields(array('expired' => 0,
-                     'lastnotify' => 0))
-          ->condition('nid', $nids->nid)
-      ->execute();
+function node_expire_unset_expired($node) {
+  $wrapper = entity_metadata_wrapper('node', $node);
+  $value = $wrapper->value();
+  $value->expired = 0;
+  $value->lastnotify = 0;
+  $wrapper->set($value);
+  $wrapper->save();
 }
 
 /**
  * Update lastnotify on nodes.
  *
- * @param $nids
+ * @param $node
  *   Object. The Node object with all node IDs
  *   that should update lastnotify.
  */
-function node_expire_update_lastnotify($nids) {
-  // TODO Please convert this statement to the D7 database API syntax.
-//   db_query("UPDATE {node_expire} SET lastnotify = '" . REQUEST_TIME . "' WHERE nid = '" . $nids->nid . "'");
-    db_update('node_expire')
-      ->fields(array('lastnotify' => REQUEST_TIME))
-      ->condition('nid', $nids->nid)
-      ->execute();
+function node_expire_update_lastnotify($node) {
+  $wrapper = entity_metadata_wrapper('node', $node);
+  $value = $wrapper->value();
+  $value->lastnotify = REQUEST_TIME;
+  $wrapper->set($value);
+  $wrapper->save();
 }
