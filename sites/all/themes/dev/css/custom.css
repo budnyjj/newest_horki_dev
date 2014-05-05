@@ -1016,10 +1016,6 @@ article .user-picture {
 
 /*Companies page styles */
 
-.companies-page .views-field-title {
-    /* padding-bottom: 0.2em; */
-}
-
 .companies-page .views-field-value {
     position: absolute;
     right: 0;
@@ -1267,6 +1263,14 @@ article .user-picture {
 	font-size: 0.85em;
 	color: #666;
 	max-width: 700px;
+}
+
+/* Ad page styles */
+
+#node_ads_full_group_info .field-name-field-ads-phone .field-label,
+#node_ads_full_group_info .field-name-field-ads-phone .field-items {
+    display: inline-block;
+    vertical-align: top;
 }
 
 /* Add/Edit ads page style */
