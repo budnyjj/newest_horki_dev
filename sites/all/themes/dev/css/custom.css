@@ -1275,6 +1275,10 @@ article .user-picture {
 
 /* Add/Edit ads page style */
 
+.page-node-add-ads .ads-help-link {
+    float: right;
+}
+
 .page-node-edit .form-item-title,
 .page-node-add-ads .form-item-title {
     width: 450px;

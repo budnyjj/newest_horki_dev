@@ -77,17 +77,3 @@ function bel_currency_block_view($delta = '') {
   }
   return $block;
 }
-   
-
-/* $cache = cache_get('your-cache-id'); */
-/* $xml = $cache->data; */
-
-/* if (!$xml) { */
-/*   $xml = ... // perform your code to generate your XML */
-
-/*     cache_set('your-cache-id', $xml); */
-/* } */
-
-/* drupal_set_header("Content-Type:text/xml"); */
-/* print $xml; */
-/* exit(); */
