@@ -1404,6 +1404,7 @@ article .user-picture {
 
 .ads td.views-field-field-ads-photo {
     width: 50px;
+    padding: 0.5em;
 }
 
 .ads td.views-field-title {
@@ -1439,6 +1440,11 @@ article .user-picture {
 }
 
 /* User abvestki block styles */
+
+.ads-user-block td.views-field-field-ads-photo {
+    width: 50px;
+    padding: 0.5em;
+}
 
 .ads-user-block .view-footer {
     padding: 0.7em 0;
