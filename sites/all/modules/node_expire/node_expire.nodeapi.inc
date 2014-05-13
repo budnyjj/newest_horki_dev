@@ -167,11 +167,26 @@ function _node_expire_node_update_insert(&$ntype, $node) {
     }
 
     // Write the record
-    if ($node_expire->new_record) {
-      drupal_write_record('node_expire', $node_expire);
-    } else {
-      drupal_write_record('node_expire', $node_expire, 'nid');
-    }
+    _node_expire_write_record($node_expire, $node->nid);
+  }
+}
+
+/**
+ * Write node_expire record.
+ */
+function _node_expire_write_record($node_expire, $nid) {
+  // Check, is it insert or update
+  $cnt = db_query(
+    'SELECT count(nid)
+     FROM {node_expire} ne
+     WHERE ne.nid = :nid',
+    array(':nid' => $nid))->fetchField();
+
+  // Write the record
+  if ($cnt==0) {
+    drupal_write_record('node_expire', $node_expire); // Insert
+  } else {
+    drupal_write_record('node_expire', $node_expire, 'nid'); // Update
   }
 }
 
