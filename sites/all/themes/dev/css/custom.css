@@ -834,6 +834,10 @@ article .field-name-field-text {
     overflow: auto;
 }
 
+article .field-name-field-author {
+    margin: 0;
+}
+
 article .group-tags,
 article .field-name-field-add-this {
     border-top: 1px dashed #ccc;
