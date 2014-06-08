@@ -9,13 +9,11 @@
     display: none;
 }
 
-
 /*Global Positioning styles*/
 
 body {
     background-image:url('/sites/all/themes/dev/images/grey_texture.jpg');
 }
-
 
 #zone-content, #zone-branding, #zone-preface  {
     background-color: #fff; 
@@ -853,6 +851,9 @@ article .user-picture {
     display: none;
 }
 
+article .poll {
+    margin-bottom: 10px;
+}
 
 .group-tags .field {
     margin: 0px; 
