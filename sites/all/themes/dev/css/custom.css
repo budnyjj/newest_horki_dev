@@ -371,10 +371,10 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 }
 
 
-/* Last News and Ads Block Style */
+/* Last News and Abvestki Block Style */
 
 .view-id-aposhnija_naviny h3,
-.ads-block h3 {
+.abvestki-block h3 {
     background-color:#671b1d;
     border-radius: 3px;
     padding: 1px;
@@ -1361,61 +1361,61 @@ article .poll {
 
 /* Lists of ads page style */
 
-.ads .view-header {
+.abvestki .view-header {
 	padding-bottom: 10px;
 	text-align: right;
 }
 
-.ads #edit-field-ads-placement-tid,
-.ads #edit-field-ads-type-tid {
+.abvestki #edit-field-ads-placement-tid,
+.abvestki #edit-field-ads-type-tid {
 	width: 130px;
 }
 
-.ads #edit-field-ads-topic-tid {
+.abvestki #edit-field-ads-topic-tid {
 	width: 150px;
 }
 
-.ads .views-widget-filter-title {
+.abvestki .views-widget-filter-title {
 	clear: left;
 }
 
-.ads #edit-title {
+.abvestki #edit-title {
 	width: 435px;
 }
 
-.ads table {
+.abvestki table {
     width: 100%;
 }
 
-.ads thead {
+.abvestki thead {
     background-color: #231F20;
     color: #fff;
     font-weight: bold;
 }
 
-.ads th {
+.abvestki th {
     padding: 0.2em;
     vertical-align: middle;
     text-align: center;
 }
 
-.ads tr {
+.abvestki tr {
     border: none;
 }
 
-.ads td {
+.abvestki td {
     vertical-align: middle;
 }
 
-.ads td.views-field-field-ads-photo {
+.abvestki td.views-field-field-ads-photo {
     width: 50px;
     padding: 0.5em;
 }
 
-.ads td.views-field-title {
+.abvestki td.views-field-title {
     padding: 0 0.7em;
 }
-.ads td.views-field-field-price {
+.abvestki td.views-field-field-price {
     padding: 0 0.7em;
     width: 15%;
 }
@@ -1440,18 +1440,18 @@ article .poll {
 
 /* Aposhnija Abvestki block styles */
 
-.ads-block .view-footer {
+.abvestki-block .view-footer {
     text-align: center;
 }
 
 /* User abvestki block styles */
 
-.ads-user-block td.views-field-field-ads-photo {
+.abvestki-user-block td.views-field-field-ads-photo {
     width: 50px;
     padding: 0.5em;
 }
 
-.ads-user-block .view-footer {
+.abvestki-user-block .view-footer {
     padding: 0.7em 0;
     text-align: center;
 }
