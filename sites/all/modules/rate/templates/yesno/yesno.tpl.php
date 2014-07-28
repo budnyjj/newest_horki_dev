@@ -1,14 +1,10 @@
 <?php
-
 /**
  * @file
  * Rate widget theme
  */
 
-print theme('item_list', array(
-  'items' => $stars,
-  //'title' => $display_options['title'],
-  ));
+print theme('item_list', array('items' => $buttons));
 
 if ($info) {
   print '<div class="rate-info">' . $info . '</div>';

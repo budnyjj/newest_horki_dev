@@ -4,10 +4,8 @@
  * @file
  * Rate widget theme
  */
- 
-// print '<div class="rate-label">' . $display_options['title'] . '</div>';
 
-print $up_button;
+print theme('item_list', array('items' => $buttons));
 
 if ($info) {
   print '<div class="rate-info">' . $info . '</div>';
