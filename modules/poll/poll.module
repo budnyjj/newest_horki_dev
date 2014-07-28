@@ -648,9 +648,9 @@ function poll_block_latest_poll_view($node) {
 
   $links = array();
   $links[] = array('title' => t('Older polls'), 'href' => 'poll', 'attributes' => array('title' => t('View the list of polls on this site.')));
-  // if ($node->allowvotes) {
-  //   $links[] = array('title' => t('Results'), 'href' => 'node/' . $node->nid . '/results', 'attributes' => array('title' => t('View the current poll results.')));
-  // }
+  if ($node->allowvotes) {
+    $links[] = array('title' => t('Results'), 'href' => 'node/' . $node->nid . '/results', 'attributes' => array('title' => t('View the current poll results.')));
+  }
 
   $node->links = $links;
 

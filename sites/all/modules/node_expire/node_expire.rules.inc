@@ -7,6 +7,7 @@
 
 /**
  * Implements hook_rules_action_info().
+ *
  * @ingroup rules
  */
 function node_expire_rules_action_info() {
@@ -16,7 +17,6 @@ function node_expire_rules_action_info() {
         'node' => array('type' => 'node', 'label' => t('content expired')),
       ),
       'label' => t('Unset the expired flag'),
-//       'module' => 'Node',
       'module' => 'node_expire',
     ),
     'node_expire_update_lastnotify' => array(
@@ -27,7 +27,6 @@ function node_expire_rules_action_info() {
         ),
       ),
       'label' => t('Update lastnotify'),
-//       'module' => 'Node',
       'module' => 'node_expire',
     ),
   );
@@ -35,6 +34,7 @@ function node_expire_rules_action_info() {
 
 /**
  * Implements hook_rules_condition_info().
+ *
  * @ingroup rules
  */
 function node_expire_rules_condition_info() {
@@ -45,7 +45,6 @@ function node_expire_rules_condition_info() {
       ),
       'label' => t('Content is expired'),
       'help' => 'Evaluates to TRUE, if the given content has one of the selected content types.',
-//       'module' => 'Node',
       'module' => 'node_expire',
     ),
     'node_expire_rules_expired_check_lastnotify' => array(
@@ -57,7 +56,6 @@ function node_expire_rules_condition_info() {
       ),
       'label' => t('Content is expired: Check lastnotify'),
       'help' => 'Evaluates to TRUE, if the given content is expired and lastnotified 2 weeks ago.',
-//       'module' => 'Node',
       'module' => 'node_expire',
     ),
     'node_expire_rules_expired_check_lastnotify_is_set' => array(
@@ -66,7 +64,6 @@ function node_expire_rules_condition_info() {
       ),
       'label'     => t('Content is expired: Check lastnotify is set'),
       'help'      => 'Evaluates to TRUE, if the given content is expired and lastnotified is set.',
-//       'module' => 'Node',
       'module' => 'node_expire',
     ),
   );
@@ -74,6 +71,7 @@ function node_expire_rules_condition_info() {
 
 /**
  * Implements hook_rules_event_info().
+ *
  * @ingroup rules
  */
 function node_expire_rules_event_info() {
@@ -91,40 +89,46 @@ function node_expire_rules_event_info() {
 }
 
 /**
- * Check if the node has the the "Expired" flag on.
+ * Checks if the node has the the "Expired" flag on.
  *
- * @param $node
- *   Object. The Node object.
+ * @param object $node
+ *   The Node object.
  */
 function node_expire_rules_expired_check($node) {
   return (!empty($node->expire) && $node->expire <= REQUEST_TIME && $node->expired == 1);
 }
 
 /**
- * Check if the node has the the "Expired" flag on
+ * Checks lastnotify.
+ *
+ * Checks if the node has the the "Expired" flag on
  * and lastnotify greater than or equal to 2 weeks.
- * @param $node
- *   Object. The Node object.
+ *
+ * @param object $node
+ *   The Node object.
  */
 function node_expire_rules_expired_check_lastnotify($node) {
   return (!empty($node->expire) && $node->expire <= REQUEST_TIME && $node->expired == 1 && $node->lastnotify <= (REQUEST_TIME - (14 * 24 * 60 * 60)));
 }
 
 /**
- * Check if the node has the the "Expired" flag on
+ * Checks lastnotify is set.
+ *
+ * Checks if the node has the the "Expired" flag on
  * and lastnotify is set.
- * @param $node
- *   Object. The Node object.
+ *
+ * @param object $node
+ *   The Node object.
  */
 function node_expire_rules_expired_check_lastnotify_is_set($node) {
-  return (!empty($node->expire) && $node->expire <= time() && $node->expired == 1 && $node->lastnotify != 0 );
+  return (!empty($node->expire) && $node->expire <= time() && $node->expired == 1 && $node->lastnotify != 0);
 }
 
 /**
- * Unset the "Expired" flag on nodes.
+ * Unsets the "Expired" flag on nodes.
  *
- * @param $node
- *   Object. The Node object with all node IDs
+ * @param object $node
+ *   The Node object with all node IDs
  *   that should unset the expired flag.
  */
 function node_expire_unset_expired($node) {
@@ -137,10 +141,10 @@ function node_expire_unset_expired($node) {
 }
 
 /**
- * Update lastnotify on nodes.
+ * Updates lastnotify on nodes.
  *
- * @param $node
- *   Object. The Node object with all node IDs
+ * @param object $node
+ *   The Node object with all node IDs
  *   that should update lastnotify.
  */
 function node_expire_update_lastnotify($node) {

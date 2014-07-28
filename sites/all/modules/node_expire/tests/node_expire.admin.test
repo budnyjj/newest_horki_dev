@@ -2,13 +2,17 @@
 
 /**
  * @file
- * Contains EntityReferenceHandlersTestCase
+ * Contains NodeExpireAdminTestCase.
  */
 
 /**
  * Test for Node Expire admin UI.
  */
 class NodeExpireAdminTestCase extends DrupalWebTestCase {
+
+  /**
+   * Implements getInfo().
+   */
   public static function getInfo() {
     return array(
       'name' => 'Node Expire UI',
@@ -17,6 +21,9 @@ class NodeExpireAdminTestCase extends DrupalWebTestCase {
     );
   }
 
+  /**
+   * Overrides setUp().
+   */
   public function setUp() {
     parent::setUp(array('rules', 'node_expire'));
 
@@ -37,6 +44,9 @@ class NodeExpireAdminTestCase extends DrupalWebTestCase {
     $this->hyphen_type = str_replace('_', '-', $this->type);
   }
 
+  /**
+   * Makes test.
+   */
   public function testFieldAdminHandler() {
     $test_path = 'admin/config/workflow/node_expire/settings';
     $this->drupalGet($test_path);
