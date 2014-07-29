@@ -72,6 +72,19 @@ function user_views_data() {
     ),
   );
 
+  // uid_comment
+  $data['users']['uid_comment'] = array(
+    'relationship' => array(
+      'title' => t('Comments authored'),
+      'help' => t('Relate comments to the user who created it. This relationship will create one record for each comment created by the user.'),
+      'handler' => 'views_handler_relationship',
+      'base' => 'comment',
+      'base field' => 'uid',
+      'field' => 'uid',
+      'label' => t('comments'),
+    ),
+  );
+
   // uid_raw
   $data['users']['uid_raw'] = array(
     'help' => t('The raw numeric user ID.'),
