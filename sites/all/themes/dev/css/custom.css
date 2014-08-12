@@ -1513,6 +1513,10 @@ article.node-webform footer.submitted {
     font-size: 0.85em;
 }
 
+#back-top {
+    top: 20px;
+}
+
 /* Status messages */
 
 .absolute-messages-status {
