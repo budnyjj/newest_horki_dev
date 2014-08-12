@@ -913,48 +913,25 @@ article .poll {
     display: none;
 }
 
-.content-grid .views-field-title {
-    padding-bottom: 0.2em;
-}
-
-.content-grid table {
-    border: 0px!important;
-}
-
-.content-grid td {
-    padding: 0 0 20px 0;
-    width: 340px;
-} 
-
-.view-taxonomy-term .col-2,
-.view-genres .col-2,
-.view-news-from-readers .col-2,
-.view-last-news .col-2 {
-    padding-left: 20px;
-}
-
-.view-genres .views-field-field-what,
-.view-genres .views-field-field-where,
-.view-genres .views-field-field-when,
-.view-genres .views-field-field-placement-by-taxonomy {
-    position: relative;
-    float: right;
-    width: 55%;
-    margin-bottom: 5px;
-}
-
-.content-grid td,
 .view-id-daviedka td {
     vertical-align:top;
 }
 
 .pic-list {
-    width: 40%;
+    margin-top: 0.3em;
+    margin-right: 10px;
 }
 
 .date-list {
     color: #585858;
     font-size: 11px;
+}
+
+.what-list,
+.where-list,
+.when-list,
+.place-list {
+    margin-bottom: 0.5em;
 }
 
 /*Photoblog & Videoblog styles*/

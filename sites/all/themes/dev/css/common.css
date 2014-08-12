@@ -140,7 +140,7 @@ table {
     border: 1px solid #ccc;
 }
 
-/* views Styles */
+/* Views Styles */
 
 .views-row {
     margin: 0.7em 0;
@@ -161,6 +161,16 @@ table {
 .zebra tr.even,
 .zebra .views-row-even {
     background-color: #fbfbfb;
+}
+
+.content-grid .views-row {
+    width: 340px;
+    float: left;
+    margin: 0 0 20px 0;
+}
+
+.content-grid .views-row-odd {
+    margin-right: 20px;
 }
 
 /* Misc styles */
