@@ -692,6 +692,7 @@ article.comment .permalink {
     font-size: 1.1em;
     color: #808080;
     padding: 0 0.5em;
+    text-align: inherit;
 }
 
 .rate-number-up-down-rating.negative {
