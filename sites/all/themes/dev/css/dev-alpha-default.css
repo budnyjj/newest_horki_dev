@@ -4,7 +4,25 @@
     display: block;
 }
 
-#block-block-16, #block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31, #block-block-32, #akavita {
+#block-block-16,
+#block-block-18,
+#block-views-banners-block-1,
+#block-block-3,
+#block-block-14,
+#block-block-2,
+#block-bel-currency-bel-currency,
+#block-custom-search-blocks-1,
+nav,
+#block-views-blocks-block-1,
+#block-quicktabs-social-blocks-normal,
+#block-views-front-block-1,
+#block-poll-recent,
+#block-block-11,
+.front #region-content,
+#block-block-31,
+#block-block-32,
+#block-block-40,
+#akavita {
     display: block;
 }
 
@@ -26,6 +44,18 @@
 
 h1 {
     font-size: 36px;
+}
+
+/* Banner above header styles */
+
+#block-block-40 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+#block-block-40 p {
+    margin: 0;
 }
 
 /*Header banner styles*/

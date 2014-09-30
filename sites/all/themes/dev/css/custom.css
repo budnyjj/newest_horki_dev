@@ -1,11 +1,32 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-#region-sidebar-first, #region-social-blocks, #zone-preview-wrapper, #zone-postscript-wrapper {
+#region-sidebar-first,
+#region-social-blocks, 
+#zone-preview-wrapper, 
+#zone-postscript-wrapper {
     display: none;
 }
 
-#block-block-16, #block-block-18, #block-views-banners-block-1, #block-block-3, #block-block-14, #block-block-2, #block-bel-currency-bel-currency, #block-custom-search-blocks-1, nav, #block-views-blocks-block-1, #block-quicktabs-social-blocks-normal, #block-views-front-block-1, #block-poll-recent, #block-block-11, .front #region-content, #block-block-31, #block-block-32, #akavita {
+#block-block-16, 
+#block-block-18, 
+#block-views-banners-block-1, 
+#block-block-3, 
+#block-block-14, 
+#block-block-2, 
+#block-bel-currency-bel-currency, 
+#block-custom-search-blocks-1, 
+nav, 
+#block-views-blocks-block-1, 
+#block-quicktabs-social-blocks-normal, 
+#block-views-front-block-1, 
+#block-poll-recent, 
+#block-block-11, 
+.front #region-content, 
+#block-block-31, 
+#block-block-32, 
+#block-block-40,
+#akavita {
     display: none;
 }
 
