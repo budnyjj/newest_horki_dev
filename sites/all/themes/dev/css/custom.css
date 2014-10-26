@@ -780,6 +780,7 @@ article.comment .permalink {
 
 .field-name-field-text img, .caption {
     max-width: 100%;
+    vertical-align: baseline;
     height: auto !important; 
 }
 
@@ -801,8 +802,8 @@ article.comment .permalink {
     opacity: 0.8;
     margin-bottom: 0px;
     position: absolute;
-    bottom: 0px;
-    padding: 0.1em 0 0.3em 0;
+    bottom: 3px;
+    padding: 3px 0 3px 0;
     width: 100%;
     color: #fff;
     background-color: #000;
