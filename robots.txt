@@ -21,6 +21,9 @@ Host: horki.info
 User-agent: *
 Crawl-delay: 10
 Allow: /
+Allow: /yandex.xml
+Allow: /google.xml
+Allow: /naviny.xml
 # Directories
 Disallow: /includes/
 Disallow: /misc/
