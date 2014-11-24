@@ -4,54 +4,31 @@
  * Implements hook_entity_info().
  */
 function comment_fragment_entity_info_alter(&$entity_info) {
-  $entity_info['comment']['uri callback'] = 'comment_fragment_uri'; 
+  $entity_info['comment']['uri callback'] = 'comment_fragment_uri';
 }
-  
+
 /**
  * Entity URI callback.
  */
 function comment_fragment_uri($comment) {
-  global $base_url;
-  $current_path = 'node/' . $comment->nid;
-  $alias = drupal_get_path_alias('node/' . $comment->nid);
   $node = node_load($comment->nid);
   $page = comment_get_display_page($comment->cid, $node->type);
-  
+
+  $uri = array(
+    'path' => 'node/' . $comment->nid,
+    'options' => array('fragment' => 'comment-' . $comment->cid),
+  );
   if ($page > 0) {
-    if ($alias != $current_path) {
-      return array(
-        'path' => drupal_get_path_alias('node/' . $comment->nid),
-        'options' => array('fragment' => 'comment-' . $comment->cid, 'query' => array('page' => $page)),
-      );
-	}
-	else {
-      return array(
-        'path' => $base_url . '/node/' . $comment->nid,
-        'options' => array('fragment' => 'comment-' . $comment->cid, 'query' => array('page' => $page)),
-      );
-    }
+    $uri['options']['query']['page'] = $page;
   }
-  else {
-    if ($alias != $current_path) {
-      return array(
-        'path' => drupal_get_path_alias('node/' . $comment->nid),
-        'options' => array('fragment' => 'comment-' . $comment->cid),
-      );
-    }
-    else {
-      return array(
-        'path' => $base_url . '/node/' . $comment->nid,
-        'options' => array('fragment' => 'comment-' . $comment->cid),
-      );
-    }
-  }
+  return $uri;
 }
 
 /**
  * Implements hook_menu_alter().
  */
 function comment_fragment_menu_alter(&$items) {
- $items['comment/%']['page callback'] = 'comment_fragment_permalink';
+  $items['comment/%']['page callback'] = 'comment_fragment_permalink';
 }
 
 /**
@@ -67,13 +44,13 @@ function comment_fragment_permalink($cid) {
 
     // Find the current display page for this comment.
     $page = comment_get_display_page($comment->cid, $node->type);
-	
+
     // Redirect the old comment permalink.
     if ($page > 0) {
-      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid,'query' => array('items_per_page'=> 'All', 'page'=> $page)), 301);
+      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid, 'query' => array('page' => $page)), 301);
     }
-    else{
-      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid, 'query' => array('items_per_page'=> 'All')), 301);
+    else {
+      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid), 301);
     }
   }
   drupal_not_found();
