@@ -21,8 +21,8 @@ nav,
 #block-quicktabs-social-blocks-normal, 
 #block-views-front-block-1, 
 #block-poll-recent, 
-#block-block-11, 
-.front #region-content, 
+#block-block-11,
+#block-block-29, 
 #block-block-31, 
 #block-block-32, 
 #block-block-39,
@@ -64,12 +64,6 @@ body {
 
 .region-content-inner {
     padding: 10px 0;
-}
-
-.region-sidebar-first-inner {
-    background-image: url('http://horki.info/sites/all/themes/dev/images/grey_texture.jpg');
-    border-left: 1px dashed #ccc; border-right: 1px dashed #ccc;
-    padding: 10px 5px;
 }
 
 .region-sidebar-second-inner {
@@ -409,6 +403,72 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     margin-bottom: 6px;
 }
 
+/*Main news block style*/
+
+.page-main .block-main {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.page-main-news > .view-content h2 {
+    margin: 0.3em 0;
+}
+
+.page-main-news > .attachment .views-row {
+    position: relative;
+    margin-left: 40px;
+}
+
+.page-main-news > .attachment .views-field-created {
+    position: absolute;
+    left: -40px;
+    top: 2px;
+    font-size: 11px;
+    color: #D2232A;
+}
+
+.page-main-news > .attachment .view-footer {
+    border-top: none;
+    text-align: center;
+    padding: 0;
+}
+
+
+/* Main page content NEW STYLE */
+
+.block-news-by-regions .view-footer {
+    text-align: center;
+    clear: both;
+}
+
+.block-news-by-regions-block,
+.block-news-by-regions-block-1,
+.block-news-by-regions-block-2,
+.block-news-by-regions-block-3,
+.block-news-by-regions-block-4,
+.block-news-by-regions-block-5 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+
+.block-news-by-regions-block,
+.block-news-by-regions-block-1,
+.block-news-by-regions-block-2,
+.block-news-by-regions-block-3,
+.block-news-by-regions-block-4 {
+    border-bottom: 1px dashed #ccc;
+}
+
+.block-news-by-regions-block .block-title,
+.block-news-by-regions-block-1 .block-title,
+.block-news-by-regions-block-2 .block-title,
+.block-news-by-regions-block-3 .block-title,
+.block-news-by-regions-block-4 .block-title,
+.block-news-by-regions-block-5 .block-title {
+    text-align: left;
+}
 
 /*Last Comments Block Style*/
 

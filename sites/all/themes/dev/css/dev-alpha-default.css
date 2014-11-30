@@ -18,7 +18,7 @@ nav,
 #block-views-front-block-1,
 #block-poll-recent,
 #block-block-11,
-.front #region-content,
+#block-block-29, 
 #block-block-31,
 #block-block-32,
 #block-block-39,
@@ -282,93 +282,52 @@ nav.navigation li a:link, nav.navigation li a:visited {
     border-radius: 3px;
 }
 
-
 /*Main news block style*/
 
-#block-views-front-block-1 .content {
-    padding-bottom: 10px;
-    border-bottom: 1px dashed #ccc;
+.page-main-news > .view-content {
+    width: 460px;
+    float: left;
 }
 
-
-#block-views-front-block-1 h2.block-title {
-    padding: 0;
-}
-
-#block-views-front-block-1 .views-row {
+.page-main-news > .view-content .views-row {
     margin: 0;
 }
 
-#block-views-front-block-1 .views-field-field-pics	{
-    margin-top: 10px;
+.page-main-news > .attachment {
+    width: 230px;
+    float: left;
+    margin-left: 10px;
 }
 
-#block-views-front-block-1 .view-footer {
-    padding-top: 10px;
-}
-
-
-/*Main page content style OLD STYLE */
-
-.view-id-testingrepresentative_node .views-limit-grouping-group {
-    border-bottom: 1px dashed #ccc;
-    padding: 10px 0 5px;
-}
-
-.view-testingrepresentative-node .views-row {
-    min-height: 55px;
-}
-
-.view-id-testingrepresentative_node h3 a {
-    color: #8996a0;
-    font-size: 15px;
-    text-transform: uppercase;
-    padding-right: 10px;
-    text-align: right;
-    font-weight: bold;
-}	
-
-.view-testingrepresentative-node .field-content img {
-    margin-top: 2px;
-}
-
-h2.zahalovak_navin {
-    font-weight:bold; 
-    font-size: 16px; 
-    color:#671A1D; 
-}
-
-.zahalovak_navin a {
-    color:#671A1D; 
+.page-main-news > .attachment .views-row {
+    margin-top: 0;
 }
 
 /* Main page content NEW STYLE */
 
-.main-page-view .views-row {
-    overflow: auto;
+.page-main .main-page-content {
+    margin: 0 0 0 10px;
+    padding-right: 9px;
+    border-right: 1px dashed #ccc;
 }
 
-
-.main-page-view .view-content > h3 {
-    color: #8996A0;
-    font-size: 15px; 
-    font-weight: bold;
-    padding: 0.5em 0 0.2em;
-    border-bottom: 1px dashed #ccc;
-}
-
-.main-page-view .views-field-field-pics {
-    float: left;
-    margin: 5px 5px 0 0;
-}
-
-.main-page-view .view-footer {
-    text-align: center;
+.block-news-by-regions-block-4 {
+    border-bottom: none;
 }
 
 /*First Sidebar*/
 
-#region-sidebar-first .block {
+.grey-sidebar {
+    background-image: url('http://horki.info/sites/all/themes/dev/images/grey_texture.jpg');
+    border-left: 1px dashed #ccc; border-right: 1px dashed #ccc;
+    padding: 10px 5px;
+}
+
+.region-sidebar-first-inner {
+    padding: 10px 0;
+}
+
+.region-sidebar-first .block {
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px dashed #ccc;
@@ -508,22 +467,13 @@ h2.zahalovak_navin {
 
 /* Banner Styles */
 
-#block-block-29 .content {
-    padding: 10px 0;
-    border-bottom: 1px dashed #ccc;
-}
-
-#block-block-32 .content {
-    padding: 10px 0;
-    border-top: 1px dashed #ccc;
-}
-
 #block-block-29 p,
 #block-block-30 p,
 #block-block-31 p,
 #block-block-32 p,
 #block-block-33 p,
-#block-block-35 p {
+#block-block-35 p,
+#block-block-39 p {
     margin: 0;
     padding: 0;
 }
@@ -536,9 +486,27 @@ h2.zahalovak_navin {
 }
 
 #block-block-32 .content,
-#block-block-35 .content {
+#block-block-35 .content,
+#block-block-39 .content {
     width: 700px;
     margin: 0 auto;
+}
+
+#block-block-29 .content {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+#block-block-32 .content {
+    padding: 10px 0;
+    border-top: 1px dashed #ccc;
+}
+
+#block-block-39 .content {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
 }
 
 
