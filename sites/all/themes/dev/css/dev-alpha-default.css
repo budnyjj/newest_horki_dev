@@ -516,3 +516,25 @@ nav.navigation li a:link, nav.navigation li a:visited {
     float: right;
     padding: 0 0 10px 10px;
 }
+
+/* Photoblog page styles */
+
+.page-photohtml #region-content {
+    margin: 0 0 0 10px;
+    width: 720px;
+}
+
+.page-photohtml #region-sidebar-first {
+    margin: 0 10px 0 0;
+}
+
+/* Videoblog page styles */
+
+.page-videohtml #region-content {
+    margin: 0 0 0 10px;
+    width: 720px;
+}
+
+.page-videohtml #region-sidebar-first {
+    margin: 0 10px 0 0;
+}
