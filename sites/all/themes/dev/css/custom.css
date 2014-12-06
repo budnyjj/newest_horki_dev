@@ -829,10 +829,11 @@ article.comment .permalink {
 }
 
 
-.field-name-field-text img, .caption {
+.field-name-field-text img, 
+.caption {
     max-width: 100%;
     vertical-align: baseline;
-    height: auto !important; 
+    height: auto !important;
 }
 
 .field-name-field-photos .field-item {
@@ -854,12 +855,11 @@ article.comment .permalink {
     margin-bottom: 0px;
     position: absolute;
     bottom: 3px;
-    padding: 3px 0 3px 0;
-    width: 100%;
+    padding: 3px 1%;
+    width: 98%;
     color: #fff;
     background-color: #000;
     font-weight: bold;
-    text-align: center;
 }
 
 .embedded-video {
