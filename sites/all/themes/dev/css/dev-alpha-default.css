@@ -386,14 +386,22 @@ nav.navigation li a:link, nav.navigation li a:visited {
 }
 
 #block-poll-recent .content li {
-    margin: 2px 0;
+    width: 120px;
+    margin: 0 auto 0.3em auto;
+    padding: 0.3em 1em 0.5em 1em;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #231F20;
+}
+
+#block-poll-recent .content li:hover,
+#block-poll-recent .content li:active {
+    background-color: #505050;
 }
 
 #block-poll-recent .content li a {
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: underline;
-    color: #231F20;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Preview zone settings */
