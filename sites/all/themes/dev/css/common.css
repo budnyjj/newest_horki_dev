@@ -116,22 +116,27 @@ a.no-underline-text:hover {
 
 .more-link,
 .black-button,
-.red-button {
+.red-button,
+.item-list .pager li {
     width: 120px;
     margin: 0 auto 0.3em auto;
-    padding: 0.3em 1em;
+    padding: 0.3em 1em 0.5em 1em;
     border-radius: 3px;
 }
 
 .more-link,
-.black-button {
+.black-button,
+.item-list .pager li {
+    color: #fff;
     background-color: #231F20;
 }
 
 .more-link:hover,
 .more-link:active,
 .black-button:hover,
-.black-button:active {
+.black-button:active,
+.item-list .pager li:hover,
+.item-list .pager li:active {
     background-color: #505050;
 }
 
@@ -144,9 +149,10 @@ a.no-underline-text:hover {
     background-color: #D2232A;
 }
 
-.more-link a,
 .black-button a,
-.red-button a {
+.red-button a,
+.item-list .pager li a,
+.more-link a {
     color: #fff;
     text-decoration: none;
 }

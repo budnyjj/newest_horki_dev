@@ -211,32 +211,16 @@ input[type="button"]:hover {
 
 /* Pager styles */
 
-.view .pager {
-    padding: 0.7em 0;
-    margin: 0;
-    font-size: 1.1em;
-    font-weight: bold;
+.item-list .pager li.pager-first,
+.item-list .pager li.pager-previous,
+.item-list .pager li.pager-current,
+.item-list .pager li.pager-item { 
+    margin-right: 0.5em;
 }
 
-.view .pager li {
-    margin: 0 0.5em;
+.item-list .pager li.pager-last { 
+    margin-left: 0.5em;
 }
-
-.view .pager li a {
-    color: #231F20;
-    text-decoration: underline;
-}
-
-.view .pager li.pager-current {
-    color: #D2232A;
-    text-decoration: underline;
-}
-
-.view .pager li.pager-first a,
-.view .pager li.pager-last a {
-    color: #666;
-}
-
 
 /*Block Titles*/	
 
