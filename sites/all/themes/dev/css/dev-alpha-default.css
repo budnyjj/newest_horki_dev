@@ -327,6 +327,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
     background-image: url('http://horki.info/sites/all/themes/dev/images/grey_texture.jpg');
     border-left: 1px dashed #ccc; border-right: 1px dashed #ccc;
     padding: 10px 5px;
+    width: 208px !important; 
 }
 
 .region-sidebar-first-inner {
@@ -478,7 +479,9 @@ nav.navigation li a:link, nav.navigation li a:visited {
 #block-block-32 p,
 #block-block-33 p,
 #block-block-35 p,
-#block-block-39 p {
+#block-block-39 p,
+#block-block-43 p,
+#block-block-44 p {
     margin: 0;
     padding: 0;
 }
@@ -492,11 +495,16 @@ nav.navigation li a:link, nav.navigation li a:visited {
 
 #block-block-32 .content,
 #block-block-35 .content,
-#block-block-39 .content {
+#block-block-39 .content,
+#block-block-43 .content,
+#block-block-44 .content {
     width: 710px;
 }
 
-#block-block-29 .content {
+#block-block-29 .content,
+#block-block-39 .content,
+#block-block-43 .content,
+#block-block-44 .content {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px dashed #ccc;
@@ -506,13 +514,6 @@ nav.navigation li a:link, nav.navigation li a:visited {
     padding: 10px 0;
     border-top: 1px dashed #ccc;
 }
-
-#block-block-39 .content {
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px dashed #ccc;
-}
-
 
 /* Footer styles */
 

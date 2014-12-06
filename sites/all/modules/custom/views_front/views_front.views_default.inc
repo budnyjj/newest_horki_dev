@@ -32,6 +32,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Прымяніць';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '15';
@@ -307,6 +308,12 @@ function views_front_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
   );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
   $handler->display->display_options['displays'] = array(
     'page_1' => 'page_1',
     'default' => 0,
@@ -316,7 +323,7 @@ function views_front_views_default_views() {
   $translatables['front'] = array(
     t('Master'),
     t('болей'),
-    t('Apply'),
+    t('Прымяніць'),
     t('Скінуць'),
     t('Sort by'),
     t('Asc'),
