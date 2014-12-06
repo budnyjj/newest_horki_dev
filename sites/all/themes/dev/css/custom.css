@@ -249,15 +249,6 @@ h2.block-title {
     font-weight: bold;
 }
 
-/* Block More Link */
-
-.block .more-link a {
-    color: #231F20;
-    font-size: 1.1em !important;
-    font-weight: bold;
-    text-decoration: underline !important;
-}
-
 /*Logo Block Styles*/
 
 #block-block-8 {
@@ -406,7 +397,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 /*Main news block style*/
 
 .page-main .block-main {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin-bottom: 10px;
     border-bottom: 1px dashed #ccc;
 }
@@ -449,7 +440,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 .block-news-by-regions-block-4,
 .block-news-by-regions-block-5 {
     margin-bottom: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 

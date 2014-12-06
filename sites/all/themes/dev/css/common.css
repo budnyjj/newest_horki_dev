@@ -104,8 +104,51 @@ a.no-underline-text:hover {
 	font-weight: bold;
 }
 
+.large-text {
+    font-size: 1.1em !important;
+}
+
 .small-text {
     font-size: 0.85em;
+}
+
+/* Button styles */
+
+.more-link,
+.black-button,
+.red-button {
+    width: 120px;
+    margin: 0 auto 0.3em auto;
+    padding: 0.3em 1em;
+    border-radius: 3px;
+}
+
+.more-link,
+.black-button {
+    background-color: #231F20;
+}
+
+.more-link:hover,
+.more-link:active,
+.black-button:hover,
+.black-button:active {
+    background-color: #505050;
+}
+
+.red-button {
+    background-color: #671A1D;
+}
+
+.red-button:hover,
+.red-button:active {
+    background-color: #D2232A;
+}
+
+.more-link a,
+.black-button a,
+.red-button a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Table styles */
@@ -173,14 +216,38 @@ table {
     margin-right: 20px;
 }
 
-.media-grid .views-row {
+.media-grid-page .views-row {
     width: 230px;
     height: 250px;
     float: left;
     margin: 0 10px 10px 0;
 }
 
+.media-grid-block .views-row {
+    width: 230px;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.media-grid-block .views-row-last {
+    width: 230px;
+    float: left;
+    margin: 0 0 10px 0;
+}
+
+
 /* Misc styles */
+
+.statistics-list {
+    color: #585858;
+    font-size: 11px;
+    margin-top: 0.3em;
+    margin-bottom: 0.7em;
+}
+
+.statistics-list img {
+    height: 12px;
+}
 
 .comments-counter {
     color: #fff;

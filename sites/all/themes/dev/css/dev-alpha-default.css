@@ -305,14 +305,20 @@ nav.navigation li a:link, nav.navigation li a:visited {
 
 /* Main page content NEW STYLE */
 
+.page-main #region-content {
+    margin: 0 0 0 10px;
+    width: 710px;
+}
+
+.page-main #region-sidebar-first {
+    margin: 0 10px;
+    width: 210px;
+}
+
 .page-main .main-page-content {
     margin: 0 0 0 10px;
     padding-right: 9px;
     border-right: 1px dashed #ccc;
-}
-
-.block-news-by-regions-block-4 {
-    border-bottom: none;
 }
 
 /*First Sidebar*/
@@ -426,7 +432,6 @@ nav.navigation li a:link, nav.navigation li a:visited {
     float: left;
 }
 
-
 #block-views-videoblog-block, #block-views-photoblog-block {
     float: left;
 }
@@ -488,8 +493,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
 #block-block-32 .content,
 #block-block-35 .content,
 #block-block-39 .content {
-    width: 700px;
-    margin: 0 auto;
+    width: 710px;
 }
 
 #block-block-29 .content {
