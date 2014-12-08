@@ -294,7 +294,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
 }
 
 .page-main-news > .attachment {
-    width: 230px;
+    width: 240px;
     float: left;
     margin-left: 10px;
 }
@@ -549,5 +549,27 @@ nav.navigation li a:link, nav.navigation li a:visited {
 }
 
 .page-videohtml #region-sidebar-first {
+    margin: 0 10px 0 0;
+}
+
+/* Taxonomy page styles */
+
+.page-taxonomy #region-content {
+    margin: 0 0 0 10px;
+    width: 720px;
+}
+
+.page-taxonomy #region-sidebar-first {
+    margin: 0 10px 0 0;
+}
+
+/* Narodnyja naviny page styles */
+
+.page-narodnyjahtml #region-content {
+    margin: 0 0 0 10px;
+    width: 720px;
+}
+
+.page-narodnyjahtml #region-sidebar-first {
     margin: 0 10px 0 0;
 }

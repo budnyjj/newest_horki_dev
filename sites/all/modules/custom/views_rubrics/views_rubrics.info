@@ -1,0 +1,12 @@
+name = Views: rubrics
+description = Views omulation of taxonomy page
+core = 7.x
+package = Custom
+version = 7.x-1.0
+project = views_rubrics
+dependencies[] = views
+dependencies[] = views_load_more
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = rubrics
+features_exclude[dependencies][ctools] = ctools

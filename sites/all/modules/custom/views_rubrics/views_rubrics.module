@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Views: rubrics feature.
+ */
+
+include_once 'views_rubrics.features.inc';
