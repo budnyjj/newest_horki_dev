@@ -15,7 +15,7 @@ function comments_suite_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'comment_form';
   $context->description = 'Comment form for article page';
-  $context->tag = 'other';
+  $context->tag = 'blocks';
   $context->conditions = array(
     'context' => array(
       'values' => array(
@@ -47,7 +47,7 @@ function comments_suite_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Comment form for article page');
-  t('other');
+  t('blocks');
   $export['comment_form'] = $context;
 
   $context = new stdClass();
@@ -55,19 +55,28 @@ function comments_suite_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'comments';
   $context->description = 'context for comments list on article page';
-  $context->tag = 'other';
+  $context->tag = 'blocks';
   $context->conditions = array(
     'context' => array(
       'values' => array(
         'base' => 'base',
       ),
     ),
+    'node' => array(
+      'values' => array(
+        'afisha' => 'afisha',
+        'company' => 'company',
+        'news' => 'news',
+        'news_from_readers' => 'news_from_readers',
+        'poll' => 'poll',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
     'path' => array(
       'values' => array(
-        'afisha/*' => 'afisha/*',
-        'navina/*' => 'navina/*',
-        'narodnaja/*' => 'narodnaja/*',
-        'poll/*' => 'poll/*',
+        'node/*' => 'node/*',
       ),
     ),
   );
@@ -87,8 +96,8 @@ function comments_suite_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('blocks');
   t('context for comments list on article page');
-  t('other');
   $export['comments'] = $context;
 
   return $export;

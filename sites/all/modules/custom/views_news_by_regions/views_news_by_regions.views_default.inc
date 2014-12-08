@@ -27,9 +27,14 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Прымяніць';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -72,6 +77,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['text'] = '| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = '';
   /* Поле: Змест: Колькасць каментароў */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
@@ -83,6 +89,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['alter']['text'] = '| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = '';
   /* Поле: Тэрмін таксаноміі: Дэфолтны здымак на старонцы рубрыкі */
   $handler->display->display_options['fields']['field_default_image']['id'] = 'field_default_image';
@@ -218,6 +225,36 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['footer']['area']['label'] = 'Больш навінаў';
   $handler->display->display_options['footer']['area']['content'] = '<div class="black-button"><a href="/bdsga.html">больш навінаў</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'author_text';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Апублікавана */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['value'] = array(
+    0 => '61',
+  );
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['operator_id'] = 'field_placement_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['label'] = 'Месцы (field_placement_by_taxonomy)';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['operator'] = 'field_placement_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['identifier'] = 'field_placement_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['vocabulary'] = 'places';
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'afisha' => 'afisha',
+    'news' => 'news',
+    'news_from_readers' => 'news_from_readers',
+  );
   $handler->display->display_options['block_description'] = 'Навіны БДСГА';
 
   /* Display: Дрыбін */
@@ -310,7 +347,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'Больш навінаў';
-  $handler->display->display_options['footer']['area']['content'] = '<div class="black-button"><a href="/regyon.html">больш навінаў</a></div>
+  $handler->display->display_options['footer']['area']['content'] = '<div class="black-button"><a href="/regiyon.html">больш навінаў</a></div>
 ';
   $handler->display->display_options['footer']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -368,7 +405,7 @@ function views_news_by_regions_views_default_views() {
     t('Master'),
     t('Горкі'),
     t('болей'),
-    t('Apply'),
+    t('Прымяніць'),
     t('Скінуць'),
     t('Sort by'),
     t('Asc'),
@@ -395,7 +432,7 @@ function views_news_by_regions_views_default_views() {
     t('<div class="black-button"><a href="/mscislau.html">больш навінаў</a></div>'),
     t('Навіны Мсціслава'),
     t('Рэгіён'),
-    t('<div class="black-button"><a href="/regyon.html">больш навінаў</a></div>
+    t('<div class="black-button"><a href="/regiyon.html">больш навінаў</a></div>
 '),
     t('Навіны рэгіёна'),
     t('Краіна'),
