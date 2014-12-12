@@ -563,6 +563,17 @@ nav.navigation li a:link, nav.navigation li a:visited {
     margin: 0 10px 0 0;
 }
 
+/* Aposhnija naviny page styles */
+
+.page-navinyhtml #region-content {
+    margin: 0 0 0 10px;
+    width: 720px;
+}
+
+.page-navinyhtml #region-sidebar-first {
+    margin: 0 10px 0 0;
+}
+
 /* Narodnyja naviny page styles */
 
 .page-narodnyjahtml #region-content {
