@@ -435,7 +435,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]"><img src="/sites/default/files/default_images/letter_small.png"></a>';
+  $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'image_style' => 'photo_video_preview',
@@ -520,6 +520,7 @@ function views_news_lists_views_default_views() {
     t('| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">'),
     t('.'),
     t('| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">'),
+    t('<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>'),
     t('<div class="statistics-list">[created] [recentcount] [comment_count]</div>'),
     t('[title][comment_count]'),
   );
