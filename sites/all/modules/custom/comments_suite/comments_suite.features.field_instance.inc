@@ -34,7 +34,7 @@ function comments_suite_field_default_field_instances() {
           'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,google_plusone_share,email,print,favorites',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -49,7 +49,7 @@ function comments_suite_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -73,7 +73,7 @@ function comments_suite_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -168,10 +168,11 @@ function comments_suite_field_default_field_instances() {
         'weight' => 6,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 8,
       ),
       'rss' => array(
         'label' => 'above',
@@ -200,6 +201,44 @@ function comments_suite_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-afisha-field_rubric_by_taxonomy'
+  $field_instances['node-afisha-field_rubric_by_taxonomy'] = array(
+    'bundle' => 'afisha',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Напрыклад, інтэрв\'ю, здарэнні, культура, фотаблог, відэаблог...',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 8,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_rubric_by_taxonomy',
+    'label' => 'Рубрыкі',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 14,
     ),
   );
 
@@ -293,7 +332,7 @@ function comments_suite_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -315,7 +354,7 @@ function comments_suite_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'rss' => array(
         'label' => 'above',
@@ -397,7 +436,7 @@ function comments_suite_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'rss' => array(
         'label' => 'above',
@@ -479,7 +518,7 @@ function comments_suite_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'rss' => array(
         'label' => 'above',
@@ -2576,7 +2615,7 @@ function comments_suite_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'default_images/places',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -2594,24 +2633,30 @@ function comments_suite_field_default_field_instances() {
         'insert_default' => 'auto',
         'insert_styles' => array(
           'auto' => 'auto',
-          'colorbox__banner' => 0,
           'colorbox__large' => 0,
           'colorbox__main_pic_preview' => 0,
           'colorbox__medium' => 0,
           'colorbox__node_teaser_preview' => 0,
+          'colorbox__photo_video_preview' => 0,
           'colorbox__square_news_preview' => 0,
-          'colorbox__square_photo_video_preview' => 0,
           'colorbox__thumbnail' => 0,
+          'colorbox__user_avatar_block' => 0,
+          'colorbox__user_avatar_comment' => 0,
+          'colorbox__user_avatar_page' => 0,
+          'colorbox__uzgorak_preview' => 0,
           'icon_link' => 0,
           'image' => 0,
-          'image_banner' => 0,
           'image_large' => 0,
           'image_main_pic_preview' => 0,
           'image_medium' => 0,
           'image_node_teaser_preview' => 0,
+          'image_photo_video_preview' => 0,
           'image_square_news_preview' => 0,
-          'image_square_photo_video_preview' => 0,
           'image_thumbnail' => 0,
+          'image_user_avatar_block' => 0,
+          'image_user_avatar_comment' => 0,
+          'image_user_avatar_page' => 0,
+          'image_uzgorak_preview' => 0,
           'link' => 0,
         ),
         'insert_width' => '',

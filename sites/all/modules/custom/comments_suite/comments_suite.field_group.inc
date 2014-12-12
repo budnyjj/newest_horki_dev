@@ -325,6 +325,33 @@ function comments_suite_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_places|node|afisha|form';
+  $field_group->group_name = 'group_places';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'afisha';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_tags';
+  $field_group->data = array(
+    'label' => 'Месцы',
+    'weight' => '17',
+    'children' => array(
+      0 => 'field_placement_by_taxonomy',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-places field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_places|node|afisha|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_places|node|news_from_readers|form';
   $field_group->group_name = 'group_places';
   $field_group->entity_type = 'node';
@@ -407,6 +434,33 @@ function comments_suite_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_rubrics|node|afisha|form';
+  $field_group->group_name = 'group_rubrics';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'afisha';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_tags';
+  $field_group->data = array(
+    'label' => 'Рубрыкі',
+    'weight' => '18',
+    'children' => array(
+      0 => 'field_rubric_by_taxonomy',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-rubrics field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_rubrics|node|afisha|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_rubrics|node|news_from_readers|form';
   $field_group->group_name = 'group_rubrics';
   $field_group->entity_type = 'node';
@@ -457,6 +511,60 @@ function comments_suite_field_group_info() {
     ),
   );
   $export['group_rubrics|node|news|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_tags|node|afisha|form';
+  $field_group->group_name = 'group_tags';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'afisha';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Тэгі',
+    'weight' => '6',
+    'children' => array(
+      0 => 'group_places',
+      1 => 'group_rubrics',
+    ),
+    'format_type' => 'tabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-tags field-group-tabs',
+      ),
+    ),
+  );
+  $export['group_tags|node|afisha|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_tags|node|afisha|full';
+  $field_group->group_name = 'group_tags';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'afisha';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Тэгі:',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_placement_by_taxonomy',
+      1 => 'field_rubric_by_taxonomy',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Тэгі:',
+      'instance_settings' => array(
+        'classes' => 'group-tags field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_tags|node|afisha|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

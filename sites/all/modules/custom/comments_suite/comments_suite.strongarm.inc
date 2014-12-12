@@ -292,16 +292,16 @@ function comments_suite_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '12',
-        ),
-        'path' => array(
           'weight' => '11',
         ),
-        'redirect' => array(
+        'path' => array(
           'weight' => '10',
         ),
-        'xmlsitemap' => array(
+        'redirect' => array(
           'weight' => '9',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(),
