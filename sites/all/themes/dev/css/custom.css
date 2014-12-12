@@ -27,6 +27,9 @@ nav,
 #block-block-32, 
 #block-block-39,
 #block-block-40,
+#block-block-43,
+#block-block-44,
+#block-block-45,
 #akavita {
     display: none;
 }
@@ -425,14 +428,6 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 .block-news-by-regions-block-5 {
     margin-bottom: 10px;
     padding-bottom: 5px;
-}
-
-
-.block-news-by-regions-block,
-.block-news-by-regions-block-1,
-.block-news-by-regions-block-2,
-.block-news-by-regions-block-3,
-.block-news-by-regions-block-4 {
     border-bottom: 1px dashed #ccc;
 }
 
