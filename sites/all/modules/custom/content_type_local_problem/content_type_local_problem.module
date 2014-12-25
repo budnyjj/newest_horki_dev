@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content type: local problem feature.
+ */
+
+include_once 'content_type_local_problem.features.inc';
