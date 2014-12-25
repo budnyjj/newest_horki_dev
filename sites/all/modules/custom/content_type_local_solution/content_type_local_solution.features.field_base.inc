@@ -10,13 +10,13 @@
 function content_type_local_solution_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_pdf'
-  $field_bases['field_pdf'] = array(
+  // Exported field_base: 'field_documents'
+  $field_bases['field_documents'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_pdf',
+    'field_name' => 'field_documents',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
@@ -35,7 +35,6 @@ function content_type_local_solution_field_default_field_bases() {
     'settings' => array(
       'display_default' => 0,
       'display_field' => 0,
-      'profile2_private' => FALSE,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,

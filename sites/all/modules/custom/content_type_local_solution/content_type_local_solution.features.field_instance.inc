@@ -10,102 +10,6 @@
 function content_type_local_solution_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-local_solution-body'
-  $field_instances['node-local_solution-body'] = array(
-    'bundle' => 'local_solution',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Змест',
-    'required' => 1,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ads_text' => 'ads_text',
-          'anonymous_text' => 'anonymous_text',
-          'author_text' => 'author_text',
-          'comment_text' => 'comment_text',
-          'company_text' => 'company_text',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ads_text' => array(
-              'weight' => 0,
-            ),
-            'anonymous_text' => array(
-              'weight' => -8,
-            ),
-            'author_text' => array(
-              'weight' => -10,
-            ),
-            'comment_text' => array(
-              'weight' => 0,
-            ),
-            'company_text' => array(
-              'weight' => 0,
-            ),
-            'php_code' => array(
-              'weight' => -6,
-            ),
-            'plain_text' => array(
-              'weight' => -7,
-            ),
-          ),
-        ),
-      ),
-      'display_summary' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'maxlength_js' => '',
-        'maxlength_js_enforce' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'maxlength_js_label_summary' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'maxlength_js_summary' => '',
-        'maxlength_js_truncate_html' => 0,
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 2,
-    ),
-  );
-
   // Exported field_instance: 'node-local_solution-field_add_this'
   $field_instances['node-local_solution-field_add_this'] = array(
     'bundle' => 'local_solution',
@@ -122,9 +26,14 @@ function content_type_local_solution_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_disabled',
+        'module' => 'addthis_displays',
+        'settings' => array(
+          'buttons_size' => 'addthis_32x32_style',
+          'counter_orientation' => 'vertical',
+          'extra_css' => '',
+          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,google_plusone_share,email,print,favorites',
+        ),
+        'type' => 'addthis_basic_toolbox',
         'weight' => 2,
       ),
     ),
@@ -140,22 +49,22 @@ function content_type_local_solution_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-local_solution-field_pdf'
-  $field_instances['node-local_solution-field_pdf'] = array(
+  // Exported field_instance: 'node-local_solution-field_documents'
+  $field_instances['node-local_solution-field_documents'] = array(
     'bundle' => 'local_solution',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Афіцыйныя дакументы',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 1,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -166,13 +75,13 @@ function content_type_local_solution_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_pdf',
-    'label' => 'PDF',
+    'field_name' => 'field_documents',
+    'label' => 'Дакументы',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
-      'file_directory' => 'local_solutions',
-      'file_extensions' => 'pdf doc docx',
+      'file_directory' => 'local_solutions/[current-date:system]',
+      'file_extensions' => 'txt doc docx pdf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -262,7 +171,7 @@ function content_type_local_solution_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'insert' => 0,
+        'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
         'insert_default' => 'image_medium',
@@ -303,13 +212,101 @@ function content_type_local_solution_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-local_solution-field_text'
+  $field_instances['node-local_solution-field_text'] = array(
+    'bundle' => 'local_solution',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_text',
+    'label' => 'Тэкст',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'ads_text' => 0,
+          'anonymous_text' => 0,
+          'author_text' => 'author_text',
+          'comment_text' => 0,
+          'company_text' => 0,
+          'php_code' => 0,
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'ads_text' => array(
+              'weight' => 0,
+            ),
+            'anonymous_text' => array(
+              'weight' => -8,
+            ),
+            'author_text' => array(
+              'weight' => -10,
+            ),
+            'comment_text' => array(
+              'weight' => 0,
+            ),
+            'company_text' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => -6,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+          ),
+        ),
+      ),
+      'display_summary' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_label_summary' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_summary' => '',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 50,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
-  t('PDF');
+  t('Афіцыйныя дакументы');
   t('Галоўны фотаздымак');
   t('Гэты малюнак будзе паказвацца ў спісе рашэнняў праблем');
-  t('Змест');
+  t('Дакументы');
   t('Падзяліцца');
+  t('Тэкст');
 
   return $field_instances;
 }
