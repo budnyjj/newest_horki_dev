@@ -51,6 +51,14 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'main_news' => 'main_news',
+  );
   /* Поле: Змест: Шлях */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
@@ -174,6 +182,18 @@ function views_news_by_regions_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
   );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue_1']['id'] = 'in_queue_1';
+  $handler->display->display_options['filters']['in_queue_1']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue_1']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue_1']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue_1']['value'] = '0';
 
   /* Display: Горкі */
   $handler = $view->new_display('block', 'Горкі', 'block');
@@ -201,6 +221,17 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['value'] = array(
     0 => '58',
   );
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['operator_id'] = 'field_placement_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['label'] = 'Месцы (field_placement_by_taxonomy)';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['operator'] = 'field_placement_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['identifier'] = 'field_placement_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['vocabulary'] = 'places';
   /* Filter criterion: Змест: Тып */
   $handler->display->display_options['filters']['type']['id'] = 'type';
@@ -211,7 +242,14 @@ function views_news_by_regions_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
   );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
   $handler->display->display_options['block_description'] = 'Навіны Горак';
+  $handler->display->display_options['block_caching'] = '8';
 
   /* Display: БДСГА */
   $handler = $view->new_display('block', 'БДСГА', 'block_1');
@@ -255,7 +293,14 @@ function views_news_by_regions_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
   );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
   $handler->display->display_options['block_description'] = 'Навіны БДСГА';
+  $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Дрыбін */
   $handler = $view->new_display('block', 'Дрыбін', 'block_2');
@@ -295,7 +340,14 @@ function views_news_by_regions_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
   );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
   $handler->display->display_options['block_description'] = 'Навіны Дрыбіна';
+  $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Мсціслаў */
   $handler = $view->new_display('block', 'Мсціслаў', 'block_3');
@@ -335,7 +387,14 @@ function views_news_by_regions_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
   );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
   $handler->display->display_options['block_description'] = 'Навіны Мсціслава';
+  $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Рэгіён */
   $handler = $view->new_display('block', 'Рэгіён', 'block_4');
@@ -386,7 +445,14 @@ function views_news_by_regions_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
   );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
   $handler->display->display_options['block_description'] = 'Навіны рэгіёна';
+  $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Краіна */
   $handler = $view->new_display('block', 'Краіна', 'block_5');
@@ -400,7 +466,44 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['footer']['area']['label'] = 'Больш навінаў';
   $handler->display->display_options['footer']['area']['content'] = '<div class="black-button"><a href="/kraina.html">больш навінаў</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'author_text';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Апублікавана */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['value'] = array(
+    0 => '78',
+  );
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['operator_id'] = 'field_placement_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['label'] = 'Месцы (field_placement_by_taxonomy)';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['operator'] = 'field_placement_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['expose']['identifier'] = 'field_placement_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['vocabulary'] = 'places';
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'afisha' => 'afisha',
+    'news' => 'news',
+    'news_from_readers' => 'news_from_readers',
+  );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue_1']['id'] = 'in_queue_1';
+  $handler->display->display_options['filters']['in_queue_1']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue_1']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue_1']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue_1']['value'] = '0';
   $handler->display->display_options['block_description'] = 'Навіны краіны';
+  $handler->display->display_options['block_caching'] = '8';
   $translatables['news_by_regions'] = array(
     t('Master'),
     t('Горкі'),
@@ -413,6 +516,7 @@ function views_news_by_regions_views_default_views() {
     t('Больш навінаў'),
     t('<a class="bold-text black-text" href="/gorki.html">больш навінаў</a>'),
     t('term from field_placement_by_taxonomy'),
+    t('чарга'),
     t('<span class="date-list">[created]</span>'),
     t('| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">'),
     t('.'),
