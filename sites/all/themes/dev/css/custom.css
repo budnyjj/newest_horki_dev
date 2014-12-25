@@ -891,7 +891,8 @@ article .field-name-field-author {
 }
 
 article .group-tags,
-article .field-name-field-add-this {
+article .field-name-field-add-this,
+article .field-name-field-documents {
     border-top: 1px dashed #ccc;
     padding: 0.7em 0;
     margin: 0;
@@ -1235,7 +1236,6 @@ article .poll {
     border-top: 1px dashed #ccc;
 }
 
-
 /* Disable table-drag wrapper*/
 
 .tabledrag-toggle-weight-wrapper {
@@ -1543,16 +1543,28 @@ article.node-webform footer.submitted {
 
 /*Addthis styles*/
 
-.field-type-addthis .field-label {
+.field-name-field-add-this .field-label {
     font-size: 15px;
     color: #8996A0;
     text-transform: uppercase;
     margin-bottom: 0.2em;
 }
 
-.field-type-addthis .at300b {
+.field-name-field-add-this .at300b {
     padding: 0 4px 0 0;
 }
+
+/* Documents styles */
+
+
+
+.field-name-field-documents .field-label {
+    font-size: 15px;
+    color: #8996A0;
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+}
+
 
 /*Admin menu style*/
 
