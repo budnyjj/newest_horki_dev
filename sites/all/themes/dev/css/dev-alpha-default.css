@@ -591,6 +591,17 @@ nav.navigation li a:link, nav.navigation li a:visited {
     margin: 0 10px 0 0;
 }
 
+/* Local problems page styles */
+
+.page-problemshtml #region-content {
+    margin: 0 0 0 10px;
+    width: 720px;
+}
+
+.page-problemshtml #region-sidebar-first {
+    margin: 0 10px 0 0;
+}
+
 /* Local solutions page styles */
 
 .page-solutionshtml #region-content {

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Views: local problems feature.
+ */
+
+include_once 'views_local_problems.features.inc';
