@@ -1328,6 +1328,24 @@ article .poll {
 	max-width: 700px;
 }
 
+/* Local problem page styles*/
+
+.local-problem-status {
+    text-transform: lowercase;
+}
+
+.local-problem-red {
+    color: #D2232A;
+}
+
+.local-problem-orange {
+    color: orange;
+}
+
+.local-problem-green {
+    color: green;
+}
+
 /* Ad page styles */
 
 #node_ads_full_group_info .field-name-field-ads-phone .field-label,
