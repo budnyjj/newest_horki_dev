@@ -142,23 +142,23 @@ function dev_preprocess_node(&$variables)
 
   if (array_key_exists('field_problem_status', $content)) {
     $problem_status = $content['field_problem_status'];
-    $problem_status_text = '<span class="local-problem-status ';
+    $problem_status_text = '<span class="';
 
-    $problem_status_tid = intval($problem_status['#items'][0]['tid']);
-    switch ($problem_status_tid)
+    $problem_status_value = mb_strtolower($problem_status[0]['#markup']);
+    switch ($problem_status_value)
       {
-	    case 155:
-	      $problem_status_text .= 'local-problem-orange';          
+	    case "не вырашана":
+	      $problem_status_text .= 'local-problem-orange';
 	      break;
-	    case 156:
-	      $problem_status_text .= 'local-problem-red';          
+	    case "не вырашалася":
+	      $problem_status_text .= 'local-problem-red';
           break;
-        case 157:
-          $problem_status_text .= 'local-problem-green';          
+        case "вырашана":
+          $problem_status_text .= 'local-problem-green';
           break;
       }
     $problem_status_text .= '">';
-    $problem_status_text .= $problem_status[0]['#markup'];
+    $problem_status_text .= $problem_status_value;
     $problem_status_text .= '</span>';
     $variables['local_problem_status'] = $problem_status_text;
   }

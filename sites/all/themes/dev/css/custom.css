@@ -1330,10 +1330,6 @@ article .poll {
 
 /* Local problem page styles*/
 
-.local-problem-status {
-    text-transform: lowercase;
-}
-
 .local-problem-red {
     color: #D2232A;
 }
