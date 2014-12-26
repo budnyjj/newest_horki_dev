@@ -34,7 +34,7 @@ function content_type_local_solution_field_default_field_instances() {
           'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,google_plusone_share,email,print,favorites',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -49,7 +49,7 @@ function content_type_local_solution_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -129,6 +129,48 @@ function content_type_local_solution_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-local_solution-field_linked_local_problems'
+  $field_instances['node-local_solution-field_linked_local_problems'] = array(
+    'bundle' => 'local_solution',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Мясцовыя праблемы, якія лагічна звязаныя з гэтым матэрыялам. ',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'node_reference',
+        'settings' => array(),
+        'type' => 'node_reference_default',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'node_reference',
+        'settings' => array(),
+        'type' => 'node_reference_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_linked_local_problems',
+    'label' => 'Звязаныя праблемы',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'node_reference',
+      'settings' => array(
+        'autocomplete_match' => 'contains',
+        'autocomplete_path' => 'node_reference/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'node_reference_autocomplete',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-local_solution-field_pics'
   $field_instances['node-local_solution-field_pics'] = array(
     'bundle' => 'local_solution',
@@ -149,7 +191,7 @@ function content_type_local_solution_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -305,6 +347,8 @@ function content_type_local_solution_field_default_field_instances() {
   t('Галоўны фотаздымак');
   t('Гэты малюнак будзе паказвацца ў спісе рашэнняў праблем');
   t('Дакументы');
+  t('Звязаныя праблемы');
+  t('Мясцовыя праблемы, якія лагічна звязаныя з гэтым матэрыялам. ');
   t('Падзяліцца');
   t('Тэкст');
 

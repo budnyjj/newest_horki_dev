@@ -890,9 +890,7 @@ article .field-name-field-author {
     margin: 0;
 }
 
-article .group-tags,
-article .field-name-field-add-this,
-article .field-name-field-documents {
+article .group-tags {
     border-top: 1px dashed #ccc;
     padding: 0.7em 0;
     margin: 0;
@@ -1559,6 +1557,12 @@ article.node-webform footer.submitted {
 
 /*Addthis styles*/
 
+article .field-name-field-add-this {
+    border-top: 1px dashed #ccc;
+    padding: 0.7em 0;
+    margin: 0;
+}
+
 .field-name-field-add-this .field-label {
     font-size: 15px;
     color: #8996A0;
@@ -1572,7 +1576,11 @@ article.node-webform footer.submitted {
 
 /* Documents styles */
 
-
+article .field-name-field-documents {
+    border-top: 1px dashed #ccc;
+    padding: 0.7em 0;
+    margin: 0;
+}
 
 .field-name-field-documents .field-label {
     font-size: 15px;
@@ -1581,6 +1589,25 @@ article.node-webform footer.submitted {
     margin-bottom: 0.2em;
 }
 
+/* Linked local problems styles*/
+
+article .field-name-field-linked-local-problems {
+    border-top: 1px dashed #ccc;
+    padding: 0.7em 0;
+    margin: 0;
+}
+
+.field-name-field-linked-local-problems .field-label {
+    font-size: 15px;
+    color: #8996A0;
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+}
+
+.field-name-field-linked-local-problems .field-items a {
+    color: #671A1D;
+    font-weight: bold;
+}
 
 /*Admin menu style*/
 

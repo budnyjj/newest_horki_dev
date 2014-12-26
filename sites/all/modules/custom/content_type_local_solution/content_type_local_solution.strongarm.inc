@@ -87,19 +87,19 @@ function content_type_local_solution_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '4',
-        ),
-        'redirect' => array(
           'weight' => '5',
         ),
-        'xmlsitemap' => array(
+        'redirect' => array(
           'weight' => '6',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '7',
         ),
       ),
       'display' => array(),
