@@ -343,6 +343,13 @@ function views_solutions_views_default_views() {
   $handler = $view->new_display('block', 'Блок', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Ідэі вырашэння праблем';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'больш ідэй';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
@@ -386,6 +393,7 @@ function views_solutions_views_default_views() {
     t('[title][comment_count]'),
     t('Блок'),
     t('Ідэі вырашэння праблем'),
+    t('больш ідэй'),
     t('Ідэі вырашэння мясцовых праблем'),
   );
   $export['knowledge_base'] = $view;
