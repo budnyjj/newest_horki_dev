@@ -66,6 +66,7 @@ function comments_suite_context_default_contexts() {
       'values' => array(
         'afisha' => 'afisha',
         'company' => 'company',
+        'local_problem' => 'local_problem',
         'news' => 'news',
         'news_from_readers' => 'news_from_readers',
         'poll' => 'poll',
