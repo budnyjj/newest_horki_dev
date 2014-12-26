@@ -15,7 +15,7 @@ function views_solutions_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'База ведаў';
+  $view->human_name = 'Рашэнні мясцовых праблем';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -338,6 +338,27 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'menu-genres';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Блок */
+  $handler = $view->new_display('block', 'Блок', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Ідэі вырашэння праблем';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = 'black-text, bold-text';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Ідэі вырашэння мясцовых праблем';
   $translatables['knowledge_base'] = array(
     t('Master'),
     t('болей'),
@@ -363,6 +384,9 @@ function views_solutions_views_default_views() {
     t('<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>'),
     t('<div class="statistics-list">[created] [recentcount] [comment_count]</div>'),
     t('[title][comment_count]'),
+    t('Блок'),
+    t('Ідэі вырашэння праблем'),
+    t('Ідэі вырашэння мясцовых праблем'),
   );
   $export['knowledge_base'] = $view;
 
