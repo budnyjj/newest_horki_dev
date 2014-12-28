@@ -440,6 +440,22 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     text-align: left;
 }
 
+/* Last news Block Style */
+
+.block-aposhnija-naviny-block-1 h3
+{
+    background-color:#671b1d;
+    border-radius: 3px;
+    padding: 1px;
+    clear: both;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: block;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
 /*Last Comments Block Style*/
 
 #block-views-comments-block-block-1 .views-field-picture {
