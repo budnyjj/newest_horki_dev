@@ -365,10 +365,10 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 }
 
 
-/* Last News and Abvestki Block Style */
+/* Abvestki Block Style */
 
-.view-id-aposhnija_naviny h3,
-.abvestki-block h3 {
+.abvestki-block h3
+{
     background-color:#671b1d;
     border-radius: 3px;
     padding: 1px;
@@ -1333,12 +1333,40 @@ article .poll {
 }
 
 .local-problem-orange {
-    color: orange;
+    color: #D45500;
 }
 
 .local-problem-green {
-    color: green;
+    color: #88AA00;
 }
+
+/* Last local problems block style */
+
+.block-local-problems-block-1 .views-row {
+    position: relative;
+    margin-left: 30px;
+    top: 2px;
+}
+
+.block-local-problems-block-1 .views-field-field-taxonomy-pic {
+    position: absolute;
+    left: -25px;
+}
+
+.block-local-problems-block-1 h3
+{
+    background-color:#671b1d;
+    border-radius: 3px;
+    padding: 1px;
+    clear: both;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: block;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
 
 /* Ad page styles */
 
