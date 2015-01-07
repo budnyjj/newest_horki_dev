@@ -474,7 +474,7 @@ global $user;
     'local_problem' => 'local_problem',
   );
   $handler->display->display_options['block_description'] = 'Апошнія мясцовыя праблемы';
-  $handler->display->display_options['block_caching'] = '8';
+  $handler->display->display_options['block_caching'] = '1';
   $translatables['local_problems'] = array(
     t('Master'),
     t('болей'),
