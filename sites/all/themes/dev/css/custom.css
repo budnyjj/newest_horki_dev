@@ -456,6 +456,10 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     margin-bottom: 6px;
 }
 
+.block-last-news .view-footer {
+    text-align: center;
+}
+
 /*Last Comments Block Style*/
 
 #block-views-comments-block-block-1 .views-field-picture {
