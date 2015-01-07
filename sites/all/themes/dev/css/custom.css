@@ -1260,7 +1260,7 @@ article .poll {
     display: none;
 }
 
-/* Add Content Page Styles (narodnyja naviny, local problems) */
+/* Add Content Page Styles */
 
 .page-node-edit .form-item-title,
 .page-node-add .form-item-title {
@@ -1450,6 +1450,7 @@ article .poll {
 
 /* Add/Edit ads page style */
 
+.page-node-edit.node-type-ads .ads-help-link,
 .page-node-add .ads-help-link {
     float: right;
 }
@@ -1472,6 +1473,11 @@ article .poll {
     border-radius: 3px;
     margin: 1em 0;
     width: 700px;
+}
+
+.page-node-edit.node-type-ads #edit-options1,
+.page-node-add-ads #edit-options1 {
+    display: none;
 }
 
 /* Delete ads page style */
