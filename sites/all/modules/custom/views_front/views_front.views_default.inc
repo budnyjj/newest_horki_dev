@@ -258,7 +258,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'Дадаць навіну';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<div class="red-button"><a href="/node/add/news-from-readers">дадаць навіну!</a></div>';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="red-button"><a href="/node/add/news-from-readers">дадаць навіну</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Колькасць каментароў */
@@ -350,7 +350,7 @@ function views_front_views_default_views() {
     t('Больш навінаў'),
     t('<div class="black-button"><a href="/naviny.html">больш навінаў</a></div>'),
     t('Дадаць навіну'),
-    t('<div class="red-button"><a href="/node/add/news-from-readers">дадаць навіну!</a></div>'),
+    t('<div class="red-button"><a href="/node/add/news-from-readers">дадаць навіну</a></div>'),
     t('<span class="comments-counter">[comment_count]</span>'),
   );
   $export['front'] = $view;
