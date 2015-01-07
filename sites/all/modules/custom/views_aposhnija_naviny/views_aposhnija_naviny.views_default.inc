@@ -90,6 +90,8 @@ function views_aposhnija_naviny_views_default_views() {
 
   /* Display: Блок на галоўнай */
   $handler = $view->new_display('block', 'Блок на галоўнай', 'block');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-last-news';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -136,6 +138,8 @@ function views_aposhnija_naviny_views_default_views() {
 
   /* Display: Блок на ўнутраных старонках */
   $handler = $view->new_display('block', 'Блок на ўнутраных старонках', 'block_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-last-news';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -147,6 +151,15 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Ніжні калантытул: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['label'] = 'Дадаць навіну';
+  $handler->display->display_options['footer']['area']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area']['content'] = '<div class="red-button"><a href="/node/add/news-from-readers">дадаць навіну</a></div>';
+  $handler->display->display_options['footer']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Колькасць каментароў */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
@@ -247,7 +260,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = '';
-  /* Поле: Змест: Прэв'ю */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -406,7 +419,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_text']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Поле: Змест: Прэв'ю */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -554,7 +567,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_text']['settings'] = array(
     'trim_length' => '160',
   );
-  /* Поле: Змест: Прэв'ю */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -718,7 +731,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_text']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Поле: Змест: Прэв'ю */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -785,6 +798,8 @@ function views_aposhnija_naviny_views_default_views() {
     t(','),
     t('[title][comment_count]'),
     t('Блок на ўнутраных старонках'),
+    t('Дадаць навіну'),
+    t('<div class="red-button"><a href="/node/add/news-from-readers">дадаць навіну</a></div>'),
     t('Старонка'),
     t('Апошнія навіны'),
     t('Items per page'),

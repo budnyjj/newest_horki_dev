@@ -131,7 +131,7 @@ function views_local_problems_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Мясцовыя праблемы';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'media-grid-page';
+  $handler->display->display_options['css_class'] = 'local-problems media-grid-page';
   $handler->display->display_options['display_description'] = 'Усе праблемы';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
@@ -148,6 +148,20 @@ function views_local_problems_views_default_views() {
   $handler->display->display_options['pager']['options']['more_button_text'] = 'больш навінаў';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Загаловак: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Дадаць праблему';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<?php 
+global $user;
+?>
+
+<a class="rich-link bold-text" 
+href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/problems/anonymous.html"); } ?>">
+Дадаць праблему</a>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Шлях */
@@ -366,6 +380,23 @@ function views_local_problems_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Ніжні калантытул: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['label'] = 'Дадаць праблему';
+  $handler->display->display_options['footer']['area']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area']['content'] = '<?php 
+global $user;
+?>
+
+<div class="red-button">
+<a href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/problems/anonymous.html"); } ?>">
+дадаць праблему</a>
+</div>
+';
+  $handler->display->display_options['footer']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Змест: Статус праблемы (field_problem_status) */
   $handler->display->display_options['relationships']['field_problem_status_tid']['id'] = 'field_problem_status_tid';
@@ -389,7 +420,7 @@ function views_local_problems_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<span class="comments-counter">[comment_count]</span>';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
-  /* Поле: Тэрмін таксаноміі: Малюнак */
+  /* Поле: Тэрмін таксаноміі: Маркер */
   $handler->display->display_options['fields']['field_taxonomy_pic']['id'] = 'field_taxonomy_pic';
   $handler->display->display_options['fields']['field_taxonomy_pic']['table'] = 'field_data_field_taxonomy_pic';
   $handler->display->display_options['fields']['field_taxonomy_pic']['field'] = 'field_taxonomy_pic';
@@ -463,6 +494,14 @@ function views_local_problems_views_default_views() {
     t('Усе праблемы'),
     t('Мясцовыя праблемы'),
     t('больш навінаў'),
+    t('Дадаць праблему'),
+    t('<?php 
+global $user;
+?>
+
+<a class="rich-link bold-text" 
+href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/problems/anonymous.html"); } ?>">
+Дадаць праблему</a>'),
     t('| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">'),
     t('.'),
     t('| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">'),
@@ -472,6 +511,15 @@ function views_local_problems_views_default_views() {
     t('Блок апошніх праблем'),
     t('Апошнія праблемы'),
     t('больш праблем'),
+    t('<?php 
+global $user;
+?>
+
+<div class="red-button">
+<a href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/problems/anonymous.html"); } ?>">
+дадаць праблему</a>
+</div>
+'),
     t('term from field_problem_status'),
     t('<span class="comments-counter">[comment_count]</span>'),
     t(','),

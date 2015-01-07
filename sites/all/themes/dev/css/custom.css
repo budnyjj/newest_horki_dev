@@ -1342,7 +1342,7 @@ article .poll {
 	max-width: 700px;
 }
 
-/* Local problem page styles*/
+/* Local problem node styles*/
 
 .local-problem-red {
     color: #D2232A;
@@ -1383,6 +1383,14 @@ article .poll {
     margin-bottom: 6px;
 }
 
+/* Local problems view styles */
+
+.local-problems .view-header {
+    padding-bottom: 0.5em;
+    margin-right: 10px;
+    margin-bottom: 0.5em;
+    text-align: right;
+}
 
 /* Ad page styles */
 
@@ -1430,7 +1438,7 @@ article .poll {
 /* Lists of ads page style */
 
 .abvestki .view-header {
-	padding-bottom: 10px;
+	padding-bottom: 0.5em;
 	text-align: right;
 }
 
