@@ -172,7 +172,7 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    0 => '157',
+    0 => '156',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
 
@@ -376,7 +376,7 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    0 => '156',
+    0 => '154',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
   $translatables['map_local_problems'] = array(
