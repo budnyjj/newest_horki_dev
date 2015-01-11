@@ -1,0 +1,11 @@
+name = Views: problems map and overlays
+core = 7.x
+package = Custom
+version = 7.x-1.0
+project = views_problems_map_and_overlays
+dependencies[] = openlayers_views
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = map_local_problems
+features_exclude[dependencies][ctools] = ctools

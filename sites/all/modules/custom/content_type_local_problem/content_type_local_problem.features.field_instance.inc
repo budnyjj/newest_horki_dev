@@ -34,7 +34,7 @@ function content_type_local_problem_field_default_field_instances() {
           'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,google_plusone_share,email,print,favorites',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -49,7 +49,89 @@ function content_type_local_problem_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 13,
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'node-local_problem-field_address'
+  $field_instances['node-local_problem-field_address'] = array(
+    'bundle' => 'local_problem',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Укажыце дакладнае месцазнаходжанне праблемы, какб адпаведныя службы магли яе вырашыць',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_address',
+    'label' => 'Месцазнаходжанне праблемы',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'ads_text' => 'ads_text',
+          'anonymous_text' => 'anonymous_text',
+          'author_text' => 'author_text',
+          'comment_text' => 'comment_text',
+          'company_text' => 'company_text',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'ads_text' => array(
+              'weight' => 0,
+            ),
+            'anonymous_text' => array(
+              'weight' => -8,
+            ),
+            'author_text' => array(
+              'weight' => -10,
+            ),
+            'comment_text' => array(
+              'weight' => 0,
+            ),
+            'company_text' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => -6,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
     ),
   );
 
@@ -72,7 +154,7 @@ function content_type_local_problem_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -130,7 +212,7 @@ function content_type_local_problem_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -171,7 +253,7 @@ function content_type_local_problem_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -179,9 +261,9 @@ function content_type_local_problem_field_default_field_instances() {
   $field_instances['node-local_problem-field_photos'] = array(
     'bundle' => 'local_problem',
     'deleted' => 0,
-    'description' => 'Фоты, якія выкарыстоўваюцца для ўстаўкі ў тэкст. Для таго, каб уставіць фотаздымак,  загрузіце яго, абярыце пажаданае месца ў тэксце навіны, націсніце на кнопку "Уставіць".
+    'description' => 'Фоты, якія выкарыстоўваюцца для ўстаўкі ў тэкст. Для таго, каб уставіць фотаздымак,  загрузіце яго, абярыце пажаданае месца ў тэксце праблемы, націсніце на кнопку "Уставіць".
 <br>
-Максімальная колькасць фотаздымкаў для адной навіны - пяць штук.',
+Максімальная колькасць фотаздымкаў для адной  праблемы - пяць штук.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -256,7 +338,7 @@ function content_type_local_problem_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -339,6 +421,59 @@ function content_type_local_problem_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-local_problem-field_problem_map'
+  $field_instances['node-local_problem-field_problem_map'] = array(
+    'bundle' => 'local_problem',
+    'default_value' => array(
+      0 => array(
+        'geom' => 'POINT (30.234374991606 54.769008628768)',
+        'input_format' => 'wkt',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Адзначце на гэтай мапе месцазнаходжанне праблемы',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'geofield',
+        'settings' => array(
+          'data' => 'full',
+        ),
+        'type' => 'geofield_wkt',
+        'weight' => 8,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_problem_map',
+    'label' => 'Мапа',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'openlayers',
+      'settings' => array(
+        'allow_edit' => 0,
+        'data_storage' => 'single',
+        'feature_types' => array(
+          'path' => 0,
+          'point' => 'point',
+          'polygon' => 0,
+        ),
+        'openlayers_map' => 'geofield_local_problems',
+      ),
+      'type' => 'geofield_openlayers',
       'weight' => 1,
     ),
   );
@@ -421,7 +556,7 @@ function content_type_local_problem_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -448,7 +583,7 @@ function content_type_local_problem_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -463,7 +598,7 @@ function content_type_local_problem_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -550,18 +685,96 @@ function content_type_local_problem_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-local_problem_status-field_taxonomy_pic'
+  $field_instances['taxonomy_term-local_problem_status-field_taxonomy_pic'] = array(
+    'bundle' => 'local_problem_status',
+    'deleted' => 0,
+    'description' => 'Малюнак маркера статуса мясцовай праблемы.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_taxonomy_pic',
+    'label' => 'Маркер',
+    'required' => 1,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'default_images/status',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'colorbox__large' => 0,
+          'colorbox__main_pic_preview' => 0,
+          'colorbox__medium' => 0,
+          'colorbox__node_teaser_preview' => 0,
+          'colorbox__photo_video_preview' => 0,
+          'colorbox__square_news_preview' => 0,
+          'colorbox__thumbnail' => 0,
+          'colorbox__user_avatar_block' => 0,
+          'colorbox__user_avatar_comment' => 0,
+          'colorbox__user_avatar_page' => 0,
+          'colorbox__uzgorak_preview' => 0,
+          'icon_link' => 0,
+          'image' => 0,
+          'image_large' => 0,
+          'image_main_pic_preview' => 0,
+          'image_medium' => 0,
+          'image_node_teaser_preview' => 0,
+          'image_photo_video_preview' => 0,
+          'image_square_news_preview' => 0,
+          'image_thumbnail' => 0,
+          'image_user_avatar_block' => 0,
+          'image_user_avatar_comment' => 0,
+          'image_user_avatar_page' => 0,
+          'image_uzgorak_preview' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 1,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('E-mail');
+  t('Адзначце на гэтай мапе месцазнаходжанне праблемы');
   t('Апісанне праблемы');
   t('Аўтар');
   t('Вашае імя. Яно будзе бачна іншым карыстальнікам сайта.');
   t('Галоўны фотаздымак');
   t('Кантактны нумар');
+  t('Малюнак маркера статуса мясцовай праблемы.');
+  t('Мапа');
+  t('Маркер');
+  t('Месцазнаходжанне праблемы');
   t('Падзяліцца');
   t('Падрабязнае апісанне праблемы.');
   t('Пакіньце ваш email, каб мы маглі з вамі звязацца і напісаць артыкул пра ўказаную вамі праблему або пракансультаваць, як яе можна вырашыць.
@@ -571,11 +784,12 @@ function content_type_local_problem_field_default_field_instances() {
 <br>
 Ваш нумар тэлефона не будзе бачны іншым карыстальнікам сайта.');
   t('Статус праблемы');
+  t('Укажыце дакладнае месцазнаходжанне праблемы, какб адпаведныя службы магли яе вырашыць');
   t('Фота, якое будзе выкарастана ў якасці прэв\'ю да праблемы');
   t('Фоты да праблемы');
-  t('Фоты, якія выкарыстоўваюцца для ўстаўкі ў тэкст. Для таго, каб уставіць фотаздымак,  загрузіце яго, абярыце пажаданае месца ў тэксце навіны, націсніце на кнопку "Уставіць".
+  t('Фоты, якія выкарыстоўваюцца для ўстаўкі ў тэкст. Для таго, каб уставіць фотаздымак,  загрузіце яго, абярыце пажаданае месца ў тэксце праблемы, націсніце на кнопку "Уставіць".
 <br>
-Максімальная колькасць фотаздымкаў для адной навіны - пяць штук.');
+Максімальная колькасць фотаздымкаў для адной  праблемы - пяць штук.');
 
   return $field_instances;
 }

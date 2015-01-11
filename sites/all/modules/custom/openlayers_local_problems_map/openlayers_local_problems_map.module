@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Openlayers: local problems map feature.
+ */
+
+include_once 'openlayers_local_problems_map.features.inc';
