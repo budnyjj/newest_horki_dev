@@ -113,6 +113,7 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Поле: Змест: Мапа */
   $handler->display->display_options['fields']['field_problem_map']['id'] = 'field_problem_map';
   $handler->display->display_options['fields']['field_problem_map']['table'] = 'field_data_field_problem_map';
@@ -148,8 +149,8 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Апісанне праблемы';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[title]</div>
-<div>Статус праблемы: <span class="local-problem-green">[field_problem_status]</span></div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="white-text bold-text">[title]</div>
+';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -172,7 +173,7 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    0 => '156',
+    0 => '157',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
 
@@ -250,8 +251,8 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Апісанне праблемы';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[title]</div>
-<div>Статус праблемы: <span class="local-problem-orange">[field_problem_status]</span></div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="white-text bold-text">[title]</div>
+';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -352,8 +353,8 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Апісанне праблемы';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[title]</div>
-<div>Статус праблемы: <span class="local-problem-red">[field_problem_status]</span></div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="white-text bold-text">[title]</div>
+';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -376,7 +377,7 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    0 => '154',
+    0 => '156',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
   $translatables['map_local_problems'] = array(
@@ -392,14 +393,10 @@ function views_problems_map_and_overlays_views_default_views() {
     t('Вырашаныя праблемы'),
     t('term from field_problem_status'),
     t('Статус праблемы'),
-    t('<div>[title]</div>
-<div>Статус праблемы: <span class="local-problem-green">[field_problem_status]</span></div>'),
+    t('<div class="white-text bold-text">[title]</div>
+'),
     t('Невырашаныя праблемы'),
-    t('<div>[title]</div>
-<div>Статус праблемы: <span class="local-problem-orange">[field_problem_status]</span></div>'),
     t('Праблемы, якія не вырашаліся'),
-    t('<div>[title]</div>
-<div>Статус праблемы: <span class="local-problem-red">[field_problem_status]</span></div>'),
   );
   $export['map_local_problems'] = $view;
 

@@ -95,6 +95,10 @@ a.no-underline-text:hover {
     color: #671A1D;
 }
 
+.white-text, .white-text a, a.white-text {
+    color: #fff;
+}
+
 .rich-link a, a.rich-link {
 	text-decoration: underline !important;
 }

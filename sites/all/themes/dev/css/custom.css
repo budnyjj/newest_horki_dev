@@ -1396,6 +1396,25 @@ article .poll {
     text-align: right;
 }
 
+/* Map of local problems  styles */
+
+.openlayers_plus-blockswitcher .base,
+.openlayers_plus-blockswitcher .layers-title {
+    display: none;
+}
+
+.page-map-problemshtml .openlayers_plus-blockswitcher .layers-content .form-item {
+    float: left;
+    margin: 0;
+    padding: 0.5em 2em 0.5em 0;
+}
+
+.page-map-problemshtml .openlayers_plus-blockswitcher .layers-content .form-item .form-checkbox {
+    margin-right: 0.2em;
+}
+
+
+
 /* User local problems block styles */
 
 .block-views-local-problems-block-2 {
