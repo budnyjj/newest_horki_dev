@@ -352,8 +352,8 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-  /* Display: Блок апошніх праблем */
-  $handler = $view->new_display('block', 'Блок апошніх праблем', 'block_1');
+  /* Display: Блок усіх праблем */
+  $handler = $view->new_display('block', 'Блок усіх праблем', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Апошнія праблемы';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -617,6 +617,243 @@ global $user;
     'local_problem' => 'local_problem',
   );
   $handler->display->display_options['block_description'] = 'Мясцовыя праблемы карыстальніка';
+
+  /* Display: Блок невырашаных праблем, і тых, што не вырашаліся */
+  $handler = $view->new_display('block', 'Блок невырашаных праблем, і тых, што не вырашаліся', 'block_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Апошнія праблемы';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'больш праблем';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Ніжні калантытул: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['label'] = 'Дадаць праблему';
+  $handler->display->display_options['footer']['area']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area']['content'] = '<?php 
+global $user;
+?>
+
+<div class="red-button">
+<a href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/problems/anonymous.html"); } ?>">
+дадаць праблему</a>
+</div>
+';
+  $handler->display->display_options['footer']['area']['format'] = 'php_code';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Змест: Статус праблемы (field_problem_status) */
+  $handler->display->display_options['relationships']['field_problem_status_tid']['id'] = 'field_problem_status_tid';
+  $handler->display->display_options['relationships']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
+  $handler->display->display_options['relationships']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Шлях */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Колькасць каментароў */
+  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['label'] = '';
+  $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<span class="comments-counter">[comment_count]</span>';
+  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
+  /* Поле: Тэрмін таксаноміі: Маркер */
+  $handler->display->display_options['fields']['field_taxonomy_pic']['id'] = 'field_taxonomy_pic';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['table'] = 'field_data_field_taxonomy_pic';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['field'] = 'field_taxonomy_pic';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['relationship'] = 'field_problem_status_tid';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['label'] = '';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_taxonomy_pic']['alter']['text'] = '<a href="[path]">[field_taxonomy_pic]</a>';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_taxonomy_pic']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][comment_count]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = 'black-text bold-text';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created']['element_class'] = 'date-list';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'node';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Апублікавана */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'local_problem' => 'local_problem',
+  );
+  /* Filter criterion: Змест: Статус праблемы (field_problem_status) */
+  $handler->display->display_options['filters']['field_problem_status_tid']['id'] = 'field_problem_status_tid';
+  $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
+  $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
+  $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
+    156 => '156',
+    155 => '155',
+  );
+  $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
+  $handler->display->display_options['block_description'] = 'Невырашаныя мясцовыя праблемы, і тыя, якія не вырашаліся';
+  $handler->display->display_options['block_caching'] = '1';
+
+  /* Display: Вырашаныя праблемы */
+  $handler = $view->new_display('block', 'Вырашаныя праблемы', 'block_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Вырашаныя праблемы';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'больш праблем';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Змест: Статус праблемы (field_problem_status) */
+  $handler->display->display_options['relationships']['field_problem_status_tid']['id'] = 'field_problem_status_tid';
+  $handler->display->display_options['relationships']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
+  $handler->display->display_options['relationships']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Шлях */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Колькасць каментароў */
+  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['label'] = '';
+  $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<span class="comments-counter">[comment_count]</span>';
+  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
+  /* Поле: Тэрмін таксаноміі: Маркер */
+  $handler->display->display_options['fields']['field_taxonomy_pic']['id'] = 'field_taxonomy_pic';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['table'] = 'field_data_field_taxonomy_pic';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['field'] = 'field_taxonomy_pic';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['relationship'] = 'field_problem_status_tid';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['label'] = '';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_taxonomy_pic']['alter']['text'] = '<a href="[path]">[field_taxonomy_pic]</a>';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_taxonomy_pic']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][comment_count]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = 'black-text bold-text';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created']['element_class'] = 'date-list';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'node';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Апублікавана */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'local_problem' => 'local_problem',
+  );
+  /* Filter criterion: Змест: Статус праблемы (field_problem_status) */
+  $handler->display->display_options['filters']['field_problem_status_tid']['id'] = 'field_problem_status_tid';
+  $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
+  $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
+  $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
+    157 => '157',
+  );
+  $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
+  $handler->display->display_options['block_description'] = 'Вырашаныя мясцовыя праблемы';
+  $handler->display->display_options['block_caching'] = '1';
   $translatables['local_problems'] = array(
     t('Master'),
     t('болей'),
@@ -650,7 +887,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
     t('<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>'),
     t('<div class="statistics-list">[created] [recentcount] [comment_count]</div>'),
     t('[title][comment_count]'),
-    t('Блок апошніх праблем'),
+    t('Блок усіх праблем'),
     t('Апошнія праблемы'),
     t('больш праблем'),
     t('<?php 
@@ -680,6 +917,10 @@ global $user;
     t('Выдаліць'),
     t('Усе'),
     t('Мясцовыя праблемы карыстальніка'),
+    t('Блок невырашаных праблем, і тых, што не вырашаліся'),
+    t('Невырашаныя мясцовыя праблемы, і тыя, якія не вырашаліся'),
+    t('Вырашаныя праблемы'),
+    t('Вырашаныя мясцовыя праблемы'),
   );
   $export['local_problems'] = $view;
 

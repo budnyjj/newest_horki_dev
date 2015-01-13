@@ -1360,21 +1360,34 @@ article .poll {
     color: #88AA00;
 }
 
-/* Last local problems block style */
+/* Local problems view styles */
 
-.block-local-problems-block-1 .views-row {
+.local-problems .view-header {
+    padding-bottom: 0.5em;
+    margin-right: 10px;
+    margin-bottom: 0.5em;
+    text-align: right;
+}
+
+/* Local problems block style */
+
+.block-local-problems-block-1 .views-row,
+.block-local-problems-block-3 .views-row,
+.block-local-problems-block-4 .views-row {
     position: relative;
     margin-left: 30px;
     top: 2px;
 }
 
-.block-local-problems-block-1 .views-field-field-taxonomy-pic {
+.block-local-problems-block-1 .views-field-field-taxonomy-pic,
+.block-local-problems-block-3 .views-field-field-taxonomy-pic,
+.block-local-problems-block-4 .views-field-field-taxonomy-pic {
     position: absolute;
     left: -25px;
 }
 
-.block-local-problems-block-1 h3
-{
+.block-local-problems-block-1 h3,
+.block-local-problems-block-3 h3 {
     background-color:#671b1d;
     border-radius: 3px;
     padding: 1px;
@@ -1387,16 +1400,12 @@ article .poll {
     margin-bottom: 6px;
 }
 
-/* Local problems view styles */
-
-.local-problems .view-header {
-    padding-bottom: 0.5em;
-    margin-right: 10px;
-    margin-bottom: 0.5em;
-    text-align: right;
-}
-
 /* Map of local problems  styles */
+
+.page-map-problemshtml .block-system-main {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+}
 
 .openlayers_plus-blockswitcher .base,
 .openlayers_plus-blockswitcher .layers-title {
@@ -1413,7 +1422,35 @@ article .poll {
     margin-right: 0.2em;
 }
 
+.page-map-problemshtml .block-local-problems-block-3 .block-title,
+.page-map-problemshtml .block-local-problems-block-4 .block-title,
+.page-map-problemshtml .block-knowledge-base-block-1 .block-title {
+    text-align: left;
+}
 
+.page-map-problemshtml .block-local-problems-block-3 {
+    margin-bottom: 20px;
+    padding-right: 10px;
+    border-right: 1px dashed #ccc;
+    width: 298px;
+    float: left;
+}
+
+.page-map-problemshtml .block-local-problems-block-4 {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px dashed #ccc;
+    width: 298px;
+    float: left;
+}
+
+.page-map-problemshtml .block-knowledge-base-block-1 {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 298px;
+    float: left;
+}
 
 /* User local problems block styles */
 

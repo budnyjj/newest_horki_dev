@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Delta: system feature.
+ */
+
+include_once 'delta_system.features.inc';

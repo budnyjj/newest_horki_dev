@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Delta: map local problems feature.
+ */
+
+include_once 'delta_map_local_problems.features.inc';
