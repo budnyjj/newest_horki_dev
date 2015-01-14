@@ -607,7 +607,8 @@ function content_type_local_problem_field_default_field_instances() {
     'bundle' => 'local_problem',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Падрабязнае апісанне праблемы.',
+    'description' => 'Падрабязнае апісанне праблемы. Каб ўставіць відэа, выкарыстоўвайце код: 
+[VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -776,7 +777,8 @@ function content_type_local_problem_field_default_field_instances() {
   t('Маркер');
   t('Месцазнаходжанне праблемы');
   t('Падзяліцца');
-  t('Падрабязнае апісанне праблемы.');
+  t('Падрабязнае апісанне праблемы. Каб ўставіць відэа, выкарыстоўвайце код: 
+[VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]');
   t('Пакіньце ваш email, каб мы маглі з вамі звязацца і напісаць артыкул пра ўказаную вамі праблему або пракансультаваць, як яе можна вырашыць.
 <br>
 Ваш email не будзе бачны іншым карыстальнікам сайта.');

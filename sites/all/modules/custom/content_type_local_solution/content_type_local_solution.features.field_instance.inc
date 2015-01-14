@@ -259,7 +259,8 @@ function content_type_local_solution_field_default_field_instances() {
     'bundle' => 'local_solution',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Асноўны змест. Каб ўставіць відэа, выкарыстоўвайце код: 
+[VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -343,6 +344,8 @@ function content_type_local_solution_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Асноўны змест. Каб ўставіць відэа, выкарыстоўвайце код: 
+[VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]');
   t('Афіцыйныя дакументы');
   t('Галоўны фотаздымак');
   t('Гэты малюнак будзе паказвацца ў спісе рашэнняў праблем');
