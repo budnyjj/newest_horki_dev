@@ -58,7 +58,7 @@ function content_type_local_problem_field_default_field_instances() {
     'bundle' => 'local_problem',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Укажыце дакладнае месцазнаходжанне праблемы, какб адпаведныя службы маглі яе вырашыць.',
+    'description' => 'Укажыце дакладны адрас месца, дзе знаходзіцца праблема, каб адпаведныя службы маглі яе вырашыць.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -69,14 +69,15 @@ function content_type_local_problem_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_plain',
         'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_address',
-    'label' => 'Месцазнаходжанне праблемы',
+    'label' => 'Месца, дзе знаходзіцца праблема',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -150,7 +151,7 @@ function content_type_local_problem_field_default_field_instances() {
         'weight' => 4,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -346,7 +347,7 @@ function content_type_local_problem_field_default_field_instances() {
   $field_instances['node-local_problem-field_pics'] = array(
     'bundle' => 'local_problem',
     'deleted' => 0,
-    'description' => 'Фота, якое будзе выкарастана ў якасці прэв\'ю да праблемы',
+    'description' => 'Фота, якое будзе выкарастана ў якасці прэв\'ю да праблемы.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -430,12 +431,12 @@ function content_type_local_problem_field_default_field_instances() {
     'bundle' => 'local_problem',
     'default_value' => array(
       0 => array(
-        'geom' => 'POINT (30.234374991606 54.769008628768)',
+        'geom' => 'POINT (30.986251746458 54.287584555939)',
         'input_format' => 'wkt',
       ),
     ),
     'deleted' => 0,
-    'description' => 'Адзначце на гэтай мапе месцазнаходжанне праблемы',
+    'description' => 'Адзначце на гэтай мапе дакладнае месца, дзе знаходзіцца праблема.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -766,7 +767,7 @@ function content_type_local_problem_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('E-mail');
-  t('Адзначце на гэтай мапе месцазнаходжанне праблемы');
+  t('Адзначце на гэтай мапе дакладнае месца, дзе знаходзіцца праблема.');
   t('Апісанне праблемы');
   t('Аўтар');
   t('Вашае імя. Яно будзе бачна іншым карыстальнікам сайта.');
@@ -775,7 +776,7 @@ function content_type_local_problem_field_default_field_instances() {
   t('Малюнак маркера статуса мясцовай праблемы.');
   t('Мапа');
   t('Маркер');
-  t('Месцазнаходжанне праблемы');
+  t('Месца, дзе знаходзіцца праблема');
   t('Падзяліцца');
   t('Падрабязнае апісанне праблемы. Каб ўставіць відэа, выкарыстоўвайце код: 
 [VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]');
@@ -786,8 +787,8 @@ function content_type_local_problem_field_default_field_instances() {
 <br>
 Ваш нумар тэлефона не будзе бачны іншым карыстальнікам сайта.');
   t('Статус праблемы');
-  t('Укажыце дакладнае месцазнаходжанне праблемы, какб адпаведныя службы маглі яе вырашыць.');
-  t('Фота, якое будзе выкарастана ў якасці прэв\'ю да праблемы');
+  t('Укажыце дакладны адрас месца, дзе знаходзіцца праблема, каб адпаведныя службы маглі яе вырашыць.');
+  t('Фота, якое будзе выкарастана ў якасці прэв\'ю да праблемы.');
   t('Фоты да праблемы');
   t('Фоты, якія выкарыстоўваюцца для ўстаўкі ў тэкст. Для таго, каб уставіць фотаздымак,  загрузіце яго, абярыце пажаданае месца ў тэксце праблемы, націсніце на кнопку "Уставіць".
 <br>

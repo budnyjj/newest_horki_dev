@@ -24,7 +24,7 @@ function content_type_local_problem_node_info() {
     'local_problem' => array(
       'name' => t('Мясцовая праблема'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Дадайце інфармацыю пра мясцовую праблему, і мы разам паспрабуем яе вырашыць. '),
       'has_title' => '1',
       'title_label' => t('Назва праблемы'),
       'help' => '',

@@ -2262,7 +2262,7 @@ function comments_suite_field_default_field_instances() {
   $field_instances['node-news_from_readers-field_pics'] = array(
     'bundle' => 'news_from_readers',
     'deleted' => 0,
-    'description' => 'Фота, якое будзе выкарастана ў якасці прэв\'ю да навіны',
+    'description' => 'Фота, якое будзе выкарастана ў якасці прэв\'ю да навіны.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2333,6 +2333,10 @@ function comments_suite_field_default_field_instances() {
           'colorbox__photo_video_preview' => 0,
           'colorbox__square_news_preview' => 0,
           'colorbox__thumbnail' => 0,
+          'colorbox__user_avatar_block' => 0,
+          'colorbox__user_avatar_comment' => 0,
+          'colorbox__user_avatar_page' => 0,
+          'colorbox__uzgorak_preview' => 0,
           'icon_link' => 0,
           'image' => 'image',
           'image_large' => 0,
@@ -2342,10 +2346,13 @@ function comments_suite_field_default_field_instances() {
           'image_photo_video_preview' => 0,
           'image_square_news_preview' => 0,
           'image_thumbnail' => 0,
+          'image_user_avatar_block' => 0,
+          'image_user_avatar_comment' => 0,
+          'image_user_avatar_page' => 0,
+          'image_uzgorak_preview' => 0,
           'link' => 0,
         ),
         'insert_width' => 800,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -2760,7 +2767,7 @@ function comments_suite_field_default_field_instances() {
   t('Тэкст');
   t('Тэлефон');
   t('УНН');
-  t('Фота, якое будзе выкарастана ў якасці прэв\'ю да навіны');
+  t('Фота, якое будзе выкарастана ў якасці прэв\'ю да навіны.');
   t('Фотаздымак');
   t('Фоты да блогу');
   t('Фоты да тэксту');

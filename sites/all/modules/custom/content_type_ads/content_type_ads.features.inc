@@ -22,12 +22,12 @@ function content_type_ads_ctools_plugin_api($module = NULL, $api = NULL) {
 function content_type_ads_node_info() {
   $items = array(
     'ads' => array(
-      'name' => t('Абвестка'),
+      'name' => t('Прыватная абвестка'),
       'base' => 'node_content',
-      'description' => t('Прыватная абвестка ад карыстальнікаў'),
+      'description' => t('Прадам, куплю, здам, здыму, мяняю... у Горках, Дрыбіне ды Мсціславе.'),
       'has_title' => '1',
       'title_label' => t('Назва тавара або паслугі'),
-      'help' => t('Назва тавара або паслугi'),
+      'help' => t('Назва тавара або паслугi.'),
     ),
   );
   drupal_alter('node_info', $items);

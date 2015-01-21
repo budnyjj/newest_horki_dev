@@ -20,14 +20,14 @@ function content_type_local_problem_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Мапа - адзначце на ёй месцазнаходжанне праблемы',
+    'label' => 'Мапа - адзначце на ёй месца, дзе знаходзіцца праблема',
     'weight' => '1',
     'children' => array(
       0 => 'field_problem_map',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'label' => 'Мапа - адзначце на ёй месцазнаходжанне праблемы',
+      'label' => 'Мапа - адзначце на ёй месца, дзе знаходзіцца праблема',
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => '',
