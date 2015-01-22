@@ -494,7 +494,7 @@ global $user;
     'field_pics' => 'field_pics',
     'title' => 'title',
     'status' => 'status',
-    'delete_node' => 'delete_node',
+    'publishcontent' => 'publishcontent',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -524,7 +524,7 @@ global $user;
       'separator' => '',
       'empty_column' => 0,
     ),
-    'delete_node' => array(
+    'publishcontent' => array(
       'align' => 'views-align-center',
       'separator' => '',
       'empty_column' => 0,
@@ -577,18 +577,15 @@ global $user;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_class'] = 'bold-text black-text';
-  /* Поле: Змест: Апублікавана */
-  $handler->display->display_options['fields']['status']['id'] = 'status';
-  $handler->display->display_options['fields']['status']['table'] = 'node';
-  $handler->display->display_options['fields']['status']['field'] = 'status';
-  $handler->display->display_options['fields']['status']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Поле: Змест: Выдаліць спасылку */
-  $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
-  $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
-  $handler->display->display_options['fields']['delete_node']['label'] = 'Выдаліць';
-  $handler->display->display_options['fields']['delete_node']['element_class'] = 'rich-link';
+  /* Поле: Змест: Publish link */
+  $handler->display->display_options['fields']['publishcontent']['id'] = 'publishcontent';
+  $handler->display->display_options['fields']['publishcontent']['table'] = 'node';
+  $handler->display->display_options['fields']['publishcontent']['field'] = 'publishcontent';
+  $handler->display->display_options['fields']['publishcontent']['label'] = 'Кіраванне';
+  $handler->display->display_options['fields']['publishcontent']['element_class'] = 'rich-link';
+  $handler->display->display_options['fields']['publishcontent']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['publishcontent']['unpublish'] = 'зняць з публікацыі';
+  $handler->display->display_options['fields']['publishcontent']['publish'] = 'апублікаваць';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Змест: Author uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
@@ -913,8 +910,9 @@ global $user;
     t('Фота'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/no_image.gif" width="50" height="50" style="width:50px;height:50px;" /></a>'),
     t('Назва праблемы'),
-    t('Апублікавана'),
-    t('Выдаліць'),
+    t('Кіраванне'),
+    t('зняць з публікацыі'),
+    t('апублікаваць'),
     t('Усе'),
     t('Мясцовыя праблемы карыстальніка'),
     t('Блок невырашаных праблем, і тых, што не вырашаліся'),

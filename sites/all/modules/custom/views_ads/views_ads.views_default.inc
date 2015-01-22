@@ -470,8 +470,7 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
     'field_ads_photo' => 'field_ads_photo',
     'title' => 'title',
     'field_price' => 'field_price',
-    'status' => 'status',
-    'delete_node' => 'delete_node',
+    'publishcontent' => 'publishcontent',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -508,14 +507,7 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
       'separator' => '',
       'empty_column' => 0,
     ),
-    'status' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => 'views-align-center',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'delete_node' => array(
+    'publishcontent' => array(
       'align' => 'views-align-center',
       'separator' => '',
       'empty_column' => 0,
@@ -581,18 +573,14 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
   $handler->display->display_options['fields']['field_price']['field'] = 'field_price';
   $handler->display->display_options['fields']['field_price']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_price']['empty'] = 'не ўказана';
-  /* Поле: Змест: Апублікавана */
-  $handler->display->display_options['fields']['status']['id'] = 'status';
-  $handler->display->display_options['fields']['status']['table'] = 'node';
-  $handler->display->display_options['fields']['status']['field'] = 'status';
-  $handler->display->display_options['fields']['status']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Поле: Змест: Выдаліць спасылку */
-  $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
-  $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
-  $handler->display->display_options['fields']['delete_node']['label'] = 'Выдаліць';
-  $handler->display->display_options['fields']['delete_node']['element_class'] = 'rich-link';
+  /* Поле: Змест: Publish link */
+  $handler->display->display_options['fields']['publishcontent']['id'] = 'publishcontent';
+  $handler->display->display_options['fields']['publishcontent']['table'] = 'node';
+  $handler->display->display_options['fields']['publishcontent']['field'] = 'publishcontent';
+  $handler->display->display_options['fields']['publishcontent']['label'] = 'Кіраванне';
+  $handler->display->display_options['fields']['publishcontent']['element_class'] = 'rich-link';
+  $handler->display->display_options['fields']['publishcontent']['unpublish'] = 'зняць з публікацыі';
+  $handler->display->display_options['fields']['publishcontent']['publish'] = 'апублікаваць';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Змест: Author uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
@@ -684,8 +672,9 @@ href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/ads/anonym
     t('<a class="rich-link black-text bold-text center-this" href="/node/add/ads">дадаць абвестку</a>'),
     t('Зараз у вас няма аніводнай апублікаванай абвесткі.
 <a class="rich-link bold-text" href="/node/add/ads">Дадаць новую абвестку</a>.'),
-    t('Апублікавана'),
-    t('Выдаліць'),
+    t('Кіраванне'),
+    t('зняць з публікацыі'),
+    t('апублікаваць'),
     t('Усе'),
     t('Прыватныя абвесткі карыстальніка'),
   );
