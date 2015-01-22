@@ -974,6 +974,10 @@ article .poll {
     border: 0px;
 }
 
+.view-empty {
+    margin: 0.7em 0px;
+}
+
 /*Rubrics Views styles*/
 
 .page-taxonomy .title,

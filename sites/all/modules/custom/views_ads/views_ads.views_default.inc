@@ -143,7 +143,7 @@ global $user;
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['label'] = 'Няма абвестак';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = '<div class="views-row">Пакуль што няма аніводнай прыватнай абвесткі</div>';
+  $handler->display->display_options['empty']['area']['content'] = 'Пакуль што няма аніводнай прыватнай абвесткі';
   $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Загаловак */
@@ -634,7 +634,7 @@ global $user;
 </div>
 '),
     t('Няма абвестак'),
-    t('<div class="views-row">Пакуль што няма аніводнай прыватнай абвесткі</div>'),
+    t('Пакуль што няма аніводнай прыватнай абвесткі'),
     t('Старонка'),
     t('Прыватныя абвесткі'),
     t('болей'),

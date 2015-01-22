@@ -354,6 +354,15 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'Няма рашэнняў';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'На жаль, пакуль што няма аніводнага матэрыяла пра рашэнне мясцовых праблем';
+  $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -394,6 +403,8 @@ function views_solutions_views_default_views() {
     t('Блок'),
     t('Ідэі вырашэння праблем'),
     t('больш ідэй'),
+    t('Няма рашэнняў'),
+    t('На жаль, пакуль што няма аніводнага матэрыяла пра рашэнне мясцовых праблем'),
     t('Ідэі вырашэння мясцовых праблем'),
   );
   $export['knowledge_base'] = $view;

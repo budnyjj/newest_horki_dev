@@ -45,6 +45,14 @@ function views_local_problems_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'Няма праблем';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'На жаль, пакуль што няма аніводнай актуальнай мясцовай праблемы';
+  $handler->display->display_options['empty']['area']['format'] = 'author_text';
   /* Поле: Змест: Шлях */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
@@ -734,7 +742,7 @@ global $user;
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    156 => '156',
+    154 => '154',
     155 => '155',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
@@ -845,7 +853,7 @@ global $user;
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    157 => '157',
+    156 => '156',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
@@ -866,6 +874,8 @@ global $user;
     t('‹ папярэдняя'),
     t('наступная ›'),
     t('апошняя »'),
+    t('Няма праблем'),
+    t('На жаль, пакуль што няма аніводнай актуальнай мясцовай праблемы'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/letter_small.png"></a>'),
     t('Усе праблемы'),
     t('Мясцовыя праблемы'),
