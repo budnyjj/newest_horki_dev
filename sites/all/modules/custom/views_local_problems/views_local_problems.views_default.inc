@@ -742,7 +742,7 @@ global $user;
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    154 => '154',
+    156 => '156',
     155 => '155',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
@@ -853,7 +853,7 @@ global $user;
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    156 => '156',
+    157 => '157',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
