@@ -990,6 +990,11 @@ article .poll {
     display: none;
 }
 
+.context-krainahtml .media-grid-page .views-row,
+.context-regiyonhtml .media-grid-page .views-row {
+    height: 300px;
+}
+
 .view-id-daviedka td {
     vertical-align:top;
 }
