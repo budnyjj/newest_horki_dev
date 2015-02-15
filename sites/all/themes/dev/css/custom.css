@@ -1586,6 +1586,16 @@ article .poll {
     display: none;
 }
 
+.page-node-edit.node-type-ads .vertical-tabs,
+.page-node-add-ads .vertical-tabs {
+    display: none;
+}
+
+.page-node-edit.node-type-ads .group-ads .vertical-tabs,
+.page-node-add-ads .group-ads .vertical-tabs {
+    display: block;
+}
+
 /* Delete ads page style */
 
 #node-delete-confirm #edit-actions a {
