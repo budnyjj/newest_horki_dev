@@ -147,7 +147,7 @@ function content_type_local_problem_field_default_field_instances() {
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 4,
       ),
       'full' => array(
@@ -230,7 +230,7 @@ function content_type_local_problem_field_default_field_instances() {
         'label' => 'above',
         'module' => 'email',
         'settings' => array(),
-        'type' => 'email_default',
+        'type' => 'email_plain',
         'weight' => 6,
       ),
       'full' => array(
@@ -492,7 +492,7 @@ function content_type_local_problem_field_default_field_instances() {
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 5,
       ),
       'full' => array(

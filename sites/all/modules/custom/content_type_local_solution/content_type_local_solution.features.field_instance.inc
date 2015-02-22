@@ -81,7 +81,7 @@ function content_type_local_solution_field_default_field_instances() {
     'settings' => array(
       'description_field' => 0,
       'file_directory' => 'local_solutions/[current-date:system]',
-      'file_extensions' => 'txt doc docx pdf',
+      'file_extensions' => 'txt doc docx pdf png gif jpg jpeg',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),

@@ -265,7 +265,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Местные проблемы',
+        'value' => 'Местные проблемы | [site:name]',
         'default' => '',
       ),
       'description' => array(
@@ -742,8 +742,8 @@ global $user;
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    156 => '156',
-    155 => '155',
+    153 => '153',
+    154 => '154',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
@@ -772,6 +772,15 @@ global $user;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'Няма праблем';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'На жаль, пакуль што няма аніводнай вырашанай мясцовай праблемы';
+  $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Змест: Статус праблемы (field_problem_status) */
   $handler->display->display_options['relationships']['field_problem_status_tid']['id'] = 'field_problem_status_tid';
@@ -853,7 +862,7 @@ global $user;
   $handler->display->display_options['filters']['field_problem_status_tid']['table'] = 'field_data_field_problem_status';
   $handler->display->display_options['filters']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['value'] = array(
-    157 => '157',
+    155 => '155',
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
@@ -928,6 +937,7 @@ global $user;
     t('Блок невырашаных праблем, і тых, што не вырашаліся'),
     t('Невырашаныя мясцовыя праблемы, і тыя, якія не вырашаліся'),
     t('Вырашаныя праблемы'),
+    t('На жаль, пакуль што няма аніводнай вырашанай мясцовай праблемы'),
     t('Вырашаныя мясцовыя праблемы'),
   );
   $export['local_problems'] = $view;
