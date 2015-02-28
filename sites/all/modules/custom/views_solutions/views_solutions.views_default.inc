@@ -244,7 +244,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Решения местных проблем',
+        'value' => 'Решения местных проблем | [site:name]',
         'default' => '',
       ),
       'description' => array(

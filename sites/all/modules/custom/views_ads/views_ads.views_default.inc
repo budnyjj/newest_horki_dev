@@ -164,15 +164,16 @@ global $user;
   $handler->display->display_options['fields']['field_ads_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ads_type']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Змест: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Sort criterion: Global: Выпадкова */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
+  /* Sort criterion: Змест: Абноўленая дата */
+  $handler->display->display_options['sorts']['changed']['id'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['table'] = 'node';
+  $handler->display->display_options['sorts']['changed']['field'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['changed']['granularity'] = 'minute';
   $handler->display->display_options['block_description'] = 'Прыватныя абвесткi';
   $handler->display->display_options['block_caching'] = '1';
 
@@ -319,6 +320,13 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
   $handler->display->display_options['fields']['field_price']['field'] = 'field_price';
   $handler->display->display_options['fields']['field_price']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_price']['empty'] = 'не ўказана';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Змест: Абноўленая дата */
+  $handler->display->display_options['sorts']['changed']['id'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['table'] = 'node';
+  $handler->display->display_options['sorts']['changed']['field'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['changed']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
