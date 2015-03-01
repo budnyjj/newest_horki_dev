@@ -45,9 +45,9 @@ function openlayers_local_problems_map_openlayers_maps() {
         'documentDrag' => 0,
       ),
     ),
-    'default_layer' => 'mapquest_osm',
+    'default_layer' => 'map_local_problems',
     'layers' => array(
-      'osm_mapnik' => 'osm_mapnik',
+      'map_local_problems' => 'map_local_problems',
     ),
     'layer_weight' => array(
       'map_local_problems_openlayers_not_solved_problems' => '0',
@@ -156,9 +156,9 @@ function openlayers_local_problems_map_openlayers_maps() {
         'documentDrag' => 0,
       ),
     ),
-    'default_layer' => 'osm_mapnik',
+    'default_layer' => 'map_local_problems',
     'layers' => array(
-      'osm_mapnik' => 'osm_mapnik',
+      'map_local_problems' => 'map_local_problems',
       'map_local_problems_openlayers_not_dared_problems' => 'map_local_problems_openlayers_not_dared_problems',
       'map_local_problems_openlayers_not_solved_problems' => 'map_local_problems_openlayers_not_solved_problems',
       'map_local_problems_openlayers_solved_problems' => 'map_local_problems_openlayers_solved_problems',
