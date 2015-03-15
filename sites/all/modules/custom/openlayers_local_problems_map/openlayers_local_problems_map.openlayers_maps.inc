@@ -36,9 +36,6 @@ function openlayers_local_problems_map_openlayers_maps() {
     'behaviors' => array(
       'openlayers_behavior_geofield' => array(),
       'openlayers_behavior_keyboarddefaults' => array(),
-      'openlayers_behavior_attribution' => array(
-        'separator' => '',
-      ),
       'openlayers_behavior_navigation' => array(
         'zoomWheelEnabled' => 1,
         'zoomBoxEnabled' => 0,

@@ -72,6 +72,22 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Загаловак: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Дадаць праблему';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<?php 
+global $user;
+?>
+
+<a class="rich-link bold-text" 
+href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/ads/anonymous.html"); } ?>">
+Дадаць праблему</a>
+';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
@@ -263,10 +279,10 @@ function views_problems_map_and_overlays_views_default_views() {
   );
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
 
-  /* Display: Невырашаныя праблемы */
-  $handler = $view->new_display('openlayers', 'Невырашаныя праблемы', 'openlayers_not_solved_problems');
+  /* Display: Нявырашаныя праблемы */
+  $handler = $view->new_display('openlayers', 'Нявырашаныя праблемы', 'openlayers_not_solved_problems');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Невырашаныя праблемы';
+  $handler->display->display_options['title'] = 'Нявырашаныя праблемы';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -470,10 +486,19 @@ function views_problems_map_and_overlays_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Мапа'),
+    t('Дадаць праблему'),
+    t('<?php 
+global $user;
+?>
+
+<a class="rich-link bold-text" 
+href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/ads/anonymous.html"); } ?>">
+Дадаць праблему</a>
+'),
     t('Вырашаныя праблемы'),
     t('term from field_problem_status'),
     t('<div class="white-text bold-text">[title]</div>'),
-    t('Невырашаныя праблемы'),
+    t('Нявырашаныя праблемы'),
     t('<div class="white-text bold-text">[title]</div>
 '),
     t('Статус праблемы (field_problem_status)'),

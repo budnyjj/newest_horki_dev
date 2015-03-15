@@ -1,8 +1,8 @@
 <?php
 
-print l(t('How to add ads?'), 'ads/help.html', array(
+print l(t('How to add local problems?'), 'problems/help.html', array(
       'attributes' => array(
-           'class' => 'ads-help-link rich-link',
+           'class' => 'local-problems-help-link rich-link',
            'target' => '_blank'
            )
       )

@@ -1,0 +1,3 @@
+name = Help local problem 
+description = Display help link on local problems form page
+core = 7.x

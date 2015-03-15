@@ -1,0 +1,31 @@
+<?php 
+
+/**
+* Implements hook_help.
+*
+* Displays help and module information.
+*
+* @param path 
+*   Which path of the site we're using to display help
+* @param arg
+*   Array that holds the current path as returned from arg() function
+*/
+
+function help_local_problem_help($path, $arg) {
+   switch ($path) {
+     case "admin/help#help_local_problem":
+       return '<p>' . t("Shows help link on local problem form page") . '</p>';
+       break;
+   }
+}
+
+function help_local_problem_theme($existing, $type, $theme, $path) {
+    return array(
+        'local_problem_node_form' => array(
+            'arguments' => array('form' => null),
+            'path' => drupal_get_path('theme', 'dev').'/templates/forms',
+            'template' => 'local_problem--node-form', 
+            'render element' => 'form'
+        )
+    );
+}

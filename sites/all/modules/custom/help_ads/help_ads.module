@@ -11,15 +11,15 @@
 *   Array that holds the current path as returned from arg() function
 */
 
-function ads_help_help($path, $arg) {
+function help_ads_help($path, $arg) {
    switch ($path) {
-     case "admin/help#ads_help":
+     case "admin/help#help_ads":
        return '<p>' . t("Shows help link on ads form page") . '</p>';
        break;
    }
 }
 
-function ads_help_theme($existing, $type, $theme, $path) {
+function help_ads_theme($existing, $type, $theme, $path) {
     return array(
         'ads_node_form' => array(
             'arguments' => array('form' => null),
