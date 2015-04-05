@@ -788,13 +788,13 @@ article.comment .permalink {
 /*Footer Block styles*/
 
 #block-block-9 {
-    padding: 5px 0 0 0;
+    padding: 5px 0;
 }
 
-#block-block-9 .content p, #block-block-9 .content p a {
+.footer-text,
+.footer-text a {
     color: #8996A0;
 }
-
 
 /*Teasers style*/
 
@@ -998,6 +998,7 @@ article .poll {
     display: none;
 }
 
+.context-navinyhtml .media-grid-page .views-row,
 .context-krainahtml .media-grid-page .views-row,
 .context-regiyonhtml .media-grid-page .views-row {
     height: 300px;
@@ -1877,10 +1878,6 @@ article .field-name-field-linked-local-problems {
 .description, .tips, .fieldset-description {
     color: #666;
     font-size: 0.85em;
-}
-
-#back-top {
-    top: 20px;
 }
 
 /* Status messages */

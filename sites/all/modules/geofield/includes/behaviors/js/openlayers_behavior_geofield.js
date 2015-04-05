@@ -131,6 +131,12 @@ OpenLayers.Control.GeofieldEditingToolbar = OpenLayers.Class(
         }
       }
 
+      // unselect geofield when feature was added                                                                                 
+      function unselectGeofield(features) {                                                                                       
+	var navigationControl = features.object.map.controls[0].controls[0];
+        features.object.map.controls[0].activateControl(navigationControl);                           
+      }
+
       if (!$(context).hasClass('geofield-processed')) {
         // we get the .form-item wrapper which is a slibling of our hidden input
         var $wkt = $(context).closest('.form-item').parent().find('input.geofield_wkt');
@@ -160,7 +166,10 @@ OpenLayers.Control.GeofieldEditingToolbar = OpenLayers.Class(
           dataLayer.events.register('featureadded', $wkt, updateWKTField);
           dataLayer.events.register('featureremoved', $wkt, updateWKTField);
           dataLayer.events.register('afterfeaturemodified', $wkt, updateWKTField);
-
+	    
+	  // unselect geofield when feature was added
+	  dataLayer.events.register('featureadded', $wkt, unselectGeofield);
+	    
           // create toolbar
           var geofieldControl = new OpenLayers.Control.GeofieldEditingToolbar(dataLayer, Drupal.settings.geofield.widget_settings);
           data.openlayers.addControl(geofieldControl);
