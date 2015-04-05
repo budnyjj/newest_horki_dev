@@ -34,17 +34,9 @@ function comments_suite_image_default_styles() {
 
   // Exported image style: user_avatar_block.
   $styles['user_avatar_block'] = array(
-    'name' => 'user_avatar_block',
     'label' => 'user_avatar_block',
     'effects' => array(
       33 => array(
-        'label' => 'Маштаб і абрэзка',
-        'help' => 'Маштаб і абразанне будуць устаноўлены прапарцыйна памерам першапачатковага малюнка, а затым будуць абрэзаны па  большаму вымярэнню. Гэта больш карысна для стварэння квадратных мініяцюр без расцяжэння малюнкаў.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 20,
@@ -57,17 +49,9 @@ function comments_suite_image_default_styles() {
 
   // Exported image style: user_avatar_comment.
   $styles['user_avatar_comment'] = array(
-    'name' => 'user_avatar_comment',
     'label' => 'user_avatar_comment',
     'effects' => array(
       32 => array(
-        'label' => 'Маштаб і абрэзка',
-        'help' => 'Маштаб і абразанне будуць устаноўлены прапарцыйна памерам першапачатковага малюнка, а затым будуць абрэзаны па  большаму вымярэнню. Гэта больш карысна для стварэння квадратных мініяцюр без расцяжэння малюнкаў.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 40,

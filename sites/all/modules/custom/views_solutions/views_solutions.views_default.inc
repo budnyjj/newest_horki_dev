@@ -241,6 +241,45 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'dark-red-text, bold-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Апублікавана */
+  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
+  $handler->display->display_options['filters']['status_1']['table'] = 'node';
+  $handler->display->display_options['filters']['status_1']['field'] = 'status';
+  $handler->display->display_options['filters']['status_1']['value'] = '1';
+  $handler->display->display_options['filters']['status_1']['group'] = 1;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+    'local_solution' => 'local_solution',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['id'] = 'field_rubric_by_taxonomy_tid_1';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['group'] = 2;
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['type'] = 'select';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['vocabulary'] = 'rubrics';
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
+    156 => '156',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['group'] = 2;
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
@@ -374,6 +413,45 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'black-text, bold-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Апублікавана */
+  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
+  $handler->display->display_options['filters']['status_1']['table'] = 'node';
+  $handler->display->display_options['filters']['status_1']['field'] = 'status';
+  $handler->display->display_options['filters']['status_1']['value'] = '1';
+  $handler->display->display_options['filters']['status_1']['group'] = 1;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+    'local_solution' => 'local_solution',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['id'] = 'field_rubric_by_taxonomy_tid_1';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['group'] = 2;
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['type'] = 'select';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['vocabulary'] = 'rubrics';
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
+    156 => '156',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['group'] = 2;
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
   $handler->display->display_options['block_description'] = 'Ідэі вырашэння мясцовых праблем';
   $translatables['knowledge_base'] = array(
     t('Master'),

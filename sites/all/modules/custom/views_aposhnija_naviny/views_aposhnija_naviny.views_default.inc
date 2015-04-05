@@ -305,6 +305,8 @@ function views_aposhnija_naviny_views_default_views() {
 
   /* Display: Навіны RSS */
   $handler = $view->new_display('feed', 'Навіны RSS', 'feed_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Навіны з Горак, Дрыбіна і Мсціслава';
   $handler->display->display_options['defaults']['cache'] = FALSE;
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -447,6 +449,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   $handler->display->display_options['path'] = 'naviny.xml';
+  $handler->display->display_options['sitename_title'] = 0;
 
   /* Display: Яндэкс RSS  */
   $handler = $view->new_display('feed', 'Яндэкс RSS ', 'feed_2');
@@ -814,6 +817,7 @@ function views_aposhnija_naviny_views_default_views() {
     t('<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>'),
     t('<div class="statistics-list">[created] [recentcount] [comment_count]</div>'),
     t('Навіны RSS'),
+    t('Навіны з Горак, Дрыбіна і Мсціслава'),
     t('author'),
     t('admin@horki.info'),
     t('[field_pics]

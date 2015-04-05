@@ -84,7 +84,7 @@ global $user;
 ?>
 
 <a class="rich-link bold-text" 
-href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/ads/anonymous.html"); } ?>">
+href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/problems/anonymous.html"); } ?>">
 Дадаць праблему</a>
 ';
   $handler->display->display_options['header']['area']['format'] = 'php_code';
@@ -492,7 +492,7 @@ global $user;
 ?>
 
 <a class="rich-link bold-text" 
-href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/ads/anonymous.html"); } ?>">
+href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/problems/anonymous.html"); } ?>">
 Дадаць праблему</a>
 '),
     t('Вырашаныя праблемы'),
