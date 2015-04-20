@@ -41,36 +41,31 @@ function content_type_local_solution_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_linked_local_problems',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'ads' => 0,
-        'afisha' => 0,
-        'company' => 0,
-        'info' => 0,
-        'library' => 0,
-        'local_problem' => 'local_problem',
-        'local_solution' => 0,
-        'news' => 0,
-        'news_from_readers' => 0,
-        'poll' => 0,
-        'static' => 0,
-        'uzgorak' => 0,
-        'webform' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'local_problem' => 'local_problem',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
   return $field_bases;

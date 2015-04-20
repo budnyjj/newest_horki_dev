@@ -134,20 +134,24 @@ function content_type_local_solution_field_default_field_instances() {
     'bundle' => 'local_solution',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Мясцовыя праблемы, якія лагічна звязаныя з гэтым матэрыялам. ',
+    'description' => 'Спіс звязаных праблем',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'node_reference',
-        'settings' => array(),
-        'type' => 'node_reference_default',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'node_reference',
-        'settings' => array(),
-        'type' => 'node_reference_default',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 2,
       ),
     ),
@@ -160,13 +164,13 @@ function content_type_local_solution_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'entityreference',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
         'size' => 60,
       ),
-      'type' => 'node_reference_autocomplete',
+      'type' => 'entityreference_autocomplete',
       'weight' => 4,
     ),
   );
@@ -351,8 +355,8 @@ function content_type_local_solution_field_default_field_instances() {
   t('Гэты малюнак будзе паказвацца ў спісе рашэнняў праблем');
   t('Дакументы');
   t('Звязаныя праблемы');
-  t('Мясцовыя праблемы, якія лагічна звязаныя з гэтым матэрыялам. ');
   t('Падзяліцца');
+  t('Спіс звязаных праблем');
   t('Тэкст');
 
   return $field_instances;

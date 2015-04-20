@@ -1440,6 +1440,10 @@ article .poll {
     margin-bottom: 6px;
 }
 
+.block-new-local-problems .view-footer {
+    text-align: center;
+}
+
 /* Map of local problems  styles */
 
 .page-problems-maphtml .block-system-main {

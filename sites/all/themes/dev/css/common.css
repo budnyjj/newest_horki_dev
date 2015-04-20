@@ -123,8 +123,8 @@ a.no-underline-text:hover {
 .red-button,
 .item-list .pager li {
     width: 120px;
-    margin: 0 auto 0.3em auto;
-    padding: 0.3em 1em 0.5em 1em;
+    margin: 0 auto 5px auto;
+    padding: 5px 1em 6px 1em;
     border-radius: 3px;
 }
 
