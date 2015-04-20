@@ -265,11 +265,11 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Местные проблемы | [site:name]',
+        'value' => 'Горки - все местные проблемы в одном разделе | [site:name]',
         'default' => '',
       ),
       'description' => array(
-        'value' => 'Проблемы Горок от читателей сайта horki.info.',
+        'value' => 'Проблемы Горок от пользователей сайта horki.info.',
         'default' => '',
       ),
       'abstract' => array(
@@ -277,7 +277,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
         'default' => '',
       ),
       'keywords' => array(
-        'value' => 'Проблемы',
+        'value' => 'шумный магазин на Калинина, парковка возле амфитеатра, десткая площадка на строителей, церковь на слободе',
         'default' => '',
       ),
       'robots' => array(
@@ -364,6 +364,8 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler = $view->new_display('block', 'Блок усіх праблем', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Апошнія праблемы';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-all-local-problems';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -627,11 +629,13 @@ global $user;
   $handler = $view->new_display('block', 'Блок невырашаных праблем, і тых, што не вырашаліся', 'block_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Апошнія праблемы';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-new-local-problems';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'больш праблем';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -754,11 +758,13 @@ global $user;
   $handler = $view->new_display('block', 'Вырашаныя праблемы', 'block_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Вырашаныя праблемы';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-solved-local-problems';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'больш праблем';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -868,6 +874,75 @@ global $user;
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
   $handler->display->display_options['block_description'] = 'Вырашаныя мясцовыя праблемы';
   $handler->display->display_options['block_caching'] = '1';
+
+  /* Display: Звязаныя мясцовыя праблемы */
+  $handler = $view->new_display('block', 'Звязаныя мясцовыя праблемы', 'block_5');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Звязаныя праблемы';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-linked-local-problems';
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_linked_local_problems_target_id']['id'] = 'field_linked_local_problems_target_id';
+  $handler->display->display_options['relationships']['field_linked_local_problems_target_id']['table'] = 'field_data_field_linked_local_problems';
+  $handler->display->display_options['relationships']['field_linked_local_problems_target_id']['field'] = 'field_linked_local_problems_target_id';
+  $handler->display->display_options['relationships']['field_linked_local_problems_target_id']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Шлях */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['relationship'] = 'field_linked_local_problems_target_id';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_linked_local_problems_target_id';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['title']['alter']['target'] = '_blank';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_class'] = 'dark-red-text';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Змест: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Усе';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Апублікавана */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   $translatables['local_problems'] = array(
     t('Master'),
     t('болей'),
@@ -939,6 +1014,9 @@ global $user;
     t('Вырашаныя праблемы'),
     t('На жаль, пакуль што няма аніводнай вырашанай мясцовай праблемы'),
     t('Вырашаныя мясцовыя праблемы'),
+    t('Звязаныя мясцовыя праблемы'),
+    t('Звязаныя праблемы'),
+    t('Змест entity referenced from field_linked_local_problems'),
   );
   $export['local_problems'] = $view;
 

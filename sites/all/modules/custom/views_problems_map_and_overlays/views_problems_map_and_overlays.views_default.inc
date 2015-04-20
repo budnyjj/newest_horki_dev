@@ -63,6 +63,8 @@ function views_problems_map_and_overlays_views_default_views() {
 
   /* Display: Мапа */
   $handler = $view->new_display('page', 'Мапа', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Мапа праблем горада Горкі';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -91,11 +93,11 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Мапа праблем рэгіёна | [site:name]',
+        'value' => 'Горки: найдем и решим проблемы города вместе | [site:name]',
         'default' => '',
       ),
       'description' => array(
-        'value' => '',
+        'value' => 'Сервис по поиску и решению проблем в городе Горки',
         'default' => '',
       ),
       'abstract' => array(
@@ -103,7 +105,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
         'default' => '',
       ),
       'keywords' => array(
-        'value' => '',
+        'value' => 'Горки, проблемы, решения',
         'default' => '',
       ),
       'robots' => array(
@@ -486,6 +488,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
     t('Asc'),
     t('Desc'),
     t('Мапа'),
+    t('Мапа праблем горада Горкі'),
     t('Дадаць праблему'),
     t('<?php 
 global $user;

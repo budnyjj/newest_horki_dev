@@ -147,11 +147,12 @@ function content_type_local_solution_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'entityreference',
+        'module' => 'entityreference_views_formatter',
         'settings' => array(
-          'link' => 1,
+          'view_display' => 'block_5',
+          'view_name' => 'local_problems',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_views_formatter',
         'weight' => 2,
       ),
     ),
