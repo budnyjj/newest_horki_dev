@@ -1444,6 +1444,10 @@ article .poll {
     text-align: center;
 }
 
+.block-linked-local-problems .views-row {
+    margin: 0;
+}
+
 /* Map of local problems  styles */
 
 .page-problems-maphtml .block-system-main {
