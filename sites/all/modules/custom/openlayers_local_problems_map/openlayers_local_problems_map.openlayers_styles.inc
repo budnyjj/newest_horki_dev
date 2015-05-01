@@ -42,7 +42,7 @@ function openlayers_local_problems_map_openlayers_styles() {
   $openlayers_styles->title = 'Маркер невырашанай праблемы';
   $openlayers_styles->description = '';
   $openlayers_styles->data = array(
-    'externalGraphic' => '/sites/all/themes/dev/images/red_marker.png',
+    'externalGraphic' => '/sites/default/files/default_images/status/red.png',
     'pointRadius' => 9,
     'fillColor' => '#EE9900',
     'fillOpacity' => 1,

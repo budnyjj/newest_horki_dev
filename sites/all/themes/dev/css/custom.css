@@ -1503,12 +1503,12 @@ article .poll {
     float: left;
 }
 
-.view-map-local-problems .view-header {
+.page-map-local-problems .view-header {
     text-align: right;
     padding-bottom: 0.5em;
 }
 
-.view-map-local-problems .view-content {
+.page-map-local-problems .view-content {
     padding-top: 0.5em;
 }
 

@@ -24,6 +24,7 @@ function content_type_local_problem_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_problem_map',
+      1 => 'field_this_problem_on_map',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

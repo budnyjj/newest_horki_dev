@@ -34,7 +34,7 @@ function content_type_local_problem_field_default_field_instances() {
           'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,google_plusone_share,email,print,favorites',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -72,7 +72,7 @@ function content_type_local_problem_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_plain',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -155,7 +155,7 @@ function content_type_local_problem_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -584,7 +584,7 @@ function content_type_local_problem_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -623,7 +623,7 @@ function content_type_local_problem_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -688,6 +688,74 @@ function content_type_local_problem_field_default_field_instances() {
       ),
       'type' => 'text_textarea_with_summary',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-local_problem-field_this_problem_on_map'
+  $field_instances['node-local_problem-field_this_problem_on_map'] = array(
+    'bundle' => 'local_problem',
+    'default_value' => array(
+      0 => array(
+        'vname' => 'map_local_problems|block_1',
+        'vargs' => '',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_default',
+        'weight' => 10,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_this_problem_on_map',
+    'label' => 'Абраная мясцовая праблема на мапе',
+    'required' => 0,
+    'settings' => array(
+      'allowed_views' => array(
+        'admin_views_comment' => 0,
+        'admin_views_node' => 0,
+        'admin_views_user' => 0,
+        'ads' => 0,
+        'aposhnija_naviny' => 0,
+        'catalog_company' => 0,
+        'comments_block' => 0,
+        'daviedka' => 0,
+        'front' => 0,
+        'genres' => 0,
+        'knowledge_base' => 0,
+        'library' => 0,
+        'local_problems' => 0,
+        'map_local_problems' => 'map_local_problems',
+        'news_by_regions' => 0,
+        'news_from_readers' => 0,
+        'photoblog' => 0,
+        'rubrics' => 0,
+        'similar_ads' => 0,
+        'similarterms' => 0,
+        'uzgorak' => 0,
+        'videoblog' => 0,
+      ),
+      'force_default' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewfield',
+      'settings' => array(),
+      'type' => 'viewfield_select',
+      'weight' => 2,
     ),
   );
 
@@ -767,6 +835,7 @@ function content_type_local_problem_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('E-mail');
+  t('Абраная мясцовая праблема на мапе');
   t('Адзначце на гэтай мапе дакладнае месца, дзе знаходзіцца праблема.');
   t('Апісанне праблемы');
   t('Аўтар');
