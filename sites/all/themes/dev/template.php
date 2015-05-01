@@ -148,11 +148,8 @@ function dev_preprocess_node(&$variables)
     switch ($problem_status_value)
       {
 	    case "не вырашана":
-	      $problem_status_text .= 'local-problem-orange';
-	      break;
-	    case "не вырашалася":
 	      $problem_status_text .= 'local-problem-red';
-          break;
+	      break;
         case "вырашана":
           $problem_status_text .= 'local-problem-green';
           break;
