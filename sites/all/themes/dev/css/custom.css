@@ -415,7 +415,8 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 
 /* Main page content NEW STYLE */
 
-.block-news-by-regions .view-footer {
+.block-main-news-by-regions .view-footer,
+.block-main-all-local-problems .view-footer {
     text-align: center;
     clear: both;
 }
@@ -425,7 +426,8 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 .block-news-by-regions-block-2,
 .block-news-by-regions-block-3,
 .block-news-by-regions-block-4,
-.block-news-by-regions-block-5 {
+.block-news-by-regions-block-5,
+.block-views-local-problems-block-6 {
     margin-bottom: 10px;
     padding-bottom: 5px;
     border-bottom: 1px dashed #ccc;
@@ -436,7 +438,8 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
 .block-news-by-regions-block-2 .block-title,
 .block-news-by-regions-block-3 .block-title,
 .block-news-by-regions-block-4 .block-title,
-.block-news-by-regions-block-5 .block-title {
+.block-news-by-regions-block-5 .block-title,
+.block-views-local-problems-block-6 .block-title {
     text-align: left;
 }
 
@@ -1380,10 +1383,6 @@ article .poll {
 
 .local-problem-red {
     color: #D2232A;
-}
-
-.local-problem-orange {
-    color: #D45500;
 }
 
 .local-problem-green {

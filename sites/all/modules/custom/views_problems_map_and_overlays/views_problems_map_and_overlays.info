@@ -1,7 +1,7 @@
 name = Views: problems map and overlays
 core = 7.x
 package = Custom
-version = 7.x-1.10
+version = 7.x-1.11
 project = views_problems_map_and_overlays
 dependencies[] = ctools
 dependencies[] = image_url_formatter

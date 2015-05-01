@@ -116,6 +116,10 @@ a.no-underline-text:hover {
     font-size: 0.85em;
 }
 
+.lowercase {
+    text-transform: lowercase;
+}
+
 /* Button styles */
 
 .more-link,

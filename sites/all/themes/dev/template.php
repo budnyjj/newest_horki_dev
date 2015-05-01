@@ -147,9 +147,9 @@ function dev_preprocess_node(&$variables)
     $problem_status_value = mb_strtolower($problem_status[0]['#markup']);
     switch ($problem_status_value)
       {
-	    case "не вырашана":
-	      $problem_status_text .= 'local-problem-red';
-	      break;
+        case "не вырашана":
+	  $problem_status_text .= 'local-problem-red';
+	   break;
         case "вырашана":
           $problem_status_text .= 'local-problem-green';
           break;

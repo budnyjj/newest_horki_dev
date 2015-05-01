@@ -625,8 +625,8 @@ global $user;
   );
   $handler->display->display_options['block_description'] = 'Мясцовыя праблемы карыстальніка';
 
-  /* Display: Блок невырашаных праблем, і тых, што не вырашаліся */
-  $handler = $view->new_display('block', 'Блок невырашаных праблем, і тых, што не вырашаліся', 'block_3');
+  /* Display: Блок нявырашаных праблем */
+  $handler = $view->new_display('block', 'Блок нявырашаных праблем', 'block_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Апошнія праблемы';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -754,8 +754,8 @@ global $user;
   $handler->display->display_options['block_description'] = 'Невырашаныя мясцовыя праблемы, і тыя, якія не вырашаліся';
   $handler->display->display_options['block_caching'] = '1';
 
-  /* Display: Вырашаныя праблемы */
-  $handler = $view->new_display('block', 'Вырашаныя праблемы', 'block_4');
+  /* Display: Блок вырашаных праблем */
+  $handler = $view->new_display('block', 'Блок вырашаных праблем', 'block_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Вырашаныя праблемы';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -1009,8 +1009,9 @@ global $user;
     t('апублікаваць'),
     t('Усе'),
     t('Мясцовыя праблемы карыстальніка'),
-    t('Блок невырашаных праблем, і тых, што не вырашаліся'),
+    t('Блок нявырашаных праблем'),
     t('Невырашаныя мясцовыя праблемы, і тыя, якія не вырашаліся'),
+    t('Блок вырашаных праблем'),
     t('Вырашаныя праблемы'),
     t('На жаль, пакуль што няма аніводнай вырашанай мясцовай праблемы'),
     t('Вырашаныя мясцовыя праблемы'),
