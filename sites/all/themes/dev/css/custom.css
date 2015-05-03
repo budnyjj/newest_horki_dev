@@ -37,7 +37,7 @@ nav,
 /*Global Positioning styles*/
 
 body {
-    background-image:url('/sites/all/themes/dev/images/grey_texture.jpg');
+    background-image: url(/sites/all/themes/dev/images/grey_texture.jpg);
 }
 
 #zone-content, #zone-branding, #zone-preface  {
@@ -1872,6 +1872,16 @@ article .field-name-field-linked-local-problems {
 .field-name-field-linked-local-problems .field-items a {
     color: #671A1D;
     font-weight: bold;
+}
+
+/* Weather page styles */
+
+.table-weather td div {
+    text-align: center;
+}
+
+.table-weather td u {
+    text-decoration: none !important;
 }
 
 /*Admin menu style*/

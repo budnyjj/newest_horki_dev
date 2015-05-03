@@ -171,7 +171,6 @@ h1 {
 }
 
 #block-block-16 .content {
-    color: #D2232A;
     font-size: 11px;
     font-weight: bold;
     margin-right: 0px;
@@ -205,7 +204,7 @@ h1 {
 
 #block-block-2 {
     position: absolute;
-    left: 375px;
+    left: 395px;
     bottom: 0;
 }
 
@@ -327,7 +326,7 @@ nav.navigation li a:link, nav.navigation li a:visited {
 /*First Sidebar*/
 
 .grey-sidebar {
-    background-image: url('http://horki.info/sites/all/themes/dev/images/grey_texture.jpg');
+    background-image: url(/sites/all/themes/dev/images/grey_texture.jpg);
     border-left: 1px dashed #ccc; border-right: 1px dashed #ccc;
     padding: 0px 5px;
     width: 208px !important; 
@@ -505,7 +504,6 @@ nav.navigation li a:link, nav.navigation li a:visited {
     margin: 0 auto;
 }
 
-#block-block-32 .content,
 #block-block-35 .content,
 #block-block-39 .content,
 #block-block-43 .content,

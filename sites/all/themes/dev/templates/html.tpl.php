@@ -3,7 +3,7 @@
 <head<?php print $rdf->profile; ?>>
 <?php print $head; ?>
 <title><?php print $head_title; ?></title>  
-<link rel="icon" href="http://horki.info/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 <?php print $styles; ?>
 
 <meta name="verify-v1" content="A29kVzxMcO/zSJlO3EeJzU6vnTgF5KY1HcgHqId0+qA=" />
