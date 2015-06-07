@@ -520,8 +520,12 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     text-align: left;
 }
 
-.view-similarterms .views-row {
-    margin: 0.2em 0;
+.block-similar-news .views-row {
+    margin: 0 5px 0 0 !important;
+}
+
+.block-similar-news .views-row-last {
+    margin: 0 0px 0 0 !important;
 }
 
 /*Comment form styles*/
@@ -1399,6 +1403,12 @@ article .poll {
     margin-bottom: 0.7em;
 }
 
+.block-block-48 {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px dashed #ccc;
+}
+
 /* Local problems view styles */
 
 .local-problems .view-header {
@@ -1876,12 +1886,18 @@ article .field-name-field-linked-local-problems {
 
 /* Weather page styles */
 
+.table-weather {
+    width: 465px;
+    float: left;
+}
+
 .table-weather td div {
     text-align: center;
 }
 
 .table-weather td u {
     text-decoration: none !important;
+    font-weight: bold;
 }
 
 /*Admin menu style*/
