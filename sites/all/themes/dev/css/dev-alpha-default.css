@@ -305,32 +305,33 @@ nav.navigation li a:link, nav.navigation li a:visited {
     margin-top: 0;
 }
 
-/* Main page content NEW STYLE */
+/* Region styles */
 
-.page-main #region-content {
-    margin: 0 0 0 10px;
-    width: 710px;
-}
-
-.page-main #region-sidebar-first {
-    margin: 0 10px;
-    width: 210px;
-}
-
-.page-main .main-page-content {
-    margin: 0 0 0 10px;
-    padding-right: 9px;
+.page-abvestkihtml .inner-page-content,
+.page-uzgorakhtml .inner-page-content,
+.page-companieshtml .inner-page-content,
+.page-libraryhtml .inner-page-content,
+.page-commentshtml .inner-page-content,
+.page-node .inner-page-content,
+.main-page-content {
+    padding-right: 10px !important;
+    margin: 0 0 0 10px !important;
+    width: 710px !important;
     border-right: 1px dashed #ccc;
 }
 
-/*First Sidebar*/
-
-.grey-sidebar {
-    background-image: url(/sites/all/themes/dev/images/grey_texture.jpg);
-    border-left: 1px dashed #ccc; border-right: 1px dashed #ccc;
-    padding: 0px 5px;
-    width: 208px !important; 
+.inner-page-content {
+    margin: 0 0 0 10px !important;
+    width: 720px !important;
+    border-right: 1px dashed #ccc;
 }
+
+#region-sidebar-first {
+    margin: 0 10px;
+    width: 209px;
+}
+
+/*First Sidebar*/
 
 .region-sidebar-first-inner {
     padding: 10px 0;
@@ -527,86 +528,3 @@ nav.navigation li a:link, nav.navigation li a:visited {
     border-top: 1px dashed #ccc;
 }
 
-/* Footer styles */
-
-#akavita {
-    float: right;
-    padding: 0 0 10px 10px;
-}
-
-/* Photoblog page styles */
-
-.page-photohtml #region-content {
-    margin: 0 0 0 10px;
-    width: 720px;
-}
-
-.page-photohtml #region-sidebar-first {
-    margin: 0 10px 0 0;
-}
-
-/* Videoblog page styles */
-
-.page-videohtml #region-content {
-    margin: 0 0 0 10px;
-    width: 720px;
-}
-
-.page-videohtml #region-sidebar-first {
-    margin: 0 10px 0 0;
-}
-
-/* Taxonomy page styles */
-
-.page-taxonomy #region-content {
-    margin: 0 0 0 10px;
-    width: 720px;
-}
-
-.page-taxonomy #region-sidebar-first {
-    margin: 0 10px 0 0;
-}
-
-/* Aposhnija naviny page styles */
-
-.page-navinyhtml #region-content {
-    margin: 0 0 0 10px;
-    width: 720px;
-}
-
-.page-navinyhtml #region-sidebar-first {
-    margin: 0 10px 0 0;
-}
-
-/* Narodnyja naviny page styles */
-
-.page-narodnyjahtml #region-content {
-    margin: 0 0 0 10px;
-    width: 720px;
-}
-
-.page-narodnyjahtml #region-sidebar-first {
-    margin: 0 10px 0 0;
-}
-
-/* Local problems page styles */
-
-.page-problemshtml #region-content {
-    margin: 0 0 0 10px;
-    width: 720px;
-}
-
-.page-problemshtml #region-sidebar-first {
-    margin: 0 10px 0 0;
-}
-
-/* Local solutions page styles */
-
-.page-solutionshtml #region-content {
-    margin: 0 0 0 10px;
-    width: 720px;
-}
-
-.page-solutionshtml #region-sidebar-first {
-    margin: 0 10px 0 0;
-}
