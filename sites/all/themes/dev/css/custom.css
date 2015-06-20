@@ -520,15 +520,8 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     text-align: left;
 }
 
-.block-similar-news .views-row {
-    margin: 0 5px 0 0 !important;
-}
-
-.block-similar-news .views-row-last {
-    margin: 0 0px 0 0 !important;
-}
-
 /*Comment form styles*/
+
 #comments {
     margin-top: 0;
 }
@@ -1190,6 +1183,12 @@ article .poll {
     text-align: center;
     color: #666;
     font-size: 11px;
+}
+
+.block-block-34 {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px dashed #ccc;
 }
 
 /* Votes page styles */
