@@ -21,13 +21,13 @@ function delta_system_delta_default_templates() {
   $delta->parent = '';
   $delta->settings = array(
     'theme_dev_settings' => array(
-      'alpha_region_header_banner_equal_height_element' => FALSE,
       'alpha_region_sidebar_first_zone' => NULL,
       'alpha_region_sidebar_first_equal_height_element' => FALSE,
       'alpha_region_sidebar_second_force' => 0,
       'alpha_region_social_blocks_zone' => NULL,
       'alpha_region_social_blocks_equal_height_element' => FALSE,
       'alpha_region_content_columns' => '12',
+      'alpha_region_content_css' => 'system-page-content',
     ),
   );
   $export['uzhorak'] = $delta;

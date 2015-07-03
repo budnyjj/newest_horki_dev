@@ -119,12 +119,12 @@ function openlayers_local_problems_map_openlayers_maps() {
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '30.99002830394237, 54.287675359423375',
+        'centerpoint' => '30.993118201531274, 54.285070042961934',
         'zoom' => '13',
       ),
       'restrict' => array(
         'restrictextent' => 1,
-        'restrictedExtent' => '3440621.727071,7218109.224867,3459501.673055,7231638.578871',
+        'restrictedExtent' => '3442074.029808,7217344.855386,3458966.613056,7231485.705616',
       ),
     ),
     'behaviors' => array(
@@ -139,8 +139,8 @@ function openlayers_local_problems_map_openlayers_maps() {
       ),
       'openlayers_behavior_popup' => array(
         'layers' => array(
-          'map_local_problems_openlayers_not_solved_problems' => 'map_local_problems_openlayers_not_solved_problems',
           'map_local_problems_openlayers_solved_problems' => 'map_local_problems_openlayers_solved_problems',
+          'map_local_problems_openlayers_not_solved_problems' => 'map_local_problems_openlayers_not_solved_problems',
         ),
         'popupAtPosition' => 'computed',
         'panMapIfOutOfView' => 0,
@@ -171,36 +171,36 @@ function openlayers_local_problems_map_openlayers_maps() {
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
       'map_local_problems_openlayers_this_problem' => '0',
-      'map_local_problems_openlayers_not_solved_problems' => '0',
       'map_local_problems_openlayers_solved_problems' => '0',
+      'map_local_problems_openlayers_not_solved_problems' => '0',
     ),
     'layer_styles_select' => array(
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
       'map_local_problems_openlayers_this_problem' => '0',
-      'map_local_problems_openlayers_not_solved_problems' => '0',
       'map_local_problems_openlayers_solved_problems' => '0',
+      'map_local_problems_openlayers_not_solved_problems' => '0',
     ),
     'layer_styles_temporary' => array(
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
       'map_local_problems_openlayers_this_problem' => '0',
-      'map_local_problems_openlayers_not_solved_problems' => '0',
       'map_local_problems_openlayers_solved_problems' => '0',
+      'map_local_problems_openlayers_not_solved_problems' => '0',
     ),
     'layer_activated' => array(
-      'map_local_problems_openlayers_not_solved_problems' => 'map_local_problems_openlayers_not_solved_problems',
       'map_local_problems_openlayers_solved_problems' => 'map_local_problems_openlayers_solved_problems',
+      'map_local_problems_openlayers_not_solved_problems' => 'map_local_problems_openlayers_not_solved_problems',
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
       'map_local_problems_openlayers_this_problem' => 0,
     ),
     'layer_switcher' => array(
-      'map_local_problems_openlayers_not_solved_problems' => 'map_local_problems_openlayers_not_solved_problems',
       'map_local_problems_openlayers_solved_problems' => 'map_local_problems_openlayers_solved_problems',
+      'map_local_problems_openlayers_not_solved_problems' => 'map_local_problems_openlayers_not_solved_problems',
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
@@ -231,19 +231,19 @@ function openlayers_local_problems_map_openlayers_maps() {
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '30.99002830394237, 54.287675359423375',
+        'centerpoint' => '30.993118201531274, 54.285070042961934',
         'zoom' => '15',
       ),
       'restrict' => array(
         'restrictextent' => 1,
-        'restrictedExtent' => '3440621.727071,7218109.224867,3459501.673055,7231638.578871',
+        'restrictedExtent' => '3442074.029808,7217344.855386,3458966.613056,7231485.705616',
       ),
     ),
     'behaviors' => array(
       'openlayers_behavior_zoomtolayer' => array(
         'zoomtolayer' => array(
           'map_local_problems_openlayers_this_problem' => 'map_local_problems_openlayers_this_problem',
-          'map_local_problems' => 0,
+          'map_this_local_problem' => 0,
         ),
         'point_zoom_level' => '0',
         'zoomtolayer_scale' => '0',

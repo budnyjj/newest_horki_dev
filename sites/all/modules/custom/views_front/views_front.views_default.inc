@@ -142,6 +142,13 @@ function views_front_views_default_views() {
   );
   $handler->display->display_options['fields']['field_pics']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_pics']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Апублікавана */
@@ -210,6 +217,13 @@ function views_front_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'black-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Апублікавана */
@@ -272,14 +286,14 @@ function views_front_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = '';
-  /* Поле: Змест: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'list';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Вузел: Published at */
+  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['label'] = '';
+  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['published_at']['date_format'] = 'list';
+  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -291,6 +305,13 @@ function views_front_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_class'] = 'black-text large-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Апублікавана */

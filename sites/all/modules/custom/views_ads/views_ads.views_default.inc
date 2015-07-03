@@ -131,7 +131,7 @@ global $user;
 ?>
 
 <div class="red-button">
-<a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/ads/anonymous.html"); } ?>">
+<a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">
 дадаць абвестку</a>
 </div>
 ';
@@ -264,7 +264,7 @@ global $user;
 ?>
 
 <a class="rich-link bold-text" 
-href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/ads/anonymous.html"); } ?>">
+href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">
 Дадаць абвестку</a>
 ';
   $handler->display->display_options['header']['area']['format'] = 'php_code';
@@ -637,7 +637,7 @@ global $user;
 ?>
 
 <div class="red-button">
-<a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/ads/anonymous.html"); } ?>">
+<a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">
 дадаць абвестку</a>
 </div>
 '),
@@ -660,7 +660,7 @@ global $user;
 ?>
 
 <a class="rich-link bold-text" 
-href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/ads/anonymous.html"); } ?>">
+href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">
 Дадаць абвестку</a>
 '),
     t('Autosubmit'),

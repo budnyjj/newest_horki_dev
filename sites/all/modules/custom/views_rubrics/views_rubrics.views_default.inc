@@ -201,15 +201,15 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'node';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Вузел: Published at */
+  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['label'] = '';
+  $handler->display->display_options['fields']['published_at']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['published_at']['date_format'] = 'node';
+  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Поле: Node statistics: Recent count */
   $handler->display->display_options['fields']['recentcount']['id'] = 'recentcount';
   $handler->display->display_options['fields']['recentcount']['table'] = 'jstats_node';
@@ -274,7 +274,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="statistics-list">[created] [recentcount] [comment_count]</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -285,6 +285,18 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'dark-red-text bold-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Змест: Sticky */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Published or admin */
@@ -330,7 +342,7 @@ function views_rubrics_views_default_views() {
     t('| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">'),
     t('.'),
     t('| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">'),
-    t('<div class="statistics-list">[created] [recentcount] [comment_count]</div>'),
+    t('<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>'),
     t('[title][comment_count]'),
   );
   $export['rubrics'] = $view;
