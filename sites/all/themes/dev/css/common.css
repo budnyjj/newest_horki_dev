@@ -220,13 +220,14 @@ table {
     background-color: #fbfbfb;
 }
 
-.content-grid .views-row {
+.content-grid-page .views-row {
     width: 340px;
+    height: 150px;
     float: left;
     margin: 0 0 20px 0;
 }
 
-.content-grid .views-row-odd {
+.content-grid-page .views-row-odd {
     margin-right: 20px;
 }
 
