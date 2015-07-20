@@ -66,16 +66,15 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['created']['alter']['text'] = '<span class="date-list">[created]</span>';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'node';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Вузел: Published at */
+  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['label'] = '';
+  $handler->display->display_options['fields']['published_at']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['published_at']['date_format'] = 'node';
+  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Поле: Node statistics: Recent count */
   $handler->display->display_options['fields']['recentcount']['id'] = 'recentcount';
   $handler->display->display_options['fields']['recentcount']['table'] = 'jstats_node';
@@ -137,7 +136,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="statistics-list">[created] [recentcount] [comment_count]</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -149,11 +148,12 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'dark-red-text bold-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Sort criterion: Змест: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   /* Filter criterion: Змест: Апублікавана */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -517,12 +517,11 @@ function views_news_by_regions_views_default_views() {
     t('<a class="bold-text black-text" href="/gorki.html">больш навінаў</a>'),
     t('term from field_placement_by_taxonomy'),
     t('чарга'),
-    t('<span class="date-list">[created]</span>'),
     t('| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">'),
     t('.'),
     t('| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">'),
     t('<a href="[path]">[field_default_image]</a>'),
-    t('<div class="statistics-list">[created] [recentcount] [comment_count]</div>'),
+    t('<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>'),
     t('Месцы (field_placement_by_taxonomy)'),
     t('<div class="black-button"><a href="/gorki.html">больш навінаў</a></div>'),
     t('Навіны Горак'),

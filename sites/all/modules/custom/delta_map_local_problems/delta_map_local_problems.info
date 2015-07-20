@@ -1,6 +1,8 @@
 name = Delta: map local problems
 core = 7.x
 package = Custom
+version = 7.x-1.0
+project = delta_map_local_problems
 dependencies[] = ctools
 dependencies[] = delta
 features[ctools][] = delta:delta:3

@@ -30,7 +30,7 @@ nav,
 #block-block-43,
 #block-block-44,
 #block-block-45,
-#akavita {
+#block-block-49 {
     display: none;
 }
 
@@ -398,7 +398,7 @@ ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited {
     margin-left: 40px;
 }
 
-.page-main-news > .attachment .views-field-created {
+.page-main-news > .attachment .views-field-published-at {
     position: absolute;
     left: -40px;
     top: 2px;
@@ -1183,6 +1183,12 @@ article .poll {
     text-align: center;
     color: #666;
     font-size: 11px;
+}
+
+.block-block-34 {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px dashed #ccc;
 }
 
 /* Votes page styles */

@@ -1,7 +1,7 @@
 name = Openlayers: local problems map
 core = 7.x
 package = Custom
-version = 7.x-1.5
+version = 7.x-1.6
 project = openlayers_local_problems_map
 dependencies[] = ctools
 dependencies[] = openlayers

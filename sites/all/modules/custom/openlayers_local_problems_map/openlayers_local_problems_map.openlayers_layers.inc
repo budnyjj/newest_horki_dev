@@ -18,7 +18,7 @@ function openlayers_local_problems_map_openlayers_layers() {
   $openlayers_layers->description = 'Базавая мапа мясцовых праблем';
   $openlayers_layers->data = array(
     'url' => array(
-      0 => 'http://tile.openstreetmap.org/${z}/${x}/${y}.png',
+      0 => '//a.tile.openstreetmap.org/${z}/${x}/${y}.png',
     ),
     'serverResolutions' => array(
       0 => 156543.03390000001,
@@ -74,7 +74,7 @@ function openlayers_local_problems_map_openlayers_layers() {
   $openlayers_layers->description = 'Мапа для абранай мясцовай праблемы';
   $openlayers_layers->data = array(
     'url' => array(
-      0 => 'http://tile.openstreetmap.org/${z}/${x}/${y}.png',
+      0 => '//a.tile.openstreetmap.org/${z}/${x}/${y}.png',
     ),
     'serverResolutions' => array(
       0 => 156543.03390000001,

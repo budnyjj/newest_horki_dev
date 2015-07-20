@@ -92,6 +92,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
 Дадаць праблему</a>
 ';
   $handler->display->display_options['header']['area']['format'] = 'php_code';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
@@ -258,6 +259,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="white-text bold-text">[title]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Апублікавана */
@@ -355,6 +357,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="white-text bold-text">[title]</div>
 ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Апублікавана */
@@ -393,6 +396,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['block_description'] = 'Блок з мапай на старонцы мясцовай праблемы';
 
   /* Display: Абраная праблема */
@@ -470,6 +474,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="white-text bold-text">[title]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Змест: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
