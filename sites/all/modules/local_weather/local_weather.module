@@ -1,0 +1,112 @@
+<?php 
+
+/**
+* Implements hook_help.
+*
+* Displays help and module information.
+*
+* @param path 
+*   Which path of the site we're using to display help
+* @param arg
+*   Array that holds the current path as returned from arg() function
+*/
+
+function local_weather_help($path, $arg) {
+   switch ($path) {
+     case "admin/help#local_weather":
+       return '<p>'.t("Displays local weather").'</p>';
+       break;
+   }
+}
+
+/** 
+* Implements hook_block_info().
+*/
+
+function local_weather_block_info() {
+  $blocks['local_weather'] = array(
+    'info' => t('Local weather'), 
+    'cache' => DRUPAL_CACHE_PER_ROLE, 
+  );
+  return $blocks;
+}
+
+/**
+* Custom parser function
+*/
+
+function local_weather_get_forecast() {
+    $places = array(
+    	'Horki' => array('54.2833', '30.9833')
+    );
+	 
+    if (!($library = libraries_load('forecast.io-php-api')) || empty($library['loaded'])) {
+       return 'Can not load library';
+    }
+
+    $api_key = variable_get('forecastio_api_key', '');
+    if ($api_key == '') {
+       return 'Please, set ForecastIO key';
+    }
+    $forecast = new ForecastIO($api_key);
+
+    $conditions_week = $forecast->getForecastWeek($places['Horki'][0], $places['Horki'][1]);
+    if (!$conditions_week) {
+       return 'Can not obtain forecast';
+    }
+
+    $result = '<div class="weather-block-small">';
+    $result .= '<div class="weather-name">';
+    $result .= '<a href="/pogoda.html">' . t('weather') . '</a>';
+    $result .= '</div>'; 
+
+    # Get weather for today only
+    $result .= local_weather_format_conditions($conditions_week[0]);
+    $result .= '</div>';
+
+    return $result;
+}
+
+function local_weather_format_conditions($conditions) {
+    $minTemperatureFrom = round($conditions->getMinTemperature());
+    $minTemperatureTo = $minTemperatureFrom + 2;
+    $minTemperatureFmt = '<div class="min-temperature">' . $minTemperatureFrom;
+    $minTemperatureFmt .= '..' . $minTemperatureTo . '&deg;C' . '</div>';
+
+    $maxTemperatureTo = round($conditions->getMaxTemperature());
+    $maxTemperatureFrom = $maxTemperatureTo - 2;
+    $maxTemperatureFmt = '<div class="max-temperature">' . $maxTemperatureFrom;
+    $maxTemperatureFmt .= '..' . $maxTemperatureTo . '&deg;C' . '</div>';
+
+    $delimiter = '<div class="weather-delimiter">|</div>';
+    
+    $result = $delimiter . $minTemperatureFmt . $delimiter . $maxTemperatureFmt;
+
+    return $result;
+}
+
+/**
+* Display result
+*/
+
+function local_weather_block_view($delta = '') {
+  switch($delta){
+    case 'local_weather':
+      $block['subject'] = t('Weather');
+      if (user_access('access content')){  
+        $cache = cache_get('local_weather_info', 'cache');
+	if ($cache) {
+	  $result = $cache->data;
+	} else {
+	  $result = local_weather_get_forecast(); // Use our function for getting result
+	  cache_set('local_weather_info', $result, 'cache', 43200);
+	}
+	if (empty($result)) {
+          $block['content'] = t('no data');
+        } else {
+          $block['content'] = $result;
+        }
+      }
+  }
+  return $block;
+}

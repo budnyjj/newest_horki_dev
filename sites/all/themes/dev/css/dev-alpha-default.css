@@ -9,7 +9,7 @@
 #block-views-banners-block-1,
 #block-block-3,
 #block-block-14,
-#block-block-2,
+#block-local-weather-local-weather,
 #block-bel-currency-bel-currency,
 #block-custom-search-blocks-1,
 nav,
@@ -202,21 +202,27 @@ h1 {
 
 /*Weather Block Settings*/
 
-#block-block-2 {
+#block-local-weather-local-weather {
     position: absolute;
-    left: 395px;
+    left: 370px;
     bottom: 0;
 }
 
-#block-block-2 .content {
+#block-local-weather-local-weather .content {
     font-size: 11px;
 }
 
-#block-block-2 object {
-    position: relative;
-    top: 5px;
+.weather-name {
+    font-weight: bold;
 }
 
+.weather-name,
+.weather-delimiter,
+.min-temperature,
+.max-temperature {
+    display: inline-block;
+    margin: 0 2px;
+}
 
 /* Main Menu Positioning */
 
