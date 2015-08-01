@@ -1,112 +1,130 @@
 <?php 
-
-/**
-* Implements hook_help.
-*
-* Displays help and module information.
-*
-* @param path 
-*   Which path of the site we're using to display help
-* @param arg
-*   Array that holds the current path as returned from arg() function
-*/
-
+  /**
+   * Implements hook_help.
+   *
+   * Displays help and module information.
+   *
+   * @param path 
+   *   Which path of the site we're using to display help
+   * @param arg
+   *   Array that holds the current path as returned from arg() function
+   */
 function local_weather_help($path, $arg) {
-   switch ($path) {
-     case "admin/help#local_weather":
-       return '<p>'.t("Displays local weather").'</p>';
-       break;
-   }
+  switch ($path) {
+  case "admin/help#local_weather":
+    return '<p>'.t("Displays local weather").'</p>';
+    break;
+  }
 }
 
 /** 
-* Implements hook_block_info().
-*/
-
+ * Implements hook_block_info().
+ */
 function local_weather_block_info() {
-  $blocks['local_weather'] = array(
-    'info' => t('Local weather'), 
-    'cache' => DRUPAL_CACHE_PER_ROLE, 
-  );
+  $blocks['local_weather'] = 
+    array('info' => t('Local weather'), 'cache' => DRUPAL_CACHE_PER_ROLE);
   return $blocks;
 }
 
 /**
-* Custom parser function
-*/
+ * Custom parser function
+ */
+function local_weather_get_forecast($place) { 
+  if (!($library = libraries_load('forecast.io-php-api')) || empty($library['loaded'])) {
+    return 'Can not load library';
+  }
 
-function local_weather_get_forecast() {
-    $places = array(
-    	'Horki' => array('54.2833', '30.9833')
-    );
-	 
-    if (!($library = libraries_load('forecast.io-php-api')) || empty($library['loaded'])) {
-       return 'Can not load library';
-    }
+  $api_key = variable_get('forecastio_api_key', '');
+  if ($api_key == '') {
+    return 'Please, set ForecastIO key';
+  }
 
-    $api_key = variable_get('forecastio_api_key', '');
-    if ($api_key == '') {
-       return 'Please, set ForecastIO key';
-    }
-    $forecast = new ForecastIO($api_key);
+  $forecast = new ForecastIO($api_key);
 
-    $conditions_week = $forecast->getForecastWeek($places['Horki'][0], $places['Horki'][1]);
-    if (!$conditions_week) {
-       return 'Can not obtain forecast';
-    }
+  /* Get weather for today */
+  $conditions = $forecast->getForecastDay($place[0], $place[1], strtotime('today'));
+  if (!$conditions) {
+    return 'Can not obtain forecast';
+  }
 
-    $result = '<div class="weather-block-small">';
-    $result .= '<div class="weather-name">';
-    $result .= '<a href="/pogoda.html">' . t('weather') . '</a>';
-    $result .= '</div>'; 
+  $result = '<div class="weather-block-small">';
+  $result .= '<div class="name">';
+  $result .= '<a href="/pogoda.html">' . t('weather') . '</a>';
+  $result .= '</div>'; 
 
-    # Get weather for today only
-    $result .= local_weather_format_conditions($conditions_week[0]);
-    $result .= '</div>';
+  /* Get local weather for 04:00 (night) */
+  $result .= local_weather_format_conditions($conditions[4]);
 
-    return $result;
+  /* Get local weather for 14:00 (day) */
+  $result .= local_weather_format_conditions($conditions[14]);
+  $result .= '</div>';
+
+  return $result;
 }
 
 function local_weather_format_conditions($conditions) {
-    $minTemperatureFrom = round($conditions->getMinTemperature());
-    $minTemperatureTo = $minTemperatureFrom + 2;
-    $minTemperatureFmt = '<div class="min-temperature">' . $minTemperatureFrom;
-    $minTemperatureFmt .= '..' . $minTemperatureTo . '&deg;C' . '</div>';
+  $delimiter = '<div class="delimiter">|</div>';
 
-    $maxTemperatureTo = round($conditions->getMaxTemperature());
-    $maxTemperatureFrom = $maxTemperatureTo - 2;
-    $maxTemperatureFmt = '<div class="max-temperature">' . $maxTemperatureFrom;
-    $maxTemperatureFmt .= '..' . $maxTemperatureTo . '&deg;C' . '</div>';
+  $iconFmt = local_weather_format_icon($conditions->getIcon());
 
-    $delimiter = '<div class="weather-delimiter">|</div>';
+  $tempMax = round($conditions->getTemperature()) + 1;
+  $tempMin = $tempMax - 2;
+
+  $tempFmt = '<div class="temperature">';
+  $tempFmt .= $tempMin . '..' . $tempMax . '&deg;C';
+  $tempFmt .= '</div>';
     
-    $result = $delimiter . $minTemperatureFmt . $delimiter . $maxTemperatureFmt;
+  $result = $delimiter . $iconFmt . $tempFmt;
 
-    return $result;
+  return $result;
+}
+
+function local_weather_format_icon($icon_value) {
+  $icon_class = '';
+
+  switch ($icon_value) {
+  case 'clear-day':
+  case 'clear-night':
+  case 'fog':
+  case 'cloudy':
+  case 'partly-cloudy-day':
+  case 'partly-cloudy-night':
+    $icon_class .= $icon_value;
+    break;
+  case 'rain':
+  case 'sleet':
+    $icon_class .= 'rain';
+    break;
+  default:
+    $icon_class .= 'partly-cloudy-day';
+  }
+
+  return '<div class="icon ' . $icon_class . '"></div>';
 }
 
 /**
-* Display result
-*/
-
+ * Obtains data for local weather block from cache or ForecastIO API 
+ */
 function local_weather_block_view($delta = '') {
   switch($delta){
-    case 'local_weather':
-      $block['subject'] = t('Weather');
-      if (user_access('access content')){  
-        $cache = cache_get('local_weather_info', 'cache');
-	if ($cache) {
-	  $result = $cache->data;
-	} else {
-	  $result = local_weather_get_forecast(); // Use our function for getting result
-	  cache_set('local_weather_info', $result, 'cache', 43200);
-	}
-	if (empty($result)) {
-          $block['content'] = t('no data');
-        } else {
-          $block['content'] = $result;
-        }
+  case 'local_weather':
+    $block['subject'] = t('Weather');
+    if (user_access('access content')){  
+      /* $cache = cache_get('local_weather_info', 'cache'); */
+      /* if ($cache) { */
+      /* 	$result = $cache->data; */
+      /* } else { */
+      /* Horki coordinates */
+      $place = array('54.2833', '30.9833');
+      $result = local_weather_get_forecast($place); // Use our function for getting result
+      cache_set('local_weather_info', $result, 'cache', 43200);
+      /* } */
+      if (empty($result)) {
+	$block['content'] = t('no data');
+      } else {
+	$block['content'] = $result;
       }
+    }
   }
   return $block;
 }

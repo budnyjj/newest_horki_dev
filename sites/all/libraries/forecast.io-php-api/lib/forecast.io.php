@@ -1,10 +1,9 @@
 <?php
-/**
- * Helper Class for forecast.io webservice
- */
+  /**
+   * Helper Class for forecast.io webservice
+   */
 
 class ForecastIO{
-
   private $api_key;
   const API_ENDPOINT = 'https://api.forecast.io/forecast/';
 
@@ -18,15 +17,13 @@ class ForecastIO{
     $this->units = $units;
   }
 
-
   private function requestData($latitude, $longitude, $timestamp = false, $exclusions = false) {
-
     $request_url = self::API_ENDPOINT .
-        $this->api_key . '/' .
-        $latitude . ',' . $longitude .
-        ( $timestamp ? ',' . $timestamp : '' ) .
-        '?units=' . $this->units .
-        ( $exclusions ? '&exclude=' . $exclusions : '' );
+      $this->api_key . '/' .
+      $latitude . ',' . $longitude .
+      ( $timestamp ? ',' . $timestamp : '' ) .
+      '?units=' . $this->units .
+      ( $exclusions ? '&exclude=' . $exclusions : '' );
 
     // $content = file_get_contents($request_url);
     $curl = curl_init($request_url);
@@ -39,14 +36,9 @@ class ForecastIO{
 
     if (!empty($content)) {
       return json_decode($content);
-
     } else {
-
       return false;
-
     }
-
-
   }
 
   /**
@@ -57,19 +49,12 @@ class ForecastIO{
    * @return \ForecastIOConditions|boolean
    */
   function getCurrentConditions($latitude, $longitude) {
-
     $data = $this->requestData($latitude, $longitude);
-
     if ($data !== false) {
-
       return new ForecastIOConditions($data->currently);
-
     } else {
-
       return false;
-
     }
-
   }
 
   /**
@@ -81,107 +66,88 @@ class ForecastIO{
    * @return \ForecastIOConditions|boolean
    */
   function getHistoricalConditions($latitude, $longitude, $timestamp) {
-
     $exclusions = 'currently,minutely,hourly,alerts,flags';
-
     $data = $this->requestData($latitude, $longitude, $timestamp, $exclusions);
-
     if ($data !== false) {
-
       return new ForecastIOConditions($data->daily->data[0]);
-
     } else {
-
       return false;
-
     }
-
   }
 
   /**
-   * Will return conditions on hourly basis for today
+   * Will return day conditions on hourly basis (12h) from requested timestamp
    *
    * @param type $latitude
    * @param type $longitude
+   * @param int  $timestamp
    * @return \ForecastIOConditions|boolean
    */
-  function getForecastToday($latitude, $longitude) {
-
-    $data = $this->requestData($latitude, $longitude);
-
+  function getForecastDay($latitude, $longitude, $timestamp) {
+    $data = $this->requestData($latitude, $longitude, $timestamp);
     if ($data !== false) {
-
       $conditions = array();
-
-      $today = date('Y-m-d');
-
       foreach ($data->hourly->data as $raw_data) {
-
-        if (date('Y-m-d', $raw_data->time) == $today) {
-
-          $conditions[] = new ForecastIOConditions($raw_data);
-
-        }
-
+	$conditions[] = new ForecastIOConditions($raw_data);
       }
-
       return $conditions;
-
     } else {
-
       return false;
-
     }
-
   }
 
-
-  /**
-   * Will return daily conditions for next seven days
-   *
-   * @param float $latitude
-   * @param float $longitude
-   * @return \ForecastIOConditions|boolean
-   */
-  function getForecastWeek($latitude, $longitude) {
-
-    $data = $this->requestData($latitude, $longitude);
-
-    if ($data !== false) {
-
-      $conditions = array();
-
-      foreach ($data->daily->data as $raw_data) {
-
-        $conditions[] = new ForecastIOConditions($raw_data);
-
+/**
+ * Will return conditions on hourly basis for today
+ *
+ * @param type $latitude
+ * @param type $longitude
+ * @return \ForecastIOConditions|boolean
+ */
+function getForecastToday($latitude, $longitude) {
+  $data = $this->requestData($latitude, $longitude);
+  if ($data !== false) {
+    $conditions = array();
+    $today = date('Y-m-d');
+    foreach ($data->hourly->data as $raw_data) {
+      if (date('Y-m-d', $raw_data->time) == $today) {
+	$conditions[] = new ForecastIOConditions($raw_data);
       }
-
-      return $conditions;
-
-    } else {
-
-      return false;
-
     }
-
+    return $conditions;
+  } else {
+    return false;
   }
-
-
 }
 
+/**
+ * Will return daily conditions for next seven days
+ *
+ * @param float $latitude
+ * @param float $longitude
+ * @return \ForecastIOConditions|boolean
+ */
+function getForecastWeek($latitude, $longitude) {
+  $data = $this->requestData($latitude, $longitude);
+  if ($data !== false) {
+    $conditions = array();
+    foreach ($data->daily->data as $raw_data) {
+      $conditions[] = new ForecastIOConditions($raw_data);
+    }
+    return $conditions;
+  } else {
+    return false;
+  }
+}
+}
 
 /**
  * Wrapper for get data by getters
  */
 class ForecastIOConditions{
-
   private $raw_data;
 
   function __construct($raw_data) {
-
     $this->raw_data = $raw_data;
-
   }
 
   /**
@@ -190,9 +156,7 @@ class ForecastIOConditions{
    * @return String
    */
   function getTemperature() {
-
     return $this->raw_data->temperature;
-
   }
 
   /**
@@ -203,9 +167,7 @@ class ForecastIOConditions{
    * @return type
    */
   function getMinTemperature() {
-
     return $this->raw_data->temperatureMin;
-
   }
 
   /**
@@ -216,9 +178,7 @@ class ForecastIOConditions{
    * @return type
    */
   function getMaxTemperature() {
-
     return $this->raw_data->temperatureMax;
-
   }
 
   /**
@@ -227,9 +187,7 @@ class ForecastIOConditions{
    * @return String
    */
   function getSummary() {
-
     return $this->raw_data->summary;
-
   }
 
   /**
@@ -238,9 +196,7 @@ class ForecastIOConditions{
    * @return String
    */
   function getIcon() {
-
     return $this->raw_data->icon;
-
   }
 
   /**
@@ -250,17 +206,11 @@ class ForecastIOConditions{
    * @return String
    */
   function getTime($format = null) {
-
     if (!isset($format)) {
-
       return $this->raw_data->time;
-
     } else {
-
       return date($format, $this->raw_data->time);
-
     }
-
   }
 
   /**
@@ -269,20 +219,16 @@ class ForecastIOConditions{
    * @return String
    */
   function getPressure() {
-
     return $this->raw_data->pressure;
-
   }
 
   /**
-   * get humidity
+   * Get humidity
    *
    * @return String
    */
   function getHumidity() {
-
     return $this->raw_data->humidity;
-
   }
 
   /**
@@ -291,9 +237,7 @@ class ForecastIOConditions{
    * @return String
    */
   function getWindSpeed() {
-
     return $this->raw_data->windSpeed;
-
   }
 
   /**
@@ -302,9 +246,7 @@ class ForecastIOConditions{
    * @return type
    */
   function getWindBearing() {
-
     return $this->raw_data->windBearing;
-
   }
 
   /**
@@ -313,9 +255,7 @@ class ForecastIOConditions{
    * @return type
    */
   function getPrecipitationType() {
-
     return $this->raw_data->precipType;
-
   }
 
   /**
@@ -324,9 +264,7 @@ class ForecastIOConditions{
    * @return type
    */
   function getPrecipitationProbability() {
-
     return $this->raw_data->precipProbability;
-
   }
 
   /**
@@ -335,12 +273,8 @@ class ForecastIOConditions{
    * @return type
    */
   function getCloudCover() {
-
     return $this->raw_data->cloudCover;
-
   }
-
-
 
   /**
    * get sunrise time
@@ -350,9 +284,7 @@ class ForecastIOConditions{
    * @return type
    */
   function getSunrise() {
-
     return $this->raw_data->sunriseTime;
-
   }
 
   /**
@@ -363,10 +295,7 @@ class ForecastIOConditions{
    * @return type
    */
   function getSunset() {
-
     return $this->raw_data->sunsetTime;
-
   }
-
 }
 ?>

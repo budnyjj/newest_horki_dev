@@ -1,3 +1,4 @@
 name = Currency
 description = Provide NBRB currencies block
 core = 7.x
+package = Custom

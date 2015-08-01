@@ -204,7 +204,7 @@ h1 {
 
 #block-local-weather-local-weather {
     position: absolute;
-    left: 370px;
+    left: 347px;
     bottom: 0;
 }
 
@@ -212,17 +212,52 @@ h1 {
     font-size: 11px;
 }
 
-.weather-name {
+#block-local-weather-local-weather .name {
     font-weight: bold;
 }
 
-.weather-name,
-.weather-delimiter,
-.min-temperature,
-.max-temperature {
+#block-local-weather-local-weather .name,
+#block-local-weather-local-weather .icon,
+#block-local-weather-local-weather .delimiter,
+#block-local-weather-local-weather .temperature {
     display: inline-block;
     margin: 0 2px;
 }
+
+#block-local-weather-local-weather .icon {
+    width: 13px;
+    height: 13px;
+    vertical-align: top;
+}
+
+#block-local-weather-local-weather .clear-day {
+    background: url('/sites/default/files/weather/icons-small/clear-day.png') no-repeat 0 0;
+}
+
+#block-local-weather-local-weather .clear-night {
+    background: url('/sites/default/files/weather/icons-small/clear-night.png') no-repeat 0 0;
+}
+
+#block-local-weather-local-weather .fog {
+    background: url('/sites/default/files/weather/icons-small/fog.png') no-repeat 0 0;
+}
+
+#block-local-weather-local-weather .cloudy {
+    background: url('/sites/default/files/weather/icons-small/cloudy.png') no-repeat 0 0;
+}
+
+#block-local-weather-local-weather .rain {
+    background: url('/sites/default/files/weather/icons-small/rain.png') no-repeat 0 0;
+}
+
+#block-local-weather-local-weather .partly-cloudy-day {
+    background: url('/sites/default/files/weather/icons-small/partly-cloudy-night.png') no-repeat 0 0;
+}
+
+#block-local-weather-local-weather .partly-cloudy-night {
+    background: url('/sites/default/files/weather/icons-small/partly-cloudy-night.png') no-repeat 0 0;
+}
+
 
 /* Main Menu Positioning */
 
