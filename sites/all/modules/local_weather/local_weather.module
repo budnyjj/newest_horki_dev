@@ -110,15 +110,17 @@ function local_weather_block_view($delta = '') {
   case 'local_weather':
     $block['subject'] = t('Weather');
     if (user_access('access content')){  
-      /* $cache = cache_get('local_weather_info', 'cache'); */
-      /* if ($cache) { */
-      /* 	$result = $cache->data; */
-      /* } else { */
-      /* Horki coordinates */
-      $place = array('54.2833', '30.9833');
-      $result = local_weather_get_forecast($place); // Use our function for getting result
-      cache_set('local_weather_info', $result, 'cache', 43200);
-      /* } */
+      $cache = cache_get('local_weather_info', 'cache');
+      if ($cache) {
+      	$result = $cache->data;
+      } else {
+	/* Horki coordinates */
+	$place = array('54.2833', '30.9833');
+
+	/* Use our function for getting result */
+	$result = local_weather_get_forecast($place); 
+	cache_set('local_weather_info', $result, 'cache', 43200);
+      }
       if (empty($result)) {
 	$block['content'] = t('no data');
       } else {
