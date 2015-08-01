@@ -1069,10 +1069,10 @@ article .poll {
 /*Companies page styles */
 
 .companies-page .views-field-value {
-    position: absolute;
-    right: 0;
-    width: 100px;
+    float: right;
+    width: 90px;
     margin-top: 5px;
+    margin-left: 10px;
 }
 
 .company-preview {
@@ -1081,10 +1081,6 @@ article .poll {
     padding-right: 20px;
     position: relative;
     z-index: 1;
-}
-
-.company-description {
-
 }
 
 .company-description p {
