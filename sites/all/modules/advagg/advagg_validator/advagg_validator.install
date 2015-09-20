@@ -17,9 +17,10 @@ function advagg_validator_install() {
     ),
   );
 
+  $schema = advagg_validator_schema();
   foreach ($tables as $table => $fields) {
     // Change utf8_bin to ascii_bin.
-    advagg_install_change_table_collation($table, $fields, 'ascii_bin');
+    advagg_install_change_table_collation($table, $fields, 'ascii_bin', $schema[$table]['fields']);
   }
 }
 
@@ -38,7 +39,7 @@ function advagg_validator_schema() {
         'not null' => TRUE,
       ),
       'filename_hash' => array(
-        'description' => 'Hash of path and filename. Used to join tables & for lookup.',
+        'description' => 'Hash of path and filename. Used to join tables and for lookup.',
         'type' => 'char',
         'length' => 43,
         'not null' => TRUE,
@@ -130,6 +131,6 @@ function advagg_validator_update_7202(&$sandbox) {
       db_change_field($table, $field, $field, $schema[$table]['fields'][$field]);
     }
     // Change utf8_bin to ascii_bin.
-    advagg_install_change_table_collation($table, $fields, 'ascii_bin');
+    advagg_install_change_table_collation($table, $fields, 'ascii_bin', $schema[$table]['fields']);
   }
 }
