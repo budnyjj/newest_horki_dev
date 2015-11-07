@@ -45,14 +45,14 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Поле: Змест: Шлях */
+  /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Загаловак */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -62,7 +62,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'dark-red-text, bold-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Тэкст */
+  /* Field: Content: Тэкст */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -83,7 +83,7 @@ function views_solutions_views_default_views() {
       'text' => 0,
     ),
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Field: Content: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -96,7 +96,7 @@ function views_solutions_views_default_views() {
     'image_style' => 'thumbnail',
     'image_link' => 'content',
   );
-  /* Поле: Змест: Post date */
+  /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -108,13 +108,13 @@ function views_solutions_views_default_views() {
     1 => 'AND',
     2 => 'OR',
   );
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
   $handler->display->display_options['filters']['status_1']['table'] = 'node';
   $handler->display->display_options['filters']['status_1']['field'] = 'status';
   $handler->display->display_options['filters']['status_1']['value'] = '1';
   $handler->display->display_options['filters']['status_1']['group'] = 1;
-  /* Filter criterion: Змест: Тып */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -123,7 +123,7 @@ function views_solutions_views_default_views() {
     'local_solution' => 'local_solution',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  /* Filter criterion: Content: Рубрыкі (field_rubric_by_taxonomy) */
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['id'] = 'field_rubric_by_taxonomy_tid_1';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['table'] = 'field_data_field_rubric_by_taxonomy';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['field'] = 'field_rubric_by_taxonomy_tid';
@@ -131,7 +131,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['group'] = 2;
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['type'] = 'select';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  /* Filter criterion: Content: Рубрыкі (field_rubric_by_taxonomy) */
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
@@ -166,14 +166,14 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Поле: Вузел: Published at */
+  /* Field: Node: Published at */
   $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
   $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
@@ -182,7 +182,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['published_at']['date_format'] = 'node';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
-  /* Поле: Node statistics: Recent count */
+  /* Field: Node statistics: Recent count */
   $handler->display->display_options['fields']['recentcount']['id'] = 'recentcount';
   $handler->display->display_options['fields']['recentcount']['table'] = 'jstats_node';
   $handler->display->display_options['fields']['recentcount']['field'] = 'recentcount';
@@ -193,7 +193,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = '';
-  /* Поле: Змест: Колькасць каментароў */
+  /* Field: Content: Comment count */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
   $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
@@ -205,7 +205,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = '';
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Field: Content: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -217,7 +217,7 @@ function views_solutions_views_default_views() {
     'image_style' => 'photo_video_preview',
     'image_link' => 'content',
   );
-  /* Поле: Статыстыка */
+  /* Field: Статыстыка */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -225,7 +225,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Загаловак */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -237,7 +237,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_class'] = 'dark-red-text, bold-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Вузел: Published at */
+  /* Sort criterion: Node: Published at */
   $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
@@ -249,13 +249,13 @@ function views_solutions_views_default_views() {
     2 => 'OR',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
   $handler->display->display_options['filters']['status_1']['table'] = 'node';
   $handler->display->display_options['filters']['status_1']['field'] = 'status';
   $handler->display->display_options['filters']['status_1']['value'] = '1';
   $handler->display->display_options['filters']['status_1']['group'] = 1;
-  /* Filter criterion: Змест: Тып */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -264,7 +264,7 @@ function views_solutions_views_default_views() {
     'local_solution' => 'local_solution',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  /* Filter criterion: Content: Рубрыкі (field_rubric_by_taxonomy) */
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['id'] = 'field_rubric_by_taxonomy_tid_1';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['table'] = 'field_data_field_rubric_by_taxonomy';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['field'] = 'field_rubric_by_taxonomy_tid';
@@ -272,7 +272,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['group'] = 2;
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['type'] = 'select';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  /* Filter criterion: Content: Рубрыкі (field_rubric_by_taxonomy) */
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
@@ -395,7 +395,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'больш ідэй';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '13';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -407,7 +407,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'На жаль, пакуль што няма аніводнага матэрыяла пра рашэнне мясцовых праблем';
   $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Загаловак */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -418,7 +418,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_class'] = 'black-text, bold-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Вузел: Published at */
+  /* Sort criterion: Node: Published at */
   $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
@@ -430,13 +430,13 @@ function views_solutions_views_default_views() {
     2 => 'OR',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
   $handler->display->display_options['filters']['status_1']['table'] = 'node';
   $handler->display->display_options['filters']['status_1']['field'] = 'status';
   $handler->display->display_options['filters']['status_1']['value'] = '1';
   $handler->display->display_options['filters']['status_1']['group'] = 1;
-  /* Filter criterion: Змест: Тып */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -445,7 +445,7 @@ function views_solutions_views_default_views() {
     'local_solution' => 'local_solution',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  /* Filter criterion: Content: Рубрыкі (field_rubric_by_taxonomy) */
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['id'] = 'field_rubric_by_taxonomy_tid_1';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['table'] = 'field_data_field_rubric_by_taxonomy';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['field'] = 'field_rubric_by_taxonomy_tid';
@@ -453,7 +453,7 @@ function views_solutions_views_default_views() {
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['group'] = 2;
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['type'] = 'select';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid_1']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  /* Filter criterion: Content: Рубрыкі (field_rubric_by_taxonomy) */
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
@@ -482,6 +482,7 @@ function views_solutions_views_default_views() {
     t('<a href="[path]"><img src="/sites/default/files/default_images/letter_small.png"></a>'),
     t('База ведаў'),
     t('Рашэнні мясцовых праблем: база ведаў'),
+    t('more'),
     t('больш навінаў'),
     t('| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">'),
     t('.'),
