@@ -204,11 +204,12 @@ h1 {
 
 #block-local-weather-local-weather {
     position: absolute;
-    left: 360px;
+    width: 99%;
     bottom: 0;
 }
 
 #block-local-weather-local-weather .content {
+    text-align: center;
     font-size: 11px;
 }
 
