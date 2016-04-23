@@ -988,16 +988,6 @@ article .poll {
 
 /*Rubrics Views styles*/
 
-.page-taxonomy .title,
-.page-libraryhtml .title,
-.page-uzgorakhtml .title,
-.page-narodnyjahtml .title,
-.page-photohtml .title,
-.page-videohtml .title,
-.page-afishahtml .title {
-    display: none;
-}
-
 .context-navinyhtml .media-grid-page .views-row,
 .context-krainahtml .media-grid-page .views-row,
 .context-regiyonhtml .media-grid-page .views-row {
