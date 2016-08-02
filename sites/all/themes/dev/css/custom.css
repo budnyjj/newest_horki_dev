@@ -888,11 +888,11 @@ article ol {
     height: 100% !important;
 }
 
-.field-slideshow {
+.field-slideshow-slide {
     border: 1px solid #ccc;
 }
 
-.field-slideshow:hover {
+.field-slideshow-slide:hover {
     border: 1px solid #D2232A;
 }
 
