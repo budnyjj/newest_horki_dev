@@ -169,6 +169,16 @@ class HTMLPurifier_LexerTest extends HTMLPurifier_Harness
         $this->assertExtractBody('<body>foo</body>bar</body>', 'foo</body>bar');
     }
 
+    public function test_extractBody_ignoreCommented()
+    {
+        $this->assertExtractBody('$<!-- <body>foo</body> -->^');
+    }
+
+    public function test_extractBody_butCanStillWork()
+    {
+        $this->assertExtractBody('<!-- b --><body>a</body>', 'a');
+    }
+
     // HTMLPurifier_Lexer->tokenizeHTML() --------------------------------------
 
     public function assertTokenization($input, $expect, $alt_expect = array())
@@ -264,7 +274,8 @@ class HTMLPurifier_LexerTest extends HTMLPurifier_Harness
                     new HTMLPurifier_Token_End('poolasdf'),
                     new HTMLPurifier_Token_End('pooloka'),
                 ),
-                'PH5P' => $alt,
+                // 20140831: Weird, but whatever...
+                'PH5P' => array(new HTMLPurifier_Token_Empty('asdf')),
             )
         );
     }
@@ -797,6 +808,21 @@ div {}
             array(
                 'DirectLex' => $start,
                 )
+        );
+    }
+
+    public function test_tokenizeHTML_prematureDivClose()
+    {
+        $this->assertTokenization(
+            '</div>dontdie',
+            array(
+                new HTMLPurifier_Token_End('div'),
+                new HTMLPurifier_Token_Text('dontdie')
+            ),
+            array(
+                'DOMLex' => $alt = array(new HTMLPurifier_Token_Text('dontdie')),
+                'PH5P' => $alt
+            )
         );
     }
 

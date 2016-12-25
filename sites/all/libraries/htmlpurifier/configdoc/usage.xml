@@ -44,12 +44,12 @@
  </directive>
  <directive id="CSS.AllowedProperties">
   <file name="HTMLPurifier/CSSDefinition.php">
-   <line>447</line>
+   <line>460</line>
   </file>
  </directive>
  <directive id="CSS.ForbiddenProperties">
   <file name="HTMLPurifier/CSSDefinition.php">
-   <line>463</line>
+   <line>476</line>
   </file>
  </directive>
  <directive id="Cache.DefinitionImpl">
@@ -227,6 +227,11 @@
    <line>271</line>
   </file>
  </directive>
+ <directive id="HTML.TargetNoreferrer">
+  <file name="HTMLPurifier/HTMLModuleManager.php">
+   <line>276</line>
+  </file>
+ </directive>
  <directive id="Attr.IDBlacklist">
   <file name="HTMLPurifier/IDAccumulator.php">
    <line>27</line>
@@ -296,6 +301,11 @@
    <line>49</line>
   </file>
  </directive>
+ <directive id="CSS.AllowDuplicates">
+  <file name="HTMLPurifier/AttrDef/CSS.php">
+   <line>28</line>
+  </file>
+ </directive>
  <directive id="URI.Disable">
   <file name="HTMLPurifier/AttrDef/URI.php">
    <line>47</line>
@@ -345,9 +355,14 @@
    <line>58</line>
   </file>
  </directive>
+ <directive id="Attr.ID.HTML5">
+  <file name="HTMLPurifier/AttrDef/HTML/ID.php">
+   <line>75</line>
+  </file>
+ </directive>
  <directive id="Attr.IDBlacklistRegexp">
   <file name="HTMLPurifier/AttrDef/HTML/ID.php">
-   <line>89</line>
+   <line>97</line>
   </file>
  </directive>
  <directive id="Attr.">
@@ -362,7 +377,7 @@
  </directive>
  <directive id="Core.EnableIDNA">
   <file name="HTMLPurifier/AttrDef/URI/Host.php">
-   <line>96</line>
+   <line>105</line>
   </file>
  </directive>
  <directive id="Attr.DefaultTextDir">
@@ -390,7 +405,7 @@
  </directive>
  <directive id="Attr.DefaultInvalidImageAlt">
   <file name="HTMLPurifier/AttrTransform/ImgRequired.php">
-   <line>41</line>
+   <line>40</line>
   </file>
  </directive>
  <directive id="HTML.Attr.Name.UseCDATA">
@@ -408,13 +423,13 @@
  </directive>
  <directive id="Cache.SerializerPath">
   <file name="HTMLPurifier/DefinitionCache/Serializer.php">
-   <line>171</line>
+   <line>183</line>
   </file>
  </directive>
  <directive id="Cache.SerializerPermissions">
   <file name="HTMLPurifier/DefinitionCache/Serializer.php">
-   <line>188</line>
-   <line>206</line>
+   <line>200</line>
+   <line>219</line>
   </file>
  </directive>
  <directive id="Filter.ExtractStyleBlocks.TidyImpl">
@@ -479,6 +494,11 @@
  <directive id="AutoFormat.RemoveEmpty.RemoveNbsp.Exceptions">
   <file name="HTMLPurifier/Injector/RemoveEmpty.php">
    <line>47</line>
+  </file>
+ </directive>
+ <directive id="AutoFormat.RemoveEmpty.Predicate">
+  <file name="HTMLPurifier/Injector/RemoveEmpty.php">
+   <line>48</line>
   </file>
  </directive>
  <directive id="Core.AggressivelyFixLt">

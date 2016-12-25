@@ -83,6 +83,8 @@ class HTMLPurifier_AttrDef_CSSTest extends HTMLPurifier_AttrDefHarness
         $this->assertDef('background-position:left 90%;');
         $this->assertDef('border-spacing:1em;');
         $this->assertDef('border-spacing:1em 2em;');
+        $this->assertDef('border-color: rgb(0, 0, 0) rgb(10,0,10)', 'border-color:rgb(0,0,0) rgb(10,0,10);');
+        $this->assertDef('border: rgb(0, 0, 0)', 'border:rgb(0,0,0);');
 
         // duplicates
         $this->assertDef('text-align:right;text-align:left;',
@@ -127,10 +129,11 @@ class HTMLPurifier_AttrDef_CSSTest extends HTMLPurifier_AttrDefHarness
         $this->assertDef('scrollbar-highlight-color:#ff69b4;');
         $this->assertDef('scrollbar-shadow-color:#f0f;');
 
-        $this->assertDef('opacity:.2;');
         $this->assertDef('-moz-opacity:.2;');
         $this->assertDef('-khtml-opacity:.2;');
         $this->assertDef('filter:alpha(opacity=20);');
+
+        $this->assertDef('border-top-left-radius:55pt 25pt;');
 
     }
 
@@ -146,6 +149,7 @@ class HTMLPurifier_AttrDef_CSSTest extends HTMLPurifier_AttrDefHarness
         $this->assertDef('display:none;');
         $this->assertDef('visibility:visible;');
         $this->assertDef('overflow:scroll;');
+        $this->assertDef('opacity:.2;');
     }
 
     public function testForbidden()
@@ -163,6 +167,13 @@ class HTMLPurifier_AttrDef_CSSTest extends HTMLPurifier_AttrDefHarness
         $this->assertDef('right:100%;');
         $this->assertDef('top:auto;');
         $this->assertDef('z-index:-2;');
+    }
+
+    public function testAllowDuplicates()
+    {
+        $this->config->set('CSS.AllowDuplicates', true);
+        $this->assertDef('text-align:right;text-align:left;');
+        $this->assertDef('text-align:right;text-align:left;text-align:right;');
     }
 
 }
