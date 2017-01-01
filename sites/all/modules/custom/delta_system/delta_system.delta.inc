@@ -14,7 +14,7 @@ function delta_system_delta_default_templates() {
   $delta->disabled = FALSE; /* Edit this to true to make a default delta disabled initially */
   $delta->api_version = 3;
   $delta->machine_name = 'uzhorak';
-  $delta->name = 'system';
+  $delta->name = 'horki_system';
   $delta->description = 'Шаблон сайта без калонак';
   $delta->theme = 'dev';
   $delta->mode = 'preserve';

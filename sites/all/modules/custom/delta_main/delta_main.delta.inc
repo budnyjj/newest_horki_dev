@@ -14,7 +14,7 @@ function delta_main_delta_default_templates() {
   $delta->disabled = FALSE; /* Edit this to true to make a default delta disabled initially */
   $delta->api_version = 3;
   $delta->machine_name = 'base';
-  $delta->name = 'main';
+  $delta->name = 'horki_main';
   $delta->description = 'Шаблон сайта для галоўнай старонкі';
   $delta->theme = 'dev';
   $delta->mode = 'preserve';

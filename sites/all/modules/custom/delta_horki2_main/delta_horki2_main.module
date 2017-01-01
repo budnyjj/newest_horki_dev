@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Delta: horki2: main feature.
+ */
+
+include_once 'delta_horki2_main.features.inc';
