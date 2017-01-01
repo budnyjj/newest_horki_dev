@@ -21,9 +21,14 @@ function delta_horki2_map_local_problems_delta_default_templates() {
   $delta->parent = 'horki2_system';
   $delta->settings = array(
     'theme_horki2_settings' => array(
+      'toggle_secondary_menu' => 1,
+      'logo_path' => '',
+      'alpha_zone_header_banner_wrapper_css' => '',
+      'alpha_zone_menu_wrapper' => 0,
       'alpha_region_after_content_zone' => 'content',
       'alpha_region_after_content_columns' => '4',
       'alpha_region_after_content_weight' => '1',
+      'alpha_region_after_content_equal_height_element' => 0,
     ),
   );
   $export['horki2_map_local_problems'] = $delta;

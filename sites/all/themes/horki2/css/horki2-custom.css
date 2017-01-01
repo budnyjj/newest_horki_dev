@@ -1,1 +1,136 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+/*
+ * General Header Banner styles
+ */
+
+.wrapper-header-banner {
+    background-color: grey;
+}
+
+
+/*
+ * General Header styles
+ */
+
+/* logo block */
+.img-logo {
+    width: 100%;
+    height: 100%;
+}
+
+/* login block */
+
+
+/* search block */
+/* #block-custom-search-blocks-1 { */
+/*     background-color: #808080; */
+/*     border-radius: 3px; */
+/*     margin-bottom: 10px; */
+/*     width: 210px; */
+/*     position: absolute; */
+/*     right: 0; */
+/*     top: 20px; */
+/* } */
+
+/* #block-custom-search-blocks-1 .form-item, #block-custom-search-blocks-1 .form-actions { */
+/*     margin: 0 auto; */
+/* } */
+
+/* #block-custom-search-blocks-1 .search-form { */
+/*     margin: 0; */
+/*     padding: 8px 9px; */
+/* } */
+
+#edit-custom-search-blocks-form-1--2 {
+    width: 200px;
+    height: 30px;
+}
+
+
+/* currency block */
+/* .block-bel-currency { */
+/*     position: absolute; */
+/*     bottom: 0; */
+/*     right: 0; */
+/* } */
+
+.bel-currency-delimiter, .bel-currency-name, .bel-currency-row {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 11px;
+}
+
+.bel-currency-char, .bel-currency-num {
+    display: inline-block;
+    margin: 0 1px;
+    font-size: 11px;
+}
+
+.bel-currency-char, .bel-currency-name {
+    font-weight: bold;
+}
+
+/* weather block*/
+/* .block-local-weather { */
+/*     position: absolute; */
+/*     width: 105%; */
+/*     bottom: 0; */
+/* } */
+
+/* .block-local-weather .content { */
+/*     text-align: center; */
+/*     font-size: 11px; */
+/* } */
+
+/* .block-local-weather .name { */
+/*     font-weight: bold; */
+/* } */
+
+.block-local-weather .name,
+.block-local-weather .icon,
+.block-local-weather .delimiter,
+.block-local-weather .temperature {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.block-local-weather .icon {
+    width: 13px;
+    height: 13px;
+    vertical-align: top;
+}
+
+.block-local-weather .clear-day {
+    background: url('/sites/default/files/weather/icons-small/clear-day.png') no-repeat 0 0;
+}
+
+.block-local-weather .clear-night {
+    background: url('/sites/default/files/weather/icons-small/clear-night.png') no-repeat 0 0;
+}
+
+.block-local-weather .fog {
+    background: url('/sites/default/files/weather/icons-small/fog.png') no-repeat 0 0;
+}
+
+.block-local-weather .cloudy {
+    background: url('/sites/default/files/weather/icons-small/cloudy.png') no-repeat 0 0;
+}
+
+.block-local-weather .rain {
+    background: url('/sites/default/files/weather/icons-small/rain.png') no-repeat 0 0;
+}
+
+.block-local-weather .partly-cloudy-day {
+    background: url('/sites/default/files/weather/icons-small/partly-cloudy-night.png') no-repeat 0 0;
+}
+
+.block-local-weather .partly-cloudy-night {
+    background: url('/sites/default/files/weather/icons-small/partly-cloudy-night.png') no-repeat 0 0;
+}
+
+/* social icons block */
+.icon-social {
+    width: 31px;
+    height: 31px;
+}

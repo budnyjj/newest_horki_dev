@@ -48,14 +48,14 @@ function bel_currency_parser() {
 
     $xml = simplexml_load_string($output);
 
-    $answer = '<div class="bel_currency_name">'.t("currency rates").'</div>';
+    $answer = '<div class="bel-currency-name">'.t("currency rates").'</div>';
     foreach ($xml->Currency as $item)
       {     
         if (in_array($item->CharCode, $aCurrencyName)) 
         {
            $curRate = floatval($item->Rate); 
-	   $answer .= '<div class="bel_currency_delimiter">'.'|'.'</div>';
-	   $answer .= '<div class="bel_currency_row">'.'<div class="bel_currency_char">'.$item->CharCode.'</div>'.'<div class="bel_currency_num">'.number_format($curRate,2,'.','').'</div>'.'</div>'; 
+	   $answer .= '<div class="bel-currency-delimiter">'.'|'.'</div>';
+	   $answer .= '<div class="bel-currency-row">'.'<div class="bel-currency-char">'.$item->CharCode.'</div>'.'<div class="bel-currency-num">'.number_format($curRate,2,'.','').'</div>'.'</div>'; 
         }
     }
 	return $answer;
