@@ -11,8 +11,87 @@
  * General Header styles
  */
 
+.region-header-inner {
+    position: relative;
+    height: 115px;
+}
+
+
+/* login block */
+.block-block-15 {
+    position: absolute;
+    top: 20px;
+    right: 210px;
+}
+
+
+/* search block */
+.block-custom-search-blocks-1 {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.block-custom-search-blocks-1 .form-item, 
+.block-custom-search-blocks-1 .form-actions {
+    margin: 0 auto;
+}
+
+
 /* logo block */
 .block-8 {
+    position: absolute;
+    bottom: 27px;
+    left: 0;
     width: 351px;
     height: 58px;
+}
+
+
+/* date block */
+.block-16 {
+    position: absolute;
+    bottom: 25px;
+    left: 375px;
+}
+
+.block-16 .content {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* currency block */
+.block-bel-currency {
+    position: absolute;
+    bottom: 25px;
+    left: 510px;
+}
+
+.block-bel-currency .content {
+    font-size: 11px;
+}
+
+
+/* weather block */
+.block-local-weather {
+    position: absolute;
+    bottom: 25px;
+    left: 730px;
+}
+
+.block-local-weather .content {
+    font-size: 11px;
+}
+
+
+/* social icons block */
+.block-3 {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+}
+
+.block-3 .content img {
+    margin-left: 6px;
 }
