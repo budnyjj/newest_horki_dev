@@ -1,2 +1,91 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+/*
+ * General Header Banner styles
+ */
+
+.wrapper-header-banner {
+    display: none;
+}
+
+
+/*
+ * General Header styles
+ */
+
+/* login block */
+
+
+/* search block */
+
+
+/* logo block */
+
+
+/* date block */
+.block-16 {
+    display: none;
+}
+
+
+/* currency block */
+.block-bel-currency {
+    display: none;
+}
+
+
+/* weather block */
+.block-local-weather {
+    display: none;
+}
+
+
+/* social icons block */
+.block-3 {
+    display: none;
+}
+
+
+/**
+ * General Menu styles
+ */
+
+
+/**
+ * General Content styles
+ */
+
+
+/**
+ * General Preview styles
+ */
+
+
+/**
+ * General Footer styles
+ */ 
+.block-menu-geografic,
+.block-menu-additional-menu,
+.block-menu-old,
+.block-menu-system {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+}
+
+
+/**
+ * General Views styles
+ */
+
+/* media grid block */
+
+
+/**
+ * Custom Main Page styles
+ */
+
+/* main news block */
+
+

@@ -12,39 +12,7 @@
  */
 
 .region-header-inner {
-    position: relative;
     height: 115px;
-}
-
-
-/* login block */
-.block-block-15 {
-    position: absolute;
-    top: 20px;
-    right: 210px;
-}
-
-
-/* search block */
-.block-custom-search-blocks-1 {
-    position: absolute;
-    top: 20px;
-    right: 0;
-}
-
-.block-custom-search-blocks-1 .form-item, 
-.block-custom-search-blocks-1 .form-actions {
-    margin: 0 auto;
-}
-
-
-/* logo block */
-.block-8 {
-    position: absolute;
-    bottom: 27px;
-    left: 0;
-    width: 351px;
-    height: 58px;
 }
 
 
@@ -55,21 +23,12 @@
     left: 375px;
 }
 
-.block-16 .content {
-    font-size: 11px;
-    font-weight: bold;
-}
-
 
 /* currency block */
 .block-bel-currency {
     position: absolute;
     bottom: 25px;
     left: 510px;
-}
-
-.block-bel-currency .content {
-    font-size: 11px;
 }
 
 
@@ -80,18 +39,70 @@
     left: 730px;
 }
 
-.block-local-weather .content {
-    font-size: 11px;
+
+/**
+ * General Menu styles
+ */
+
+
+/**
+ * General Content styles
+ */
+
+
+/**
+ * General Preview styles
+ */
+
+/* Photoblog block */
+
+.block-photoblog-block {
+    float: left;
+    width: 588px;
+}
+
+.block-photoblog-block .views-row {
+    width: 282px;
+    margin: 15px 24px 40px 0;
+    float: left;
+}
+
+.block-photoblog-block .views-row-last {
+    margin-right: 0;
 }
 
 
-/* social icons block */
-.block-3 {
-    position: absolute;
-    bottom: 20px;
-    right: 0;
+/* Videoblog block */
+.block-videoblog-block {
+    float: left;
+    width: 588px;
 }
 
-.block-3 .content img {
-    margin-left: 6px;
+.block-videoblog-block .views-row {
+    width: 282px;
+    margin: 15px 24px 40px 0;
+    float: left;
 }
+
+.block-videoblog-block .views-row-last {
+    margin-right: 0;
+}
+
+
+/**
+ * General Footer styles
+ */ 
+
+/* Menu blocks */
+.block-menu-geografic,
+.block-menu-additional-menu,
+.block-menu-old,
+.block-menu-system {
+    width: 120px;
+    margin-right: 24px;
+}
+
+/**
+ * Custom Main Page styles
+ */
+
