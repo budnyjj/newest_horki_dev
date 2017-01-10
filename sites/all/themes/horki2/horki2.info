@@ -36,6 +36,12 @@ regions[preview_second] = 'Preview second'
 regions[footer_first] = 'Footer First'
 regions[footer_second] = 'Footer Second'
 
+; Custom breakpointes
+breakpoints[desktop_normal] = (min-width: 1224px)
+breakpoints[desktop_narrow] = (min-width: 918px)
+breakpoints[mobile_normal] = (min-width: 400px)
+breakpoints[mobile_narrow] = (min-width: 0px)
+
 css[global.css][name] = 'Your custom global styles'
 css[global.css][description] = 'This file holds all the globally active custom CSS of your theme.'
 css[global.css][options][weight] = '10'

@@ -80,12 +80,17 @@
  */
 
 /* media grid block */
-
+.media-grid-block .views-field-field-pics img {
+    width: 100%;
+    max-width: 100%;
+}
 
 /**
  * Custom Main Page styles
  */
 
 /* main news block */
-
-
+.page-main-news img {
+    width: 100%;
+    max-width: 100%;
+}
