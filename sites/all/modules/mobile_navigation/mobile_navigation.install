@@ -1,0 +1,269 @@
+<?php
+/**
+ * @file
+ * Mobile Navigation install file.
+ */
+
+function mobile_navigation_install() {
+	dpm(unserialize(MOBILE_NAVIGATION_DEFAULT_DISPLAYS));
+  foreach(unserialize(MOBILE_NAVIGATION_DEFAULT_DISPLAYS) as $name=>$breakpoints) {
+    $new = array(
+      'name' => $name,
+      'media_query' => '',
+    );
+	if (isset($breakpoints['top'])) {
+	  $new['top'] = $breakpoints['top'];
+	}
+	if (isset($breakpoints['bottom'])) {
+	  $new['bottom'] = $breakpoints['bottom'];
+	}
+	db_insert('mobile_navigation_displays')
+      ->fields( $new )
+	  ->execute();
+  }
+}
+
+function mobile_navigation_schema() {
+	$schema['mobile_navigation_displays'] = array(
+    'description' => t('Breakpoints defining displays for mobile navigation.'),
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '15',
+      ),
+      'media_query' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '64',
+      ),
+      'top' => array(
+        'type' => 'int',
+      ),
+      'bottom' => array(
+        'type' => 'int',
+      ),
+    ),
+    'unique keys' => array(
+      'name' => array('name'),
+    ),
+    'primary key' => array('id'),
+	);
+	
+	$schema['mobile_navigation_configurations'] = array(
+    'description' => t('A configuration registry for a menu on a specific display.'),
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'display' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'menu' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '64',
+      ),
+      'menu_selector' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '128',
+      ),
+      'plugin' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '32',
+      ),
+      'show_items_policy' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '32',
+      ), 
+      'expand_only_active_trail' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+      'show_hide_effect' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '32',
+      ),
+      'collapse_by_default' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '32',
+      ),
+      'menu_width' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'use_button' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+      'button_title' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '128',
+      ),
+      'use_handler' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+      'handler_title' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '128',
+      ),
+      'use_mask' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+      'use_classes' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+		),
+		'primary key' => array('id'),
+		'foreign keys' => array(
+	    'display' => array(
+	      'table' => 'mobile_navigation_displays',
+	      'columns' => array('id' => 'id'),
+	    ),
+		),
+	);
+	return $schema;
+}
+
+/*
+ * Create configuration tables
+ */
+function mobile_navigation_update_7200() {
+	$schema['mobile_navigation_displays'] = array(
+    'description' => t('Breakpoints defining displays for mobile navigation.'),
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '15',
+      ),
+      'media_query' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '64',
+      ),
+      'top' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'bottom' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+    ),
+    'unique keys' => array(
+      'name' => array('name'),
+    ),
+    'primary key' => array('id'),
+	);
+  db_create_table('mobile_navigation_displays', $schema['mobile_navigation_displays']);
+	$schema['mobile_navigation_configurations'] = array(
+    'description' => t('A configuration registry for a menu on a specific display.'),
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'display' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'menu' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '64',
+      ),
+      'menu_selector' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '128',
+      ),
+      'plugin' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '32',
+      ),
+      'show_items_policy' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '32',
+      ), 
+      'expand_only_active_trail' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+      'show_hide_effect' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '32',
+      ),
+      'collapse_by_default' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '32',
+      ),
+      'menu_width' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'use_button' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+      'button_title' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '128',
+      ),
+      'use_handler' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+      'handler_title' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length'  => '128',
+      ),
+      'use_mask' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+      'use_classes' => array(
+        'type' => 'char',
+        'not null' => TRUE,
+      ),
+		),
+		'primary key' => array('id'),
+		'foreign keys' => array(
+	    'display' => array(
+	      'table' => 'mobile_navigation_displays',
+	      'columns' => array('id' => 'id'),
+	    ),
+		),
+	);
+  db_create_table('mobile_navigation_configurations', $schema['mobile_navigation_configurations']);
+}

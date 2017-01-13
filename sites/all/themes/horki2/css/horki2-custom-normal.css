@@ -54,8 +54,12 @@
  * General Preview styles
  */
 
-/* Photoblog block */
+.wrapper-preview {
+    display: block;
+}
 
+
+/* Photoblog block */
 .block-photoblog-block {
     float: left;
     width: 588px;

@@ -1,0 +1,282 @@
+<?php
+/**
+ * @file
+ * Mobile Navigation primary module file.
+ */
+define('MOBILE_NAVIGATION_DEFAULT_DISPLAYS', 
+    serialize(array(
+        /*
+        "mobile" => "all and (min-width:0px) and (max-width:419px)",
+		"narrow" => "all and (min-width:420px) and (max-width:959px)",
+		"normal" => "all and (min-width:960px)"
+		 * */
+		"mobile" => array("bottom" => 0, "top" => 419),
+		"menu" => array("bottom" => 420, "top" => 959),
+		"normal" => array("bottom" => 960),
+    ))
+);  
+define('MOBILE_NAVIGATION_MENU_SELECTOR', '#main-menu-links');
+define('MOBILE_NAVIGATION_DISPLAY', 'mobile');
+define('MOBILE_NAVIGATION_PLUGIN', 'accordion');
+define('MOBILE_NAVIGATION_SHOW_HIDE_EFFECT', 'expand_down');
+define('MOBILE_NAVIGATION_SHOW_ITEMS_POLICY', 'all');
+define('MOBILE_NAVIGATION_MENU_WIDTH', 65);
+define('MOBILE_NAVIGATION_USE_CLASSES', FALSE);
+define('MOBILE_NAVIGATION_COLLAPSED_BY_DEFAULT', TRUE);
+define('MOBILE_NAVIGATION_USE_MASK', TRUE);
+define('MOBILE_NAVIGATION_USE_BUTTON', TRUE);
+define('MOBILE_NAVIGATION_BUTTON_TITLE', 'Menu');
+define('MOBILE_NAVIGATION_USE_HANDLER', TRUE);
+define('MOBILE_NAVIGATION_HANDLER_TITLE', 'Menu');
+define('MOBILE_NAVIGATION_EXPAND_ONLY_ACTIVE_TRAIL', FALSE);
+
+/**
+ * Implements hook_init().
+ */
+function mobile_navigation_init() { 
+  module_load_include('inc', 'mobile_navigation', 'mobile_navigation');
+}
+
+/**
+ * Implements hook_premission().
+ */
+function mobile_navigation_permission() {
+  return array(
+    'administer mobile navigation' => array(
+      'title' => t('administer mobile navigation'),
+      'description' => t('Administer mobile navigation.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function mobile_navigation_menu() {
+  $items['admin/config/user-interface/mobile-navigation'] = array(
+    'title' => t('Mobile Navigation'),
+    'description' => t('Mobile Navigation displays.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('mobile_navigation_displays_form'),
+    'access arguments' => array('administer mobile navigation'),
+    'file' => 'mobile_navigation.admin.inc',
+  );
+  $items['admin/structure/menu/manage/%menu/mobile-navigation'] = array(
+    'title' => t('Mobile Navigation'),
+    'description' => t('Mobile Navigation Menu configurations.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('mobile_navigation_menu_configurations_form'),
+    'access arguments' => array('administer mobile navigation'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'mobile_navigation.admin.inc',
+  );
+  $items['admin/structure/menu/manage/%menu/mobile-navigation/configuration'] = array(
+    'title' => t('Mobile Navigation Menu Display Configuration'),
+    'description' => t('Mobile Navigation Menu display configuration.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('mobile_navigation_configuration_form'),
+    'access arguments' => array('administer mobile navigation'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'mobile_navigation.admin.inc',
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function mobile_navigation_block_info() {
+  module_load_include('inc', 'mobile_navigation', 'mobile_navigation');
+  $blocks =  array();
+  $configurations = db_query('SELECT id, menu, display, use_button FROM {mobile_navigation_configurations}');
+  foreach($configurations as $conf) {
+      if ($conf->use_button) {
+        $name = $conf->menu . "_" . get_display_name_from_id($conf->display);
+        $blocks[$name] = array(
+        'info' => t('Mobile Navigation Button for ' . $conf->menu . " menu on '" . get_display_name_from_id($conf->display) . "' display."),
+      );
+      }
+  }
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function mobile_navigation_block_view($delta = '') {
+  module_load_include('inc', 'mobile_navigation', 'mobile_navigation');
+  $block = array();    
+  $configurations = db_query('SELECT id, menu, display, use_button, button_title FROM {mobile_navigation_configurations}');
+  foreach($configurations as $conf) {
+      if ($conf->use_button) {
+        $name = $conf->menu . "_" . get_display_name_from_id($conf->display);
+        if ($delta==$name) {
+        $block['subject'] = $name . " button";
+        $block['content'] = array(
+          '#type' => 'markup',
+          '#markup' => "<div class='mobile-navigation-button-container'><a id='" . $name . "-button' class='mobile-navigation-button " . $name . "-trigger'>" . $conf->button_title . "</a></div>",
+        );
+      }
+    }
+  }
+  return $block;
+}
+
+/**
+ * Implements hook_page_build().
+ */
+function mobile_navigation_page_build(&$page) {
+  global $theme_key;
+  $current_theme = variable_get('theme_default', 'none');
+  if ($current_theme == $theme_key) {
+    drupal_add_js(drupal_get_path('module', 'mobile_navigation') . '/js/mobile_menu.js', array('preprocess' => FALSE));
+    drupal_add_js(drupal_get_path('module', 'mobile_navigation') . '/mobile_navigation.js', array('preprocess' => FALSE));
+    drupal_add_css(drupal_get_path('module', 'mobile_navigation') . '/mobile_navigation.css');
+    drupal_add_library('system', 'effects.slide');
+    $configurations = db_query('SELECT * FROM {mobile_navigation_configurations}');
+    $mobile_navigation_configurations = array();
+    $markup = array();
+    $id = "";
+    foreach ($configurations as $conf) {
+      $menu_name = $conf->menu;
+      $display_id = $conf->display;
+      $display_name = get_display_name_from_id($display_id);
+      // Render Menu
+      $menu_tree = menu_tree_output(menu_tree_all_data($menu_name));
+	  $menu_tree['#cache'] = array(
+        'cid' => 'mobile_navigation_'.$menu_name,
+        'bin' => 'cache',
+      );
+      $menu = drupal_render($menu_tree);
+      $id = $menu_name . '_' . $display_name;
+      $markup[$id] = array(
+        '#type' => 'markup',
+        '#markup' => $menu,
+        '#prefix' => '<div id="' . $id . '" class="mobile-navigation-menu">',
+        '#suffix' => '</div>',
+      );
+      if ($conf->use_button) {
+       $button_container =  '#block-mobile-navigation-' . $menu_name . '-' . $display_name . ' .mobile-navigation-button-container';    
+      }
+      else {
+        $button_container =  '';
+      }
+      // To be Added to Drupal JS settings
+      $mobile_navigation_configurations[$id] = array(
+        'menu' => $menu_name,
+        'menu_selector' => $conf->menu_selector,
+        'display' => $display_name,
+        'plugin' => $conf->plugin,
+        'show_items_policy' => $conf->show_items_policy,
+        'expand_only_active_trail' => $conf->expand_only_active_trail,
+        'show_hide_effect' => $conf->show_hide_effect,
+        'collapse_by_default' => $conf->collapse_by_default,
+        'menu_width' => $conf->menu_width,
+        'use_button' => $conf->use_button,
+        'button_title' => $conf->button_title,
+        'use_handler' => $conf->use_handler,
+        'handler_title' => $conf->handler_title,
+        'use_mask' => $conf->use_mask,
+        'use_classes' => $conf->use_classes,
+        'button_container' => $button_container,
+      );
+    }
+    // Wrap menus on a container
+    $container[$id . "-container"] = array(
+      '#type' => 'markup',
+      '#markup' => drupal_render($markup),
+      '#prefix' => '<div id="mobile-navigation-menus">',
+      '#suffix' => '</div>',
+    );
+    // Place it on the page_bottom region
+    $page['page_bottom']['mobile_navigation'] = array(
+      '#markup' => drupal_render($container),
+      '#weight' => 25,
+    );
+    // Add displays definitions to Drupal JS settings
+    $displays = get_displays_list();
+    $display_list = array();
+    $first = true;
+    foreach($displays as $display) {
+      if (!($mq = $display->media_query)) {
+      	$bottom = $display->bottom;
+		$top = $display->top;
+      	if ($bottom and $top) {
+      		$mq = 'all and (min-width:' . $bottom . 'px) and (max-width:' . $top . 'px)';
+      	} else if ($bottom) {
+      		$mq = 'all and (min-width:' . $bottom . 'px)';
+      	} else if ($top) {
+      		$mq = 'all and (max-width:' . $top . 'px)';
+      	}
+      }
+	  $display_list[$display->name] = $mq;
+    }
+	/*
+	$display_list = array(
+		
+		"mobile" => "all and (min-width:0px) and (max-width:419px)",
+		"menu" => "all and (min-width:420px) and (max-width:959px)",
+		"normal" => "all and (min-width:960px)",
+	);
+	*/
+	
+    // Add configurations and displays to Drupal JS settings
+    drupal_add_js( array(
+      'mobile_navigation' => array(
+        'displays'       => $display_list,
+        'configurations' => $mobile_navigation_configurations,
+        'module_path' => drupal_get_path('module', 'mobile_navigation'),
+      ),
+    ), 'setting' );
+  }
+}
+
+/**
+* Implements hook_theme().
+*/
+function mobile_navigation_theme($existing, $type, $theme, $path) {
+  return array(
+    'mobile_navigation_textfield_table' => array(
+      'render element' => 'element'
+    ),
+    'mobile_navigation_display_list_table' => array(
+      'render element' => 'element'
+    ),
+  );
+}
+
+/**
+* Implements hook_form_alter().
+*/
+function mobile_navigation_form_alter(&$form, &$form_state, $form_id) {
+  /*
+  * Menu changes forms added callback to clear mobile navigation caches
+  * if something changes in menus.
+  */
+  if ($form['#form_id'] == 'menu_edit_menu') {
+    $form['#submit'][] = 'mobile_navigation_clear_cache_given_menu_name';
+  }
+  if ($form['#form_id'] == 'menu_overview_form') {
+    $form['#submit'][] = 'mobile_navigation_clear_cache_given_menu_name';
+  }
+  if ($form['#form_id'] == 'menu_edit_item') {
+    $form['#submit'][] = 'mobile_navigation_clear_cache_given_menu_item';
+  }
+}
+
+/**
+ * Clear a specific mobile navigation cache given menu name at the urls argument #4
+ * For menu forms pages.
+ */
+function mobile_navigation_clear_cache_given_menu_name() {
+  cache_clear_all('mobile_navigation_'.arg(4), 'cache'); 
+}
+
+/**
+ * Clear a specific mobile navigation cache given menu item at the urls argument #4
+ * Menu name must be queried.
+ */
+function mobile_navigation_clear_cache_given_menu_item() {
+  $menu = db_query('SELECT m.menu_name FROM {menu_links} m WHERE m.mlid = :mlid', array(':mlid' => arg(4)))->fetchField();
+  cache_clear_all('mobile_navigation_'.$menu, 'cache');
+}

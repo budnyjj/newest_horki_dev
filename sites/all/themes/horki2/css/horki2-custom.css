@@ -14,6 +14,15 @@
  * General Header styles
  */
 
+.wrapper-header {
+    position: static;
+    z-index: 0;
+    width: auto;
+    top: auto;
+    background-color: inherit;
+}
+
+
 .region-header-inner {
     position: relative;
 }
@@ -137,6 +146,10 @@
     margin-left: 6px;
 }
 
+/* mobile menu button block */
+.block-menu-main-mobile {
+    display: none;
+}
 
 /**
  * General Menu styles
