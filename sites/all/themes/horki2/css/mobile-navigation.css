@@ -1,0 +1,182 @@
+/** This file contains customized css styles for mobile_navigation module */
+
+#mobile-navigation-menus {
+    float: left;
+    width: 100%;
+}
+
+.mobile-menu-inner {
+    float: left;
+    z-index: 9999;
+    width: 100%;
+}
+
+.mobile-menu {
+    background-color: #231F20;
+    float: left;
+    margin: 0;
+    padding: 5px 0 75px 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 10000; 
+    overflow-y: scroll;
+}
+
+.mobile-menu li {
+    clear: both;
+    list-style: none outside none;    
+    margin: 0;
+}
+
+.mobile-menu li > a {
+    float: left;
+    padding: 10px 25px;
+    width: 90%;
+    font-family: 'PTSans Bold', sans-serif;
+    color: #FFFFFF;
+}
+
+.slide-menu-clip .mobile-menu .return-link {
+    background-image: url("images/left-arrow.png");
+    background-position: 10% center;
+    background-repeat: no-repeat;
+    float: left;
+    padding-left: 10%;
+}
+
+.slide-menu-clip .mobile-menu .return-link {
+    border-bottom: 1px solid #cccccc;
+}
+
+.slide-menu-clip .mobile-menu .return-link a {
+    border-left: 1px solid #cccccc;
+    float: left;
+    margin-left: 10%;
+}
+
+.mobile-menu li.item-with-ul li {
+    background-image: none;
+}
+
+/** 
+ * Menu clip
+ */
+#slide-menu-clip {
+    background-color: #ffffff;
+}
+
+.mobile-navigation-button > img {
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+    background-color: #231F20;
+    cursor: pointer;
+}
+
+.menu-tab-handler {
+    background-color: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 5px 5px 10px;
+    position: absolute;
+}
+
+.menu-tab-handler.right {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-weight: bold;
+    right: -85px;
+    top: 10px;
+    width: 70px;
+}
+
+.menu-tab-handler.left {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-weight: bold;
+    left: -87px;
+    top: 10px;
+    width: 70px;
+}
+
+.menu-tab-handler.bottom {
+    border: 1px solid #CCCCCC;
+    border-radius: 0 0 10px 10px;
+    bottom: -34px;
+    color: #333333;
+    font-weight: bold;
+    left: 15px;
+    padding: 5px 9px 8px 7px;
+    z-index: 99;
+}
+
+.menu-tab-handler.top {
+    border: 1px solid #CCCCCC;
+    border-radius: 10px 10px 0 0;
+    bottom: -34px;
+    color: #333333;
+    font-weight: bold;
+    left: 20px;
+    top: -30px;
+    padding: 5px 9px 8px 7px;
+    z-index: 99;
+}
+
+/* Positioning menu */
+.mobile-menu-outer-wrapper.effect-modal_top {
+    position: fixed;
+    top: 0;	
+    z-index: 1000;
+}
+.mobile-menu-outer-wrapper.effect-modal_left {
+    position: fixed;
+    left: 0;
+    top: 0;	
+    z-index: 1000;
+}
+.mobile-menu-outer-wrapper.effect-modal_right {
+    position: fixed;
+    right: 0;
+    top: 52px;	
+    z-index: 1000;
+}
+.mobile-menu-outer-wrapper.effect-modal_bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;	
+    z-index: 1000;
+}
+.mobile-menu-outer-wrapper.effect-drawer_top {
+    position: relative;
+    float:left;	
+}
+.mobile-menu-outer-wrapper.effect-drawer_left {
+    position: absolute;
+    
+}
+.mobile-menu-outer-wrapper.effect-drawer_right {
+    position: absolute;
+}
+
+/**
+ * Mask
+ */
+.mobile-navigation-mask {
+    background-color: #333333;
+    bottom: 0;
+    display: none;
+    filter: alpha(opacity=40);
+    left: 0;
+    position: fixed;
+    opacity: 0.4;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+/*
+  #mobile-menu-wrapper {
+  z-index: 9999;
+  }
+  */

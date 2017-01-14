@@ -131,7 +131,6 @@ function mobile_navigation_page_build(&$page) {
   if ($current_theme == $theme_key) {
     drupal_add_js(drupal_get_path('module', 'mobile_navigation') . '/js/mobile_menu.js', array('preprocess' => FALSE));
     drupal_add_js(drupal_get_path('module', 'mobile_navigation') . '/mobile_navigation.js', array('preprocess' => FALSE));
-    drupal_add_css(drupal_get_path('module', 'mobile_navigation') . '/mobile_navigation.css');
     drupal_add_library('system', 'effects.slide');
     $configurations = db_query('SELECT * FROM {mobile_navigation_configurations}');
     $mobile_navigation_configurations = array();

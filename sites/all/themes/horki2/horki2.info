@@ -45,6 +45,11 @@ breakpoints[mobile_narrow] = (min-width: 0px)
 css[global.css][name] = 'Your custom global styles'
 css[global.css][description] = 'This file holds all the globally active custom CSS of your theme.'
 css[global.css][options][weight] = '10'
+css[mobile-navigation.css][name] = 'Custom styles for mobile navigation menu'
+css[mobile-navigation.css][description] = 'This file holds style for mobile navigation menu.'
+css[mobile-navigation.css][options][weight] = '11'
+
+
 
 settings[alpha_primary_alpha_default] = 'normal'
 settings[alpha_responsive] = '1'
