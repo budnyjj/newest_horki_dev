@@ -15,10 +15,13 @@
     height: 115px;
 }
 
+/* logo block */
+.block-8 {
+    bottom: 27px;
+}
 
 /* date block */
 .block-16 {
-    position: absolute;
     bottom: 25px;
     left: 375px;
 }
@@ -26,23 +29,26 @@
 
 /* currency block */
 .block-bel-currency {
-    position: absolute;
     bottom: 25px;
-    left: 510px;
+    left: 523px;
 }
 
 
 /* weather block */
 .block-local-weather {
-    position: absolute;
     bottom: 25px;
-    left: 730px;
+    left: 750px;
 }
 
 
 /**
  * General Menu styles
  */
+
+.main-menu li > a {
+    font-size: 1.15em;
+    padding: 10px 25px;
+}
 
 
 /**
@@ -56,10 +62,19 @@
 
 .zone-preview-wrapper {
     display: block;
+    background-color: #231F20;
+}
+
+.zone-preview {
+    padding: 15px 0;
+}
+
+.zone-preview a {
+    color: #FFFFFF;
 }
 
 
-/* Photoblog block */
+/* photoblog block */
 .block-photoblog-block {
     float: left;
     width: 588px;
@@ -67,7 +82,7 @@
 
 .block-photoblog-block .views-row {
     width: 282px;
-    margin: 15px 24px 40px 0;
+    margin: 15px 24px 30px 0;
     float: left;
 }
 
@@ -75,8 +90,21 @@
     margin-right: 0;
 }
 
+.block-photoblog-block .view-header {
+    font-family: 'PTSans Caption Regular', sans-serif;
+}
 
-/* Videoblog block */
+.block-photoblog-block .views-field-field-pics {
+    margin-bottom: 20px;
+}
+
+.block-photoblog-block .views-field-title {
+    font-family: 'PTSans Bold', sans-serif;
+    font-size: 1.5em;
+}
+
+
+/* videoblog block */
 .block-videoblog-block {
     float: left;
     width: 588px;
@@ -84,7 +112,7 @@
 
 .block-videoblog-block .views-row {
     width: 282px;
-    margin: 15px 24px 40px 0;
+    margin: 15px 24px 30px 0;
     float: left;
 }
 
@@ -92,18 +120,39 @@
     margin-right: 0;
 }
 
+.block-videoblog-block .view-header {
+    font-family: 'PTSans Caption Regular', sans-serif;
+}
+
+.block-videoblog-block .views-field-field-video {
+    margin-bottom: 20px;
+}
+
+.block-videoblog-block .views-field-title {
+    font-family: 'PTSans Bold', sans-serif;
+    font-size: 1.5em;
+}
+
 
 /**
  * General Footer styles
  */ 
 
-/* Menu blocks */
+/* menu blocks */
+.region-footer-first-inner {
+    margin-bottom: 0;
+}
+
 .block-menu-geografic,
 .block-menu-additional-menu,
-.block-menu-old,
-.block-menu-system {
-    width: 120px;
+.block-menu-old {
+    width: 129px;
     margin-right: 24px;
+}
+
+.block-menu-system {
+    width: 129px;
+    margin-right: 0;
 }
 
 /**

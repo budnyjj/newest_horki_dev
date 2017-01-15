@@ -18,6 +18,7 @@
     position: static;
     z-index: 0;
     width: auto;
+    height: auto;
     top: auto;
     background-color: inherit;
 }
@@ -31,8 +32,12 @@
 .block-block-15 {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 27px;
     right: 210px;
+}
+
+.block-block-15 .content a {
+    color: #8896A0;
 }
 
 
@@ -54,10 +59,15 @@
     height: 30px;
 }
 
+#edit-custom-search-blocks-form-1--2::-webkit-input-placeholder,
+#edit-custom-search-blocks-form-1--2::-moz-placeholder,
+#edit-custom-search-blocks-form-1--2:-moz-placeholder,
+#edit-custom-search-blocks-form-1--2:-ms-input-placeholder {
+    color: #8896A0;
+}
 
 /* logo block */
 .block-8 {
-    bottom: 27px;
     width: 351px;
     height: 58px;
 }
@@ -66,36 +76,50 @@
 /* date block */
 .block-16 {
     display: block;
+    position: absolute;
+    bottom: 25px;
 }
 
 .block-16 .content {
-    font-size: 11px;
+    color: #671A1D;
+    font-family: 'PTSans Bold', sans-serif;
 }
 
 
 /* currency block */
 .block-bel-currency {
     display: block;
+    position: absolute;
+    bottom: 25px;
 }
 
-.block-bel-currency .content {
-    font-size: 11px;
+.bel-currency-char {
+    font-family: 'PTSans Bold', sans-serif;
+    margin-right: 0.25em;
+}
+
+.bel-currency-delimiter {
+    margin: 0 0.25em;
 }
 
 
 /* weather block */
 .block-local-weather {
     display: block;
+    position: absolute;
+    bottom: 25px;
+}
+
+.block-local-weather .delimiter {
+    margin: 0 0.25em;
 }
 
 .block-local-weather .icon {
-    width: 13px;
-    height: 13px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 0.25em;
     vertical-align: top;
-}
-
-.block-local-weather .content {
-    font-size: 11px;
 }
 
 .block-local-weather .clear-day {
@@ -151,12 +175,38 @@
 
 .zone-menu-wrapper {
     height: auto;
+    background-color: #231F20;
+}
+
+.main-menu {
+    text-align: center;
+}
+
+.main-menu li {
+    margin: 0;
+}
+
+.main-menu li > a {
+    display: inline-block;
+    font-family: 'PTSans Bold', sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.main-menu li > a:hover,
+.main-menu li > a:active,
+.main-menu .active-trail a {
+    background-color: #505050;
 }
 
 
 /**
  * General Content styles
  */
+
+.zone-content {
+    padding: 30px 0;
+}
 
 
 /**

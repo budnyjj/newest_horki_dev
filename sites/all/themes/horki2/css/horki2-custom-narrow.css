@@ -14,13 +14,42 @@
 
 
 .region-header-inner {
-    height: 115px;
+    height: 140px;
+}
+
+
+/* logo block */
+.block-8 {
+    bottom: 52px;
+}
+
+
+/* date block */
+.block-16 {
+    left: 0px;
+}
+
+
+/* currency block */
+.block-bel-currency {
+    left: 160px;
+}
+
+
+/* weather block */
+.block-local-weather {
+    left: 400px;
 }
 
 
 /**
  * General Menu styles
  */
+
+.main-menu li > a {
+    padding: 10px 13px;
+}
+
 
 
 /**
@@ -37,13 +66,13 @@
  * General Footer styles
  */ 
 
-/* Menu blocks */
+/* menu blocks */
 .block-menu-geografic,
 .block-menu-additional-menu,
 .block-menu-old,
 .block-menu-system {
-    width: 120px;
-    margin-right: 100px;
+    width: 25%;
+
 }
 
 
