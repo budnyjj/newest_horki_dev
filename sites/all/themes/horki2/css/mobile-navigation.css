@@ -39,6 +39,11 @@
     color: #FFFFFF;
 }
 
+.mobile-menu li > a:hover {
+    text-decoration: none;
+    color: #AEAEAE;
+}
+
 .slide-menu-clip .mobile-menu .return-link {
     background-image: url("images/left-arrow.png");
     background-position: 10% center;

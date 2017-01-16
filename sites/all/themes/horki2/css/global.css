@@ -16,6 +16,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 
 /* mobile grid styles (see mobile-alpha.css) */
 .grid-1, 
@@ -160,6 +164,11 @@ a {
 
 .zone-footer a {
     color: #A8A8A8;
+}
+
+.zone-footer a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 

@@ -73,6 +73,10 @@
     color: #FFFFFF;
 }
 
+.zone-preview a:hover {
+    text-decoration: none;
+    color: #AEAEAE;
+}
 
 /* photoblog block */
 .block-photoblog-block {

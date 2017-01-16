@@ -196,7 +196,8 @@
 .main-menu li > a:hover,
 .main-menu li > a:active,
 .main-menu .active-trail a {
-    background-color: #505050;
+    text-decoration: none;
+    color: #AEAEAE;
 }
 
 
