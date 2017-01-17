@@ -32,7 +32,7 @@
 .block-block-15 {
     display: block;
     position: absolute;
-    top: 27px;
+    top: 25px;
     right: 210px;
 }
 
@@ -243,14 +243,11 @@
  * Custom Main Page styles
  */
 
-/* main news block */
+/* main news */
 .page-main-news > .view-content {
-    width: 588px;
     float: left;
-}
-
-.page-main-news > .view-content .views-row {
-    margin: 0;
+    width: 588px;
+    margin-bottom: 0;
 }
 
 .page-main-news > .attachment {
