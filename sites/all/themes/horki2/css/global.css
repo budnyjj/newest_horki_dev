@@ -38,6 +38,53 @@ a:hover {
 }
 
 
+/* button styles */
+.more-link,
+.button-black,
+.button-red,
+.item-list .pager li {
+    width: 120px;
+    margin: 0 auto 8px auto;
+    padding: 5px 1em 6px 1em;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'LiberationSans Regular', sans-serif;
+    font-size: 1.05em;
+}
+
+.more-link,
+.button-black,
+.item-list .pager li {
+    background-color: #231F20;
+}
+
+.button-red {
+    background-color: #671A1D;
+}
+
+.more-link:hover,
+.more-link:active,
+.black-button:hover,
+.black-button:active,
+.item-list .pager li:hover,
+.item-list .pager li:active {
+    background-color: #505050;
+}
+
+.button-red:hover,
+.button-red:active {
+    background-color: #D2232A;
+}
+
+.button-black a,
+.button-red a,
+.item-list .pager li a,
+.more-link a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
 /*
  * General Header Banner styles
  */
@@ -252,11 +299,58 @@ a:hover {
 
 .page-main-news .main-title a {
     font-family: 'PTSans Bold', sans-serif;
-    font-size: 2.5em;
+    font-weight: bold;
+    font-size: 2em;
     color: #000000;
 }
 
 .page-main-news .main-title a:hover {
+    text-decoration: none;
+    color: #555555;
+}
+
+.attachment-last-news {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
+.attachment-last-news .view-header {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'PTSans Caption Bold', sans-serif;
+    font-weight: bold;    
+    color: #671A1D;
+}
+
+.attachment-last-news .views-row {
+    font-size: 1.15em;  
+    padding-bottom: 15px;     
+    border-bottom: 1px solid #DBDBDB;
+    margin-bottom: 15px;
+}
+
+.attachment-last-news .views-row-last { 
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+
+.attachment-last-news .last-date {
+    float: left;
+    margin-right: 0.5em;
+    font-family: 'PTSans Caption Bold', sans-serif;
+    font-weight: bold;    
+    color: #B5221C;
+}
+
+.attachment-last-news .last-title a {
+    font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;    
+    color: #000000;
+}
+
+.attachment-last-news .last-title a:hover {
     text-decoration: none;
     color: #555555;
 }

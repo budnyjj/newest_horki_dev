@@ -1,5 +1,10 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
 
+/**
+ * General styles
+ */
+
+
 /*
  * General Header Banner styles
  */
@@ -83,6 +88,7 @@
 .block-16 .content {
     color: #671A1D;
     font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;
 }
 
 
@@ -94,8 +100,9 @@
 }
 
 .bel-currency-char {
-    font-family: 'PTSans Bold', sans-serif;
     margin-right: 0.25em;
+    font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;
 }
 
 .bel-currency-delimiter {
@@ -188,8 +195,9 @@
 
 .main-menu li > a {
     display: inline-block;
-    font-family: 'PTSans Bold', sans-serif;
     text-transform: uppercase;
+    font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;
     color: #FFFFFF;
 }
 
@@ -248,6 +256,10 @@
     float: left;
     width: 588px;
     margin-bottom: 0;
+}
+
+.page-main-news .main-title a {
+    font-size: 2.5em;
 }
 
 .page-main-news > .attachment {

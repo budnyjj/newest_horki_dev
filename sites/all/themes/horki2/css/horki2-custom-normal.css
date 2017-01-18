@@ -78,62 +78,28 @@
     color: #AEAEAE;
 }
 
-/* photoblog block */
-.block-photoblog-block {
-    float: left;
-    width: 588px;
-}
-
-.block-photoblog-block .views-row {
+/* preview blocks */
+.preview-block .views-row {
     width: 282px;
     margin: 15px 24px 30px 0;
     float: left;
 }
 
-.block-photoblog-block .views-row-last {
+.preview-block .views-row-last {
     margin-right: 0;
 }
 
-.block-photoblog-block .view-header {
+.preview-block .view-header {
     font-family: 'PTSans Caption Regular', sans-serif;
 }
 
-.block-photoblog-block .views-field-field-pics {
+.preview-block .preview-photo {
     margin-bottom: 20px;
 }
 
-.block-photoblog-block .views-field-title {
+.preview-block .preview-title {
     font-family: 'PTSans Bold', sans-serif;
-    font-size: 1.5em;
-}
-
-
-/* videoblog block */
-.block-videoblog-block {
-    float: left;
-    width: 588px;
-}
-
-.block-videoblog-block .views-row {
-    width: 282px;
-    margin: 15px 24px 30px 0;
-    float: left;
-}
-
-.block-videoblog-block .views-row-last {
-    margin-right: 0;
-}
-
-.block-videoblog-block .view-header {
-    font-family: 'PTSans Caption Regular', sans-serif;
-}
-
-.block-videoblog-block .views-field-field-video {
-    margin-bottom: 20px;
-}
-
-.block-videoblog-block .views-field-title {
-    font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;
     font-size: 1.5em;
 }
 
