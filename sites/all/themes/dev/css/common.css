@@ -3,16 +3,15 @@
 /*Position styles*/
 
 .flush-right-all {
-	text-align: right;
+    text-align: right;
 }
 
-
 .flush-right-this {
-	float: right;
+    float: right;
 }
 
 .flush-left-all {
-	text-align: left;
+    text-align: left;
 }
 
 .flush-left-this {
@@ -233,7 +232,7 @@ table {
 
 .media-grid-page .views-row {
     width: 230px;
-    height: 270px;
+    height: 300px;
     float: left;
     margin: 0 10px 10px 0;
 }

@@ -988,15 +988,6 @@ article .poll {
 
 /*Rubrics Views styles*/
 
-.context-photohtml .media-grid-page .views-row,
-.context-navinyhtml .media-grid-page .views-row,
-.context-krainahtml .media-grid-page .views-row,
-.context-regiyonhtml .media-grid-page .views-row,
-.context-vybary-2016html .media-grid-page .views-row,
-.context-dazhynki-u-mscislavehtml .media-grid-page .views-row {
-    height: 300px;
-}
-
 .view-id-daviedka td {
     vertical-align:top;
 }
