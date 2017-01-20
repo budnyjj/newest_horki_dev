@@ -246,10 +246,60 @@ a:hover {
  */
 
 /* media grid block */
-.media-grid-block .views-field-field-pics img {
+.media-grid-block .view-header {
+    margin-bottom: 15px;
+}
+
+.media-grid-block .header-title {
+    margin-right: 1em;
+    text-transform: uppercase;
+    font-family: 'PTSans Caption Bold', sans-serif;
+    font-weight: bold;    
+    color: #671A1D;
+}
+
+.media-grid-block .views-row {
+    margin-bottom: 35px;
+}
+
+.media-grid-block .media-photo {
+    margin-bottom: 15px;
+}
+
+.media-grid-block .media-photo img {
     width: 100%;
     max-width: 100%;
 }
+
+.media-grid-block .media-statistics {
+    margin-bottom: 5px;
+    font-size: 0.85em;
+    color: #8896A0;    
+}
+
+.media-grid-block .media-statistics img {
+    margin-right: 0.3em;
+}
+
+.media-grid-block .media-statistics .views-count {
+    margin-right: 1em;
+}
+
+.media-grid-block .media-title {
+    font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.media-grid-block .media-title a {
+    color: #000000;
+}
+
+.media-grid-block .media-title a:hover {
+    text-decoration: none;
+    color: #555555;
+}
+
 
 /**
  * Custom Main Page styles
@@ -305,6 +355,7 @@ a:hover {
     color: #555555;
 }
 
+/* last news */
 .attachment-last-news {
     border: 1px solid #DBDBDB;
     padding: 20px;
@@ -331,7 +382,6 @@ a:hover {
     margin-bottom: 20px;
 }
 
-
 .attachment-last-news .last-date {
     float: left;
     margin-right: 0.5em;
@@ -350,3 +400,15 @@ a:hover {
     text-decoration: none;
     color: #555555;
 }
+
+/* news by regions */
+.block-news-by-regions-block,
+.block-news-by-regions-block-1,
+.block-news-by-regions-block-2,
+.block-news-by-regions-block-3,
+.block-news-by-regions-block-4,
+.block-news-by-regions-block-5 {
+    border-bottom: 1px solid #DBDBDB;
+    margin-bottom: 15px;
+}
+

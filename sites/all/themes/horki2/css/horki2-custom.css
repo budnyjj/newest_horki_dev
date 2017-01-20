@@ -232,18 +232,15 @@
  * General Views styles
  */
 
-
 /* media grid block */
 .media-grid-block .views-row {
     width: 282px;
     float: left;
-    margin: 0 24px 40px 0;
+    margin: 0 24px 35px 0;
 }
 
 .media-grid-block .views-row-last {
-    width: 282px;
-    float: left;
-    margin: 0 0 40px 0;
+    margin: 0 0 35px 0;
 }
 
 
@@ -271,5 +268,3 @@
 .page-main-news > .attachment .views-row {
     margin-top: 0;
 }
-
-

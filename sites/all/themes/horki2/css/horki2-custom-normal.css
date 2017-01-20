@@ -129,3 +129,8 @@
  * Custom Main Page styles
  */
 
+/* news by regions */
+.block-news-by-regions-block-5 {
+    border-bottom: none;
+    margin-bottom: 0;
+}
