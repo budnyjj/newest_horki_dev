@@ -276,7 +276,7 @@ a:hover {
 }
 
 .block-media-grid .media-statistics {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 0.85em;
     color: #8896A0;    
 }
@@ -304,15 +304,66 @@ a:hover {
     color: #555555;
 }
 
+/* media grid page */
+.page-media-grid .views-row {
+    margin-bottom: 35px;
+}
+
+.page-media-grid .media-photo {
+    margin-bottom: 15px;
+}
+
+.page-media-grid .media-photo img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.page-media-grid .media-statistics {
+    margin-bottom: 10px;
+    font-size: 0.85em;
+    color: #8896A0;    
+}
+
+.page-media-grid .media-statistics img {
+    margin-right: 0.3em;
+}
+
+.page-media-grid .media-statistics .views-count {
+    margin-right: 1em;
+}
+
+.page-media-grid .media-title {
+    font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.page-media-grid .media-title a {
+    color: #000000;
+}
+
+.page-media-grid .media-title a:hover {
+    text-decoration: none;
+    color: #555555;
+}
+
+.page-media-grid .item-list ul {
+    margin: 0;
+}
+
+
+.page-media-grid .item-list ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.page-media-grid .item-list ul li a {
+    margin-top: 10px;
+}
 
 /**
  * Custom Main Page styles
  */
-
-.region-sidebar-first,
-.region-sidebar-third {
-    display: none;
-}
 
 /* main news */
 .page-main .block-main {
@@ -424,6 +475,10 @@ a:hover {
     margin-bottom: 15px;
 }
 
+/* sidebar banner #1 */
+.block-42 {
+    display: none;
+}
 
 /* sidebar abvestki */
 .block-ads-block-1 {
@@ -463,7 +518,16 @@ a:hover {
     color: #000000;
 }
 
+/* sidebar banner #2 */
+.block-41 {
+    display: none;
+}
+
 /* sidebar last comments */
+.block-comments-block-block-1 {
+    margin-bottom: 20px;
+}
+
 .block-comments-block-block-1 .block-inner {
     border: 1px solid #DBDBDB;
     padding: 20px;
@@ -516,3 +580,19 @@ a:hover {
     font-weight: bold;
     font-size: 1.15em;
 }
+
+
+/**
+ * Custom Inner views styles
+ */
+
+/* sidebar banner #1 */
+.block-33 {
+    display: none;
+}
+
+/* sidebar banner #2 */
+.block-56 {
+    display: none;
+}
+

@@ -3,6 +3,7 @@
  *  apply to the normal and widescreen layouts. You may override these styles in the normal 
  *  and widescreen CSS files as appropriate. */
 
+
 /*
  * General Header Banner styles
  */
@@ -56,6 +57,10 @@
  * General Content styles
  */
 
+#region-sidebar-fourth {
+    display: none;
+}
+
 
 /**
  * General Preview styles
@@ -80,7 +85,3 @@
  * Custom Main Page styles
  */
 
-/* use id to force the style */
-#region-sidebar-first {
-    display: none;
-}

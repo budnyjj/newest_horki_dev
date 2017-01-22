@@ -55,6 +55,9 @@
  * General Content styles
  */
 
+#region-sidebar-fourth {
+    display: inline;
+}
 
 /**
  * General Preview styles
@@ -129,22 +132,7 @@
  * Custom Main Page styles
  */
 
-/* use id to force the style */
-#region-sidebar-first {
-    display: inline;
-}
-
 /* news by regions */
 .block-news-by-regions-block-5 {
     margin-bottom: 0;
-}
-
-/* sidebar banner #1 */
-.block-42 {
-    margin-bottom: 20px;
-}
-
-.block-42 .block-inner {
-    border: 1px solid #DBDBDB;
-    padding: 20px;
 }
