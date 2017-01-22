@@ -80,3 +80,7 @@
  * Custom Main Page styles
  */
 
+/* use id to force the style */
+#region-sidebar-first {
+    display: none;
+}

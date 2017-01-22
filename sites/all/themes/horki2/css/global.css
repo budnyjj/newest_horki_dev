@@ -114,7 +114,7 @@ a:hover {
 }
 
 /* login block */
-.block-block-15 {
+.block-15 {
     display: none;
 }
 
@@ -183,6 +183,10 @@ a:hover {
  * General Content styles
  */
 
+.zone-content {
+    padding: 15px 0;
+}
+
 
 /**
  * General Preview styles
@@ -246,11 +250,11 @@ a:hover {
  */
 
 /* media grid block */
-.media-grid-block .view-header {
+.block-media-grid .view-header {
     margin-bottom: 15px;
 }
 
-.media-grid-block .header-title {
+.block-media-grid .header-title {
     margin-right: 1em;
     text-transform: uppercase;
     font-family: 'PTSans Caption Bold', sans-serif;
@@ -258,44 +262,44 @@ a:hover {
     color: #671A1D;
 }
 
-.media-grid-block .views-row {
+.block-media-grid .views-row {
     margin-bottom: 35px;
 }
 
-.media-grid-block .media-photo {
+.block-media-grid .media-photo {
     margin-bottom: 15px;
 }
 
-.media-grid-block .media-photo img {
+.block-media-grid .media-photo img {
     width: 100%;
     max-width: 100%;
 }
 
-.media-grid-block .media-statistics {
+.block-media-grid .media-statistics {
     margin-bottom: 5px;
     font-size: 0.85em;
     color: #8896A0;    
 }
 
-.media-grid-block .media-statistics img {
+.block-media-grid .media-statistics img {
     margin-right: 0.3em;
 }
 
-.media-grid-block .media-statistics .views-count {
+.block-media-grid .media-statistics .views-count {
     margin-right: 1em;
 }
 
-.media-grid-block .media-title {
+.block-media-grid .media-title {
     font-family: 'PTSans Bold', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
 }
 
-.media-grid-block .media-title a {
+.block-media-grid .media-title a {
     color: #000000;
 }
 
-.media-grid-block .media-title a:hover {
+.block-media-grid .media-title a:hover {
     text-decoration: none;
     color: #555555;
 }
@@ -305,6 +309,11 @@ a:hover {
  * Custom Main Page styles
  */
 
+.region-sidebar-first,
+.region-sidebar-third {
+    display: none;
+}
+
 /* main news */
 .page-main .block-main {
     margin-bottom: 30px;
@@ -312,8 +321,8 @@ a:hover {
 
 .page-main-news > .view-content {
     background-color: #F3F3F3;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 .page-main-news .main-photo {
@@ -326,7 +335,7 @@ a:hover {
 }
 
 .page-main-news .main-statistics {
-    margin: 0 40px 20px 40px;    
+    margin: 0 15px 15px 15px;    
     font-size: 0.85em;
     color: #8896A0;    
 }
@@ -340,7 +349,7 @@ a:hover {
 }
 
 .page-main-news .main-title {
-    margin: 0 40px;
+    margin: 0 15px;
 }
 
 .page-main-news .main-title a {
@@ -406,9 +415,104 @@ a:hover {
 .block-news-by-regions-block-1,
 .block-news-by-regions-block-2,
 .block-news-by-regions-block-3,
-.block-news-by-regions-block-4,
-.block-news-by-regions-block-5 {
+.block-news-by-regions-block-4 {
     border-bottom: 1px solid #DBDBDB;
     margin-bottom: 15px;
 }
 
+.block-news-by-regions-block-5 {
+    margin-bottom: 15px;
+}
+
+
+/* sidebar abvestki */
+.block-ads-block-1 {
+    margin-bottom: 20px;
+}
+
+.block-ads-block-1 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
+.block-ads-block-1 .block-title {
+    text-transform: uppercase;
+    font-family: 'PTSans Caption Bold', sans-serif;
+    font-weight: bold;
+    color: #671A1D;
+}
+
+.block-abvestki .view-content {
+    margin-bottom: 25px;
+}
+
+.block-abvestki h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'PTSans Caption Bold', sans-serif;
+    font-weight: bold;
+    color: #B5221C;
+}
+
+.block-abvestki .views-field-title {
+    margin-bottom: 10px;
+}
+
+.block-abvestki .views-field-title a {
+    font-size: 1.05em;
+    color: #000000;
+}
+
+/* sidebar last comments */
+.block-comments-block-block-1 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
+.block-comments-block-block-1 .block-title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'PTSans Caption Bold', sans-serif;
+    font-weight: bold;
+    color: #671A1D;
+}
+
+.block-last-comments .view-content {
+    margin-bottom: 25px;
+}
+
+.block-last-comments .views-row {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DBDBDB;
+    margin-bottom: 15px;
+}
+
+.block-last-comments .views-row-last {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.block-last-comments .last-comments-author-avatar {
+    margin-right: 0.5em;
+}
+
+.block-last-comments .last-comments-author-name a {
+    color: #8B9298;
+}
+
+.block-last-comments .views-field-comment-body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.block-last-comments .views-field-comment-body a {
+    font-family: 'PTSerif Regular', serif;
+    font-size: 1.15em;
+    color: #000000;    
+}
+
+.block-last-comments .views-field-title a {
+    font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;
+    font-size: 1.15em;
+}

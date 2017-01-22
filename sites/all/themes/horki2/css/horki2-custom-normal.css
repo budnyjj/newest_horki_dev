@@ -79,25 +79,25 @@
 }
 
 /* preview blocks */
-.preview-block .views-row {
+.block-preview .views-row {
     width: 282px;
     margin: 15px 24px 30px 0;
     float: left;
 }
 
-.preview-block .views-row-last {
+.block-preview .views-row-last {
     margin-right: 0;
 }
 
-.preview-block .view-header {
+.block-preview .view-header {
     font-family: 'PTSans Caption Regular', sans-serif;
 }
 
-.preview-block .preview-photo {
+.block-preview .preview-photo {
     margin-bottom: 20px;
 }
 
-.preview-block .preview-title {
+.block-preview .preview-title {
     font-family: 'PTSans Bold', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
@@ -129,8 +129,22 @@
  * Custom Main Page styles
  */
 
+/* use id to force the style */
+#region-sidebar-first {
+    display: inline;
+}
+
 /* news by regions */
 .block-news-by-regions-block-5 {
-    border-bottom: none;
     margin-bottom: 0;
+}
+
+/* sidebar banner #1 */
+.block-42 {
+    margin-bottom: 20px;
+}
+
+.block-42 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
 }
