@@ -20,6 +20,21 @@ a:hover {
     text-decoration: underline;
 }
 
+#page-title {
+    margin-bottom: 20px;
+    font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #671A1D;
+}
+
+.block-title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'PTSans Caption Bold', sans-serif;
+    font-weight: bold;
+    color: #671A1D;
+}
 
 /* mobile grid styles (see mobile-alpha.css) */
 .grid-1, 
@@ -495,13 +510,6 @@ a:hover {
     padding: 20px;
 }
 
-.block-ads-block-1 .block-title {
-    text-transform: uppercase;
-    font-family: 'PTSans Caption Bold', sans-serif;
-    font-weight: bold;
-    color: #671A1D;
-}
-
 .block-abvestki .view-content {
     margin-bottom: 25px;
 }
@@ -536,14 +544,6 @@ a:hover {
 .block-comments-block-block-1 .block-inner {
     border: 1px solid #DBDBDB;
     padding: 20px;
-}
-
-.block-comments-block-block-1 .block-title {
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-family: 'PTSans Caption Bold', sans-serif;
-    font-weight: bold;
-    color: #671A1D;
 }
 
 .block-last-comments .view-content {
@@ -606,14 +606,6 @@ a:hover {
     padding: 20px;
 }
 
-.block-aposhnija-naviny-block-1 .block-title {
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-family: 'PTSans Caption Bold', sans-serif;
-    font-weight: bold;    
-    color: #671A1D;
-}
-
 .block-last-news .view-content {
     margin-bottom: 25px;
 }
@@ -654,3 +646,24 @@ a:hover {
     display: none;
 }
 
+/**
+ * Custom Inner nodes styles
+ */
+
+/* add comment block */
+.block-comment-form-block {
+    margin-bottom: 20px;
+}
+
+.block-comment-form-block .content {
+    border-top: 2px solid #000000;
+    padding: 25px 0;
+}
+
+.block-comment-form-block .title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'PTSans Caption Bold', sans-serif;
+    font-weight: bold;
+    color: #671A1D;    
+}
