@@ -22,22 +22,12 @@
 
 /* date block */
 .block-16 {
-    bottom: 25px;
     left: 375px;
 }
 
-
 /* currency block */
 .block-bel-currency {
-    bottom: 25px;
     left: 523px;
-}
-
-
-/* weather block */
-.block-local-weather {
-    bottom: 25px;
-    left: 750px;
 }
 
 
@@ -137,7 +127,6 @@
 .page-media-grid {
     margin-bottom: 20px;
 }
-
 
 /**
  * Custom Main Page styles
