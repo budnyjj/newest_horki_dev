@@ -377,11 +377,17 @@
 }
 
 /* abvestki page */
-.page-abvestki .views-exposed-form .views-widget-filter-title {
-    width: auto;
+.page-abvestki .views-exposed-form .views-widget-filter-field_ads_placement_tid,
+.page-abvestki .views-exposed-form .views-widget-filter-field_ads_type_tid,
+.page-abvestki .views-exposed-form .views-widget-filter-field_ads_topic_tid {
+    width: 175px;
 }
 
-.page-abvestki .views-exposed-form .form-text {
+.page-abvestki .views-widget-filter-title {
+    clear: left;
+}
+
+.page-abvestki .views-exposed-form .views-widget-filter-title {
     width: 565px;
 }
 
