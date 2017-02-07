@@ -71,6 +71,7 @@ a:hover {
 .item-list .pager-next a:active {
     background-color: #181818;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .button-red a:hover,
@@ -397,6 +398,11 @@ ul.tabs li.active a {
     font-size: 1.15em;
 }
 
+.page-media-grid .media-label {
+    font-family: 'PTSans Bold', sans-serif;
+    font-weight: bold;    
+}
+
 .page-media-grid .item-list .pager {
     margin: 0;
 }
@@ -412,7 +418,7 @@ ul.tabs li.active a {
 
 /* filtered table page */
 .page-filtered-table {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .page-filtered-table .view-header {
@@ -453,7 +459,7 @@ ul.tabs li.active a {
     width: 100%;
     height: 35px;
     color: #8b9298;
-    background-image: url('../images/select-arrow.gif');
+    background: url('../images/select-arrow.gif') no-repeat right;
 }
 
 .page-filtered-table .views-exposed-form .form-select option {
@@ -461,12 +467,16 @@ ul.tabs li.active a {
 }
 
 .page-filtered-table .views-exposed-form .views-submit-button {
-    clear: left;
+    padding-right: 15px;
+}
+
+.page-filtered-table .views-exposed-form .views-reset-button {
+    padding-right: 0;
 }
 
 .page-filtered-table .views-exposed-form .form-submit {
-    width: 80px;
-    padding: 5px 1em 6px 1em;
+    width: 97px;
+    height: 35px;
     border: none;
     border-radius: 5px;
     margin-top: 0;
@@ -482,11 +492,12 @@ ul.tabs li.active a {
 
 .page-filtered-table .views-exposed-form .form-submit:hover {
     background-color: #181818;
+    cursor: pointer;
 }
 
 .page-filtered-table .view-content {
     padding: 20px;
-    background-color: #F3F3F3;
+    background-color: #F9F9F9;
 }
 
 .page-filtered-table table {
@@ -526,6 +537,12 @@ ul.tabs li.active a {
     background-color: #F3F3F3;
 }
 
+.page-filtered-table .view-empty {
+    margin: 0 50px 10px 50px;
+    padding: 20px 50px;
+    background-color: #FFCCCB;
+}
+
 /* filtered list page */
 .page-filtered-list {
     margin-bottom: 50px;
@@ -558,6 +575,14 @@ ul.tabs li.active a {
     font-size: 1.15em;
 }
 
+.page-filtered-list .views-exposed-form .views-submit-button {
+    padding-right: 15px;
+}
+
+.page-filtered-list .views-exposed-form .views-reset-button {
+    padding-right: 0;
+}
+
 .page-filtered-list .views-esposed-form .form-item {
     font-family: 'LiberationSans Regular', sans-serif;
 }
@@ -571,7 +596,7 @@ ul.tabs li.active a {
     width: 100%;
     height: 35px;
     color: #8B9298;
-    background-image: url('../images/select-arrow.gif');
+    background: url('../images/select-arrow.gif') no-repeat right;
 }
 
 .page-filtered-list .views-exposed-form .form-select option {
@@ -579,8 +604,8 @@ ul.tabs li.active a {
 }
 
 .page-filtered-list .views-exposed-form .form-submit {
-    width: 80px;
-    padding: 5px 1em 6px 1em;
+    width: 97px;
+    height: 35px;
     border: none;
     border-radius: 5px;
     margin-top: 0;
@@ -596,6 +621,7 @@ ul.tabs li.active a {
 
 .page-filtered-list .views-exposed-form .form-submit:hover {
     background-color: #181818;
+    cursor: pointer;
 }
 
 .page-filtered-list .views-row {
@@ -635,6 +661,11 @@ ul.tabs li.active a {
     color: #555555;
 }
 
+.page-filtered-list .view-empty {
+    margin: 0 50px 10px 50px;
+    padding: 20px 50px;
+    background-color: #FFCCCB;
+}
 
 /**
  * Custom Main Page styles
@@ -844,7 +875,6 @@ ul.tabs li.active a {
 
 /* abvestki page */
 .page-abvestki .view-header a {
-    text-decoration: underline;
     font-family: 'PTSans Bold', sans-serif;
     font-weight: bold;
     font-size: 1.15em;
@@ -921,7 +951,6 @@ ul.tabs li.active a {
 
 /* companies page */
 .page-companies .view-header a {
-    text-decoration: underline;
     font-family: 'PTSans Bold', sans-serif;
     font-weight: bold;
     font-size: 1.15em;
@@ -969,9 +998,6 @@ ul.tabs li.active a {
 
 .page-companies .item-list .pager-next a {
     margin-top: 35px;
-}
-
-.page-companies .item-list .pager-next a {
     width: 200px;
 }
 

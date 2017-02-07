@@ -288,7 +288,7 @@
 }
 
 .page-filtered-table .views-exposed-form .form-submit {
-    margin-top: 33px;
+    margin-top: 30px;
 }
 
 .page-filtered-table .view-content {
@@ -307,7 +307,7 @@
 }
 
 .page-filtered-list .views-exposed-form .form-submit {
-    margin-top: 33px;
+    margin-top: 30px;
 }
 
 .page-filtered-list .filtered-list-photo {
@@ -419,11 +419,11 @@
 
 /* companies page */
 .page-companies .views-exposed-form .views-widget-filter-field_company_section_tid {
-    width: 175px;
+    width: 200px;
 }
 
 .page-companies .views-exposed-form .views-widget-filter-body_value { 
-    width: 330px;
+    width: 345px;
 }
 
 
