@@ -83,7 +83,7 @@
 }
 
 .block-preview .view-header {
-    font-family: 'PTSans Caption Regular', sans-serif;
+    font-family: 'PTSans Caption', sans-serif;
 }
 
 .block-preview .preview-photo {
@@ -91,7 +91,7 @@
 }
 
 .block-preview .preview-title {
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
 }

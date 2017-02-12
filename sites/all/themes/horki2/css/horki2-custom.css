@@ -69,7 +69,7 @@
 #edit-custom-search-blocks-form-1--2 {
     width: 200px;
     height: 30px;
-    font-family: 'LiberationSans Regular', sans-serif;
+    font-family: 'LiberationSans', sans-serif;
 }
 
 #edit-custom-search-blocks-form-1--2::-webkit-input-placeholder,
@@ -95,7 +95,7 @@
 
 .block-16 .content {
     color: #671A1D;
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
 }
 
@@ -109,7 +109,7 @@
 
 .bel-currency-char {
     margin-right: 0.25em;
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
 }
 
@@ -210,7 +210,7 @@
 .main-menu li > a {
     display: inline-block;
     text-transform: uppercase;
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     color: #FFFFFF;
 }
@@ -426,8 +426,6 @@
     width: 345px;
 }
 
-
-
 /* sidebar banner #1 */
 .block-33 {
     display: block;
@@ -448,4 +446,49 @@
 .block-56 .block-inner {
     border: 1px solid #DBDBDB;
     padding: 20px;
+}
+
+
+/**
+ * Common Inner nodes styles
+ */
+
+.node .field-name-body p,
+.node .field-name-field-text p {    
+    margin: 0 50px 25px 50px;
+}
+
+.node .field-name-body img,
+.node .field-name-field-text img {
+    margin: 20px -50px 25px -50px;        
+}
+
+.node .text-signature {
+    margin: 0 50px 0 50px;
+}
+
+
+/**
+ * Custom Inner nodes styles
+ */
+
+/* company node */
+.node-company .rate-widget {
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+
+.node-company .rate-widget .item-list {
+    float: right;
+}
+
+.node-company .rate-widget .rate-info {
+    float: right;
+    text-align: right;
+}
+
+.node-company .group-info {
+    margin-left: 50px;
+    width: 538px;
 }

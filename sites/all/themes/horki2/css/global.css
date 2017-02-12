@@ -7,7 +7,7 @@
 
 body {
     font-size: 14px;
-    font-family: 'PTSans Regular', sans-serif;
+    font-family: 'PTSans', sans-serif;
     line-height: 1.3;
 }
 
@@ -48,7 +48,7 @@ a:hover {
     padding: 5px 1em 6px 1em;
     border-radius: 5px;
     text-align: center;
-    font-family: 'LiberationSans Regular', sans-serif;
+    font-family: 'LiberationSans', sans-serif;
     font-size: 1.05em;
     color: #FFFFFF;
 }
@@ -78,6 +78,21 @@ a:hover {
 .button-red a:active {
     background-color: #741E21;
     text-decoration: none;
+}
+
+/* rating icon styles */
+.rate-fivestar-btn-filled {
+    background: url('/sites/default/files/default_images/rating-icon.png') no-repeat 0 -14px;
+    width: 15px;
+    height: 14px;
+    margin-left: 2px;
+}
+
+.rate-fivestar-btn-empty {
+    background: url('/sites/default/files/default_images/rating-icon.png') no-repeat 0 -28px;
+    width: 15px;
+    height: 14px;
+    margin-left: 2px;
 }
 
 
@@ -190,7 +205,7 @@ a:hover {
 
 #page-title {
     margin-bottom: 20px;
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 2.5em;
     color: #671A1D;
@@ -199,7 +214,7 @@ a:hover {
 .block-title {
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-family: 'PTSans Caption Bold', sans-serif;
+    font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;
     color: #671A1D;
 }
@@ -213,7 +228,7 @@ ul.tabs li a {
     padding: 5px 1em 6px 1em;
     border-radius: 5px;
     text-align: center;
-    font-family: 'LiberationSans Regular', sans-serif;
+    font-family: 'LiberationSans', sans-serif;
     font-size: 1.05em;
     color: #FFFFFF;
     background-color: #000000;
@@ -295,7 +310,7 @@ ul.tabs li.active a {
 .block-media-grid .header-title {
     margin-right: 1em;
     text-transform: uppercase;
-    font-family: 'PTSans Caption Bold', sans-serif;
+    font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;    
     color: #671A1D;
 }
@@ -329,7 +344,7 @@ ul.tabs li.active a {
 }
 
 .block-media-grid .media-title {
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
 }
@@ -379,7 +394,7 @@ ul.tabs li.active a {
 
 .page-media-grid .media-title {
     margin-bottom: 20px;
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.5em;    
 }
@@ -399,7 +414,7 @@ ul.tabs li.active a {
 }
 
 .page-media-grid .media-label {
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;    
 }
 
@@ -441,13 +456,13 @@ ul.tabs li.active a {
 
 .page-filtered-table .views-exposed-form .views-exposed-widget label {
     margin-bottom: 10px;
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.15em;
 }
 
 .page-filtered-table .views-esposed-form .form-item {
-    font-family: 'LiberationSans Regular', sans-serif;
+    font-family: 'LiberationSans', sans-serif;
 }
 
 .page-filtered-table .views-exposed-form .form-text {
@@ -482,7 +497,7 @@ ul.tabs li.active a {
     margin-top: 0;
     text-align: center;
     text-shadow: none;
-    font-family: 'LiberationSans Regular', sans-serif;
+    font-family: 'LiberationSans', sans-serif;
     font-weight: normal;
     font-size: 1.05em;
     color: #FFFFFF;
@@ -507,7 +522,7 @@ ul.tabs li.active a {
 }
 
 .page-filtered-table .view-content thead {
-    font-family: 'PTSans Caption Regular', sans-serif;
+    font-family: 'PTSans Caption', sans-serif;
     color: #959595;
 }
 
@@ -528,7 +543,7 @@ ul.tabs li.active a {
 .page-filtered-table .view-content tbody td {
     vertical-align: middle;
     overflow: hidden;
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.15em;
 }
@@ -570,7 +585,7 @@ ul.tabs li.active a {
 
 .page-filtered-list .views-exposed-form .views-exposed-widget label {
     margin-bottom: 10px;
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.15em;
 }
@@ -584,7 +599,7 @@ ul.tabs li.active a {
 }
 
 .page-filtered-list .views-esposed-form .form-item {
-    font-family: 'LiberationSans Regular', sans-serif;
+    font-family: 'LiberationSans', sans-serif;
 }
 
 .page-filtered-list .views-exposed-form .form-text {
@@ -611,7 +626,7 @@ ul.tabs li.active a {
     margin-top: 0;
     text-align: center;
     text-shadow: none;
-    font-family: 'LiberationSans Regular', sans-serif;
+    font-family: 'LiberationSans', sans-serif;
     font-weight: normal;
     font-size: 1.05em;
     color: #FFFFFF;
@@ -647,7 +662,7 @@ ul.tabs li.active a {
 
 .page-filtered-list .filtered-list-title {
     margin-bottom: 20px;
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.5em;    
 }
@@ -710,7 +725,7 @@ ul.tabs li.active a {
 }
 
 .page-main-news .main-title a {
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 2em;
     color: #000000;
@@ -730,7 +745,7 @@ ul.tabs li.active a {
 .attachment-last-news .view-header {
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-family: 'PTSans Caption Bold', sans-serif;
+    font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;    
     color: #671A1D;
 }
@@ -751,13 +766,13 @@ ul.tabs li.active a {
 .attachment-last-news .last-date {
     float: left;
     margin-right: 0.5em;
-    font-family: 'PTSans Caption Bold', sans-serif;
+    font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;    
     color: #B5221C;
 }
 
 .attachment-last-news .last-title a {
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;    
     color: #000000;
 }
@@ -799,7 +814,7 @@ ul.tabs li.active a {
 .block-abvestki h3 {
     margin-top: 20px;
     margin-bottom: 10px;
-    font-family: 'PTSans Caption Bold', sans-serif;
+    font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;
     color: #B5221C;
 }
@@ -857,13 +872,13 @@ ul.tabs li.active a {
 }
 
 .block-last-comments .views-field-comment-body a {
-    font-family: 'PTSerif Regular', serif;
+    font-family: 'PTSerif', serif;
     font-size: 1.15em;
     color: #000000;    
 }
 
 .block-last-comments .views-field-title a {
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.15em;
 }
@@ -875,7 +890,7 @@ ul.tabs li.active a {
 
 /* abvestki page */
 .page-abvestki .view-header a {
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.15em;
 }
@@ -951,7 +966,7 @@ ul.tabs li.active a {
 
 /* companies page */
 .page-companies .view-header a {
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.15em;
 }
@@ -971,20 +986,6 @@ ul.tabs li.active a {
 
 .page-companies .filtered-list-statistics ul {
     margin: 0;
-}
-
-.page-companies .filtered-list-statistics .rate-fivestar-btn-filled {
-    background: url('/sites/default/files/default_images/rating-icon.png') no-repeat 0 -14px;
-    width: 15px;
-    height: 14px;
-    margin-left: 2px;
-}
-
-.page-companies .filtered-list-statistics .rate-fivestar-btn-empty {
-    background: url('/sites/default/files/default_images/rating-icon.png') no-repeat 0 -28px;
-    width: 15px;
-    height: 14px;
-    margin-left: 2px;
 }
 
 .page-companies .item-list .pager {
@@ -1037,13 +1038,13 @@ ul.tabs li.active a {
 .block-last-news .last-date {
     float: left;
     margin-right: 0.5em;
-    font-family: 'PTSans Caption Bold', sans-serif;
+    font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;    
     color: #B5221C;
 }
 
 .block-last-news .last-title a {
-    font-family: 'PTSans Bold', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: bold;    
     color: #000000;
 }
@@ -1058,9 +1059,57 @@ ul.tabs li.active a {
     display: none;
 }
 
+
 /**
- * Custom Inner nodes styles
+ * Common Inner nodes styles
  */
+
+.page-node div.tabs {
+    margin: 0 50px 20px 50px;
+}
+
+.node > .content {
+    position: relative;
+}
+
+.node > .submitted {
+    margin: 0 50px 30px 50px;
+    color: #8B9298;
+}
+
+.node .submitted img {
+    margin-right: 0.3em;
+    vertical-align: middle;
+}
+
+.node .submitted .delimiter {
+    margin: 0 0.3em;
+}
+
+.node .field-name-body,
+.node .field-name-field-text {
+    margin-bottom: 55px;
+}
+
+.node .field-name-body p,
+.node .field-name-field-text p {    
+    margin-bottom: 25px;
+    font-family: 'PTSerif', serif;
+    font-size: 1.2em;
+}
+
+.node .field-name-body img,
+.node .field-name-field-text img {
+    margin: 20px 0 25px 0;    
+    width: 100%;
+    max-width: 100%;
+}
+
+.node .text-signature {
+    font-family: 'PTSans Caption', sans-serif;
+    font-weight: bold;
+    color: #8B9298;
+}
 
 /* add comment block */
 .block-comment-form-block {
@@ -1075,7 +1124,48 @@ ul.tabs li.active a {
 .block-comment-form-block .title {
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-family: 'PTSans Caption Bold', sans-serif;
+    font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;
     color: #671A1D;    
+}
+
+
+/**
+ * Custom Inner nodes styles
+ */
+
+/* company node */
+.node-company .rate-widget {
+    margin-bottom: 10px;
+    width: 110px;
+}
+
+.node-company .rate-widget .item-list ul {
+    margin-bottom: 10px;
+}
+
+.node-company .rate-widget .rate-info {
+    font-size: 1em;
+    color: #671A1D;
+}
+
+.node-company .group-info {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.node-company .group-info .field {
+    margin-bottom: 5px;
+}
+
+.node-company .group-info .field-label {
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    margin-right: 0.25em;
+}
+
+.node-company .group-info .field-label-above .field-label,
+.node-company .group-info .field-label-above .field-items {
+    display: inline-block;
+    vertical-align: top;
 }
