@@ -1088,7 +1088,7 @@ ul.tabs li.active a {
 
 .node .field-name-body,
 .node .field-name-field-text {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
 .node .field-name-body p,
@@ -1110,6 +1110,62 @@ ul.tabs li.active a {
     font-weight: bold;
     color: #8B9298;
 }
+
+.node .group-actions {
+    overflow: auto;
+    margin-bottom: 30px;
+    border-top: 1px solid #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
+    padding: 20px 0;
+}
+
+.node .group-share {
+    width: 50%;
+    float: left;
+    overflow: auto;    
+    vertical-align: middle;
+}
+
+.node .group-share > h3 {
+    font-family: 'PTSans Caption', sans-serif;
+    float: left;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 25px;
+}
+
+.node .group-share > .field {
+    float: left;
+}
+
+.node .group-tags {
+    width: 50%;
+    float: left;
+    margin-top: 5px;
+    overflow: auto;    
+    vertical-align: middle;
+}
+
+.node .group-tags > h3 {
+    float: left;
+    margin-right: 25px;
+}
+
+.node .group-tags > .field {
+    float: left;
+}
+
+.node .group-tags .field-item {
+    margin-right: 1.5em;
+}
+
+.node .group-tags .field-item a {
+    font-family: 'PTSans Caption', sans-serif;
+    font-weight: bold;
+    color: #959595;
+}
+
+
 
 /* add comment block */
 .block-comment-form-block {
