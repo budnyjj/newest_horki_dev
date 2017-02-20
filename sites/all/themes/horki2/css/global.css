@@ -1165,8 +1165,6 @@ ul.tabs li.active a {
     color: #959595;
 }
 
-
-
 /* add comment block */
 .block-comment-form-block {
     margin-bottom: 20px;
@@ -1184,6 +1182,74 @@ ul.tabs li.active a {
     font-weight: bold;
     color: #671A1D;    
 }
+
+/* login to comment block */
+.block-28 {
+    margin-bottom: 20px;
+}
+
+.block-28 .block-inner {
+    border-top: 2px solid #000000;
+    padding: 25px 0;
+}
+
+.block-28 .content {
+    color: #8996A0;
+}
+
+/* comments block */
+.block-comments-block-block .views-row {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #DBDBDB;
+    padding-bottom: 45px;
+    position: relative;
+    overflow: auto;
+}
+
+.block-comments-block-block .views-row-last {
+    border-bottom: none;
+}
+
+.block-comments-block-block .comments-author-avatar {
+    float: left;
+    margin-right: 25px;
+}
+
+.block-comments-block-block .comments-statistics {
+    margin-bottom: 25px;
+}
+
+.block-comments-block-block .comments-author-name {
+    margin-right: 2em;    
+}
+
+.block-comments-block-block .comments-author-name a {
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    font-size: 1.05em;
+    color: #000000;
+}
+
+.block-comments-block-block .comments-author-name a:hover,
+.block-comments-block-block .comments-author-name a:active {
+    text-decoration: none;
+    color: #555555;
+}
+
+.block-comments-block-block .comments-created {
+    color: #8996A0;
+}
+
+.block-comments-block-block .rate-widget {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.block-comments-block-block .comments-body {
+    font-size: 1.05em;
+}
+
 
 
 /**
