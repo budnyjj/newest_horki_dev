@@ -1064,6 +1064,10 @@ ul.tabs li.active a {
  * Common Inner nodes styles
  */
 
+.page-node .region-content-inner {
+    margin-bottom: 50px;
+}
+
 .page-node div.tabs {
     margin: 0 50px 20px 50px;
 }
@@ -1199,20 +1203,147 @@ ul.tabs li.active a {
 
 /* comments block */
 .block-comments-block-block .views-row {
-    margin-bottom: 20px;
+    margin-bottom: -1px;
+    border-top: 1px solid #DBDBDB;
     border-bottom: 1px solid #DBDBDB;
-    padding-bottom: 45px;
+    padding: 20px 0 25px 95px;
     position: relative;
-    overflow: auto;
+}
+
+.block-comments-block-block .views-row-first {
+    padding-top: 0;
+    border-top: none;
 }
 
 .block-comments-block-block .views-row-last {
     border-bottom: none;
+    padding-bottom: 0;
+}
+
+.block-comments-block-block .comment-depth-1 {
+    margin-left: 5%;
+}
+
+.block-comments-block-block .comment-depth-2 {
+    margin-left: 10%;
+}
+
+.block-comments-block-block .comment-depth-3 {
+    margin-left: 15%;
+}
+
+.block-comments-block-block .comment-depth-4 {
+    margin-left: 20%;
+}
+
+.block-comments-block-block .comment-depth-5 {
+    margin-left: 25%;
+}
+
+.block-comments-block-block .comment-depth-6 {
+    margin-left: 27%;
+}
+
+.block-comments-block-block .comment-depth-7 {
+    margin-left: 29%;
+}
+
+.block-comments-block-block .comment-depth-8 {
+    margin-left: 31%;
+}
+
+.block-comments-block-block .comment-depth-9 {
+    margin-left: 33%;
+}
+
+.block-comments-block-block .comment-depth-10 {
+    margin-left: 35%;
+}
+
+.block-comments-block-block .comment-depth-11 {
+    margin-left: 37%;
+}
+
+.block-comments-block-block .comment-depth-12 {
+    margin-left: 39%;
+}
+
+.block-comments-block-block .comment-depth-13 {
+    margin-left: 41%;
+}
+
+.block-comments-block-block .comment-depth-14 {
+    margin-left: 43%;
+}
+
+.block-comments-block-block .comment-depth-15 {
+    margin-left: 45%;
+}
+
+.block-comments-block-block .comment-depth-16 {
+    margin-left: 47%;
+}
+
+.block-comments-block-block .comment-depth-17 {
+    margin-left: 49%;
+}
+
+.block-comments-block-block .comment-depth-18 {
+    margin-left: 51%;
+}
+
+.block-comments-block-block .comment-depth-19 {
+    margin-left: 53%;
+}
+
+.block-comments-block-block .comment-depth-20 {
+    margin-left: 55%;
+}
+
+.block-comments-block-block .comment-depth-21 {
+    margin-left: 57%;
+}
+
+.block-comments-block-block .comment-depth-22 {
+    margin-left: 59%;
+}
+
+.block-comments-block-block .comment-depth-23 {
+    margin-left: 61%;
+}
+
+.block-comments-block-block .comment-depth-24 {
+    margin-left: 63%;
+}
+
+.block-comments-block-block .comment-depth-25 {
+    margin-left: 65%;
+}
+
+.block-comments-block-block .comment-depth-26 {
+    margin-left: 67%;
+}
+
+.block-comments-block-block .comment-depth-27 {
+    margin-left: 69%;
+}
+
+.block-comments-block-block .comment-depth-28 {
+    margin-left: 71%;
+}
+
+.block-comments-block-block .comment-depth-29 {
+    margin-left: 73%;
+}
+
+.block-comments-block-block .comment-depth-30 {
+    margin-left: 75%;
 }
 
 .block-comments-block-block .comments-author-avatar {
-    float: left;
-    margin-right: 25px;
+    position: absolute;
+    top: 20px;
+    left: 0;
 }
 
 .block-comments-block-block .comments-statistics {
@@ -1242,12 +1373,44 @@ ul.tabs li.active a {
 
 .block-comments-block-block .rate-widget {
     position: absolute;
-    top: 0;
+    top: 20px;
     right: 0;
+}
+
+.block-comments-block-block .rate-number-up-down-btn-up {
+    background: url('/sites/default/files/default_images/rate-up.png');
+    width: 17px;
+    height: 17px;
+    margin: 0;
+}
+
+.block-comments-block-block .rate-number-up-down-btn-down {
+    background: url('/sites/default/files/default_images/rate-down.png');
+    width: 18px;
+    height: 17px;
+    margin: 0;
+}
+
+.block-comments-block-block .rate-number-up-down-rating {
+    margin: 0 0.5em;
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    color: #B5221C;
 }
 
 .block-comments-block-block .comments-body {
     font-size: 1.05em;
+    margin-bottom: 5px;
+}
+
+.block-comments-block-block .comments-actions {
+    text-align: right;
+}
+
+.block-comments-block-block .comments-actions a {
+    margin-left: 0.5em;
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;    
 }
 
 
