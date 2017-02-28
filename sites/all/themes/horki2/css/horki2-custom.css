@@ -453,6 +453,14 @@
  * Common Inner nodes styles
  */
 
+.page-node div.tabs {
+    margin: 0 50px 20px 50px;
+}
+
+.node > .submitted {
+    margin: 0 50px 30px 50px;
+}
+
 .node .field-name-body p,
 .node .field-name-field-text p {    
     margin: 0 50px 25px 50px;
@@ -460,11 +468,20 @@
 
 .node .field-name-body img,
 .node .field-name-field-text img {
-    margin: 20px -50px 25px -50px;        
+    /* margin: 20px -50px 25px -50px;         */
 }
 
 .node .text-signature {
     margin: 0 50px 0 50px;
+}
+
+.node .group-share {
+    width: 50%;
+    margin-right: 0;
+}
+
+.node .group-tags {
+    width: 50%;
 }
 
 

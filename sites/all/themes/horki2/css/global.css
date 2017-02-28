@@ -41,16 +41,25 @@ a:hover {
 .more-link a,
 .button-black a,
 .button-red a,
-.item-list .pager-next a {
-    display: block;
+.item-list .pager-next a,
+input[type="submit"] {
     width: 120px;
-    margin: 0 auto 8px auto;
     padding: 5px 1em 6px 1em;
+    border-width: 0;
     border-radius: 5px;
     text-align: center;
+    text-shadow: none;
     font-family: 'LiberationSans', sans-serif;
     font-size: 1.05em;
     color: #FFFFFF;
+}
+
+.more-link a,
+.button-black a,
+.button-red a,
+.item-list .pager-next a {
+    display: block;
+    margin: 0 auto 8px auto;
 }
 
 .more-link a,
@@ -59,7 +68,9 @@ a:hover {
     background-color: #000000;
 }
 
-.button-red a {
+.button-red a,
+input[type="submit"] {
+    background: none;
     background-color: #671A1D;
 }
 
@@ -75,7 +86,9 @@ a:hover {
 }
 
 .button-red a:hover,
-.button-red a:active {
+.button-red a:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
     background-color: #741E21;
     text-decoration: none;
 }
@@ -1069,7 +1082,7 @@ ul.tabs li.active a {
 }
 
 .page-node div.tabs {
-    margin: 0 50px 20px 50px;
+    margin-bottom: 20px;
 }
 
 .node > .content {
@@ -1077,7 +1090,7 @@ ul.tabs li.active a {
 }
 
 .node > .submitted {
-    margin: 0 50px 30px 50px;
+    margin-bottom: 30px;
     color: #8B9298;
 }
 
@@ -1104,9 +1117,31 @@ ul.tabs li.active a {
 
 .node .field-name-body img,
 .node .field-name-field-text img {
-    margin: 20px 0 25px 0;    
     width: 100%;
     max-width: 100%;
+}
+
+.node .field-name-body .caption,
+.node .field-name-field-text .caption {
+    display: block;
+    margin-left: -50px;
+    width: 894px;
+    min-height: 500px;
+    background-color: #F3F3F3;
+}
+
+.node .field-name-body .caption img,
+.node .field-name-field-text .caption img {
+    max-width: 100%;
+}
+
+.node .field-name-body .caption p,
+.node .field-name-field-text .caption p {
+    margin: 25px 0 35px 0;
+    text-align: center;
+    font-family: verdana, sans-serif;
+    font-size: 0.85em;
+    color: #959595;
 }
 
 .node .text-signature {
@@ -1120,13 +1155,13 @@ ul.tabs li.active a {
     margin-bottom: 30px;
     border-top: 1px solid #DBDBDB;
     border-bottom: 1px solid #DBDBDB;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .node .group-share {
-    width: 50%;
     float: left;
-    overflow: auto;    
+    overflow: auto; 
+    margin: 0 50px 0 0;
     vertical-align: middle;
 }
 
@@ -1134,7 +1169,7 @@ ul.tabs li.active a {
     font-family: 'PTSans Caption', sans-serif;
     float: left;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-right: 25px;
 }
 
@@ -1143,9 +1178,8 @@ ul.tabs li.active a {
 }
 
 .node .group-tags {
-    width: 50%;
     float: left;
-    margin-top: 5px;
+    margin: 15px 0 10px 0;
     overflow: auto;    
     vertical-align: middle;
 }
@@ -1160,6 +1194,7 @@ ul.tabs li.active a {
 }
 
 .node .group-tags .field-item {
+    float: left;
     margin-right: 1.5em;
 }
 
@@ -1170,13 +1205,9 @@ ul.tabs li.active a {
 }
 
 /* add comment block */
-.block-comment-form-block {
-    margin-bottom: 20px;
-}
-
 .block-comment-form-block .content {
-    border-top: 2px solid #000000;
     padding: 25px 0;
+    border-top: 2px solid #000000;
 }
 
 .block-comment-form-block .title {
@@ -1187,11 +1218,49 @@ ul.tabs li.active a {
     color: #671A1D;    
 }
 
-/* login to comment block */
-.block-28 {
-    margin-bottom: 20px;
+.comment-form #edit-author--2 {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
+.comment-form .text-format-wrapper {
+    margin-bottom: 10px;
+}
+
+.comment-form .text-format-wrapper .grippie {
+    margin-bottom: 10px;
+}
+
+.comment-form .text-format-wrapper .counter {
+    margin-bottom: 35px;
+    color: #8896A0;
+}
+
+.comment-form .text-format-wrapper .filter-wrapper {
+    display: none;
+}
+
+.comment-form .text-format-wrapper .description {
+    margin-top: 0;
+}
+
+.comment-form .form-item-notify {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #8896A0;
+}
+
+.comment-form #edit-notify-type {
+    margin-top: -20px;
+    margin-bottom: 30px;
+    color: #8896A0;
+}
+
+.comment-form .form-actions {
+    margin: 0;
+}
+
+/* login to comment block */
 .block-28 .block-inner {
     border-top: 2px solid #000000;
     padding: 25px 0;
@@ -1202,7 +1271,11 @@ ul.tabs li.active a {
 }
 
 /* comments block */
-.block-comments-block-block .views-row {
+.block-comments-block-article {
+    margin-bottom: 20px;
+}
+
+.block-article-comments .views-row {
     margin-bottom: -1px;
     border-top: 1px solid #DBDBDB;
     border-bottom: 1px solid #DBDBDB;
@@ -1210,204 +1283,204 @@ ul.tabs li.active a {
     position: relative;
 }
 
-.block-comments-block-block .views-row-first {
-    padding-top: 0;
+.block-article-comments .views-row-first {
     border-top: none;
 }
 
-.block-comments-block-block .views-row-last {
+.block-article-comments .views-row-last {
     border-bottom: none;
     padding-bottom: 0;
 }
 
-.block-comments-block-block .comment-depth-1 {
+.block-article-comments .comment-depth-1 {
     margin-left: 5%;
 }
 
-.block-comments-block-block .comment-depth-2 {
+.block-article-comments .comment-depth-2 {
     margin-left: 10%;
 }
 
-.block-comments-block-block .comment-depth-3 {
+.block-article-comments .comment-depth-3 {
     margin-left: 15%;
 }
 
-.block-comments-block-block .comment-depth-4 {
+.block-article-comments .comment-depth-4 {
     margin-left: 20%;
 }
 
-.block-comments-block-block .comment-depth-5 {
+.block-article-comments .comment-depth-5 {
     margin-left: 25%;
 }
 
-.block-comments-block-block .comment-depth-6 {
+.block-article-comments .comment-depth-6 {
     margin-left: 27%;
 }
 
-.block-comments-block-block .comment-depth-7 {
+.block-article-comments .comment-depth-7 {
     margin-left: 29%;
 }
 
-.block-comments-block-block .comment-depth-8 {
+.block-article-comments .comment-depth-8 {
     margin-left: 31%;
 }
 
-.block-comments-block-block .comment-depth-9 {
+.block-article-comments .comment-depth-9 {
     margin-left: 33%;
 }
 
-.block-comments-block-block .comment-depth-10 {
+.block-article-comments .comment-depth-10 {
     margin-left: 35%;
 }
 
-.block-comments-block-block .comment-depth-11 {
+.block-article-comments .comment-depth-11 {
     margin-left: 37%;
 }
 
-.block-comments-block-block .comment-depth-12 {
+.block-article-comments .comment-depth-12 {
     margin-left: 39%;
 }
 
-.block-comments-block-block .comment-depth-13 {
+.block-article-comments .comment-depth-13 {
     margin-left: 41%;
 }
 
-.block-comments-block-block .comment-depth-14 {
+.block-article-comments .comment-depth-14 {
     margin-left: 43%;
 }
 
-.block-comments-block-block .comment-depth-15 {
+.block-article-comments .comment-depth-15 {
     margin-left: 45%;
 }
 
-.block-comments-block-block .comment-depth-16 {
+.block-article-comments .comment-depth-16 {
     margin-left: 47%;
 }
 
-.block-comments-block-block .comment-depth-17 {
+.block-article-comments .comment-depth-17 {
     margin-left: 49%;
 }
 
-.block-comments-block-block .comment-depth-18 {
+.block-article-comments .comment-depth-18 {
     margin-left: 51%;
 }
 
-.block-comments-block-block .comment-depth-19 {
+.block-article-comments .comment-depth-19 {
     margin-left: 53%;
 }
 
-.block-comments-block-block .comment-depth-20 {
+.block-article-comments .comment-depth-20 {
     margin-left: 55%;
 }
 
-.block-comments-block-block .comment-depth-21 {
+.block-article-comments .comment-depth-21 {
     margin-left: 57%;
 }
 
-.block-comments-block-block .comment-depth-22 {
+.block-article-comments .comment-depth-22 {
     margin-left: 59%;
 }
 
-.block-comments-block-block .comment-depth-23 {
+.block-article-comments .comment-depth-23 {
     margin-left: 61%;
 }
 
-.block-comments-block-block .comment-depth-24 {
+.block-article-comments .comment-depth-24 {
     margin-left: 63%;
 }
 
-.block-comments-block-block .comment-depth-25 {
+.block-article-comments .comment-depth-25 {
     margin-left: 65%;
 }
 
-.block-comments-block-block .comment-depth-26 {
+.block-article-comments .comment-depth-26 {
     margin-left: 67%;
 }
 
-.block-comments-block-block .comment-depth-27 {
+.block-article-comments .comment-depth-27 {
     margin-left: 69%;
 }
 
-.block-comments-block-block .comment-depth-28 {
+.block-article-comments .comment-depth-28 {
     margin-left: 71%;
 }
 
-.block-comments-block-block .comment-depth-29 {
+.block-article-comments .comment-depth-29 {
     margin-left: 73%;
 }
 
-.block-comments-block-block .comment-depth-30 {
+.block-article-comments .comment-depth-30 {
     margin-left: 75%;
 }
 
-.block-comments-block-block .comments-author-avatar {
+.block-article-comments .comment-author-avatar {
     position: absolute;
     top: 20px;
     left: 0;
 }
 
-.block-comments-block-block .comments-statistics {
+.block-article-comments .comment-statistics {
+    margin-right: 100px;
     margin-bottom: 25px;
 }
 
-.block-comments-block-block .comments-author-name {
+.block-article-comments .comment-author-name {
     margin-right: 2em;    
 }
 
-.block-comments-block-block .comments-author-name a {
+.block-article-comments .comment-author-name a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.05em;
     color: #000000;
 }
 
-.block-comments-block-block .comments-author-name a:hover,
-.block-comments-block-block .comments-author-name a:active {
+.block-article-comments .comment-author-name a:hover,
+.block-article-comments .comment-author-name a:active {
     text-decoration: none;
     color: #555555;
 }
 
-.block-comments-block-block .comments-created {
+.block-article-comments .comment-created {
     color: #8996A0;
 }
 
-.block-comments-block-block .rate-widget {
+.block-article-comments .rate-widget {
     position: absolute;
     top: 20px;
     right: 0;
 }
 
-.block-comments-block-block .rate-number-up-down-btn-up {
+.block-article-comments .rate-number-up-down-btn-up {
     background: url('/sites/default/files/default_images/rate-up.png');
     width: 17px;
     height: 17px;
     margin: 0;
 }
 
-.block-comments-block-block .rate-number-up-down-btn-down {
+.block-article-comments .rate-number-up-down-btn-down {
     background: url('/sites/default/files/default_images/rate-down.png');
     width: 18px;
     height: 17px;
     margin: 0;
 }
 
-.block-comments-block-block .rate-number-up-down-rating {
+.block-article-comments .rate-number-up-down-rating {
     margin: 0 0.5em;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
     color: #B5221C;
 }
 
-.block-comments-block-block .comments-body {
+.block-article-comments .comment-body {
     font-size: 1.05em;
     margin-bottom: 5px;
 }
 
-.block-comments-block-block .comments-actions {
-    text-align: right;
+.block-article-comments .comment-actions {
+    float: right;
 }
 
-.block-comments-block-block .comments-actions a {
+.block-article-comments .comment-actions a {
     margin-left: 0.5em;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;    
