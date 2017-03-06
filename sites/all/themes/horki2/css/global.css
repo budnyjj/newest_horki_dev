@@ -221,6 +221,7 @@ input[type="submit"]:active {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 2.5em;
+    line-height: 115%;
     color: #671A1D;
 }
 
@@ -1113,11 +1114,11 @@ ul.tabs li.active a {
     margin-bottom: 25px;
     font-family: 'PTSerif', serif;
     font-size: 1.2em;
+    line-height: 150%;
 }
 
 .node .field-name-body img,
 .node .field-name-field-text img {
-    width: 100%;
     max-width: 100%;
 }
 
@@ -1140,8 +1141,24 @@ ul.tabs li.active a {
     margin: 25px 0 35px 0;
     text-align: center;
     font-family: verdana, sans-serif;
-    font-size: 0.85em;
+    font-size: 0.7em;
+    font-weight: normal;
     color: #959595;
+}
+
+.node .text-chapter {
+    margin: 75px 0 30px 0;
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.node .text-accent {
+    margin: 65px 20px;
+    font-size: 1.45em;
+    line-height: 150%;
+    color: #671A1D;
 }
 
 .node .text-signature {
@@ -1250,10 +1267,18 @@ ul.tabs li.active a {
     color: #8896A0;
 }
 
+.comment-form .form-item-notify input {
+    margin-right: 0.25em;
+}
+
 .comment-form #edit-notify-type {
     margin-top: -20px;
     margin-bottom: 30px;
     color: #8896A0;
+}
+
+.comment-form #edit-notify-type input {
+    margin-right: 0.15em;
 }
 
 .comment-form .form-actions {

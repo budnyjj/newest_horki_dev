@@ -471,6 +471,14 @@
     /* margin: 20px -50px 25px -50px;         */
 }
 
+.node .text-chapter {
+    margin: 75px 50px 30px 50px;
+}
+
+.node .text-accent {
+    margin: 65px 120px;
+}
+
 .node .text-signature {
     margin: 0 50px 0 50px;
 }
