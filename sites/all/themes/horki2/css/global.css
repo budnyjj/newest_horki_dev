@@ -1079,7 +1079,7 @@ ul.tabs li.active a {
  */
 
 .page-node .region-content-inner {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .page-node div.tabs {
@@ -1167,12 +1167,19 @@ ul.tabs li.active a {
     color: #8B9298;
 }
 
+.node .field-name-field-pdf {
+    margin-bottom: 35px;
+}
+
+.node .poll {
+    margin-bottom: 35px;
+}
+
 .node .group-actions {
     overflow: auto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border-top: 1px solid #DBDBDB;
-    border-bottom: 1px solid #DBDBDB;
-    padding: 10px 0;
+    padding-top: 10px;
 }
 
 .node .group-share {
@@ -1219,6 +1226,19 @@ ul.tabs li.active a {
     font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;
     color: #959595;
+}
+
+.node .videoplayer {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+}
+
+/* similar terms block */
+.block-similarterms-block {
+    border-top: 1px solid #DBDBDB;
+    padding-top: 30px;
 }
 
 /* add comment block */
@@ -1552,3 +1572,71 @@ ul.tabs li.active a {
     display: inline-block;
     vertical-align: top;
 }
+
+/* local solution node */
+.node-local-solution .group-info {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.node-local-solution .group-info .field {
+    margin-bottom: 5px;
+}
+
+.node-local-solution .group-info .field-label {
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    margin-right: 0.25em;
+}
+
+.node-local-solution .group-info .field-label-above .field-label,
+.node-local-solution .group-info .field-label-above .field-items {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* ads node */
+.node-ads .field-name-field-ads-photo {
+    margin-bottom: 25px;
+}
+
+.node-ads .field-name-field-ads-photo img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.node-ads .field-name-field-text {
+    margin-bottom: 25px;
+}
+
+.node-ads .group-info {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+}
+
+.node-ads .group-info .field {
+    margin-bottom: 5px;
+}
+
+.node-ads .group-info .field-label {
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    margin-right: 0.25em;
+}
+
+.node-ads .group-info .field-label-above .field-label,
+.node-ads .group-info .field-label-above .field-items {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* similar ads block */
+.block-similar-ads-block {
+    margin-bottom: 20px;
+}
+
+.block-similar-ads-block .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+

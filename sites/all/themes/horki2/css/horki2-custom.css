@@ -517,3 +517,19 @@
     margin-left: 50px;
     width: 538px;
 }
+
+.node .videoplayer {
+    height: 635px;    
+}
+
+/* local solution node */
+.node-local-solution .group-info {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* ads node */
+.node-ads .group-info {
+    margin-left: 50px;
+    margin-right: 50px;
+}
