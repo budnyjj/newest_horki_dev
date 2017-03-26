@@ -461,26 +461,49 @@
     margin: 0 50px 30px 50px;
 }
 
-.node .field-name-body p,
-.node .field-name-field-text p {    
-    margin: 0 50px 25px 50px;
+.node .field-name-body,
+.node .field-name-field-text {    
+    margin: 0 50px 50px 50px;
 }
 
 .node .field-name-body img,
-.node .field-name-field-text img {
-    /* margin: 20px -50px 25px -50px;         */
+.node .field-name-body iframe,
+.node .field-name-field-text img,
+.node .field-name-field-text iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.node .field-name-body .caption,
+.node .field-name-field-text .caption {
+    display: block;    
+    margin-left: -50px;
+    width: 894px;
+    background-color: #F3F3F3;
+}
+
+.node .field-name-body .caption p,
+.node .field-name-field-text .caption p {
+    padding: 45px 120px 0 120px;
+    background-color: #FFFFFF;
+}
+
+.node .field-name-body table,
+.node .field-name-field-text table {
+    margin-left: -50px;
+    width: 894px;
 }
 
 .node .text-chapter {
-    margin: 75px 50px 30px 50px;
+    margin: 75px 0 30px 0;
 }
 
 .node .text-accent {
-    margin: 65px 120px;
+    margin: 65px 70px;
 }
 
-.node .text-signature {
-    margin: 0 50px 0 50px;
+.node .field-name-field-author {
+    margin: -25px 50px 50px 50px;
 }
 
 .node .group-share {

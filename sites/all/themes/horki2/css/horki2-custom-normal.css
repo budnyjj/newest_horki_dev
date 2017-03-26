@@ -136,3 +136,17 @@
 .block-news-by-regions-block-5 {
     margin-bottom: 0;
 }
+
+/**
+ * Common inner nodes styles
+ */
+
+.system-content .node .field-name-body .caption,
+.system-content .node .field-name-field-text .caption {
+    width: 1200px;
+}
+
+.system-content .node .field-name-body table,
+.system-content .node .field-name-field-text table {
+    width: 1200px;
+}
