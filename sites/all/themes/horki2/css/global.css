@@ -1671,3 +1671,64 @@ ul.tabs li.active a {
     padding: 20px;
 }
 
+/* main davedka node */
+.context-davedkahtml #page-title,
+.context-davedkahtml .field-name-field-text {
+    display: none;
+}
+
+/* davedka block*/
+.block-davedka {
+    margin: 0 auto;
+}
+
+.block-davedka .quicktabs-tabs {
+    margin: 15px auto 35px auto;    
+    max-width: 330px;
+}
+
+.block-davedka .quicktabs-tabs li {
+    display: inline-block;
+    margin: 10px 5px 10px 10px;
+    padding: 0;
+    text-align: center;
+}
+
+.block-davedka .quicktabs-tabs li a {
+    padding: 5px 1.2em 6px 1.2em;
+    border-radius: 5px;
+    font-family: 'PTSans Caption', sans-serif;
+    font-size: 1.05em;
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+.block-davedka .quicktabs-tabs li a:hover,
+.block-davedka .quicktabs-tabs li.active a {
+    background-color: #959595;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.block-davedka .view-daviedka .views-row {    
+    float: left;
+    width: 149px; /* 894/6 */
+    height: 190px;
+    margin-bottom: 35px;
+}
+
+.block-davedka .views-field-field-pics {    
+    margin-bottom: 25px;
+    text-align: center;    
+}
+
+.block-davedka .views-field-field-daviedka-punkt-menu {    
+    margin: 0 15px;
+    text-align: center;
+}
+
+.block-davedka .views-field-field-daviedka-punkt-menu a {
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    color: #959595;
+}    

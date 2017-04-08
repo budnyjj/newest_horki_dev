@@ -556,3 +556,17 @@
     margin-left: 50px;
     margin-right: 50px;
 }
+
+/* main davedka node */
+.block-davedka {
+    margin-bottom: 15px;
+}
+
+.block-davedka .quicktabs-tabs {
+    margin-top: 5px;    
+}
+
+.block-davedka .view-daviedka {
+    width: 894px;
+    margin: 0 auto;
+}
