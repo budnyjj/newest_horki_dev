@@ -11,8 +11,9 @@
 }
 
 .jcarousel-skin-dev .jcarousel-container-horizontal {
-    width: 560px;
-    padding: 20px 40px;
+    width: 600px;
+    padding: 20px 45px;
+    margin: 0 auto;
 }
 
 .jcarousel-skin-dev .jcarousel-container-vertical {
@@ -26,7 +27,7 @@
 }
 
 .jcarousel-skin-dev .jcarousel-clip-horizontal {
-    width:  560px;
+    width:  600px;
     height: 75px;
 }
 
@@ -41,8 +42,8 @@
 }
 
 .jcarousel-skin-dev .jcarousel-item-horizontal {
-	margin-left: 0;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .jcarousel-skin-dev .jcarousel-direction-rtl .jcarousel-item-horizontal {

@@ -1146,25 +1146,78 @@ ul.tabs li.active a {
 }
 
 .node .field-name-body table,
-.node .field-name-field-text table {
+.node .field-name-field-text table {    
     margin-bottom: 25px;
+    width: 100%;
 }
 
-.node .field-name-body table td,
-.node .field-name-field-text table td,
-.node .field-name-body table th,
-.node .field-name-field-text table th {
-    padding: 10px 2em 0 0;
-}
-
-.node .field-name-body table p,
-.node .field-name-field-text table p {
+.node .field-name-body thead,
+.node .field-name-field-text thead {
     font-family: 'PTSans', sans-serif;
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 1.15em;
+    background-color: #DBDBDB;
+    color: #4D4D4D;   
 }
 
-.node .field-name-body .text-chapter,
-.node .field-name-field-text .text-chapter {
+.node .field-name-body th,
+.node .field-name-field-text th {
+    padding: 20px 10px;
+    vertical-align: middle;
+}
+
+.node .field-name-body th:first-child,
+.node .field-name-field-text th:first-child {
+    padding-left: 40px;
+}
+
+.node .field-name-body th:last-child,
+.node .field-name-field-text th:last-child {
+    padding-right: 40px;
+}
+
+.node .field-name-body tbody,
+.node .field-name-field-text tbody {
+    font-family: 'PTSans Caption', sans-serif;
+    background-color: #F9F9F9;
+    color: #555555;    
+}    
+
+.node .field-name-body tbody p,
+.node .field-name-field-text tbody p {
+    font-size: 1em;
+    font-family: 'PTSans Caption', sans-serif;
+}
+
+.node .field-name-body td,
+.node .field-name-field-text td {
+    border-bottom: 1px dashed #DBDBDB;
+    padding: 10px;
+}
+
+.node .field-name-body tr:first-child td,
+.node .field-name-field-text tr:first-child td {
+    padding-top: 20px;
+}
+
+.node .field-name-body tr:last-child td,
+.node .field-name-field-text tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 20px
+}
+
+.node .field-name-body td:first-child,
+.node .field-name-field-text td:first-child {
+    padding-left: 40px;
+}
+
+.node .field-name-body td:last-child,
+.node .field-name-field-text td:last-child {
+    padding-right: 40px;
+}
+
+.node .text-chapter,
+.node .text-chapter {
     margin: 75px 0 30px 0;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
@@ -1172,18 +1225,19 @@ ul.tabs li.active a {
     text-transform: uppercase;
 }
 
-.node .field-name-body .text-accent,
-.node .field-name-field-text .text-accent {
+.node .text-accent,
+.node .text-accent {
     margin: 65px 20px;
+    text-align: center;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
-    font-size: 1.45em;
+    font-size: 1.4em;
     line-height: 150%;
     color: #671A1D;
 }
 
-.node .field-name-body .text-signature,
-.node .field-name-field-text .text-signature {
+.node .text-signature,
+.node .text-signature {
     font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;
     color: #8B9298;
@@ -1198,6 +1252,10 @@ ul.tabs li.active a {
 
 .node .field-name-field-pdf {
     margin-bottom: 35px;
+}
+
+.node .field-name-field-photos {
+    margin-bottom: 25px;
 }
 
 .node .poll {

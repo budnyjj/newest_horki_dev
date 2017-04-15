@@ -488,18 +488,12 @@
     background-color: #FFFFFF;
 }
 
-.node .field-name-body table,
-.node .field-name-field-text table {
-    margin-left: -50px;
-    width: 894px;
-}
-
 .node .text-chapter {
     margin: 75px 0 30px 0;
 }
 
 .node .text-accent {
-    margin: 65px 70px;
+    margin: 65px 100px;
 }
 
 .node .field-name-field-author {

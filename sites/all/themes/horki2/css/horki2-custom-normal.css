@@ -145,8 +145,3 @@
 .system-content .node .field-name-field-text .caption {
     width: 1200px;
 }
-
-.system-content .node .field-name-body table,
-.system-content .node .field-name-field-text table {
-    width: 1200px;
-}
