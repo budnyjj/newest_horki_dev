@@ -4,6 +4,11 @@
  * General styles
  */
 
+/* back-to-top button */
+#back-top a {
+    display: block;
+}
+
 
 /*
  * General Header Banner styles
@@ -190,6 +195,10 @@
     display: none;
 }
 
+#mobile-navigation-menus {
+    display: none;
+}
+
 /**
  * General Menu styles
  */
@@ -212,7 +221,16 @@
     text-transform: uppercase;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
+    letter-spacing: 0.8px;
     color: #FFFFFF;
+}
+
+.main-menu li.first > a {
+    padding-left: 0;
+}
+
+.main-menu li.last > a {
+    padding-right: 0;
 }
 
 .main-menu li > a:hover,
@@ -371,28 +389,6 @@
     margin-bottom: 15px;
 }
 
-/* sidebar banner #1 */
-.block-42 {
-    display: block;
-    margin-bottom: 20px;
-}
-
-.block-42 .block-inner {
-    border: 1px solid #DBDBDB;
-    padding: 20px;
-}
-
-/* sidebar banner #2 */
-.block-41 {
-    display: block;
-    margin-bottom: 20px;
-}
-
-.block-41 .block-inner {
-    border: 1px solid #DBDBDB;
-    padding: 20px;
-}
-
 
 /**
  * Custom Inner views styles
@@ -426,28 +422,6 @@
     width: 345px;
 }
 
-/* sidebar banner #1 */
-.block-33 {
-    display: block;
-    margin-bottom: 20px;
-}
-
-.block-33 .block-inner {
-    border: 1px solid #DBDBDB;
-    padding: 20px;
-}
-
-/* sidebar banner #2 */
-.block-56 {
-    display: block;
-    margin-bottom: 20px;
-}
-
-.block-56 .block-inner {
-    border: 1px solid #DBDBDB;
-    padding: 20px;
-}
-
 
 /**
  * Common Inner nodes styles
@@ -466,26 +440,28 @@
     margin: 0 50px 50px 50px;
 }
 
-.node .field-name-body img,
-.node .field-name-body iframe,
-.node .field-name-field-text img,
-.node .field-name-field-text iframe {
-    display: block;
-    margin: 0 auto;
+.node .field-name-body ol,
+.node .field-name-field-text ol,
+.node .field-name-body ul,
+.node .field-name-field-text ul {
+    list-style-position: outside;
 }
 
+.node .field-name-body picture,
 .node .field-name-body .caption,
+.node .field-name-field-text picture,
 .node .field-name-field-text .caption {
-    display: block;    
     margin-left: -50px;
-    width: 894px;
-    background-color: #F3F3F3;
+}
+
+.node .field-name-body picture .caption,
+.node .field-name-field-text picture .caption {
+    margin-left: 0;
 }
 
 .node .field-name-body .caption p,
 .node .field-name-field-text .caption p {
     padding: 45px 120px 0 120px;
-    background-color: #FFFFFF;
 }
 
 .node .text-chapter {

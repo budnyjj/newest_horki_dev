@@ -10,14 +10,6 @@
   // Execute mobile-navigation construction with the settings on mobile_navigation.
   Drupal.behaviors.mobile_navigation = {
     attach: function(context) {
-      /*********** REMOVE THIS ***********/
-      $("body").prepend("<div id='debugInfo'></div>");
-      $("#debugInfo").css({
-        position : "fixed",
-        right : "50px",
-        top : "50px"
-      });
-      /*******************************/
       /******** Move mobile navigation menus to the body directly. *********/
       $("#mobile-navigation-menus").appendTo("body");
       /******** Setting *******/

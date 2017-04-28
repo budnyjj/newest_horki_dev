@@ -27,18 +27,18 @@ function horki2_preprocess_node(&$variables) {
   $query = db_select('jstats_node', 'jn')
     ->fields('jn', array('recentcount'))
     ->condition('jn.nid', $variables['nid'], '=');
-  $views_count = $query->execute()->fetchField();
+  $views_count = intval($query->execute()->fetchField());
   $views_icon = '<img src="/sites/default/files/default_images/view-icon.png" />';
   $variables['node_views_cntr'] = '<span class="views-count">' . $views_icon . $views_count . '</span>';
 
   /* Comments counter */
-  $comments_count = 0;	
+  $comments_count = 0;
   if (isset($variables['comment_count'])) {
     $comments_count = $variables['comment_count'];
   }
-  $comments_icon = '<img src="/sites/default/files/default_images/comment-icon.png" />';
-	
+  $comments_icon = '<img src="/sites/default/files/default_images/comment-icon.png" />';	
   $variables['node_comments_cntr'] = '<span class="comments-count">' . $comments_icon . $comments_count . '</span>';
+  
 
   /* Correct ads taxonomy links */
   $content = &$variables['content'];

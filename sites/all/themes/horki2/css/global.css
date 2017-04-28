@@ -36,14 +36,13 @@ a:hover {
   margin-right: -15px;
 }
 
-
 /* button styles */
 .more-link a,
 .button-black a,
 .button-red a,
 .item-list .pager-next a,
 input[type="submit"] {
-    width: 120px;
+    min-width: 120px;
     padding: 5px 1em 6px 1em;
     border-width: 0;
     border-radius: 5px;
@@ -60,6 +59,7 @@ input[type="submit"] {
 .item-list .pager-next a {
     display: block;
     margin: 0 auto 8px auto;
+    width: 120px;
 }
 
 .more-link a,
@@ -106,6 +106,11 @@ input[type="submit"]:active {
     width: 15px;
     height: 14px;
     margin-left: 2px;
+}
+
+/* back-to-top button */
+#back-top a {
+    display: none;
 }
 
 
@@ -808,8 +813,14 @@ ul.tabs li.active a {
 
 /* sidebar banner #1 */
 .block-42 {
-    display: none;
+    margin-bottom: 20px;
 }
+
+.block-42 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
 
 /* sidebar abvestki */
 .block-ads-block-1 {
@@ -844,7 +855,12 @@ ul.tabs li.active a {
 
 /* sidebar banner #2 */
 .block-41 {
-    display: none;
+    margin-bottom: 20px;
+}
+
+.block-41 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
 }
 
 /* sidebar last comments */
@@ -1016,11 +1032,14 @@ ul.tabs li.active a {
     width: 200px;
 }
 
-
-
 /* sidebar banner #1 */
 .block-33 {
-    display: none;
+    margin-bottom: 20px;
+}
+
+.block-33 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
 }
 
 /* last news */
@@ -1070,7 +1089,12 @@ ul.tabs li.active a {
 
 /* sidebar banner #2 */
 .block-56 {
-    display: none;
+    margin-bottom: 20px;
+}
+
+.block-56 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
 }
 
 
@@ -1111,27 +1135,52 @@ ul.tabs li.active a {
 }
 
 .node .field-name-body p,
-.node .field-name-field-text p {    
+.node .field-name-field-text p,
+.node .field-name-body ol,
+.node .field-name-field-text ol,
+.node .field-name-body ul,
+.node .field-name-field-text ul {
     margin-bottom: 25px;
     font-family: 'PTSerif', serif;
     font-size: 1.2em;
     line-height: 150%;
 }
 
+.node .field-name-body ol,
+.node .field-name-field-text ol,
+.node .field-name-body ul,
+.node .field-name-field-text ul {
+    list-style-position: inside;
+}
+
+.node .field-name-body li,
+.node .field-name-field-text li {
+    margin-bottom: 25px;
+}
+
+
+.node .field-name-body img,
+.node .field-name-body iframe,
+.node .field-name-field-text img,
+.node .field-name-field-text iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
 .node .field-name-body img,
 .node .field-name-field-text img {
-    max-width: 100%;
     height: auto !important;
 }
 
-.node .field-name-body iframe,
-.node .field-name-field-text iframe {
-    max-width: 100%;
-}
-
+.node .field-name-body picture,
+.node .field-name-field-text picture,
 .node .field-name-body .caption,
 .node .field-name-field-text .caption {
     display: block;
+    width: 100% !important;
+    height: auto !important;
+    background-color: #F3F3F3;
 }
 
 .node .field-name-body .caption p,
@@ -1143,6 +1192,7 @@ ul.tabs li.active a {
     font-size: 0.75em;
     font-weight: normal;
     color: #959595;
+    background-color: #FFFFFF;
 }
 
 .node .field-name-body table,
@@ -1216,28 +1266,27 @@ ul.tabs li.active a {
     padding-right: 40px;
 }
 
-.node .text-chapter,
-.node .text-chapter {
+.node .field-name-body .text-chapter,
+.node .field-name-field-text .text-chapter {
     margin: 75px 0 30px 0;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
-    font-size: 1.5em;
-    text-transform: uppercase;
+    font-size: 1.85em;
 }
 
-.node .text-accent,
-.node .text-accent {
+.node .field-name-body .text-accent,
+.node .field-name-field-text .text-accent {
     margin: 65px 20px;
     text-align: center;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1.5em;
     line-height: 150%;
     color: #671A1D;
 }
 
-.node .text-signature,
-.node .text-signature {
+.node .field-name-body .text-signature,
+.node .field-name-field-text .text-signature {
     font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;
     color: #8B9298;

@@ -1,0 +1,53 @@
+body {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+a {
+    color: #B5221C;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, ul, ol {
+    margin-bottom: 25px;
+    font-family: serif;
+    font-size: 1.2em;
+    line-height: 150%;
+}
+
+li {
+    margin-bottom: 25px;
+}
+
+
+/* Chapter */
+.text-chapter {
+    margin: 75px 0 30px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.85em;
+}
+
+/* Accent */
+.text-accent {
+    margin: 65px 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 150%;
+    color: #671A1D;
+} 
+
+/* Signature */
+
+.text-signature {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #8B9298;
+}
+

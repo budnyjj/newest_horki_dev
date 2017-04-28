@@ -41,7 +41,7 @@
  */
 
 .main-menu li > a {
-    padding: 10px 13px;
+    padding: 10px 11px;
 }
 
 
@@ -78,3 +78,14 @@
  * Custom Main Page styles
  */
 
+
+/**
+ * Common Inner nodes styles
+ */
+
+.node .field-name-body picture,
+.node .field-name-body .caption,
+.node .field-name-field-text picture,
+.node .field-name-field-text .caption {
+    width: 894px !important;
+}

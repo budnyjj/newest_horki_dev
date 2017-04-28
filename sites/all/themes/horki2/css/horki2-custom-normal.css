@@ -36,8 +36,7 @@
  */
 
 .main-menu li > a {
-    font-size: 1.15em;
-    padding: 10px 24px;
+    padding: 10px 30px;
 }
 
 
@@ -141,7 +140,9 @@
  * Common inner nodes styles
  */
 
+.system-content .node .field-name-body picture,
 .system-content .node .field-name-body .caption,
+.system-content .node .field-name-field-text picture,
 .system-content .node .field-name-field-text .caption {
-    width: 1200px;
+    width: 1200px !important;
 }
