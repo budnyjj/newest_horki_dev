@@ -10,7 +10,7 @@
 function content_type_ads_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ads_phone'
+  // Exported field_base: 'field_ads_phone'.
   $field_bases['field_ads_phone'] = array(
     'active' => 1,
     'cardinality' => 3,
@@ -32,7 +32,7 @@ function content_type_ads_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ads_photo'
+  // Exported field_base: 'field_ads_photo'.
   $field_bases['field_ads_photo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -54,7 +54,7 @@ function content_type_ads_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ads_placement'
+  // Exported field_base: 'field_ads_placement'.
   $field_bases['field_ads_placement'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -80,7 +80,7 @@ function content_type_ads_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_ads_topic'
+  // Exported field_base: 'field_ads_topic'.
   $field_bases['field_ads_topic'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -107,7 +107,7 @@ function content_type_ads_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_ads_type'
+  // Exported field_base: 'field_ads_type'.
   $field_bases['field_ads_type'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -134,7 +134,7 @@ function content_type_ads_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_price'
+  // Exported field_base: 'field_price'.
   $field_bases['field_price'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -155,7 +155,7 @@ function content_type_ads_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_name'
+  // Exported field_base: 'field_user_name'.
   $field_bases['field_user_name'] = array(
     'active' => 1,
     'cardinality' => 1,

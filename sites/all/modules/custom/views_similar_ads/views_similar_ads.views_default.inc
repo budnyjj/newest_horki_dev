@@ -23,9 +23,10 @@ function views_similar_ads_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Падобныя абвесткі';
-  $handler->display->display_options['css_class'] = 'similar-ads-block';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'болей';
+  $handler->display->display_options['css_class'] = 'block-abvestki';
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['use_more_text'] = 'Больш абвестак';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '300';
@@ -52,9 +53,9 @@ function views_similar_ads_views_default_views() {
 global $user;
 ?>
 
-<div class="red-button">
+<div class="button-red">
 <a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/ads/anonymous.html"); } ?>">
-дадаць абвестку</a>
+Дадаць абвестку</a>
 </div>
 ';
   $handler->display->display_options['footer']['area']['format'] = 'php_code';
@@ -103,7 +104,7 @@ global $user;
   $translatables['similar_ads'] = array(
     t('Master'),
     t('Падобныя абвесткі'),
-    t('болей'),
+    t('Больш абвестак'),
     t('Прымяніць'),
     t('Скінуць'),
     t('Sort by'),
@@ -114,13 +115,14 @@ global $user;
 global $user;
 ?>
 
-<div class="red-button">
+<div class="button-red">
 <a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/ads/anonymous.html"); } ?>">
-дадаць абвестку</a>
+Дадаць абвестку</a>
 </div>
 '),
     t('Усе'),
     t('Block'),
+    t('болей'),
   );
   $export['similar_ads'] = $view;
 

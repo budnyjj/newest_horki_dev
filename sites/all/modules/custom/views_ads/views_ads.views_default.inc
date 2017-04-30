@@ -38,7 +38,7 @@ function views_ads_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Footer: Global: Text area */
+  /* Ніжні калантытул: Global: Text area */
   $handler->display->display_options['footer']['area_1']['id'] = 'area_1';
   $handler->display->display_options['footer']['area_1']['table'] = 'views';
   $handler->display->display_options['footer']['area_1']['field'] = 'area';
@@ -46,26 +46,26 @@ function views_ads_views_default_views() {
   $handler->display->display_options['footer']['area_1']['empty'] = TRUE;
   $handler->display->display_options['footer']['area_1']['content'] = '<a href="/ads">Глядзець усе<a>';
   $handler->display->display_options['footer']['area_1']['format'] = 'author_text';
-  /* Field: Content: Title */
+  /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Змест: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Змест: Апублікавана */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Змест: Тып */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -86,7 +86,7 @@ function views_ads_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'больш абвестак';
+  $handler->display->display_options['use_more_text'] = 'Больш абвестак';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'page_1';
   $handler->display->display_options['defaults']['cache'] = FALSE;
@@ -120,7 +120,7 @@ function views_ads_views_default_views() {
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Text area */
+  /* Ніжні калантытул: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
@@ -130,9 +130,9 @@ function views_ads_views_default_views() {
 global $user;
 ?>
 
-<div class="red-button">
+<div class="button-red">
 <a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">
-дадаць абвестку</a>
+Дадаць абвестку</a>
 </div>
 ';
   $handler->display->display_options['footer']['area']['format'] = 'php_code';
@@ -146,16 +146,15 @@ global $user;
   $handler->display->display_options['empty']['area']['content'] = 'Пакуль што няма аніводнай прыватнай абвесткі';
   $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_class'] = 'black-text bold-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Тып абвесткі */
+  /* Поле: Змест: Тып абвесткі */
   $handler->display->display_options['fields']['field_ads_type']['id'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['table'] = 'field_data_field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['field'] = 'field_ads_type';
@@ -164,11 +163,7 @@ global $user;
   $handler->display->display_options['fields']['field_ads_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ads_type']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Global: Random */
-  $handler->display->display_options['sorts']['random']['id'] = 'random';
-  $handler->display->display_options['sorts']['random']['table'] = 'views';
-  $handler->display->display_options['sorts']['random']['field'] = 'random';
-  /* Sort criterion: Content: Updated date */
+  /* Sort criterion: Змест: Абноўленая дата */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
@@ -182,7 +177,7 @@ global $user;
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Бесплатные объявления в Горках, Дрибине и Мстиславле';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'abvestki zebra';
+  $handler->display->display_options['css_class'] = 'page-filtered-table page-abvestki';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['cache'] = FALSE;
@@ -193,6 +188,8 @@ global $user;
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
   $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'load_more';
   $handler->display->display_options['pager']['options']['items_per_page'] = '30';
@@ -203,7 +200,8 @@ global $user;
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ папярэдняя';
   $handler->display->display_options['pager']['options']['tags']['next'] = 'наступная ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
-  $handler->display->display_options['pager']['options']['more_button_text'] = 'больш абвестак';
+  $handler->display->display_options['pager']['options']['more_button_text'] = 'Больш абвестак';
+  $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -230,7 +228,7 @@ global $user;
     'field_ads_photo' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => 'views-align-center',
+      'align' => 'views-align-left',
       'separator' => '',
       'empty_column' => 0,
     ),
@@ -244,7 +242,7 @@ global $user;
     'field_price' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => 'views-align-center',
+      'align' => 'views-align-left',
       'separator' => '',
       'empty_column' => 0,
     ),
@@ -253,7 +251,7 @@ global $user;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Загаловак: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -262,66 +260,68 @@ global $user;
   $handler->display->display_options['header']['area']['content'] = '<?php 
 global $user;
 ?>
-
-<a class="rich-link bold-text" 
-href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">
-Дадаць абвестку</a>
+<a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">Дадаць абвестку</a>
 ';
   $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: PHP */
-  $handler->display->display_options['footer']['php']['id'] = 'php';
-  $handler->display->display_options['footer']['php']['table'] = 'views';
-  $handler->display->display_options['footer']['php']['field'] = 'php';
-  $handler->display->display_options['footer']['php']['label'] = 'Autosubmit';
-  $handler->display->display_options['footer']['php']['empty'] = TRUE;
-  $handler->display->display_options['footer']['php']['php_output'] = '<?php 
-drupal_add_js("sites/all/themes/dev/js/view-ads.js"); 
-?>
-';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'Нічога не знойдзена';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<p>На жаль, па вашым запыце не знойдзена ніводнай абвесткі.</p>
+<p>Вы можаце <a href="/abvestki.html">скінуць наладкі фільтра</a>, або <a href="/node/add/ads">дадаць сваю абвестку</a>.</p>';
+  $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Path */
+  /* Поле: Змест: Шлях */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Content: Тып абвесткі */
+  /* Поле: Змест: Тып абвесткі */
   $handler->display->display_options['fields']['field_ads_type']['id'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['table'] = 'field_data_field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['field'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['label'] = 'Тып';
   $handler->display->display_options['fields']['field_ads_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_ads_type']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Фотаздымак */
+  /* Поле: Змест: Фотаздымак */
   $handler->display->display_options['fields']['field_ads_photo']['id'] = 'field_ads_photo';
   $handler->display->display_options['fields']['field_ads_photo']['table'] = 'field_data_field_ads_photo';
   $handler->display->display_options['fields']['field_ads_photo']['field'] = 'field_ads_photo';
   $handler->display->display_options['fields']['field_ads_photo']['label'] = 'Фота';
-  $handler->display->display_options['fields']['field_ads_photo']['empty'] = '<a href="[path]"><img src="/sites/default/files/default_images/no_image.gif" width="50" height="50" style="width:50px;height:50px;" /></a>';
+  $handler->display->display_options['fields']['field_ads_photo']['element_class'] = 'filtered-table-photo';
+  $handler->display->display_options['fields']['field_ads_photo']['empty'] = '<a href="[path]"><img src="/sites/default/files/default_images/no_image.gif" width="100" height="100"  /></a>';
   $handler->display->display_options['fields']['field_ads_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ads_photo']['settings'] = array(
-    'image_style' => 'square_news_preview',
+    'image_style' => 'filtered-table',
     'image_link' => 'content',
   );
-  /* Field: Content: Title */
+  /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = 'Назва тавара або паслугі';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_class'] = 'bold-text black-text';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = 'filtered-table-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Цана */
+  /* Поле: Змест: Цана */
   $handler->display->display_options['fields']['field_price']['id'] = 'field_price';
   $handler->display->display_options['fields']['field_price']['table'] = 'field_data_field_price';
   $handler->display->display_options['fields']['field_price']['field'] = 'field_price';
+  $handler->display->display_options['fields']['field_price']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_price']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_price']['element_class'] = 'filtered-table-price';
   $handler->display->display_options['fields']['field_price']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_price']['empty'] = 'не ўказана';
+  $handler->display->display_options['fields']['field_price']['empty'] = '<a href="[path]">не ўказана</a>';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Updated date */
+  /* Sort criterion: Змест: Абноўленая дата */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
@@ -333,14 +333,14 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
     2 => 'AND',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Змест: Апублікавана */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Змест: Тып */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -348,7 +348,7 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
     'ads' => 'ads',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Месца размяшчэння абвесткі (field_ads_placement) */
+  /* Filter criterion: Змест: Месца размяшчэння абвесткі (field_ads_placement) */
   $handler->display->display_options['filters']['field_ads_placement_tid']['id'] = 'field_ads_placement_tid';
   $handler->display->display_options['filters']['field_ads_placement_tid']['table'] = 'field_data_field_ads_placement';
   $handler->display->display_options['filters']['field_ads_placement_tid']['field'] = 'field_ads_placement_tid';
@@ -367,7 +367,7 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
   );
   $handler->display->display_options['filters']['field_ads_placement_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_ads_placement_tid']['vocabulary'] = 'ads_placement';
-  /* Filter criterion: Content: Тып абвесткі (field_ads_type) */
+  /* Filter criterion: Змест: Тып абвесткі (field_ads_type) */
   $handler->display->display_options['filters']['field_ads_type_tid']['id'] = 'field_ads_type_tid';
   $handler->display->display_options['filters']['field_ads_type_tid']['table'] = 'field_data_field_ads_type';
   $handler->display->display_options['filters']['field_ads_type_tid']['field'] = 'field_ads_type_tid';
@@ -394,7 +394,7 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
   );
   $handler->display->display_options['filters']['field_ads_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_ads_type_tid']['vocabulary'] = 'ads_types';
-  /* Filter criterion: Content: Тэма абвесткі (field_ads_topic) */
+  /* Filter criterion: Змест: Тэма абвесткі (field_ads_topic) */
   $handler->display->display_options['filters']['field_ads_topic_tid']['id'] = 'field_ads_topic_tid';
   $handler->display->display_options['filters']['field_ads_topic_tid']['table'] = 'field_data_field_ads_topic';
   $handler->display->display_options['filters']['field_ads_topic_tid']['field'] = 'field_ads_topic_tid';
@@ -421,7 +421,7 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
   );
   $handler->display->display_options['filters']['field_ads_topic_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_ads_topic_tid']['vocabulary'] = 'ads_topics';
-  /* Filter criterion: Content: Title */
+  /* Filter criterion: Змест: Загаловак */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
@@ -525,7 +525,7 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Text area */
+  /* Ніжні калантытул: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
@@ -542,21 +542,21 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
 <a class="rich-link bold-text" href="/node/add/ads">Дадаць новую абвестку</a>.';
   $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Path */
+  /* Поле: Змест: Шлях */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Content: Тып абвесткі */
+  /* Поле: Змест: Тып абвесткі */
   $handler->display->display_options['fields']['field_ads_type']['id'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['table'] = 'field_data_field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['field'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['label'] = 'Тып';
   $handler->display->display_options['fields']['field_ads_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_ads_type']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Фотаздымак */
+  /* Поле: Змест: Фотаздымак */
   $handler->display->display_options['fields']['field_ads_photo']['id'] = 'field_ads_photo';
   $handler->display->display_options['fields']['field_ads_photo']['table'] = 'field_data_field_ads_photo';
   $handler->display->display_options['fields']['field_ads_photo']['field'] = 'field_ads_photo';
@@ -567,7 +567,7 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
     'image_style' => 'square_news_preview',
     'image_link' => 'content',
   );
-  /* Field: Content: Title */
+  /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -575,13 +575,13 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_class'] = 'bold-text black-text';
-  /* Field: Content: Цана */
+  /* Поле: Змест: Цана */
   $handler->display->display_options['fields']['field_price']['id'] = 'field_price';
   $handler->display->display_options['fields']['field_price']['table'] = 'field_data_field_price';
   $handler->display->display_options['fields']['field_price']['field'] = 'field_price';
   $handler->display->display_options['fields']['field_price']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_price']['empty'] = 'не ўказана';
-  /* Field: Content: Publish link */
+  /* Поле: Змест: Publish link */
   $handler->display->display_options['fields']['publishcontent']['id'] = 'publishcontent';
   $handler->display->display_options['fields']['publishcontent']['table'] = 'node';
   $handler->display->display_options['fields']['publishcontent']['field'] = 'publishcontent';
@@ -590,7 +590,7 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
   $handler->display->display_options['fields']['publishcontent']['unpublish'] = 'зняць з публікацыі';
   $handler->display->display_options['fields']['publishcontent']['publish'] = 'апублікаваць';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Author uid */
+  /* Contextual filter: Змест: Author uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
   $handler->display->display_options['arguments']['uid']['table'] = 'node';
   $handler->display->display_options['arguments']['uid']['field'] = 'uid';
@@ -602,13 +602,13 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Змест: Апублікавана */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Змест: Тып */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -630,22 +630,22 @@ drupal_add_js("sites/all/themes/dev/js/view-ads.js");
     t('Блок'),
     t('Прыватныя абвесткi'),
     t('Блок прыватных абвестак'),
-    t('больш абвестак'),
+    t('Больш абвестак'),
     t('Дадаць сваю абвестку'),
     t('<?php 
 global $user;
 ?>
 
-<div class="red-button">
+<div class="button-red">
 <a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">
-дадаць абвестку</a>
+Дадаць абвестку</a>
 </div>
 '),
     t('Няма абвестак'),
     t('Пакуль што няма аніводнай прыватнай абвесткі'),
     t('Старонка'),
     t('Бесплатные объявления в Горках, Дрибине и Мстиславле'),
-    t('more'),
+    t('болей'),
     t('Пошук'),
     t('Items per page'),
     t('- All -'),
@@ -658,18 +658,17 @@ global $user;
     t('<?php 
 global $user;
 ?>
-
-<a class="rich-link bold-text" 
-href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">
-Дадаць абвестку</a>
+<a href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/anonymous.html"); } ?>">Дадаць абвестку</a>
 '),
-    t('Autosubmit'),
+    t('Нічога не знойдзена'),
+    t('<p>На жаль, па вашым запыце не знойдзена ніводнай абвесткі.</p>
+<p>Вы можаце <a href="/abvestki.html">скінуць наладкі фільтра</a>, або <a href="/node/add/ads">дадаць сваю абвестку</a>.</p>'),
     t('Тып'),
     t('Фота'),
-    t('<a href="[path]"><img src="/sites/default/files/default_images/no_image.gif" width="50" height="50" style="width:50px;height:50px;" /></a>'),
+    t('<a href="[path]"><img src="/sites/default/files/default_images/no_image.gif" width="100" height="100"  /></a>'),
     t('Назва тавара або паслугі'),
     t('Цана'),
-    t('не ўказана'),
+    t('<a href="[path]">не ўказана</a>'),
     t('Рэгіен'),
     t('Тып абвесткі'),
     t('Тып абвесткі (field_ads_type)'),
@@ -680,6 +679,8 @@ href="<?php if ($user->uid) { print("/node/add/ads"); } else {print("/abvestki/a
     t('<a class="rich-link black-text bold-text center-this" href="/node/add/ads">дадаць абвестку</a>'),
     t('Зараз у вас няма аніводнай апублікаванай абвесткі.
 <a class="rich-link bold-text" href="/node/add/ads">Дадаць новую абвестку</a>.'),
+    t('<a href="[path]"><img src="/sites/default/files/default_images/no_image.gif" width="50" height="50" style="width:50px;height:50px;" /></a>'),
+    t('не ўказана'),
     t('Кіраванне'),
     t('зняць з публікацыі'),
     t('апублікаваць'),

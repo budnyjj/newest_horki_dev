@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Image styles: highlight feature.
+ */
+
+include_once 'image_styles_highlight.features.inc';

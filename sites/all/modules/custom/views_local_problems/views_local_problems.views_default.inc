@@ -91,7 +91,7 @@ function views_local_problems_views_default_views() {
       'text' => 0,
     ),
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -206,7 +206,7 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = '';
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -577,7 +577,7 @@ global $user;
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1021,7 +1021,7 @@ global $user;
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';

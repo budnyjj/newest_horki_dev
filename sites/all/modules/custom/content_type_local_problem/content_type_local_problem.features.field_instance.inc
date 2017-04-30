@@ -10,7 +10,7 @@
 function content_type_local_problem_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-local_problem-field_add_this'
+  // Exported field_instance: 'node-local_problem-field_add_this'.
   $field_instances['node-local_problem-field_add_this'] = array(
     'bundle' => 'local_problem',
     'default_value' => NULL,
@@ -25,13 +25,13 @@ function content_type_local_problem_field_default_field_instances() {
         'weight' => 7,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'addthis_displays',
         'settings' => array(
           'buttons_size' => 'addthis_32x32_style',
           'counter_orientation' => 'vertical',
           'extra_css' => '',
-          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,google_plusone_share,email,print,favorites',
+          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,email',
         ),
         'type' => 'addthis_basic_toolbox',
         'weight' => 5,
@@ -53,7 +53,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_address'
+  // Exported field_instance: 'node-local_problem-field_address'.
   $field_instances['node-local_problem-field_address'] = array(
     'bundle' => 'local_problem',
     'default_value' => NULL,
@@ -136,7 +136,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_author'
+  // Exported field_instance: 'node-local_problem-field_author'.
   $field_instances['node-local_problem-field_author'] = array(
     'bundle' => 'local_problem',
     'default_value' => NULL,
@@ -217,7 +217,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_email'
+  // Exported field_instance: 'node-local_problem-field_email'.
   $field_instances['node-local_problem-field_email'] = array(
     'bundle' => 'local_problem',
     'default_value' => NULL,
@@ -258,7 +258,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_photos'
+  // Exported field_instance: 'node-local_problem-field_photos'.
   $field_instances['node-local_problem-field_photos'] = array(
     'bundle' => 'local_problem',
     'deleted' => 0,
@@ -343,7 +343,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_pics'
+  // Exported field_instance: 'node-local_problem-field_pics'.
   $field_instances['node-local_problem-field_pics'] = array(
     'bundle' => 'local_problem',
     'deleted' => 0,
@@ -426,7 +426,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_problem_map'
+  // Exported field_instance: 'node-local_problem-field_problem_map'.
   $field_instances['node-local_problem-field_problem_map'] = array(
     'bundle' => 'local_problem',
     'default_value' => array(
@@ -479,7 +479,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_problem_phone'
+  // Exported field_instance: 'node-local_problem-field_problem_phone'.
   $field_instances['node-local_problem-field_problem_phone'] = array(
     'bundle' => 'local_problem',
     'default_value' => NULL,
@@ -561,7 +561,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_problem_status'
+  // Exported field_instance: 'node-local_problem-field_problem_status'.
   $field_instances['node-local_problem-field_problem_status'] = array(
     'bundle' => 'local_problem',
     'default_value' => array(
@@ -603,7 +603,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_text'
+  // Exported field_instance: 'node-local_problem-field_text'.
   $field_instances['node-local_problem-field_text'] = array(
     'bundle' => 'local_problem',
     'default_value' => NULL,
@@ -691,7 +691,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_problem-field_this_problem_on_map'
+  // Exported field_instance: 'node-local_problem-field_this_problem_on_map'.
   $field_instances['node-local_problem-field_this_problem_on_map'] = array(
     'bundle' => 'local_problem',
     'default_value' => array(
@@ -759,7 +759,8 @@ function content_type_local_problem_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-local_problem_status-field_taxonomy_pic'
+  // Exported field_instance:
+  // 'taxonomy_term-local_problem_status-field_taxonomy_pic'.
   $field_instances['taxonomy_term-local_problem_status-field_taxonomy_pic'] = array(
     'bundle' => 'local_problem_status',
     'deleted' => 0,

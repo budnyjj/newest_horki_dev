@@ -22,6 +22,7 @@ function views_rubrics_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'БГСХА (Горецкая академия): новости и фото';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -99,7 +100,7 @@ function views_rubrics_views_default_views() {
       'text' => 0,
     ),
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -169,10 +170,11 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['filters']['status_extra']['group'] = 0;
   $handler->display->display_options['filters']['status_extra']['expose']['operator'] = FALSE;
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Старонка */
+  $handler = $view->new_display('page', 'Старонка', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'media-grid-page';
+  $handler->display->display_options['css_class'] = 'page-media-grid';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -185,7 +187,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ папярэдняя';
   $handler->display->display_options['pager']['options']['tags']['next'] = 'наступная ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
-  $handler->display->display_options['pager']['options']['more_button_text'] = 'больш навінаў';
+  $handler->display->display_options['pager']['options']['more_button_text'] = 'Больш навінаў';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -193,6 +195,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Шлях */
   $handler->display->display_options['fields']['path']['id'] = 'path';
@@ -201,15 +204,6 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Поле: Вузел: Published at */
-  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
-  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['label'] = '';
-  $handler->display->display_options['fields']['published_at']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['published_at']['date_format'] = 'node';
-  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Поле: Node statistics: Recent count */
   $handler->display->display_options['fields']['recentcount']['id'] = 'recentcount';
   $handler->display->display_options['fields']['recentcount']['table'] = 'jstats_node';
@@ -217,10 +211,10 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['separator'] = '';
+  $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
   /* Поле: Змест: Колькасць каментароў */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
@@ -228,11 +222,11 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['separator'] = '';
+  $handler->display->display_options['fields']['comment_count']['separator'] = ' ';
   /* Поле: Тэрмін таксаноміі: Дэфолтны здымак на старонцы рубрыкі */
   $handler->display->display_options['fields']['field_default_image']['id'] = 'field_default_image';
   $handler->display->display_options['fields']['field_default_image']['table'] = 'field_data_field_default_image';
@@ -244,29 +238,44 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['alter']['text'] = '<a href="[path]">[field_default_image]</a>';
   $handler->display->display_options['fields']['field_default_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
-    'image_style' => 'photo_video_preview',
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => '',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'highlight',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
-  /* Поле: Змест: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]">[field_default_image]</a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'image_style' => 'photo_video_preview',
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => '',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'highlight',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Статыстыка */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -274,16 +283,18 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-statistics">
+<span class="views-count">[recentcount]</span>
+<span class="comments-count">[comment_count]</span>
+</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][comment_count]';
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'dark-red-text bold-text';
+  $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Змест: Sticky */
@@ -317,6 +328,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['path'] = 'taxonomy/term/%';
   $translatables['rubrics'] = array(
     t('Master'),
+    t('БГСХА (Горецкая академия): новости и фото'),
     t('болей'),
     t('Прымяніць'),
     t('Скінуць'),
@@ -337,13 +349,16 @@ function views_rubrics_views_default_views() {
     t('Nid'),
     t('Усе'),
     t('%1'),
-    t('Page'),
-    t('больш навінаў'),
-    t('| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">'),
+    t('Старонка'),
+    t('Больш навінаў'),
+    t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
     t('.'),
-    t('| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">'),
-    t('<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>'),
-    t('[title][comment_count]'),
+    t(' '),
+    t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
+    t('<div class="media-statistics">
+<span class="views-count">[recentcount]</span>
+<span class="comments-count">[comment_count]</span>
+</div>'),
   );
   $export['rubrics'] = $view;
 

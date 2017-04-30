@@ -1,0 +1,15 @@
+name = Breakpoints
+description = A set of breakpoints for the horki2 theme
+core = 7.x
+package = Custom
+version = 7.x-1.0
+dependencies[] = ctools
+features[breakpoint_group][] = horki2
+features[breakpoints][] = breakpoints.theme.horki2.desktop_narrow
+features[breakpoints][] = breakpoints.theme.horki2.desktop_normal
+features[breakpoints][] = breakpoints.theme.horki2.mobile_narrow
+features[breakpoints][] = breakpoints.theme.horki2.mobile_normal
+features[ctools][] = breakpoints:default_breakpoint_group:1
+features[ctools][] = breakpoints:default_breakpoints:1
+features[features_api][] = api:2
+features_exclude[dependencies][breakpoints] = breakpoints

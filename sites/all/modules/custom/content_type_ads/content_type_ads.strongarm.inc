@@ -159,5 +159,92 @@ function content_type_ads_strongarm() {
   $strongarm->value = 1;
   $export['node_submitted_ads'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_ads_pattern';
+  $strongarm->value = 'abvestki/[node:nid].html';
+  $export['pathauto_node_ads_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_ads_placement_pattern';
+  $strongarm->value = 'abvestki/[term:name].html';
+  $export['pathauto_taxonomy_term_ads_placement_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_ads_topics_pattern';
+  $strongarm->value = 'abvestki/[term:name].html';
+  $export['pathauto_taxonomy_term_ads_topics_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_ads_types_pattern';
+  $strongarm->value = 'abvestki/[term:name].html';
+  $export['pathauto_taxonomy_term_ads_types_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_ads';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_ads'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_ads_placement';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_taxonomy_term_ads_placement'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_ads_topics';
+  $strongarm->value = array(
+    'entity' => 'taxonomy_term',
+    'bundle' => 'ads',
+    'info' => array(
+      'label' => 'Тэмы абвестак',
+      'admin' => array(
+        'path' => 'admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/edit',
+        'real path' => 'admin/structure/taxonomy/ads/edit',
+        'bundle argument' => 3,
+        'access arguments' => array(
+          0 => 'administer taxonomy',
+        ),
+      ),
+      'xmlsitemap' => array(
+        'entity' => 'taxonomy_term',
+        'bundle' => 'ads',
+        'status' => '0',
+        'priority' => '0.5',
+      ),
+    ),
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_taxonomy_term_ads_topics'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_ads_types';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_taxonomy_term_ads_types'] = $strongarm;
+
   return $export;
 }

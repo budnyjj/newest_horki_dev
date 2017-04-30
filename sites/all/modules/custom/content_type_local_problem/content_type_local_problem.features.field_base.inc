@@ -10,7 +10,7 @@
 function content_type_local_problem_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_problem_map'
+  // Exported field_base: 'field_problem_map'.
   $field_bases['field_problem_map'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -60,7 +60,7 @@ function content_type_local_problem_field_default_field_bases() {
     'type' => 'geofield',
   );
 
-  // Exported field_base: 'field_problem_phone'
+  // Exported field_base: 'field_problem_phone'.
   $field_bases['field_problem_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -81,7 +81,7 @@ function content_type_local_problem_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_problem_status'
+  // Exported field_base: 'field_problem_status'.
   $field_bases['field_problem_status'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -107,7 +107,7 @@ function content_type_local_problem_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_this_problem_on_map'
+  // Exported field_base: 'field_this_problem_on_map'.
   $field_bases['field_this_problem_on_map'] = array(
     'active' => 1,
     'cardinality' => 1,

@@ -10,7 +10,7 @@
 function content_type_ads_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ads-field_add_this'
+  // Exported field_instance: 'node-ads-field_add_this'.
   $field_instances['node-ads-field_add_this'] = array(
     'bundle' => 'ads',
     'default_value' => NULL,
@@ -25,13 +25,13 @@ function content_type_ads_field_default_field_instances() {
         'weight' => 17,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'addthis_displays',
         'settings' => array(
           'buttons_size' => 'addthis_32x32_style',
           'counter_orientation' => 'vertical',
           'extra_css' => '',
-          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,google_plusone_share,email,print,favorites',
+          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,email',
         ),
         'type' => 'addthis_basic_toolbox',
         'weight' => 4,
@@ -55,7 +55,7 @@ function content_type_ads_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ads-field_ads_phone'
+  // Exported field_instance: 'node-ads-field_ads_phone'.
   $field_instances['node-ads-field_ads_phone'] = array(
     'bundle' => 'ads',
     'default_value' => NULL,
@@ -136,7 +136,7 @@ function content_type_ads_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ads-field_ads_photo'
+  // Exported field_instance: 'node-ads-field_ads_photo'.
   $field_instances['node-ads-field_ads_photo'] = array(
     'bundle' => 'ads',
     'deleted' => 0,
@@ -154,13 +154,23 @@ function content_type_ads_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'picture',
         'settings' => array(
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => 'highlight',
+          ),
+          'fallback_image_style' => '',
           'image_link' => '',
-          'image_style' => 'medium',
+          'lazyload' => 0,
+          'lazyload_aspect_ratio' => 0,
+          'picture_mapping' => 'article',
         ),
-        'type' => 'image',
-        'weight' => 0,
+        'type' => 'picture',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -224,7 +234,7 @@ function content_type_ads_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ads-field_ads_placement'
+  // Exported field_instance: 'node-ads-field_ads_placement'.
   $field_instances['node-ads-field_ads_placement'] = array(
     'bundle' => 'ads',
     'default_value' => NULL,
@@ -264,7 +274,7 @@ function content_type_ads_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ads-field_ads_topic'
+  // Exported field_instance: 'node-ads-field_ads_topic'.
   $field_instances['node-ads-field_ads_topic'] = array(
     'bundle' => 'ads',
     'default_value' => NULL,
@@ -304,7 +314,7 @@ function content_type_ads_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ads-field_ads_type'
+  // Exported field_instance: 'node-ads-field_ads_type'.
   $field_instances['node-ads-field_ads_type'] = array(
     'bundle' => 'ads',
     'default_value' => NULL,
@@ -344,7 +354,7 @@ function content_type_ads_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ads-field_email'
+  // Exported field_instance: 'node-ads-field_email'.
   $field_instances['node-ads-field_email'] = array(
     'bundle' => 'ads',
     'default_value' => NULL,
@@ -385,7 +395,7 @@ function content_type_ads_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ads-field_price'
+  // Exported field_instance: 'node-ads-field_price'.
   $field_instances['node-ads-field_price'] = array(
     'bundle' => 'ads',
     'default_value' => NULL,
@@ -466,7 +476,7 @@ function content_type_ads_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ads-field_text'
+  // Exported field_instance: 'node-ads-field_text'.
   $field_instances['node-ads-field_text'] = array(
     'bundle' => 'ads',
     'default_value' => NULL,
@@ -485,7 +495,7 @@ function content_type_ads_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -558,7 +568,7 @@ function content_type_ads_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ads-field_user_name'
+  // Exported field_instance: 'node-ads-field_user_name'.
   $field_instances['node-ads-field_user_name'] = array(
     'bundle' => 'ads',
     'default_value' => NULL,

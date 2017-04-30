@@ -1,88 +1,88 @@
 <?php 
 
 /**
-* Implements hook_help.
-*
-* Displays help and module information.
-*
-* @param path 
-*   Which path of the site we're using to display help
-* @param arg
-*   Array that holds the current path as returned from arg() function
-*/
-
+ * Implements hook_help.
+ *
+ * Displays help and module information.
+ *
+ * @param path 
+ *   Which path of the site we're using to display help
+ * @param arg
+ *   Array that holds the current path as returned from arg() function
+ */
 function bel_currency_help($path, $arg) {
-   switch ($path) {
-     case "admin/help#bel_currency":
-       return '<p>'.t("Displays current currency").'</p>';
-       break;
-   }
+  switch ($path) {
+  case "admin/help#bel_currency":
+    return '<p>'.t("Displays current currency").'</p>';
+    break;
+  }
 }
 
 /** 
-* Implements hook_block_info().
-*/
-
+ * Implements hook_block_info().
+ */
 function bel_currency_block_info() {
-  $blocks['bel_currency'] = array(
-    'info' => t('Currency'), 
-    'cache' => DRUPAL_CACHE_PER_ROLE, 
-  );
+  $blocks['bel_currency'] = 
+    array('info' => t('Currency'), 
+	  'cache' => DRUPAL_CACHE_PER_ROLE);
   return $blocks;
 }
 
 /**
-* Custom parser function
-*/
-
+ * Custom parser function
+ */
 function bel_currency_parser() {
-    $aCurrencyName = array("USD","EUR","RUB"); 
-    $today = date("m/d/y");
+  $aCurrencyName = array("USD","EUR","RUB"); 
+  $today = date("m/d/y");
 
-    $feed = "http://www.nbrb.by/Services/XmlExRates.aspx?ondate=$today";
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $feed);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $output = curl_exec($ch);
-    curl_close($ch);
+  $feed = "http://www.nbrb.by/Services/XmlExRates.aspx?ondate=$today";
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $feed);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $output = curl_exec($ch);
+  curl_close($ch);
 
-    $xml = simplexml_load_string($output);
+  $xml = simplexml_load_string($output);
 
-    $answer = '<div class="bel-currency-name">'.t("currency rates").'</div>';
-    foreach ($xml->Currency as $item)
-      {     
-        if (in_array($item->CharCode, $aCurrencyName)) 
-        {
-           $curRate = floatval($item->Rate); 
-	   $answer .= '<div class="bel-currency-delimiter">'.'|'.'</div>';
-	   $answer .= '<div class="bel-currency-row">'.'<div class="bel-currency-char">'.$item->CharCode.'</div>'.'<div class="bel-currency-num">'.number_format($curRate,2,'.','').'</div>'.'</div>'; 
-        }
+  $isFirst = true;
+  $answer = '';
+  foreach ($xml->Currency as $item) {     
+    if (in_array($item->CharCode, $aCurrencyName)) {
+      $curRate = floatval($item->Rate); 
+      if (!$isFirst) {
+	$answer .= '<span class="bel-currency-delimiter">'.'|'.'</span>';
+      }
+      $answer .= '<span class="bel-currency-row">';
+      $answer .= '<span class="bel-currency-char">'.$item->CharCode.'</span>';
+      $answer .= '<span class="bel-currency-num">'.number_format($curRate,2,'.','').'</span>';
+      $answer .= '</span>'; 
+      $isFirst = false;
     }
-	return $answer;
+  }
+  return $answer;
 }
 
 /**
-* Display result
-*/
-
+ * Display result
+ */
 function bel_currency_block_view($delta = '') {
   switch($delta){
-    case 'bel_currency':
-      $block['subject'] = t('Currency');
-      if(user_access('access content')){  
-        $cache = cache_get('bel_currency_info', 'cache');
-	if ($cache) {
-	  $result = $cache->data; }
-	else {
-	  $result = bel_currency_parser(); //Use our function for getting result
-	  cache_set('bel_currency_info', $result, 'cache', 43200);
-	}
-	if (empty($result)) {
-          $block['content'] = t('Нет доступных источников.');
-        } else {
-          $block['content'] = $result;
-        }
+  case 'bel_currency':
+    $block['subject'] = t('Currency');
+    if(user_access('access content')){  
+      $cache = cache_get('bel_currency_info', 'cache');
+      if ($cache) {
+	$result = $cache->data; }
+      else {
+	$result = bel_currency_parser(); //Use our function for getting result
+	cache_set('bel_currency_info', $result, 'cache', 43200);
       }
+      if (empty($result)) {
+	$block['content'] = t('Нет доступных источников.');
+      } else {
+	$block['content'] = $result;
+      }
+    }
   }
   return $block;
 }

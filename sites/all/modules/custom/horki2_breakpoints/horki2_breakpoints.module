@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Breakpoints feature.
+ */
+
+include_once 'horki2_breakpoints.features.inc';

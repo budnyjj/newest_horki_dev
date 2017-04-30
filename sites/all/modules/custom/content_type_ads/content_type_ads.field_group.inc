@@ -8,7 +8,40 @@
  * Implements hook_field_group_info().
  */
 function content_type_ads_field_group_info() {
-  $export = array();
+  $field_groups = array();
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_actions|node|ads|full';
+  $field_group->group_name = 'group_actions';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'ads';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Дзеянні',
+    'weight' => '7',
+    'children' => array(
+      0 => 'group_tags',
+      1 => 'group_share',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Дзеянні',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-actions',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_actions|node|ads|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -35,7 +68,7 @@ function content_type_ads_field_group_info() {
       ),
     ),
   );
-  $export['group_ads_placement|node|ads|form'] = $field_group;
+  $field_groups['group_ads_placement|node|ads|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -63,7 +96,7 @@ function content_type_ads_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_ads_topic|node|ads|form'] = $field_group;
+  $field_groups['group_ads_topic|node|ads|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -91,7 +124,7 @@ function content_type_ads_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_ads_type|node|ads|form'] = $field_group;
+  $field_groups['group_ads_type|node|ads|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -118,7 +151,7 @@ function content_type_ads_field_group_info() {
       ),
     ),
   );
-  $export['group_ads|node|ads|form'] = $field_group;
+  $field_groups['group_ads|node|ads|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -131,7 +164,7 @@ function content_type_ads_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Інфармацыя',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_user_name',
       1 => 'field_ads_phone',
@@ -153,7 +186,39 @@ function content_type_ads_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_info|node|ads|full'] = $field_group;
+  $field_groups['group_info|node|ads|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_share|node|ads|full';
+  $field_group->group_name = 'group_share';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'ads';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_actions';
+  $field_group->data = array(
+    'label' => 'Падзяліцца',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_add_this',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Падзяліцца',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-share',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_share|node|ads|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -163,26 +228,42 @@ function content_type_ads_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'ads';
   $field_group->mode = 'full';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_actions';
   $field_group->data = array(
-    'label' => 'Тэгі:',
+    'label' => 'Тэгі',
     'weight' => '3',
     'children' => array(
       0 => 'field_ads_type',
       1 => 'field_ads_topic',
       2 => 'field_ads_placement',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Тэгі:',
+      'label' => 'Тэгі',
       'instance_settings' => array(
-        'classes' => 'group-tags field-group-fieldset',
+        'id' => '',
+        'classes' => 'group-tags',
         'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
       ),
       'formatter' => 'open',
     ),
   );
-  $export['group_tags|node|ads|full'] = $field_group;
+  $field_groups['group_tags|node|ads|full'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Інфармацыя');
+  t('Абвестка');
+  t('Дзеянні');
+  t('Месца');
+  t('Падзяліцца');
+  t('Тып');
+  t('Тэгі');
+  t('Тэма');
+
+  return $field_groups;
 }

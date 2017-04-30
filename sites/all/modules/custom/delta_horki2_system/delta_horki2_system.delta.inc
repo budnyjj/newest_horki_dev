@@ -27,7 +27,10 @@ function delta_horki2_system_delta_default_templates() {
       'alpha_region_sidebar_second_equal_height_element' => FALSE,
       'alpha_region_sidebar_third_zone' => NULL,
       'alpha_region_sidebar_third_equal_height_element' => FALSE,
+      'alpha_region_sidebar_fourth_zone' => NULL,
+      'alpha_region_sidebar_fourth_equal_height_element' => FALSE,
       'alpha_region_content_columns' => '4',
+      'alpha_region_content_css' => 'system-content',
     ),
   );
   $export['horki2_system'] = $delta;

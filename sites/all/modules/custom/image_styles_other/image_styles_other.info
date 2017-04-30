@@ -1,0 +1,15 @@
+name = Image styles: other
+description = Набор стыляў малюнкащ з розных старонак
+core = 7.x
+package = Custom
+version = 7.x-2.0
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = filtered-table
+features[image][] = main_pic_preview
+features[image][] = node_teaser_preview
+features[image][] = photo_video_preview
+features[image][] = square_news_preview
+features[image][] = user_avatar_login
+features[image][] = user_avatar_page
+features[image][] = uzgorak_preview

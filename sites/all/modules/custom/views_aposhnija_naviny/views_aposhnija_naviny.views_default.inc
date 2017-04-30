@@ -89,135 +89,64 @@ function views_aposhnija_naviny_views_default_views() {
     'news_from_readers' => 'news_from_readers',
   );
 
-  /* Display: Блок на галоўнай */
-  $handler = $view->new_display('block', 'Блок на галоўнай', 'block');
+  /* Display: Блок */
+  $handler = $view->new_display('block', 'Блок', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Навіны';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'block-last-news';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'больш навінаў';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'published_at',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Колькасць каментароў */
-  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
-  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
-  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
-  $handler->display->display_options['fields']['comment_count']['label'] = '';
-  $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<span class="comments-counter">[comment_count]</span>';
-  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
-  /* Поле: Змест: Загаловак */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][comment_count]';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_class'] = 'black-text bold-text';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Вузел: Published at */
-  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
-  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['label'] = '';
-  $handler->display->display_options['fields']['published_at']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['published_at']['date_format'] = 'node';
-  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
-  $handler->display->display_options['block_caching'] = '8';
-
-  /* Display: Блок на ўнутраных старонках */
-  $handler = $view->new_display('block', 'Блок на ўнутраных старонках', 'block_1');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'block-last-news';
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'больш навінаў';
+  $handler->display->display_options['use_more_text'] = 'Больш навінаў';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'published_at',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Ніжні калантытул: Global: Text area */
+  $handler->display->display_options['footer']['area_1']['id'] = 'area_1';
+  $handler->display->display_options['footer']['area_1']['table'] = 'views';
+  $handler->display->display_options['footer']['area_1']['field'] = 'area';
+  $handler->display->display_options['footer']['area_1']['label'] = 'Больш навінаў';
+  $handler->display->display_options['footer']['area_1']['content'] = '<div class="button-black"><a href="/naviny.html">Больш навінаў</a></div>';
+  $handler->display->display_options['footer']['area_1']['format'] = 'author_text';
+  /* Ніжні калантытул: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'Дадаць навіну';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<div class="red-button"><a href="/node/add/news-from-readers">дадаць навіну</a></div>';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="button-red"><a href="/node/add/news-from-readers">Дадаць навіну</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Колькасць каментароў */
-  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
-  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
-  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
-  $handler->display->display_options['fields']['comment_count']['label'] = '';
-  $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<span class="comments-counter">[comment_count]</span>';
-  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
-  /* Поле: Змест: Загаловак */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][comment_count]';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_class'] = 'black-text bold-text';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Поле: Вузел: Published at */
   $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
   $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
   $handler->display->display_options['fields']['published_at']['label'] = '';
-  $handler->display->display_options['fields']['published_at']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['published_at']['element_class'] = 'last-date';
   $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['published_at']['date_format'] = 'node';
+  $handler->display->display_options['fields']['published_at']['date_format'] = 'list';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_class'] = 'last-title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
   $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
@@ -225,14 +154,14 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
+  $handler->display->display_options['block_description'] = 'Апошнія навіны';
   $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Старонка */
   $handler = $view->new_display('page', 'Старонка', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Апошнія навіны';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'media-grid-page';
+  $handler->display->display_options['css_class'] = 'page-media-grid';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -245,7 +174,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ папярэдняя';
   $handler->display->display_options['pager']['options']['tags']['next'] = 'наступная ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
-  $handler->display->display_options['pager']['options']['more_button_text'] = 'больш навінаў';
+  $handler->display->display_options['pager']['options']['more_button_text'] = 'Больш навінаў';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -261,25 +190,6 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'node';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'd.m.y';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Поле: Вузел: Published at */
-  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
-  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['label'] = '';
-  $handler->display->display_options['fields']['published_at']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['published_at']['date_format'] = 'node';
-  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Поле: Node statistics: Recent count */
   $handler->display->display_options['fields']['recentcount']['id'] = 'recentcount';
   $handler->display->display_options['fields']['recentcount']['table'] = 'jstats_node';
@@ -287,10 +197,10 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['separator'] = '';
+  $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
   /* Поле: Змест: Колькасць каментароў */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
@@ -298,22 +208,34 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['separator'] = '';
-  /* Поле: Змест: Галоўны фотаздымак */
+  $handler->display->display_options['fields']['comment_count']['separator'] = ' ';
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'image_style' => 'photo_video_preview',
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => '',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'highlight',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Статыстыка */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -321,18 +243,20 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-statistics">
+<span class="views-count">[recentcount]</span>
+<span class="comments-count">[comment_count]</span>
+</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][comment_count]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'dark-red-text bold-text';
+  $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -342,14 +266,129 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['metatags'] = array(
-    'title' => array(
-      'value' => 'Последние новости | [site:name]',
-    ),
-    'description' => array(
-      'value' => 'Новости из Горок, Дрибина и Мстиславля на одной странице. Навіны з Горак, Дрыбіна і Мсціслава на адной старонцы.',
-    ),
-    'keywords' => array(
-      'value' => 'Горкі, Мсціслаў, Горацкі кірмаш, БГСХА, Дрибинский район, Горки, Мстиславль',
+    'und' => array(
+      'title' => array(
+        'value' => 'Последние новости, фото и видео из Горок, Дрибина, Мстиславля и БГСХА. | [site:name]',
+        'default' => '',
+      ),
+      'description' => array(
+        'value' => 'На этой странице собраны свежие новости из Горок, Дрибина, Мстиславля и БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов.',
+        'default' => '',
+      ),
+      'abstract' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'keywords' => array(
+        'value' => 'Горки, Дрибин, Мстиславль, БГСХА, Горецкий район, Дрибинский район, Мстиславский район, горецкая академия',
+        'default' => '',
+      ),
+      'robots' => array(
+        'value' => array(
+          'index' => 0,
+          'follow' => 0,
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+          'noimageindex' => 0,
+          'notranslate' => 0,
+        ),
+        'default' => array(
+          'index' => 0,
+          'follow' => 0,
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+          'noimageindex' => 0,
+          'notranslate' => 0,
+        ),
+      ),
+      'news_keywords' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'standout' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rating' => array(
+        'value' => '',
+      ),
+      'referrer' => array(
+        'value' => '',
+      ),
+      'rights' => array(
+        'value' => 'horki.info',
+        'default' => 'horki.info',
+      ),
+      'image_src' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'canonical' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'shortlink' => array(
+        'value' => '[current-page:url:unaliased]',
+        'default' => '[current-page:url:unaliased]',
+      ),
+      'publisher' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'original-source' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'prev' => array(
+        'value' => '',
+      ),
+      'next' => array(
+        'value' => '',
+      ),
+      'content-language' => array(
+        'value' => '',
+      ),
+      'geo.position' => array(
+        'value' => '',
+      ),
+      'geo.placename' => array(
+        'value' => '',
+      ),
+      'geo.region' => array(
+        'value' => '',
+      ),
+      'icbm' => array(
+        'value' => '',
+      ),
+      'refresh' => array(
+        'value' => '',
+      ),
+      'revisit-after' => array(
+        'value' => '',
+        'period' => '',
+        'default' => '',
+      ),
+      'pragma' => array(
+        'value' => '',
+      ),
+      'cache-control' => array(
+        'value' => '',
+      ),
+      'expires' => array(
+        'value' => '',
+      ),
     ),
   );
   $handler->display->display_options['path'] = 'naviny.html';
@@ -473,7 +512,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_text']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -622,7 +661,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_text']['settings'] = array(
     'trim_length' => '160',
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -787,7 +826,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_text']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -847,17 +886,14 @@ function views_aposhnija_naviny_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Блок на галоўнай'),
-    t('больш навінаў'),
-    t('<span class="comments-counter">[comment_count]</span>'),
-    t('.'),
-    t(','),
-    t('[title][comment_count]'),
-    t('Блок на ўнутраных старонках'),
+    t('Блок'),
+    t('Навіны'),
+    t('Больш навінаў'),
+    t('<div class="button-black"><a href="/naviny.html">Больш навінаў</a></div>'),
     t('Дадаць навіну'),
-    t('<div class="red-button"><a href="/node/add/news-from-readers">дадаць навіну</a></div>'),
-    t('Старонка'),
+    t('<div class="button-red"><a href="/node/add/news-from-readers">Дадаць навіну</a></div>'),
     t('Апошнія навіны'),
+    t('Старонка'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
@@ -865,10 +901,15 @@ function views_aposhnija_naviny_views_default_views() {
     t('‹ папярэдняя'),
     t('наступная ›'),
     t('апошняя »'),
-    t('| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">'),
-    t('| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">'),
+    t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
+    t('.'),
+    t(' '),
+    t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>'),
-    t('<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>'),
+    t('<div class="media-statistics">
+<span class="views-count">[recentcount]</span>
+<span class="comments-count">[comment_count]</span>
+</div>'),
     t('Навіны RSS'),
     t('Навіны з Горак, Дрыбіна і Мсціслава'),
     t('author'),
