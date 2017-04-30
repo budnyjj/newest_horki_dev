@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the horki2: fonts feature.
+ */
+
+include_once 'horki2_fonts.features.inc';
