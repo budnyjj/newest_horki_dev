@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Views: comments feature.
- */
-
-include_once 'views_comments.features.inc';
