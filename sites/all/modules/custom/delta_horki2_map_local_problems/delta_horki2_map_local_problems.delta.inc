@@ -21,8 +21,6 @@ function delta_horki2_map_local_problems_delta_default_templates() {
   $delta->parent = 'horki2_system';
   $delta->settings = array(
     'theme_horki2_settings' => array(
-      'toggle_secondary_menu' => 1,
-      'alpha_region_sidebar_fourth_equal_height_element' => FALSE,
       'alpha_zone_header_banner_wrapper_css' => '',
       'alpha_region_after_content_zone' => 'content',
       'alpha_region_after_content_columns' => '4',
