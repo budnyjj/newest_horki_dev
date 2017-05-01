@@ -1,10 +1,9 @@
 name = Content type: company
 core = 7.x
 package = Custom
-version = 7.x-2.0
+version = 7.x-2.1
 dependencies[] = addthis
 dependencies[] = addthis_displays
-dependencies[] = comments_suite
 dependencies[] = ctools
 dependencies[] = email
 dependencies[] = features
@@ -59,3 +58,4 @@ features[variable][] = pathauto_node_company_pattern
 features[variable][] = pathauto_taxonomy_term_company_catalog_pattern
 features[variable][] = xmlsitemap_settings_node_company
 features[variable][] = xmlsitemap_settings_taxonomy_term_company_catalog
+features_exclude[dependencies][comments_suite] = comments_suite

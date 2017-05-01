@@ -102,22 +102,6 @@ function comments_suite_node_info() {
       'title_label' => t('Загаловак'),
       'help' => '',
     ),
-    'news' => array(
-      'name' => t('Навіна'),
-      'base' => 'node_content',
-      'description' => t('Асноўны тып кантэнту'),
-      'has_title' => '1',
-      'title_label' => t('Загаловак'),
-      'help' => '',
-    ),
-    'news_from_readers' => array(
-      'name' => t('Народная навiна'),
-      'base' => 'node_content',
-      'description' => t('Апублікуйце сваю навіну на нашым сайце.'),
-      'has_title' => '1',
-      'title_label' => t('Загаловак'),
-      'help' => '',
-    ),
   );
   drupal_alter('node_info', $items);
   return $items;
