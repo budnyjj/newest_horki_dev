@@ -88,21 +88,3 @@ function comments_suite_image_default_styles() {
 
   return $styles;
 }
-
-/**
- * Implements hook_node_info().
- */
-function comments_suite_node_info() {
-  $items = array(
-    'afisha' => array(
-      'name' => t('Афіша'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Загаловак'),
-      'help' => '',
-    ),
-  );
-  drupal_alter('node_info', $items);
-  return $items;
-}
