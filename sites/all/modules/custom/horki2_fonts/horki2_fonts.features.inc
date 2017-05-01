@@ -9,6 +9,24 @@
  */
 function horki2_fonts_fontyourface_features_default_font() {
   return array(
+    'LiberationSans normal normal' => array(
+      'name' => 'LiberationSans normal normal',
+      'enabled' => 1,
+      'url' => 'http://localhost/#53cfc65ebfbbdd5d5f444a5e77ebfff0',
+      'provider' => 'local_fonts',
+      'css_selector' => '<none>',
+      'css_family' => 'LiberationSans',
+      'css_style' => 'normal',
+      'css_weight' => 'normal',
+      'css_fallbacks' => '',
+      'foundry' => '',
+      'foundry_url' => '',
+      'license' => '',
+      'license_url' => '',
+      'designer' => '',
+      'designer_url' => '',
+      'metadata' => 'a:2:{s:4:"path";s:77:"public://fontyourface/local_fonts/LiberationSans-normal-normal/stylesheet.css";s:8:"font_uri";a:1:{s:8:"truetype";s:89:"public://fontyourface/local_fonts/LiberationSans-normal-normal/liberationsans-regular.ttf";}}',
+    ),
     'PTSans Caption normal bold' => array(
       'name' => 'PTSans Caption normal bold',
       'enabled' => 1,

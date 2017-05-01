@@ -76,6 +76,60 @@ function image_styles_other_image_default_styles() {
     ),
   );
 
+  // Exported image style: user_avatar_block.
+  $styles['user_avatar_block'] = array(
+    'label' => 'user_avatar_block',
+    'effects' => array(
+      51 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 16,
+          'height' => 16,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: user_avatar_comment.
+  $styles['user_avatar_comment'] = array(
+    'label' => 'user_avatar_comment',
+    'effects' => array(
+      46 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 70,
+          'height' => 70,
+        ),
+        'weight' => 1,
+      ),
+      47 => array(
+        'name' => 'canvasactions_roundedcorners',
+        'data' => array(
+          'radius' => 35,
+          'independent_corners_set' => array(
+            'independent_corners' => 0,
+            'radii' => array(
+              'tl' => 0,
+              'tr' => 0,
+              'bl' => 0,
+              'br' => 0,
+            ),
+          ),
+        ),
+        'weight' => 2,
+      ),
+      48 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/png',
+          'quality' => 75,
+        ),
+        'weight' => 3,
+      ),
+    ),
+  );
+
   // Exported image style: user_avatar_login.
   $styles['user_avatar_login'] = array(
     'label' => 'user_avatar_login',

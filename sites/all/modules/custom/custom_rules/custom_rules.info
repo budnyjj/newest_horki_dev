@@ -1,0 +1,12 @@
+name = Rules
+description = Набор наладжаных правіл
+core = 7.x
+package = Custom
+version = 7.x-2.0
+dependencies[] = comment
+dependencies[] = entity
+dependencies[] = node_expire
+dependencies[] = rules
+features[features_api][] = api:2
+features[rules_config][] = rules_delete_expired_ads
+features[rules_config][] = rules_send_notification_about_new_comment
