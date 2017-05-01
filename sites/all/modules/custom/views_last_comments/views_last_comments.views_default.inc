@@ -111,7 +111,6 @@ function views_last_comments_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'block-last-comments';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
@@ -234,6 +233,7 @@ function views_last_comments_views_default_views() {
   $handler = $view->new_display('page', 'Старонка апошніх каментароў', 'page_last');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Апошнія каментары';
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'zebra view-comments-page';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
