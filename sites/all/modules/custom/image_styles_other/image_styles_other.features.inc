@@ -149,11 +149,11 @@ function image_styles_other_image_default_styles() {
   $styles['user_avatar_page'] = array(
     'label' => 'user_avatar_page',
     'effects' => array(
-      31 => array(
+      33 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 150,
-          'height' => 150,
+          'width' => 40,
+          'height' => 40,
         ),
         'weight' => 1,
       ),

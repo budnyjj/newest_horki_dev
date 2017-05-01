@@ -3,7 +3,10 @@ description = Тэкставыя фарматы
 core = 7.x
 package = Custom
 version = 7.x-2.1
+<<<<<<< HEAD
 dependencies[] = ckeditor
+=======
+>>>>>>> features: update
 dependencies[] = features
 dependencies[] = filter
 dependencies[] = htmlpurifier
