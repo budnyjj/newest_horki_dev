@@ -131,6 +131,14 @@
     right: 306px;
 }
 
+.block-local-weather a {
+    color: #000000;
+}
+
+.block-local-weather a:hover {
+    text-decoration: none;
+}
+
 .block-local-weather .delimiter {
     margin: 0 0.25em;
 }

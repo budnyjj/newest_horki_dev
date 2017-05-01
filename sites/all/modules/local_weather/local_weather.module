@@ -119,11 +119,13 @@ function local_weather_block_view($delta = '') {
 	$result = local_weather_get_forecast($place); 
 	cache_set('local_weather_info', $result, 'cache', 43200);
       }
+      $block['content'] = '<a href="/pogoda.html">';
       if (empty($result)) {
-	$block['content'] = t('no data');
+	$block['content'] .= t('no data');
       } else {
-	$block['content'] = $result;
+	$block['content'] .= $result;
       }
+      $block['content'] .= '</a>';
     }
   }
   return $block;
