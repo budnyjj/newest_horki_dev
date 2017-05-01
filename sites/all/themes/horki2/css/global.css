@@ -866,11 +866,11 @@ ul.tabs li.active a {
 }
 
 /* sidebar last comments */
-.block-comments-block-block-last {
+.block-last-comments-block-last {
     margin-bottom: 20px;
 }
 
-.block-comments-block-block-last .block-inner {
+.block-last-comments-block-last .block-inner {
     border: 1px solid #DBDBDB;
     padding: 20px;
 }
