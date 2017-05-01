@@ -84,9 +84,9 @@ function comments_suite_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-comments_block-block' => array(
+        'views-comments_block-article' => array(
           'module' => 'views',
-          'delta' => 'comments_block-block',
+          'delta' => 'comments_block-article',
           'region' => 'content',
           'weight' => '10',
         ),

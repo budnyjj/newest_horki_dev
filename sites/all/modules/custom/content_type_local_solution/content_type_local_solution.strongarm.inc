@@ -87,19 +87,19 @@ function content_type_local_solution_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
-        ),
-        'redirect' => array(
           'weight' => '6',
         ),
-        'xmlsitemap' => array(
+        'redirect' => array(
           'weight' => '7',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(),
@@ -153,6 +153,23 @@ function content_type_local_solution_strongarm() {
   $strongarm->name = 'node_submitted_local_solution';
   $strongarm->value = 1;
   $export['node_submitted_local_solution'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_local_solution_pattern';
+  $strongarm->value = 'solutions/[node:nid].html';
+  $export['pathauto_node_local_solution_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_local_solution';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_local_solution'] = $strongarm;
 
   return $export;
 }

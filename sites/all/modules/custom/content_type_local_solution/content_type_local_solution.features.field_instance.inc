@@ -10,7 +10,7 @@
 function content_type_local_solution_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-local_solution-field_add_this'
+  // Exported field_instance: 'node-local_solution-field_add_this'.
   $field_instances['node-local_solution-field_add_this'] = array(
     'bundle' => 'local_solution',
     'default_value' => NULL,
@@ -25,16 +25,16 @@ function content_type_local_solution_field_default_field_instances() {
         'weight' => 3,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'addthis_displays',
         'settings' => array(
           'buttons_size' => 'addthis_32x32_style',
           'counter_orientation' => 'vertical',
           'extra_css' => '',
-          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,google_plusone_share,email,print,favorites',
+          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,email',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -49,11 +49,11 @@ function content_type_local_solution_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
-  // Exported field_instance: 'node-local_solution-field_documents'
+  // Exported field_instance: 'node-local_solution-field_documents'.
   $field_instances['node-local_solution-field_documents'] = array(
     'bundle' => 'local_solution',
     'deleted' => 0,
@@ -71,7 +71,7 @@ function content_type_local_solution_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -125,11 +125,11 @@ function content_type_local_solution_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-local_solution-field_linked_local_problems'
+  // Exported field_instance: 'node-local_solution-field_linked_local_problems'.
   $field_instances['node-local_solution-field_linked_local_problems'] = array(
     'bundle' => 'local_solution',
     'default_value' => NULL,
@@ -153,7 +153,7 @@ function content_type_local_solution_field_default_field_instances() {
           'view_name' => 'local_problems',
         ),
         'type' => 'entityreference_views_formatter',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -172,11 +172,94 @@ function content_type_local_solution_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-local_solution-field_pics'
+  // Exported field_instance: 'node-local_solution-field_pdf'.
+  $field_instances['node-local_solution-field_pdf'] = array(
+    'bundle' => 'local_solution',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'pdf_reader',
+        'settings' => array(
+          'colorbox' => 0,
+          'colorbox_link_text' => '',
+          'download' => 0,
+          'pdf_height' => 700,
+          'pdf_width' => 710,
+          'renderer' => 'google',
+        ),
+        'type' => 'pdf_reader_file',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_pdf',
+    'label' => 'Прагляд PDF дакумента',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'local_solutions/[current-date:system]',
+      'file_extensions' => 'pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'colorbox__large' => 0,
+          'colorbox__main_pic_preview' => 0,
+          'colorbox__medium' => 0,
+          'colorbox__node_teaser_preview' => 0,
+          'colorbox__photo_video_preview' => 0,
+          'colorbox__square_news_preview' => 0,
+          'colorbox__thumbnail' => 0,
+          'colorbox__user_avatar_block' => 0,
+          'colorbox__user_avatar_comment' => 0,
+          'colorbox__user_avatar_page' => 0,
+          'colorbox__uzgorak_preview' => 0,
+          'icon_link' => 0,
+          'image' => 0,
+          'image_large' => 0,
+          'image_main_pic_preview' => 0,
+          'image_medium' => 0,
+          'image_node_teaser_preview' => 0,
+          'image_photo_video_preview' => 0,
+          'image_square_news_preview' => 0,
+          'image_thumbnail' => 0,
+          'image_user_avatar_block' => 0,
+          'image_user_avatar_comment' => 0,
+          'image_user_avatar_page' => 0,
+          'image_uzgorak_preview' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-local_solution-field_pics'.
   $field_instances['node-local_solution-field_pics'] = array(
     'bundle' => 'local_solution',
     'deleted' => 0,
@@ -259,7 +342,7 @@ function content_type_local_solution_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-local_solution-field_text'
+  // Exported field_instance: 'node-local_solution-field_text'.
   $field_instances['node-local_solution-field_text'] = array(
     'bundle' => 'local_solution',
     'default_value' => NULL,
@@ -357,6 +440,7 @@ function content_type_local_solution_field_default_field_instances() {
   t('Дакументы');
   t('Звязаныя праблемы');
   t('Падзяліцца');
+  t('Прагляд PDF дакумента');
   t('Спіс звязаных праблем');
   t('Тэкст');
 

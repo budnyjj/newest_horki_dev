@@ -36,11 +36,11 @@ function comments_suite_image_default_styles() {
   $styles['user_avatar_block'] = array(
     'label' => 'user_avatar_block',
     'effects' => array(
-      33 => array(
+      51 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 20,
-          'height' => 20,
+          'width' => 16,
+          'height' => 16,
         ),
         'weight' => 1,
       ),
@@ -51,13 +51,37 @@ function comments_suite_image_default_styles() {
   $styles['user_avatar_comment'] = array(
     'label' => 'user_avatar_comment',
     'effects' => array(
-      32 => array(
+      46 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 40,
-          'height' => 40,
+          'width' => 70,
+          'height' => 70,
         ),
         'weight' => 1,
+      ),
+      47 => array(
+        'name' => 'canvasactions_roundedcorners',
+        'data' => array(
+          'radius' => 35,
+          'independent_corners_set' => array(
+            'independent_corners' => 0,
+            'radii' => array(
+              'tl' => 0,
+              'tr' => 0,
+              'bl' => 0,
+              'br' => 0,
+            ),
+          ),
+        ),
+        'weight' => 2,
+      ),
+      48 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/png',
+          'quality' => 75,
+        ),
+        'weight' => 3,
       ),
     ),
   );
@@ -77,14 +101,6 @@ function comments_suite_node_info() {
       'has_title' => '1',
       'title_label' => t('Загаловак'),
       'help' => '',
-    ),
-    'company' => array(
-      'name' => t('Прадпрыемства'),
-      'base' => 'node_content',
-      'description' => t('Гэты тып кантэнта змяшчае інфармацыю аб прадпрыемстве, выкарыстоўваецца ў каталозе прадпрыемстваў.'),
-      'has_title' => '1',
-      'title_label' => t('Назва прадпрыемства'),
-      'help' => t('Скарочаная версія назвы ў знаёмай для карыстальнікаў форме.'),
     ),
     'news' => array(
       'name' => t('Навіна'),

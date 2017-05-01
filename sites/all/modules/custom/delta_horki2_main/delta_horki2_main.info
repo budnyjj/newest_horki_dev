@@ -1,7 +1,7 @@
-name = Delta: horki2: main
+name = Horki2: delta: main
 core = 7.x
 package = Custom
-version = 7.x-2.0
+version = 7.x-2.1
 dependencies[] = ctools
 dependencies[] = delta
 features[ctools][] = delta:delta:3
