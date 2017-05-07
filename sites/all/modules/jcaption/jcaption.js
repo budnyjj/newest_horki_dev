@@ -50,7 +50,7 @@ Drupal.behaviors.jcaption = {
 			    image = image.parent("picture");
 			}
     			if (image.parent("a").length > 0 && !settings.keepLink) {
-    			    image = $(this).parent("a");
+    			    image = image.parent("a");
       			}
 
     			//Only create captions if there is content for the caption
