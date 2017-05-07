@@ -462,13 +462,13 @@
     margin-left: -50px;
 }
 
-.node .field-name-body picture .caption,
-.node .field-name-field-text picture .caption {
+.node .field-name-body .caption > picture,
+.node .field-name-field-text .caption > picture {
     margin-left: 0;
 }
 
-.node .field-name-body .caption p,
-.node .field-name-field-text .caption p {
+.node .field-name-body .caption > p,
+.node .field-name-field-text .caption > p {
     padding: 45px 120px 0 120px;
 }
 
