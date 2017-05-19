@@ -39,11 +39,11 @@ function image_styles_article_image_default_styles() {
   $styles['article_breakpoints_theme_horki2_desktop_normal_1x'] = array(
     'label' => 'article_breakpoints_theme_horki2_desktop_normal_1x',
     'effects' => array(
-      56 => array(
+      43 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 894,
-          'height' => 670,
+          'width' => 1200,
+          'height' => 900,
           'upscale' => 0,
         ),
         'weight' => 1,

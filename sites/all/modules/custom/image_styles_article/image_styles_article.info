@@ -1,8 +1,8 @@
 name = Image styles: article
-description = Набор стыляў малюнкаў для арыткула
+description = Набор стыляў малюнкаў для артыкула
 core = 7.x
 package = Custom
-version = 7.x-2.0
+version = 7.x-2.2
 dependencies[] = ctools
 dependencies[] = image
 dependencies[] = picture
@@ -16,3 +16,4 @@ features[image][] = article_colorbox
 features[image][] = article_gallery
 features[image][] = article_gallery_thumbnail
 features[picture_mapping][] = article
+features[picture_mapping][] = davedka

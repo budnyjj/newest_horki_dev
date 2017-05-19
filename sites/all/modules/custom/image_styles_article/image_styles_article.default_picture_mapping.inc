@@ -43,5 +43,39 @@ function image_styles_article_default_picture_mapping() {
   );
   $export['article'] = $picture_mapping;
 
+  $picture_mapping = new PictureMapping();
+  $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
+  $picture_mapping->api_version = 2;
+  $picture_mapping->label = 'davedka';
+  $picture_mapping->machine_name = 'davedka';
+  $picture_mapping->breakpoint_group = 'horki2';
+  $picture_mapping->mapping = array(
+    'breakpoints.theme.horki2.desktop_normal' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_breakpoints_theme_horki2_desktop_normal_1x',
+      ),
+    ),
+    'breakpoints.theme.horki2.desktop_narrow' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_breakpoints_theme_horki2_desktop_narrow_1x',
+      ),
+    ),
+    'breakpoints.theme.horki2.mobile_normal' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_breakpoints_theme_horki2_mobile_normal_1x',
+      ),
+    ),
+    'breakpoints.theme.horki2.mobile_narrow' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_breakpoints_theme_horki2_mobile_narrow_1x',
+      ),
+    ),
+  );
+  $export['davedka'] = $picture_mapping;
+
   return $export;
 }
