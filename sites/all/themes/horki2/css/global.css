@@ -1650,7 +1650,18 @@ ul.tabs li.active a {
     margin: 0 0.5em;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
+}
+
+.block-article-comments .rate-number-up-down-rating.negative {
     color: #B5221C;
+}
+
+.block-article-comments .rate-number-up-down-rating.neutral {
+    color: #555555;
+}
+
+.block-article-comments .rate-number-up-down-rating.positive {
+    color: #2B9217;
 }
 
 .block-article-comments .comment-body {
