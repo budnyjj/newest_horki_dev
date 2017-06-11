@@ -216,8 +216,9 @@
     background-color: #231F20;
 }
 
-.main-menu {
+.main-menu {    
     text-align: center;
+    height: 38px;
 }
 
 .main-menu li {
