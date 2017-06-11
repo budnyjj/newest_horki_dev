@@ -28,18 +28,21 @@ function horki2_preprocess_node(&$variables) {
     ->fields('jn', array('recentcount'))
     ->condition('jn.nid', $variables['nid'], '=');
   $views_count = intval($query->execute()->fetchField());
-  $views_icon = '<img src="/sites/default/files/default_images/view-icon.png" />';
-  $variables['node_views_cntr'] = '<span class="views-count">' . $views_icon . $views_count . '</span>';
+  if ($views_count > 0) {  
+    $views_icon = '<img src="/sites/default/files/default_images/view-icon.png" />';
+    $variables['node_views_cntr'] = '<span class="views-count">' . $views_icon . $views_count . '</span>';
+  }
 
   /* Comments counter */
   $comments_count = 0;
   if (isset($variables['comment_count'])) {
     $comments_count = $variables['comment_count'];
   }
-  $comments_icon = '<img src="/sites/default/files/default_images/comment-icon.png" />';	
-  $variables['node_comments_cntr'] = '<span class="comments-count">' . $comments_icon . $comments_count . '</span>';
+  if ($comments_count > 0) {
+    $comments_icon = '<img src="/sites/default/files/default_images/comment-icon.png" />';	
+    $variables['node_comments_cntr'] = '<span class="comments-count">' . $comments_icon . $comments_count . '</span>';
+  }
   
-
   /* Correct ads taxonomy links */
   $content = &$variables['content'];
   if (array_key_exists('field_ads_type', $content)) {
