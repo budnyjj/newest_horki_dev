@@ -202,7 +202,8 @@
 }
 
 /* mobile menu button block */
-.block-menu-main-mobile {
+.block-menu-mobile-anonymous-mobile,
+.block-menu-mobile-registered-mobile {
     display: none;
 }
 

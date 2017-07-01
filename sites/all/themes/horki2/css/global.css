@@ -197,10 +197,18 @@ input[type="submit"]:active {
 
 
 /* mobile menu button block */
-.block-menu-main-mobile {
+.block-menu-mobile-anonymous-mobile,
+.block-menu-mobile-registered-mobile {
     position: absolute;
     top: 0;
     right: -15px;
+}
+
+.menu-mobile-anonymous_mobile .menuitem-9 a,
+.menu-mobile-registered_mobile .menuitem-9 a {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #4D4D4D;
 }
 
 
