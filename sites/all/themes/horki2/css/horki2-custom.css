@@ -57,6 +57,9 @@
     color: #8B9298;
 }
 
+.block-27 .user-account {
+    margin-right: 20px;
+}
 
 /* search block */
 .block-custom-search-blocks-1 {
@@ -218,7 +221,6 @@
 
 .main-menu {    
     text-align: center;
-    height: 38px;
 }
 
 .main-menu li {
