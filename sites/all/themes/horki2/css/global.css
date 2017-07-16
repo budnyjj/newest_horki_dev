@@ -197,6 +197,10 @@ input[type="submit"]:active {
 
 
 /* mobile menu button block */
+.mobile-navigation-menu {
+    display: none;
+}
+
 .block-menu-mobile-anonymous-mobile,
 .block-menu-mobile-registered-mobile {
     position: absolute;
