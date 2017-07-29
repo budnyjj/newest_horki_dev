@@ -47,7 +47,7 @@ input[type="submit"] {
     border-radius: 5px;
     text-align: center;
     text-shadow: none;
-    font-family: 'LiberationSans', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-size: 1.05em;
     font-weight: normal;
     color: #FFFFFF;
@@ -248,6 +248,7 @@ input[type="submit"]:active {
     font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;
     color: #671A1D;
+    letter-spacing: 0.03em;
 }
 
 ul.tabs li {
@@ -260,7 +261,7 @@ ul.tabs li a {
     padding: 5px 1em 6px 1em;
     border-radius: 5px;
     text-align: center;
-    font-family: 'LiberationSans', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-size: 1.05em;
     color: #FFFFFF;
     background-color: #000000;
@@ -344,7 +345,13 @@ ul.tabs li.active a {
     text-transform: uppercase;
     font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;    
-    color: #671A1D;
+    letter-spacing: 0.03em;
+    color: #671A1D;    
+}
+
+.block-media-grid .header-more {
+    text-decoration: underline;
+    letter-spacing: 0.01em;
 }
 
 .block-media-grid .views-row {
@@ -379,6 +386,7 @@ ul.tabs li.active a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
+    letter-spacing: 0.02em;
 }
 
 .block-media-grid .media-title a {
@@ -429,6 +437,7 @@ ul.tabs li.active a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.5em;    
+    letter-spacing: 0.02em;
 }
 
 .page-media-grid .media-title a {
@@ -494,7 +503,7 @@ ul.tabs li.active a {
 }
 
 .page-filtered-table .views-esposed-form .form-item {
-    font-family: 'LiberationSans', sans-serif;
+    font-family: 'PTSans', sans-serif;
 }
 
 .page-filtered-table .views-exposed-form .form-text {
@@ -529,7 +538,7 @@ ul.tabs li.active a {
     margin-top: 0;
     text-align: center;
     text-shadow: none;
-    font-family: 'LiberationSans', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: normal;
     font-size: 1.05em;
     color: #FFFFFF;
@@ -631,7 +640,7 @@ ul.tabs li.active a {
 }
 
 .page-filtered-list .views-esposed-form .form-item {
-    font-family: 'LiberationSans', sans-serif;
+    font-family: 'PTSans', sans-serif;
 }
 
 .page-filtered-list .views-exposed-form .form-text {
@@ -658,7 +667,7 @@ ul.tabs li.active a {
     margin-top: 0;
     text-align: center;
     text-shadow: none;
-    font-family: 'LiberationSans', sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: normal;
     font-size: 1.05em;
     color: #FFFFFF;
@@ -696,7 +705,8 @@ ul.tabs li.active a {
     margin-bottom: 20px;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
-    font-size: 1.5em;    
+    font-size: 1.5em;   
+    letter-spacing: 0.02em;
 }
 
 .page-filtered-list .filtered-list-title a {
@@ -761,6 +771,7 @@ ul.tabs li.active a {
     font-weight: bold;
     font-size: 2em;
     color: #000000;
+    letter-spacing: 0.01em;
 }
 
 .page-main-news .main-title a:hover {
@@ -779,11 +790,11 @@ ul.tabs li.active a {
     text-transform: uppercase;
     font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;    
+    letter-spacing: 0.03em;
     color: #671A1D;
 }
 
 .attachment-last-news .views-row {
-    font-size: 1.15em;  
     padding-bottom: 15px;     
     border-bottom: 1px solid #DBDBDB;
     margin-bottom: 15px;
@@ -797,15 +808,19 @@ ul.tabs li.active a {
 
 .attachment-last-news .last-date {
     float: left;
+    margin-top: 2px;
     margin-right: 0.5em;
     font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;    
     color: #B5221C;
+    letter-spacing: 0.01em;
 }
 
 .attachment-last-news .last-title a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;    
+    font-size: 1.15em;  
+    letter-spacing: 0.01em;
     color: #000000;
 }
 
@@ -854,7 +869,8 @@ ul.tabs li.active a {
     margin-bottom: 10px;
     font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;
-    color: #B5221C;
+    letter-spacing: 0.03em;
+    color: #B5221C;    
 }
 
 .block-abvestki .views-field-title {
@@ -863,6 +879,7 @@ ul.tabs li.active a {
 
 .block-abvestki .views-field-title a {
     font-size: 1.05em;
+    letter-spacing: 0.01em;
     color: #000000;
 }
 
@@ -929,7 +946,7 @@ ul.tabs li.active a {
 .block-last-comments .views-field-title a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
-    font-size: 1.15em;
+    font-size: 1.1em;
 }
 
 
@@ -941,7 +958,7 @@ ul.tabs li.active a {
 .page-abvestki .view-header a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
-    font-size: 1.15em;
+    font-size: 1.1em;
 }
 
 .page-abvestki .views-exposed-form .views-widget-filter-field_ads_placement_tid,
@@ -987,6 +1004,7 @@ ul.tabs li.active a {
     margin: -100px 0;
     width: 86%;
     padding: 100px 7%;
+    letter-spacing: 0.02em;
     color: #000000;
 } 
 
@@ -1010,6 +1028,7 @@ ul.tabs li.active a {
     width: 70%;
     padding: 100px 30% 100px 0;
     text-decoration: none;
+    letter-spacing: 0.02em;
     color: #671A1D;
 }
 
@@ -1017,7 +1036,7 @@ ul.tabs li.active a {
 .page-companies .view-header a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
-    font-size: 1.15em;
+    font-size: 1.1em;
 }
 
 .page-companies .views-exposed-form .views-widget-filter-field_company_section_tid,
@@ -1076,7 +1095,6 @@ ul.tabs li.active a {
 }
 
 .block-last-news .views-row {
-    font-size: 1.15em;  
     padding-bottom: 15px;     
     border-bottom: 1px solid #DBDBDB;
     margin-bottom: 15px;
@@ -1089,6 +1107,7 @@ ul.tabs li.active a {
 
 .block-last-news .last-date {
     float: left;
+    margin-top: 2px;
     margin-right: 0.5em;
     font-family: 'PTSans Caption', sans-serif;
     font-weight: bold;    
@@ -1098,6 +1117,8 @@ ul.tabs li.active a {
 .block-last-news .last-title a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;    
+    font-size: 1.15em;  
+    letter-spacing: 0.01em;
     color: #000000;
 }
 
@@ -1876,5 +1897,6 @@ ul.tabs li.active a {
 .block-davedka .views-field-field-daviedka-punkt-menu a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
+    letter-spacing: 0.03em;
     color: #959595;
 }    

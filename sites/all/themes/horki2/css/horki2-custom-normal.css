@@ -67,7 +67,7 @@
 
 .zone-preview a:hover {
     text-decoration: none;
-    color: #AEAEAE;
+    color: #DFDFDF;
 }
 
 /* preview blocks */
@@ -93,6 +93,7 @@
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
+    letter-spacing: 0.03em;
 }
 
 

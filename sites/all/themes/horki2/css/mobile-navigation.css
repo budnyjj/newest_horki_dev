@@ -36,7 +36,7 @@
     width: 90%;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #FFFFFF;
 }
