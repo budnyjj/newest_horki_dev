@@ -80,7 +80,7 @@ input[type="submit"] {
 .button-black a:active,
 .item-list .pager-next a:hover,
 .item-list .pager-next a:active {
-    background-color: #181818;
+    background-color: #262626;
     text-decoration: none;
     cursor: pointer;
 }
@@ -270,7 +270,7 @@ ul.tabs li a {
 ul.tabs li a:hover,
 ul.tabs li a:active,
 ul.tabs li.active a {
-    background-color: #181818;
+    background-color: #262626;
     text-decoration: none;
 }
 
@@ -395,7 +395,7 @@ ul.tabs li.active a {
 
 .block-media-grid .media-title a:hover {
     text-decoration: none;
-    color: #555555;
+    color: #343434;
 }
 
 /* media grid page */
@@ -446,7 +446,7 @@ ul.tabs li.active a {
 
 .page-media-grid .media-title a:hover {
     text-decoration: none;
-    color: #555555;
+    color: #343434;
 }
 
 .page-media-grid .media-field {    
@@ -547,7 +547,7 @@ ul.tabs li.active a {
 }
 
 .page-filtered-table .views-exposed-form .form-submit:hover {
-    background-color: #181818;
+    background-color: #262626;
     cursor: pointer;
 }
 
@@ -676,7 +676,7 @@ ul.tabs li.active a {
 }
 
 .page-filtered-list .views-exposed-form .form-submit:hover {
-    background-color: #181818;
+    background-color: #262626;
     cursor: pointer;
 }
 
@@ -715,7 +715,7 @@ ul.tabs li.active a {
 
 .page-filtered-list .filtered-list-title a:hover {
     text-decoration: none;
-    color: #555555;
+    color: #343434;
 }
 
 .page-filtered-list .view-empty {
@@ -776,7 +776,7 @@ ul.tabs li.active a {
 
 .page-main-news .main-title a:hover {
     text-decoration: none;
-    color: #555555;
+    color: #343434;
 }
 
 /* last news */
@@ -826,7 +826,7 @@ ul.tabs li.active a {
 
 .attachment-last-news .last-title a:hover {
     text-decoration: none;
-    color: #555555;
+    color: #343434;
 }
 
 /* news by regions */
@@ -947,6 +947,7 @@ ul.tabs li.active a {
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
     font-size: 1.1em;
+    text-decoration: underline;
 }
 
 
@@ -1011,7 +1012,7 @@ ul.tabs li.active a {
 .page-abvestki .filtered-table-title a:hover,
 .page-abvestki .filtered-table-title a:active {
     text-decoration: none;
-    color: #555555;
+    color: #343434;
 } 
 
 .page-abvestki .filtered-table-price {
@@ -1124,7 +1125,7 @@ ul.tabs li.active a {
 
 .block-last-news .last-title a:hover {
     text-decoration: none;
-    color: #555555;
+    color: #343434;
 }
 
 /* sidebar banner #2 */
@@ -1667,7 +1668,7 @@ ul.tabs li.active a {
 .block-article-comments .comment-author-name a:hover,
 .block-article-comments .comment-author-name a:active {
     text-decoration: none;
-    color: #555555;
+    color: #343434;
 }
 
 .block-article-comments .comment-created {

@@ -215,6 +215,10 @@
     margin-right: 7px;
 }
 
+.icon-social:hover {
+    opacity: 0.9;
+}
+
 .icon-social-last {
     width: 31px;
     height: 31px;
@@ -272,7 +276,7 @@
 .main-menu li > a:active,
 .main-menu .active-trail a {
     text-decoration: none;
-    color: #AEAEAE;
+    color: #DFDFDF;
 }
 
 
