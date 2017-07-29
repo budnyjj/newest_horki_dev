@@ -1172,13 +1172,12 @@ ul.tabs li.active a {
     margin-bottom: 25px;
 }
 
-
 .node .field-name-body img,
 .node .field-name-body iframe,
 .node .field-name-field-text img,
 .node .field-name-field-text iframe {
     display: block;
-    margin: 0 auto;
+    margin: 35px auto;
     max-width: 100%;
 }
 
@@ -1192,6 +1191,8 @@ ul.tabs li.active a {
 .node .field-name-body .caption,
 .node .field-name-field-text .caption {
     display: block;
+    margin-top: 35px;
+    margin-bottom: 35px;
     width: 100% !important;
     height: auto !important;
     background-color: #F3F3F3;
@@ -1200,13 +1201,21 @@ ul.tabs li.active a {
 .node .field-name-body .caption p,
 .node .field-name-field-text .caption p {
     padding-top: 25px;   
-    margin-bottom: 55px;
     text-align: center;
     font-family: verdana, sans-serif;
     font-size: 0.75em;
     font-weight: normal;
     color: #959595;
     background-color: #FFFFFF;
+}
+
+.node .field-name-body .caption > img,
+.node .field-name-field-text .caption > img,
+.node .field-name-body picture > img,
+.node .field-name-field-text picture > img,
+.node .field-name-body .caption > picture,
+.node .field-name-field-text .caption > picture {
+    margin: 0px auto;
 }
 
 .node .field-name-body table,

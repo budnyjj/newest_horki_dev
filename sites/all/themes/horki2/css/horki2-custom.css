@@ -463,10 +463,20 @@
     list-style-position: outside;
 }
 
+.node .field-name-body img,
+.node .field-name-body iframe,
+.node .field-name-field-text img,
+.node .field-name-field-text iframe {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .node .field-name-body picture,
 .node .field-name-body .caption,
 .node .field-name-field-text picture,
 .node .field-name-field-text .caption {
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: -50px;
 }
 
