@@ -37,7 +37,7 @@ function image_styles_article_default_picture_mapping() {
     'breakpoints.theme.horki2.mobile_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'highlight_breakpoints_theme_horki2_mobile_narrow_1x',
+        'image_style' => 'article_breakpoints_theme_horki2_mobile_narrow_1x',
       ),
     ),
   );
