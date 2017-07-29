@@ -2,11 +2,8 @@ name = Text formats
 description = Тэкставыя фарматы
 core = 7.x
 package = Custom
-version = 7.x-2.1
-<<<<<<< HEAD
+version = 7.x-2.2
 dependencies[] = ckeditor
-=======
->>>>>>> features: update
 dependencies[] = features
 dependencies[] = filter
 dependencies[] = htmlpurifier
@@ -14,6 +11,10 @@ dependencies[] = image_resize_filter
 dependencies[] = php
 dependencies[] = picture
 dependencies[] = video_embed_field
+<<<<<<< HEAD
+dependencies[] = ckeditor
+>>>>>>> features: update
+dependencies[] = features
 features[ckeditor_profile][] = Anonymous
 features[ckeditor_profile][] = Author
 features[ckeditor_profile][] = CKEditor Global Profile
