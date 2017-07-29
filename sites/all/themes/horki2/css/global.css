@@ -905,6 +905,11 @@ ul.tabs li.active a {
     margin-right: 0.5em;
 }
 
+.block-last-comments .last-comments-author-name {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
 .block-last-comments .last-comments-author-name a {
     color: #8B9298;
 }
