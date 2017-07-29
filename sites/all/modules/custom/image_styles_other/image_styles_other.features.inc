@@ -76,17 +76,80 @@ function image_styles_other_image_default_styles() {
     ),
   );
 
-  // Exported image style: user_avatar_block.
-  $styles['user_avatar_block'] = array(
-    'label' => 'user_avatar_block',
+  // Exported image style: user_avatar_comment.
+  $styles['user_avatar_comment'] = array(
+    'label' => 'user_avatar_comment',
     'effects' => array(
-      51 => array(
+      46 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 16,
-          'height' => 16,
+          'width' => 70,
+          'height' => 70,
         ),
         'weight' => 1,
+      ),
+      47 => array(
+        'name' => 'canvasactions_roundedcorners',
+        'data' => array(
+          'radius' => 35,
+          'independent_corners_set' => array(
+            'independent_corners' => 0,
+            'radii' => array(
+              'tl' => 0,
+              'tr' => 0,
+              'bl' => 0,
+              'br' => 0,
+            ),
+          ),
+        ),
+        'weight' => 2,
+      ),
+      48 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/png',
+          'quality' => 75,
+        ),
+        'weight' => 3,
+      ),
+    ),
+  );
+
+  // Exported image style: user_avatar_comment_block.
+  $styles['user_avatar_comment_block'] = array(
+    'label' => 'user_avatar_comment_block',
+    'effects' => array(
+      66 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 25,
+          'height' => 25,
+        ),
+        'weight' => 1,
+      ),
+      67 => array(
+        'name' => 'canvasactions_roundedcorners',
+        'data' => array(
+          'radius' => 13,
+          'independent_corners_set' => array(
+            'independent_corners' => 0,
+            'radii' => array(
+              'tl' => 0,
+              'tr' => 0,
+              'bl' => 0,
+              'br' => 0,
+            ),
+          ),
+        ),
+        'weight' => 2,
+      ),
+      68 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/png',
+          'quality' => 75,
+        ),
+        'weight' => 3,
       ),
     ),
   );
@@ -100,6 +163,21 @@ function image_styles_other_image_default_styles() {
         'data' => array(
           'width' => 16,
           'height' => 16,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: user_avatar_page.
+  $styles['user_avatar_page'] = array(
+    'label' => 'user_avatar_page',
+    'effects' => array(
+      31 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 150,
+          'height' => 150,
         ),
         'weight' => 1,
       ),

@@ -173,9 +173,9 @@ function views_last_comments_views_default_views() {
   $handler->display->display_options['fields']['picture']['alter']['path'] = 'user/[uid]';
   $handler->display->display_options['fields']['picture']['element_class'] = 'last-comments-author-avatar';
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['picture']['empty'] = '<a href=/user/[uid]><img src="/sites/default/files/icons/default-avatar-small.png" width="16" height="16" /></a>';
+  $handler->display->display_options['fields']['picture']['empty'] = '<a href=/user/[uid]><img src="/sites/default/files/default_images/default-avatar-medium.png" width="25" height="25" /></a>';
   $handler->display->display_options['fields']['picture']['link_photo_to_profile'] = FALSE;
-  $handler->display->display_options['fields']['picture']['image_style'] = 'user_avatar_block';
+  $handler->display->display_options['fields']['picture']['image_style'] = 'user_avatar_comment_block';
   /* Поле: Каментар: Аўтар */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'comment';
@@ -439,7 +439,7 @@ re: [title]';
     t('Больш каментаў'),
     t('author'),
     t('.'),
-    t('<a href=/user/[uid]><img src="/sites/default/files/icons/default-avatar-small.png" width="16" height="16" /></a>'),
+    t('<a href=/user/[uid]><img src="/sites/default/files/default_images/default-avatar-medium.png" width="25" height="25" /></a>'),
     t('Старонка апошніх каментароў'),
     t('болей'),
     t('Items per page'),
