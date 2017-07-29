@@ -419,6 +419,10 @@
     margin-left: 24px;
 }
 
+.page-main-news > .attachment .view-content {
+    min-height: 459px;
+}
+
 .page-main-news > .attachment .views-row {
     margin-top: 0;
 }
