@@ -16,7 +16,15 @@
 
 .zone-header-banner-wrapper {
     display: block;
-    background-color: grey;
+}
+
+.zone-header-banner {
+    width: 100% !important;
+}
+
+.region-header-banner {
+    width: 100% !important;
+    margin: 0 !important;
 }
 
 
