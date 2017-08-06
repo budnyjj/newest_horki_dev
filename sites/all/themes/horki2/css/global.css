@@ -873,6 +873,15 @@ ul.tabs li.active a {
     color: #B5221C;    
 }
 
+.block-abvestki ul {
+    margin: 0;
+}
+
+.block-abvestki li.views-row {
+    margin: 0 0 0 1.2em;
+    list-style: disc;
+}
+
 .block-abvestki .views-field-title {
     margin-bottom: 10px;
 }
