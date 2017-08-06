@@ -110,13 +110,13 @@ function text_formats_filter_default_formats() {
     'status' => 1,
     'weight' => -10,
     'filters' => array(
-      'picture' => array(
-        'weight' => 0,
+      'video_embed_field' => array(
+        'weight' => -41,
         'status' => 1,
         'settings' => array(),
       ),
-      'video_embed_field' => array(
-        'weight' => 1,
+      'picture' => array(
+        'weight' => -40,
         'status' => 1,
         'settings' => array(),
       ),

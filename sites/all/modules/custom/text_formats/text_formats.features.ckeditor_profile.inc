@@ -54,7 +54,7 @@ function text_formats_ckeditor_profile_defaults() {
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/',
         'UserFilesAbsolutePath' => '%d%b%f/',
-        'forcePasteAsPlainText' => 'f',
+        'forcePasteAsPlainText' => 't',
         'html_entities' => 't',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
