@@ -42,10 +42,16 @@ input {
 }
 
 /* button styles */
+.item-list .pager li {
+    padding: 0;
+    margin: 0 1.2em;
+}
+
 .more-link a,
 .button-black a,
 .button-red a,
-.item-list .pager-next a,
+.item-list .pager a,
+.item-list li.pager-current,
 input[type="submit"] {
     padding: 5px 1em 6px 1em;
     border-width: 0;
@@ -61,7 +67,7 @@ input[type="submit"] {
 .more-link a,
 .button-black a,
 .button-red a,
-.item-list .pager-next a {
+.item-list .pager-load-more a {
     display: block;
     margin: 0 auto 8px auto;
     width: 120px;
@@ -69,7 +75,7 @@ input[type="submit"] {
 
 .more-link a,
 .button-black a,
-.item-list .pager-next a {
+.item-list .pager a {
     background-color: #000000;
 }
 
@@ -83,8 +89,9 @@ input[type="submit"] {
 .more-link a:active,
 .button-black a:hover,
 .button-black a:active,
-.item-list .pager-next a:hover,
-.item-list .pager-next a:active {
+.item-list .pager a:hover,
+.item-list .pager a:active,
+.item-list li.pager-current {
     background-color: #262626;
     text-decoration: none;
     cursor: pointer;
@@ -599,7 +606,7 @@ ul.tabs li.active a {
 }
 
 .page-filtered-table .view-empty {
-    margin: 0 50px 10px 50px;
+    margin-bottom: 10px;
     padding: 20px 50px;
     background-color: #FFCCCB;
 }
@@ -724,7 +731,7 @@ ul.tabs li.active a {
 }
 
 .page-filtered-list .view-empty {
-    margin: 0 50px 10px 50px;
+    margin-bottom: 10px;
     padding: 20px 50px;
     background-color: #FFCCCB;
 }
@@ -968,6 +975,65 @@ ul.tabs li.active a {
 /**
  * Custom Inner views styles
  */
+
+/* search page */
+.page-search .block-main ul {
+    padding: 20px 50px;
+    margin-bottom: 10px;
+    background-color: #FFCCCB;
+}
+
+.page-search .block-main li {
+    margin: 0 0 10px 1.2em; 
+}
+
+.page-search .block-main h2 {
+    display: none;
+}
+
+.page-search .search-form {    
+    margin-bottom: 30px;
+    border-bottom: #dbdbdb 1px solid;
+}
+
+.page-search .form-wrapper {
+    overflow: auto;
+    padding-bottom: 15px;
+}
+
+.page-search .form-item-keys {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.page-search .form-item-keys label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+.page-search .form-item-keys #edit-keys {
+    display: block;
+    width: 100%;
+    height: 35px;
+}
+
+.page-search #edit-submit {
+    display: block;
+    width: 97px;
+    height: 35px;
+    margin: 30px 0 20px 0;
+}
+
+.page-search .block-main ul.pager {
+    background-color: initial;
+}
+
 
 /* abvestki page */
 .page-abvestki .view-header a {
