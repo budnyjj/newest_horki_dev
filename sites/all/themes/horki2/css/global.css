@@ -36,6 +36,11 @@ a:hover {
   margin-right: -15px;
 }
 
+/* field styles */
+input {
+    max-width: 100%;
+}
+
 /* button styles */
 .more-link a,
 .button-black a,
