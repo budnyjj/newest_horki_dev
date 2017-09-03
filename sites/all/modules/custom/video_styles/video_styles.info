@@ -1,0 +1,9 @@
+name = Video styles
+description = Стылі паказу відэа
+core = 7.x
+package = Custom
+version = 7.x-1.0
+dependencies[] = ctools
+features[ctools][] = video_embed_field:default_video_embed_styles:1
+features[features_api][] = api:2
+features_exclude[dependencies][video_embed_field] = video_embed_field

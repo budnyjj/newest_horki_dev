@@ -524,6 +524,19 @@
     padding: 45px 120px 0 120px;
 }
 
+.node .field-name-body .embedded-video,
+.node .field-name-field-text .embedded-video {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: -50px;
+    width: 894px;   
+}
+
+.node .field-name-body .videoplayer,
+.node .field-name-field-text .videoplayer {
+    height: 670px;
+}
+
 .node .text-chapter {
     margin: 75px 0 30px 0;
 }
@@ -579,10 +592,6 @@
 .node-company .group-info {
     margin-left: 50px;
     width: 538px;
-}
-
-.node .videoplayer {
-    height: 635px;    
 }
 
 /* local solution node */
