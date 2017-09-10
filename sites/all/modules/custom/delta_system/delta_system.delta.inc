@@ -11,10 +11,10 @@ function delta_system_delta_default_templates() {
   $export = array();
 
   $delta = new stdClass();
-  $delta->disabled = FALSE; /* Edit this to true to make a default delta disabled initially */
+  $delta->disabled = TRUE; /* Edit this to true to make a default delta disabled initially */
   $delta->api_version = 3;
   $delta->machine_name = 'uzhorak';
-  $delta->name = 'horki_system';
+  $delta->name = 'system';
   $delta->description = 'Шаблон сайта без калонак';
   $delta->theme = 'dev';
   $delta->mode = 'preserve';

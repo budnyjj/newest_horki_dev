@@ -11,10 +11,10 @@ function delta_map_local_problems_delta_default_templates() {
   $export = array();
 
   $delta = new stdClass();
-  $delta->disabled = FALSE; /* Edit this to true to make a default delta disabled initially */
+  $delta->disabled = TRUE; /* Edit this to true to make a default delta disabled initially */
   $delta->api_version = 3;
   $delta->machine_name = 'map_local_problems';
-  $delta->name = 'horki_map_local_problems';
+  $delta->name = 'map_local_problems';
   $delta->description = 'Шаблон сайта без калонак, але з дадатковымі рэгіёнамі над і пад асноўным кантэнтам';
   $delta->theme = 'dev';
   $delta->mode = 'preserve';

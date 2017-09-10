@@ -815,6 +815,7 @@ ul.tabs li.active a {
 .page-main-news .main-title {
     margin: 0 15px;
     padding-bottom: 15px;
+    overflow: hidden;
 }
 
 .page-main-news .main-title a {
@@ -1980,7 +1981,7 @@ ul.tabs li.active a {
 
 .block-davedka .quicktabs-tabs li a:hover,
 .block-davedka .quicktabs-tabs li.active a {
-    background-color: #959595;
+    background-color: #262626;
     text-decoration: none;
     cursor: pointer;
 }
