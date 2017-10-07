@@ -360,6 +360,18 @@
     padding: 20px 50px;    
 }
 
+/* list page */
+.page-list .list-photo {
+    float: left;
+    margin-right: 24px;
+    margin-bottom: 0;
+}
+
+.page-list .list-title {
+    margin: -5px 100px 20px 0;
+}
+
+
 /* filtered list page */
 .page-filtered-list .view-header {
     margin: 0 50px 15px 50px;
@@ -373,22 +385,6 @@
 
 .page-filtered-list .views-exposed-form .form-submit {
     margin-top: 30px;
-}
-
-.page-filtered-list .filtered-list-photo {
-    float: left;
-    margin-right: 24px;
-    margin-bottom: 0;
-}
-
-.page-filtered-list .filtered-list-statistics {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.page-filtered-list .filtered-list-title {
-    margin: -5px 100px 20px 0;
 }
 
 
@@ -463,6 +459,26 @@
     clear: none;
 }
 
+/* uzgorak page */
+.attachment-uzgorak .view-header {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.page-uzgorak .attachment-uzgorak .list-title,
+.page-uzgorak .attachment-uzgorak .list-description {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.attachment-uzgorak .list-description {
+    margin-bottom: 30px;
+}
+
+.attachment-uzgorak .views-field-field-pdf #pdf_reader {    
+    height: 670px;
+}
+
 /* companies page */
 .page-companies .views-exposed-form .views-widget-filter-field_company_section_tid {
     width: 200px;
@@ -470,6 +486,12 @@
 
 .page-companies .views-exposed-form .views-widget-filter-body_value { 
     width: 345px;
+}
+
+.page-companies .company-rate {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 
@@ -522,6 +544,10 @@
 .node .field-name-body .caption > p,
 .node .field-name-field-text .caption > p {
     padding: 45px 120px 0 120px;
+}
+
+.node .field-name-field-pdf #pdf_reader {
+    height: 670px;
 }
 
 .node .field-name-body .embedded-video,

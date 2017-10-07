@@ -97,10 +97,10 @@ function content_type_static_field_default_field_instances() {
         'settings' => array(
           'colorbox' => 0,
           'colorbox_link_text' => '',
-          'download' => 1,
-          'pdf_height' => 700,
+          'download' => 0,
+          'pdf_height' => '',
           'pdf_width' => '100%',
-          'renderer' => 'google',
+          'renderer' => 'direct',
         ),
         'type' => 'pdf_reader_file',
         'weight' => 1,

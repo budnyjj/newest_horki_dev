@@ -1,0 +1,15 @@
+name = Image styles: mediagrid-uzgorak
+description = Набор стыляў малюнкаў для старонкі архіва УзГоркаў
+core = 7.x
+package = Custom
+version = 7.x-1.1
+dependencies[] = ctools
+dependencies[] = image
+dependencies[] = picture
+features[ctools][] = picture:default_picture_mapping:2
+features[features_api][] = api:2
+features[image][] = mediagrid-uzgorak_breakpoints_theme_horki2_desktop_narrow_1x
+features[image][] = mediagrid-uzgorak_breakpoints_theme_horki2_desktop_normal_1x
+features[image][] = mediagrid-uzgorak_breakpoints_theme_horki2_mobile_narrow_1x
+features[image][] = mediagrid-uzgorak_breakpoints_theme_horki2_mobile_normal_1x
+features[picture_mapping][] = mediagrid_uzgorak
