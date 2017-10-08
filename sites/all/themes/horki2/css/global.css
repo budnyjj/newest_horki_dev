@@ -1183,7 +1183,7 @@ ul.tabs li.active a {
 }
 
 .attachment-uzgorak .views-field-field-pdf #pdf_reader {    
-    height: 320px;
+    height: 480px; /* ~360 * sqrt(2) */
 }
 
 /* companies page */
@@ -1892,10 +1892,14 @@ ul.tabs li.active a {
 }
 
 
-
 /**
  * Custom Inner nodes styles
  */
+
+/* uzgorak node */
+.node-uzgorak .field-name-field-pdf #pdf_reader {
+    height: 480px; /* ~360 * sqrt(2) */
+}
 
 /* company node */
 .node-company .rate-widget {

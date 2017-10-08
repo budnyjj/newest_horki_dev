@@ -476,7 +476,7 @@
 }
 
 .attachment-uzgorak .views-field-field-pdf #pdf_reader {    
-    height: 670px;
+    height: 1300px;
 }
 
 /* companies page */
@@ -597,6 +597,11 @@
 .page-search .form-item-keys {
     width: 675px;
     padding-right: 20px;
+}
+
+/* uzgorak node */
+.node-uzgorak .field-name-field-pdf #pdf_reader {
+    height: 1300px;
 }
 
 /* company node */
