@@ -135,7 +135,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -168,7 +168,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'list-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Змест */
+  /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -360,8 +360,8 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['header']['area']['label'] = 'Апісанне';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = '<div class="description">
-<strong>Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.</strong>
-Наклад – 1850 асобнікаў на тыдзень.
+<strong>Газета "УзГорак" – маленькая газета з вялікай колькасцю навінаў!</strong> Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.
+Наклад – 2100 асобнікаў на тыдзень.
 Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды,
 <a href="/abvestki.html" target="_blank">прыватныя аб\'явы</a>, астрапрагноз і віншаванні.
 </div>';
@@ -377,7 +377,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'list-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Змест */
+  /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -462,8 +462,8 @@ function views_uzgorak_views_default_views() {
     t('Скачаць PDF'),
     t('Дадатак'),
     t('<div class="description">
-<strong>Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.</strong>
-Наклад – 1850 асобнікаў на тыдзень.
+<strong>Газета "УзГорак" – маленькая газета з вялікай колькасцю навінаў!</strong> Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.
+Наклад – 2100 асобнікаў на тыдзень.
 Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды,
 <a href="/abvestki.html" target="_blank">прыватныя аб\'явы</a>, астрапрагноз і віншаванні.
 </div>'),

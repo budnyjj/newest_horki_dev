@@ -73,7 +73,6 @@ function views_companies_views_default_views() {
   $handler->display->display_options['relationships']['votingapi_cache']['id'] = 'votingapi_cache';
   $handler->display->display_options['relationships']['votingapi_cache']['table'] = 'node';
   $handler->display->display_options['relationships']['votingapi_cache']['field'] = 'votingapi_cache';
-  $handler->display->display_options['relationships']['votingapi_cache']['required'] = TRUE;
   $handler->display->display_options['relationships']['votingapi_cache']['votingapi'] = array(
     'value_type' => 'percent',
     'tag' => 'rate',
@@ -119,7 +118,7 @@ function views_companies_views_default_views() {
     'image_style' => 'photo_video_preview',
     'image_link' => 'content',
   );
-  /* Поле: Змест: Змест */
+  /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -186,7 +185,7 @@ function views_companies_views_default_views() {
   );
   $handler->display->display_options['filters']['field_company_section_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_company_section_tid']['vocabulary'] = 'company_catalog';
-  /* Filter criterion: Змест: Змест (body) */
+  /* Filter criterion: Змест: Апісанне (body) */
   $handler->display->display_options['filters']['body_value']['id'] = 'body_value';
   $handler->display->display_options['filters']['body_value']['table'] = 'field_data_body';
   $handler->display->display_options['filters']['body_value']['field'] = 'body_value';
@@ -278,7 +277,7 @@ function views_companies_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'list-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Змест */
+  /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
