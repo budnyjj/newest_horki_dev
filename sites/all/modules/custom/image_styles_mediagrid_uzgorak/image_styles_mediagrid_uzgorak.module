@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Image styles: mediagrid-uzgorak feature.
- */
-
-include_once 'image_styles_mediagrid_uzgorak.features.inc';
