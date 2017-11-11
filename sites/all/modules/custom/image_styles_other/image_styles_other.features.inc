@@ -188,12 +188,11 @@ function image_styles_other_image_default_styles() {
   $styles['uzgorak_preview'] = array(
     'label' => 'uzgorak_preview',
     'effects' => array(
-      30 => array(
-        'name' => 'image_scale',
+      43 => array(
+        'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 100,
-          'height' => 142,
-          'upscale' => 0,
+          'width' => 170,
+          'height' => 240,
         ),
         'weight' => 1,
       ),
