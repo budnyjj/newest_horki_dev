@@ -284,7 +284,7 @@
 .main-menu li > a:active,
 .main-menu .active-trail a {
     text-decoration: none;
-    color: #DFDFDF;
+    color: #AEAEAE;
 }
 
 
@@ -465,18 +465,34 @@
     margin-right: 50px;
 }
 
-.page-uzgorak .attachment-uzgorak .list-title,
-.page-uzgorak .attachment-uzgorak .list-description {
+.attachment-uzgorak .uzgorak-title,
+.attachment-uzgorak .uzgorak-description,
+.attachment-uzgorak .uzgorak-links {
     margin-left: 50px;
     margin-right: 50px;
 }
 
-.attachment-uzgorak .list-description {
-    margin-bottom: 30px;
+.attachment-uzgorak .uzgorak-title {
+    margin-bottom: 20px;
 }
 
 .attachment-uzgorak .views-field-field-pdf #pdf_reader {    
     height: 1300px;
+}
+
+.page-uzgorak > .view-content .views-row {
+    overflow: auto;
+}
+
+.page-uzgorak > .view-content .uzgorak-photo {
+    float: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 0;
+}
+
+.page-uzgorak > .view-content .uzgorak-title {
+    margin: -5px 0 20px 0;
 }
 
 /* companies page */

@@ -41,9 +41,10 @@
     color: #FFFFFF;
 }
 
-.mobile-menu li a:hover {
+.mobile-menu li a:hover,
+.mobile-menu li a:active {
     text-decoration: none;
-    color: #DFDFDF;
+    color: #AEAEAE;
 }
 
 .slide-menu-clip .mobile-menu .return-link {
