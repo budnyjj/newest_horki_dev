@@ -105,7 +105,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Архіў газеты "УзГорак"';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'page-list page-uzgorak';
+  $handler->display->display_options['css_class'] = 'page-uzgorak';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -135,28 +135,17 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'list-photo';
+  $handler->display->display_options['fields']['field_pics']['element_class'] = 'uzgorak-photo';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid_uzgorak',
-    'fallback_image_style' => '',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'image_style' => 'uzgorak_preview',
     'image_link' => 'content',
-    'colorbox_settings' => array(
-      'colorbox_group' => 'highlight',
-      'colorbox_gallery' => 'post',
-      'colorbox_gallery_custom' => '',
-      'colorbox_caption' => 'auto',
-      'colorbox_caption_custom' => '',
-    ),
   );
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -166,16 +155,17 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'list-title';
+  $handler->display->display_options['fields']['title']['element_class'] = 'uzgorak-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Апісанне */
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Поле: Змест: Змест */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<ul> <li> <strong> <b>';
-  $handler->display->display_options['fields']['body']['element_class'] = 'list-description';
+  $handler->display->display_options['fields']['body']['element_class'] = 'uzgorak-description';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'smart_trim_format';
   $handler->display->display_options['fields']['body']['settings'] = array(
@@ -201,16 +191,25 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['field_pdf']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pdf']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pdf']['type'] = 'file_url_plain';
-  /* Поле: Скачаць PDF */
+  /* Поле: Глядзець онлайн */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['ui_name'] = 'Глядзець онлайн';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = 'Глядзець онлайн';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  /* Поле: Спасылкі */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Скачаць PDF';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Спасылкі';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Скачаць PDF';
-  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['nothing']['alter']['path'] = '[field_pdf]';
-  $handler->display->display_options['fields']['nothing']['element_class'] = 'rich-link, bold-text, uzgorak-link';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[field_pdf]">Скачаць PDF</a>
+[view_node]';
+  $handler->display->display_options['fields']['nothing']['element_class'] = 'uzgorak-links';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -360,10 +359,9 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['header']['area']['label'] = 'Апісанне';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = '<div class="description">
-<strong>Газета "УзГорак" – маленькая газета з вялікай колькасцю навінаў!</strong> Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.
-Наклад – 2100 асобнікаў на тыдзень.
-Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды,
-<a href="/abvestki.html" target="_blank">прыватныя аб\'явы</a>, астрапрагноз і віншаванні.
+<strong>Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.</strong>
+Наклад – 1850 асобнікаў на тыдзень.
+Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды, прыватныя аб\'явы, астрапрагноз і віншаванні.
 </div>';
   $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -375,31 +373,9 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'list-title';
+  $handler->display->display_options['fields']['title']['element_class'] = 'uzgorak-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Апісанне */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<p> <ul> <li> <strong>';
-  $handler->display->display_options['fields']['body']['element_class'] = 'list-description';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'smart_trim_format';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_link' => '0',
-    'trim_length' => '600',
-    'trim_type' => 'chars',
-    'trim_suffix' => '',
-    'more_link' => '0',
-    'more_text' => 'Read more',
-    'summary_handler' => 'full',
-    'trim_options' => array(
-      'text' => 0,
-    ),
-    'trim_preserve_tags' => '',
-  );
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Поле: Змест: PDF */
   $handler->display->display_options['fields']['field_pdf']['id'] = 'field_pdf';
   $handler->display->display_options['fields']['field_pdf']['table'] = 'field_data_field_pdf';
@@ -416,6 +392,60 @@ function views_uzgorak_views_default_views() {
     'colorbox' => 0,
     'colorbox_link_text' => 'Глядзець',
   );
+  /* Поле: Змест: Змест */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<p> <ul> <li> <strong>';
+  $handler->display->display_options['fields']['body']['element_class'] = 'uzgorak-description';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'smart_trim_format';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_link' => '0',
+    'trim_length' => '600',
+    'trim_type' => 'chars',
+    'trim_suffix' => '',
+    'more_link' => '0',
+    'more_text' => 'Read more',
+    'summary_handler' => 'full',
+    'trim_options' => array(
+      'text' => 0,
+    ),
+    'trim_preserve_tags' => '',
+  );
+  /* Поле: Сырая спасылка */
+  $handler->display->display_options['fields']['field_pdf_1']['id'] = 'field_pdf_1';
+  $handler->display->display_options['fields']['field_pdf_1']['table'] = 'field_data_field_pdf';
+  $handler->display->display_options['fields']['field_pdf_1']['field'] = 'field_pdf';
+  $handler->display->display_options['fields']['field_pdf_1']['ui_name'] = 'Сырая спасылка';
+  $handler->display->display_options['fields']['field_pdf_1']['label'] = '';
+  $handler->display->display_options['fields']['field_pdf_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_pdf_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pdf_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pdf_1']['type'] = 'file_url_plain';
+  /* Поле: Глядзець онлайн */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['ui_name'] = 'Глядзець онлайн';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Глядзець онлайн';
+  /* Поле: Спасылкі */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Спасылкі';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[field_pdf_1]">Скачаць PDF</a>
+[view_node]';
+  $handler->display->display_options['fields']['nothing']['alter']['path'] = '[field_pdf_1]';
+  $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
+  $handler->display->display_options['fields']['nothing']['element_class'] = 'uzgorak-links';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -459,14 +489,17 @@ function views_uzgorak_views_default_views() {
     t('Page'),
     t('Архіў газеты "УзГорак"'),
     t('больш "Узгоркаў"'),
-    t('Скачаць PDF'),
+    t('Глядзець онлайн'),
+    t('<a href="[field_pdf]">Скачаць PDF</a>
+[view_node]'),
     t('Дадатак'),
     t('<div class="description">
-<strong>Газета "УзГорак" – маленькая газета з вялікай колькасцю навінаў!</strong> Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.
-Наклад – 2100 асобнікаў на тыдзень.
-Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды,
-<a href="/abvestki.html" target="_blank">прыватныя аб\'явы</a>, астрапрагноз і віншаванні.
+<strong>Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.</strong>
+Наклад – 1850 асобнікаў на тыдзень.
+Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды, прыватныя аб\'явы, астрапрагноз і віншаванні.
 </div>'),
+    t('<a href="[field_pdf_1]">Скачаць PDF</a>
+[view_node]'),
   );
   $export['uzgorak'] = $view;
 
