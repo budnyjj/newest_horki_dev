@@ -510,6 +510,12 @@
     right: 0;
 }
 
+/* map of local problems */
+.page-problems .block-openlayers-plus {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 
 /**
  * Common Inner nodes styles
@@ -639,6 +645,13 @@
 .node-company .group-info {
     margin-left: 50px;
     width: 538px;
+}
+
+/* local problem node */
+.node-local-problem .field-name-field-problem-status,
+.node-local-problem .field-name-field-address {
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 /* local solution node */

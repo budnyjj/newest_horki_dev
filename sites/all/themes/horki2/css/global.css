@@ -909,7 +909,6 @@ ul.tabs li.active a {
     padding: 20px;
 }
 
-
 /* sidebar abvestki */
 .block-ads-block-1 {
     margin-bottom: 20px;
@@ -1330,6 +1329,133 @@ ul.tabs li.active a {
 .block-56 .block-inner {
     border: 1px solid #DBDBDB;
     padding: 20px;
+}
+
+/* map of local problems */
+.page-problems .block-openlayers-plus {
+    margin-bottom: 20px;
+}
+
+.page-problems .layers-title {
+    display: none;
+}
+
+.page-problems .layers-content .form-item {    
+    display: inline-block;
+    margin: 0 1.4em 0 0;
+}
+
+.page-problems .layers-content .form-checkbox {
+    margin-right: 0.25em;
+}
+
+.page-problems .layers-content label.option {    
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.page-problems .layers-content .form-item:nth-child(1) label {  
+    color: #338344;
+}  
+
+.page-problems .layers-content .form-item:nth-child(2) label {  
+    color: #671A1D;
+}  
+
+.page-problems .block-main {
+    margin-bottom: 20px;
+}
+
+.page-problems .block-local-problems-block-4 .block-title {
+    color: #338344;
+} 
+
+.page-problems .block-knowledge-base-block-1 .block-title {
+    color: #000000;
+} 
+
+/* problems blocks */
+.block-local-problems-block-1,
+.block-local-problems-block-3,
+.block-local-problems-block-4 {
+    margin-bottom: 20px;
+}
+
+.block-local-problems-block-1 .block-inner,
+.block-local-problems-block-3 .block-inner,
+.block-local-problems-block-4 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
+.block-local-problems .view-content {
+    margin-bottom: 25px;
+}
+
+.block-local-problems .views-row {
+    margin-bottom: 10px;
+}
+
+.block-local-problems .views-field-field-taxonomy-pic {
+    margin-right: 10px;
+}
+
+.block-local-problems .views-field-title {
+    width: 200px;
+}
+
+.block-local-problems .views-field-field-taxonomy-pic,
+.block-local-problems .views-field-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.block-local-problems .views-field-title a {
+    font-size: 1.05em;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+/* solutions block */
+.block-knowledge-base-block-1 {
+    margin-bottom: 20px;
+}
+
+.block-knowledge-base-block-1 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
+.block-local-solutions .view-content {
+    margin-bottom: 25px;
+}
+
+.block-local-solutions h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'PTSans Caption', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    color: #B5221C;    
+}
+
+.block-local-solutions ul {
+    margin: 0;
+}
+
+.block-local-solutions li.views-row {
+    margin: 0 0 0 1.2em;
+    list-style: disc;
+}
+
+.block-local-solutions .views-field-title {
+    margin-bottom: 10px;
+}
+
+.block-local-solutions .views-field-title a {
+    font-size: 1.05em;
+    letter-spacing: 0.01em;
+    color: #000000;
 }
 
 
@@ -1983,14 +2109,30 @@ ul.tabs li.active a {
     vertical-align: top;
 }
 
+/* local problem node */
+.node-local-problem .field-name-field-problem-status,
+.node-local-problem .field-name-field-address {
+    font-size: 1.15em;
+    margin-bottom: 20px;
+}
+
+.node-local-problem .field-name-field-problem-status .field-item {
+    text-transform: lowercase;
+}
+
+.node .field-name-field-this-problem-on-map {
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
 /* local solution node */
 .node-local-solution .group-info {
     font-size: 1.2em;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .node-local-solution .group-info .field {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .node-local-solution .group-info .field-label {
