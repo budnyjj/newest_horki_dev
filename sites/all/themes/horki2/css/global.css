@@ -1209,7 +1209,7 @@ ul.tabs li.active a {
 }
 
 .attachment-uzgorak .uzgorak-links {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .page-uzgorak > .view-content .views-row {
@@ -1342,11 +1342,11 @@ ul.tabs li.active a {
 
 .page-problems .layers-content .form-item {    
     display: inline-block;
-    margin: 0 1.4em 0 0;
+    margin: 0 2em 0 0;
 }
 
 .page-problems .layers-content .form-checkbox {
-    margin-right: 0.25em;
+    margin-right: 0.5em;
 }
 
 .page-problems .layers-content label.option {    

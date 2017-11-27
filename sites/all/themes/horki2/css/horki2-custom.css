@@ -476,8 +476,16 @@
     margin-bottom: 20px;
 }
 
+.attachment-uzgorak .views-field-field-pdf {    
+    margin-bottom: 45px;
+}
+
 .attachment-uzgorak .views-field-field-pdf #pdf_reader {    
     height: 1300px;
+}
+
+.attachment-uzgorak .uzgorak-links {
+    margin-bottom: 45px;
 }
 
 .page-uzgorak > .view-content .views-row {
@@ -492,7 +500,7 @@
 }
 
 .page-uzgorak > .view-content .uzgorak-title {
-    margin: -5px 0 20px 0;
+    margin: 20px 0;
 }
 
 /* companies page */
@@ -514,6 +522,11 @@
 .page-problems .block-openlayers-plus {
     margin-left: 50px;
     margin-right: 50px;
+    margin-bottom: 45px;
+}
+
+.page-problems .block-main {
+    margin-bottom: 45px;
 }
 
 
