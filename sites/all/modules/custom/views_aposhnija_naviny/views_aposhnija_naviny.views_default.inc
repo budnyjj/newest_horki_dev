@@ -182,6 +182,11 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Змест: Месцы (field_placement_by_taxonomy) */
+  $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
+  $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
+  $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Шлях */
   $handler->display->display_options['fields']['path']['id'] = 'path';
@@ -213,6 +218,34 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = ' ';
+  /* Поле: Фота па змоўчанні */
+  $handler->display->display_options['fields']['field_default_image']['id'] = 'field_default_image';
+  $handler->display->display_options['fields']['field_default_image']['table'] = 'field_data_field_default_image';
+  $handler->display->display_options['fields']['field_default_image']['field'] = 'field_default_image';
+  $handler->display->display_options['fields']['field_default_image']['relationship'] = 'field_placement_by_taxonomy_tid';
+  $handler->display->display_options['fields']['field_default_image']['ui_name'] = 'Фота па змоўчанні';
+  $handler->display->display_options['fields']['field_default_image']['label'] = '';
+  $handler->display->display_options['fields']['field_default_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_default_image']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_default_image']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_default_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_default_image']['empty'] = '<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>';
+  $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_default_image']['settings'] = array(
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => '',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
+    'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'davedka',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
+  );
   /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
@@ -220,7 +253,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['label'] = '';
   $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>';
+  $handler->display->display_options['fields']['field_pics']['empty'] = '[field_default_image]';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
@@ -901,11 +934,13 @@ function views_aposhnija_naviny_views_default_views() {
     t('‹ папярэдняя'),
     t('наступная ›'),
     t('апошняя »'),
+    t('term from field_placement_by_taxonomy'),
     t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
     t('.'),
     t(' '),
     t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>'),
+    t('[field_default_image]'),
     t('<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
