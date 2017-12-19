@@ -1374,6 +1374,12 @@ ul.tabs li.active a {
     color: #000000;
 } 
 
+.page-map-local-problems .problem-title {
+    font-size: 1.1em;
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+}
+
 /* problems blocks */
 .block-local-problems-block-1,
 .block-local-problems-block-3,
