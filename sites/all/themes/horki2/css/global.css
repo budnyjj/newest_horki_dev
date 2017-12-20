@@ -2260,3 +2260,39 @@ ul.tabs li.active a {
     letter-spacing: 0.03em;
     color: #959595;
 }    
+
+/**
+ * Common node form styles 
+ */
+
+.node-form legend {
+    font-weight: bold;
+}
+
+.node-form .description,
+.node-form .fieldset-description {
+    font-size: 0.85em;
+}
+
+
+/**
+ * Custom node form styles 
+ */
+
+/* Add local problem form */
+.node-local_problem-form .local-problems-help-link {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.node-local_problem-form .form-wrapper {
+    margin: 1em 0;
+}
+
+.node-local_problem-form #edit-field-text-und-0-format {
+    display: none;
+}
+
+.node-local_problem-form .vertical-tabs {
+    display: none;
+}
