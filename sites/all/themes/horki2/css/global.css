@@ -1407,7 +1407,8 @@ ul.tabs li.active a {
 }
 
 .block-local-problems .views-field-title {
-    width: 200px;
+    width: 75%;
+    min-width: 200px;
 }
 
 .block-local-problems .views-field-field-taxonomy-pic,
