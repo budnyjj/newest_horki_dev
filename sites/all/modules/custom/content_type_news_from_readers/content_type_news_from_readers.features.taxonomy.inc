@@ -13,7 +13,7 @@ function content_type_news_from_readers_taxonomy_default_vocabularies() {
       'name' => 'Месцы',
       'machine_name' => 'places',
       'description' => 'Геапазіцыяванне падзей',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
     ),

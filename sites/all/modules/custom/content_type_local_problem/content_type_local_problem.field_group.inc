@@ -53,7 +53,7 @@ function content_type_local_problem_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Мапа - адзначце на ёй месца, дзе знаходзіцца праблема',
-    'weight' => '1',
+    'weight' => '3',
     'children' => array(
       0 => 'field_problem_map',
       1 => 'field_this_problem_on_map',

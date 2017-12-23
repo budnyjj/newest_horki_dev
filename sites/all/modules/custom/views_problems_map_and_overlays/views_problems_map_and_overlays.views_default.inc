@@ -77,21 +77,6 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Загаловак: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['label'] = 'Дадаць праблему';
-  $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<?php 
-global $user;
-?>
-
-<a class="rich-link bold-text" 
-href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/problems/anonymous.html"); } ?>">
-Дадаць праблему</a>
-';
-  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['metatags'] = array(
     'und' => array(
@@ -257,7 +242,9 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Адфарматаваны загаловак';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="white-text bold-text">[title]</div>';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="problem-title">[title]</div>
+';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -354,7 +341,8 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Адфарматаваны загаловак';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="white-text bold-text">[title]</div>
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="problem-title">[title]</div>
 ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -513,21 +501,12 @@ href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/
     t('Desc'),
     t('Мапа'),
     t('Мапа праблем горада Горкі'),
-    t('Дадаць праблему'),
-    t('<?php 
-global $user;
-?>
-
-<a class="rich-link bold-text" 
-href="<?php if ($user->uid) { print("/node/add/local-problem"); } else {print("/problems/anonymous.html"); } ?>">
-Дадаць праблему</a>
-'),
     t('Вырашаныя праблемы'),
     t('term from field_problem_status'),
     t('<div class="white-text bold-text">[title]</div>'),
-    t('Нявырашаныя праблемы'),
-    t('<div class="white-text bold-text">[title]</div>
+    t('<div class="problem-title">[title]</div>
 '),
+    t('Нявырашаныя праблемы'),
     t('Статус праблемы (field_problem_status)'),
     t('Блок з мапай на старонцы праблемы'),
     t('Блок з мапай на старонцы мясцовай праблемы'),

@@ -113,8 +113,8 @@ function openlayers_local_problems_map_openlayers_maps() {
   $openlayers_maps->data = array(
     'width' => 'auto',
     'height' => '600px',
-    'image_path' => 'sites/all/themes/dev/openlayers/img/',
-    'css_path' => 'sites/all/themes/dev/openlayers/map_local_problems.css',
+    'image_path' => 'sites/all/themes/horki2/openlayers/img/',
+    'css_path' => 'sites/all/themes/horki2/openlayers/map_local_problems.css',
     'proxy_host' => '',
     'hide_empty_map' => 0,
     'center' => array(
@@ -128,8 +128,11 @@ function openlayers_local_problems_map_openlayers_maps() {
       ),
     ),
     'behaviors' => array(
-      'openlayers_behavior_fullscreen' => array(
-        'activated' => 0,
+      'openlayers_behavior_hover' => array(
+        'layers' => array(
+          'map_local_problems_openlayers_solved_problems' => 'map_local_problems_openlayers_solved_problems',
+          'map_local_problems_openlayers_not_solved_problems' => 'map_local_problems_openlayers_not_solved_problems',
+        ),
       ),
       'openlayers_plus_behavior_blockswitcher' => array(
         'enabled' => 0,
@@ -159,12 +162,12 @@ function openlayers_local_problems_map_openlayers_maps() {
       'map_local_problems_openlayers_not_solved_problems' => 'map_local_problems_openlayers_not_solved_problems',
     ),
     'layer_weight' => array(
+      'map_local_problems_openlayers_solved_problems' => '0',
       'map_local_problems_openlayers_this_problem' => '0',
-      'geofield_formatter' => '0',
       'openlayers_geojson_picture_this' => '0',
+      'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
-      'map_local_problems_openlayers_solved_problems' => '1',
-      'map_local_problems_openlayers_not_solved_problems' => '2',
+      'map_local_problems_openlayers_not_solved_problems' => '1',
     ),
     'layer_styles' => array(
       'geofield_formatter' => '0',
@@ -210,8 +213,8 @@ function openlayers_local_problems_map_openlayers_maps() {
     'displayProjection' => 'EPSG:4326',
     'styles' => array(
       'default' => 'marker_local_problem_status',
-      'select' => 'marker_local_problem_status',
-      'temporary' => 'marker_local_problem_status',
+      'select' => 'marker_local_problem_status_hovered',
+      'temporary' => 'marker_local_problem_status_hovered',
     ),
   );
   $export['local_problems'] = $openlayers_maps;
@@ -225,8 +228,8 @@ function openlayers_local_problems_map_openlayers_maps() {
   $openlayers_maps->data = array(
     'width' => 'auto',
     'height' => '300px',
-    'image_path' => 'sites/all/themes/dev/openlayers/img/',
-    'css_path' => 'sites/all/themes/dev/openlayers/map_local_problems.css',
+    'image_path' => 'sites/all/themes/horki2/openlayers/img/',
+    'css_path' => 'sites/all/themes/horki2/openlayers/map_local_problems.css',
     'proxy_host' => '',
     'hide_empty_map' => 0,
     'center' => array(
@@ -255,59 +258,59 @@ function openlayers_local_problems_map_openlayers_maps() {
       'map_local_problems_openlayers_this_problem' => 'map_local_problems_openlayers_this_problem',
     ),
     'layer_weight' => array(
-      'map_local_problems_openlayers_not_solved_problems' => '0',
-      'map_local_problems_openlayers_this_problem' => '0',
       'map_local_problems_openlayers_solved_problems' => '0',
+      'map_local_problems_openlayers_this_problem' => '0',
       'openlayers_geojson_picture_this' => '0',
       'openlayers_kml_example' => '0',
       'geofield_formatter' => '0',
+      'map_local_problems_openlayers_not_solved_problems' => '0',
     ),
     'layer_styles' => array(
+      'map_local_problems_openlayers_not_solved_problems' => '0',
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
       'map_local_problems_openlayers_solved_problems' => '0',
-      'map_local_problems_openlayers_not_solved_problems' => '0',
       'map_local_problems_openlayers_this_problem' => '0',
     ),
     'layer_styles_select' => array(
+      'map_local_problems_openlayers_not_solved_problems' => '0',
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
       'map_local_problems_openlayers_solved_problems' => '0',
-      'map_local_problems_openlayers_not_solved_problems' => '0',
       'map_local_problems_openlayers_this_problem' => '0',
     ),
     'layer_styles_temporary' => array(
+      'map_local_problems_openlayers_not_solved_problems' => '0',
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
       'map_local_problems_openlayers_solved_problems' => '0',
-      'map_local_problems_openlayers_not_solved_problems' => '0',
       'map_local_problems_openlayers_this_problem' => '0',
     ),
     'layer_activated' => array(
       'map_local_problems_openlayers_this_problem' => 'map_local_problems_openlayers_this_problem',
+      'map_local_problems_openlayers_not_solved_problems' => 0,
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
       'map_local_problems_openlayers_solved_problems' => 0,
-      'map_local_problems_openlayers_not_solved_problems' => 0,
     ),
     'layer_switcher' => array(
       'map_local_problems_openlayers_this_problem' => 'map_local_problems_openlayers_this_problem',
+      'map_local_problems_openlayers_not_solved_problems' => 0,
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
       'map_local_problems_openlayers_solved_problems' => 0,
-      'map_local_problems_openlayers_not_solved_problems' => 0,
     ),
     'projection' => 'EPSG:3857',
     'displayProjection' => 'EPSG:4326',
     'styles' => array(
-      'default' => 'marker_local_problem_status',
-      'select' => 'marker_local_problem_status',
-      'temporary' => 'marker_local_problem_status',
+      'default' => 'marker_local_problem_status_hovered',
+      'select' => 'marker_local_problem_status_hovered',
+      'temporary' => 'marker_local_problem_status_hovered',
     ),
   );
   $export['this_local_problem'] = $openlayers_maps;

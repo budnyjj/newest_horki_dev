@@ -28,7 +28,7 @@ function content_type_local_solution_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_local_solution';
-  $strongarm->value = '50';
+  $strongarm->value = '30';
   $export['comment_default_per_page_local_solution'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -42,21 +42,21 @@ function content_type_local_solution_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_local_solution';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['comment_local_solution'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_local_solution';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_local_solution'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_local_solution';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['comment_subject_field_local_solution'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -18,7 +18,7 @@ function openlayers_local_problems_map_openlayers_styles() {
   $openlayers_styles->description = '';
   $openlayers_styles->data = array(
     'externalGraphic' => '${field_taxonomy_pic}',
-    'pointRadius' => 9,
+    'pointRadius' => 12,
     'fillColor' => '#EE9900',
     'fillOpacity' => 1,
     'strokeColor' => '#EE9900',
@@ -26,11 +26,12 @@ function openlayers_local_problems_map_openlayers_styles() {
     'strokeOpacity' => 1,
     'strokeLinecap' => 'round',
     'strokeDashstyle' => 'solid',
-    'graphicWidth' => 18,
-    'graphicHeight' => 18,
+    'graphicWidth' => 24,
+    'graphicHeight' => 31,
     'graphicOpacity' => 1,
-    'graphicXOffset' => -9,
-    'graphicYOffset' => -9,
+    'graphicXOffset' => -12,
+    'graphicYOffset' => -31,
+    'graphicZIndex' => 1,
     'labelAlign' => 'cm',
   );
   $export['marker_local_problem_status'] = $openlayers_styles;
@@ -42,8 +43,8 @@ function openlayers_local_problems_map_openlayers_styles() {
   $openlayers_styles->title = 'Маркер невырашанай праблемы';
   $openlayers_styles->description = '';
   $openlayers_styles->data = array(
-    'externalGraphic' => '/sites/default/files/default_images/status/red.png',
-    'pointRadius' => 9,
+    'externalGraphic' => '/sites/default/files/default_images/status/local_problem_red.png',
+    'pointRadius' => 13,
     'fillColor' => '#EE9900',
     'fillOpacity' => 1,
     'strokeColor' => '#EE9900',
@@ -51,11 +52,12 @@ function openlayers_local_problems_map_openlayers_styles() {
     'strokeOpacity' => 1,
     'strokeLinecap' => 'round',
     'strokeDashstyle' => 'solid',
-    'graphicWidth' => 18,
-    'graphicHeight' => 18,
+    'graphicWidth' => 26,
+    'graphicHeight' => 34,
     'graphicOpacity' => 1,
-    'graphicXOffset' => -9,
-    'graphicYOffset' => -9,
+    'graphicXOffset' => -13,
+    'graphicYOffset' => -34,
+    'graphicZIndex' => 999,
     'labelAlign' => 'cm',
   );
   $export['marker_not_dared_problem_status'] = $openlayers_styles;
