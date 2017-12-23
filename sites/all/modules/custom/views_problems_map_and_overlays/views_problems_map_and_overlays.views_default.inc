@@ -398,14 +398,14 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'openlayers_data';
   $handler->display->display_options['style_options']['data_source'] = array(
     'value' => 'wkt',
-    'other_lat' => 'title',
-    'other_lon' => 'title',
+    'other_lat' => 'field_problem_map',
+    'other_lon' => 'field_problem_map',
     'wkt' => 'field_problem_map',
-    'other_top' => 'title',
-    'other_right' => 'title',
-    'other_bottom' => 'title',
-    'other_left' => 'title',
-    'name_field' => 'nothing',
+    'other_top' => 'field_problem_map',
+    'other_right' => 'field_problem_map',
+    'other_bottom' => 'field_problem_map',
+    'other_left' => 'field_problem_map',
+    'name_field' => '',
     'description_field' => '',
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -420,16 +420,6 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['relationships']['field_problem_status_tid']['field'] = 'field_problem_status_tid';
   $handler->display->display_options['relationships']['field_problem_status_tid']['required'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Загаловак */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="white-text bold-text">[title]</div>';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Поле: Змест: Мапа */
   $handler->display->display_options['fields']['field_problem_map']['id'] = 'field_problem_map';
   $handler->display->display_options['fields']['field_problem_map']['table'] = 'field_data_field_problem_map';
@@ -454,14 +444,6 @@ function views_problems_map_and_overlays_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Поле: Адфарматаваны загаловак */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Адфарматаваны загаловак';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="white-text bold-text">[title]</div>';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Змест: Nid */
