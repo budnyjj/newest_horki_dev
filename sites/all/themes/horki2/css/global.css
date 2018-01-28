@@ -2262,6 +2262,12 @@ ul.tabs li.active a {
     color: #959595;
 }    
 
+/* Weather node styles */
+.node .field-name-body .table-weather img {
+    margin: 0 auto;
+}
+
+
 /**
  * Common node form styles 
  */
