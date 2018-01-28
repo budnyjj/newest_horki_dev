@@ -757,6 +757,15 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
   $handler->display->display_options['cache']['output_lifespan'] = '1800';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'main_news' => 'main_news',
+  );
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
@@ -789,6 +798,29 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Апублікавана */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
+    0 => '56',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
   $handler->display->display_options['block_description'] = 'Фотаблог';
   $handler->display->display_options['block_caching'] = '8';
 
@@ -1033,6 +1065,7 @@ function views_news_lists_views_default_views() {
     t('<a href="/photo.html">ФОТАБЛОГ</a>'),
     t('[title]<p></p>'),
     t('Block'),
+    t('чарга'),
     t('Старонка'),
     t('Items per page'),
     t('- All -'),
@@ -1142,6 +1175,15 @@ function views_news_lists_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'block-preview';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'main_news' => 'main_news',
+  );
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Галоўнае відэа */
   $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
@@ -1196,6 +1238,12 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['filters']['field_video_video_url']['table'] = 'field_data_field_video';
   $handler->display->display_options['filters']['field_video_video_url']['field'] = 'field_video_video_url';
   $handler->display->display_options['filters']['field_video_video_url']['operator'] = 'not empty';
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
   $handler->display->display_options['block_description'] = 'Відэаблог';
   $handler->display->display_options['block_caching'] = '8';
 
@@ -1336,6 +1384,7 @@ function views_news_lists_views_default_views() {
     t('Відэаблог'),
     t('<a href="/video.html">ВІДЭАБЛОГ</a>'),
     t('Block'),
+    t('чарга'),
     t('Старонка'),
     t('Items per page'),
     t('- All -'),
