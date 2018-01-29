@@ -10,11 +10,11 @@
 	<footer class="submitted"><?php print date("d.m.Y", $node->published_at); ?> &ndash; <?php print date("H:i", $node->published_at); ?> 
 
   	<?php if ($page): ?> 
-  	      <?php if ($node_views_cntr): ?>
+  	      <?php if (isset($node_views_cntr)): ?>
 	      	    <span class="delimiter">|</span>
 	      	    <?php print $node_views_cntr; ?>
   	      <?php endif; ?>
-  	      <?php if ($node_comments_cntr): ?>
+  	      <?php if (isset($node_comments_cntr)): ?>
 	      	    <span class="delimiter">|</span>
 	      	    <?php print $node_comments_cntr; ?>
   	      <?php endif; ?>

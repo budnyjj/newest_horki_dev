@@ -48,7 +48,7 @@ function local_weather_get_forecast($place) {
   }
 
   /* Get local weather for 04:00 (night) */
-  $result .= local_weather_format_conditions($conditions[4], false);
+  $result = local_weather_format_conditions($conditions[4], false);
 
   /* Get local weather for 14:00 (day) */
   $result .= local_weather_format_conditions($conditions[14], true);
