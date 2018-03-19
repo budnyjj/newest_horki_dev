@@ -889,6 +889,16 @@ ul.tabs li.active a {
     color: #555555;
 }
 
+/* main page banners */
+.block-block-29,
+.block-block-43,
+.block-block-44,
+.block-block-45 {
+    border-bottom: 1px solid #DBDBDB;
+    padding-bottom: 15px;    
+    margin-bottom: 15px;    
+}
+
 /* news by regions */
 .block-news-by-regions-block,
 .block-news-by-regions-block-1,
