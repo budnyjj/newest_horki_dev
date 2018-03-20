@@ -1045,17 +1045,17 @@ ul.tabs li.active a {
     display: none;
 }
 
-.page-search .search-form {    
+.page-search .block-main .search-form {    
     margin-bottom: 30px;
     border-bottom: #DBDBDB 1px solid;
 }
 
-.page-search .form-wrapper {
+.page-search .block-main .form-wrapper {
     overflow: auto;
     padding-bottom: 15px;
 }
 
-.page-search .form-item-keys {
+.page-search .block-main .form-item-keys {
     display: block;
     float: left;
     width: 100%;
@@ -1063,20 +1063,20 @@ ul.tabs li.active a {
     padding-bottom: 20px;
 }
 
-.page-search .form-item-keys label {
+.page-search .block-main .form-item-keys label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 1.15em;
 }
 
-.page-search .form-item-keys #edit-keys {
+.page-search .block-main .form-item-keys #edit-keys {
     display: block;
     width: 100%;
     height: 35px;
 }
 
-.page-search #edit-submit {
+.page-search .block-main #edit-submit {
     display: block;
     width: 97px;
     height: 35px;

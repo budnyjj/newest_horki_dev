@@ -625,11 +625,11 @@
  */
 
 /* search node */
-.page-search .search-form {
+.page-search .block-main .search-form {
     padding: 0 50px;
 }
 
-.page-search .form-item-keys {
+.page-search .block-main .form-item-keys {
     width: 675px;
     padding-right: 20px;
 }
