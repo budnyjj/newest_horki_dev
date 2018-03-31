@@ -430,6 +430,17 @@
     margin-top: 0;
 }
 
+/* main page banners */
+.block-block-57 {
+    padding-bottom: 30px;    
+}
+
+.block-svaboda {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
 /* news by regions */
 .block-news-by-regions-block-5 {
     margin-bottom: 15px;

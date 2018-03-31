@@ -897,8 +897,12 @@ ul.tabs li.active a {
 /* main page banners */
 .block-block-57 {
     border-bottom: 1px solid #DBDBDB;
-    padding-bottom: 15px;    
+    padding-bottom: 20px;    
     margin-bottom: 15px;    
+}
+
+.block-svaboda {
+    display: none;
 }
 
 /* news by regions */
