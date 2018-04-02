@@ -465,6 +465,18 @@
     margin-bottom: 15px;
 }
 
+/* sidebar banner #1 */
+.block-42 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
+/* sidebar banner #2 */
+.block-41 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
 
 /**
  * Custom Inner views styles
@@ -546,6 +558,18 @@
     position: absolute;
     top: 0;
     right: 0;
+}
+
+/* sidebar banner #1 */
+.block-33 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
+/* sidebar banner #2 */
+.block-56 .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
 }
 
 /* map of local problems */
