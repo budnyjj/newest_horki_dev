@@ -1718,6 +1718,13 @@ ul.tabs li.active a {
     color: #959595;
 }
 
+/* inner node banner */
+.block-block-32 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid #DBDBDB;
+}
+
 /* similar terms block */
 .block-similarterms-block {
     border-top: 1px solid #DBDBDB;
