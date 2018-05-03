@@ -40,18 +40,10 @@ function comment_fragment_menu_alter(&$items) {
  *   The comment listing set to the page on which the comment appears.
  */
 function comment_fragment_permalink($cid) {
-  if (($comment = comment_load($cid)) && ($node = node_load($comment->nid))) {
-
-    // Find the current display page for this comment.
-    $page = comment_get_display_page($comment->cid, $node->type);
-
-    // Redirect the old comment permalink.
-    if ($page > 0) {
-      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid, 'query' => array('page' => $page)), 301);
-    }
-    else {
-      drupal_goto('node/' . $comment->nid, array('fragment' => 'comment-' . $comment->cid), 301);
-    }
+  if ($comment = comment_load($cid)) {
+    $uri = comment_fragment_uri($comment);
+    drupal_goto($uri['path'], $uri['options']);
   }
-  drupal_not_found();
+
+  return MENU_NOT_FOUND;
 }
