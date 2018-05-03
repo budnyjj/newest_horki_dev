@@ -2012,7 +2012,8 @@ function advagg_install_chk_urls(array &$requirements, array $urls, array $optio
           }
         }
         // Check for double gzip compression.
-        if (@gzinflate(substr($request->data, 10)) !== FALSE || @gzinflate($request->data) !== FALSE) {
+        $contents = @file_get_contents($options['#advagg_path']);
+        if ($contents !== $request->data && (@gzinflate(substr($request->data, 10)) !== FALSE || @gzinflate($request->data) !== FALSE)) {
           $config_path = advagg_admin_config_root_path();
           $description = '';
           if (variable_get('advagg_gzip', ADVAGG_GZIP)) {
@@ -2037,7 +2038,7 @@ function advagg_install_chk_urls(array &$requirements, array $urls, array $optio
             'description' => $description,
           );
         }
-        if (is_callable('brotli_uncompress') && @brotli_uncompress($request->data) !== FALSE) {
+        if ($contents !== $request->data && (is_callable('brotli_uncompress') && @brotli_uncompress($request->data) !== FALSE)) {
           $config_path = advagg_admin_config_root_path();
           $description = '';
           if (variable_get('advagg_brotli', ADVAGG_BROTLI)) {
