@@ -131,7 +131,7 @@ function picture_library() {
     case 'min':
       $libraries['picturefill_head'] = array(
         'title' => t('Picturefill head fix'),
-        'version' => '2.3.1',
+        'version' => '3.0.1',
         'js' => array(
           'document.createElement( "picture" );' => array(
             'type' => 'inline',
@@ -146,9 +146,9 @@ function picture_library() {
       $libraries['picturefill'] = array(
         'title' => t('Picturefill'),
         'website' => 'https://github.com/scottjehl/picturefill',
-        'version' => '2.3.1',
+        'version' => '3.0.1',
         'js' => array(
-          drupal_get_path('module', 'picture') . '/picturefill2/picturefill.min.js' => array(
+          drupal_get_path('module', 'picture') . '/picturefill/picturefill.min.js' => array(
             'type' => 'file',
             'weight' => -10,
             'group' => JS_DEFAULT,
@@ -213,7 +213,7 @@ function picture_library() {
     case 'dev':
       $libraries['picturefill_head'] = array(
         'title' => t('Picturefill head fix'),
-        'version' => '2.3.1',
+        'version' => '3.0.1',
         'js' => array(
           'document.createElement( "picture" );' => array(
             'type' => 'inline',
@@ -228,9 +228,9 @@ function picture_library() {
       $libraries['picturefill'] = array(
         'title' => t('Picturefill'),
         'website' => 'https://github.com/scottjehl/picturefill',
-        'version' => '2.3.1',
+        'version' => '3.0.1',
         'js' => array(
-          drupal_get_path('module', 'picture') . '/picturefill2/picturefill.js' => array(
+          drupal_get_path('module', 'picture') . '/picturefill/picturefill.js' => array(
             'type' => 'file',
             'weight' => -10,
             'group' => JS_DEFAULT,
@@ -382,6 +382,9 @@ function picture_theme() {
         'image_styles' => array(),
         'fallback_image_style' => NULL,
         'sizes' => NULL,
+        'attributes' => array(),
+        'lazyload_data_attributes' => NULL,
+        'lazyload_class' => NULL,
       ),
     ),
   );
@@ -420,9 +423,11 @@ function picture_field_formatter_info() {
     'settings' => array(
       'sizes' => '',
       'image_styles' => array(),
-      'fallback_image_style' => '',
+      'fallback_image_style' => PICTURE_EMPTY_IMAGE,
       'lazyload' => '',
       'lazyload_aspect_ratio' => '',
+      'lazyload_data_attributes' => 0,
+      'lazyload_class' => '',
       'image_link' => '',
       'colorbox_settings' => array(
         'colorbox_group' => '',
@@ -688,7 +693,7 @@ function picture_field_formatter_settings_picture_sizes_formatter_form($field, $
   $element['fallback_image_style'] = array(
     '#title' => t('Fallback image style'),
     '#type' => 'select',
-    '#default_value' => $settings['fallback_image_style'],
+    '#default_value' => $settings['fallback_image_style'] ? $settings['fallback_image_style'] : PICTURE_EMPTY_IMAGE,
     '#options' => $image_styles + array(
         PICTURE_EMPTY_IMAGE => t('Empty image'),
         PICTURE_ORIGINAL_IMAGE => t('Original image'),
@@ -708,6 +713,22 @@ function picture_field_formatter_settings_picture_sizes_formatter_form($field, $
     '#attributes' => array(
       'class' => array('picture-image-link'),
     ),
+  );
+
+  $element['lazyload_data_attributes'] = array(
+    '#title' => t('Lazyload using data attributes'),
+    '#type' => 'select',
+    '#default_value' => $settings['lazyload_data_attributes'],
+    '#options' => array(
+      0 => t('No'),
+      1 => t('Yes'),
+    ),
+  );
+
+  $element['lazyload_class'] = array(
+    '#title' => t('Lazyload class'),
+    '#type' => 'textfield',
+    '#default_value' => $settings['lazyload_class'],
   );
 
   return $element;
@@ -823,7 +844,7 @@ function picture_field_formatter_settings_picture_sizes_formatter_summary($field
     )
   );
 
-  $summary[] = t('Fallback image style: @style', array('@style' => $image_styles[$settings['fallback_image_style']]));
+  $summary[] = t('Fallback image style: @style', array('@style' => isset($image_styles[$settings['fallback_image_style']]) ? $image_styles[$settings['fallback_image_style']] : $image_styles[PICTURE_EMPTY_IMAGE]));
 
   $link_types = picture_link_types($instance);
   // Display this setting only if image is linked.
@@ -864,10 +885,10 @@ function picture_field_formatter_picture_view($entity_type, $entity, $field, $in
     $link_file = TRUE;
   }
   elseif ($image_link) {
-    if (isset($entity->$image_link)) {
+    if (isset($entity->{$image_link})) {
       // Support for field translations.
-      $language = field_language($entity_type, $entity, $field['field_name']);
-      $link_field = $entity->$image_link;
+      $language = field_language($entity_type, $entity, $image_link, $langcode);
+      $link_field = $entity->{$image_link};
 
       if (isset($link_field[$language])) {
         $link_values = $link_field[$language];
@@ -1084,6 +1105,7 @@ function picture_field_formatter_picture_view($entity_type, $entity, $field, $in
 function picture_field_formatter_picture_sizes_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   $elements = array();
   $settings = $display['settings'];
+
   // Check if the formatter involves a link.
   $image_link = $display['settings']['image_link'];
   if ($image_link == 'content') {
@@ -1093,10 +1115,10 @@ function picture_field_formatter_picture_sizes_formatter_view($entity_type, $ent
     $link_file = TRUE;
   }
   elseif ($image_link) {
-    if (isset($entity->$image_link)) {
+    if (isset($entity->{$image_link})) {
       // Support for field translations.
-      $language = field_language($entity_type, $entity, $field['field_name']);
-      $link_field = $entity->$image_link;
+      $language = field_language($entity_type, $entity, $image_link, $langcode);
+      $link_field = $entity->{$image_link};
 
       if (isset($link_field[$language])) {
         $link_values = $link_field[$language];
@@ -1135,9 +1157,11 @@ function picture_field_formatter_picture_sizes_formatter_view($entity_type, $ent
       '#theme' => 'picture_sizes_formatter',
       '#item' => $item,
       '#image_styles' => array_filter($settings['image_styles']),
-      '#fallback_image_style' => $settings['fallback_image_style'],
+      '#fallback_image_style' => $settings['fallback_image_style'] ? $settings['fallback_image_style'] : PICTURE_EMPTY_IMAGE,
       '#sizes' => $settings['sizes'],
       '#path' => isset($uri) ? $uri : '',
+      '#lazyload_data_attributes' => $settings['lazyload_data_attributes'],
+      '#lazyload_class' => $settings['lazyload_class'],
     );
 
   }
@@ -1222,6 +1246,20 @@ function theme_picture_sizes_formatter($variables) {
     if (!empty($image['title'])) {
       $variables['title'] = $image['title'];
     }
+    if (!empty($image['attributes'])) {
+      $variables['attributes'] = $image['attributes'];
+    }
+
+    // Check for lazyload_data_attributes.
+    if (isset($variables['lazyload_data_attributes']) && $variables['lazyload_data_attributes']) {
+      if (!isset($variables['attributes'])) {
+        $variables['attributes'] = array();
+      }
+      if (!isset($variables['attributes']['class'])) {
+        $variables['attributes']['class'] = array();
+      }
+      $variables['attributes']['class'] = array_merge($variables['attributes']['class'], explode(',', $variables['lazyload_class']));
+    }
 
     // Set up image source options.
     $variables['srcset'] = array();
@@ -1244,7 +1282,12 @@ function theme_picture_sizes_formatter($variables) {
         'width' => $dimensions['width'] . 'w',
       );
     }
-    return theme('image_srcset', $variables);
+
+    $output = theme('image_srcset', $variables);
+    if (isset($variables['lazyload_data_attributes']) && $variables['lazyload_data_attributes']) {
+      $output = str_replace(array('src="', 'srcset="'), array('data-src="', 'data-srcset="'), $output);
+    }
+    return $output;
   }
 }
 
@@ -1575,7 +1618,8 @@ function theme_image_srcset(array $variables) {
         }
         elseif (isset($src['multiplier']) && !empty($src['multiplier'])) {
           $source .= ' ' . $src['multiplier'];
-          $key = (int) ((float) drupal_substr($src['multiplier'], -1) * 100);
+          // Convert 1x to 100, 1.5x to 150  and so on.
+          $key = (int) ((float) drupal_substr($src['multiplier'], 0, -1) * 100);
         }
         $srcsets[$key] = $source;
       }
@@ -1836,6 +1880,7 @@ function picture_page_build(&$page) {
       'picture' => array(
         'mappings' => $mappings,
         'label' => variable_get('picture_ckeditor_label', 'Image size (required)'),
+        'ckeditorDefaultMapping' => variable_get('picture_ckeditor_default_mapping', 'not_set'),
       )), 'setting');
   }
 }
@@ -1990,9 +2035,20 @@ function _picture_image_style_url($style_name, $path, $timestamp = NULL) {
     $url = image_style_url($style_name, $path);
   }
 
-  if (!empty($timestamp)) {
-    $url .= (strpos($url, '?') !== FALSE ? '&' : '?') . drupal_http_build_query(array('timestamp' => $timestamp));
+  $token_query = array();
+  if (!empty($timestamp) && !variable_get('image_suppress_itok_output', FALSE)) {
+    $token_query['timestamp'] = $timestamp;
   }
+
+  // Allow modules to alter the $token_query for the given style.
+  $context = array('uri' => $url, 'style_name' => $style_name, 'path' => $path);
+  drupal_alter('image_style_uri_token_query', $token_query, $context);
+
+  // Append the query string with the token, if necessary.
+  if ($token_query) {
+    $url .= (strpos($url, '?') !== FALSE ? '&' : '?') . drupal_http_build_query($token_query);
+  }
+
   return $url;
 }
 
