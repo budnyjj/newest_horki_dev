@@ -31,7 +31,7 @@ function bel_currency_block_info() {
 /**
  * Custom parser function
  */
-function bel_currency_parser() {
+function bel_currency_download_data() {
   $aCurrencyName = array("USD","EUR","RUB"); 
   $today = date("m/d/y");
 
@@ -74,11 +74,11 @@ function bel_currency_block_view($delta = '') {
       if ($cache) {
 	$result = $cache->data; }
       else {
-	$result = bel_currency_parser(); //Use our function for getting result
+	$result = bel_currency_download_data(); // Use our function for getting result
 	cache_set('bel_currency_info', $result, 'cache', 43200);
       }
       if (empty($result)) {
-	$block['content'] = t('Нет доступных источников.');
+	$block['content'] = t('Unable to download currency data.');
       } else {
 	$block['content'] = $result;
       }
