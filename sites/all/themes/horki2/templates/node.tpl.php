@@ -20,6 +20,10 @@
   	      <?php endif; ?>
   	<?php endif; ?>
 	</footer>
+	<?php
+	$block = block_load('block', '61');
+	print render(_block_get_renderable_array(_block_render_blocks(array($block))));   
+	?> 
   <?php endif; ?>  
   
   <div<?php print $content_attributes; ?>>

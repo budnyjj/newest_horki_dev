@@ -147,3 +147,17 @@
 .system-content .node .field-name-field-text .caption {
     width: 1200px !important;
 }
+
+#region-sidebar-third {
+	float: right;
+}
+
+#discuss-in-social-media {float: left;}
+
+.block-media-grid .views-row {
+width: 282px;
+}
+
+#block-views-similarterms-block .block-media-grid .views-row {
+ width: 272px;
+}

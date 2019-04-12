@@ -48,6 +48,8 @@ gt.setAttribute('defer','defer'); gt.src=l+'://gaby.hit.gemius.pl/xgemius.js'; s
 <!-- Yandex Direct -->
 <script src="https://yastatic.net/pcode/adfox/loader.js" crossorigin="anonymous"></script>
 
+<script charset="UTF-8" src="//cdn.sendpulse.com/js/push/ff43ffd7f1eab9f55eb2b7b70720d4b7_1.js" async></script>
+
 </head>
 <body<?php print $attributes;?>>
   <div id="skip-link">

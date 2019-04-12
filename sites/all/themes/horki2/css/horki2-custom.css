@@ -319,9 +319,13 @@
 
 /* media grid block */
 .block-media-grid .views-row {
-    width: 282px;
+    width: 272px;
     float: left;
     margin: 0 24px 35px 0;
+}
+
+.view-id-similarterms .views-row-4 {
+	clear: both;
 }
 
 .block-media-grid .views-row-last {
@@ -649,7 +653,7 @@
 
 .node .field-name-body .videoplayer,
 .node .field-name-field-text .videoplayer {
-    height: 670px;
+    height: 470px;
 }
 
 .node .text-chapter {
@@ -746,3 +750,5 @@
     width: 894px;
     margin: 0 auto;
 }
+
+#block-block-28 {display: none;}
