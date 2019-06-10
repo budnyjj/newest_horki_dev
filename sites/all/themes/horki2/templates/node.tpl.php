@@ -22,7 +22,8 @@
 	</footer>
 	<?php
 	$block = block_load('block', '61');
-	print render(_block_get_renderable_array(_block_render_blocks(array($block))));   
+	$block_array = _block_get_renderable_array(_block_render_blocks(array($block)));
+	print render($block_array);   
 	?> 
   <?php endif; ?>  
   
