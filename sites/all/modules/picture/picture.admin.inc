@@ -249,7 +249,7 @@ function picture_admin_settings() {
         '#title' => t('Keep aspect ratio'),
         '#type' => 'checkbox',
         '#description' => t('Preserve the space for the image being lazyloaded to avoid layout reflows. <br /> Image ratio is defined per breakpoint, make sure all images from srcset have the same ratio. <br />Output example: !example',
-          array('!example' => htmlentities('<source media="(...)" data-srcset="image_400x200.jpg x1, iamge_800x400.jpg x2, image_1200x600.jpg x3" data-aspectratio="2" />'))
+          array('!example' => htmlentities('<source media="(...)" data-srcset="image_400x200.jpg x1, image_800x400.jpg x2, image_1200x600.jpg x3" data-aspectratio="2" />'))
         ),
         '#default_value' => isset($ckeditor_mappings[$machine_name]['lazyload_aspect_ratio']) ? $ckeditor_mappings[$machine_name]['lazyload_aspect_ratio'] : 0,
         '#states' => array(
@@ -313,13 +313,13 @@ function picture_admin_settings() {
 
   $form['picture_fallback_method'] = array(
     '#title' => t('Picture fallback method'),
-    '#description' => t('Use the fallback method, the defualt is to use srcset since it avoids double downloads, but src is the right method and will also work if the browser does not support javascript.'),
+    '#description' => t('Use the fallback method, the default is to use srcset since it avoids double downloads, but src is the right method and will also work if the browser does not support javascript.'),
     '#type' => 'radios',
     '#options' => array(
       'src' => t('src fallback'),
       'srcset' => t('srcset fallback'),
     ),
-    '#default_value' => variable_get('picture_fallback_method', 'srcset'),
+    '#default_value' => variable_get('picture_fallback_method', 'src'),
   );
 
   $form['picture_img_sizes_output_method'] = array(

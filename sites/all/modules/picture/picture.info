@@ -9,9 +9,8 @@ configure = admin/config/media/picture
 package = Picture
 stylesheets[all][] = picture_wysiwyg.css
 
-; Information added by Drupal.org packaging script on 2018-02-24
-version = "7.x-2.13+11-dev"
+; Information added by Drupal.org packaging script on 2019-06-06
+version = "7.x-2.13+24-dev"
 core = "7.x"
 project = "picture"
-datestamp = "1519514887"
-
+datestamp = "1559831588"

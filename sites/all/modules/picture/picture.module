@@ -135,8 +135,8 @@ function picture_library() {
         'js' => array(
           'document.createElement( "picture" );' => array(
             'type' => 'inline',
-            'weight' => -10,
-            'group' => JS_DEFAULT,
+            'weight' => -20,
+            'group' => JS_LIBRARY,
             'scope' => 'header',
             'need_jquery' => FALSE,
           ),
@@ -153,8 +153,7 @@ function picture_library() {
             'weight' => -10,
             'group' => JS_DEFAULT,
             'scope' => variable_get('picture_js_scope', 'footer'),
-            'need_jquery' => FALSE,
-            'async' => TRUE,
+            'need_jquery' => FALSE
           ),
         ),
       );
@@ -168,8 +167,7 @@ function picture_library() {
             'weight' => -10,
             'group' => JS_DEFAULT,
             'scope' => variable_get('picture_js_scope', 'footer'),
-            'need_jquery' => FALSE,
-            'async' => TRUE,
+            'need_jquery' => FALSE
           ),
         ),
       );
@@ -180,11 +178,9 @@ function picture_library() {
         'js' => array(
           drupal_get_path('module', 'picture') . '/lazysizes/lazysizes.min.js' => array(
             'type' => 'file',
-            // file has async, put before all files to prevent JS concatenation breaking
             'weight' => -20,
             'group' => JS_LIBRARY,
-            'need_jquery' => FALSE,
-            'async' => TRUE,
+            'need_jquery' => FALSE
           ),
         ),
       );
@@ -197,8 +193,7 @@ function picture_library() {
             'type' => 'file',
             'weight' => -10,
             'group' => JS_LIBRARY,
-            'need_jquery' => FALSE,
-            'async' => TRUE,
+            'need_jquery' => FALSE
           ),
         ),
         'css' => array(
@@ -235,8 +230,7 @@ function picture_library() {
             'weight' => -10,
             'group' => JS_DEFAULT,
             'scope' => variable_get('picture_js_scope', 'footer'),
-            'need_jquery' => FALSE,
-            'async' => TRUE,
+            'need_jquery' => FALSE
           ),
         ),
       );
@@ -250,8 +244,7 @@ function picture_library() {
             'weight' => -10,
             'group' => JS_DEFAULT,
             'scope' => variable_get('picture_js_scope', 'footer'),
-            'need_jquery' => FALSE,
-            'async' => TRUE,
+            'need_jquery' => FALSE
           ),
         ),
       );
@@ -265,8 +258,7 @@ function picture_library() {
             // file has async, put before all files to prevent JS concatenation breaking
             'weight' => -20,
             'group' => JS_LIBRARY,
-            'need_jquery' => FALSE,
-            'async' => TRUE,
+            'need_jquery' => FALSE
           ),
         ),
       );
@@ -280,8 +272,7 @@ function picture_library() {
             'type' => 'file',
             'weight' => -10,
             'group' => JS_LIBRARY,
-            'need_jquery' => FALSE,
-            'async' => TRUE,
+            'need_jquery' => FALSE
           ),
         ),
         'css' => array(
@@ -373,6 +364,7 @@ function picture_theme() {
         'attributes' => array(),
         'srcset' => array(),
         'sizes' => NULL,
+        'lazyload' => NULL,
       ),
     ),
     'picture_sizes_formatter' => array(
@@ -504,7 +496,7 @@ function picture_field_formatter_settings_picture_form($field, $instance, $setti
     '#title' => t('Keep aspect ratio'),
     '#type' => 'checkbox',
     '#description' => t('Preserve the space for the image being lazyloaded to avoid layout reflows. <br /> Image ratio is defined per breakpoint, make sure all images from srcset have the same ratio. <br />Output example: !example',
-      array('!example' => htmlentities('<source media="(...)" data-srcset="image_400x200.jpg x1, iamge_800x400.jpg x2, image_1200x600.jpg x3" data-aspectratio="2" />'))
+      array('!example' => htmlentities('<source media="(...)" data-srcset="image_400x200.jpg x1, image_800x400.jpg x2, image_1200x600.jpg x3" data-aspectratio="2" />'))
     ),
     '#default_value' => !empty($settings['lazyload_aspect_ratio']),
     '#states' => array(
@@ -1513,6 +1505,7 @@ function theme_picture(array $variables) {
         '#alt' => isset($attributes['alt']) ? $attributes['alt'] : '',
         '#title' => isset($attributes['title']) ? $attributes['title'] : '',
         '#attributes' => array_diff_key($attributes, array('alt' => '', 'title' => '')),
+        '#lazyload' => !empty($variables['lazyload']),
       );
       $output[] = drupal_render($min_ie9_fallback);
     }
@@ -1524,6 +1517,7 @@ function theme_picture(array $variables) {
         '#alt' => isset($attributes['alt']) ? $attributes['alt'] : '',
         '#title' => isset($attributes['title']) ? $attributes['title'] : '',
         '#attributes' => array_diff_key($attributes, array('alt' => '', 'title' => '')),
+        '#lazyload' => !empty($variables['lazyload']),
       );
       $output[] = '<!--[if lt IE 9]>';
       $output[] = drupal_render($min_ie9_fallback);
@@ -1544,6 +1538,7 @@ function theme_picture(array $variables) {
         '#alt' => isset($attributes['alt']) ? $attributes['alt'] : '',
         '#title' => isset($attributes['title']) ? $attributes['title'] : '',
         '#attributes' => array_diff_key($attributes, array('alt' => '', 'title' => '')),
+        '#lazyload' => !empty($variables['lazyload']),
       );
       $output[] = '<!--[if !lt IE 9]><!-->';
       $output[] = drupal_render($plus_ie8_fallback);
@@ -1591,12 +1586,14 @@ function theme_image_srcset(array $variables) {
   $attributes = isset($variables['attributes']) ? $variables['attributes'] : array();
 
   if (isset($variables['uri']) && !empty($variables['uri'])) {
+    $attr_name = !empty($variables['lazyload']) ? 'data-src' : 'src';
+
     // TODO: remove when https://www.drupal.org/node/1342504 is fixed.
     if (strpos($variables['uri'], 'data:') === 0) {
-      $attributes['src'] = $variables['uri'];
+      $attributes[$attr_name] = $variables['uri'];
     }
     else {
-      $attributes['src'] = file_create_url($variables['uri']);
+      $attributes[$attr_name] = file_create_url($variables['uri']);
     }
   }
   if (isset($variables['srcset']) && !empty($variables['srcset'])) {
@@ -1625,7 +1622,8 @@ function theme_image_srcset(array $variables) {
       }
     }
     ksort($srcsets);
-    $attributes['srcset'] = implode(', ', $srcsets);
+    $attr_name = !empty($variables['lazyload']) ? 'data-srcset' : 'srcset';
+    $attributes[$attr_name] = implode(', ', $srcsets);
   }
   foreach (array('width', 'height', 'alt', 'title', 'sizes') as $key) {
     if (isset($variables[$key])) {
@@ -1723,11 +1721,9 @@ function picture_filter_info() {
 function _picture_filter_process($text, $filter) {
 
   // Find all img tags with a data-picture-mapping attribute.
-  preg_match_all('/<img.*?data-picture-mapping=".*?>/i', $text, $images1);
-  preg_match_all('/<img.*?data-picture-group=".*?>/i', $text, $images2);
-  $images = array_merge($images1[0], $images2[0]);
+  preg_match_all('/<img [^>]*data-picture-(mapping|group)\s*=\s*["\'][^>]*>/i', $text, $images);
   if (!empty($images)) {
-    foreach ($images as $image) {
+    foreach ($images[0] as $image) {
       // Create the render array expected by theme_picture_formatter.
       $image_render_array = _picture_filter_prepare_image($image);
       if (!$image_render_array) {
@@ -1799,6 +1795,11 @@ function _picture_filter_prepare_image($image) {
   $title = isset($attributes['title']) ? $attributes['title'] : '';
   unset($attributes['title']);
 
+  // Ensure that class attributes are properly split into array.
+  if (!empty($attributes['class']) && !is_array($attributes['class'])) {
+    $attributes['class'] = array_filter(explode(' ', $attributes['class']));
+  }
+
   // Make sure we have map src to uri.
   $uri = picture_image_uri($src);
   if (!$uri) {
@@ -1810,7 +1811,68 @@ function _picture_filter_prepare_image($image) {
     // It's not an image.
     return FALSE;
   }
+
   $picture_mappings = variable_get('picture_ckeditor_mappings', array());
+
+  // Use srcset if possible and allowed.
+  if (variable_get('picture_use_sizes_in_wysiwyg', FALSE)) {
+    $bps = picture_get_mapping_breakpoints($mappings);
+    $bp = reset($bps);
+    $info = reset($bp);
+
+    if (count($bps) == 1 && count($bp) == 1 && $info['mapping_type'] === 'image_style') {
+      $image_render_array = array(
+        '#theme' => 'image_style',
+        '#path' => $uri,
+        '#style_name' => $info['image_style'],
+        '#alt' => $alt,
+        '#title' => $title,
+        '#attributes' => array(
+          'data-picture-mapping' => $mapping_id,
+        ) + $attributes,
+      );
+
+      return $image_render_array;
+    }
+
+    if (count($bps) == 1 && count($bp) == 1 && $info['mapping_type'] === 'sizes') {
+      $image_styles = $info['sizes_image_styles'];
+      $image_render_array = array(
+        '#theme' => 'image_srcset',
+        '#sizes' => $info['sizes'],
+      );
+
+      // Map image attributes.
+      $image_render_array['#uri'] = _picture_image_style_url($picture_mappings[$mapping_id]['fallback'], $uri);
+
+      // Set up image source options.
+      $image_render_array['#srcset'] = array();
+      foreach ($image_styles as $image_style) {
+        $image_style_uri = _picture_image_style_url($image_style, $uri);
+        $dimensions = array(
+          'width' => $image_info['width'],
+          'height' => $image_info['height'],
+        );
+        // Let the the image style transform the dimensions. This way we avoid the
+        // performance cost of actually having to generate the derivative. The
+        // image style can transform the dimensions without the derivative having
+        // to exist.
+        $dimensions = picture_get_image_dimensions($image_style, $dimensions);
+
+        $image_render_array['#srcset'][] = array(
+          'uri' => $image_style_uri,
+          'width' => $dimensions['width'] . 'w',
+        );
+      }
+
+      $image_render_array['#attributes'] = array(
+        'data-picture-mapping' => $mapping_id,
+      ) + $attributes;
+
+      return $image_render_array;
+    }
+  }
+
   $image_render_array = array(
     '#theme' => 'picture',
     '#style_name' => $picture_mappings[$mapping_id]['fallback'],
@@ -1875,14 +1937,73 @@ function picture_page_build(&$page) {
   }
 
   if (!empty($mappings)) {
+    $label = variable_get('picture_ckeditor_label', 'Image size');
+    if (variable_get('picture_ckeditor_required', TRUE)) {
+      $label .= ' (required)';
+    }
+
     $mappings[] = array('Not Set', 'not_set');
     drupal_add_js(array(
       'picture' => array(
+        'required' => variable_get('picture_ckeditor_required', TRUE),
         'mappings' => $mappings,
-        'label' => variable_get('picture_ckeditor_label', 'Image size (required)'),
+        'label' => $label,
         'ckeditorDefaultMapping' => variable_get('picture_ckeditor_default_mapping', 'not_set'),
+        'editorCSS' => picture_ckeditor_css(),
       )), 'setting');
+
+    // Do not add inline css, unless when editing.
+    if (!isset($page['content']['system_main']['#node_edit_form']) || !$page['content']['system_main']['#node_edit_form']) {
+      return;
+    }
+
+    drupal_add_css(picture_ckeditor_css('.ImagePreviewBox'), 'inline');
   }
+}
+
+/**
+ * Generate css to handle more realistic display of image styles.
+ */
+function picture_ckeditor_css($prefix = '') {
+  $image_styles = image_styles();
+  $picture_mappings = picture_mapping_load_all();
+  $ckeditor_mappings = variable_get('picture_ckeditor_mappings', array());
+  $mappings = array();
+
+  foreach ($ckeditor_mappings as $machine_name => $parameters) {
+    if (!array_key_exists($machine_name, $picture_mappings)) {
+      continue;
+    }
+
+    if ($parameters['enabled'] != 1) {
+      continue;
+    }
+
+    if (array_key_exists($parameters['fallback'], $image_styles)) {
+      $dimensions = array(
+        'width' => 1000,
+        'height' => 1000,
+      );
+
+      // Transform dimensions.
+      image_style_transform_dimensions($parameters['fallback'], $dimensions);
+
+      // Add unit if needed.
+      if (strpos($dimensions['width'], '%') === FALSE) {
+        $dimensions['width'] .= 'px';
+      }
+      if (strpos($dimensions['height'], '%') === FALSE) {
+        $dimensions['height'] .= 'px';
+      }
+
+      $mappings[$machine_name] = $prefix . ' [data-picture-mapping="' . $machine_name . '"] {';
+      $mappings[$machine_name] .= ' width: ' . $dimensions['width'] . ';';
+      $mappings[$machine_name] .= ' height: ' . $dimensions['height'] . ';';
+      $mappings[$machine_name] .= '}';
+    }
+  }
+
+  return implode("\n", $mappings);
 }
 
 /**

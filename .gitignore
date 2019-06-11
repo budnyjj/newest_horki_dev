@@ -5,18 +5,8 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 
-sites/default/tmp
-
+# Ignore temporary files
+sites/*/tmp
 *.swp
 *.swo
 \#*\#
-
-old
-old/*
-
-maps
-maps/*
-
-log
-htusers
-.htaccess

@@ -833,37 +833,34 @@ function advagg_menu() {
   $config_path = advagg_admin_config_root_path();
 
   $path_defined = FALSE;
-  if (module_exists('s3fs') && is_callable('_s3fs_get_config')) {
-    $s3fs_config = _s3fs_get_config();
-    if (empty($s3fs_config['no_rewrite_cssjs'])) {
-      $external_css = trim(parse_url(str_replace('/test.css', '/%', file_create_url($css_path[0] . '/test.css')), PHP_URL_PATH));
-      if (strpos($external_css, $GLOBALS['base_path']) === 0) {
-        $external_css = substr($external_css, strlen($GLOBALS['base_path']));
-      }
-      $external_js = trim(parse_url(str_replace('/test.js', '/%', file_create_url($js_path[0] . '/test.js')), PHP_URL_PATH));
-      if (strpos($external_js, $GLOBALS['base_path']) === 0) {
-        $external_js = substr($external_js, strlen($GLOBALS['base_path']));
-      }
-      $items[$external_css] = array(
-        'title' => "Generate CSS Aggregate",
-        'page callback' => 'advagg_missing_aggregate',
-        'type' => MENU_CALLBACK,
-        // Allow anyone to access these public css files.
-        'access callback' => TRUE,
-        'file path' => $file_path,
-        'file' => 'advagg.missing.inc',
-      );
-      $items[$external_js] = array(
-        'title' => "Generate CSS Aggregate",
-        'page callback' => 'advagg_missing_aggregate',
-        'type' => MENU_CALLBACK,
-        // Allow anyone to access these public css files.
-        'access callback' => TRUE,
-        'file path' => $file_path,
-        'file' => 'advagg.missing.inc',
-      );
-      $path_defined = TRUE;
+  if (advagg_s3fs_evaluate_no_rewrite_cssjs(FALSE)) {
+    $external_css = trim(parse_url(str_replace('/test.css', '/%', file_create_url($css_path[0] . '/test.css')), PHP_URL_PATH));
+    if (strpos($external_css, $GLOBALS['base_path']) === 0) {
+      $external_css = substr($external_css, strlen($GLOBALS['base_path']));
     }
+    $external_js = trim(parse_url(str_replace('/test.js', '/%', file_create_url($js_path[0] . '/test.js')), PHP_URL_PATH));
+    if (strpos($external_js, $GLOBALS['base_path']) === 0) {
+      $external_js = substr($external_js, strlen($GLOBALS['base_path']));
+    }
+    $items[$external_css] = array(
+      'title' => "Generate CSS Aggregate",
+      'page callback' => 'advagg_missing_aggregate',
+      'type' => MENU_CALLBACK,
+      // Allow anyone to access these public css files.
+      'access callback' => TRUE,
+      'file path' => $file_path,
+      'file' => 'advagg.missing.inc',
+    );
+    $items[$external_js] = array(
+      'title' => "Generate CSS Aggregate",
+      'page callback' => 'advagg_missing_aggregate',
+      'type' => MENU_CALLBACK,
+      // Allow anyone to access these public css files.
+      'access callback' => TRUE,
+      'file path' => $file_path,
+      'file' => 'advagg.missing.inc',
+    );
+    $path_defined = TRUE;
   }
 
   if (!$path_defined) {
@@ -1354,6 +1351,52 @@ function advagg_s3fs_upload_params_alter(&$upload_params) {
       // Set br.
       $upload_params['ContentEncoding'] = 'br';
     }
+  }
+}
+
+/**
+ * Return s3fs configuration settings and values.
+ *
+ * @param string $key
+ *   A specific key available in the s3fs configuration. NULL by default.
+ *
+ * @return array | string | null
+ *   The full s3fs configuration settings, value of a specific key,
+ *   or NULL if s3fs and the function do not exist.
+ */
+function advagg_get_s3fs_config($key = NULL) {
+  if (module_exists('s3fs') && is_callable('_s3fs_get_config')) {
+    $s3fs_config = _s3fs_get_config();
+    return (empty($key)) ? $s3fs_config : $s3fs_config[$key];
+  }
+  else {
+    return NULL;
+  }
+}
+
+/**
+ * Shortcut to evaluate if s3fs no_rewrite_cssjs is set or empty.
+ *
+ * If this needs to be accessed in a loop, it is more efficient to call
+ * advagg_get_s3fs_config() once from outside of the loop. An example
+ * can be seen in the advagg_install_check_via_http function.
+ *
+ * @param bool $is_set
+ *   Check if no_write_cssjs field is set (TRUE) or empty (FALSE).
+ *
+ * @return bool
+ *   TRUE or FALSE is returned based on evaluating the field. If
+ *   s3fs_config returns a NULL, evaluate the function to FALSE.
+ *
+ * @see advagg_get_s3fs_config()
+ */
+function advagg_s3fs_evaluate_no_rewrite_cssjs($is_set = TRUE) {
+  $s3fs_no_rewrite_cssjs = advagg_get_s3fs_config('no_rewrite_cssjs');
+  if (!is_null($s3fs_no_rewrite_cssjs)) {
+    return ($is_set) ? !empty($s3fs_no_rewrite_cssjs) : empty($s3fs_no_rewrite_cssjs);
+  }
+  else {
+    return FALSE;
   }
 }
 
@@ -2544,6 +2587,15 @@ function advagg_add_dns_prefetch($url) {
       return FALSE;
     }
   }
+
+  // Filter out wrong schemes.
+  if (!empty($parse['scheme'])
+    && $parse['scheme'] !== 'http'
+    && $parse['scheme'] !== 'https'
+  ) {
+    return FALSE;
+  }
+
   // Filter out local host.
   $host = @parse_url($GLOBALS['base_root'], PHP_URL_HOST);
   if ($parse['host'] === $host) {

@@ -330,6 +330,9 @@ function advagg_relocate_css_post_alter(array &$css, $force_check = FALSE) {
   module_load_include('advagg.inc', 'advagg_relocate');
   $responses = advagg_relocate_get_remote_data($urls, 'css', array(), $force_check);
 
+  // Get s3fs no_rewrite_cssjs setting.
+  $s3fs_no_rewrite_cssjs = advagg_get_s3fs_config('no_rewrite_cssjs');
+
   $filenames = array();
   $advagg_relocate_css_ttl = variable_get('advagg_relocate_css_ttl', ADVAGG_RELOCATE_CSS_TTL);
   foreach ($responses as $value) {
@@ -391,7 +394,7 @@ function advagg_relocate_css_post_alter(array &$css, $force_check = FALSE) {
     }
     // List of files that need the cache cleared.
     if ($saved) {
-      $filenames[] = $relative_path;
+      $filenames[] = (!is_null($s3fs_no_rewrite_cssjs) && empty($s3fs_no_rewrite_cssjs)) ? $full_filename : $relative_path;
     }
   }
   if (!empty($filenames)) {
@@ -620,17 +623,17 @@ function advagg_relocate_js_script_rewrite(array &$js, array $scripts_found) {
       $value = $js[$key];
 
       // Get URL.
-      $url = variable_get('piwik_url_http', '');
+      $url = variable_get('matomo_url_http', '');
       if ($GLOBALS['is_https']) {
         // Use HTTPS.
-        $url = variable_get('piwik_url_https', '');
+        $url = variable_get('matomo_url_https', '');
       }
-      if (is_callable('_piwik_cache')
-        && variable_get('piwik_cache', 0)
-        && $piwik_cache = _piwik_cache($url . 'piwik.js')
+      if (is_callable('_matomo_cache')
+        && variable_get('matomo_cache', 0)
+        && $matomo_cache = _matomo_cache($url . 'piwik.js')
       ) {
         // Try cache.
-        $url = $piwik_cache;
+        $url = $matomo_cache;
       }
       if (empty($url)) {
         // Extract info from inline script.
@@ -646,12 +649,16 @@ function advagg_relocate_js_script_rewrite(array &$js, array $scripts_found) {
       }
       if (!empty($url)) {
         // Use HTTP.
-        $url = check_url($url) . 'piwik.js';
+        // The $url may or may not have "piwik.js" at the end (it has if it came from _matomo_cache call above, otherwise not). Add if needed.
+        $url = check_url($url);
+        if (basename($url) != 'piwik.js') {
+          $url = $url . 'piwik.js';
+        }
       }
 
       // Final checks.
       if (!empty($url)) {
-        $scope = variable_get('piwik_js_scope', $value['scope']);
+        $scope = variable_get('matomo_js_scope', $value['scope']);
         $url = advagg_convert_abs_to_rel($url, TRUE);
         $type = 'file';
         if (advagg_is_external($url)) {
@@ -1018,6 +1025,9 @@ function advagg_relocate_js_post_alter(array &$js, $force_check = FALSE) {
   module_load_include('advagg.inc', 'advagg_relocate');
   $responses = advagg_relocate_get_remote_data($urls, 'js', array(), $force_check);
 
+  // Get s3fs no_rewrite_cssjs setting.
+  $s3fs_no_rewrite_cssjs = advagg_get_s3fs_config('no_rewrite_cssjs');
+
   $filenames = array();
   $advagg_relocate_js_ttl = variable_get('advagg_relocate_js_ttl', ADVAGG_RELOCATE_JS_TTL);
   foreach ($responses as $value) {
@@ -1083,7 +1093,7 @@ function advagg_relocate_js_post_alter(array &$js, $force_check = FALSE) {
 
     // List of files that need the cache cleared.
     if ($saved) {
-      $filenames[] = $relative_path;
+      $filenames[] = (!is_null($s3fs_no_rewrite_cssjs) && empty($s3fs_no_rewrite_cssjs)) ? $full_filename : $relative_path;
     }
   }
 

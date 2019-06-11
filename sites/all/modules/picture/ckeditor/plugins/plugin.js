@@ -5,15 +5,21 @@
 ( function(){
   CKEDITOR.plugins.add('picture_ckeditor',
   {
-      init : function(editor)
+    onLoad: function() {
+      CKEDITOR.addCss(Drupal.settings.picture.editorCSS);
+    },
+    init : function(editor)
       {
 
         // Used later to ensure the required features have been enabled in the
         // Advanced Content Filter.
-        features = {
-          'imageSize': { 'requiredContent': 'img[data-picture-mapping]' },
-          'imageAlign': { 'requiredContent': 'img[data-picture-align]' }
-        };
+        features = {};
+        if (Drupal.settings.picture.required) {
+          features = {
+            'imageSize': { 'requiredContent': 'img[data-picture-mapping]' },
+            'imageAlign': { 'requiredContent': 'img[data-picture-align]' }
+          };
+        }
 
         // If we have image2, enable the more advanced functionality
         if (CKEDITOR.config.plugins.indexOf('image2') != -1) {
@@ -75,13 +81,14 @@
                 widget.parts.image.setAttribute('data-picture-mapping', this.getValue());
               },
               validate: function() {
-                if (this.getValue() == 'not_set') {
-                  var message = 'Please make a selection from ' + Drupal.settings.picture.label;
-                  alert(message);
-                  return false;
-                } else {
-                  return true;
+                if (Drupal.settings.picture.required) {
+                  if (this.getValue() == 'not_set') {
+                    var message = 'Please make a selection from ' + Drupal.settings.picture.label;
+                    alert(message);
+                    return false;
+                  }
                 }
+                return true;
               }
             }
             );
@@ -177,13 +184,14 @@
                 }
               },
               validate: function() {
-                if (this.getValue() == 'not_set') {
-                  var message = 'Please make a selection from ' + Drupal.settings.picture.label;
-                  alert(message);
-                  return false;
-                } else {
-                  return true;
+                if (Drupal.settings.picture.required) {
+                  if (this.getValue() == 'not_set') {
+                    var message = 'Please make a selection from ' + Drupal.settings.picture.label;
+                    alert(message);
+                    return false;
+                  }
                 }
+                return true;
               }
             },
               // Position before preview.

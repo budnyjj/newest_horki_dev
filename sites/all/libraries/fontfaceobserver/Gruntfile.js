@@ -22,6 +22,7 @@ module.exports = function (grunt) {
   ];
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     clean: {
       options: {
         force: true
@@ -29,7 +30,7 @@ module.exports = function (grunt) {
       build: ['build']
     },
     exec: {
-      test: 'phantomjs node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js test/index.html',
+      test: './node_modules/.bin/phantomjs node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js test/index.html',
       deps: 'calcdeps -i src -i exports.js -p src -p ./vendor/google/base.js -p node_modules/closure-dom/src/dom.js -o deps > test/deps.js'
     },
     jshint: {
@@ -72,6 +73,9 @@ module.exports = function (grunt) {
       }
     },
     concat: {
+      options: {
+        banner: '/* Font Face Observer v<%= pkg.version %> - © Bram Stein. License: BSD-3-Clause */'
+      },
       dist_promises: {
         src: ['node_modules/promis/promise.js', 'build/fontfaceobserver.js'],
         dest: 'fontfaceobserver.js'

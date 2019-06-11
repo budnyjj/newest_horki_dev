@@ -1724,11 +1724,18 @@ function advagg_mod_find_critical_css_file() {
     ) {
       $filename = "{$dirs[0]}{$dirs[1]}{$dirs[2]}{$dirs[4]}{$dirs[8]}";
     }
-    if (!$filename
-      && isset($object->type)
-      && is_readable("{$dirs[0]}{$dirs[1]}{$dirs[2]}{$dirs[5]}{$object->type}.css")
-    ) {
-      $filename = "{$dirs[0]}{$dirs[1]}{$dirs[2]}{$dirs[5]}{$object->type}";
+    if (isset($object->type)) {
+      $filtered_object_type = advagg_url_to_filename($object->type);
+      if (!$filename
+        && is_readable("{$dirs[0]}{$dirs[1]}{$dirs[2]}{$dirs[5]}{$object->type}.css")
+      ) {
+        $filename = "{$dirs[0]}{$dirs[1]}{$dirs[2]}{$dirs[5]}{$object->type}";
+      }
+      if (!$filename
+        && is_readable("{$dirs[0]}{$dirs[1]}{$dirs[2]}{$dirs[5]}$filtered_object_type.css")
+      ) {
+        $filename = "{$dirs[0]}{$dirs[1]}{$dirs[2]}{$dirs[5]}$filtered_object_type";
+      }
     }
 
     // Look in themename/critical-css/all/urls|object_type.
@@ -1753,11 +1760,18 @@ function advagg_mod_find_critical_css_file() {
     ) {
       $filename = "{$dirs[0]}{$dirs[1]}{$dirs[3]}{$dirs[4]}{$dirs[8]}";
     }
-    if (!$filename
-      && isset($object->type)
-      && is_readable("{$dirs[0]}{$dirs[1]}{$dirs[3]}{$dirs[5]}{$object->type}.css")
-    ) {
-      $filename = "{$dirs[0]}{$dirs[1]}{$dirs[3]}{$dirs[5]}{$object->type}";
+    if (isset($object->type)) {
+      $filtered_object_type = advagg_url_to_filename($object->type);
+      if (!$filename
+        && is_readable("{$dirs[0]}{$dirs[1]}{$dirs[3]}{$dirs[5]}{$object->type}.css")
+      ) {
+        $filename = "{$dirs[0]}{$dirs[1]}{$dirs[3]}{$dirs[5]}{$object->type}";
+      }
+      if (!$filename
+        && is_readable("{$dirs[0]}{$dirs[1]}{$dirs[3]}{$dirs[5]}$filtered_object_type.css")
+      ) {
+        $filename = "{$dirs[0]}{$dirs[1]}{$dirs[3]}{$dirs[5]}$filtered_object_type";
+      }
     }
   }
 
@@ -1810,14 +1824,18 @@ function advagg_mod_find_critical_css_file() {
     $inline_strings[2] = file_get_contents($filenames[2]);
   }
 
+  // Remove !important from all CSS rules. Strips it even without a space in
+  // front, unlike the earlier version of this code.
+  if (variable_get('advagg_mod_inline_critical_css_strip_important', ADVAGG_MOD_INLINE_CRITICAL_CSS_STRIP_IMPORTANT)) {
+    if (!empty($inline_strings)) {
+      $inline_strings[0] = str_replace('!important', '', $inline_strings[0]);
+    }
+  }
+
   // Allow for altering the ending point.
   // Call hook_advagg_mod_critical_css_file_post_alter().
   drupal_alter('advagg_mod_critical_css_file_post', $filenames, $params, $inline_strings);
 
-  // Remove !important from all CSS rules.
-  if (variable_get('advagg_mod_inline_critical_css_strip_important', ADVAGG_MOD_INLINE_CRITICAL_CSS_STRIP_IMPORTANT)) {
-    $inline_strings[0] = str_replace(' !important', '', $inline_strings[0]);
-  }
   return array($filenames, $params, $inline_strings);
 }
 

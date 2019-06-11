@@ -1440,7 +1440,15 @@ function advagg_rename($source, $destination) {
   $real_destination = drupal_realpath($destination);
   $real_destination = $real_destination ? $real_destination : $destination;
 
-  if (!@rename($real_source, $real_destination)) {
+  // The use of drupal_realpath() is discouraged, because it does not work for remote URIs.
+  if (module_exists('s3fs')) {
+    $scheme = file_uri_scheme($source);
+    // s3fs public function rename() includes call to waitUntilFileExists().
+    if(!file_stream_wrapper_get_instance_by_scheme($scheme)->rename($source, $destination)) {
+      return FALSE;
+    };
+  }
+  elseif (!@rename($real_source, $real_destination)) {
     if (!file_unmanaged_move($source, $destination)) {
       return FALSE;
     }
