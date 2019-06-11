@@ -1540,8 +1540,10 @@ ul.tabs li.active a {
 
 .node .field-name-body table,
 .node .field-name-field-text table {
+    display: block;
     margin-bottom: 25px;
     width: 100%;
+    overflow-x: scroll;
 }
 
 .node .field-name-body thead,
@@ -1557,16 +1559,6 @@ ul.tabs li.active a {
 .node .field-name-field-text th {
     padding: 20px 10px;
     vertical-align: middle;
-}
-
-.node .field-name-body th:first-child,
-.node .field-name-field-text th:first-child {
-    padding-left: 40px;
-}
-
-.node .field-name-body th:last-child,
-.node .field-name-field-text th:last-child {
-    padding-right: 40px;
 }
 
 .node .field-name-body tbody,
@@ -1597,16 +1589,6 @@ ul.tabs li.active a {
 .node .field-name-field-text tr:last-child td {
     border-bottom: none;
     padding-bottom: 20px
-}
-
-.node .field-name-body td:first-child,
-.node .field-name-field-text td:first-child {
-    padding-left: 40px;
-}
-
-.node .field-name-body td:last-child,
-.node .field-name-field-text td:last-child {
-    padding-right: 40px;
 }
 
 .node .field-name-body .text-chapter,

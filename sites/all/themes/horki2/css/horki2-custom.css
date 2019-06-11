@@ -639,6 +639,32 @@
     padding: 45px 120px 0 120px;
 }
 
+.node .field-name-body table,
+.node .field-name-field-text table {
+    display: table;
+    overflow-x: initial;
+}
+
+.node .field-name-body th:first-child,
+.node .field-name-field-text th:first-child {
+    padding-left: 40px;
+}
+
+.node .field-name-body th:last-child,
+.node .field-name-field-text th:last-child {
+    padding-right: 40px;
+}
+
+.node .field-name-body td:first-child,
+.node .field-name-field-text td:first-child {
+    padding-left: 40px;
+}
+
+.node .field-name-body td:last-child,
+.node .field-name-field-text td:last-child {
+    padding-right: 40px;
+}
+
 .node .field-name-field-pdf #pdf_reader {
     height: 670px;
 }
