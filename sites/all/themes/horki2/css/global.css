@@ -1709,7 +1709,14 @@ ul.tabs li.active a {
     color: #959595;
 }
 
-/* inner node banner */
+/* inner node banners */
+.block-block-61 {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-top: 1px solid #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
+}
+
 .block-block-59 {
     padding-top: 20px;
     margin-bottom: 20px;

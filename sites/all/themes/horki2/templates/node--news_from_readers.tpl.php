@@ -8,7 +8,6 @@
   <?php print render($title_suffix); ?>
   <?php if ($display_submitted): ?>
 	<footer class="submitted"><?php print date("d.m.Y", $node->published_at); ?> &ndash; <?php print date("H:i", $node->published_at); ?> 
-
   	<?php if ($page): ?> 
   	      <?php if (isset($node_views_cntr)): ?>
 	      	    <span class="delimiter">|</span>
@@ -19,9 +18,14 @@
 	      	    <?php print $node_comments_cntr; ?>
   	      <?php endif; ?>
 	      <span class="delimiter">|</span>
-	      <span class="by-readers">даслана чытачом</span>
+	      <span class="by-readers"><?php print t("submitted by user") ?></span>
   	<?php endif; ?>
 	</footer>
+	<?php
+	$block = block_load('block', '61');
+	$block_array = _block_get_renderable_array(_block_render_blocks(array($block)));
+	print render($block_array);   
+	?> 
   <?php endif; ?>  
   
   <div<?php print $content_attributes; ?>>
