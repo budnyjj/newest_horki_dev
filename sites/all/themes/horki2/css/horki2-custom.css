@@ -587,6 +587,11 @@
     margin-bottom: 45px;
 }
 
+/* map of old streets */
+.page-places .block-main {
+    margin-bottom: 45px;
+}
+
 
 /**
  * Common Inner nodes styles
@@ -776,5 +781,3 @@
     width: 894px;
     margin: 0 auto;
 }
-
-#block-block-28 {display: none;}

@@ -1431,6 +1431,107 @@ ul.tabs li.active a {
     color: #000000;
 }
 
+/* map of old streets */
+.page-places .block-main {
+    margin-bottom: 20px;
+}
+
+.view-old-streets polyline {
+    stroke-width: 8px !important;
+}
+
+.view-old-streets polyline:nth-child(1) {
+    stroke: rgb(0, 0, 0) !important;
+}
+
+.view-old-streets polyline:nth-child(2) {
+    stroke: rgb(66, 134, 244) !important;
+}
+
+.view-old-streets polyline:nth-child(3) {
+    stroke: rgb(155, 244, 65) !important;
+}
+
+.view-old-streets polyline:nth-child(4) {
+    stroke: rgb(244, 205, 65) !important;
+}
+
+.view-old-streets polyline:nth-child(5) {
+    stroke: rgb(244, 133, 65) !important;
+}
+
+.view-old-streets polyline:nth-child(6) {
+    stroke: rgb(244, 91, 65) !important;
+}
+
+.view-old-streets polyline:nth-child(7) {
+    stroke: rgb(163, 25, 1) !important;
+}
+
+.view-old-streets polyline:nth-child(8) {
+    stroke: rgb(79, 162, 0) !important;
+}
+
+.view-old-streets polyline:nth-child(9) {
+    stroke: rgb(0, 153, 161) !important;
+}
+
+.view-old-streets polyline:nth-child(10) {
+    stroke: rgb(63, 14, 62) !important;
+}
+
+.view-old-streets polyline:nth-child(11) {
+    stroke: rgb(100, 0, 160) !important;
+
+}
+
+.view-old-streets polyline:nth-child(12){
+    stroke: rgb(70, 162, 0) !important;
+}
+
+.view-old-streets polyline:nth-child(13){
+    stroke: rgb(244, 66, 241) !important;
+}
+
+/* last objects block */
+.block-latest-objects-block {
+    margin-bottom: 20px;
+}
+
+.block-latest-objects-block .block-inner {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+
+.block-latest-objects .view-content {
+    margin-bottom: 25px;
+}
+
+.block-latest-objects .views-row {
+    margin-bottom: 10px;
+}
+
+.block-latest-objects .views-field-field-taxonomy-pic {
+    margin-right: 10px;
+}
+
+.block-latest-objects .views-field-title {
+    width: 75%;
+    min-width: 200px;
+}
+
+.block-latest-objects .views-field-field-taxonomy-pic,
+.block-latest-objects .views-field-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.block-latest-objects .views-field-title a {
+    font-size: 1.05em;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
 
 /**
  * Common Inner nodes styles
@@ -2264,26 +2365,4 @@ ul.tabs li.active a {
 
 .node-local_problem-form .vertical-tabs {
     display: none;
-}
-
-polyline {stroke-width: 8!important;}
-
-polyline:nth-child(1) {stroke: rgb(0, 0, 0)!important;}
-polyline:nth-child(2) {stroke: rgb(66, 134, 244)!important;}
-polyline:nth-child(3) {stroke: rgb(155, 244, 65)!important;}
-polyline:nth-child(4) {stroke: rgb(244, 205, 65)!important;}
-polyline:nth-child(5) {stroke: rgb(244, 133, 65)!important;}
-polyline:nth-child(6) {stroke: rgb(244, 91, 65)!important;}
-polyline:nth-child(7) {stroke: rgb(163, 25, 1)!important;}
-polyline:nth-child(8) {stroke: rgb(79, 162, 0)!important;}
-polyline:nth-child(9) {stroke: rgb(0, 153, 161)!important;}
-polyline:nth-child(10) {stroke: rgb(63, 14, 62)!important;}
-polyline:nth-child(11){stroke: rgb(100, 0, 160)!important;}
-polyline:nth-child(12){stroke: rgb(70, 162, 0)!important;}
-polyline:nth-child(13){stroke: rgb(244, 66, 241)!important;}
-
-#block-block-28 {display: none;}
-
-#block-views-latest-objects-block {
-    padding-top: 30px;
 }
