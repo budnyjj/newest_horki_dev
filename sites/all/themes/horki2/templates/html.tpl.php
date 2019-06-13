@@ -26,8 +26,6 @@
 <meta name="msapplication-config" content="/sites/default/files/favicons/browserconfig.xml">  
 <?php print $styles; ?>
 
-<meta name="verify-v1" content="A29kVzxMcO/zSJlO3EeJzU6vnTgF5KY1HcgHqId0+qA=" />
-<meta name="google-site-verification" content="I50q2z2FdQZMKZ_SPHbi7dyjnjn7FD4wLkfEWkks0ZI" />
 <meta name="google-site-verification" content="mc_80mJ1g2ulo7wFCZyPg9_tfUYANmS7OCbKrLypEKg" />
 <meta name="yandex-verification" content="d4b6a64cdf423497" />
 
@@ -48,6 +46,7 @@ gt.setAttribute('defer','defer'); gt.src=l+'://gaby.hit.gemius.pl/xgemius.js'; s
 <!-- Yandex Direct -->
 <script src="https://yastatic.net/pcode/adfox/loader.js" crossorigin="anonymous"></script>
 
+<!-- SendPulse -->
 <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/ff43ffd7f1eab9f55eb2b7b70720d4b7_1.js" async></script>
 
 </head>
