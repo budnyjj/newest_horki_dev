@@ -14,24 +14,28 @@
     height: 31px !important;
 }
 
+.addthis_button_viber {
+    background: url('/sites/default/files/icons/addthis/viber.png') no-repeat;
+}
+
 .addthis_button_odnoklassniki_ru {
-    background: url('../images/addthis/odnoklassniki.png') no-repeat;
+    background: url('/sites/default/files/icons/addthis/odnoklassniki.png') no-repeat;
 }
 
 .addthis_button_vk {
-    background: url('../images/addthis/vk.png') no-repeat;
+    background: url('/sites/default/files/icons/addthis/vk.png') no-repeat;
 }
 
 .addthis_button_facebook {
-    background: url('../images/addthis/facebook.png') no-repeat;
+    background: url('/sites/default/files/icons/addthis/facebook.png') no-repeat;
 }
 
 .addthis_button_twitter {
-    background: url('../images/addthis/twitter.png') no-repeat;
+    background: url('/sites/default/files/icons/addthis/twitter.png') no-repeat;
 }
 
 .addthis_button_email {
-    background: url('../images/addthis/mail.png') no-repeat;
+    background: url('/sites/default/files/icons/addthis/mail.png') no-repeat;
 }
 
 .addthis_toolbox .addthis_button_email.at300b {
