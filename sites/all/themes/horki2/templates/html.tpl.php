@@ -24,24 +24,12 @@
 <meta name="msapplication-TileColor" content="#FFFFFF">
 <meta name="msapplication-TileImage" content="/sites/default/files/favicons/favicon-144.png">
 <meta name="msapplication-config" content="/sites/default/files/favicons/browserconfig.xml">  
-<?php print $styles; ?>
-
 <meta name="google-site-verification" content="mc_80mJ1g2ulo7wFCZyPg9_tfUYANmS7OCbKrLypEKg" />
 <meta name="yandex-verification" content="d4b6a64cdf423497" />
 
-<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<?php print $styles; ?>
 
-<!-- (C)2000-2013 Gemius SA - gemiusAudience / horki.info / Home Page -->
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-var pp_gemius_identifier = '.FuVJrfD0SLzrGxzLutoYre976b8joLyu6XDUVRV1vD.m7';
-// lines below shouldn't be edited
-function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};
-gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');
-(function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');
-gt.setAttribute('defer','defer'); gt.src=l+'://gaby.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
-//--><!]]>
-</script>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <!-- Yandex Direct -->
 <script src="https://yastatic.net/pcode/adfox/loader.js" crossorigin="anonymous"></script>

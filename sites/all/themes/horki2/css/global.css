@@ -1240,11 +1240,6 @@ ul.tabs li.active a {
     width: 200px;
 }
 
-/* sidebar banner #1 */
-.block-33 {
-    margin-bottom: 20px;
-}
-
 /* last news */
 .block-aposhnija-naviny-block-1 {
     margin-bottom: 20px;
@@ -1290,11 +1285,6 @@ ul.tabs li.active a {
 .block-last-news .last-title a:hover {
     text-decoration: none;
     color: #555555;
-}
-
-/* sidebar banner #2 */
-.block-56 {
-    margin-bottom: 20px;
 }
 
 /* map of local problems */

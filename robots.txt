@@ -68,30 +68,31 @@ Disallow: /MAINTAINERS.txt
 Disallow: /update.php
 Disallow: /UPGRADE.txt
 Disallow: /xmlrpc.php
-# Paths (clean URLs)
-Disallow: /admin/
-Disallow: /comment/reply/
-Disallow: /filter/tips/
-Disallow: /node/add/
-Disallow: /search/
-Disallow: /user/register/
-Disallow: /user/password/
-Disallow: /user/login/
-Disallow: /user/logout/
-# Paths (no clean URLs)
-Disallow: /?q=admin/
-Disallow: /?q=comment/reply/
-Disallow: /?q=filter/tips/
-Disallow: /?q=node/add/
-Disallow: /?q=search/
-Disallow: /?q=user/password/
-Disallow: /?q=user/register/
-Disallow: /?q=user/login/
-Disallow: /?q=user/logout/
 
+#
 # Custom settings
-# Sitemap settings
-Sitemap: https://horki.info/sitemap.xml
+#
+
+# Paths (clean URLs)
+Disallow: /admin
+Disallow: /comment/reply
+Disallow: /filter/tips
+Disallow: /node/add
+Disallow: /search
+Disallow: /user/register
+Disallow: /user/password
+Disallow: /user/login
+Disallow: /user/logout
+# Paths (no clean URLs)
+Disallow: /?q=admin
+Disallow: /?q=comment/reply
+Disallow: /?q=filter/tips
+Disallow: /?q=node/add
+Disallow: /?q=search
+Disallow: /?q=user/password
+Disallow: /?q=user/register
+Disallow: /?q=user/login
+Disallow: /?q=user/logout
 
 # RSS pages
 Allow: /google.xml
@@ -105,9 +106,11 @@ Allow: /*?page=
 Disallow: /*?page=*&*
 Disallow: /*?page=0*
 
-# Disallow hybridauth
-Disallow: /hybridauth/
+# Allow qt-davedka URL variable
+Allow: /davedka.html?qt-davedka=
 
-Clean-param: rate
-Clean-param: destination
-Clean-param: qt-social_blocks_normal
+# Disallow hybridauth
+Disallow: /hybridauth
+
+# Sitemap settings
+Sitemap: https://horki.info/sitemap.xml

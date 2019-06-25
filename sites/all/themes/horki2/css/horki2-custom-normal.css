@@ -141,19 +141,33 @@
  * Common inner nodes styles
  */
 
-.system-content .node .field-name-body picture,
-.system-content .node .field-name-body .caption,
-.system-content .node .field-name-field-text picture,
-.system-content .node .field-name-field-text .caption {
+.wide-content .node .field-name-body picture,
+.wide-content .node .field-name-body .caption,
+.wide-content .node .field-name-field-text picture,
+.wide-content .node .field-name-field-text .caption {
     width: 1200px !important;
 }
 
+.wide-content .node .field-name-body picture,
+.wide-content .node .field-name-body .caption,
+.wide-content .node .field-name-body .embedded-video,
+.wide-content .node .field-name-field-text picture,
+.wide-content .node .field-name-field-text .caption,
+.wide-content .node .field-name-field-text .embedded-video {
+    width: 1200px !important;
+}
+
+.wide-content .node .field-name-body .videoplayer,
+.wide-content .node .field-name-field-text .videoplayer {
+    height: 750px;
+}
+
 .block-media-grid .views-row {
-width: 282px;
+    width: 282px;
 }
 
 #block-views-similarterms-block .block-media-grid .views-row {
- width: 272px;
+    width: 272px;
 }
 
 #region-sidebar-third {

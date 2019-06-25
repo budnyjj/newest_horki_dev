@@ -85,7 +85,17 @@
 
 .node .field-name-body picture,
 .node .field-name-body .caption,
+.node .field-name-body .embedded-video,
 .node .field-name-field-text picture,
-.node .field-name-field-text .caption {
+.node .field-name-field-text .caption,
+.node .field-name-field-text .embedded-video {
     width: 894px !important;
 }
+
+.node .field-name-body .videoplayer,
+.node .field-name-field-text .videoplayer {
+    height: 558px;
+}
+
+
+

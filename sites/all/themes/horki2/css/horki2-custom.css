@@ -564,18 +564,6 @@
     right: 0;
 }
 
-/* sidebar banner #1 */
-.block-33 .block-inner {
-    border: 1px solid #DBDBDB;
-    padding: 20px;
-}
-
-/* sidebar banner #2 */
-.block-56 .block-inner {
-    border: 1px solid #DBDBDB;
-    padding: 20px;
-}
-
 /* map of local problems */
 .page-problems .block-openlayers-plus {
     margin-left: 50px;
@@ -679,12 +667,6 @@
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: -50px;
-    width: 894px;   
-}
-
-.node .field-name-body .videoplayer,
-.node .field-name-field-text .videoplayer {
-    height: 470px;
 }
 
 .node .text-chapter {
