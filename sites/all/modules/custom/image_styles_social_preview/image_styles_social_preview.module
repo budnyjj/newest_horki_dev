@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Code for the Image styles: social preview feature.
+ */
+
+include_once 'image_styles_social_preview.features.inc';
