@@ -41,7 +41,7 @@ function image_styles_social_preview_image_default_styles() {
   $styles['social_preview'] = array(
     'label' => 'social_preview',
     'effects' => array(
-      52 => array(
+      44 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 1024,
@@ -49,7 +49,7 @@ function image_styles_social_preview_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      55 => array(
+      45 => array(
         'name' => 'canvasactions_file2canvas',
         'data' => array(
           'xpos' => 0,
@@ -60,7 +60,7 @@ function image_styles_social_preview_image_default_styles() {
         ),
         'weight' => 2,
       ),
-      58 => array(
+      46 => array(
         'name' => 'canvasactions_file2canvas',
         'data' => array(
           'xpos' => 50,
@@ -71,7 +71,7 @@ function image_styles_social_preview_image_default_styles() {
         ),
         'weight' => 3,
       ),
-      57 => array(
+      47 => array(
         'name' => 'image_effects_text',
         'data' => array(
           'text_source' => 'text',
@@ -91,7 +91,7 @@ if ($field) {
           'fontfile' => 'public://fontyourface/local_fonts/UniversCondC-normal-bold/universcondcb.ttf',
           'size' => 54,
           'RGB' => array(
-            'HEX' => '#FFFFFF',
+            'HEX' => '#fcfcfc',
           ),
           'alpha' => 100,
           'xpos' => 50,

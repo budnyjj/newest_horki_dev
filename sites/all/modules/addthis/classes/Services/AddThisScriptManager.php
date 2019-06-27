@@ -237,7 +237,9 @@ class AddThisScriptManager {
     }
 
     drupal_alter('addthis_configuration_share', $configuration);
-    return $addthis_share;
+    if (isset($addthis_share)) {
+      return $addthis_share;
+    }
   }
 
 }
