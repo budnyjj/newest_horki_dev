@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_companies.views_default.inc
@@ -118,7 +119,7 @@ function views_companies_views_default_views() {
     'image_style' => 'photo_video_preview',
     'image_link' => 'content',
   );
-  /* Поле: Змест: Апісанне */
+  /* Поле: Змест: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -153,7 +154,7 @@ function views_companies_views_default_views() {
   $handler->display->display_options['sorts']['value']['relationship'] = 'votingapi_cache';
   $handler->display->display_options['sorts']['value']['order'] = 'DESC';
   $handler->display->display_options['sorts']['value']['coalesce'] = 1;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -173,7 +174,7 @@ function views_companies_views_default_views() {
   $handler->display->display_options['filters']['field_company_section_tid']['field'] = 'field_company_section_tid';
   $handler->display->display_options['filters']['field_company_section_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_company_section_tid']['expose']['operator_id'] = 'field_company_section_tid_op';
-  $handler->display->display_options['filters']['field_company_section_tid']['expose']['label'] = 'Раздел каталога';
+  $handler->display->display_options['filters']['field_company_section_tid']['expose']['label'] = 'Раздзел каталога';
   $handler->display->display_options['filters']['field_company_section_tid']['expose']['operator'] = 'field_company_section_tid_op';
   $handler->display->display_options['filters']['field_company_section_tid']['expose']['identifier'] = 'field_company_section_tid';
   $handler->display->display_options['filters']['field_company_section_tid']['expose']['remember_roles'] = array(
@@ -185,7 +186,7 @@ function views_companies_views_default_views() {
   );
   $handler->display->display_options['filters']['field_company_section_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_company_section_tid']['vocabulary'] = 'company_catalog';
-  /* Filter criterion: Змест: Апісанне (body) */
+  /* Filter criterion: Змест: Body (body) */
   $handler->display->display_options['filters']['body_value']['id'] = 'body_value';
   $handler->display->display_options['filters']['body_value']['table'] = 'field_data_body';
   $handler->display->display_options['filters']['body_value']['field'] = 'body_value';
@@ -277,7 +278,7 @@ function views_companies_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'list-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Апісанне */
+  /* Поле: Змест: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -442,7 +443,7 @@ function views_companies_views_default_views() {
 <p>Вы можаце <a href="/companies.html">скінуць наладкі фільтра</a>, або <a href="#">дадаць сваё прадпрыемства</a>.</p>'),
     t('Vote results'),
     t('.'),
-    t('Раздел каталога'),
+    t('Раздзел каталога'),
     t('Ключавыя словы'),
     t('Page'),
     t('Пошук'),

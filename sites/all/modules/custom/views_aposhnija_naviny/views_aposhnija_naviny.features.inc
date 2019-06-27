@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_aposhnija_naviny.features.inc

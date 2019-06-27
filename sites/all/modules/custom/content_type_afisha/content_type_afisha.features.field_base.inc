@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_afisha.features.field_base.inc

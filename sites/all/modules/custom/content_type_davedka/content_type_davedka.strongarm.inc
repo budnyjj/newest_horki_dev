@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_davedka.strongarm.inc
@@ -163,7 +164,7 @@ function content_type_davedka_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_info_pattern';
-  $strongarm->value = 'davedka/[node:nid].html';
+  $strongarm->value = 'guide/[node:nid].html';
   $export['pathauto_node_info_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

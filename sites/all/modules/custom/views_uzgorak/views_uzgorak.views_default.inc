@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_uzgorak.views_default.inc
@@ -85,7 +86,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -158,7 +159,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['title']['element_class'] = 'uzgorak-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Змест */
+  /* Поле: Змест: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -199,7 +200,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['view_node']['alter']['text'] = 'Глядзець онлайн';
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = 'Глядзець анлайн';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   /* Поле: Спасылкі */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -336,7 +337,7 @@ function views_uzgorak_views_default_views() {
       ),
     ),
   );
-  $handler->display->display_options['path'] = 'uzgorak.html';
+  $handler->display->display_options['path'] = 'uzgorak/archive.html';
 
   /* Display: Дадатак */
   $handler = $view->new_display('attachment', 'Дадатак', 'attachment_1');
@@ -360,7 +361,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = '<div class="description">
 <strong>Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.</strong>
-Наклад – 2100 асобнікаў на тыдзень.
+Наклад – 2350 асобнікаў на тыдзень.
 Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды, прыватныя аб\'явы, астрапрагноз і віншаванні.
 </div>';
   $handler->display->display_options['header']['area']['format'] = 'php_code';
@@ -392,7 +393,7 @@ function views_uzgorak_views_default_views() {
     'colorbox' => 0,
     'colorbox_link_text' => 'Глядзець',
   );
-  /* Поле: Змест: Змест */
+  /* Поле: Змест: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -433,7 +434,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view_node']['text'] = 'Глядзець онлайн';
+  $handler->display->display_options['fields']['view_node']['text'] = 'Глядзець анлайн';
   /* Поле: Спасылкі */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -489,13 +490,13 @@ function views_uzgorak_views_default_views() {
     t('Page'),
     t('Архіў газеты "УзГорак"'),
     t('больш "Узгоркаў"'),
-    t('Глядзець онлайн'),
+    t('Глядзець анлайн'),
     t('<a href="[field_pdf]">Скачаць PDF</a>
 [view_node]'),
     t('Дадатак'),
     t('<div class="description">
 <strong>Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.</strong>
-Наклад – 2100 асобнікаў на тыдзень.
+Наклад – 2350 асобнікаў на тыдзень.
 Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды, прыватныя аб\'явы, астрапрагноз і віншаванні.
 </div>'),
     t('<a href="[field_pdf_1]">Скачаць PDF</a>

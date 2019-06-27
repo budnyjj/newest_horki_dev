@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_news_lists.views_default.inc
@@ -57,7 +58,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -218,7 +219,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -485,7 +486,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -617,7 +618,7 @@ function views_news_lists_views_default_views() {
     'news_from_readers' => 'news_from_readers',
   );
   $handler->display->display_options['filters']['type']['group'] = 2;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -731,7 +732,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -800,7 +801,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1147,7 +1148,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1217,7 +1218,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1340,7 +1341,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';

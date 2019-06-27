@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_uzgorak.features.field_instance.inc
@@ -47,30 +48,34 @@ function content_type_uzgorak_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'anonymous_text' => 'anonymous_text',
+          'ads_text' => 0,
+          'anonymous_text' => 0,
           'author_text' => 'author_text',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'user_text' => 'user_text',
+          'comment_text' => 0,
+          'php_code' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'ads_text' => array(
+              'weight' => -6,
+            ),
             'anonymous_text' => array(
               'weight' => -8,
             ),
             'author_text' => array(
               'weight' => -10,
             ),
+            'comment_text' => array(
+              'weight' => -5,
+            ),
             'php_code' => array(
               'weight' => -6,
             ),
             'plain_text' => array(
               'weight' => -7,
-            ),
-            'user_text' => array(
-              'weight' => -9,
             ),
           ),
         ),
@@ -83,6 +88,12 @@ function content_type_uzgorak_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_label_summary' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_summary' => '',
+        'maxlength_js_truncate_html' => 0,
         'rows' => 20,
         'summary_rows' => 5,
       ),
@@ -112,7 +123,7 @@ function content_type_uzgorak_field_default_field_instances() {
           'buttons_size' => 'addthis_32x32_style',
           'counter_orientation' => 'vertical',
           'extra_css' => '',
-          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,email',
+          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
         ),
         'type' => 'addthis_basic_toolbox',
         'weight' => 2,

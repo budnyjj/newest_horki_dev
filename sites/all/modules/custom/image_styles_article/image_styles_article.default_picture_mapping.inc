@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * image_styles_article.default_picture_mapping.inc
@@ -46,8 +47,8 @@ function image_styles_article_default_picture_mapping() {
   $picture_mapping = new PictureMapping();
   $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
   $picture_mapping->api_version = 2;
-  $picture_mapping->label = 'davedka';
-  $picture_mapping->machine_name = 'davedka';
+  $picture_mapping->label = 'wide';
+  $picture_mapping->machine_name = 'wide';
   $picture_mapping->breakpoint_group = 'horki2';
   $picture_mapping->mapping = array(
     'breakpoints.theme.horki2.desktop_normal' => array(
@@ -75,7 +76,7 @@ function image_styles_article_default_picture_mapping() {
       ),
     ),
   );
-  $export['davedka'] = $picture_mapping;
+  $export['wide'] = $picture_mapping;
 
   return $export;
 }

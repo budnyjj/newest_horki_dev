@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * image_styles_article.features.inc

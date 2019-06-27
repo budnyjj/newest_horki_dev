@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_local_problem.features.field_instance.inc
@@ -31,7 +32,7 @@ function content_type_local_problem_field_default_field_instances() {
           'buttons_size' => 'addthis_32x32_style',
           'counter_orientation' => 'vertical',
           'extra_css' => '',
-          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,email',
+          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
         ),
         'type' => 'addthis_basic_toolbox',
         'weight' => 5,

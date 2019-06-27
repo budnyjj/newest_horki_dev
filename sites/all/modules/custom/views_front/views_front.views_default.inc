@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_front.views_default.inc
@@ -66,7 +67,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -151,7 +152,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -259,7 +260,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -273,109 +274,6 @@ function views_front_views_default_views() {
   $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['filters']['in_queue']['value'] = '1';
   $handler->display->display_options['path'] = 'main';
-
-  /* Display: Дадатак */
-  $handler = $view->new_display('attachment', 'Дадатак', 'attachment_1');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'attachment-last-news';
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'больш навінаў';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Загаловак: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['label'] = 'Навіны';
-  $handler->display->display_options['header']['area']['content'] = 'Навіны';
-  $handler->display->display_options['header']['area']['format'] = 'author_text';
-  $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Ніжні калантытул: Global: Text area */
-  $handler->display->display_options['footer']['area_1']['id'] = 'area_1';
-  $handler->display->display_options['footer']['area_1']['table'] = 'views';
-  $handler->display->display_options['footer']['area_1']['field'] = 'area';
-  $handler->display->display_options['footer']['area_1']['label'] = 'Больш навінаў';
-  $handler->display->display_options['footer']['area_1']['content'] = '<div class="button-black"><a href="/naviny.html">Больш навінаў</a></div>';
-  $handler->display->display_options['footer']['area_1']['format'] = 'author_text';
-  /* Ніжні калантытул: Global: Text area */
-  $handler->display->display_options['footer']['area']['id'] = 'area';
-  $handler->display->display_options['footer']['area']['table'] = 'views';
-  $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['label'] = 'Дадаць навіну';
-  $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<div class="button-red"><a href="/node/add/news-from-readers">Дадаць навіну</a></div>';
-  $handler->display->display_options['footer']['area']['format'] = 'author_text';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Вузел: Published at */
-  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
-  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['label'] = '';
-  $handler->display->display_options['fields']['published_at']['element_class'] = 'last-date';
-  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['published_at']['date_format'] = 'list';
-  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
-  /* Поле: Змест: Загаловак */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][comment_count]';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'last-title';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Вузел: Published at */
-  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
-  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
-  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
-  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
-  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Тып */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'afisha' => 'afisha',
-    'news' => 'news',
-    'news_from_readers' => 'news_from_readers',
-  );
-  /* Filter criterion: Nodequeue: In queue */
-  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
-  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
-  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
-  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
-  $handler->display->display_options['filters']['in_queue']['value'] = '0';
-  $handler->display->display_options['displays'] = array(
-    'page_1' => 'page_1',
-    'default' => 0,
-    'block_1' => 0,
-  );
-  $handler->display->display_options['attachment_position'] = 'after';
   $translatables['front'] = array(
     t('Master'),
     t('болей'),
@@ -404,13 +302,6 @@ function views_front_views_default_views() {
     t(' '),
     t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
     t('<span class="views-count">[recentcount]</span><span class="comments-count">[comment_count]</span>'),
-    t('Дадатак'),
-    t('больш навінаў'),
-    t('Навіны'),
-    t('Больш навінаў'),
-    t('<div class="button-black"><a href="/naviny.html">Больш навінаў</a></div>'),
-    t('Дадаць навіну'),
-    t('<div class="button-red"><a href="/node/add/news-from-readers">Дадаць навіну</a></div>'),
   );
   $export['front'] = $view;
 

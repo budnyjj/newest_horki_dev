@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_davedka.features.field_base.inc
@@ -30,6 +31,21 @@ function content_type_davedka_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_index_number'.
+  $field_bases['field_index_number'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_index_number',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
   );
 
   return $field_bases;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_news_by_regions.views_default.inc
@@ -118,7 +119,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -154,7 +155,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -259,7 +260,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -306,7 +307,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -414,7 +415,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -461,7 +462,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -562,7 +563,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -609,7 +610,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -706,7 +707,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -753,7 +754,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -850,7 +851,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -897,7 +898,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -940,8 +941,8 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['block_description'] = 'Навіны Магілёўскай вобласці';
   $handler->display->display_options['block_caching'] = '8';
 
-  /* Display: Краіна */
-  $handler = $view->new_display('block', 'Краіна', 'block_5');
+  /* Display: Беларусь */
+  $handler = $view->new_display('block', 'Беларусь', 'block_5');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Загаловак: Global: Text area */
@@ -949,8 +950,8 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Краіна';
-  $handler->display->display_options['header']['area']['content'] = '<span class="header-title">Краіна</span>
-<span class="header-more"><a href="/kraina.html">Больш навінаў</a></span>';
+  $handler->display->display_options['header']['area']['content'] = '<span class="header-title">Беларусь</span>
+<span class="header-more"><a href="/belarus.html">Больш навінаў</a></span>';
   $handler->display->display_options['header']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -1004,7 +1005,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1051,7 +1052,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1085,7 +1086,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['in_queue_1']['field'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue_1']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['filters']['in_queue_1']['value'] = '0';
-  $handler->display->display_options['block_description'] = 'Навіны краіны';
+  $handler->display->display_options['block_description'] = 'Навіны Беларусі';
   $handler->display->display_options['block_caching'] = '8';
   $translatables['news_by_regions'] = array(
     t('Master'),
@@ -1132,10 +1133,11 @@ function views_news_by_regions_views_default_views() {
     t('<span class="header-title">Магілёўская вобласць</span>
 <span class="header-more"><a href="/mogilev-news.html">Больш навінаў</a></span>'),
     t('Навіны Магілёўскай вобласці'),
+    t('Беларусь'),
     t('Краіна'),
-    t('<span class="header-title">Краіна</span>
-<span class="header-more"><a href="/kraina.html">Больш навінаў</a></span>'),
-    t('Навіны краіны'),
+    t('<span class="header-title">Беларусь</span>
+<span class="header-more"><a href="/belarus.html">Больш навінаў</a></span>'),
+    t('Навіны Беларусі'),
   );
   $export['news_by_regions'] = $view;
 

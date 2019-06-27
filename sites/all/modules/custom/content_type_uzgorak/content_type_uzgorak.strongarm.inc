@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_uzgorak.strongarm.inc

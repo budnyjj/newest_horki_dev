@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * text_formats.features.filter.inc
@@ -16,10 +17,10 @@ function text_formats_filter_default_formats() {
     'name' => 'Ads text',
     'cache' => 1,
     'status' => 1,
-    'weight' => 0,
+    'weight' => -6,
     'filters' => array(
       'filter_html' => array(
-        'weight' => -10,
+        'weight' => 0,
         'status' => 1,
         'settings' => array(
           'allowed_html' => '<a>, <p>',
@@ -28,24 +29,19 @@ function text_formats_filter_default_formats() {
         ),
       ),
       'filter_autop' => array(
-        'weight' => 0,
+        'weight' => 1,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_url' => array(
-        'weight' => 0,
+        'weight' => 2,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
-      'picture' => array(
-        'weight' => 0,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'filter_htmlcorrector' => array(
-        'weight' => 10,
+        'weight' => 3,
         'status' => 1,
         'settings' => array(),
       ),
@@ -58,21 +54,8 @@ function text_formats_filter_default_formats() {
     'name' => 'Anonymous text',
     'cache' => 1,
     'status' => 1,
-    'weight' => -8,
+    'weight' => -9,
     'filters' => array(
-      'image_resize_filter' => array(
-        'weight' => 0,
-        'status' => 1,
-        'settings' => array(
-          'link' => 0,
-          'link_class' => '',
-          'link_rel' => '',
-          'image_locations' => array(
-            'local' => 'local',
-            'remote' => 0,
-          ),
-        ),
-      ),
       'filter_autop' => array(
         'weight' => 1,
         'status' => 1,
@@ -98,6 +81,11 @@ function text_formats_filter_default_formats() {
             'Null_URI.Munge' => 1,
           ),
         ),
+      ),
+      'picture' => array(
+        'weight' => 3,
+        'status' => 1,
+        'settings' => array(),
       ),
     ),
   );
@@ -129,7 +117,7 @@ function text_formats_filter_default_formats() {
     'name' => 'Comment text',
     'cache' => 1,
     'status' => 1,
-    'weight' => 0,
+    'weight' => -5,
     'filters' => array(
       'filter_html' => array(
         'weight' => -10,
@@ -160,51 +148,21 @@ function text_formats_filter_default_formats() {
     ),
   );
 
-  // Exported format: Company text.
-  $formats['company_text'] = array(
-    'format' => 'company_text',
-    'name' => 'Company text',
-    'cache' => 1,
-    'status' => 1,
-    'weight' => 0,
-    'filters' => array(
-      'filter_html' => array(
-        'weight' => -10,
-        'status' => 1,
-        'settings' => array(
-          'allowed_html' => '<p>',
-          'filter_html_help' => 0,
-          'filter_html_nofollow' => 0,
-        ),
-      ),
-      'filter_autop' => array(
-        'weight' => 0,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'picture' => array(
-        'weight' => 0,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'filter_htmlcorrector' => array(
-        'weight' => 10,
-        'status' => 1,
-        'settings' => array(),
-      ),
-    ),
-  );
-
   // Exported format: PHP code.
   $formats['php_code'] = array(
     'format' => 'php_code',
     'name' => 'PHP code',
     'cache' => 0,
     'status' => 1,
-    'weight' => -6,
+    'weight' => 0,
     'filters' => array(
       'php_code' => array(
         'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'picture' => array(
+        'weight' => 1,
         'status' => 1,
         'settings' => array(),
       ),
@@ -217,7 +175,7 @@ function text_formats_filter_default_formats() {
     'name' => 'Plain text',
     'cache' => 1,
     'status' => 1,
-    'weight' => -7,
+    'weight' => 0,
     'filters' => array(
       'filter_html_escape' => array(
         'weight' => 0,

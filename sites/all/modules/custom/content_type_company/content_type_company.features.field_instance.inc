@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_company.features.field_instance.inc
@@ -48,34 +49,38 @@ function content_type_company_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'anonymous_text' => 'anonymous_text',
+          'ads_text' => 0,
+          'anonymous_text' => 0,
           'author_text' => 'author_text',
-          'comment_text' => 'comment_text',
-          'company_text' => 'company_text',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
+          'comment_text' => 0,
+          'company_text' => 0,
+          'php_code' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'ads_text' => array(
+              'weight' => 10,
+            ),
             'anonymous_text' => array(
-              'weight' => -8,
+              'weight' => 10,
             ),
             'author_text' => array(
-              'weight' => -10,
+              'weight' => 0,
             ),
             'comment_text' => array(
-              'weight' => 0,
+              'weight' => 10,
             ),
             'company_text' => array(
-              'weight' => 0,
+              'weight' => 1,
             ),
             'php_code' => array(
-              'weight' => -6,
+              'weight' => 10,
             ),
             'plain_text' => array(
-              'weight' => -7,
+              'weight' => 10,
             ),
           ),
         ),
@@ -91,12 +96,14 @@ function content_type_company_field_default_field_instances() {
         'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_label_summary' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_summary' => '',
         'maxlength_js_truncate_html' => 0,
         'rows' => 20,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -121,7 +128,7 @@ function content_type_company_field_default_field_instances() {
           'buttons_size' => 'addthis_32x32_style',
           'counter_orientation' => 'vertical',
           'extra_css' => '',
-          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,email',
+          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
         ),
         'type' => 'addthis_basic_toolbox',
         'weight' => 0,
@@ -139,7 +146,7 @@ function content_type_company_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 54,
+      'weight' => 14,
     ),
   );
 
@@ -172,17 +179,20 @@ function content_type_company_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'ads_text' => 0,
           'anonymous_text' => 0,
           'author_text' => 0,
           'comment_text' => 0,
-          'company_text' => 'company_text',
           'php_code' => 0,
           'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 1,
+        'allowed_formats_toggle' => 0,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'ads_text' => array(
+              'weight' => -6,
+            ),
             'anonymous_text' => array(
               'weight' => -8,
             ),
@@ -190,9 +200,6 @@ function content_type_company_field_default_field_instances() {
               'weight' => -10,
             ),
             'comment_text' => array(
-              'weight' => 0,
-            ),
-            'company_text' => array(
               'weight' => 0,
             ),
             'php_code' => array(
@@ -218,7 +225,7 @@ function content_type_company_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 47,
+      'weight' => 3,
     ),
   );
 
@@ -297,7 +304,7 @@ function content_type_company_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -458,7 +465,7 @@ function content_type_company_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -497,7 +504,7 @@ function content_type_company_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -636,7 +643,7 @@ function content_type_company_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -688,7 +695,7 @@ function content_type_company_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'number',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -721,17 +728,20 @@ function content_type_company_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'ads_text' => 0,
           'anonymous_text' => 0,
           'author_text' => 0,
           'comment_text' => 0,
-          'company_text' => 'company_text',
           'php_code' => 0,
           'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 1,
+        'allowed_formats_toggle' => 0,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'ads_text' => array(
+              'weight' => -6,
+            ),
             'anonymous_text' => array(
               'weight' => -8,
             ),
@@ -739,9 +749,6 @@ function content_type_company_field_default_field_instances() {
               'weight' => -10,
             ),
             'comment_text' => array(
-              'weight' => 0,
-            ),
-            'company_text' => array(
               'weight' => 0,
             ),
             'php_code' => array(
@@ -844,7 +851,7 @@ function content_type_company_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 

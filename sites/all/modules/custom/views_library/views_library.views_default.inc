@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_library.views_default.inc
@@ -82,7 +83,7 @@ function views_library_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -102,7 +103,7 @@ function views_library_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Бібліятэка';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'library zebra';
+  $handler->display->display_options['css_class'] = 'page-list page-library';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['cache'] = FALSE;
@@ -135,6 +136,29 @@ function views_library_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Галоўнае фота */
+  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
+  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_class'] = 'list-photo';
+  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_pics']['settings'] = array(
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => '',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
+    'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'davedka',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
+  );
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -143,68 +167,34 @@ function views_library_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'black-text';
+  $handler->display->display_options['fields']['title']['element_class'] = 'list-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўнае фота */
-  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
-  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
-  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
-  $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'library-preview';
-  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'image_style' => 'uzgorak_preview',
-    'image_link' => 'content',
-  );
-  /* Поле: Змест: Змест */
+  /* Поле: Змест: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<p>';
+  $handler->display->display_options['fields']['body']['element_class'] = 'list-description';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Поле: Сырая спасылка */
-  $handler->display->display_options['fields']['field_pdf']['id'] = 'field_pdf';
-  $handler->display->display_options['fields']['field_pdf']['table'] = 'field_data_field_pdf';
-  $handler->display->display_options['fields']['field_pdf']['field'] = 'field_pdf';
-  $handler->display->display_options['fields']['field_pdf']['ui_name'] = 'Сырая спасылка';
-  $handler->display->display_options['fields']['field_pdf']['label'] = '';
-  $handler->display->display_options['fields']['field_pdf']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_pdf']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pdf']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_pdf']['type'] = 'file_url_plain';
-  /* Поле: Скачаць PDF */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Скачаць PDF';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Скачаць PDF';
-  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['nothing']['alter']['path'] = '[field_pdf]';
-  $handler->display->display_options['fields']['nothing']['element_class'] = 'rich-link, bold-text, library-link';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Поле: Глядзець онлайн */
-  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
-  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Глядзець онлайн';
-  $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'Глядзець онлайн';
-  $handler->display->display_options['fields']['nothing_1']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['nothing_1']['alter']['path'] = 'node/[nid]';
-  $handler->display->display_options['fields']['nothing_1']['element_class'] = 'rich-link, bold-text, library-link';
-  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'smart_trim_format';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_link' => '0',
+    'trim_length' => '600',
+    'trim_type' => 'chars',
+    'trim_suffix' => '',
+    'more_link' => '0',
+    'more_text' => 'Read more',
+    'summary_handler' => 'full',
+    'trim_options' => array(
+      'text' => 0,
+    ),
+    'trim_preserve_tags' => '',
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -269,8 +259,6 @@ function views_library_views_default_views() {
     t('Page'),
     t('Бібліятэка'),
     t('больш кніг'),
-    t('Скачаць PDF'),
-    t('Глядзець онлайн'),
   );
   $export['library'] = $view;
 

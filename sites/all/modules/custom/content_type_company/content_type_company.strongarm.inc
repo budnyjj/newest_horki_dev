@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_company.strongarm.inc
@@ -38,19 +39,19 @@ function content_type_company_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '13',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '12',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '11',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '10',
         ),
       ),
       'display' => array(),

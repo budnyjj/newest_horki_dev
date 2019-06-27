@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_company.field_group.inc
@@ -80,7 +81,7 @@ function content_type_company_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Кантакты',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'group_address',
       1 => 'group_operation_time',

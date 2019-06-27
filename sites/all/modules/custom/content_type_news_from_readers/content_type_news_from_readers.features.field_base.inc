@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_news_from_readers.features.field_base.inc
@@ -205,7 +206,7 @@ function content_type_news_from_readers_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 0,
+      'default_image' => 39087,
       'profile2_private' => FALSE,
       'uri_scheme' => 'public',
     ),

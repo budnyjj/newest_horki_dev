@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_news_lists.features.inc

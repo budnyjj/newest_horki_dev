@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * text_formats.features.ckeditor_profile.inc
@@ -30,7 +31,7 @@ function text_formats_ckeditor_profile_defaults() {
         'auto_lang' => 't',
         'language_direction' => 'default',
         'allowed_content' => 't',
-        'extraAllowedContent' => '',
+        'extraAllowedContent' => 'img[data-picture-mapping]',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'p',
         'font_format' => 'p;div;pre;address;h1;h2;h3;h4;h5;h6',
@@ -123,7 +124,7 @@ function text_formats_ckeditor_profile_defaults() {
         'auto_lang' => 't',
         'language_direction' => 'default',
         'allowed_content' => 't',
-        'extraAllowedContent' => '',
+        'extraAllowedContent' => 'img[data-picture-mapping]',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'p',
         'font_format' => 'p;pre;address;h1;h2;h3;h4;h5;h6',

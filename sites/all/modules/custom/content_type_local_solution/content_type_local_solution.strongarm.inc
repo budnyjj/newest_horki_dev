@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_local_solution.strongarm.inc
@@ -166,7 +167,7 @@ function content_type_local_solution_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_local_solution';
   $strongarm->value = array(
-    'status' => '0',
+    'status' => '1',
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_node_local_solution'] = $strongarm;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_davedka.views_default.inc
@@ -90,6 +91,7 @@ function views_davedka_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
   /* Contextual filter: Змест: Has taxonomy term ID depth modifier */
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['id'] = 'term_node_tid_depth_modifier';
@@ -98,7 +100,7 @@ function views_davedka_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['exception']['title'] = 'Усе';
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['summary']['format'] = 'default_summary';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';

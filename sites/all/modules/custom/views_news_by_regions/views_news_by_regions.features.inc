@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_news_by_regions.features.inc

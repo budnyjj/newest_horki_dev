@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_news_from_readers.features.field_instance.inc
@@ -31,7 +32,7 @@ function content_type_news_from_readers_field_default_field_instances() {
           'buttons_size' => 'addthis_32x32_style',
           'counter_orientation' => 'horizontal',
           'extra_css' => '',
-          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,email',
+          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
         ),
         'type' => 'addthis_basic_toolbox',
         'weight' => 3,
@@ -58,7 +59,7 @@ function content_type_news_from_readers_field_default_field_instances() {
     'bundle' => 'news_from_readers',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Вашае імя. Яно будзе бачна іншым карыстальнікам сайта.',
+    'description' => 'Ваша імя. Яно будзе бачна іншым карыстальнікам сайта.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -88,30 +89,34 @@ function content_type_news_from_readers_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'ads_text' => 0,
           'anonymous_text' => 'anonymous_text',
           'author_text' => 'author_text',
+          'comment_text' => 0,
           'php_code' => 'php_code',
           'plain_text' => 'plain_text',
-          'user_text' => 'user_text',
         ),
         'allowed_formats_toggle' => 0,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'ads_text' => array(
+              'weight' => -6,
+            ),
             'anonymous_text' => array(
               'weight' => -8,
             ),
             'author_text' => array(
               'weight' => -10,
             ),
+            'comment_text' => array(
+              'weight' => -5,
+            ),
             'php_code' => array(
               'weight' => -6,
             ),
             'plain_text' => array(
               'weight' => -7,
-            ),
-            'user_text' => array(
-              'weight' => -9,
             ),
           ),
         ),
@@ -181,9 +186,9 @@ function content_type_news_from_readers_field_default_field_instances() {
   $field_instances['node-news_from_readers-field_photos'] = array(
     'bundle' => 'news_from_readers',
     'deleted' => 0,
-    'description' => 'Фоты, якія выкарыстоўваюцца для ўстаўкі ў тэкст. Для таго, каб уставіць фотаздымак,  загрузіце яго, абярыце пажаданае месца ў тэксце навіны, націсніце на кнопку "Уставіць".
+    'description' => 'Фота, якія выкарыстоўваюцца для ўстаўкі ў тэкст. Каб уставіць фота, загрузіце яго, абярыце пажаданае месца ў тэксце навіны, націсніце на кнопку "Уставіць".
 <br>
-Максімальная колькасць фотаздымкаў для адной навіны - пяць штук.',
+Максімальная колькасць фота для адной навіны – пяць штук.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -210,7 +215,7 @@ function content_type_news_from_readers_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_photos',
-    'label' => 'Фоты да тэксту',
+    'label' => 'Фота да тэксту',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -233,22 +238,68 @@ function content_type_news_from_readers_field_default_field_instances() {
         'insert_default' => 'image_medium',
         'insert_styles' => array(
           'auto' => 'auto',
+          'colorbox__article_breakpoints_theme_horki2_desktop_narrow_1x' => 0,
+          'colorbox__article_breakpoints_theme_horki2_desktop_normal_1x' => 0,
+          'colorbox__article_breakpoints_theme_horki2_mobile_narrow_1x' => 0,
+          'colorbox__article_breakpoints_theme_horki2_mobile_normal_1x' => 0,
+          'colorbox__article_colorbox' => 0,
+          'colorbox__article_gallery' => 0,
+          'colorbox__article_gallery_thumbnail' => 0,
+          'colorbox__filtered-table' => 0,
+          'colorbox__highlight_breakpoints_theme_horki2_desktop_narrow_1x' => 0,
+          'colorbox__highlight_breakpoints_theme_horki2_desktop_normal_1x' => 0,
+          'colorbox__highlight_breakpoints_theme_horki2_mobile_narrow_1x' => 0,
+          'colorbox__highlight_breakpoints_theme_horki2_mobile_normal_1x' => 0,
           'colorbox__large' => 0,
           'colorbox__main_pic_preview' => 0,
+          'colorbox__mediagrid_breakpoints_theme_horki2_desktop_narrow_1x' => 0,
+          'colorbox__mediagrid_breakpoints_theme_horki2_desktop_normal_1x' => 0,
+          'colorbox__mediagrid_breakpoints_theme_horki2_mobile_narrow_1x' => 0,
+          'colorbox__mediagrid_breakpoints_theme_horki2_mobile_normal_1x' => 0,
           'colorbox__medium' => 0,
           'colorbox__node_teaser_preview' => 0,
           'colorbox__photo_video_preview' => 0,
           'colorbox__square_news_preview' => 0,
           'colorbox__thumbnail' => 0,
+          'colorbox__user_avatar_comment' => 0,
+          'colorbox__user_avatar_comment_2' => 0,
+          'colorbox__user_avatar_comment_block' => 0,
+          'colorbox__user_avatar_login' => 0,
+          'colorbox__user_avatar_page' => 0,
+          'colorbox__user_avatar_page_2' => 0,
+          'colorbox__uzgorak_preview' => 0,
           'icon_link' => 0,
           'image' => 'image',
+          'image_article_breakpoints_theme_horki2_desktop_narrow_1x' => 0,
+          'image_article_breakpoints_theme_horki2_desktop_normal_1x' => 0,
+          'image_article_breakpoints_theme_horki2_mobile_narrow_1x' => 0,
+          'image_article_breakpoints_theme_horki2_mobile_normal_1x' => 0,
+          'image_article_colorbox' => 0,
+          'image_article_gallery' => 0,
+          'image_article_gallery_thumbnail' => 0,
+          'image_filtered-table' => 0,
+          'image_highlight_breakpoints_theme_horki2_desktop_narrow_1x' => 0,
+          'image_highlight_breakpoints_theme_horki2_desktop_normal_1x' => 0,
+          'image_highlight_breakpoints_theme_horki2_mobile_narrow_1x' => 0,
+          'image_highlight_breakpoints_theme_horki2_mobile_normal_1x' => 0,
           'image_large' => 0,
           'image_main_pic_preview' => 0,
+          'image_mediagrid_breakpoints_theme_horki2_desktop_narrow_1x' => 0,
+          'image_mediagrid_breakpoints_theme_horki2_desktop_normal_1x' => 0,
+          'image_mediagrid_breakpoints_theme_horki2_mobile_narrow_1x' => 0,
+          'image_mediagrid_breakpoints_theme_horki2_mobile_normal_1x' => 0,
           'image_medium' => 'image_medium',
           'image_node_teaser_preview' => 0,
           'image_photo_video_preview' => 0,
           'image_square_news_preview' => 0,
           'image_thumbnail' => 0,
+          'image_user_avatar_comment' => 0,
+          'image_user_avatar_comment_2' => 0,
+          'image_user_avatar_comment_block' => 0,
+          'image_user_avatar_login' => 0,
+          'image_user_avatar_page' => 0,
+          'image_user_avatar_page_2' => 0,
+          'image_uzgorak_preview' => 0,
           'link' => 0,
         ),
         'insert_width' => 800,
@@ -559,6 +610,137 @@ function content_type_news_from_readers_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-places-field_default_image'.
+  $field_instances['taxonomy_term-places-field_default_image'] = array(
+    'bundle' => 'places',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_default_image',
+    'label' => 'Дэфолтны здымак на старонцы рубрыкі',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'default_images/places',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'colorbox__large' => 0,
+          'colorbox__main_pic_preview' => 0,
+          'colorbox__medium' => 0,
+          'colorbox__node_teaser_preview' => 0,
+          'colorbox__photo_video_preview' => 0,
+          'colorbox__square_news_preview' => 0,
+          'colorbox__thumbnail' => 0,
+          'colorbox__user_avatar_block' => 0,
+          'colorbox__user_avatar_comment' => 0,
+          'colorbox__user_avatar_page' => 0,
+          'colorbox__uzgorak_preview' => 0,
+          'icon_link' => 0,
+          'image' => 0,
+          'image_large' => 0,
+          'image_main_pic_preview' => 0,
+          'image_medium' => 0,
+          'image_node_teaser_preview' => 0,
+          'image_photo_video_preview' => 0,
+          'image_square_news_preview' => 0,
+          'image_thumbnail' => 0,
+          'image_user_avatar_block' => 0,
+          'image_user_avatar_comment' => 0,
+          'image_user_avatar_page' => 0,
+          'image_uzgorak_preview' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-places-field_taxonomy_pic'.
+  $field_instances['taxonomy_term-places-field_taxonomy_pic'] = array(
+    'bundle' => 'places',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_taxonomy_pic',
+    'label' => 'Малюнак',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'icons',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => FALSE,
+        'insert_class' => '',
+        'insert_default' => array(
+          0 => 'auto',
+        ),
+        'insert_styles' => array(
+          0 => 'auto',
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'square_news_preview',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('E-mail');
@@ -566,17 +748,19 @@ function content_type_news_from_readers_field_default_field_instances() {
  [VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]');
   t('Аўтар');
   t('Ваш e-mail не будзе даступны іншым карыстальнікам сайта.');
-  t('Вашае імя. Яно будзе бачна іншым карыстальнікам сайта.');
+  t('Ваша імя. Яно будзе бачна іншым карыстальнікам сайта.');
   t('Галоўнае фота');
+  t('Дэфолтны здымак на старонцы рубрыкі');
+  t('Малюнак');
   t('Месцы');
   t('Падзяліцца');
   t('Рубрыкі');
   t('Тэкст');
+  t('Фота да тэксту');
   t('Фота, якое будзе выкарастана ў якасці прэв\'ю да навіны.');
-  t('Фоты да тэксту');
-  t('Фоты, якія выкарыстоўваюцца для ўстаўкі ў тэкст. Для таго, каб уставіць фотаздымак,  загрузіце яго, абярыце пажаданае месца ў тэксце навіны, націсніце на кнопку "Уставіць".
+  t('Фота, якія выкарыстоўваюцца для ўстаўкі ў тэкст. Каб уставіць фота, загрузіце яго, абярыце пажаданае месца ў тэксце навіны, націсніце на кнопку "Уставіць".
 <br>
-Максімальная колькасць фотаздымкаў для адной навіны - пяць штук.');
+Максімальная колькасць фота для адной навіны – пяць штук.');
 
   return $field_instances;
 }

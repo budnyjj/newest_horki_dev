@@ -2252,9 +2252,9 @@ ul.tabs li.active a {
     padding: 20px;
 }
 
-/* main davedka node */
-.context-davedkahtml #page-title,
-.context-davedkahtml .field-name-field-text {
+/* main guide node */
+.context-guidehtml #page-title,
+.context-guidehtml .field-name-field-text {
     display: none;
 }
 

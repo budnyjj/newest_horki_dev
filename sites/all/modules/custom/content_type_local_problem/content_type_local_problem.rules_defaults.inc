@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_local_problem.rules_defaults.inc

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_local_solution.field_group.inc
