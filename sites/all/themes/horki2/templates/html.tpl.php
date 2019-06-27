@@ -1,5 +1,5 @@
 <?php print $doctype; ?>
-<html lang="ru" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?>>
+<html prefix="og: http://ogp.me/ns#" lang="ru" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?>>
 <head<?php print $rdf->profile; ?>>
 <?php print $head; ?>
 <title><?php print $head_title; ?></title>  
