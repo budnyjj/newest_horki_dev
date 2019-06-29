@@ -114,3 +114,9 @@ Disallow: /hybridauth
 
 # Sitemap settings
 Sitemap: https://horki.info/sitemap.xml
+
+# Twitter Crawler settings (need to support Cards)
+User-agent: Twitterbot
+Disallow: *
+
+Allow: /sites/default/files

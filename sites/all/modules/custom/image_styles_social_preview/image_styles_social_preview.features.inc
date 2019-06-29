@@ -37,9 +37,9 @@ function image_styles_social_preview_fontyourface_features_default_font() {
 function image_styles_social_preview_image_default_styles() {
   $styles = array();
 
-  // Exported image style: social_preview_facebook.
-  $styles['social_preview_facebook'] = array(
-    'label' => 'social_preview_facebook',
+  // Exported image style: node_social_preview_facebook.
+  $styles['node_social_preview_facebook'] = array(
+    'label' => 'node_social_preview_facebook',
     'effects' => array(
       48 => array(
         'name' => 'image_scale_and_crop',
@@ -75,7 +75,7 @@ function image_styles_social_preview_image_default_styles() {
         'name' => 'image_effects_text',
         'data' => array(
           'text_source' => 'text',
-          'text' => '[node:social-title-facebook]',
+          'text' => '[node:node-social-title]',
           'php' => 'if (!$image_context[\'entity\']) {
   return \'No referring entity\';
 }
@@ -105,9 +105,9 @@ if ($field) {
     ),
   );
 
-  // Exported image style: social_preview_ok.
-  $styles['social_preview_ok'] = array(
-    'label' => 'social_preview_ok',
+  // Exported image style: node_social_preview_ok.
+  $styles['node_social_preview_ok'] = array(
+    'label' => 'node_social_preview_ok',
     'effects' => array(
       56 => array(
         'name' => 'image_scale_and_crop',
@@ -143,7 +143,7 @@ if ($field) {
         'name' => 'image_effects_text',
         'data' => array(
           'text_source' => 'text',
-          'text' => '[node:social-title-ok]',
+          'text' => '[node:node-social-title]',
           'php' => 'if (!$image_context[\'entity\']) {
   return \'No referring entity\';
 }
@@ -157,7 +157,7 @@ if ($field) {
 ',
           'text_case' => 'none',
           'fontfile' => 'public://fontyourface/local_fonts/UniversCondC-normal-bold/universcondcb.ttf',
-          'size' => 39,
+          'size' => 33,
           'RGB' => array(
             'HEX' => '#fcfcfc',
           ),
@@ -173,9 +173,9 @@ if ($field) {
     ),
   );
 
-  // Exported image style: social_preview_twitter.
-  $styles['social_preview_twitter'] = array(
-    'label' => 'social_preview_twitter',
+  // Exported image style: node_social_preview_twitter.
+  $styles['node_social_preview_twitter'] = array(
+    'label' => 'node_social_preview_twitter',
     'effects' => array(
       44 => array(
         'name' => 'image_scale_and_crop',
@@ -211,7 +211,7 @@ if ($field) {
         'name' => 'image_effects_text',
         'data' => array(
           'text_source' => 'text',
-          'text' => '[node:social-title-twitter]',
+          'text' => '[node:node-social-title]',
           'php' => 'if (!$image_context[\'entity\']) {
   return \'No referring entity\';
 }
@@ -241,9 +241,9 @@ if ($field) {
     ),
   );
 
-  // Exported image style: social_preview_vk.
-  $styles['social_preview_vk'] = array(
-    'label' => 'social_preview_vk',
+  // Exported image style: node_social_preview_vk.
+  $styles['node_social_preview_vk'] = array(
+    'label' => 'node_social_preview_vk',
     'effects' => array(
       52 => array(
         'name' => 'image_scale_and_crop',
@@ -279,7 +279,7 @@ if ($field) {
         'name' => 'image_effects_text',
         'data' => array(
           'text_source' => 'text',
-          'text' => '[node:social-title-vk]',
+          'text' => '[node:node-social-title]',
           'php' => 'if (!$image_context[\'entity\']) {
   return \'No referring entity\';
 }
