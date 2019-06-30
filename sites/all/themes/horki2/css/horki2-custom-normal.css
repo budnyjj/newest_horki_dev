@@ -44,8 +44,13 @@
  * General Content styles
  */
 
+#region-sidebar-third {
+    float: right;
+}
+
 #region-sidebar-fourth {
     display: inline;
+    float: right;
 }
 
 /**
@@ -168,10 +173,6 @@
 
 #block-views-similarterms-block .block-media-grid .views-row {
     width: 272px;
-}
-
-#region-sidebar-third {
-    float: right;
 }
 
 #discuss-in-social-media {
