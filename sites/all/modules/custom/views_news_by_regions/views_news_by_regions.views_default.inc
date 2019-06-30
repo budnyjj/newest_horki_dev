@@ -206,8 +206,8 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Горкі';
   $handler->display->display_options['header']['area']['content'] = '<span class="header-title">Горкі</span>
-<span class="header-more"><a href="/gorki.html">Больш навінаў</a></span>';
-  $handler->display->display_options['header']['area']['format'] = 'author_text';
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/58\');?>">Больш навінаў</a></span>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Шлях */
@@ -361,8 +361,8 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'БДСГА';
   $handler->display->display_options['header']['area']['content'] = '<span class="header-title">БДСГА</span>
-<span class="header-more"><a href="/bdsga.html">Больш навінаў</a></span>';
-  $handler->display->display_options['header']['area']['format'] = 'author_text';
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/61\');?>">Больш навінаў</a></span>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Шлях */
@@ -509,8 +509,8 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Дрыбін';
   $handler->display->display_options['header']['area']['content'] = '<span class="header-title">Дрыбін</span>
-<span class="header-more"><a href="/drybin.html">Больш навінаў</a></span>';
-  $handler->display->display_options['header']['area']['format'] = 'author_text';
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/59\');?>">Больш навінаў</a></span>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Шлях */
@@ -653,8 +653,8 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Мсціслаў';
   $handler->display->display_options['header']['area']['content'] = '<span class="header-title">Мсціслаў</span>
-<span class="header-more"><a href="/mscislau.html">Больш навінаў</a></span>';
-  $handler->display->display_options['header']['area']['format'] = 'author_text';
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/60\');?>">Больш навінаў</a></span>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Шлях */
@@ -797,8 +797,8 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Магілёўская вобласць';
   $handler->display->display_options['header']['area']['content'] = '<span class="header-title">Магілёўская вобласць</span>
-<span class="header-more"><a href="/mogilev-news.html">Больш навінаў</a></span>';
-  $handler->display->display_options['header']['area']['format'] = 'author_text';
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/62\');?>">Больш навінаў</a></span>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Шлях */
@@ -949,10 +949,10 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['label'] = 'Краіна';
+  $handler->display->display_options['header']['area']['label'] = 'Беларусь';
   $handler->display->display_options['header']['area']['content'] = '<span class="header-title">Беларусь</span>
-<span class="header-more"><a href="/belarus.html">Больш навінаў</a></span>';
-  $handler->display->display_options['header']['area']['format'] = 'author_text';
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/78\');?>">Больш навінаў</a></span>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Шлях */
@@ -1108,7 +1108,7 @@ function views_news_by_regions_views_default_views() {
     t('<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>'),
     t('Месцы (field_placement_by_taxonomy)'),
     t('<span class="header-title">Горкі</span>
-<span class="header-more"><a href="/gorki.html">Больш навінаў</a></span>'),
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/58\');?>">Больш навінаў</a></span>'),
     t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
     t(' '),
     t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
@@ -1119,24 +1119,23 @@ function views_news_by_regions_views_default_views() {
     t('Навіны Горак'),
     t('БДСГА'),
     t('<span class="header-title">БДСГА</span>
-<span class="header-more"><a href="/bdsga.html">Больш навінаў</a></span>'),
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/61\');?>">Больш навінаў</a></span>'),
     t('Навіны БДСГА'),
     t('Дрыбін'),
     t('<span class="header-title">Дрыбін</span>
-<span class="header-more"><a href="/drybin.html">Больш навінаў</a></span>'),
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/59\');?>">Больш навінаў</a></span>'),
     t('Навіны Дрыбіна'),
     t('Мсціслаў'),
     t('<span class="header-title">Мсціслаў</span>
-<span class="header-more"><a href="/mscislau.html">Больш навінаў</a></span>'),
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/60\');?>">Больш навінаў</a></span>'),
     t('Навіны Мсціслава'),
     t('Магілёўская вобласць'),
     t('<span class="header-title">Магілёўская вобласць</span>
-<span class="header-more"><a href="/mogilev-news.html">Больш навінаў</a></span>'),
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/62\');?>">Больш навінаў</a></span>'),
     t('Навіны Магілёўскай вобласці'),
     t('Беларусь'),
-    t('Краіна'),
     t('<span class="header-title">Беларусь</span>
-<span class="header-more"><a href="/belarus.html">Больш навінаў</a></span>'),
+<span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/78\');?>">Больш навінаў</a></span>'),
     t('Навіны Беларусі'),
   );
   $export['news_by_regions'] = $view;

@@ -97,13 +97,13 @@ function content_type_library_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '7',
         ),
         'redirect' => array(
-          'weight' => '2',
+          'weight' => '6',
         ),
         'xmlsitemap' => array(
-          'weight' => '1',
+          'weight' => '5',
         ),
       ),
       'display' => array(),

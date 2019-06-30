@@ -1,7 +1,7 @@
 name = Views: ads
 core = 7.x
 package = Custom
-version = 7.x-2.1
+version = 7.x-2.2
 project = views_ads
 dependencies[] = ctools
 dependencies[] = views

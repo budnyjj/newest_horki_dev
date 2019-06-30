@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_ads.field_group.inc
@@ -23,8 +24,8 @@ function content_type_ads_field_group_info() {
     'label' => 'Дзеянні',
     'weight' => '7',
     'children' => array(
-      0 => 'group_tags',
-      1 => 'group_share',
+      0 => 'group_share',
+      1 => 'group_tags',
     ),
     'format_type' => 'div',
     'format_settings' => array(

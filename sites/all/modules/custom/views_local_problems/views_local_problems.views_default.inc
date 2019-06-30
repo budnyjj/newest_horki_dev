@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_local_problems.views_default.inc
@@ -34,15 +35,6 @@ function views_local_problems_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Прымяніць';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
-  $handler->display->display_options['pager']['type'] = 'infinite_scroll';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '« першая';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ папярэдняя';
-  $handler->display->display_options['pager']['options']['tags']['next'] = 'наступная ›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* No results behavior: Global: Text area */
@@ -112,7 +104,7 @@ function views_local_problems_views_default_views() {
   $handler->display->display_options['fields']['created']['element_class'] = 'date-list';
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'node';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -249,7 +241,7 @@ function views_local_problems_views_default_views() {
     'local_problem' => 'local_problem',
   );
   $handler->display->display_options['filters']['type']['group'] = 2;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -259,11 +251,11 @@ function views_local_problems_views_default_views() {
     'und' => array(
       'title' => array(
         'value' => 'Горки - все местные проблемы в одном разделе | [site:name]',
-        'default' => '',
+        'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
         'value' => 'Проблемы Горок от пользователей сайта horki.info.',
-        'default' => '',
+        'default' => '[view:description]',
       ),
       'abstract' => array(
         'value' => '',
@@ -286,18 +278,7 @@ function views_local_problems_views_default_views() {
           'noimageindex' => 0,
           'notranslate' => 0,
         ),
-        'default' => array(
-          'index' => 0,
-          'follow' => 0,
-          'noindex' => 0,
-          'nofollow' => 0,
-          'noarchive' => 0,
-          'nosnippet' => 0,
-          'noodp' => 0,
-          'noydir' => 0,
-          'noimageindex' => 0,
-          'notranslate' => 0,
-        ),
+        'default' => array(),
       ),
       'news_keywords' => array(
         'value' => '',
@@ -307,9 +288,17 @@ function views_local_problems_views_default_views() {
         'value' => '',
         'default' => '',
       ),
+      'rating' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'referrer' => array(
+        'value' => '',
+        'default' => '',
+      ),
       'rights' => array(
-        'value' => 'horki.info',
-        'default' => 'horki.info',
+        'value' => '',
+        'default' => '',
       ),
       'image_src' => array(
         'value' => '',
@@ -319,19 +308,47 @@ function views_local_problems_views_default_views() {
         'value' => '[view:url]',
         'default' => '[view:url]',
       ),
+      'set_cookie' => array(
+        'value' => '',
+        'default' => '',
+      ),
       'shortlink' => array(
         'value' => '[current-page:url:unaliased]',
         'default' => '[current-page:url:unaliased]',
       ),
-      'publisher' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'author' => array(
-        'value' => '',
-        'default' => '',
-      ),
       'original-source' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'prev' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'next' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'content-language' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.position' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.placename' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'icbm' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'refresh' => array(
         'value' => '',
         'default' => '',
       ),
@@ -340,8 +357,389 @@ function views_local_problems_views_default_views() {
         'period' => '',
         'default' => '',
       ),
-      'content-language' => array(
+      'pragma' => array(
         'value' => '',
+        'default' => '',
+      ),
+      'cache-control' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'expires' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:admins' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:app_id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:pages' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:type' => array(
+        'value' => 'website',
+        'default' => 'website',
+      ),
+      'og:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'og:title' => array(
+        'value' => 'Горки - все местные проблемы в одном разделе',
+        'default' => '[view:title]',
+      ),
+      'og:determiner' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:description' => array(
+        'value' => 'Проблемы Горок от пользователей сайта horki.info.',
+        'default' => '',
+      ),
+      'og:updated_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:see_also' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:latitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:longitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:street_address' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locality' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:postal_code' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:country_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:email' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:phone_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:fax_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locale' => array(
+        'value' => 'ru_RU',
+        'default' => 'ru_RU',
+      ),
+      'og:locale:alternate' => array(
+        'value' => 'be_BY',
+        'default' => 'be_BY',
+      ),
+      'article:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:publisher' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:section' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:published_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:modified_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:expiration_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:first_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:last_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:username' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:gender' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:isbn' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor:role' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:director' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:writer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:duration' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:series' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:card' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:creator' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:creator:id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'twitter:title' => array(
+        'value' => 'Горки - все местные проблемы в одном разделе',
+        'default' => '[view:title]',
+      ),
+      'twitter:description' => array(
+        'value' => 'Проблемы Горок от пользователей сайта horki.info.',
+        'default' => '',
+      ),
+      'twitter:dnt' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image:alt' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image0' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image3' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream:content_type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:country' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data2' => array(
+        'value' => '',
+        'default' => '',
       ),
     ),
   );
@@ -444,7 +842,7 @@ global $user;
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -461,8 +859,8 @@ global $user;
   $handler->display->display_options['block_description'] = 'Апошнія мясцовыя праблемы';
   $handler->display->display_options['block_caching'] = '1';
 
-  /* Display: Праблемы карыстальніка */
-  $handler = $view->new_display('block', 'Праблемы карыстальніка', 'block_2');
+  /* Display: Блок праблем карыстальніка */
+  $handler = $view->new_display('block', 'Блок праблем карыстальніка', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Мае мясцовыя праблемы';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -591,7 +989,7 @@ global $user;
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -698,7 +1096,7 @@ global $user;
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -810,7 +1208,7 @@ global $user;
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -836,8 +1234,8 @@ global $user;
   $handler->display->display_options['block_description'] = 'Вырашаныя мясцовыя праблемы';
   $handler->display->display_options['block_caching'] = '1';
 
-  /* Display: Звязаныя мясцовыя праблемы */
-  $handler = $view->new_display('block', 'Звязаныя мясцовыя праблемы', 'block_5');
+  /* Display: Блок звязаных мясцовых праблем */
+  $handler = $view->new_display('block', 'Блок звязаных мясцовых праблем', 'block_5');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Звязаныя праблемы';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -897,7 +1295,7 @@ global $user;
   $handler->display->display_options['arguments']['nid']['break_phrase'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1010,7 +1408,7 @@ global $user;
   $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Змест: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1035,6 +1433,11 @@ global $user;
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Няма праблем'),
+    t('На жаль, пакуль што няма аніводнай актуальнай мясцовай праблемы'),
+    t('<a href="[path]"><img src="/sites/default/files/default_images/letter_small.png"></a>'),
+    t('Усе праблемы'),
+    t('Мясцовыя праблемы'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
@@ -1042,11 +1445,6 @@ global $user;
     t('‹ папярэдняя'),
     t('наступная ›'),
     t('апошняя »'),
-    t('Няма праблем'),
-    t('На жаль, пакуль што няма аніводнай актуальнай мясцовай праблемы'),
-    t('<a href="[path]"><img src="/sites/default/files/default_images/letter_small.png"></a>'),
-    t('Усе праблемы'),
-    t('Мясцовыя праблемы'),
     t('Больш праблем'),
     t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
     t('.'),
@@ -1074,7 +1472,7 @@ global $user;
     t('term from field_problem_status'),
     t('<a href="[path]">[field_taxonomy_pic]</a>'),
     t('Апошнія мясцовыя праблемы'),
-    t('Праблемы карыстальніка'),
+    t('Блок праблем карыстальніка'),
     t('Мае мясцовыя праблемы'),
     t('Дадаць сваю мясцовую праблему'),
     t('<a class="rich-link black-text bold-text center-this" href="/node/add/local-problem">дадаць мясцовую праблему</a>'),
@@ -1096,7 +1494,7 @@ global $user;
     t('На жаль, пакуль што няма аніводнай вырашанай мясцовай праблемы'),
     t('[title][comment_count]'),
     t('Вырашаныя мясцовыя праблемы'),
-    t('Звязаныя мясцовыя праблемы'),
+    t('Блок звязаных мясцовых праблем'),
     t('Звязаныя праблемы'),
     t('Змест entity referenced from field_linked_local_problems'),
     t('Блок праблем на галоўнай'),

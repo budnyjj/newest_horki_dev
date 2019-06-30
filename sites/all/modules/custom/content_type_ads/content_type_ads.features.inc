@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_ads.features.inc
@@ -26,8 +27,8 @@ function content_type_ads_node_info() {
       'base' => 'node_content',
       'description' => t('Прадам, куплю, здам, здыму, мяняю... у Горках, Дрыбіне ды Мсціславе.'),
       'has_title' => '1',
-      'title_label' => t('Назва тавара або паслугі'),
-      'help' => t('Назва тавара або паслугi.'),
+      'title_label' => t('Назва тавару або паслугі'),
+      'help' => t('Назва тавару або паслугi.'),
     ),
   );
   drupal_alter('node_info', $items);

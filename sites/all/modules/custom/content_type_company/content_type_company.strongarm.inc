@@ -109,7 +109,7 @@ function content_type_company_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_company_pattern';
-  $strongarm->value = 'company/[node:nid].html';
+  $strongarm->value = 'companies/[node:nid].html';
   $export['pathauto_node_company_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

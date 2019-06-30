@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_ads.views_default.inc
@@ -46,26 +47,26 @@ function views_ads_views_default_views() {
   $handler->display->display_options['footer']['area_1']['empty'] = TRUE;
   $handler->display->display_options['footer']['area_1']['content'] = '<a href="/ads">Глядзець усе<a>';
   $handler->display->display_options['footer']['area_1']['format'] = 'author_text';
-  /* Поле: Змест: Загаловак */
+  /* Поле: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Змест: Post date */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Тып */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -146,7 +147,7 @@ global $user;
   $handler->display->display_options['empty']['area']['content'] = 'Пакуль што няма аніводнай прыватнай абвесткі';
   $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Загаловак */
+  /* Поле: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -154,7 +155,7 @@ global $user;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Тып абвесткі */
+  /* Поле: Content: Тып абвесткі */
   $handler->display->display_options['fields']['field_ads_type']['id'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['table'] = 'field_data_field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['field'] = 'field_ads_type';
@@ -163,7 +164,7 @@ global $user;
   $handler->display->display_options['fields']['field_ads_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ads_type']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Змест: Абноўленая дата */
+  /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
@@ -275,21 +276,21 @@ global $user;
 <p>Вы можаце <a href="/abvestki.html">скінуць наладкі фільтра</a>, або <a href="/node/add/ads">дадаць сваю абвестку</a>.</p>';
   $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Тып абвесткі */
+  /* Поле: Content: Тып абвесткі */
   $handler->display->display_options['fields']['field_ads_type']['id'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['table'] = 'field_data_field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['field'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['label'] = 'Тып';
   $handler->display->display_options['fields']['field_ads_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_ads_type']['type'] = 'taxonomy_term_reference_plain';
-  /* Поле: Змест: Фотаздымак */
+  /* Поле: Content: Фотаздымак */
   $handler->display->display_options['fields']['field_ads_photo']['id'] = 'field_ads_photo';
   $handler->display->display_options['fields']['field_ads_photo']['table'] = 'field_data_field_ads_photo';
   $handler->display->display_options['fields']['field_ads_photo']['field'] = 'field_ads_photo';
@@ -301,17 +302,17 @@ global $user;
     'image_style' => 'filtered-table',
     'image_link' => 'content',
   );
-  /* Поле: Змест: Загаловак */
+  /* Поле: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'Назва тавара або паслугі';
+  $handler->display->display_options['fields']['title']['label'] = 'Назва тавару або паслугі';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'filtered-table-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Цана */
+  /* Поле: Content: Цана */
   $handler->display->display_options['fields']['field_price']['id'] = 'field_price';
   $handler->display->display_options['fields']['field_price']['table'] = 'field_data_field_price';
   $handler->display->display_options['fields']['field_price']['field'] = 'field_price';
@@ -321,7 +322,7 @@ global $user;
   $handler->display->display_options['fields']['field_price']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_price']['empty'] = '<a href="[path]">не ўказана</a>';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Змест: Абноўленая дата */
+  /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
@@ -333,14 +334,14 @@ global $user;
     2 => 'AND',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Тып */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -348,14 +349,14 @@ global $user;
     'ads' => 'ads',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Змест: Месца размяшчэння абвесткі (field_ads_placement) */
+  /* Filter criterion: Content: Месца размяшчэння абвесткі (field_ads_placement) */
   $handler->display->display_options['filters']['field_ads_placement_tid']['id'] = 'field_ads_placement_tid';
   $handler->display->display_options['filters']['field_ads_placement_tid']['table'] = 'field_data_field_ads_placement';
   $handler->display->display_options['filters']['field_ads_placement_tid']['field'] = 'field_ads_placement_tid';
   $handler->display->display_options['filters']['field_ads_placement_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_ads_placement_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_ads_placement_tid']['expose']['operator_id'] = 'field_ads_placement_tid_op';
-  $handler->display->display_options['filters']['field_ads_placement_tid']['expose']['label'] = 'Рэгіен';
+  $handler->display->display_options['filters']['field_ads_placement_tid']['expose']['label'] = 'Рэгіён';
   $handler->display->display_options['filters']['field_ads_placement_tid']['expose']['operator'] = 'field_ads_placement_tid_op';
   $handler->display->display_options['filters']['field_ads_placement_tid']['expose']['identifier'] = 'field_ads_placement_tid';
   $handler->display->display_options['filters']['field_ads_placement_tid']['expose']['remember_roles'] = array(
@@ -367,7 +368,7 @@ global $user;
   );
   $handler->display->display_options['filters']['field_ads_placement_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_ads_placement_tid']['vocabulary'] = 'ads_placement';
-  /* Filter criterion: Змест: Тып абвесткі (field_ads_type) */
+  /* Filter criterion: Content: Тып абвесткі (field_ads_type) */
   $handler->display->display_options['filters']['field_ads_type_tid']['id'] = 'field_ads_type_tid';
   $handler->display->display_options['filters']['field_ads_type_tid']['table'] = 'field_data_field_ads_type';
   $handler->display->display_options['filters']['field_ads_type_tid']['field'] = 'field_ads_type_tid';
@@ -394,7 +395,7 @@ global $user;
   );
   $handler->display->display_options['filters']['field_ads_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_ads_type_tid']['vocabulary'] = 'ads_types';
-  /* Filter criterion: Змест: Тэма абвесткі (field_ads_topic) */
+  /* Filter criterion: Content: Тэма абвесткі (field_ads_topic) */
   $handler->display->display_options['filters']['field_ads_topic_tid']['id'] = 'field_ads_topic_tid';
   $handler->display->display_options['filters']['field_ads_topic_tid']['table'] = 'field_data_field_ads_topic';
   $handler->display->display_options['filters']['field_ads_topic_tid']['field'] = 'field_ads_topic_tid';
@@ -421,7 +422,7 @@ global $user;
   );
   $handler->display->display_options['filters']['field_ads_topic_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_ads_topic_tid']['vocabulary'] = 'ads_topics';
-  /* Filter criterion: Змест: Загаловак */
+  /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
@@ -429,7 +430,7 @@ global $user;
   $handler->display->display_options['filters']['title']['group'] = 2;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'Назва тавара або паслугі';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Назва тавару або паслугі';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
@@ -440,19 +441,502 @@ global $user;
     5 => '5',
   );
   $handler->display->display_options['metatags'] = array(
-    'title' => array(
-      'value' => 'Бесплатные объявления в Горках, Дрибине, Мстиславле. Куплю, продам, меняю, сниму, сдаю | [site:name]',
-    ),
-    'description' => array(
-      'value' => 'Частные объявления в Горках, Дрибине и Мстиславле. Поиск
-квартир в Горках. Бесплатная подача объявлений и удобный поиск по
-разделам.',
-    ),
-    'keywords' => array(
-      'value' => 'бесплатные объявления, объявления в Горках, квартиры в Горках, бесплатные объявления Дрибин, объявления в интернете бесплатно, новые объявления, доска объявлений Мстиславль, сайт бесплатных объявлений',
+    'und' => array(
+      'title' => array(
+        'value' => 'Бесплатные объявления в Горках, Дрибине, Мстиславле. Куплю, продам, меняю, сниму, сдаю | [site:name]',
+        'default' => '[view:title] | [site:name]',
+      ),
+      'description' => array(
+        'value' => 'Частные объявления в Горках, Дрибине и Мстиславле. Поиск квартир в Горках. Бесплатная подача объявлений и удобный поиск по разделам.',
+        'default' => '[view:description]',
+      ),
+      'abstract' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'keywords' => array(
+        'value' => 'бесплатные объявления, объявления в Горках, квартиры в Горках, бесплатные объявления Дрибин, объявления в интернете бесплатно, новые объявления, доска объявлений Мстиславль, сайт бесплатных объявлений',
+        'default' => '',
+      ),
+      'robots' => array(
+        'value' => array(
+          'index' => 0,
+          'follow' => 0,
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+          'noimageindex' => 0,
+          'notranslate' => 0,
+        ),
+        'default' => array(),
+      ),
+      'news_keywords' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'standout' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rating' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'referrer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rights' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'image_src' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'canonical' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'set_cookie' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'shortlink' => array(
+        'value' => '[current-page:url:unaliased]',
+        'default' => '[current-page:url:unaliased]',
+      ),
+      'original-source' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'prev' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'next' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'content-language' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.position' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.placename' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'icbm' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'refresh' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'revisit-after' => array(
+        'value' => '',
+        'period' => '',
+        'default' => '',
+      ),
+      'pragma' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'cache-control' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'expires' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:admins' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:app_id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:pages' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:type' => array(
+        'value' => 'website',
+        'default' => 'website',
+      ),
+      'og:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'og:title' => array(
+        'value' => 'Бесплатные объявления в Горках, Дрибине, Мстиславле. Куплю, продам, меняю, сниму, сдаю',
+        'default' => '[view:title]',
+      ),
+      'og:determiner' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:description' => array(
+        'value' => 'Частные объявления в Горках, Дрибине и Мстиславле. Поиск квартир в Горках. Бесплатная подача объявлений и удобный поиск по разделам.',
+        'default' => '',
+      ),
+      'og:updated_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:see_also' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:latitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:longitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:street_address' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locality' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:postal_code' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:country_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:email' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:phone_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:fax_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locale' => array(
+        'value' => 'ru_RU',
+        'default' => 'ru_RU',
+      ),
+      'og:locale:alternate' => array(
+        'value' => 'be_BY',
+        'default' => 'be_BY',
+      ),
+      'article:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:publisher' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:section' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:published_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:modified_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:expiration_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:first_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:last_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:username' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:gender' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:isbn' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor:role' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:director' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:writer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:duration' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:series' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:card' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:creator' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:creator:id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'twitter:title' => array(
+        'value' => 'Бесплатные объявления в Горках, Дрибине, Мстиславле. Куплю, продам, меняю, сниму, сдаю',
+        'default' => '[view:title]',
+      ),
+      'twitter:description' => array(
+        'value' => 'Частные объявления в Горках, Дрибине и Мстиславле. Поиск квартир в Горках. Бесплатная подача объявлений и удобный поиск по разделам.',
+        'default' => '',
+      ),
+      'twitter:dnt' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image:alt' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image0' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image3' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream:content_type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:country' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data2' => array(
+        'value' => '',
+        'default' => '',
+      ),
     ),
   );
-  $handler->display->display_options['path'] = 'abvestki.html';
+  $handler->display->display_options['path'] = 'ads.html';
   $handler->display->display_options['menu']['title'] = 'Абвесткi';
   $handler->display->display_options['menu']['description'] = 'Прыватныя абвесткi ад нашых чытачоў';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -542,21 +1026,21 @@ global $user;
 <a class="rich-link bold-text" href="/node/add/ads">Дадаць новую абвестку</a>.';
   $handler->display->display_options['empty']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Тып абвесткі */
+  /* Поле: Content: Тып абвесткі */
   $handler->display->display_options['fields']['field_ads_type']['id'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['table'] = 'field_data_field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['field'] = 'field_ads_type';
   $handler->display->display_options['fields']['field_ads_type']['label'] = 'Тып';
   $handler->display->display_options['fields']['field_ads_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_ads_type']['type'] = 'taxonomy_term_reference_plain';
-  /* Поле: Змест: Фотаздымак */
+  /* Поле: Content: Фотаздымак */
   $handler->display->display_options['fields']['field_ads_photo']['id'] = 'field_ads_photo';
   $handler->display->display_options['fields']['field_ads_photo']['table'] = 'field_data_field_ads_photo';
   $handler->display->display_options['fields']['field_ads_photo']['field'] = 'field_ads_photo';
@@ -567,7 +1051,7 @@ global $user;
     'image_style' => 'square_news_preview',
     'image_link' => 'content',
   );
-  /* Поле: Змест: Загаловак */
+  /* Поле: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -575,13 +1059,13 @@ global $user;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_class'] = 'bold-text black-text';
-  /* Поле: Змест: Цана */
+  /* Поле: Content: Цана */
   $handler->display->display_options['fields']['field_price']['id'] = 'field_price';
   $handler->display->display_options['fields']['field_price']['table'] = 'field_data_field_price';
   $handler->display->display_options['fields']['field_price']['field'] = 'field_price';
   $handler->display->display_options['fields']['field_price']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_price']['empty'] = 'не ўказана';
-  /* Поле: Змест: Publish link */
+  /* Поле: Content: Publish link */
   $handler->display->display_options['fields']['publishcontent']['id'] = 'publishcontent';
   $handler->display->display_options['fields']['publishcontent']['table'] = 'node';
   $handler->display->display_options['fields']['publishcontent']['field'] = 'publishcontent';
@@ -590,7 +1074,7 @@ global $user;
   $handler->display->display_options['fields']['publishcontent']['unpublish'] = 'зняць з публікацыі';
   $handler->display->display_options['fields']['publishcontent']['publish'] = 'апублікаваць';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Змест: Author uid */
+  /* Contextual filter: Content: Author uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
   $handler->display->display_options['arguments']['uid']['table'] = 'node';
   $handler->display->display_options['arguments']['uid']['field'] = 'uid';
@@ -602,13 +1086,13 @@ global $user;
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Апублікавана */
+  /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
-  /* Filter criterion: Змест: Тып */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -666,10 +1150,10 @@ global $user;
     t('Тып'),
     t('Фота'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/no_image.gif" width="100" height="100"  /></a>'),
-    t('Назва тавара або паслугі'),
+    t('Назва тавару або паслугі'),
     t('Цана'),
     t('<a href="[path]">не ўказана</a>'),
-    t('Рэгіен'),
+    t('Рэгіён'),
     t('Тып абвесткі'),
     t('Тып абвесткі (field_ads_type)'),
     t('Тэма абвесткі'),
@@ -680,6 +1164,7 @@ global $user;
     t('Зараз у вас няма аніводнай апублікаванай абвесткі.
 <a class="rich-link bold-text" href="/node/add/ads">Дадаць новую абвестку</a>.'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/no_image.gif" width="50" height="50" style="width:50px;height:50px;" /></a>'),
+    t('Назва тавара або паслугі'),
     t('не ўказана'),
     t('Кіраванне'),
     t('зняць з публікацыі'),

@@ -1,13 +1,14 @@
 name = Content type: company
 core = 7.x
 package = Custom
-version = 7.x-2.4
+version = 7.x-2.5
 dependencies[] = addthis
 dependencies[] = addthis_displays
 dependencies[] = ctools
 dependencies[] = email
 dependencies[] = features
 dependencies[] = field_group
+dependencies[] = filefield_paths
 dependencies[] = image
 dependencies[] = link
 dependencies[] = number

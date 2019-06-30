@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * delta_horki2_map_local_problems.features.inc

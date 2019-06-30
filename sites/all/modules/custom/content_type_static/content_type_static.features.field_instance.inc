@@ -46,7 +46,7 @@ function content_type_static_field_default_field_instances() {
           'anonymous_text' => 0,
           'author_text' => 'author_text',
           'comment_text' => 0,
-          'php_code' => 0,
+          'php_code' => 'php_code',
           'plain_text' => 0,
         ),
         'allowed_formats_toggle' => 1,

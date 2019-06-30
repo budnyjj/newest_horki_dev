@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_ads.strongarm.inc
@@ -163,28 +164,28 @@ function content_type_ads_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_ads_pattern';
-  $strongarm->value = 'abvestki/[node:nid].html';
+  $strongarm->value = 'ads/[node:nid].html';
   $export['pathauto_node_ads_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_ads_placement_pattern';
-  $strongarm->value = 'abvestki/[term:name].html';
+  $strongarm->value = 'ads/[term:name].html';
   $export['pathauto_taxonomy_term_ads_placement_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_ads_topics_pattern';
-  $strongarm->value = 'abvestki/[term:name].html';
+  $strongarm->value = 'ads/[term:name].html';
   $export['pathauto_taxonomy_term_ads_topics_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_ads_types_pattern';
-  $strongarm->value = 'abvestki/[term:name].html';
+  $strongarm->value = 'ads/[term:name].html';
   $export['pathauto_taxonomy_term_ads_types_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
