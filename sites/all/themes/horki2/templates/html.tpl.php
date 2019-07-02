@@ -26,6 +26,7 @@
 <meta name="msapplication-config" content="/sites/default/files/favicons/browserconfig.xml">  
 <meta name="google-site-verification" content="mc_80mJ1g2ulo7wFCZyPg9_tfUYANmS7OCbKrLypEKg" />
 <meta name="yandex-verification" content="d4b6a64cdf423497" />
+<meta name='wmail-verification' content='08158243dc3a0fa9' />
 
 <?php print $styles; ?>
 

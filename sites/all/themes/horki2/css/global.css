@@ -1214,8 +1214,9 @@ ul.tabs li.active a {
     font-size: 1.1em;
 }
 
+.page-companies .views-exposed-form .views-widget-filter-combine,
 .page-companies .views-exposed-form .views-widget-filter-field_company_section_tid,
-.page-companies .views-exposed-form .views-widget-filter-body_value {
+.page-companies .views-exposed-form .views-widget-filter-field_geotargeting_tid {
     width: 100%;
 }
 
