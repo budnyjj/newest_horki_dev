@@ -14,7 +14,7 @@ function image_styles_article_default_picture_mapping() {
   $picture_mapping = new PictureMapping();
   $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
   $picture_mapping->api_version = 2;
-  $picture_mapping->label = 'article';
+  $picture_mapping->label = 'Малюнак для артыкула';
   $picture_mapping->machine_name = 'article';
   $picture_mapping->breakpoint_group = 'horki2';
   $picture_mapping->mapping = array(
@@ -47,7 +47,7 @@ function image_styles_article_default_picture_mapping() {
   $picture_mapping = new PictureMapping();
   $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
   $picture_mapping->api_version = 2;
-  $picture_mapping->label = 'wide';
+  $picture_mapping->label = 'Малюнак для шырокіх старонак';
   $picture_mapping->machine_name = 'wide';
   $picture_mapping->breakpoint_group = 'horki2';
   $picture_mapping->mapping = array(

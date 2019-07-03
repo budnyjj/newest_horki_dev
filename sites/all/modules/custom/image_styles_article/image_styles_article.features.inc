@@ -24,7 +24,7 @@ function image_styles_article_image_default_styles() {
   $styles['article_breakpoints_theme_horki2_desktop_narrow_1x'] = array(
     'label' => 'article_breakpoints_theme_horki2_desktop_narrow_1x',
     'effects' => array(
-      57 => array(
+      72 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 894,
@@ -55,7 +55,17 @@ function image_styles_article_image_default_styles() {
   // Exported image style: article_breakpoints_theme_horki2_mobile_narrow_1x.
   $styles['article_breakpoints_theme_horki2_mobile_narrow_1x'] = array(
     'label' => 'article_breakpoints_theme_horki2_mobile_narrow_1x',
-    'effects' => array(),
+    'effects' => array(
+      73 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 400,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
   );
 
   // Exported image style: article_breakpoints_theme_horki2_mobile_normal_1x.
@@ -116,6 +126,114 @@ function image_styles_article_image_default_styles() {
           'height' => 100,
         ),
         'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: article_with_logo_breakpoints_theme_horki2_desktop_narrow_1x.
+  $styles['article_with_logo_breakpoints_theme_horki2_desktop_narrow_1x'] = array(
+    'label' => 'article_with_logo_breakpoints_theme_horki2_desktop_narrow_1x',
+    'effects' => array(
+      69 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 894,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+      74 => array(
+        'name' => 'canvasactions_file2canvas',
+        'data' => array(
+          'xpos' => 'right + 15',
+          'ypos' => 12,
+          'alpha' => 100,
+          'scale' => '',
+          'path' => 'private://images/watermark/copyright_desktop_narrow.png',
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: article_with_logo_breakpoints_theme_horki2_desktop_normal_1x.
+  $styles['article_with_logo_breakpoints_theme_horki2_desktop_normal_1x'] = array(
+    'label' => 'article_with_logo_breakpoints_theme_horki2_desktop_normal_1x',
+    'effects' => array(
+      68 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1200,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+      75 => array(
+        'name' => 'canvasactions_file2canvas',
+        'data' => array(
+          'xpos' => 'right + 20',
+          'ypos' => 17,
+          'alpha' => 100,
+          'scale' => '',
+          'path' => 'private://images/watermark/copyright_desktop_normal.png',
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: article_with_logo_breakpoints_theme_horki2_mobile_narrow_1x.
+  $styles['article_with_logo_breakpoints_theme_horki2_mobile_narrow_1x'] = array(
+    'label' => 'article_with_logo_breakpoints_theme_horki2_mobile_narrow_1x',
+    'effects' => array(
+      71 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 400,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+      77 => array(
+        'name' => 'canvasactions_file2canvas',
+        'data' => array(
+          'xpos' => 'right + 7',
+          'ypos' => 5,
+          'alpha' => 100,
+          'scale' => '',
+          'path' => 'private://images/watermark/copyright_mobile_narrow.png',
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: article_with_logo_breakpoints_theme_horki2_mobile_normal_1x.
+  $styles['article_with_logo_breakpoints_theme_horki2_mobile_normal_1x'] = array(
+    'label' => 'article_with_logo_breakpoints_theme_horki2_mobile_normal_1x',
+    'effects' => array(
+      70 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 918,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+      76 => array(
+        'name' => 'canvasactions_file2canvas',
+        'data' => array(
+          'xpos' => 'right + 17',
+          'ypos' => 13,
+          'alpha' => 100,
+          'scale' => '',
+          'path' => 'private://images/watermark/copyright_mobile_normal.png',
+        ),
+        'weight' => 2,
       ),
     ),
   );

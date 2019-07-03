@@ -1,7 +1,7 @@
 name = Content type: company
 core = 7.x
 package = Custom
-version = 7.x-2.5
+version = 7.x-2.6
 dependencies[] = addthis
 dependencies[] = addthis_displays
 dependencies[] = ctools

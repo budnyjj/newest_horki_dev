@@ -25,7 +25,7 @@ function text_formats_filter_default_formats() {
         'settings' => array(
           'allowed_html' => '<a>, <p>',
           'filter_html_help' => 0,
-          'filter_html_nofollow' => 0,
+          'filter_html_nofollow' => 1,
         ),
       ),
       'filter_autop' => array(
@@ -175,7 +175,7 @@ function text_formats_filter_default_formats() {
     'name' => 'Plain text',
     'cache' => 1,
     'status' => 1,
-    'weight' => 0,
+    'weight' => -3,
     'filters' => array(
       'filter_html_escape' => array(
         'weight' => 0,

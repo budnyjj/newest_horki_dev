@@ -147,7 +147,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['alter']['text'] = '[field_placement_by_taxonomy] ';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['delta_offset'] = '0';
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -278,8 +278,8 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'image_src' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'canonical' => array(
         'value' => '[view:url]',
@@ -307,7 +307,7 @@ function views_news_lists_views_default_views() {
       ),
       'content-language' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'ru',
       ),
       'geo.position' => array(
         'value' => '',
@@ -351,8 +351,8 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'fb:app_id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '1404750383092736',
+        'default' => '1404750383092736',
       ),
       'fb:pages' => array(
         'value' => '',
@@ -387,8 +387,8 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'og:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'og:image:url' => array(
         'value' => '',
@@ -399,16 +399,16 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'og:image:type' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'image/png',
+        'default' => 'image/png',
       ),
       'og:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'og:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'og:latitude' => array(
         'value' => '',
@@ -583,16 +583,16 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'twitter:card' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
       ),
       'twitter:creator' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '@horki_info',
+        'default' => '@horki_info',
       ),
       'twitter:creator:id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '120533731',
+        'default' => '120533731',
       ),
       'twitter:url' => array(
         'value' => '[view:url]',
@@ -611,20 +611,20 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'twitter:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'twitter:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'twitter:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'twitter:image:alt' => array(
         'value' => '',
-        'default' => '',
+        'default' => '[current-page:title]',
       ),
       'twitter:image0' => array(
         'value' => '',
@@ -824,7 +824,7 @@ function views_news_lists_views_default_views() {
       'text' => 0,
     ),
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -870,6 +870,7 @@ function views_news_lists_views_default_views() {
   /* Display: Народныя навiны */
   $handler = $view->new_display('page', 'Народныя навiны', 'page_9');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Народныя навіны';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
   $handler->display->display_options['display_description'] = 'Народныя навiны';
@@ -920,7 +921,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = ' ';
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -995,11 +996,11 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Новости от читателей сайта horki.info | [site:name]',
+        'value' => 'Новости от читателей сайта | [site:name]',
         'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
-        'value' => 'Новости и фото из Горок, Дрибина и Мстиславля от читателей сайта horki.info.',
+        'value' => 'Новости и фото из Горок, Дрибина и Мстиславля от читателей сайта [site:name].',
         'default' => '[view:description]',
       ),
       'abstract' => array(
@@ -1046,8 +1047,8 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'image_src' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'canonical' => array(
         'value' => '[view:url]',
@@ -1075,7 +1076,7 @@ function views_news_lists_views_default_views() {
       ),
       'content-language' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'ru',
       ),
       'geo.position' => array(
         'value' => '',
@@ -1119,8 +1120,8 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'fb:app_id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '1404750383092736',
+        'default' => '1404750383092736',
       ),
       'fb:pages' => array(
         'value' => '',
@@ -1135,7 +1136,7 @@ function views_news_lists_views_default_views() {
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Новости от читателей сайта horki.info',
+        'value' => 'Новости от читателей сайта [site:name]',
         'default' => '[view:title]',
       ),
       'og:determiner' => array(
@@ -1143,7 +1144,7 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'og:description' => array(
-        'value' => 'Новости и фото из Горок, Дрибина и Мстиславля от читателей сайта horki.info.',
+        'value' => 'Новости и фото из Горок, Дрибина и Мстиславля от читателей сайта [site:name].',
         'default' => '',
       ),
       'og:updated_time' => array(
@@ -1155,8 +1156,8 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'og:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'og:image:url' => array(
         'value' => '',
@@ -1167,16 +1168,16 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'og:image:type' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'image/png',
+        'default' => 'image/png',
       ),
       'og:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'og:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'og:latitude' => array(
         'value' => '',
@@ -1351,27 +1352,27 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'twitter:card' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
       ),
       'twitter:creator' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '@horki_info',
+        'default' => '@horki_info',
       ),
       'twitter:creator:id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '120533731',
+        'default' => '120533731',
       ),
       'twitter:url' => array(
         'value' => '[view:url]',
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Новости от читателей сайта horki.info',
+        'value' => 'Новости от читателей сайта [site:name]',
         'default' => '[view:title]',
       ),
       'twitter:description' => array(
-        'value' => 'Новости и фото из Горок, Дрибина и Мстиславля от читателей сайта horki.info.',
+        'value' => 'Новости и фото из Горок, Дрибина и Мстиславля от читателей сайта [site:name].',
         'default' => '',
       ),
       'twitter:dnt' => array(
@@ -1379,20 +1380,20 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'twitter:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'twitter:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'twitter:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'twitter:image:alt' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'Новости от читателей сайта [site:name]',
+        'default' => '[current-page:title]',
       ),
       'twitter:image0' => array(
         'value' => '',
@@ -1505,6 +1506,7 @@ function views_news_lists_views_default_views() {
     t('Desc'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/letter_small.png"></a>'),
     t('Народныя навiны'),
+    t('Народныя навіны'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
@@ -1561,7 +1563,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['header']['area']['label'] = 'Фотаблог';
   $handler->display->display_options['header']['area']['content'] = '<a href="/photo.html">ФОТАБЛОГ</a>';
   $handler->display->display_options['header']['area']['format'] = 'author_text';
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1623,7 +1625,7 @@ function views_news_lists_views_default_views() {
     'main_news' => 'main_news',
   );
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1730,7 +1732,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = ' ';
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1785,19 +1787,19 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Горки город фото из городов Горки, Дрибин, Мстиславль и БГСХА (горецкой сельскохозяйственной академии) | [site:name]',
-        'default' => '',
+        'value' => 'Фото из Горок, Дрибина, Мстиславля и БГСХА | [site:name]',
+        'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
-        'value' => 'Фото Горки достопримечательностей, новостей и событий из Горок, Дрибина, Мстиславля, БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов и горецкой сельскохозяйственной академии.',
-        'default' => '',
+        'value' => 'Фото достопримечательностей, новостей и событий из Горок, Дрибина, Мстиславля, БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов и горецкой сельскохозяйственной академии.',
+        'default' => '[view:description]',
       ),
       'abstract' => array(
         'value' => '',
         'default' => '',
       ),
       'keywords' => array(
-        'value' => 'Горки город фото',
+        'value' => 'Горки, город, фото',
         'default' => '',
       ),
       'robots' => array(
@@ -1813,18 +1815,7 @@ function views_news_lists_views_default_views() {
           'noimageindex' => 0,
           'notranslate' => 0,
         ),
-        'default' => array(
-          'index' => 0,
-          'follow' => 0,
-          'noindex' => 0,
-          'nofollow' => 0,
-          'noarchive' => 0,
-          'nosnippet' => 0,
-          'noodp' => 0,
-          'noydir' => 0,
-          'noimageindex' => 0,
-          'notranslate' => 0,
-        ),
+        'default' => array(),
       ),
       'news_keywords' => array(
         'value' => '',
@@ -1836,33 +1827,31 @@ function views_news_lists_views_default_views() {
       ),
       'rating' => array(
         'value' => '',
+        'default' => '',
       ),
       'referrer' => array(
         'value' => '',
+        'default' => '',
       ),
       'rights' => array(
-        'value' => 'horki.info',
-        'default' => 'horki.info',
-      ),
-      'image_src' => array(
         'value' => '',
         'default' => '',
+      ),
+      'image_src' => array(
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'canonical' => array(
         'value' => '[view:url]',
         'default' => '[view:url]',
       ),
+      'set_cookie' => array(
+        'value' => '',
+        'default' => '',
+      ),
       'shortlink' => array(
         'value' => '[current-page:url:unaliased]',
         'default' => '[current-page:url:unaliased]',
-      ),
-      'publisher' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'author' => array(
-        'value' => '',
-        'default' => '',
       ),
       'original-source' => array(
         'value' => '',
@@ -1870,27 +1859,35 @@ function views_news_lists_views_default_views() {
       ),
       'prev' => array(
         'value' => '',
+        'default' => '',
       ),
       'next' => array(
         'value' => '',
+        'default' => '',
       ),
       'content-language' => array(
         'value' => '',
+        'default' => 'ru',
       ),
       'geo.position' => array(
         'value' => '',
+        'default' => '',
       ),
       'geo.placename' => array(
         'value' => '',
+        'default' => '',
       ),
       'geo.region' => array(
         'value' => '',
+        'default' => '',
       ),
       'icbm' => array(
         'value' => '',
+        'default' => '',
       ),
       'refresh' => array(
         'value' => '',
+        'default' => '',
       ),
       'revisit-after' => array(
         'value' => '',
@@ -1899,16 +1896,391 @@ function views_news_lists_views_default_views() {
       ),
       'pragma' => array(
         'value' => '',
+        'default' => '',
       ),
       'cache-control' => array(
         'value' => '',
+        'default' => '',
       ),
       'expires' => array(
         'value' => '',
+        'default' => '',
+      ),
+      'fb:admins' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:app_id' => array(
+        'value' => '1404750383092736',
+        'default' => '1404750383092736',
+      ),
+      'fb:pages' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:type' => array(
+        'value' => 'website',
+        'default' => 'website',
+      ),
+      'og:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'og:title' => array(
+        'value' => 'Фото из Горок, Дрибина, Мстиславля и БГСХА',
+        'default' => '[view:title]',
+      ),
+      'og:determiner' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:description' => array(
+        'value' => 'Фото достопримечательностей, новостей и событий из Горок, Дрибина, Мстиславля, БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов и горецкой сельскохозяйственной академии.',
+        'default' => '',
+      ),
+      'og:updated_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:see_also' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image' => array(
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
+      ),
+      'og:image:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:type' => array(
+        'value' => 'image/png',
+        'default' => 'image/png',
+      ),
+      'og:image:width' => array(
+        'value' => '968',
+        'default' => '968',
+      ),
+      'og:image:height' => array(
+        'value' => '504',
+        'default' => '504',
+      ),
+      'og:latitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:longitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:street_address' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locality' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:postal_code' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:country_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:email' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:phone_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:fax_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locale' => array(
+        'value' => 'ru_RU',
+        'default' => 'ru_RU',
+      ),
+      'og:locale:alternate' => array(
+        'value' => 'be_BY',
+        'default' => 'be_BY',
+      ),
+      'article:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:publisher' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:section' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:published_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:modified_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:expiration_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:first_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:last_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:username' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:gender' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:isbn' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor:role' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:director' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:writer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:duration' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:series' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:card' => array(
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
+      ),
+      'twitter:creator' => array(
+        'value' => '@horki_info',
+        'default' => '@horki_info',
+      ),
+      'twitter:creator:id' => array(
+        'value' => '120533731',
+        'default' => '120533731',
+      ),
+      'twitter:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'twitter:title' => array(
+        'value' => 'Фото из Горок, Дрибина, Мстиславля и БГСХА',
+        'default' => '[view:title]',
+      ),
+      'twitter:description' => array(
+        'value' => 'Фото достопримечательностей, новостей и событий из Горок, Дрибина, Мстиславля, БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов и горецкой сельскохозяйственной академии.',
+        'default' => '',
+      ),
+      'twitter:dnt' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image' => array(
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
+      ),
+      'twitter:image:width' => array(
+        'value' => '968',
+        'default' => '968',
+      ),
+      'twitter:image:height' => array(
+        'value' => '504',
+        'default' => '504',
+      ),
+      'twitter:image:alt' => array(
+        'value' => 'Фото из Горок, Дрибина, Мстиславля и БГСХА',
+        'default' => '[current-page:title]',
+      ),
+      'twitter:image0' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image3' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream:content_type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:country' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data2' => array(
+        'value' => '',
+        'default' => '',
       ),
     ),
   );
-  $handler->display->display_options['path'] = 'photo.html';
+  $handler->display->display_options['path'] = 'photos.html';
   $translatables['photoblog'] = array(
     t('Master'),
     t('болей'),
@@ -2046,6 +2418,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
   $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
   $handler->display->display_options['fields']['field_video']['label'] = '';
+  $handler->display->display_options['fields']['field_video']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_video']['element_class'] = 'preview-photo';
   $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
@@ -2053,6 +2426,30 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_video']['settings'] = array(
     'image_style' => 'mediagrid_breakpoints_theme_horki2_desktop_normal_1x',
     'image_link' => 'content',
+  );
+  /* Поле: Змест: Галоўнае фота */
+  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
+  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['empty'] = '[field_video]';
+  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_pics']['settings'] = array(
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => '',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
+    'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'mediagrid',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -2089,11 +2486,6 @@ function views_news_lists_views_default_views() {
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Змест: Галоўнае відэа - Video URL */
-  $handler->display->display_options['filters']['field_video_video_url']['id'] = 'field_video_video_url';
-  $handler->display->display_options['filters']['field_video_video_url']['table'] = 'field_data_field_video';
-  $handler->display->display_options['filters']['field_video_video_url']['field'] = 'field_video_video_url';
-  $handler->display->display_options['filters']['field_video_video_url']['operator'] = 'not empty';
   /* Filter criterion: Nodequeue: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
@@ -2158,6 +2550,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
   $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
   $handler->display->display_options['fields']['field_video']['label'] = '';
+  $handler->display->display_options['fields']['field_video']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_video']['element_class'] = 'media-photo';
   $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
@@ -2165,6 +2558,30 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_video']['settings'] = array(
     'image_style' => 'mediagrid_breakpoints_theme_horki2_mobile_normal_1x',
     'image_link' => 'content',
+  );
+  /* Поле: Змест: Галоўнае фота */
+  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
+  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['empty'] = '[field_video]';
+  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_pics']['settings'] = array(
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => '',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
+    'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'highlight',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Статыстыка */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -2212,11 +2629,6 @@ function views_news_lists_views_default_views() {
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Змест: Галоўнае відэа - Video URL */
-  $handler->display->display_options['filters']['field_video_video_url']['id'] = 'field_video_video_url';
-  $handler->display->display_options['filters']['field_video_video_url']['table'] = 'field_data_field_video';
-  $handler->display->display_options['filters']['field_video_video_url']['field'] = 'field_video_video_url';
-  $handler->display->display_options['filters']['field_video_video_url']['operator'] = 'not empty';
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
@@ -2271,8 +2683,8 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'image_src' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'canonical' => array(
         'value' => '[view:url]',
@@ -2283,7 +2695,7 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'shortlink' => array(
-        'value' => '',
+        'value' => '[current-page:url:unaliased]',
         'default' => '[current-page:url:unaliased]',
       ),
       'original-source' => array(
@@ -2300,7 +2712,7 @@ function views_news_lists_views_default_views() {
       ),
       'content-language' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'ru',
       ),
       'geo.position' => array(
         'value' => '',
@@ -2344,8 +2756,8 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'fb:app_id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '1404750383092736',
+        'default' => '1404750383092736',
       ),
       'fb:pages' => array(
         'value' => '',
@@ -2380,8 +2792,8 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'og:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'og:image:url' => array(
         'value' => '',
@@ -2392,16 +2804,16 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'og:image:type' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'image/png',
+        'default' => 'image/png',
       ),
       'og:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'og:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'og:latitude' => array(
         'value' => '',
@@ -2576,16 +2988,16 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'twitter:card' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
       ),
       'twitter:creator' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '@horki_info',
+        'default' => '@horki_info',
       ),
       'twitter:creator:id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '120533731',
+        'default' => '120533731',
       ),
       'twitter:url' => array(
         'value' => '[view:url]',
@@ -2604,20 +3016,20 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'twitter:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'twitter:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'twitter:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'twitter:image:alt' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'Видео про Горки, Дрибин, Мстиславль и БГСХА',
+        'default' => '[current-page:title]',
       ),
       'twitter:image0' => array(
         'value' => '',
@@ -2713,7 +3125,7 @@ function views_news_lists_views_default_views() {
       ),
     ),
   );
-  $handler->display->display_options['path'] = 'video.html';
+  $handler->display->display_options['path'] = 'videos.html';
   $translatables['videoblog'] = array(
     t('Master'),
     t('болей'),
@@ -2726,6 +3138,7 @@ function views_news_lists_views_default_views() {
     t('<a href="/video.html">ВІДЭАБЛОГ</a>'),
     t('Блок'),
     t('чарга'),
+    t('[field_video]'),
     t('Старонка'),
     t('Items per page'),
     t('- All -'),

@@ -253,8 +253,8 @@ function views_library_views_default_views() {
         'default' => '',
       ),
       'image_src' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'canonical' => array(
         'value' => '[view:url]',
@@ -265,7 +265,7 @@ function views_library_views_default_views() {
         'default' => '',
       ),
       'shortlink' => array(
-        'value' => '',
+        'value' => '[current-page:url:unaliased]',
         'default' => '[current-page:url:unaliased]',
       ),
       'original-source' => array(
@@ -282,7 +282,7 @@ function views_library_views_default_views() {
       ),
       'content-language' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'ru',
       ),
       'geo.position' => array(
         'value' => '',
@@ -326,8 +326,8 @@ function views_library_views_default_views() {
         'default' => '',
       ),
       'fb:app_id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '1404750383092736',
+        'default' => '1404750383092736',
       ),
       'fb:pages' => array(
         'value' => '',
@@ -362,8 +362,8 @@ function views_library_views_default_views() {
         'default' => '',
       ),
       'og:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'og:image:url' => array(
         'value' => '',
@@ -374,16 +374,16 @@ function views_library_views_default_views() {
         'default' => '',
       ),
       'og:image:type' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'image/png',
+        'default' => 'image/png',
       ),
       'og:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'og:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'og:latitude' => array(
         'value' => '',
@@ -558,16 +558,16 @@ function views_library_views_default_views() {
         'default' => '',
       ),
       'twitter:card' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
       ),
       'twitter:creator' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '@horki_info',
+        'default' => '@horki_info',
       ),
       'twitter:creator:id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '120533731',
+        'default' => '120533731',
       ),
       'twitter:url' => array(
         'value' => '[view:url]',
@@ -586,20 +586,20 @@ function views_library_views_default_views() {
         'default' => '',
       ),
       'twitter:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'twitter:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'twitter:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'twitter:image:alt' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'Библиотека авторов из Горок, Дрибина и Мстиславля',
+        'default' => '[current-page:title]',
       ),
       'twitter:image0' => array(
         'value' => '',

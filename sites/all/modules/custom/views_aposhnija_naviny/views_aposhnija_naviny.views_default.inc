@@ -247,7 +247,7 @@ function views_aposhnija_naviny_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -302,12 +302,12 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Последние новости, фото и видео из Горок, Дрибина, Мстиславля и БГСХА. | [site:name]',
-        'default' => '[current-page:title] | [site:name]',
+        'value' => 'Последние новости, фото и видео из Горок, Дрибина, Мстиславля и БГСХА | [site:name]',
+        'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
         'value' => 'На этой странице собраны свежие новости из Горок, Дрибина, Мстиславля и БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов.',
-        'default' => '',
+        'default' => '[view:description]',
       ),
       'abstract' => array(
         'value' => '',
@@ -353,12 +353,12 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '',
       ),
       'image_src' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'canonical' => array(
         'value' => '[view:url]',
-        'default' => '[current-page:url:absolute]',
+        'default' => '[view:url]',
       ),
       'set_cookie' => array(
         'value' => '',
@@ -366,7 +366,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'shortlink' => array(
         'value' => '',
-        'default' => '',
+        'default' => '[current-page:url:unaliased]',
       ),
       'original-source' => array(
         'value' => '',
@@ -426,8 +426,8 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '',
       ),
       'fb:app_id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '1404750383092736',
+        'default' => '1404750383092736',
       ),
       'fb:pages' => array(
         'value' => '',
@@ -438,19 +438,19 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => 'website',
       ),
       'og:url' => array(
-        'value' => '[current-page:url:absolute]',
-        'default' => '[current-page:url:absolute]',
+        'value' => '[view:url]',
+        'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => '[current-page:title]',
-        'default' => '[current-page:title]',
+        'value' => 'Последние новости, фото и видео из Горок, Дрибина, Мстиславля и БГСХА',
+        'default' => '[view:title]',
       ),
       'og:determiner' => array(
         'value' => '',
         'default' => '',
       ),
       'og:description' => array(
-        'value' => '',
+        'value' => 'На этой странице собраны свежие новости из Горок, Дрибина, Мстиславля и БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов.',
         'default' => '',
       ),
       'og:updated_time' => array(
@@ -462,8 +462,8 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '',
       ),
       'og:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'og:image:url' => array(
         'value' => '',
@@ -474,16 +474,16 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '',
       ),
       'og:image:type' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'image/png',
+        'default' => 'image/png',
       ),
       'og:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'og:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'og:latitude' => array(
         'value' => '',
@@ -658,27 +658,27 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '',
       ),
       'twitter:card' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
       ),
       'twitter:creator' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '@horki_info',
+        'default' => '@horki_info',
       ),
       'twitter:creator:id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '120533731',
+        'default' => '120533731',
       ),
       'twitter:url' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '[view:url]',
+        'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'Последние новости, фото и видео из Горок, Дрибина, Мстиславля и БГСХА',
+        'default' => '[view:title]',
       ),
       'twitter:description' => array(
-        'value' => '',
+        'value' => 'На этой странице собраны свежие новости из Горок, Дрибина, Мстиславля и БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов.',
         'default' => '',
       ),
       'twitter:dnt' => array(
@@ -686,20 +686,20 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '',
       ),
       'twitter:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'twitter:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'twitter:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'twitter:image:alt' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'Последние новости, фото и видео из Горок, Дрибина, Мстиславля и БГСХА',
+        'default' => '[current-page:title]',
       ),
       'twitter:image0' => array(
         'value' => '',
@@ -795,7 +795,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
     ),
   );
-  $handler->display->display_options['path'] = 'naviny.html';
+  $handler->display->display_options['path'] = 'news.html';
 
   /* Display: Блок на галоўнай */
   $handler = $view->new_display('block', 'Блок на галоўнай', 'block_2');
@@ -1016,7 +1016,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_text']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1163,7 +1163,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_text']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1334,7 +1334,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_text']['settings'] = array(
     'trim_length' => '160',
   );
-  /* Поле: Змест: Галоўны фотаздымак */
+  /* Поле: Змест: Галоўнае фота */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';

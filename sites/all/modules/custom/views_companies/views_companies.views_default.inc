@@ -23,7 +23,7 @@ function views_companies_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Фирмы, компании, предприятия города Горки и Горецкого района';
+  $handler->display->display_options['title'] = 'Каталог магазінаў і паслуг';
   $handler->display->display_options['css_class'] = 'companies-page zebra';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
@@ -57,10 +57,10 @@ function views_companies_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['label'] = 'Дадаць прадпрыемства';
+  $handler->display->display_options['header']['area']['label'] = 'Дадаць сваё прадпрыемства';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<a href="/static/1374.html" target="_blank">Дадаць прадпрыемства</a>';
-  $handler->display->display_options['header']['area']['format'] = 'author_text';
+  $handler->display->display_options['header']['area']['content'] = '<a href="<?php print drupal_get_path_alias(\'node/1374\')?>">Дадаць сваё прадпрыемства</a>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -186,23 +186,6 @@ function views_companies_views_default_views() {
   );
   $handler->display->display_options['filters']['field_company_section_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_company_section_tid']['vocabulary'] = 'company_catalog';
-  /* Filter criterion: Змест: Body (body) */
-  $handler->display->display_options['filters']['body_value']['id'] = 'body_value';
-  $handler->display->display_options['filters']['body_value']['table'] = 'field_data_body';
-  $handler->display->display_options['filters']['body_value']['field'] = 'body_value';
-  $handler->display->display_options['filters']['body_value']['operator'] = 'contains';
-  $handler->display->display_options['filters']['body_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['body_value']['expose']['operator_id'] = 'body_value_op';
-  $handler->display->display_options['filters']['body_value']['expose']['label'] = 'Ключавыя словы';
-  $handler->display->display_options['filters']['body_value']['expose']['operator'] = 'body_value_op';
-  $handler->display->display_options['filters']['body_value']['expose']['identifier'] = 'body_value';
-  $handler->display->display_options['filters']['body_value']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['body_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    3 => '3',
-    4 => '4',
-    1 => 0,
-  );
 
   /* Display: Старонка */
   $handler = $view->new_display('page', 'Старонка', 'page');
@@ -304,14 +287,159 @@ function views_companies_views_default_views() {
     ),
     'trim_preserve_tags' => '',
   );
+  /* Поле: Пошук: web-сайт */
+  $handler->display->display_options['fields']['field_company_web_site']['id'] = 'field_company_web_site';
+  $handler->display->display_options['fields']['field_company_web_site']['table'] = 'field_data_field_company_web_site';
+  $handler->display->display_options['fields']['field_company_web_site']['field'] = 'field_company_web_site';
+  $handler->display->display_options['fields']['field_company_web_site']['ui_name'] = 'Пошук: web-сайт';
+  $handler->display->display_options['fields']['field_company_web_site']['label'] = '';
+  $handler->display->display_options['fields']['field_company_web_site']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_company_web_site']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_company_web_site']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_company_web_site']['type'] = 'link_plain';
+  /* Поле: Пошук: адрас */
+  $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['ui_name'] = 'Пошук: адрас';
+  $handler->display->display_options['fields']['field_address']['label'] = '';
+  $handler->display->display_options['fields']['field_address']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_address']['element_label_colon'] = FALSE;
+  /* Поле: Пошук: поўная назва прадпрыемства */
+  $handler->display->display_options['fields']['field_company_full_name']['id'] = 'field_company_full_name';
+  $handler->display->display_options['fields']['field_company_full_name']['table'] = 'field_data_field_company_full_name';
+  $handler->display->display_options['fields']['field_company_full_name']['field'] = 'field_company_full_name';
+  $handler->display->display_options['fields']['field_company_full_name']['ui_name'] = 'Пошук: поўная назва прадпрыемства';
+  $handler->display->display_options['fields']['field_company_full_name']['label'] = '';
+  $handler->display->display_options['fields']['field_company_full_name']['element_label_colon'] = FALSE;
+  /* Поле: Пошук: раздзел каталога */
+  $handler->display->display_options['fields']['field_company_section']['id'] = 'field_company_section';
+  $handler->display->display_options['fields']['field_company_section']['table'] = 'field_data_field_company_section';
+  $handler->display->display_options['fields']['field_company_section']['field'] = 'field_company_section';
+  $handler->display->display_options['fields']['field_company_section']['ui_name'] = 'Пошук: раздзел каталога';
+  $handler->display->display_options['fields']['field_company_section']['label'] = '';
+  $handler->display->display_options['fields']['field_company_section']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_company_section']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_company_section']['type'] = 'taxonomy_term_reference_plain';
+  /* Поле: Пошук: тэлефон */
+  $handler->display->display_options['fields']['field_company_phone']['id'] = 'field_company_phone';
+  $handler->display->display_options['fields']['field_company_phone']['table'] = 'field_data_field_company_phone';
+  $handler->display->display_options['fields']['field_company_phone']['field'] = 'field_company_phone';
+  $handler->display->display_options['fields']['field_company_phone']['ui_name'] = 'Пошук: тэлефон';
+  $handler->display->display_options['fields']['field_company_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_company_phone']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_company_phone']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_company_phone']['delta_offset'] = '0';
+  /* Поле: Пошук: УНН */
+  $handler->display->display_options['fields']['field_tax_number']['id'] = 'field_tax_number';
+  $handler->display->display_options['fields']['field_tax_number']['table'] = 'field_data_field_tax_number';
+  $handler->display->display_options['fields']['field_tax_number']['field'] = 'field_tax_number';
+  $handler->display->display_options['fields']['field_tax_number']['ui_name'] = 'Пошук: УНН';
+  $handler->display->display_options['fields']['field_tax_number']['label'] = '';
+  $handler->display->display_options['fields']['field_tax_number']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_tax_number']['element_label_colon'] = FALSE;
+  /* Поле: Пошук: час працы */
+  $handler->display->display_options['fields']['field_operation_time']['id'] = 'field_operation_time';
+  $handler->display->display_options['fields']['field_operation_time']['table'] = 'field_data_field_operation_time';
+  $handler->display->display_options['fields']['field_operation_time']['field'] = 'field_operation_time';
+  $handler->display->display_options['fields']['field_operation_time']['ui_name'] = 'Пошук: час працы';
+  $handler->display->display_options['fields']['field_operation_time']['label'] = '';
+  $handler->display->display_options['fields']['field_operation_time']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_operation_time']['element_label_colon'] = FALSE;
+  /* Поле: Пошук: e-mail */
+  $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
+  $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['ui_name'] = 'Пошук: e-mail';
+  $handler->display->display_options['fields']['field_email']['label'] = '';
+  $handler->display->display_options['fields']['field_email']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_email']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_email']['type'] = 'email_plain';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'company' => 'company',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Пошук */
+  $handler->display->display_options['filters']['combine']['id'] = 'combine';
+  $handler->display->display_options['filters']['combine']['table'] = 'views';
+  $handler->display->display_options['filters']['combine']['field'] = 'combine';
+  $handler->display->display_options['filters']['combine']['ui_name'] = 'Пошук';
+  $handler->display->display_options['filters']['combine']['operator'] = 'word';
+  $handler->display->display_options['filters']['combine']['group'] = 1;
+  $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Пошук';
+  $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+  $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+  $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['filters']['combine']['fields'] = array(
+    'title' => 'title',
+    'body' => 'body',
+    'field_company_web_site' => 'field_company_web_site',
+    'field_address' => 'field_address',
+    'field_company_full_name' => 'field_company_full_name',
+    'field_company_section' => 'field_company_section',
+    'field_company_phone' => 'field_company_phone',
+    'field_tax_number' => 'field_tax_number',
+    'field_operation_time' => 'field_operation_time',
+    'field_email' => 'field_email',
+  );
+  /* Filter criterion: Змест: Раздел каталога (field_company_section) */
+  $handler->display->display_options['filters']['field_company_section_tid']['id'] = 'field_company_section_tid';
+  $handler->display->display_options['filters']['field_company_section_tid']['table'] = 'field_data_field_company_section';
+  $handler->display->display_options['filters']['field_company_section_tid']['field'] = 'field_company_section_tid';
+  $handler->display->display_options['filters']['field_company_section_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_company_section_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_company_section_tid']['expose']['operator_id'] = 'field_company_section_tid_op';
+  $handler->display->display_options['filters']['field_company_section_tid']['expose']['label'] = 'Раздзел каталога';
+  $handler->display->display_options['filters']['field_company_section_tid']['expose']['operator'] = 'field_company_section_tid_op';
+  $handler->display->display_options['filters']['field_company_section_tid']['expose']['identifier'] = 'field_company_section_tid';
+  $handler->display->display_options['filters']['field_company_section_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => '3',
+    4 => '4',
+    1 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_company_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_company_section_tid']['vocabulary'] = 'company_catalog';
+  /* Filter criterion: Змест: Geotargeting (field_geotargeting) */
+  $handler->display->display_options['filters']['field_geotargeting_tid']['id'] = 'field_geotargeting_tid';
+  $handler->display->display_options['filters']['field_geotargeting_tid']['table'] = 'field_data_field_geotargeting';
+  $handler->display->display_options['filters']['field_geotargeting_tid']['field'] = 'field_geotargeting_tid';
+  $handler->display->display_options['filters']['field_geotargeting_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_geotargeting_tid']['expose']['operator_id'] = 'field_geotargeting_tid_op';
+  $handler->display->display_options['filters']['field_geotargeting_tid']['expose']['label'] = 'Месца';
+  $handler->display->display_options['filters']['field_geotargeting_tid']['expose']['operator'] = 'field_geotargeting_tid_op';
+  $handler->display->display_options['filters']['field_geotargeting_tid']['expose']['identifier'] = 'field_geotargeting_tid';
+  $handler->display->display_options['filters']['field_geotargeting_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['filters']['field_geotargeting_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_geotargeting_tid']['vocabulary'] = 'places';
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Фирмы, компании, предприятия города Горки и Горецкого района | [site:name]',
+        'value' => 'Каталог магазинов и услуг в Горках, Дрибине и Мстиславле | [site:name]',
         'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
-        'value' => 'Такси, одежда, обувь, строительство, кацтовары, ритуальные услуги, ремонт в Горках.',
+        'value' => 'Бизнес-каталог магазинов, предприятий и индивидуальных предпринимателей в Горках, Дрибине и Мстиславле, а также в Горецком, Дрибинском и Мстиславльском районах.',
         'default' => '[view:description]',
       ),
       'abstract' => array(
@@ -319,7 +447,7 @@ function views_companies_views_default_views() {
         'default' => '',
       ),
       'keywords' => array(
-        'value' => 'окна пвх, ремонт, ювелирные изделия',
+        'value' => 'Такси, одежда, обувь, окна ПВХ, канцтовары, ритуальные услуги, ремонт, ювелирные изделия',
         'default' => '',
       ),
       'robots' => array(
@@ -358,8 +486,8 @@ function views_companies_views_default_views() {
         'default' => '',
       ),
       'image_src' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'canonical' => array(
         'value' => '[view:url]',
@@ -432,7 +560,7 @@ function views_companies_views_default_views() {
       ),
       'fb:app_id' => array(
         'value' => '',
-        'default' => '',
+        'default' => '1404750383092736',
       ),
       'fb:pages' => array(
         'value' => '',
@@ -447,7 +575,7 @@ function views_companies_views_default_views() {
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Фирмы, компании, предприятия города Горки и Горецкого района',
+        'value' => 'Каталог магазинов и услуг в Горках, Дрибине и Мстиславле',
         'default' => '[view:title]',
       ),
       'og:determiner' => array(
@@ -455,7 +583,7 @@ function views_companies_views_default_views() {
         'default' => '',
       ),
       'og:description' => array(
-        'value' => 'Такси, одежда, обувь, строительство, кацтовары, ритуальные услуги, ремонт в Горках.',
+        'value' => 'Бизнес-каталог магазинов, предприятий и индивидуальных предпринимателей в Горках, Дрибине и Мстиславле, а также в Горецком, Дрибинском и Мстиславльском районах.',
         'default' => '',
       ),
       'og:updated_time' => array(
@@ -467,8 +595,8 @@ function views_companies_views_default_views() {
         'default' => '',
       ),
       'og:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'og:image:url' => array(
         'value' => '',
@@ -479,16 +607,16 @@ function views_companies_views_default_views() {
         'default' => '',
       ),
       'og:image:type' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'image/png',
+        'default' => 'image/png',
       ),
       'og:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'og:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'og:latitude' => array(
         'value' => '',
@@ -663,27 +791,27 @@ function views_companies_views_default_views() {
         'default' => '',
       ),
       'twitter:card' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
       ),
       'twitter:creator' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '@horki_info',
+        'default' => '@horki_info',
       ),
       'twitter:creator:id' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '120533731',
+        'default' => '120533731',
       ),
       'twitter:url' => array(
         'value' => '[view:url]',
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Фирмы, компании, предприятия города Горки и Горецкого района',
+        'value' => 'Каталог магазинов и услуг в Горках, Дрибине и Мстиславле',
         'default' => '[view:title]',
       ),
       'twitter:description' => array(
-        'value' => 'Такси, одежда, обувь, строительство, кацтовары, ритуальные услуги, ремонт в Горках.',
+        'value' => 'Бизнес-каталог магазинов, предприятий и индивидуальных предпринимателей в Горках, Дрибине и Мстиславле, а также в Горецком, Дрибинском и Мстиславльском районах.',
         'default' => '',
       ),
       'twitter:dnt' => array(
@@ -691,20 +819,20 @@ function views_companies_views_default_views() {
         'default' => '',
       ),
       'twitter:image' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => '/sites/default/files//social_preview/default.png',
       ),
       'twitter:image:width' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '968',
+        'default' => '968',
       ),
       'twitter:image:height' => array(
-        'value' => '',
-        'default' => '',
+        'value' => '504',
+        'default' => '504',
       ),
       'twitter:image:alt' => array(
-        'value' => '',
-        'default' => '',
+        'value' => 'Каталог магазинов и услуг в Горках, Дрибине и Мстиславле',
+        'default' => '[current-page:title]',
       ),
       'twitter:image0' => array(
         'value' => '',
@@ -803,7 +931,7 @@ function views_companies_views_default_views() {
   $handler->display->display_options['path'] = 'companies.html';
   $translatables['catalog_company'] = array(
     t('Master'),
-    t('Фирмы, компании, предприятия города Горки и Горецкого района'),
+    t('Каталог магазінаў і паслуг'),
     t('болей'),
     t('Фільтраваць'),
     t('Скінуць'),
@@ -818,19 +946,19 @@ function views_companies_views_default_views() {
     t('наступная ›'),
     t('апошняя »'),
     t('Больш прадпрыемстваў'),
-    t('Дадаць прадпрыемства'),
-    t('<a href="/static/1374.html" target="_blank">Дадаць прадпрыемства</a>'),
+    t('Дадаць сваё прадпрыемства'),
+    t('<a href="<?php print drupal_get_path_alias(\'node/1374\')?>">Дадаць сваё прадпрыемства</a>'),
     t('Нічога не знойдзена'),
     t('<p>На жаль, па вашым запыце не знойдзена ні аднаго прадпрыемства.</p>
 <p>Вы можаце <a href="/companies.html">скінуць наладкі фільтра</a>, або <a href="#">дадаць сваё прадпрыемства</a>.</p>'),
     t('Vote results'),
     t('.'),
     t('Раздзел каталога'),
-    t('Ключавыя словы'),
     t('Старонка'),
     t('Пошук'),
     t('<p>На жаль, па вашым запыце не знойдзена ніводнага прадпрыемства.</p>
 <p>Вы можаце <a href="/companies.html">скінуць наладкі фільтра</a>, або <a href="http://horki.info/static/1374.html">дадаць сваё прадпрыемства</a>.</p>'),
+    t('Месца'),
   );
   $export['catalog_company'] = $view;
 
