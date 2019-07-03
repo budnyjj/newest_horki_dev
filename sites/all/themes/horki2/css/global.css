@@ -2321,6 +2321,21 @@ ul.tabs li.active a {
     margin: 0 auto;
 }
 
+/* Disable AddThis for specific nodes */
+.page-node-371 .group-actions,
+.page-node-622 .group-actions,
+.page-node-623 .group-actions,
+.page-node-949 .group-actions,
+.page-node-1374 .group-actions,
+.page-node-1436 .group-actions,
+.page-node-1460 .group-actions,
+.page-node-2634 .group-actions,
+.page-node-2682 .group-actions,
+.page-node-2854 .group-actions,
+.page-node-7321 .group-actions {
+    display: none;
+}
+
 
 /**
  * Common node form styles

@@ -1,5 +1,5 @@
 <?php print $doctype; ?>
-<html xmlns:og="http://ogp.me/ns#" lang="ru" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?>>
+<html xmlns:og="https://ogp.me/ns#" lang="ru" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?>>
 <head<?php print $rdf->profile; ?>>
 <?php print $head; ?>
 <title><?php print $head_title; ?></title>  
@@ -30,10 +30,10 @@
 
 <?php print $styles; ?>
 
-<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <!-- Yandex Direct -->
-<script src="https://yastatic.net/pcode/adfox/loader.js" crossorigin="anonymous"></script>
+<script src="//yastatic.net/pcode/adfox/loader.js" crossorigin="anonymous"></script>
 
 <!-- SendPulse -->
 <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/ff43ffd7f1eab9f55eb2b7b70720d4b7_1.js" async></script>
