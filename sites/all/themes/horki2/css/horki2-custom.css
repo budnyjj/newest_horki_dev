@@ -232,6 +232,11 @@
     height: 31px;
 }
 
+/* mobile search button block */
+.block-block-62 {
+    display: none;
+}
+
 /* mobile menu button block */
 .mobile-navigation-menu {
     display: block;

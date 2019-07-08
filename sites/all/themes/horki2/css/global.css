@@ -252,6 +252,12 @@ input[type="submit"]:active {
     display: none;
 }
 
+/* mobile search button block */
+.block-block-62 {
+    position: absolute;
+    top: 0;
+    right: 35px;
+}
 
 /* mobile menu button block */
 .mobile-navigation-menu {
