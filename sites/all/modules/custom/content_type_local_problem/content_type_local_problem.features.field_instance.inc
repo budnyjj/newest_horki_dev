@@ -78,7 +78,7 @@ function content_type_local_problem_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_address',
-    'label' => 'Месца, дзе знаходзіцца праблема',
+    'label' => 'Адрас',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -418,7 +418,7 @@ function content_type_local_problem_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -579,6 +579,47 @@ function content_type_local_problem_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-local_problem-field_placement_by_taxonomy'.
+  $field_instances['node-local_problem-field_placement_by_taxonomy'] = array(
+    'bundle' => 'local_problem',
+    'default_value' => array(
+      0 => array(
+        'tid' => 58,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_placement_by_taxonomy',
+    'label' => 'Месца',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
       'weight' => 1,
     ),
   );
@@ -844,7 +885,7 @@ function content_type_local_problem_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -878,28 +919,30 @@ function content_type_local_problem_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_this_problem_on_map',
     'label' => 'Абраная мясцовая праблема на мапе',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'allowed_views' => array(
         'admin_views_comment' => 0,
         'admin_views_node' => 0,
         'admin_views_user' => 0,
-        'ads' => 0,
         'aposhnija_naviny' => 0,
         'catalog_company' => 0,
         'comments_block' => 0,
         'daviedka' => 0,
+        'fontyourface_browse' => 0,
         'front' => 0,
         'genres' => 0,
         'knowledge_base' => 0,
+        'last_comments' => 0,
+        'latest_objects' => 0,
         'library' => 0,
         'local_problems' => 0,
         'map_local_problems' => 'map_local_problems',
         'news_by_regions' => 0,
         'news_from_readers' => 0,
+        'old_streets' => 0,
         'photoblog' => 0,
         'rubrics' => 0,
-        'similar_ads' => 0,
         'similarterms' => 0,
         'uzgorak' => 0,
         'videoblog' => 0,
@@ -995,6 +1038,7 @@ function content_type_local_problem_field_default_field_instances() {
   t('E-mail');
   t('Абраная мясцовая праблема на мапе');
   t('Адзначце на гэтай мапе дакладнае месца, дзе знаходзіцца праблема.');
+  t('Адрас');
   t('Апісанне праблемы');
   t('Аўтар');
   t('Вашае імя. Яно будзе бачна іншым карыстальнікам сайта.');
@@ -1003,7 +1047,7 @@ function content_type_local_problem_field_default_field_instances() {
   t('Малюнак маркера статуса мясцовай праблемы.');
   t('Мапа');
   t('Маркер');
-  t('Месца, дзе знаходзіцца праблема');
+  t('Месца');
   t('Падзяліцца');
   t('Падрабязнае апісанне праблемы. Каб ўставіць відэа, выкарыстоўвайце код: 
 [VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]');

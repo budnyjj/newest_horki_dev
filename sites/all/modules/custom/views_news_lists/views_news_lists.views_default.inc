@@ -35,6 +35,11 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Прымяніць';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« першая';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ папярэдняя';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'наступная ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   /* Поле: Змест: Загаловак */
@@ -735,8 +740,6 @@ function views_news_lists_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Афіша'),
-    t('Афiша'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
@@ -744,6 +747,8 @@ function views_news_lists_views_default_views() {
     t('‹ папярэдняя'),
     t('наступная ›'),
     t('апошняя »'),
+    t('Афіша'),
+    t('Афiша'),
     t('больш навінаў'),
     t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
     t('.'),
@@ -784,6 +789,11 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Прымяніць';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« першая';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ папярэдняя';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'наступная ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Поле: Змест: Шлях */
@@ -1504,9 +1514,6 @@ function views_news_lists_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('<a href="[path]"><img src="/sites/default/files/default_images/letter_small.png"></a>'),
-    t('Народныя навiны'),
-    t('Народныя навіны'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
@@ -1514,6 +1521,9 @@ function views_news_lists_views_default_views() {
     t('‹ папярэдняя'),
     t('наступная ›'),
     t('апошняя »'),
+    t('<a href="[path]"><img src="/sites/default/files/default_images/letter_small.png"></a>'),
+    t('Народныя навiны'),
+    t('Народныя навіны'),
     t('больш навінаў'),
     t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
     t('.'),
@@ -2403,6 +2413,14 @@ function views_news_lists_views_default_views() {
   $handler = $view->new_display('block', 'Блок', 'block');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'block-preview';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Загаловак: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Відэаблог';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/videos.html">ВІДЭАБЛОГ</a>';
+  $handler->display->display_options['header']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
@@ -2432,7 +2450,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['element_class'] = 'preview-photo';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '[field_video]';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
@@ -3137,6 +3155,7 @@ function views_news_lists_views_default_views() {
     t('Відэаблог'),
     t('<a href="/video.html">ВІДЭАБЛОГ</a>'),
     t('Блок'),
+    t('<a href="/videos.html">ВІДЭАБЛОГ</a>'),
     t('чарга'),
     t('[field_video]'),
     t('Старонка'),

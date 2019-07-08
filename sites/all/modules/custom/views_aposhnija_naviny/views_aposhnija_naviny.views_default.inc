@@ -118,7 +118,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['footer']['area_1']['table'] = 'views';
   $handler->display->display_options['footer']['area_1']['field'] = 'area';
   $handler->display->display_options['footer']['area_1']['label'] = 'Больш навінаў';
-  $handler->display->display_options['footer']['area_1']['content'] = '<div class="button-black"><a href="/naviny.html">Больш навінаў</a></div>';
+  $handler->display->display_options['footer']['area_1']['content'] = '<div class="button-black"><a href="/news.html">Больш навінаў</a></div>';
   $handler->display->display_options['footer']['area_1']['format'] = 'author_text';
   /* Ніжні калантытул: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
@@ -824,7 +824,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['footer']['area_1']['table'] = 'views';
   $handler->display->display_options['footer']['area_1']['field'] = 'area';
   $handler->display->display_options['footer']['area_1']['label'] = 'Больш навінаў';
-  $handler->display->display_options['footer']['area_1']['content'] = '<div class="button-black"><a href="/naviny.html">Больш навінаў</a></div>';
+  $handler->display->display_options['footer']['area_1']['content'] = '<div class="button-black"><a href="/news.html">Больш навінаў</a></div>';
   $handler->display->display_options['footer']['area_1']['format'] = 'author_text';
   /* Ніжні калантытул: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
@@ -1577,8 +1577,8 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['path'] = 'zen.xml';
   $handler->display->display_options['sitename_title'] = 0;
 
-  /* Display: Найбольш папулярнае за тыдзень */
-  $handler = $view->new_display('block', 'Найбольш папулярнае за тыдзень', 'block_3');
+  /* Display: Папулярнае за тыдзень */
+  $handler = $view->new_display('block', 'Папулярнае за тыдзень', 'block_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Папулярнае за тыдзень';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -1605,7 +1605,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['footer']['area_1']['table'] = 'views';
   $handler->display->display_options['footer']['area_1']['field'] = 'area';
   $handler->display->display_options['footer']['area_1']['label'] = 'Больш навінаў';
-  $handler->display->display_options['footer']['area_1']['content'] = '<div class="button-black"><a href="/naviny.html">Больш навінаў</a></div>';
+  $handler->display->display_options['footer']['area_1']['content'] = '<div class="button-black"><a href="/news.html">Больш навінаў</a></div>';
   $handler->display->display_options['footer']['area_1']['format'] = 'author_text';
   /* Ніжні калантытул: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
@@ -1688,7 +1688,7 @@ function views_aposhnija_naviny_views_default_views() {
     t('Блок на ўнутраных'),
     t('Навіны'),
     t('Больш навінаў'),
-    t('<div class="button-black"><a href="/naviny.html">Больш навінаў</a></div>'),
+    t('<div class="button-black"><a href="/news.html">Больш навінаў</a></div>'),
     t('Дадаць навіну'),
     t('<div class="button-red"><a href="/node/add/news-from-readers">Дадаць навіну</a></div>'),
     t('Апошнія навіны на унутраных старонках'),
@@ -1729,8 +1729,8 @@ function views_aposhnija_naviny_views_default_views() {
     t('Яндекс.Дзен RSS'),
     t('[field_pics_1]
 [field_text] '),
-    t('Найбольш папулярнае за тыдзень'),
     t('Папулярнае за тыдзень'),
+    t('Найбольш папулярнае за тыдзень'),
   );
   $export['aposhnija_naviny'] = $view;
 

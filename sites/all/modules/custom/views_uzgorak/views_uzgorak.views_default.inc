@@ -36,6 +36,11 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Прымяніць';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« першая';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ папярэдняя';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'наступная ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
@@ -828,6 +833,13 @@ function views_uzgorak_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« першая'),
+    t('‹ папярэдняя'),
+    t('наступная ›'),
+    t('апошняя »'),
     t('Апісанне'),
     t('<p><b>Абласная газета "УзГорак" выходзіць у Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах. Наклад - 1300 асобнікаў на тыдзень.</b> Незалежныя навіны і каментарыі, тэлепраграма, прыватныя аб\'явы, астрапрагноз і віншаванні.</p>
 
@@ -851,13 +863,6 @@ function views_uzgorak_views_default_views() {
 <p>Рэклама ва "УзГорку" – гэта хуткі і эканамічны спосаб давесці інфармацыю пра вашы тавары і паслугі да пакупнікоў. Вы плаціце за адно рэкламнае месца, а пра Вас даведваюцца ў трох – Горацкім, Дрыбінскім і Мсціслаўскім раёнах. <b>Для размяшчэння рэкламы ў выданні звяртайцеся на тэлефон: 8 033 628 32 99.</b> </p>'),
     t('Page'),
     t('Архіў газеты "УзГорак"'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« першая'),
-    t('‹ папярэдняя'),
-    t('наступная ›'),
-    t('апошняя »'),
     t('больш "Узгоркаў"'),
     t('Глядзець анлайн'),
     t('<a href="[field_pdf]">Скачаць PDF</a>
