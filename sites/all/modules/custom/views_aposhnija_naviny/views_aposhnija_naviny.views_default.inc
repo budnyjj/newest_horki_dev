@@ -1043,7 +1043,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
-  $handler->display->display_options['path'] = 'naviny.xml';
+  $handler->display->display_options['path'] = 'news.xml';
   $handler->display->display_options['sitename_title'] = 0;
 
   /* Display: Google RSS  */
