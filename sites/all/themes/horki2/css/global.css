@@ -271,11 +271,85 @@ input[type="submit"]:active {
     right: -15px;
 }
 
-.menu-mobile-anonymous_mobile .menuitem-9 a,
-.menu-mobile-registered_mobile .menuitem-9 a {
+.mobile-menu-item-text {
+    clear: both;
+    list-style: none outside none;    
+    margin: 0;
+}
+
+.mobile-menu-item-text a {
+    float: left;
+    padding: 10px 25px;
+    width: 90%;
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.mobile-menu-item-text a:hover,
+.mobile-menu-item-text a:active {
+    text-decoration: none;
+    color: #AEAEAE;
+}
+
+.mobile-menu-item-text-delimiter a {
     margin-bottom: 10px;
     padding-bottom: 20px;
     border-bottom: 1px solid #4D4D4D;
+}
+
+.mobile-menu-item-icon {
+    display: block;
+    float: left;
+    margin: 5px;
+}
+
+.mobile-menu-item-icon a {
+    width: 31px;
+    height: 31px;
+}
+
+.mobile-menu-item-viber {
+    margin-left: 25px;
+}
+
+.mobile-menu-item-viber a {
+    content: url('/sites/default/files/icons/social/viber.png');
+} 
+
+.mobile-menu-item-instagram a {
+    content: url('/sites/default/files/icons/social/instagram.png');
+}
+
+.mobile-menu-item-ok a {
+    content: url('/sites/default/files/icons/social/odnoklassniki.png');
+}
+
+.mobile-menu-item-vk a {
+    content: url('/sites/default/files/icons/social/vk.png');
+}
+
+.mobile-menu-item-twitter {
+    clear: left;
+    margin-left: 25px;
+}
+
+.mobile-menu-item-twitter a {
+    content: url('/sites/default/files/icons/social/twitter.png');
+}
+
+.mobile-menu-item-facebook a {
+    content: url('/sites/default/files/icons/social/facebook.png');
+}
+
+.mobile-menu-item-rss a {
+    content: url('/sites/default/files/icons/social/rss.png');
+}
+
+.mobile-menu-item-email a {
+    content: url('/sites/default/files/icons/social/mail.png');
 }
 
 

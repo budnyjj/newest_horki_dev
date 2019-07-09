@@ -95,3 +95,24 @@ function horki2_preprocess_node(&$variables) {
     $variables['local_problem_status'] = $problem_status_text;
   }
 }
+
+function startsWith($source, $string) {
+  return strncmp($source, $string, strlen($string)) === 0;
+}
+
+function horki2_menu_link(&$vars) {
+  $element = $vars['element'];
+  $sub_menu = '';
+ 
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+ 
+  if (startsWith($element['#title'], 'Icon')) {
+    $element['#title'] = '';
+  }
+ 
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+ 
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
