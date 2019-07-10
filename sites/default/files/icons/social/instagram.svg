@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xml:space="preserve"
+   style="enable-background:new 0 0 65 65;"
+   viewBox="0 0 65 65"
+   y="0px"
+   x="0px"
+   id="Layer_1"
+   version="1.1"><metadata
+   id="metadata1128"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs1126" />
+<style
+   id="style1111"
+   type="text/css">
+	.st0{fill:#671A1D;}
+</style>
+
+<g
+   id="g1164"><ellipse
+     style="fill:#ffffff;fill-opacity:1;stroke:#671a1d;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:3;stroke-opacity:1"
+     id="path1146"
+     cx="32.551868"
+     cy="32.556278"
+     rx="30.388954"
+     ry="29.956371" /><g
+     id="g1121"
+     style="fill:#671a1d;fill-opacity:1">
+	<path
+   class="st0"
+   d="M32.5,39c3.6,0,6.5-2.9,6.5-6.5c0-1.4-0.5-2.7-1.2-3.8c-1.2-1.6-3.1-2.7-5.3-2.7c-2.2,0-4.1,1.1-5.3,2.7   c-0.8,1.1-1.2,2.4-1.2,3.8C26,36.1,28.9,39,32.5,39L32.5,39z M32.5,39"
+   id="path1113"
+   style="fill:#671a1d;fill-opacity:1" />
+	<path
+   class="st0"
+   d="M46.7,24.5v-6.3h-0.8l-5.5,0l0,6.3L46.7,24.5z M46.7,24.5"
+   id="path1115"
+   style="fill:#671a1d;fill-opacity:1" />
+	<path
+   class="st0"
+   d="M32.5,0C14.6,0,0,14.6,0,32.5C0,50.4,14.6,65,32.5,65C50.4,65,65,50.4,65,32.5C65,14.6,50.4,0,32.5,0L32.5,0z    M51,28.7v15.1c0,3.9-3.2,7.1-7.1,7.1H21.2c-3.9,0-7.1-3.2-7.1-7.1V21.2c0-3.9,3.2-7.1,7.1-7.1h22.7c3.9,0,7.1,3.2,7.1,7.1V28.7z    M51,28.7"
+   id="path1117"
+   style="fill:#671a1d;fill-opacity:1" />
+	<path
+   class="st0"
+   d="M42.6,32.5c0,5.6-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.5-10.1-10.1c0-1.3,0.3-2.6,0.7-3.8h-5.5v15.1   c0,2,1.6,3.5,3.5,3.5h22.7c2,0,3.5-1.6,3.5-3.5V28.7h-5.5C42.3,29.9,42.6,31.2,42.6,32.5L42.6,32.5z M42.6,32.5"
+   id="path1119"
+   style="fill:#671a1d;fill-opacity:1" />
+</g></g></svg>

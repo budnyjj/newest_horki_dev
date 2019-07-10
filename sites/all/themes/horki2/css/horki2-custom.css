@@ -20,6 +20,7 @@
 
 .zone-header-banner {
     width: 100% !important;
+    overflow: hidden;
 }
 
 .region-header-banner {

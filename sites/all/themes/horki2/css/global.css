@@ -259,6 +259,11 @@ input[type="submit"]:active {
     right: 35px;
 }
 
+.block-block-62 img {
+    width: 20px;
+    margin: 15px;
+}
+
 /* mobile menu button block */
 .mobile-navigation-menu {
     display: none;
@@ -271,16 +276,26 @@ input[type="submit"]:active {
     right: -15px;
 }
 
+.mobile-menu-outer-wrapper {
+    max-width: 240px;
+}
+
+.mobile-menu-inner {
+    height: 100%;
+}
+
+.mobile-menu-body {
+    min-height: 605px;
+}
+
 .mobile-menu-item-text {
-    clear: both;
     list-style: none outside none;    
     margin: 0;
 }
 
 .mobile-menu-item-text a {
-    float: left;
-    padding: 10px 25px;
-    width: 90%;
+    display: block;
+    padding: 10px 30px;
     font-family: 'PTSans', sans-serif;
     font-weight: bold;
     letter-spacing: 0.05em;
@@ -294,16 +309,31 @@ input[type="submit"]:active {
     color: #AEAEAE;
 }
 
-.mobile-menu-item-text-delimiter a {
+.mobile-menu-item-text-first {
+    margin-top: 70px;
+}
+
+.mobile-menu-item-text-last {
+    margin-bottom: 20px;
+}
+
+.mobile-menu-item-text-delimiter {
     margin-bottom: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #4D4D4D;
 }
 
+.mobile-menu-container-icons {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 0 20px 30px;
+    width: 180px;
+}
+
 .mobile-menu-item-icon {
-    display: block;
-    float: left;
-    margin: 5px;
+    display: inline-block;
+    margin: 0 10px 10px 0;
 }
 
 .mobile-menu-item-icon a {
@@ -311,45 +341,36 @@ input[type="submit"]:active {
     height: 31px;
 }
 
-.mobile-menu-item-viber {
-    margin-left: 25px;
-}
-
 .mobile-menu-item-viber a {
-    content: url('/sites/default/files/icons/social/viber.png');
+    content: url('/sites/default/files/icons/social/viber.svg');
 } 
 
 .mobile-menu-item-instagram a {
-    content: url('/sites/default/files/icons/social/instagram.png');
+    content: url('/sites/default/files/icons/social/instagram.svg');
 }
 
 .mobile-menu-item-ok a {
-    content: url('/sites/default/files/icons/social/odnoklassniki.png');
+    content: url('/sites/default/files/icons/social/ok.svg');
 }
 
 .mobile-menu-item-vk a {
-    content: url('/sites/default/files/icons/social/vk.png');
-}
-
-.mobile-menu-item-twitter {
-    clear: left;
-    margin-left: 25px;
+    content: url('/sites/default/files/icons/social/vk.svg');
 }
 
 .mobile-menu-item-twitter a {
-    content: url('/sites/default/files/icons/social/twitter.png');
+    content: url('/sites/default/files/icons/social/twitter.svg');
 }
 
 .mobile-menu-item-facebook a {
-    content: url('/sites/default/files/icons/social/facebook.png');
+    content: url('/sites/default/files/icons/social/facebook.svg');
 }
 
 .mobile-menu-item-rss a {
-    content: url('/sites/default/files/icons/social/rss.png');
+    content: url('/sites/default/files/icons/social/rss.svg');
 }
 
 .mobile-menu-item-email a {
-    content: url('/sites/default/files/icons/social/mail.png');
+    content: url('/sites/default/files/icons/social/mail.svg');
 }
 
 
