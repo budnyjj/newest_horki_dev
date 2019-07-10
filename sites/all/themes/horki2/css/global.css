@@ -284,8 +284,12 @@ input[type="submit"]:active {
     height: 100%;
 }
 
-.mobile-menu-body {
+.block-menu-mobile-anonymous-mobile .mobile-menu-body {
     min-height: 605px;
+}
+
+.block-menu-mobile-registered-mobile .mobile-menu-body {
+    min-height: 640px;
 }
 
 .mobile-menu-item-text {
