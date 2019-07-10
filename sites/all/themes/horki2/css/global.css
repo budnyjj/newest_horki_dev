@@ -284,11 +284,11 @@ input[type="submit"]:active {
     height: 100%;
 }
 
-.block-menu-mobile-anonymous-mobile .mobile-menu-body {
+.menu-mobile-anonymous_mobile .mobile-menu-body {
     min-height: 605px;
 }
 
-.block-menu-mobile-registered-mobile .mobile-menu-body {
+.menu-mobile-registered_mobile .mobile-menu-body {
     min-height: 640px;
 }
 
