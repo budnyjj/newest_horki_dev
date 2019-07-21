@@ -786,18 +786,6 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['filters']['field_problem_status_tid']['expose']['identifier'] = 'field_problem_status_tid';
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
 
-  /* Display: Блок з мапай на старонцы праблемы */
-  $handler = $view->new_display('block', 'Блок з мапай на старонцы праблемы', 'block_1');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'openlayers_map';
-  $handler->display->display_options['style_options']['map'] = 'this_local_problem';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  $handler->display->display_options['block_description'] = 'Блок з мапай на старонцы мясцовай праблемы';
-
   /* Display: Абраная праблема */
   $handler = $view->new_display('openlayers', 'Абраная праблема', 'openlayers_this_problem');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -883,6 +871,19 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'local_problem' => 'local_problem',
   );
+
+  /* Display: Блок з мапай на старонцы праблемы */
+  $handler = $view->new_display('block', 'Блок з мапай на старонцы праблемы', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'openlayers_map';
+  $handler->display->display_options['style_options']['map'] = 'this_local_problem';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Блок з мапай на старонцы мясцовай праблемы';
+  $handler->display->display_options['block_caching'] = '4';
   $translatables['map_local_problems'] = array(
     t('Master'),
     t('Мапа праблем рэгіёна'),
@@ -900,10 +901,10 @@ function views_problems_map_and_overlays_views_default_views() {
 '),
     t('Нявырашаныя праблемы'),
     t('Статус праблемы (field_problem_status)'),
-    t('Блок з мапай на старонцы праблемы'),
-    t('Блок з мапай на старонцы мясцовай праблемы'),
     t('Абраная праблема'),
     t('Усе'),
+    t('Блок з мапай на старонцы праблемы'),
+    t('Блок з мапай на старонцы мясцовай праблемы'),
   );
   $export['map_local_problems'] = $view;
 
