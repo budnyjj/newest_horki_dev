@@ -806,8 +806,7 @@ function content_type_local_problem_field_default_field_instances() {
     'bundle' => 'local_problem',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Падрабязнае апісанне праблемы. Каб ўставіць відэа, выкарыстоўвайце код: 
-[VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]',
+    'description' => 'Падрабязнае апісанне праблемы.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -831,21 +830,18 @@ function content_type_local_problem_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'ads_text' => 0,
-          'anonymous_text' => 'anonymous_text',
+          'anonymous_text' => 0,
           'author_text' => 'author_text',
           'comment_text' => 0,
           'company_text' => 0,
+          'identified_text' => 'identified_text',
           'php_code' => 0,
-          'plain_text' => 'plain_text',
+          'plain_text' => 0,
         ),
         'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
-            'ads_text' => array(
-              'weight' => 0,
-            ),
             'anonymous_text' => array(
               'weight' => -8,
             ),
@@ -856,6 +852,9 @@ function content_type_local_problem_field_default_field_instances() {
               'weight' => 0,
             ),
             'company_text' => array(
+              'weight' => 0,
+            ),
+            'identified_text' => array(
               'weight' => 0,
             ),
             'php_code' => array(
@@ -1049,8 +1048,7 @@ function content_type_local_problem_field_default_field_instances() {
   t('Маркер');
   t('Месца');
   t('Падзяліцца');
-  t('Падрабязнае апісанне праблемы. Каб ўставіць відэа, выкарыстоўвайце код: 
-[VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]');
+  t('Падрабязнае апісанне праблемы.');
   t('Пакіньце ваш email, каб мы маглі з вамі звязацца і напісаць артыкул пра ўказаную вамі праблему або пракансультаваць, як яе можна вырашыць.
 <br>
 Ваш email не будзе бачны іншым карыстальнікам сайта.');

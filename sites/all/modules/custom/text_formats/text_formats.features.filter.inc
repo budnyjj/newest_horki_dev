@@ -11,58 +11,21 @@
 function text_formats_filter_default_formats() {
   $formats = array();
 
-  // Exported format: Ads text.
-  $formats['ads_text'] = array(
-    'format' => 'ads_text',
-    'name' => 'Ads text',
-    'cache' => 1,
-    'status' => 1,
-    'weight' => -6,
-    'filters' => array(
-      'filter_html' => array(
-        'weight' => 0,
-        'status' => 1,
-        'settings' => array(
-          'allowed_html' => '<a>, <p>',
-          'filter_html_help' => 0,
-          'filter_html_nofollow' => 1,
-        ),
-      ),
-      'filter_autop' => array(
-        'weight' => 1,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'filter_url' => array(
-        'weight' => 2,
-        'status' => 1,
-        'settings' => array(
-          'filter_url_length' => 72,
-        ),
-      ),
-      'filter_htmlcorrector' => array(
-        'weight' => 3,
-        'status' => 1,
-        'settings' => array(),
-      ),
-    ),
-  );
-
   // Exported format: Anonymous text.
   $formats['anonymous_text'] = array(
     'format' => 'anonymous_text',
     'name' => 'Anonymous text',
     'cache' => 1,
     'status' => 1,
-    'weight' => -9,
+    'weight' => 3,
     'filters' => array(
       'filter_autop' => array(
-        'weight' => 1,
+        'weight' => 0,
         'status' => 1,
         'settings' => array(),
       ),
       'htmlpurifier_basic' => array(
-        'weight' => 2,
+        'weight' => 1,
         'status' => 1,
         'settings' => array(
           'htmlpurifier_help' => 0,
@@ -83,7 +46,7 @@ function text_formats_filter_default_formats() {
         ),
       ),
       'picture' => array(
-        'weight' => 3,
+        'weight' => 2,
         'status' => 1,
         'settings' => array(),
       ),
@@ -96,7 +59,7 @@ function text_formats_filter_default_formats() {
     'name' => 'Author text',
     'cache' => 1,
     'status' => 1,
-    'weight' => -10,
+    'weight' => 1,
     'filters' => array(
       'video_embed_field' => array(
         'weight' => -41,
@@ -117,7 +80,7 @@ function text_formats_filter_default_formats() {
     'name' => 'Comment text',
     'cache' => 1,
     'status' => 1,
-    'weight' => -5,
+    'weight' => 2,
     'filters' => array(
       'filter_html' => array(
         'weight' => -10,
@@ -148,13 +111,64 @@ function text_formats_filter_default_formats() {
     ),
   );
 
+  // Exported format: Company text.
+  $formats['company_text'] = array(
+    'format' => 'company_text',
+    'name' => 'Company text',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => 0,
+    'filters' => array(
+      'filter_html' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(
+          'allowed_html' => '<a>, <p>',
+          'filter_html_help' => 0,
+          'filter_html_nofollow' => 0,
+        ),
+      ),
+      'filter_autop' => array(
+        'weight' => 1,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_htmlcorrector' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
+      ),
+    ),
+  );
+
+  // Exported format: Identified text.
+  $formats['identified_text'] = array(
+    'format' => 'identified_text',
+    'name' => 'Identified text',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => 2,
+    'filters' => array(
+      'video_embed_field' => array(
+        'weight' => 1,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'picture' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
+      ),
+    ),
+  );
+
   // Exported format: PHP code.
   $formats['php_code'] = array(
     'format' => 'php_code',
     'name' => 'PHP code',
     'cache' => 0,
     'status' => 1,
-    'weight' => 0,
+    'weight' => 5,
     'filters' => array(
       'php_code' => array(
         'weight' => 0,
@@ -175,7 +189,7 @@ function text_formats_filter_default_formats() {
     'name' => 'Plain text',
     'cache' => 1,
     'status' => 1,
-    'weight' => -3,
+    'weight' => 4,
     'filters' => array(
       'filter_html_escape' => array(
         'weight' => 0,

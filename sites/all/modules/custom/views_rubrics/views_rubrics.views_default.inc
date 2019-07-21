@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_rubrics.views_default.inc
@@ -100,7 +101,7 @@ function views_rubrics_views_default_views() {
       'text' => 0,
     ),
   );
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -127,7 +128,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Sort criterion: Змест: Sticky */
+  /* Sort criterion: Змест: Sticky status */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
@@ -163,7 +164,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['specify_validation'] = TRUE;
-  /* Filter criterion: Змест: Published or admin */
+  /* Filter criterion: Змест: Published status or admin user */
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['table'] = 'node';
   $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
@@ -237,6 +238,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_default_image']['alter']['text'] = '<a href="[path]">[field_default_image]</a>';
   $handler->display->display_options['fields']['field_default_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_default_image']['empty'] = '<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>';
   $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
@@ -253,7 +255,7 @@ function views_rubrics_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -297,7 +299,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Змест: Sticky */
+  /* Sort criterion: Змест: Sticky status */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
@@ -310,7 +312,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published or admin */
+  /* Filter criterion: Змест: Published status or admin user */
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['table'] = 'node';
   $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
@@ -324,6 +326,7 @@ function views_rubrics_views_default_views() {
     'afisha' => 'afisha',
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
+    'old_place' => 'old_place',
   );
   $handler->display->display_options['path'] = 'taxonomy/term/%';
   $translatables['rubrics'] = array(
@@ -355,6 +358,7 @@ function views_rubrics_views_default_views() {
     t('.'),
     t(' '),
     t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
+    t('<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>'),
     t('<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>

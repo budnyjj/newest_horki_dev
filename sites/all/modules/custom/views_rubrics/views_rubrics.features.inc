@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * views_rubrics.features.inc

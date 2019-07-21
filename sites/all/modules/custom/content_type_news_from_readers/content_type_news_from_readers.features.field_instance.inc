@@ -640,8 +640,7 @@ function content_type_news_from_readers_field_default_field_instances() {
     'bundle' => 'news_from_readers',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Асноўны змест навіны. Каб ўставіць відэа, выкарыстоўвайце код: 
- [VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]',
+    'description' => 'Асноўны змест навіны.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -684,11 +683,13 @@ function content_type_news_from_readers_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'anonymous_text' => 'anonymous_text',
+          'anonymous_text' => 0,
           'author_text' => 'author_text',
+          'comment_text' => 0,
+          'company_text' => 0,
+          'identified_text' => 'identified_text',
           'php_code' => 0,
-          'plain_text' => 'plain_text',
-          'user_text' => 'user_text',
+          'plain_text' => 0,
         ),
         'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
@@ -700,14 +701,20 @@ function content_type_news_from_readers_field_default_field_instances() {
             'author_text' => array(
               'weight' => -10,
             ),
+            'comment_text' => array(
+              'weight' => 2,
+            ),
+            'company_text' => array(
+              'weight' => 0,
+            ),
+            'identified_text' => array(
+              'weight' => 2,
+            ),
             'php_code' => array(
               'weight' => 11,
             ),
             'plain_text' => array(
               'weight' => -8,
-            ),
-            'user_text' => array(
-              'weight' => -9,
             ),
           ),
         ),
@@ -720,6 +727,12 @@ function content_type_news_from_readers_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_label_summary' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_summary' => '',
+        'maxlength_js_truncate_html' => 0,
         'rows' => 20,
         'summary_rows' => 5,
       ),
@@ -862,8 +875,7 @@ function content_type_news_from_readers_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('E-mail');
-  t('Асноўны змест навіны. Каб ўставіць відэа, выкарыстоўвайце код: 
- [VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]');
+  t('Асноўны змест навіны.');
   t('Аўтар');
   t('Ваш e-mail не будзе даступны іншым карыстальнікам сайта.');
   t('Ваша імя. Яно будзе бачна іншым карыстальнікам сайта.');

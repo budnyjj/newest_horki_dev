@@ -1,7 +1,7 @@
 name = Openlayers: local problems map
 core = 7.x
 package = Custom
-version = 7.x-1.8
+version = 7.x-1.10
 project = openlayers_local_problems_map
 dependencies[] = ctools
 dependencies[] = openlayers
@@ -16,4 +16,5 @@ features[openlayers_maps][] = geofield_local_problems
 features[openlayers_maps][] = local_problems
 features[openlayers_maps][] = this_local_problem
 features[openlayers_styles][] = marker_local_problem_status
+features[openlayers_styles][] = marker_local_problem_status_active
 features[openlayers_styles][] = marker_not_dared_problem_status

@@ -427,8 +427,7 @@ function content_type_local_solution_field_default_field_instances() {
     'bundle' => 'local_solution',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Асноўны змест. Каб ўставіць відэа, выкарыстоўвайце код: 
-[VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]',
+    'description' => 'Асноўны змест.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -452,11 +451,11 @@ function content_type_local_solution_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'ads_text' => 0,
           'anonymous_text' => 0,
           'author_text' => 'author_text',
           'comment_text' => 0,
           'company_text' => 0,
+          'identified_text' => 0,
           'php_code' => 0,
           'plain_text' => 0,
         ),
@@ -464,9 +463,6 @@ function content_type_local_solution_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
-            'ads_text' => array(
-              'weight' => 0,
-            ),
             'anonymous_text' => array(
               'weight' => -8,
             ),
@@ -478,6 +474,9 @@ function content_type_local_solution_field_default_field_instances() {
             ),
             'company_text' => array(
               'weight' => 0,
+            ),
+            'identified_text' => array(
+              'weight' => 2,
             ),
             'php_code' => array(
               'weight' => -6,
@@ -512,8 +511,7 @@ function content_type_local_solution_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Асноўны змест. Каб ўставіць відэа, выкарыстоўвайце код: 
-[VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]');
+  t('Асноўны змест.');
   t('Афіцыйныя дакументы');
   t('Галоўны фотаздымак');
   t('Гэты малюнак будзе паказвацца ў спісе рашэнняў праблем');

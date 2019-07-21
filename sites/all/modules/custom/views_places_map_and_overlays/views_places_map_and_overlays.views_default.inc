@@ -1,0 +1,809 @@
+<?php
+
+/**
+ * @file
+ * views_places_map_and_overlays.views_default.inc
+ */
+
+/**
+ * Implements hook_views_default_views().
+ */
+function views_places_map_and_overlays_views_default_views() {
+  $export = array();
+
+  $view = new view();
+  $view->name = 'map_old_places';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Мапа старых месцаў';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Старыя месцы';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'болей';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '-1';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '-1';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Прымяніць';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'openlayers_map';
+  $handler->display->display_options['style_options']['map'] = 'old_places';
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Sort criterion: Змест: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Змест: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'old_place' => 'old_place',
+  );
+
+  /* Display: Мапа */
+  $handler = $view->new_display('page', 'Мапа', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Мапа старых вуліц горада Горкі';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'page-map-old-places';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'openlayers_map';
+  $handler->display->display_options['style_options']['map'] = 'old_places';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['metatags'] = array(
+    'und' => array(
+      'title' => array(
+        'value' => 'Карта старых улиц и памятников города Горки | [site:name]',
+        'default' => '[view:title] | [site:name]',
+      ),
+      'description' => array(
+        'value' => 'Исторические названия улиц и памятников города Горки на карте.',
+        'default' => '[view:description]',
+      ),
+      'abstract' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'keywords' => array(
+        'value' => 'Горки, исторические названия улиц, старые улицы Горок',
+        'default' => '',
+      ),
+      'robots' => array(
+        'value' => array(
+          'index' => 0,
+          'follow' => 0,
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+          'noimageindex' => 0,
+          'notranslate' => 0,
+        ),
+        'default' => array(),
+      ),
+      'news_keywords' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'standout' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rating' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'referrer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rights' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'image_src' => array(
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
+      ),
+      'canonical' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'set_cookie' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'shortlink' => array(
+        'value' => '',
+        'default' => '[current-page:url:unaliased]',
+      ),
+      'original-source' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'prev' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'next' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'content-language' => array(
+        'value' => '',
+        'default' => 'ru',
+      ),
+      'geo.position' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.placename' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'icbm' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'refresh' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'revisit-after' => array(
+        'value' => '',
+        'period' => '',
+        'default' => '',
+      ),
+      'pragma' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'cache-control' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'expires' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:admins' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:app_id' => array(
+        'value' => '1404750383092736',
+        'default' => '1404750383092736',
+      ),
+      'fb:pages' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:type' => array(
+        'value' => 'website',
+        'default' => 'website',
+      ),
+      'og:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'og:title' => array(
+        'value' => 'Карта старых улиц и памятников города Горки',
+        'default' => '[view:title]',
+      ),
+      'og:determiner' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:description' => array(
+        'value' => 'Исторические названия улиц и памятников города Горки на карте.',
+        'default' => '',
+      ),
+      'og:updated_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:see_also' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image' => array(
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
+      ),
+      'og:image:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:type' => array(
+        'value' => 'image/png',
+        'default' => 'image/png',
+      ),
+      'og:image:width' => array(
+        'value' => '968',
+        'default' => '968',
+      ),
+      'og:image:height' => array(
+        'value' => '504',
+        'default' => '504',
+      ),
+      'og:latitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:longitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:street_address' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locality' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:postal_code' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:country_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:email' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:phone_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:fax_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locale' => array(
+        'value' => 'ru_RU',
+        'default' => 'ru_RU',
+      ),
+      'og:locale:alternate' => array(
+        'value' => 'be_BY',
+        'default' => 'be_BY',
+      ),
+      'article:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:publisher' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:section' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:published_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:modified_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:expiration_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:first_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:last_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:username' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:gender' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:isbn' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor:role' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:director' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:writer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:duration' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:series' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:card' => array(
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
+      ),
+      'twitter:creator' => array(
+        'value' => '@horki_info',
+        'default' => '@horki_info',
+      ),
+      'twitter:creator:id' => array(
+        'value' => '120533731',
+        'default' => '120533731',
+      ),
+      'twitter:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'twitter:title' => array(
+        'value' => 'Карта старых улиц и памятников города Горки',
+        'default' => '[view:title]',
+      ),
+      'twitter:description' => array(
+        'value' => 'Исторические названия улиц и памятников города Горки на карте.',
+        'default' => '',
+      ),
+      'twitter:dnt' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image' => array(
+        'value' => '/sites/default/files//social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
+      ),
+      'twitter:image:width' => array(
+        'value' => '968',
+        'default' => '968',
+      ),
+      'twitter:image:height' => array(
+        'value' => '504',
+        'default' => '504',
+      ),
+      'twitter:image:alt' => array(
+        'value' => 'Карта старых улиц и памятников города Горки',
+        'default' => '[current-page:title]',
+      ),
+      'twitter:image0' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image3' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream:content_type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:country' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['path'] = 'places/map.html';
+
+  /* Display: Старыя месцы */
+  $handler = $view->new_display('openlayers', 'Старыя месцы', 'openlayers_old_places');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'openlayers_data';
+  $handler->display->display_options['style_options']['data_source'] = array(
+    'value' => 'wkt',
+    'other_lat' => 'title',
+    'other_lon' => 'title',
+    'wkt' => 'field_place_map',
+    'other_top' => 'title',
+    'other_right' => 'title',
+    'other_bottom' => 'title',
+    'other_left' => 'title',
+    'name_field' => 'title',
+    'description_field' => '',
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Поле: Змест: Мапа */
+  $handler->display->display_options['fields']['field_place_map']['id'] = 'field_place_map';
+  $handler->display->display_options['fields']['field_place_map']['table'] = 'field_data_field_place_map';
+  $handler->display->display_options['fields']['field_place_map']['field'] = 'field_place_map';
+  $handler->display->display_options['fields']['field_place_map']['click_sort_column'] = 'geom';
+  $handler->display->display_options['fields']['field_place_map']['settings'] = array(
+    'data' => 'full',
+  );
+
+  /* Display: Абранае месца */
+  $handler = $view->new_display('openlayers', 'Абранае месца', 'openlayers_this_old_place');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Абранае месца';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'openlayers_data';
+  $handler->display->display_options['style_options']['data_source'] = array(
+    'value' => 'wkt',
+    'other_lat' => 'field_place_map',
+    'other_lon' => 'field_place_map',
+    'wkt' => 'field_place_map',
+    'other_top' => 'field_place_map',
+    'other_right' => 'field_place_map',
+    'other_bottom' => 'field_place_map',
+    'other_left' => 'field_place_map',
+    'name_field' => '',
+    'description_field' => '',
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Мапа */
+  $handler->display->display_options['fields']['field_place_map']['id'] = 'field_place_map';
+  $handler->display->display_options['fields']['field_place_map']['table'] = 'field_data_field_place_map';
+  $handler->display->display_options['fields']['field_place_map']['field'] = 'field_place_map';
+  $handler->display->display_options['fields']['field_place_map']['click_sort_column'] = 'geom';
+  $handler->display->display_options['fields']['field_place_map']['settings'] = array(
+    'data' => 'full',
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Змест: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Усе';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Блок з мапай на старонцы месца */
+  $handler = $view->new_display('block', 'Блок з мапай на старонцы месца', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Блок з мапай на старонцы месца';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'openlayers_map';
+  $handler->display->display_options['style_options']['map'] = 'this_old_place';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Блок з мапай на старонцы месца';
+  $translatables['map_old_places'] = array(
+    t('Master'),
+    t('Старыя месцы'),
+    t('болей'),
+    t('Прымяніць'),
+    t('Скінуць'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Мапа'),
+    t('Мапа старых вуліц горада Горкі'),
+    t('Абранае месца'),
+    t('Усе'),
+    t('Блок з мапай на старонцы месца'),
+  );
+  $export['map_old_places'] = $view;
+
+  $view = new view();
+  $view->name = 'old_places';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Старыя месцы';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Апошнія месцы';
+  $handler->display->display_options['css_class'] = 'block-old-places';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'болей';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Прымяніць';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Ніжні калантытул: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="button-black"><a href="/places/map.html">Усе месцы</a></div>';
+  $handler->display->display_options['footer']['area']['format'] = 'author_text';
+  /* Relationship: Змест: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'old_place_types' => 'old_place_types',
+    'company_catalog' => 0,
+    'places' => 0,
+    'ads_placement' => 0,
+    'rubrics' => 0,
+    'local_problem_status' => 0,
+    'ads_types' => 0,
+    'tags' => 0,
+    'ads_topics' => 0,
+  );
+  /* Поле: Тэрмін таксаноміі: Маркер */
+  $handler->display->display_options['fields']['field_taxonomy_pic']['id'] = 'field_taxonomy_pic';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['table'] = 'field_data_field_taxonomy_pic';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['field'] = 'field_taxonomy_pic';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['label'] = '';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_taxonomy_pic']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_taxonomy_pic']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Sort criterion: Змест: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Змест: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'old_place' => 'old_place',
+  );
+
+  /* Display: Блок */
+  $handler = $view->new_display('block', 'Блок', 'block');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-old-places';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['block_description'] = 'Апошнія месцы';
+  $handler->display->display_options['block_caching'] = '8';
+  $translatables['old_places'] = array(
+    t('Master'),
+    t('Апошнія месцы'),
+    t('болей'),
+    t('Прымяніць'),
+    t('Скінуць'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<div class="button-black"><a href="/places/map.html">Усе месцы</a></div>'),
+    t('тэрмін'),
+    t('Блок'),
+  );
+  $export['old_places'] = $view;
+
+  return $export;
+}

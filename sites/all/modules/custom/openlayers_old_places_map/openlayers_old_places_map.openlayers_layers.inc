@@ -2,21 +2,21 @@
 
 /**
  * @file
- * openlayers_local_problems_map.openlayers_layers.inc
+ * openlayers_old_places_map.openlayers_layers.inc
  */
 
 /**
  * Implements hook_openlayers_layers().
  */
-function openlayers_local_problems_map_openlayers_layers() {
+function openlayers_old_places_map_openlayers_layers() {
   $export = array();
 
   $openlayers_layers = new stdClass();
   $openlayers_layers->disabled = FALSE; /* Edit this to true to make a default openlayers_layers disabled initially */
   $openlayers_layers->api_version = 1;
-  $openlayers_layers->name = 'map_local_problems';
-  $openlayers_layers->title = 'Мапа мясцовых праблем';
-  $openlayers_layers->description = 'Базавая мапа мясцовых праблем';
+  $openlayers_layers->name = 'map_old_places';
+  $openlayers_layers->title = 'Мапа старых месцаў';
+  $openlayers_layers->description = 'Базавая мапа старых вуліц';
   $openlayers_layers->data = array(
     'url' => array(
       0 => '//a.tile.openstreetmap.org/${z}/${x}/${y}.png',
@@ -46,18 +46,15 @@ function openlayers_local_problems_map_openlayers_layers() {
       21 => 0.074645535424352,
     ),
     'resolutions' => array(
-      0 => 152.87405654297,
-      1 => 76.437028271484,
-      2 => 38.218514135742,
-      3 => 19.109257067871,
-      4 => 9.5546285339355,
-      5 => 4.7773142669678,
-      6 => 2.3886571334839,
-      7 => 1.1943285667419,
-      8 => 0.59716428337097,
-      9 => 0.29858214169741,
-      10 => 0.1492910708487,
-      11 => 0.074645535424352,
+      0 => 19.109257067871,
+      1 => 9.5546285339355,
+      2 => 4.7773142669678,
+      3 => 2.3886571334839,
+      4 => 1.1943285667419,
+      5 => 0.59716428337097,
+      6 => 0.29858214169741,
+      7 => 0.1492910708487,
+      8 => 0.074645535424352,
     ),
     'zoomOffset' => 0,
     'wrapDateLine' => 1,
@@ -72,14 +69,14 @@ function openlayers_local_problems_map_openlayers_layers() {
     'transitionEffect' => 'resize',
     'weight' => 0,
   );
-  $export['map_local_problems'] = $openlayers_layers;
+  $export['map_old_places'] = $openlayers_layers;
 
   $openlayers_layers = new stdClass();
   $openlayers_layers->disabled = FALSE; /* Edit this to true to make a default openlayers_layers disabled initially */
   $openlayers_layers->api_version = 1;
-  $openlayers_layers->name = 'map_this_local_problem';
-  $openlayers_layers->title = 'Мапа для абранай мясцовай праблемы';
-  $openlayers_layers->description = 'Мапа для абранай мясцовай праблемы';
+  $openlayers_layers->name = 'map_this_old_place';
+  $openlayers_layers->title = 'Мапа для абранага старога месца';
+  $openlayers_layers->description = 'Мапа для абранага старога месца';
   $openlayers_layers->data = array(
     'url' => array(
       0 => '//a.tile.openstreetmap.org/${z}/${x}/${y}.png',
@@ -111,6 +108,12 @@ function openlayers_local_problems_map_openlayers_layers() {
     'resolutions' => array(
       0 => 9.5546285339355,
       1 => 4.7773142669678,
+      2 => 2.3886571334839,
+      3 => 1.1943285667419,
+      4 => 0.59716428337097,
+      5 => 0.29858214169741,
+      6 => 0.1492910708487,
+      7 => 0.074645535424352,
     ),
     'zoomOffset' => 0,
     'wrapDateLine' => 1,
@@ -125,7 +128,7 @@ function openlayers_local_problems_map_openlayers_layers() {
     'transitionEffect' => 'resize',
     'weight' => 0,
   );
-  $export['map_this_local_problem'] = $openlayers_layers;
+  $export['map_this_old_place'] = $openlayers_layers;
 
   return $export;
 }

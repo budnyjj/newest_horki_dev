@@ -69,7 +69,7 @@ function views_problems_map_and_overlays_views_default_views() {
   /* Display: Мапа */
   $handler = $view->new_display('page', 'Мапа', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Мапа праблем горада Горкі';
+  $handler->display->display_options['title'] = 'Мапа праблем рэгіёна';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-map-local-problems';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -86,11 +86,11 @@ function views_problems_map_and_overlays_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Горки: найдем и решим проблемы города вместе | [site:name]',
+        'value' => 'Карта проблем Горок, Дрибина и Мстилсавля | [site:name]',
         'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
-        'value' => 'Сервис по поиску и решению проблем в городе Горки.',
+        'value' => 'Сервис по поиску и решению проблем в Горках, Дрибине, Мстиславле, а также в Горецком Дрибинсокм и Мстиславльском районах.',
         'default' => '[view:description]',
       ),
       'abstract' => array(
@@ -98,7 +98,7 @@ function views_problems_map_and_overlays_views_default_views() {
         'default' => '',
       ),
       'keywords' => array(
-        'value' => 'Горки, проблемы, решения',
+        'value' => 'Горки, Дрибин, Мстиславль, проблемы, решения',
         'default' => '',
       ),
       'robots' => array(
@@ -138,7 +138,7 @@ function views_problems_map_and_overlays_views_default_views() {
       ),
       'image_src' => array(
         'value' => '/sites/default/files//social_preview/default.png',
-        'default' => '/sites/default/files//social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
       ),
       'canonical' => array(
         'value' => '[view:url]',
@@ -226,7 +226,7 @@ function views_problems_map_and_overlays_views_default_views() {
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Горки: найдем и решим проблемы города вместе',
+        'value' => 'Карта проблем Горок, Дрибина и Мстилсавля',
         'default' => '[view:title]',
       ),
       'og:determiner' => array(
@@ -234,7 +234,7 @@ function views_problems_map_and_overlays_views_default_views() {
         'default' => '',
       ),
       'og:description' => array(
-        'value' => 'Сервис по поиску и решению проблем в городе Горки.',
+        'value' => 'Сервис по поиску и решению проблем в Горках, Дрибине, Мстиславле, а также в Горецком Дрибинсокм и Мстиславльском районах.',
         'default' => '',
       ),
       'og:updated_time' => array(
@@ -247,7 +247,7 @@ function views_problems_map_and_overlays_views_default_views() {
       ),
       'og:image' => array(
         'value' => '/sites/default/files//social_preview/default.png',
-        'default' => '/sites/default/files//social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
       ),
       'og:image:url' => array(
         'value' => '',
@@ -458,11 +458,11 @@ function views_problems_map_and_overlays_views_default_views() {
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Горки: найдем и решим проблемы города вместе',
+        'value' => 'Карта проблем Горок, Дрибина и Мстилсавля',
         'default' => '[view:title]',
       ),
       'twitter:description' => array(
-        'value' => 'Сервис по поиску и решению проблем в городе Горки.',
+        'value' => 'Сервис по поиску и решению проблем в Горках, Дрибине, Мстиславле, а также в Горецком Дрибинсокм и Мстиславльском районах.',
         'default' => '',
       ),
       'twitter:dnt' => array(
@@ -471,7 +471,7 @@ function views_problems_map_and_overlays_views_default_views() {
       ),
       'twitter:image' => array(
         'value' => '/sites/default/files//social_preview/default.png',
-        'default' => '/sites/default/files//social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
       ),
       'twitter:image:width' => array(
         'value' => '968',
@@ -893,7 +893,6 @@ function views_problems_map_and_overlays_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Мапа'),
-    t('Мапа праблем горада Горкі'),
     t('Вырашаныя праблемы'),
     t('term from field_problem_status'),
     t('<div class="white-text bold-text">[title]</div>'),
