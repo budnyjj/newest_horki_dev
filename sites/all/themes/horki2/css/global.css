@@ -1555,97 +1555,97 @@ ul.tabs li.active a {
     margin-bottom: 20px;
 }
 
-.view-old-streets polyline {
+.view-map-old-places polyline {
     stroke-width: 8px !important;
 }
 
-.view-old-streets polyline:nth-child(1) {
-    stroke: rgb(0, 0, 0) !important;
-}
-
-.view-old-streets polyline:nth-child(2) {
+.view-map-old-places polyline:nth-child(1) {
     stroke: rgb(66, 134, 244) !important;
 }
 
-.view-old-streets polyline:nth-child(3) {
+.view-map-old-places polyline:nth-child(2) {
+    stroke: rgb(0, 0, 0) !important;
+}
+
+.view-map-old-places polyline:nth-child(3) {
     stroke: rgb(155, 244, 65) !important;
 }
 
-.view-old-streets polyline:nth-child(4) {
+.view-map-old-places polyline:nth-child(4) {
     stroke: rgb(244, 205, 65) !important;
 }
 
-.view-old-streets polyline:nth-child(5) {
+.view-map-old-places polyline:nth-child(5) {
     stroke: rgb(244, 133, 65) !important;
 }
 
-.view-old-streets polyline:nth-child(6) {
+.view-map-old-places polyline:nth-child(6) {
     stroke: rgb(244, 91, 65) !important;
 }
 
-.view-old-streets polyline:nth-child(7) {
+.view-map-old-places polyline:nth-child(7) {
     stroke: rgb(163, 25, 1) !important;
 }
 
-.view-old-streets polyline:nth-child(8) {
+.view-map-old-places polyline:nth-child(8) {
     stroke: rgb(79, 162, 0) !important;
 }
 
-.view-old-streets polyline:nth-child(9) {
+.view-map-old-places polyline:nth-child(9) {
     stroke: rgb(0, 153, 161) !important;
 }
 
-.view-old-streets polyline:nth-child(10) {
+.view-map-old-places polyline:nth-child(10) {
     stroke: rgb(63, 14, 62) !important;
 }
 
-.view-old-streets polyline:nth-child(11) {
+.view-map-old-places polyline:nth-child(11) {
     stroke: rgb(100, 0, 160) !important;
 
 }
 
-.view-old-streets polyline:nth-child(12){
+.view-map-old-places polyline:nth-child(12){
     stroke: rgb(70, 162, 0) !important;
 }
 
-.view-old-streets polyline:nth-child(13){
+.view-map-old-places polyline:nth-child(13){
     stroke: rgb(244, 66, 241) !important;
 }
 
 /* last objects block */
-.block-latest-objects-block {
+.block-old-places-block {
     margin-bottom: 20px;
 }
 
-.block-latest-objects-block .block-inner {
+.block-old-places-block .block-inner {
     border: 1px solid #DBDBDB;
     padding: 20px;
 }
 
-.block-latest-objects .view-content {
+.block-old-places .view-content {
     margin-bottom: 25px;
 }
 
-.block-latest-objects .views-row {
+.block-old-places .views-row {
     margin-bottom: 10px;
 }
 
-.block-latest-objects .views-field-field-taxonomy-pic {
+.block-old-places .views-field-field-taxonomy-pic {
     margin-right: 10px;
 }
 
-.block-latest-objects .views-field-title {
+.block-old-places .views-field-title {
     width: 75%;
     min-width: 200px;
 }
 
-.block-latest-objects .views-field-field-taxonomy-pic,
-.block-latest-objects .views-field-title {
+.block-old-places .views-field-field-taxonomy-pic,
+.block-old-places .views-field-title {
     display: inline-block;
     vertical-align: middle;
 }
 
-.block-latest-objects .views-field-title a {
+.block-old-places .views-field-title a {
     font-size: 1.05em;
     letter-spacing: 0.01em;
     color: #000000;
@@ -2369,6 +2369,12 @@ ul.tabs li.active a {
 .node-ads .group-info .field-label-above .field-items {
     display: inline-block;
     vertical-align: top;
+}
+
+/* old place node */
+.node .field-name-field-this-place-on-map {
+    margin-top: 30px;
+    margin-bottom: 35px;
 }
 
 /* similar ads block */
