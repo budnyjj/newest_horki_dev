@@ -285,11 +285,11 @@ input[type="submit"]:active {
 }
 
 .menu-mobile-anonymous_mobile .mobile-menu-body {
-    min-height: 605px;
+    min-height: 640px;
 }
 
 .menu-mobile-registered_mobile .mobile-menu-body {
-    min-height: 640px;
+    min-height: 680px;
 }
 
 .mobile-menu-item-text {
