@@ -165,11 +165,6 @@ input[type="submit"]:active {
     margin-left: 2px;
 }
 
-/* back-to-top button */
-#back-top a {
-    display: none;
-}
-
 
 /*
  * General Header Banner styles
