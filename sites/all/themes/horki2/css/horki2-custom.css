@@ -23,6 +23,10 @@
     margin: 0 !important;
 }
 
+.block-40 .content {
+    min-height: 120px;
+}
+
 
 /*
  * General Header styles

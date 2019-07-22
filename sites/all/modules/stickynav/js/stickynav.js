@@ -13,8 +13,7 @@
           setTimeout(function() {
             Drupal.behaviors.stickynav.originalPadding = $('body').css('paddingTop');
           }, 0);
-          // add 120px of banner on top of the page
-          Drupal.behaviors.stickynav.breakpoint = $menu.offset().top + 120;
+          Drupal.behaviors.stickynav.breakpoint = $menu.offset().top;
           // we need to compensate the element so that the content does not jump up.
           Drupal.behaviors.stickynav.compensation = $menu.outerHeight();
           $(window).scroll(function () {
