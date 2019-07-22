@@ -142,6 +142,16 @@
     margin-bottom: 0;
 }
 
+
+/**
+ * Custom inner Views styles
+ */
+
+/* companies page */
+.page-companies .views-exposed-form .views-widget-filter-combine {
+    width: 510px;
+}
+
 /**
  * Common inner nodes styles
  */

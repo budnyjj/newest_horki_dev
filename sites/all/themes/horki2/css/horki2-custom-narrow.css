@@ -80,6 +80,16 @@
 
 
 /**
+ * Custom Inner views styles
+ */
+
+/* companies page */
+.page-companies .views-exposed-form .views-widget-filter-combine {
+    width: 205px;
+}
+
+
+/**
  * Common Inner nodes styles
  */
 
