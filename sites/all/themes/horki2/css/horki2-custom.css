@@ -762,10 +762,11 @@
 }
 
 .block-davedka .quicktabs-tabs {
-    margin-top: 5px;    
+    width: 290px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.block-davedka .view-daviedka {
-    width: 894px;
-    margin: 0 auto;
+.block-davedka .view-daviedka .views-row-last {
+    margin-right: 0;
 }

@@ -108,4 +108,17 @@
 }
 
 
+/** 
+ * Custom node styles
+ */
 
+/* davedka block */
+.block-davedka .view-daviedka .views-row {
+    width: 124px;
+    height: 190px;
+}
+
+.block-davedka .views-field-field-pics img {
+    width: 124px;
+    height: 124px;
+}
