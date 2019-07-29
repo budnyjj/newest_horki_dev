@@ -4,6 +4,10 @@
  * General styles
  */
 
+body {
+    margin-top: 0px;
+}
+
 
 /*
  * General Header Banner styles
@@ -44,7 +48,6 @@
 .zone-header {
     background-color: inherit;
 }
-
 
 /* login blocks */
 .block-15,
@@ -237,6 +240,11 @@
     display: none;
 }
 
+/* admin menu */
+html body.admin-menu {
+    margin-top: 29px !important;
+}
+
 /* mobile menu button block */
 .mobile-navigation-menu {
     display: block;
@@ -255,12 +263,18 @@
  * General Menu styles
  */
 
+html body.admin-menu .stickynav-active {
+    top: 29px;
+    z-index: 998;
+}
+
 .zone-menu-wrapper {
-    height: auto;
+    display: block;
     background-color: #231F20;
 }
 
-.main-menu {    
+.main-menu {
+    height: auto;
     text-align: center;
 }
 
@@ -324,17 +338,17 @@
 
 /* media grid block */
 .block-media-grid .views-row {
-    width: 272px;
+    width: 282px;
     float: left;
     margin: 0 24px 35px 0;
 }
 
-.view-id-similarterms .views-row-4 {
-	clear: both;
+.block-media-grid .views-row:nth-of-type(3n) {
+    margin: 0 0 35px 0;
 }
 
-.block-media-grid .views-row-last {
-    margin: 0 0 35px 0;
+.block-media-grid .views-row:nth-of-type(3n+1) {
+    clear: both;
 }
 
 /* media grid page */
