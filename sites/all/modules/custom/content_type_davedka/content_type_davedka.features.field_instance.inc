@@ -210,12 +210,12 @@ function content_type_davedka_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_pics',
     'label' => 'Iлюстрацыя',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
       'file_directory' => 'guide',
-      'file_extensions' => 'png gif jpg jpeg',
+      'file_extensions' => 'png gif jpg jpeg svg',
       'filefield_paths' => array(
         'active_updating' => 0,
         'file_name' => array(
@@ -248,12 +248,12 @@ function content_type_davedka_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'insert' => 1,
+        'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
         'insert_default' => 'auto',
         'insert_styles' => array(
-          'auto' => 'auto',
+          'auto' => 0,
           'colorbox__article_breakpoints_theme_horki2_desktop_narrow_1x' => 0,
           'colorbox__article_breakpoints_theme_horki2_desktop_normal_1x' => 0,
           'colorbox__article_breakpoints_theme_horki2_mobile_narrow_1x' => 0,
@@ -337,7 +337,7 @@ function content_type_davedka_field_default_field_instances() {
           'link' => 0,
         ),
         'insert_width' => '',
-        'preview_image_style' => 'thumbnail',
+        'preview_image_style' => '',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',

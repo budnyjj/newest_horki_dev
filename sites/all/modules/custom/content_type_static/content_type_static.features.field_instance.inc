@@ -38,14 +38,15 @@ function content_type_static_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Змест',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'ads_text' => 0,
           'anonymous_text' => 0,
           'author_text' => 'author_text',
           'comment_text' => 0,
+          'company_text' => 0,
+          'identified_text' => 0,
           'php_code' => 'php_code',
           'plain_text' => 0,
         ),
@@ -53,9 +54,6 @@ function content_type_static_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
-            'ads_text' => array(
-              'weight' => -6,
-            ),
             'anonymous_text' => array(
               'weight' => -8,
             ),
@@ -64,6 +62,12 @@ function content_type_static_field_default_field_instances() {
             ),
             'comment_text' => array(
               'weight' => -5,
+            ),
+            'company_text' => array(
+              'weight' => 0,
+            ),
+            'identified_text' => array(
+              'weight' => 2,
             ),
             'php_code' => array(
               'weight' => -6,
@@ -93,6 +97,42 @@ function content_type_static_field_default_field_instances() {
       ),
       'type' => 'text_textarea_with_summary',
       'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-static-field_add_this'.
+  $field_instances['node-static-field_add_this'] = array(
+    'bundle' => 'static',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'addthis_displays',
+        'settings' => array(
+          'buttons_size' => 'addthis_32x32_style',
+          'counter_orientation' => 'vertical',
+          'extra_css' => '',
+          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
+        ),
+        'type' => 'addthis_basic_toolbox',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_add_this',
+    'label' => 'Падзяліцца',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'addthis',
+      'settings' => array(),
+      'type' => 'addthis_button_widget',
+      'weight' => 42,
     ),
   );
 
@@ -177,6 +217,7 @@ function content_type_static_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('PDF');
   t('Змест');
+  t('Падзяліцца');
 
   return $field_instances;
 }
