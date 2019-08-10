@@ -29,7 +29,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '300';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -72,7 +72,7 @@ function views_news_lists_views_default_views() {
   );
 
   /* Display: Афіша */
-  $handler = $view->new_display('page', 'Афіша', 'page_7');
+  $handler = $view->new_display('page', 'Афіша', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
@@ -152,7 +152,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['alter']['text'] = '[field_placement_by_taxonomy] ';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['delta_offset'] = '0';
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -781,9 +781,9 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan'] = '3600';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -834,7 +834,7 @@ function views_news_lists_views_default_views() {
       'text' => 0,
     ),
   );
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -931,7 +931,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = ' ';
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1555,7 +1555,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '300';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -1573,7 +1573,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['header']['area']['label'] = 'Фотаблог';
   $handler->display->display_options['header']['area']['content'] = '<a href="/photo.html">ФОТАБЛОГ</a>';
   $handler->display->display_options['header']['area']['format'] = 'author_text';
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1619,12 +1619,6 @@ function views_news_lists_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'block-preview';
-  $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '300';
-  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '1800';
-  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
@@ -1635,7 +1629,7 @@ function views_news_lists_views_default_views() {
     'main_news' => 'main_news',
   );
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -1693,7 +1687,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Старонка */
-  $handler = $view->new_display('page', 'Старонка', 'page_1');
+  $handler = $view->new_display('page', 'Старонка', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
@@ -1742,7 +1736,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = ' ';
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -2343,7 +2337,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '300';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -2445,7 +2439,7 @@ function views_news_lists_views_default_views() {
     'image_style' => 'mediagrid_breakpoints_theme_horki2_desktop_normal_1x',
     'image_link' => 'content',
   );
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -2514,7 +2508,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Старонка */
-  $handler = $view->new_display('page', 'Старонка', 'page_1');
+  $handler = $view->new_display('page', 'Старонка', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
@@ -2577,7 +2571,7 @@ function views_news_lists_views_default_views() {
     'image_style' => 'mediagrid_breakpoints_theme_horki2_mobile_normal_1x',
     'image_link' => 'content',
   );
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';

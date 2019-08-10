@@ -11,6 +11,10 @@
  * for more information on this topic.
  */
 
+function startsWith($source, $string) {
+  return strncmp($source, $string, strlen($string)) === 0;
+}
+
 function horki2_preprocess_views_exposed_form(&$vars, $hook) {
   // only alter the required form based on id
   if ($vars['form']['#id'] == 'views-exposed-form-blocks-page-1') {
@@ -96,10 +100,9 @@ function horki2_preprocess_node(&$variables) {
   }
 }
 
-function startsWith($source, $string) {
-  return strncmp($source, $string, strlen($string)) === 0;
-}
-
+/**
+ * Hides menu titles which start from "Icon" text.
+ */
 function horki2_menu_link(&$vars) {
   $element = $vars['element'];
   $sub_menu = '';

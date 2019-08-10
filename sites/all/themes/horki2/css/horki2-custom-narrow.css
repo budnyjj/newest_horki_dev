@@ -56,8 +56,19 @@
 
 
 /**
- * General Preview styles
+ * General Views styles
  */
+
+/* static grid page */
+.page-static-grid .views-row {
+    width: 124px;
+    height: 190px;
+}
+
+.page-static-grid .static-pic img {
+    width: 124px;
+    height: 124px;
+}
 
 
 /**
@@ -112,13 +123,3 @@
  * Custom node styles
  */
 
-/* davedka block */
-.block-davedka .view-daviedka .views-row {
-    width: 124px;
-    height: 190px;
-}
-
-.block-davedka .views-field-field-pics img {
-    width: 124px;
-    height: 124px;
-}

@@ -394,7 +394,6 @@ html body.admin-menu .stickynav-active {
     margin: -5px 100px 20px 0;
 }
 
-
 /* filtered list page */
 .page-filtered-list .view-header {
     margin: 0 50px 15px 50px;
@@ -408,6 +407,11 @@ html body.admin-menu .stickynav-active {
 
 .page-filtered-list .views-exposed-form .form-submit {
     margin-top: 30px;
+}
+
+/* static grid page */
+.page-static-grid .views-row-last {
+    margin-right: 0;
 }
 
 
@@ -779,8 +783,4 @@ html body.admin-menu .stickynav-active {
     width: 290px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.block-davedka .view-daviedka .views-row-last {
-    margin-right: 0;
 }

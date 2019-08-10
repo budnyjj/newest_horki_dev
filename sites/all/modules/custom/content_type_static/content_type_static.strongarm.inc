@@ -88,19 +88,19 @@ function content_type_static_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '8',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '5',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '6',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '7',
         ),
       ),
       'display' => array(),

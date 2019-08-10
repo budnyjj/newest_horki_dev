@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * content_type_static.features.field_base.inc
@@ -10,15 +11,13 @@
 function content_type_static_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'.
-  $field_bases['body'] = array(
+  // Exported field_base: 'field_static_links'.
+  $field_bases['field_static_links'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
-    'entity_types' => array(
-      0 => 'node',
-    ),
-    'field_name' => 'body',
+    'entity_types' => array(),
+    'field_name' => 'field_static_links',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -26,11 +25,9 @@ function content_type_static_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(
-      'profile2_private' => FALSE,
-    ),
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'text_with_summary',
+    'type' => 'text_long',
   );
 
   return $field_bases;

@@ -29,7 +29,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '300';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -130,7 +130,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'black-text';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
@@ -208,7 +208,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = ' ';
-  /* Поле: Змест: Галоўнае фота */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
