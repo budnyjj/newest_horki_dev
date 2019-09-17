@@ -33,6 +33,11 @@ function image_styles_article_image_default_styles() {
         ),
         'weight' => 1,
       ),
+      78 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 2,
+      ),
     ),
   );
 
@@ -40,7 +45,7 @@ function image_styles_article_image_default_styles() {
   $styles['article_breakpoints_theme_horki2_desktop_normal_1x'] = array(
     'label' => 'article_breakpoints_theme_horki2_desktop_normal_1x',
     'effects' => array(
-      54 => array(
+      79 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 1200,
@@ -48,6 +53,11 @@ function image_styles_article_image_default_styles() {
           'upscale' => 0,
         ),
         'weight' => 1,
+      ),
+      80 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 2,
       ),
     ),
   );
@@ -65,6 +75,11 @@ function image_styles_article_image_default_styles() {
         ),
         'weight' => 1,
       ),
+      81 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 2,
+      ),
     ),
   );
 
@@ -72,7 +87,7 @@ function image_styles_article_image_default_styles() {
   $styles['article_breakpoints_theme_horki2_mobile_normal_1x'] = array(
     'label' => 'article_breakpoints_theme_horki2_mobile_normal_1x',
     'effects' => array(
-      56 => array(
+      82 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 918,
@@ -80,6 +95,11 @@ function image_styles_article_image_default_styles() {
           'upscale' => 0,
         ),
         'weight' => 1,
+      ),
+      83 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 2,
       ),
     ),
   );
@@ -154,6 +174,11 @@ function image_styles_article_image_default_styles() {
         ),
         'weight' => 2,
       ),
+      84 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 3,
+      ),
     ),
   );
 
@@ -180,6 +205,11 @@ function image_styles_article_image_default_styles() {
           'path' => 'private://images/watermark/copyright_desktop_normal.png',
         ),
         'weight' => 2,
+      ),
+      85 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 3,
       ),
     ),
   );
@@ -208,6 +238,11 @@ function image_styles_article_image_default_styles() {
         ),
         'weight' => 2,
       ),
+      86 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 3,
+      ),
     ),
   );
 
@@ -234,6 +269,11 @@ function image_styles_article_image_default_styles() {
           'path' => 'private://images/watermark/copyright_mobile_normal.png',
         ),
         'weight' => 2,
+      ),
+      87 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 3,
       ),
     ),
   );

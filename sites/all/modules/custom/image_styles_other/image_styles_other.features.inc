@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * image_styles_other.features.inc
@@ -14,7 +15,7 @@ function image_styles_other_image_default_styles() {
   $styles['filtered-table'] = array(
     'label' => 'filtered_table',
     'effects' => array(
-      50 => array(
+      105 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 100,
@@ -22,13 +23,24 @@ function image_styles_other_image_default_styles() {
         ),
         'weight' => 1,
       ),
+      112 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 2,
+      ),
     ),
   );
 
   // Exported image style: main_pic_preview.
   $styles['main_pic_preview'] = array(
     'label' => 'main_pic_preview',
-    'effects' => array(),
+    'effects' => array(
+      111 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 1,
+      ),
+    ),
   );
 
   // Exported image style: node_teaser_preview.
@@ -50,7 +62,7 @@ function image_styles_other_image_default_styles() {
   $styles['photo_video_preview'] = array(
     'label' => 'photo_video_preview',
     'effects' => array(
-      37 => array(
+      104 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 282,
@@ -195,6 +207,11 @@ function image_styles_other_image_default_styles() {
           'height' => 240,
         ),
         'weight' => 1,
+      ),
+      106 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 2,
       ),
     ),
   );

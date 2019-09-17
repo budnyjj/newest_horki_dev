@@ -102,6 +102,11 @@ if ($field) {
         ),
         'weight' => 4,
       ),
+      107 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 5,
+      ),
     ),
   );
 
@@ -169,6 +174,11 @@ if ($field) {
           'angle' => 0,
         ),
         'weight' => 4,
+      ),
+      108 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 5,
       ),
     ),
   );
@@ -238,6 +248,11 @@ if ($field) {
         ),
         'weight' => 4,
       ),
+      109 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 5,
+      ),
     ),
   );
 
@@ -305,6 +320,11 @@ if ($field) {
           'angle' => 0,
         ),
         'weight' => 4,
+      ),
+      110 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 5,
       ),
     ),
   );

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * image_styles_highlight.default_picture_mapping.inc
@@ -13,7 +14,7 @@ function image_styles_highlight_default_picture_mapping() {
   $picture_mapping = new PictureMapping();
   $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
   $picture_mapping->api_version = 2;
-  $picture_mapping->label = 'highlight';
+  $picture_mapping->label = 'Малюнак для галоўнай навіны';
   $picture_mapping->machine_name = 'highlight';
   $picture_mapping->breakpoint_group = 'horki2';
   $picture_mapping->mapping = array(
