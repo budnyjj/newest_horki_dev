@@ -33,7 +33,7 @@
 <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <!-- Yandex Direct -->
-<script src="//yastatic.net/pcode/adfox/loader.js" crossorigin="anonymous"></script>
+<script src="/sites/all/themes/horki2/js/adfox_loader.js" crossorigin="anonymous"></script>
 
 <!-- SendPulse -->
 <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/ff43ffd7f1eab9f55eb2b7b70720d4b7_1.js" async></script>
