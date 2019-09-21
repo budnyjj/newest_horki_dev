@@ -1,0 +1,7 @@
+name = "Views RSS: Custom Elements"
+description = "Provides custom item elements for Views RSS."
+package = Views
+dependencies[] = views_rss
+dependencies[] = views_rss_core
+core = 7.x
+
