@@ -78,7 +78,6 @@ function horki2_preprocess_node(&$variables) {
   }
 
   /* Make local problem status */
-
   if (array_key_exists('field_problem_status', $content)) {
     $problem_status = $content['field_problem_status'];
     $problem_status_text = '<span class="';
