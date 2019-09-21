@@ -79,6 +79,11 @@ function views_rss_yandex_turbo_preprocess_item_turbo_content(&$variables) {
     }
     $img->outertext = '<figure>' . $img->outertext . '</figure>';
   }
+  // Remove author signature
+  $author = $html->find('h3[class=text-signature]', -1);
+  if (isset($author)) {
+    $author->outertext = '';
+  }
   // Remove all unneeded attributes
   foreach ($html->find('[id]') as $e) {
     $e->id = NULL;

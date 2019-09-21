@@ -6,19 +6,12 @@
  */
 
 /**
- * Implements hook_views_rss_namespaces().
- */
-function views_rss_custom_views_rss_namespaces() {
-  return array();
-}
-
-/**
  * Implements hook_views_rss_item_elements().
  */
 function views_rss_custom_views_rss_item_elements() {
   $elements['custom:author'] = array(
     'key' => 'author',
-    'description' => t('An HTML with \<h3 class="text-signature"\> element to extract the author name.'),
+    'description' => t('An HTML with h3 class="text-signature" element to extract the author name from.'),
     'preprocess functions' => array('views_rss_custom_preprocess_item_custom_author'),
   );
 
@@ -37,12 +30,18 @@ function views_rss_custom_preprocess_item_custom_author(&$variables) {
   // Process content
   $html = new simple_html_dom();
   $html->load($variables['elements'][0]['value']);
-
+  // Extract author name from content
   $author_html = $html->find('h3[class=text-signature]', -1);
-
-  $variables['elements'][0]['key'] = 'author';
   if (!isset($author_html)) {
     $variables['elements'][0]['value'] = NULL;
+    return;
   }
-  $variables['elements'][0]['value'] = $author_html->plaintext;
+  $author = $author_html->plaintext;
+  if (mb_strlen($author) > 40) {
+    // Seems like not an author name
+    $variables['elements'][0]['value'] = NULL;
+    return;
+  }
+  $variables['elements'][0]['key'] = 'author';  
+  $variables['elements'][0]['value'] = $author;
 }
