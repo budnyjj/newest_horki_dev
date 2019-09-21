@@ -440,6 +440,22 @@ ul.tabs li.active a {
     text-decoration: none;
 }
 
+/* content banner */
+.block-40 {
+    margin-bottom: 20px;
+}
+
+/* sidebar banner #1 */
+.block-42 {
+    margin-bottom: 20px;
+}
+
+/* sidebar banner #2 */
+.block-41 {
+    margin-bottom: 20px;
+}
+
+
 /**
  * General Preview styles
  */
@@ -1017,11 +1033,6 @@ ul.tabs li.active a {
     display: none;
 }
 
-/* sidebar banner #1 */
-.block-42 {
-    margin-bottom: 20px;
-}
-
 /* sidebar abvestki */
 .block-ads-block-1 {
     margin-bottom: 20px;
@@ -1062,11 +1073,6 @@ ul.tabs li.active a {
     font-size: 1.05em;
     letter-spacing: 0.01em;
     color: #000000;
-}
-
-/* sidebar banner #2 */
-.block-41 {
-    margin-bottom: 20px;
 }
 
 /* sidebar last comments */
