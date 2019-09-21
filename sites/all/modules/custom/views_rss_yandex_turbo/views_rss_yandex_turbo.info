@@ -1,0 +1,8 @@
+name = "Views RSS: Yandex.Turbo Elements"
+description = "Provides Yandex.Turbo XML namespace and item elements for Views RSS."
+package = Views
+dependencies[] = views_rss
+dependencies[] = views_rss_core
+dependencies[] = simplehtmldom
+core = 7.x
+

@@ -1,0 +1,106 @@
+<?php
+
+/**
+ * @file
+ * Provides Yandex.Turbo namespace and <item> elements for Views RSS module.
+ */
+
+/**
+ * Implements hook_views_rss_namespaces().
+ */
+function views_rss_yandex_turbo_views_rss_namespaces() {
+  $namespaces['turbo'] = array(
+    'prefix' => 'xmlns',
+    'uri' => 'http://turbo.yandex.ru',
+  );
+
+  return $namespaces;
+}
+
+/**
+ * Implements hook_views_rss_channel_elements().
+ */
+function views_rss_yandex_turbo_views_rss_channel_elements() {
+  $elements['turbo:adNetwork'] = array(
+    'description' => t('Used to show blocks of Adfox or Yandex Ad Network.'),
+    'preprocess functions' => array('views_rss_yandex_turbo_preprocess_channel_turbo_ad_network'),
+    'help' => 'https://yandex.ru/dev/turbo/doc/rss/markup-docpage/',
+  );
+  return $elements;
+}
+
+/**
+ * Preprocess function for channel <turbo:adNetwork> element.
+ */
+function views_rss_yandex_turbo_preprocess_channel_turbo_ad_network(&$variables) {
+  // No value = no preprocessing.
+  if (empty($variables['elements'][0]['value'])) {
+    return;
+  }
+}
+
+/**
+ * Implements hook_views_rss_item_elements().
+ */
+function views_rss_yandex_turbo_views_rss_item_elements() {
+  $elements['turbo:source'] = array(
+    'description' => t('Content URL to use in Yandex.Metrics.'),
+    'help' => 'https://yandex.ru/dev/turbo/doc/rss/markup-docpage/',
+  );
+  $elements['turbo:topic'] = array(
+    'description' => t('Content title to use in Yandex.Metrics.'),
+    'help' => 'https://yandex.ru/dev/turbo/doc/rss/markup-docpage/',
+  );
+  $elements['turbo:content'] = array(
+    'description' => t('An entity encoded element for HTML content.'),
+    'help' => 'https://yandex.ru/dev/turbo/doc/rss/markup-docpage/',
+    'preprocess functions' => array('views_rss_yandex_turbo_preprocess_item_turbo_content'),
+  );
+
+  return $elements;
+}
+
+/**
+ * Preprocess function for item <turbo:content> element.
+ */
+function views_rss_yandex_turbo_preprocess_item_turbo_content(&$variables) {
+  // No value = no preprocessing.
+  if (empty($variables['elements'][0]['value'])) {
+    return;
+  }
+
+  // Process content
+  $html = new simple_html_dom();
+  $html->load($variables['elements'][0]['value']);
+  // Process images
+  foreach ($html->find('img') as $img) {
+    $img->class = NULL;
+    $img->width = NULL;
+    $img->height = NULL;
+    $img->alt = NULL;
+    $img->removeAttribute('data-picture-mapping');
+    // Replace src with srcset, if not set
+    if (isset($img->srcset) && !isset($img->src)) {
+      $img->src = $img->srcset;
+    }
+    $img->srcset = NULL;
+    if (isset($img->title)) {
+      $title = $img->title;
+      $img->title = NULL;
+      $img->outertext = $img->outertext . '<figcaption>' . $title . '</figcaption>';
+    }
+    $img->outertext = '<figure>' . $img->outertext . '</figure>';
+  }
+  // Remove all unneeded attributes
+  foreach ($html->find('[id]') as $e) {
+    $e->id = NULL;
+  }
+  foreach ($html->find('[class]') as $e) {
+    $e->class = NULL;
+  }
+
+  $processed_value = $html->save();
+
+  $variables['elements'][0]['value'] = '<![CDATA[' . $processed_value . ']]>';
+  $variables['elements'][0]['encoded'] = TRUE;
+}

@@ -1,0 +1,13 @@
+name = Views: RSS
+description = Provides a collection of horki.info RSS feeds
+core = 7.x
+package = Custom
+version = 7.x-1.0
+dependencies[] = views_rss_content
+dependencies[] = views_rss_media
+dependencies[] = views_rss_yandex
+dependencies[] = views_rss_yandex_turbo
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = rss
+features_exclude[dependencies][views] = views
