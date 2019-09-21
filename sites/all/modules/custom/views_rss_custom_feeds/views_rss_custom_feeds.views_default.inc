@@ -116,6 +116,12 @@ function views_rss_custom_feeds_views_default_views() {
         'skipDays' => '',
       ),
     ),
+    'yandex' => array(
+      'views_rss_yandex' => array(
+        'logo' => '',
+        'logo type=square' => '',
+      ),
+    ),
   );
   $handler->display->display_options['style_options']['item'] = array(
     'core' => array(
@@ -123,12 +129,22 @@ function views_rss_custom_feeds_views_default_views() {
         'title' => 'title',
         'link' => 'path',
         'description' => 'nothing',
-        'author' => 'mail',
+        'author' => '',
         'category' => '',
         'comments' => '',
         'enclosure' => '',
         'guid' => 'path',
         'pubDate' => 'published_at',
+      ),
+    ),
+    'media' => array(
+      'views_rss_media' => array(
+        'content' => '',
+        'title' => '',
+        'description' => '',
+        'keywords' => '',
+        'thumbnail' => '',
+        'category' => '',
       ),
     ),
     'yandex' => array(
@@ -138,6 +154,19 @@ function views_rss_custom_feeds_views_default_views() {
         'tags' => '',
         'online' => '',
         'enclosure' => '',
+        'pdalink' => '',
+      ),
+    ),
+    'turbo' => array(
+      'views_rss_yandex_turbo' => array(
+        'source' => '',
+        'topic' => '',
+        'content' => '',
+      ),
+    ),
+    'content' => array(
+      'views_rss_content' => array(
+        'encoded' => '',
       ),
     ),
   );
@@ -146,10 +175,6 @@ function views_rss_custom_feeds_views_default_views() {
     'feed_in_links' => 0,
   );
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Змест: Content author */
-  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
-  $handler->display->display_options['relationships']['uid']['table'] = 'node';
-  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -178,18 +203,6 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Поле: Карыстальнік: Адрас E-mail */
-  $handler->display->display_options['fields']['mail']['id'] = 'mail';
-  $handler->display->display_options['fields']['mail']['table'] = 'users';
-  $handler->display->display_options['fields']['mail']['field'] = 'mail';
-  $handler->display->display_options['fields']['mail']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['mail']['label'] = '';
-  $handler->display->display_options['fields']['mail']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['mail']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['mail']['empty'] = 'admin@horki.info';
-  $handler->display->display_options['fields']['mail']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['mail']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['mail']['link_to_user'] = '0';
   /* Поле: Змест: Тэкст */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
@@ -267,6 +280,12 @@ function views_rss_custom_feeds_views_default_views() {
         'skipDays' => '',
       ),
     ),
+    'yandex' => array(
+      'views_rss_yandex' => array(
+        'logo' => '',
+        'logo type=square' => '',
+      ),
+    ),
   );
   $handler->display->display_options['style_options']['item'] = array(
     'core' => array(
@@ -274,12 +293,22 @@ function views_rss_custom_feeds_views_default_views() {
         'title' => 'title',
         'link' => 'path',
         'description' => 'nothing',
-        'author' => 'mail',
+        'author' => '',
         'category' => '',
         'comments' => '',
         'enclosure' => '',
         'guid' => 'path',
         'pubDate' => 'published_at',
+      ),
+    ),
+    'media' => array(
+      'views_rss_media' => array(
+        'content' => '',
+        'title' => '',
+        'description' => '',
+        'keywords' => '',
+        'thumbnail' => '',
+        'category' => '',
       ),
     ),
     'yandex' => array(
@@ -289,6 +318,19 @@ function views_rss_custom_feeds_views_default_views() {
         'tags' => '',
         'online' => '',
         'enclosure' => '',
+        'pdalink' => '',
+      ),
+    ),
+    'turbo' => array(
+      'views_rss_yandex_turbo' => array(
+        'source' => '',
+        'topic' => '',
+        'content' => '',
+      ),
+    ),
+    'content' => array(
+      'views_rss_content' => array(
+        'encoded' => '',
       ),
     ),
   );
@@ -297,10 +339,6 @@ function views_rss_custom_feeds_views_default_views() {
     'feed_in_links' => 0,
   );
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Змест: Content author */
-  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
-  $handler->display->display_options['relationships']['uid']['table'] = 'node';
-  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -329,18 +367,6 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Поле: Карыстальнік: Адрас E-mail */
-  $handler->display->display_options['fields']['mail']['id'] = 'mail';
-  $handler->display->display_options['fields']['mail']['table'] = 'users';
-  $handler->display->display_options['fields']['mail']['field'] = 'mail';
-  $handler->display->display_options['fields']['mail']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['mail']['label'] = '';
-  $handler->display->display_options['fields']['mail']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['mail']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['mail']['empty'] = 'admin@horki.info';
-  $handler->display->display_options['fields']['mail']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['mail']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['mail']['link_to_user'] = '0';
   /* Поле: Змест: Тэкст */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
@@ -442,6 +468,12 @@ function views_rss_custom_feeds_views_default_views() {
         'skipDays' => '',
       ),
     ),
+    'yandex' => array(
+      'views_rss_yandex' => array(
+        'logo' => '',
+        'logo type=square' => '',
+      ),
+    ),
   );
   $handler->display->display_options['style_options']['item'] = array(
     'core' => array(
@@ -449,12 +481,22 @@ function views_rss_custom_feeds_views_default_views() {
         'title' => 'title',
         'link' => 'path',
         'description' => 'nothing',
-        'author' => 'mail',
+        'author' => '',
         'category' => '',
         'comments' => '',
         'enclosure' => '',
         'guid' => 'path',
         'pubDate' => 'published_at',
+      ),
+    ),
+    'media' => array(
+      'views_rss_media' => array(
+        'content' => '',
+        'title' => '',
+        'description' => '',
+        'keywords' => '',
+        'thumbnail' => '',
+        'category' => '',
       ),
     ),
     'yandex' => array(
@@ -464,6 +506,19 @@ function views_rss_custom_feeds_views_default_views() {
         'tags' => '',
         'online' => '',
         'enclosure' => '',
+        'pdalink' => '',
+      ),
+    ),
+    'turbo' => array(
+      'views_rss_yandex_turbo' => array(
+        'source' => '',
+        'topic' => '',
+        'content' => '',
+      ),
+    ),
+    'content' => array(
+      'views_rss_content' => array(
+        'encoded' => '',
       ),
     ),
   );
@@ -472,10 +527,6 @@ function views_rss_custom_feeds_views_default_views() {
     'feed_in_links' => 0,
   );
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Змест: Content author */
-  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
-  $handler->display->display_options['relationships']['uid']['table'] = 'node';
-  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -504,18 +555,6 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Поле: Карыстальнік: Адрас E-mail */
-  $handler->display->display_options['fields']['mail']['id'] = 'mail';
-  $handler->display->display_options['fields']['mail']['table'] = 'users';
-  $handler->display->display_options['fields']['mail']['field'] = 'mail';
-  $handler->display->display_options['fields']['mail']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['mail']['label'] = '';
-  $handler->display->display_options['fields']['mail']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['mail']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['mail']['empty'] = 'admin@horki.info';
-  $handler->display->display_options['fields']['mail']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['mail']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['mail']['link_to_user'] = '0';
   /* Поле: Змест: Тэкст */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
@@ -1113,11 +1152,6 @@ function views_rss_custom_feeds_views_default_views() {
         'logo type=square' => '',
       ),
     ),
-    'turbo' => array(
-      'views_rss_yandex_turbo' => array(
-        'adNetwork' => '',
-      ),
-    ),
   );
   $handler->display->display_options['style_options']['item'] = array(
     'core' => array(
@@ -1125,7 +1159,7 @@ function views_rss_custom_feeds_views_default_views() {
         'title' => 'title',
         'link' => 'path',
         'description' => '',
-        'author' => '',
+        'author' => 'body',
         'category' => '',
         'comments' => '',
         'enclosure' => '',
@@ -1301,8 +1335,6 @@ function views_rss_custom_feeds_views_default_views() {
     t('Desc'),
     t('Навіны'),
     t('Навіны з Горак, Дрыбіна і Мсціслава'),
-    t('author'),
-    t('admin@horki.info'),
     t('[field_pics]
 [field_text]'),
     t('[field_pics]
@@ -1311,6 +1343,8 @@ function views_rss_custom_feeds_views_default_views() {
     t('Google'),
     t('VK'),
     t('Twitter'),
+    t('author'),
+    t('admin@horki.info'),
     t('Яндекс.Новости'),
     t('horki.info'),
     t('Яндекс.Дзен'),
