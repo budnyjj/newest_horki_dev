@@ -18,18 +18,6 @@ function views_rss_yandex_turbo_views_rss_namespaces() {
 }
 
 /**
- * Implements hook_views_rss_channel_elements().
- */
-function views_rss_yandex_turbo_views_rss_channel_elements() {
-  $elements['turbo:adNetwork'] = array(
-    'description' => t('Used to show blocks of Adfox or Yandex Ad Network.'),
-    'preprocess functions' => array('views_rss_yandex_turbo_preprocess_channel_turbo_ad_network'),
-    'help' => 'https://yandex.ru/dev/turbo/doc/rss/markup-docpage/',
-  );
-  return $elements;
-}
-
-/**
  * Preprocess function for channel <turbo:adNetwork> element.
  */
 function views_rss_yandex_turbo_preprocess_channel_turbo_ad_network(&$variables) {
