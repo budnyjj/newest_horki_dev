@@ -85,7 +85,11 @@ class ForecastIO{
    */
   function getForecastDay($latitude, $longitude, $timestamp) {
     $data = $this->requestData($latitude, $longitude, $timestamp);
-    if ($data !== false) {
+    if ($data !== false
+        && isset($data->hourly)
+        && isset($data->hourly->data)
+        && is_array($data->hourly->data))
+    {
       $conditions = array();
       foreach ($data->hourly->data as $raw_data) {
 	$conditions[] = new ForecastIOConditions($raw_data);
