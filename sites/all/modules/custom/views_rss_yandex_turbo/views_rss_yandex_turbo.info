@@ -3,6 +3,7 @@ description = "Provides Yandex.Turbo XML namespace and item elements for Views R
 package = Views
 dependencies[] = views_rss
 dependencies[] = views_rss_core
+dependencies[] = views_rss_custom
 dependencies[] = simplehtmldom
 core = 7.x
 

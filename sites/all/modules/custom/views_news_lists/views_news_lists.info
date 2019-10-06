@@ -13,4 +13,3 @@ features[views_view][] = genres
 features[views_view][] = news_from_readers
 features[views_view][] = photoblog
 features[views_view][] = videoblog
-features_exclude[dependencies][views_infinite_scroll] = views_infinite_scroll

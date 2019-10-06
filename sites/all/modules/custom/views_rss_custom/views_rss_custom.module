@@ -42,6 +42,36 @@ function views_rss_custom_preprocess_item_custom_author(&$variables) {
     $variables['elements'][0]['value'] = NULL;
     return;
   }
-  $variables['elements'][0]['key'] = 'author';  
+  $variables['elements'][0]['key'] = 'author';
   $variables['elements'][0]['value'] = $author;
+}
+
+/**
+ * Preprocess callback.
+ * Replaces absolute with leading '/' paths in element values with absolute URLs.
+ * Based on views_rss_rewrite_relative_paths from views_rss module.
+ */
+function views_rss_custom_rewrite_absolute_paths(&$variables) {
+  // Rewriting relative paths should be enabled by default,
+  // so rewrite relative paths even if option value is not set.
+  if (
+    !isset($variables['view']->style_plugin->options['feed_settings']['absolute_paths'])
+    || !empty($variables['view']->style_plugin->options['feed_settings']['absolute_paths'])
+  ) {
+    global $base_path;
+    foreach ($variables['elements'] as $delta => $element) {
+      if (isset($element['value'])) {
+        // Value is an array, so this is a set of subelements.
+        if (is_array($element['value'])) {
+          views_rss_rewrite_relative_paths($variables['elements'][$delta]['value']);
+        }
+        // Value is a string, so just process it.
+        else {
+          $pattern = '/(src|href)=(\'|")' . preg_quote($base_path, '/') . '+/';
+          $replacement = '$1=$2' . url('<front>', array('absolute' => TRUE));
+          $variables['elements'][$delta]['value'] = preg_replace($pattern, $replacement, $element['value']);
+        }
+      }
+    }
+  }
 }

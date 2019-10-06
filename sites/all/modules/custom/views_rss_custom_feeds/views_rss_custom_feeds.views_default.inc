@@ -1441,23 +1441,37 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* Поле: Шапка */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Шапка';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h1>[title]</h1>
-[field_pics]';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Месцы */
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Рубрыкі */
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['id'] = 'field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['field'] = 'field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = ' ';
+  /* Поле: Змест: Дадатковыя тэгі */
+  $handler->display->display_options['fields']['field_additional_taxonomy']['id'] = 'field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['table'] = 'field_data_field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['field'] = 'field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_additional_taxonomy']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = ' ';
   /* Поле: Змест */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Змест';
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header>[nothing]</header>
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -1644,23 +1658,37 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* Поле: Шапка */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Шапка';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h1>[title]</h1>
-[field_pics]';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Месцы */
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Рубрыкі */
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['id'] = 'field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['field'] = 'field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = ' ';
+  /* Поле: Змест: Дадатковыя тэгі */
+  $handler->display->display_options['fields']['field_additional_taxonomy']['id'] = 'field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['table'] = 'field_data_field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['field'] = 'field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_additional_taxonomy']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = ' ';
   /* Поле: Змест */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Змест';
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header>[nothing]</header>
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -1720,7 +1748,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'horki.info';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
   $handler->display->display_options['style_options']['namespaces'] = array(
@@ -1799,8 +1827,8 @@ function views_rss_custom_feeds_views_default_views() {
       'views_rss_yandex_turbo' => array(
         'source' => 'path',
         'topic' => 'title',
-        'content' => '',
-        'content_gallery' => 'nothing_1',
+        'content' => 'nothing_1',
+        'content_gallery' => '',
       ),
     ),
     'zen' => array(
@@ -1864,23 +1892,37 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* Поле: Шапка */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Шапка';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h1>[title]</h1>
-[field_pics]';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Месцы */
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Рубрыкі */
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['id'] = 'field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['field'] = 'field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = ' ';
+  /* Поле: Змест: Дадатковыя тэгі */
+  $handler->display->display_options['fields']['field_additional_taxonomy']['id'] = 'field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['table'] = 'field_data_field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['field'] = 'field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_additional_taxonomy']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = ' ';
   /* Поле: Змест */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Змест';
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header>[nothing]</header>
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -1919,13 +1961,6 @@ function views_rss_custom_feeds_views_default_views() {
     0 => '56',
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Вузел: Published at */
-  $handler->display->display_options['filters']['published_at']['id'] = 'published_at';
-  $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
-  $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
-  $handler->display->display_options['filters']['published_at']['operator'] = '>=';
-  $handler->display->display_options['filters']['published_at']['value']['value'] = '-180 days';
-  $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
   $handler->display->display_options['path'] = 'turbo/news/photos.xml';
   $handler->display->display_options['sitename_title'] = 0;
 
@@ -2067,23 +2102,37 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* Поле: Шапка */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Шапка';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h1>[title]</h1>
-[field_pics]';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Месцы */
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_placement_by_taxonomy']['element_label_colon'] = FALSE;
+  /* Поле: Змест: Рубрыкі */
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['id'] = 'field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['field'] = 'field_rubric_by_taxonomy';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = ' ';
+  /* Поле: Змест: Дадатковыя тэгі */
+  $handler->display->display_options['fields']['field_additional_taxonomy']['id'] = 'field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['table'] = 'field_data_field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['field'] = 'field_additional_taxonomy';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['label'] = '';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_additional_taxonomy']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = ' ';
   /* Поле: Змест */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Змест';
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header>[nothing]</header>
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -2132,10 +2181,9 @@ function views_rss_custom_feeds_views_default_views() {
     t('Desc'),
     t('Навіны: апошнія'),
     t('horki.info'),
-    t('<h1>[title]</h1>
-[field_pics]'),
-    t('<header>[nothing]</header>
+    t('<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>'),
     t('Навіны: папулярныя'),
     t('Навіны: фотаблог'),
