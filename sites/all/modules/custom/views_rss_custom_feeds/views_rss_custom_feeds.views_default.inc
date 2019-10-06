@@ -1471,8 +1471,8 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
-<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>';
+<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -1688,8 +1688,8 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
-<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>';
+<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -1739,7 +1739,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['recentcount']['table'] = 'jstats_node';
   $handler->display->display_options['filters']['recentcount']['field'] = 'recentcount';
   $handler->display->display_options['filters']['recentcount']['operator'] = '>=';
-  $handler->display->display_options['filters']['recentcount']['value']['value'] = '5000';
+  $handler->display->display_options['filters']['recentcount']['value']['value'] = '3000';
   $handler->display->display_options['path'] = 'turbo/news/popular.xml';
   $handler->display->display_options['sitename_title'] = 0;
 
@@ -1922,8 +1922,8 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
-<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>';
+<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -2132,8 +2132,8 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
-<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>';
+<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -2183,8 +2183,8 @@ function views_rss_custom_feeds_views_default_views() {
     t('horki.info'),
     t('<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>
-<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>'),
+<div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
+<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>'),
     t('Навіны: папулярныя'),
     t('Навіны: фотаблог'),
     t('Афіша'),
