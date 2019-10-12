@@ -844,7 +844,7 @@ function imagecache_coloractions_imagemagick_arguments_alter(&$args, &$context) 
  * image_type_to_extension and image_type_to_mime_type?
  */
 function coloractions_file_formats() {
-  return array('image/jpeg' => 'jpg', 'image/gif' => 'gif', 'image/png' => 'png');
+  return array('image/jpeg' => 'jpg', 'image/gif' => 'gif', 'image/png' => 'png', 'image/webp' => 'webp', 'image/jp2' => 'jp2', 'image/jxr' => 'jxr');
 }
 
 

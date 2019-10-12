@@ -1453,6 +1453,7 @@ function theme_picture(array $variables) {
         '#sizes' => implode(', ', array_unique($sizes)),
         '#lazyload' => !empty($variables['lazyload']),
         '#lazyload_aspect_ratio' => $aspect_ratio,
+        '#mime_type' => picture_optimized_style_format($mapping_definition['image_style']),
       );
     }
   }
@@ -2342,4 +2343,37 @@ function picture_default_breakpoints() {
   $export[BREAKPOINTS_SOURCE_TYPE_MODULE . '.picture.empty_srcset'] = $breakpoint;
 
   return $export;
+}
+
+/**
+ * Helper to figure out the mime type of styles using the 'coloractions_convert_effect'.
+ */
+function picture_optimized_style_format($image_style_name) {
+  if (module_exists('imagecache_coloractions') == FALSE) {
+    // If the imagecache_coloractions is not installed.
+    return NULL;
+  }
+  elseif(count(coloractions_file_formats()) == 3) {
+    // If the imagecache_coloractions has no additional formats specified.
+    return NULL;
+  }
+
+  $styles_array = image_styles();
+  if (is_array($styles_array)) {
+    foreach ($styles_array as $style_name => $style_data) {
+      if (strcmp($image_style_name, $style_name) == 0) {
+        if (is_array($style_data['effects'])) {
+          foreach ($style_data['effects'] as $effect) {
+            if (isset($effect['effect callback']) && $effect['effect callback'] == 'coloractions_convert_effect') {
+              if (isset($effect['data']['format'])) {
+                return $effect['data']['format'];
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return NULL;
 }
