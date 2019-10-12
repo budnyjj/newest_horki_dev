@@ -1454,7 +1454,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['label'] = '';
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = ' ';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = '&ensp;';
   /* Поле: Змест: Дадатковыя тэгі */
   $handler->display->display_options['fields']['field_additional_taxonomy']['id'] = 'field_additional_taxonomy';
   $handler->display->display_options['fields']['field_additional_taxonomy']['table'] = 'field_data_field_additional_taxonomy';
@@ -1462,7 +1462,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_additional_taxonomy']['label'] = '';
   $handler->display->display_options['fields']['field_additional_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_additional_taxonomy']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = ' ';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = '&ensp;';
   /* Поле: Змест */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
@@ -1472,7 +1472,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>';
+<p><strong>Тэгі</strong>&ensp;[field_placement_by_taxonomy]&ensp;[field_rubric_by_taxonomy]&ensp;[field_additional_taxonomy]</p>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -1515,7 +1515,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
   $handler->display->display_options['filters']['published_at']['operator'] = '>=';
-  $handler->display->display_options['filters']['published_at']['value']['value'] = '-30 days';
+  $handler->display->display_options['filters']['published_at']['value']['value'] = '-90 days';
   $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
   $handler->display->display_options['path'] = 'turbo/news/last.xml';
   $handler->display->display_options['sitename_title'] = 0;
@@ -1671,7 +1671,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['label'] = '';
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = ' ';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = '&ensp;';
   /* Поле: Змест: Дадатковыя тэгі */
   $handler->display->display_options['fields']['field_additional_taxonomy']['id'] = 'field_additional_taxonomy';
   $handler->display->display_options['fields']['field_additional_taxonomy']['table'] = 'field_data_field_additional_taxonomy';
@@ -1679,7 +1679,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_additional_taxonomy']['label'] = '';
   $handler->display->display_options['fields']['field_additional_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_additional_taxonomy']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = ' ';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = '&ensp;';
   /* Поле: Змест */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
@@ -1689,7 +1689,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>';
+<p><strong>Тэгі</strong>&ensp;[field_placement_by_taxonomy]&ensp;[field_rubric_by_taxonomy]&ensp;[field_additional_taxonomy]</p>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -1732,14 +1732,14 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
   $handler->display->display_options['filters']['published_at']['operator'] = '<';
-  $handler->display->display_options['filters']['published_at']['value']['value'] = '-30 days';
+  $handler->display->display_options['filters']['published_at']['value']['value'] = '-90 days';
   $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
   /* Filter criterion: Node statistics: Recent count */
   $handler->display->display_options['filters']['recentcount']['id'] = 'recentcount';
   $handler->display->display_options['filters']['recentcount']['table'] = 'jstats_node';
   $handler->display->display_options['filters']['recentcount']['field'] = 'recentcount';
   $handler->display->display_options['filters']['recentcount']['operator'] = '>=';
-  $handler->display->display_options['filters']['recentcount']['value']['value'] = '3000';
+  $handler->display->display_options['filters']['recentcount']['value']['value'] = '2500';
   $handler->display->display_options['path'] = 'turbo/news/popular.xml';
   $handler->display->display_options['sitename_title'] = 0;
 
@@ -1905,7 +1905,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['label'] = '';
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = ' ';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = '&ensp;';
   /* Поле: Змест: Дадатковыя тэгі */
   $handler->display->display_options['fields']['field_additional_taxonomy']['id'] = 'field_additional_taxonomy';
   $handler->display->display_options['fields']['field_additional_taxonomy']['table'] = 'field_data_field_additional_taxonomy';
@@ -1913,7 +1913,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_additional_taxonomy']['label'] = '';
   $handler->display->display_options['fields']['field_additional_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_additional_taxonomy']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = ' ';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = '&ensp;';
   /* Поле: Змест */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
@@ -1923,7 +1923,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>';
+<p><strong>Тэгі</strong>&ensp;[field_placement_by_taxonomy]&ensp;[field_rubric_by_taxonomy]&ensp;[field_additional_taxonomy]</p>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -2115,7 +2115,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['label'] = '';
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_rubric_by_taxonomy']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = ' ';
+  $handler->display->display_options['fields']['field_rubric_by_taxonomy']['separator'] = '&ensp;';
   /* Поле: Змест: Дадатковыя тэгі */
   $handler->display->display_options['fields']['field_additional_taxonomy']['id'] = 'field_additional_taxonomy';
   $handler->display->display_options['fields']['field_additional_taxonomy']['table'] = 'field_data_field_additional_taxonomy';
@@ -2123,7 +2123,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_additional_taxonomy']['label'] = '';
   $handler->display->display_options['fields']['field_additional_taxonomy']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_additional_taxonomy']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = ' ';
+  $handler->display->display_options['fields']['field_additional_taxonomy']['separator'] = '&ensp;';
   /* Поле: Змест */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
@@ -2133,7 +2133,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>';
+<p><strong>Тэгі</strong>&ensp;[field_placement_by_taxonomy]&ensp;[field_rubric_by_taxonomy]&ensp;[field_additional_taxonomy]</p>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
@@ -2184,7 +2184,7 @@ function views_rss_custom_feeds_views_default_views() {
     t('<header><h1>[title]</h1>[field_pics]</header>
 [field_text]
 <div data-block="share" data-network="odnoklassniki, vkontakte, facebook, twitter"></div>
-<p><strong>Тэгі</strong> [field_placement_by_taxonomy] [field_rubric_by_taxonomy] [field_additional_taxonomy]</p>'),
+<p><strong>Тэгі</strong>&ensp;[field_placement_by_taxonomy]&ensp;[field_rubric_by_taxonomy]&ensp;[field_additional_taxonomy]</p>'),
     t('Навіны: папулярныя'),
     t('Навіны: фотаблог'),
     t('Афіша'),
