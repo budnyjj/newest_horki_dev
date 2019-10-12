@@ -1747,8 +1747,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler = $view->new_display('feed', 'Навіны: фотаблог', 'feed_turbo_news_photos');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'horki.info';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
   $handler->display->display_options['style_options']['namespaces'] = array(
@@ -1827,8 +1826,8 @@ function views_rss_custom_feeds_views_default_views() {
       'views_rss_yandex_turbo' => array(
         'source' => 'path',
         'topic' => 'title',
-        'content' => 'nothing_1',
-        'content_gallery' => '',
+        'content' => '',
+        'content_gallery' => 'nothing_1',
       ),
     ),
     'zen' => array(
@@ -1956,11 +1955,17 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['operator'] = 'not';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
     0 => '56',
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
+  /* Filter criterion: Вузел: Published at */
+  $handler->display->display_options['filters']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['operator'] = '>=';
+  $handler->display->display_options['filters']['published_at']['value']['value'] = '-30 days';
+  $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
   $handler->display->display_options['path'] = 'turbo/news/photos.xml';
   $handler->display->display_options['sitename_title'] = 0;
 

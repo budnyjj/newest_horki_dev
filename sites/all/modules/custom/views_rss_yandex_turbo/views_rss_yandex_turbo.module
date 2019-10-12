@@ -42,8 +42,8 @@ function views_rss_yandex_turbo_views_rss_item_elements() {
     'description' => t('An entity encoded element for HTML gallery content.'),
     'help' => 'https://yandex.ru/dev/turbo/doc/rss/markup-docpage/',
     'preprocess functions' => array(
-      'views_rss_yandex_turbo_preprocess_item_turbo_content',
       'views_rss_yandex_turbo_preprocess_item_turbo_content_gallery',
+      'views_rss_yandex_turbo_preprocess_item_turbo_content',
       'views_rss_custom_rewrite_absolute_paths',
       'views_rss_rewrite_relative_paths',
     ),
@@ -131,50 +131,84 @@ function views_rss_yandex_turbo_preprocess_item_turbo_content_gallery(&$variable
   $html = new simple_html_dom();
   $html->load($variables['elements'][0]['value']);
 
-  /* $base_img_idx = 0; */
-  /* while (true) { */
-  /*   $base_img = $html->find('p img', $base_img_idx); */
-  /*   if (!isset($base_img)) { */
-  /*     // reached the end of html */
-  /*     break; */
-  /*   } */
-  /*   $base_p = $base_img->parent(); */
-  /*   if (count($base_p->children) > 1) { */
-  /*     // there are some other tags besides <img> in the base <p> */
-  /*     continue; */
-  /*   }  */
-  /*   $next = $base_p->next_sibling(); */
-  /*   if (!isset($next)) { */
-  /*     // reached the end of html */
-  /*     break; */
-  /*   } */
-  /*   if ($next->tag != 'p') { */
-  /*     // sibling is not a <p> tag */
-  /*     continue; */
-  /*   } */
-  /*   $next_p = $next; */
-  /*   $next_img = $next_p->find('img', 0); */
-  /*   if (!isset($next_img)) { */
-  /*     // there is no <img> tag inside sibling <p> */
-  /*     continue; */
-  /*   } */
-  /*   if (count($next_p->children) > 1) { */
-  /*     // there are some other tags besides <img> in the sibling <p> */
-  /*     continue; */
-  /*   } */
-  /*   $base_p->outertext = '<div data-block="gallery">' . $base_img . '</div>'; */
-  /*   //if ($next_p-> */
+  // Check, if there are enough images to form a gallery
+  $min_img_num = 4;
+  $imgs = $html->find('p img');
+  $img_num = count($imgs);
+  if ($img_num < $min_img_num) {
+    return;
+  }
 
+  $first_gallery_img_idx = 0;
+  $last_gallery_img_idx = 0;
 
-  /*   /\* while (isset($sibling) && $sibling->tag == 'p' && $sibling) { *\/ */
-  /*   /\*   $sibling = $sibling->next_sibling(); *\/ */
-  /*   /\* } *\/ */
-  /*   $base_img_idx++; */
-  /* } */
+  $first_img_idx = 0;
+  while ($first_img_idx < $img_num) {
+    $first_p = $imgs[$first_img_idx]->parent;
+    if (sizeof($first_p->children) != 1) {      
+      // skip if <img> is not the only child of <p>
+      $first_img_idx++;
+      continue;
+    }
+    
+    $last_p = $first_p;
+    $p_offset = 0;
+    while (true) {
+      $last_p_sibling = $last_p->next_sibling();
+
+      if (!isset($last_p_sibling) || $last_p_sibling->tag != 'p') {
+	// skip if the sibling tag is not <p>
+	break;
+      }
+      $last_p_sibling_children = $last_p_sibling->children;
+      if (sizeof($last_p_sibling_children) != 1) {
+	// skip if there are more than one children of sibling <p>
+	break;
+      }
+      if ($last_p_sibling_children[0]->tag != 'img') {
+	// skip if <img> is not the only child of sibling <p>
+	break;
+      }
+
+      $last_p = $last_p_sibling;
+      $p_offset++;
+    }
+
+    if ($p_offset < $min_img_num) {
+      // skip if there are less than $min_img_num neghbour <p><img> tags
+      $first_img_idx += $p_offset + 1;
+      continue;
+    }
+
+    // process captured <p><img> tags
+    $gallery_header = '';
+    for ($p_idx = 0, $p = $first_p; $p_idx < $p_offset; $p_idx++, $p = $p->next_sibling()) {
+      $img = $p->children(0);
+      $img_title = $img->title;
+      if (!isset($img_title)) {
+	continue;
+      }
+      $img->title = NULL;
+      if (empty($img_title)) {
+	continue;
+      }
+      // populate gallery title value, if not set yet
+      if (empty($gallery_header)) {
+	$gallery_header = '<header>' . $img_title . '</header>';
+      }
+    }    
+    for ($p_idx = 1, $p = $first_p->next_sibling(); $p_idx < $p_offset; $p_idx++, $p = $p->next_sibling()) {
+      $p->outertext = $p->innertext;
+    }
+    $first_p->outertext = '<div data-block="gallery">' . $gallery_header . $first_p->innertext;
+    $last_p->outertext = $last_p->innertext . '</div>';
+
+    $first_img_idx += $p_offset + 1;
+  }
 
   $processed_value = $html->save();
 
   $variables['elements'][0]['key'] = 'turbo:content';
-  $variables['elements'][0]['value'] = '<![CDATA[' . $processed_value . ']]>';
+  $variables['elements'][0]['value'] = $processed_value;
   $variables['elements'][0]['encoded'] = TRUE;
 }
