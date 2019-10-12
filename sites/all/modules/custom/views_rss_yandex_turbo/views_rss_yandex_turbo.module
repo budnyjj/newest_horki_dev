@@ -33,22 +33,12 @@ function views_rss_yandex_turbo_views_rss_item_elements() {
     'description' => t('An entity encoded element for HTML content.'),
     'help' => 'https://yandex.ru/dev/turbo/doc/rss/markup-docpage/',
     'preprocess functions' => array(
+      'views_rss_yandex_turbo_preprocess_item_turbo_content_gallery',
       'views_rss_yandex_turbo_preprocess_item_turbo_content',
       'views_rss_yandex_turbo_rewrite_absolute_paths',
       'views_rss_custom_rewrite_absolute_paths',
     ),
   );
-  $elements['turbo:content_gallery'] = array(
-    'description' => t('An entity encoded element for HTML gallery content.'),
-    'help' => 'https://yandex.ru/dev/turbo/doc/rss/markup-docpage/',
-    'preprocess functions' => array(
-      'views_rss_yandex_turbo_preprocess_item_turbo_content_gallery',
-      'views_rss_yandex_turbo_preprocess_item_turbo_content',
-      'views_rss_custom_rewrite_absolute_paths',
-      'views_rss_rewrite_relative_paths',
-    ),
-  );
-
   return $elements;
 }
 
@@ -119,7 +109,7 @@ function views_rss_yandex_turbo_preprocess_item_turbo_content(&$variables) {
 }
 
 /**
- * Preprocess function for item <turbo:content> element with large number of images.
+ * Preprocess function for item <turbo:content> element with the big number of images.
  */
 function views_rss_yandex_turbo_preprocess_item_turbo_content_gallery(&$variables) {
   // No value = no preprocessing.
@@ -132,7 +122,7 @@ function views_rss_yandex_turbo_preprocess_item_turbo_content_gallery(&$variable
   $html->load($variables['elements'][0]['value']);
 
   // Check, if there are enough images to form a gallery
-  $min_img_num = 4;
+  $min_img_num = 9;
   $imgs = $html->find('p img');
   $img_num = count($imgs);
   if ($img_num < $min_img_num) {
