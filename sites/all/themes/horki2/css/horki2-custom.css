@@ -10,24 +10,6 @@ body {
 
 
 /*
- * General Header Banner styles
- */
-
-.zone-header-banner-wrapper {
-    display: block;
-}
-
-.zone-header-banner {
-    width: 100% !important;
-    overflow: hidden;
-}
-
-.region-header-banner {
-    width: 100% !important;
-    margin: 0 !important;
-}
-
-/*
  * General Header styles
  */
 
@@ -315,12 +297,6 @@ html body.admin-menu .stickynav-active {
     font-size: 2.85em;
 }
 
-/* content banner */
-.block-40 {
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
 /* sidebar banner #1 */
 .block-42 .block-inner {
     border: 1px solid #DBDBDB;
@@ -457,12 +433,18 @@ html body.admin-menu .stickynav-active {
 .block-block-57 {
     display: block;
     border-bottom: 1px solid #DBDBDB;
-    padding-bottom: 15px;    
-    margin-bottom: 15px;    
+    padding-bottom: 20px;    
+    margin-bottom: 20px;    
 }
 
 .block-block-58 {
     display: none;
+}
+
+.block-svaboda {
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 /* last news */
@@ -475,17 +457,6 @@ html body.admin-menu .stickynav-active {
 
 .block-aposhnija-naviny-block-2 .view-content {
     min-height: 459px;
-}
-
-/* main page banners */
-.block-block-57 {
-    padding-bottom: 30px;    
-}
-
-.block-svaboda {
-    display: block;
-    text-align: center;
-    width: 100%;
 }
 
 /* news by regions */
