@@ -27,9 +27,9 @@ function views_local_problems_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '3600';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -187,7 +187,7 @@ function views_local_problems_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => '',
+    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
@@ -857,7 +857,7 @@ global $user;
     'local_problem' => 'local_problem',
   );
   $handler->display->display_options['block_description'] = 'Апошнія мясцовыя праблемы';
-  $handler->display->display_options['block_caching'] = '1';
+  $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Блок праблем карыстальніка */
   $handler = $view->new_display('block', 'Блок праблем карыстальніка', 'block_2');
@@ -1121,7 +1121,7 @@ global $user;
   $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
   $handler->display->display_options['block_description'] = 'Нявырашаныя мясцовыя праблемы, і тыя, якія не вырашаліся';
-  $handler->display->display_options['block_caching'] = '1';
+  $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Блок вырашаных праблем */
   $handler = $view->new_display('block', 'Блок вырашаных праблем', 'block_4');
@@ -1232,7 +1232,7 @@ global $user;
   $handler->display->display_options['filters']['field_problem_status_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_problem_status_tid']['vocabulary'] = 'local_problem_status';
   $handler->display->display_options['block_description'] = 'Вырашаныя мясцовыя праблемы';
-  $handler->display->display_options['block_caching'] = '1';
+  $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Блок звязаных мясцовых праблем */
   $handler = $view->new_display('block', 'Блок звязаных мясцовых праблем', 'block_5');
@@ -1241,7 +1241,11 @@ global $user;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'block-linked-local-problems';
   $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -1302,6 +1306,7 @@ global $user;
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $handler->display->display_options['block_caching'] = '4';
 
   /* Display: Блок праблем на галоўнай */
   $handler = $view->new_display('block', 'Блок праблем на галоўнай', 'block_6');
@@ -1379,9 +1384,20 @@ global $user;
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]"><img src="/sites/default/files/default_images/local_problem.png"></a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'image_style' => 'photo_video_preview',
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'article',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Статыстыка */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';

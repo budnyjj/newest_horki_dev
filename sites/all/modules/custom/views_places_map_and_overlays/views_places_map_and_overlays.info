@@ -1,7 +1,7 @@
 name = Views: places map and overlays
 core = 7.x
 package = Custom
-version = 7.x-1.3
+version = 7.x-1.4
 dependencies[] = ctools
 dependencies[] = openlayers_views
 dependencies[] = views

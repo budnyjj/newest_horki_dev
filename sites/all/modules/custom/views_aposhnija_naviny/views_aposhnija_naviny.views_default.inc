@@ -191,7 +191,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => '',
+    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',

@@ -30,9 +30,9 @@ function views_companies_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '3600';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
@@ -227,7 +227,7 @@ function views_companies_views_default_views() {
   $handler->display->display_options['fields']['field_company_photo']['type'] = 'picture';
   $handler->display->display_options['fields']['field_company_photo']['settings'] = array(
     'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => '',
+    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',

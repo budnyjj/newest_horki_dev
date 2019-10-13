@@ -28,9 +28,9 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '3600';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -735,7 +735,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = '<div class="description">
 <strong>Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.</strong>
-Наклад – 2350 асобнікаў на тыдзень.
+Наклад – 2550 асобнікаў на тыдзень.
 Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды, прыватныя аб\'явы, астрапрагноз і віншаванні.
 </div>';
   $handler->display->display_options['header']['area']['format'] = 'php_code';
@@ -870,7 +870,7 @@ function views_uzgorak_views_default_views() {
     t('Дадатак'),
     t('<div class="description">
 <strong>Абласная газета "УзГорак" выходзіць і прадаецца ў Горацкім, Дрыбінскім і Мсціслаўскім раёнах па чацвяргах.</strong>
-Наклад – 2350 асобнікаў на тыдзень.
+Наклад – 2550 асобнікаў на тыдзень.
 Актуальныя для мясцовых жыхароў тэмы, штотыднёвыя апытанні гараджан, фотарэпартажы, праграма любімых тэлеканалаў, сканворды, прыватныя аб\'явы, астрапрагноз і віншаванні.
 </div>'),
     t('<a href="[field_pdf_1]">Скачаць PDF</a>

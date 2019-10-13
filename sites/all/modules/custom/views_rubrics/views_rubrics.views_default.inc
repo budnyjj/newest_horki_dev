@@ -30,7 +30,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '300';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '3600';
+  $handler->display->display_options['cache']['output_lifespan'] = '300';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
@@ -243,7 +243,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
     'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => '',
+    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => '',
@@ -267,7 +267,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => '',
+    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',

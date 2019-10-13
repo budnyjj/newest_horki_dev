@@ -29,7 +29,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '300';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '3600';
+  $handler->display->display_options['cache']['output_lifespan'] = '300';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -137,9 +137,20 @@ function views_front_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['label'] = '';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'image_style' => 'main_pic_preview',
+    'picture_mapping' => 'highlight',
+    'fallback_image_style' => 'highlight_breakpoints_theme_horki2_fallback',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'article',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   $handler->display->display_options['fields']['field_pics']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_pics']['delta_offset'] = '0';
@@ -219,7 +230,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'highlight',
-    'fallback_image_style' => '',
+    'fallback_image_style' => 'highlight_breakpoints_theme_horki2_fallback',
     'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',

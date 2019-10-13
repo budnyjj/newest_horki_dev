@@ -26,23 +26,56 @@ function image_styles_article_default_picture_mapping() {
     'breakpoints.theme.horki2.desktop_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_desktop_narrow_1x',
+        'image_style' => 'article_breakpoints_theme_horki2_desktop_narrow',
       ),
     ),
     'breakpoints.theme.horki2.mobile_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_mobile_normal_1x',
+        'image_style' => 'article_breakpoints_theme_horki2_mobile_normal',
       ),
     ),
     'breakpoints.theme.horki2.mobile_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_mobile_narrow_1x',
+        'image_style' => 'article_breakpoints_theme_horki2_mobile_narrow',
       ),
     ),
   );
   $export['article'] = $picture_mapping;
+
+  $picture_mapping = new PictureMapping();
+  $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
+  $picture_mapping->api_version = 2;
+  $picture_mapping->label = 'Малюнак з лагатыпам для артыкула';
+  $picture_mapping->machine_name = 'article_with_logo';
+  $picture_mapping->breakpoint_group = 'horki2';
+  $picture_mapping->mapping = array(
+    'breakpoints.theme.horki2.desktop_normal' => array(
+      '1x' => array(
+        'mapping_type' => '_none',
+      ),
+    ),
+    'breakpoints.theme.horki2.desktop_narrow' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_with_logo_breakpoints_theme_horki2_desktop_narrow',
+      ),
+    ),
+    'breakpoints.theme.horki2.mobile_normal' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_with_logo_breakpoints_theme_horki2_mobile_normal',
+      ),
+    ),
+    'breakpoints.theme.horki2.mobile_narrow' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_with_logo_breakpoints_theme_horki2_mobile_narrow',
+      ),
+    ),
+  );
+  $export['article_with_logo'] = $picture_mapping;
 
   $picture_mapping = new PictureMapping();
   $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
@@ -54,29 +87,63 @@ function image_styles_article_default_picture_mapping() {
     'breakpoints.theme.horki2.desktop_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_desktop_normal_1x',
+        'image_style' => 'article_breakpoints_theme_horki2_desktop_normal',
       ),
     ),
     'breakpoints.theme.horki2.desktop_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_desktop_narrow_1x',
+        'image_style' => 'article_breakpoints_theme_horki2_desktop_narrow',
       ),
     ),
     'breakpoints.theme.horki2.mobile_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_mobile_normal_1x',
+        'image_style' => 'article_breakpoints_theme_horki2_mobile_normal',
       ),
     ),
     'breakpoints.theme.horki2.mobile_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_mobile_narrow_1x',
+        'image_style' => 'article_breakpoints_theme_horki2_mobile_narrow',
       ),
     ),
   );
   $export['wide'] = $picture_mapping;
+
+  $picture_mapping = new PictureMapping();
+  $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
+  $picture_mapping->api_version = 2;
+  $picture_mapping->label = 'Малюнак з лагатыпам для шырокіх старонак';
+  $picture_mapping->machine_name = 'wide_with_logo';
+  $picture_mapping->breakpoint_group = 'horki2';
+  $picture_mapping->mapping = array(
+    'breakpoints.theme.horki2.desktop_normal' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_with_logo_breakpoints_theme_horki2_desktop_normal',
+      ),
+    ),
+    'breakpoints.theme.horki2.desktop_narrow' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_with_logo_breakpoints_theme_horki2_desktop_narrow',
+      ),
+    ),
+    'breakpoints.theme.horki2.mobile_normal' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_with_logo_breakpoints_theme_horki2_mobile_normal',
+      ),
+    ),
+    'breakpoints.theme.horki2.mobile_narrow' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'article_with_logo_breakpoints_theme_horki2_mobile_narrow',
+      ),
+    ),
+  );
+  $export['wide_with_logo'] = $picture_mapping;
 
   return $export;
 }

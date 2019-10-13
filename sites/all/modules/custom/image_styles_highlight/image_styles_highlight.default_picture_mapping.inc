@@ -20,26 +20,25 @@ function image_styles_highlight_default_picture_mapping() {
   $picture_mapping->mapping = array(
     'breakpoints.theme.horki2.desktop_normal' => array(
       '1x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => 'highlight_breakpoints_theme_horki2_desktop_normal_1x',
+        'mapping_type' => '_none',
       ),
     ),
     'breakpoints.theme.horki2.desktop_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'highlight_breakpoints_theme_horki2_desktop_narrow_1x',
+        'image_style' => 'mediagrid_breakpoints_theme_horki2_desktop',
       ),
     ),
     'breakpoints.theme.horki2.mobile_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'highlight_breakpoints_theme_horki2_mobile_normal_1x',
+        'image_style' => 'highlight_breakpoints_theme_horki2_mobile_normal',
       ),
     ),
     'breakpoints.theme.horki2.mobile_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'highlight_breakpoints_theme_horki2_mobile_narrow_1x',
+        'image_style' => 'highlight_breakpoints_theme_horki2_mobile_narrow',
       ),
     ),
   );
