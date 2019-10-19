@@ -38,15 +38,6 @@
 <!-- SendPulse -->
 <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/ff43ffd7f1eab9f55eb2b7b70720d4b7_1.js" async></script>
 
-<!-- AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-7674021519504941",
-          enable_page_level_ads: true
-     });
-</script>
-
 </head>
 <body<?php print $attributes;?>>
   <div id="skip-link">
