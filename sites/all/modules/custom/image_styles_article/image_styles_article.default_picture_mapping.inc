@@ -25,20 +25,19 @@ function image_styles_article_default_picture_mapping() {
     ),
     'breakpoints.theme.horki2.desktop_narrow' => array(
       '1x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_desktop_narrow',
+        'mapping_type' => '_none',
       ),
     ),
     'breakpoints.theme.horki2.mobile_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_mobile_normal',
+        'image_style' => 'article_default',
       ),
     ),
     'breakpoints.theme.horki2.mobile_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_mobile_narrow',
+        'image_style' => 'article_mobile',
       ),
     ),
   );
@@ -58,20 +57,19 @@ function image_styles_article_default_picture_mapping() {
     ),
     'breakpoints.theme.horki2.desktop_narrow' => array(
       '1x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => 'article_with_logo_breakpoints_theme_horki2_desktop_narrow',
+        'mapping_type' => '_none',
       ),
     ),
     'breakpoints.theme.horki2.mobile_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_with_logo_breakpoints_theme_horki2_mobile_normal',
+        'image_style' => 'article_with_logo_default',
       ),
     ),
     'breakpoints.theme.horki2.mobile_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_with_logo_breakpoints_theme_horki2_mobile_narrow',
+        'image_style' => 'article_with_logo_mobile',
       ),
     ),
   );
@@ -87,25 +85,24 @@ function image_styles_article_default_picture_mapping() {
     'breakpoints.theme.horki2.desktop_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_desktop_normal',
+        'image_style' => 'article_wide',
       ),
     ),
     'breakpoints.theme.horki2.desktop_narrow' => array(
       '1x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_desktop_narrow',
+        'mapping_type' => '_none',
       ),
     ),
     'breakpoints.theme.horki2.mobile_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_mobile_normal',
+        'image_style' => 'article_default',
       ),
     ),
     'breakpoints.theme.horki2.mobile_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_breakpoints_theme_horki2_mobile_narrow',
+        'image_style' => 'article_mobile',
       ),
     ),
   );
@@ -121,25 +118,24 @@ function image_styles_article_default_picture_mapping() {
     'breakpoints.theme.horki2.desktop_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_with_logo_breakpoints_theme_horki2_desktop_normal',
+        'image_style' => 'article_with_logo_wide',
       ),
     ),
     'breakpoints.theme.horki2.desktop_narrow' => array(
       '1x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => 'article_with_logo_breakpoints_theme_horki2_desktop_narrow',
+        'mapping_type' => '_none',
       ),
     ),
     'breakpoints.theme.horki2.mobile_normal' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_with_logo_breakpoints_theme_horki2_mobile_normal',
+        'image_style' => 'article_with_logo_default',
       ),
     ),
     'breakpoints.theme.horki2.mobile_narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'article_with_logo_breakpoints_theme_horki2_mobile_narrow',
+        'image_style' => 'article_with_logo_mobile',
       ),
     ),
   );

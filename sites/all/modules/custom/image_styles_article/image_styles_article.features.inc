@@ -20,9 +20,25 @@ function image_styles_article_ctools_plugin_api($module = NULL, $api = NULL) {
 function image_styles_article_image_default_styles() {
   $styles = array();
 
-  // Exported image style: article_breakpoints_theme_horki2_desktop_narrow.
-  $styles['article_breakpoints_theme_horki2_desktop_narrow'] = array(
-    'label' => 'article_breakpoints_theme_horki2_desktop_narrow',
+  // Exported image style: article_colorbox.
+  $styles['article_colorbox'] = array(
+    'label' => 'article_colorbox',
+    'effects' => array(
+      61 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1200,
+          'height' => 800,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: article_default.
+  $styles['article_default'] = array(
+    'label' => 'article_default',
     'effects' => array(
       72 => array(
         'name' => 'image_scale',
@@ -44,38 +60,14 @@ function image_styles_article_image_default_styles() {
     ),
   );
 
-  // Exported image style: article_breakpoints_theme_horki2_desktop_normal.
-  $styles['article_breakpoints_theme_horki2_desktop_normal'] = array(
-    'label' => 'article_breakpoints_theme_horki2_desktop_normal',
-    'effects' => array(
-      79 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => 1200,
-          'height' => '',
-          'upscale' => 0,
-        ),
-        'weight' => 1,
-      ),
-      126 => array(
-        'name' => 'coloractions_convert',
-        'data' => array(
-          'format' => 'image/webp',
-          'quality' => 75,
-        ),
-        'weight' => 3,
-      ),
-    ),
-  );
-
-  // Exported image style: article_breakpoints_theme_horki2_fallback_narrow.
-  $styles['article_breakpoints_theme_horki2_fallback_narrow'] = array(
-    'label' => 'article_breakpoints_theme_horki2_fallback_narrow',
+  // Exported image style: article_default_fallback.
+  $styles['article_default_fallback'] = array(
+    'label' => 'article_default_fallback',
     'effects' => array(
       129 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 894,
+          'width' => 447,
           'height' => '',
           'upscale' => 0,
         ),
@@ -93,99 +85,6 @@ function image_styles_article_image_default_styles() {
         'name' => 'canvasactions_interlace',
         'data' => array(),
         'weight' => 3,
-      ),
-    ),
-  );
-
-  // Exported image style: article_breakpoints_theme_horki2_fallback_normal.
-  $styles['article_breakpoints_theme_horki2_fallback_normal'] = array(
-    'label' => 'article_breakpoints_theme_horki2_fallback_normal',
-    'effects' => array(
-      132 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => 1200,
-          'height' => '',
-          'upscale' => 0,
-        ),
-        'weight' => 1,
-      ),
-      134 => array(
-        'name' => 'coloractions_convert',
-        'data' => array(
-          'format' => 'image/jpeg',
-          'quality' => 75,
-        ),
-        'weight' => 3,
-      ),
-      135 => array(
-        'name' => 'canvasactions_interlace',
-        'data' => array(),
-        'weight' => 3,
-      ),
-    ),
-  );
-
-  // Exported image style: article_breakpoints_theme_horki2_mobile_narrow.
-  $styles['article_breakpoints_theme_horki2_mobile_narrow'] = array(
-    'label' => 'article_breakpoints_theme_horki2_mobile_narrow',
-    'effects' => array(
-      73 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => 400,
-          'height' => '',
-          'upscale' => 0,
-        ),
-        'weight' => 1,
-      ),
-      127 => array(
-        'name' => 'coloractions_convert',
-        'data' => array(
-          'format' => 'image/webp',
-          'quality' => 75,
-        ),
-        'weight' => 3,
-      ),
-    ),
-  );
-
-  // Exported image style: article_breakpoints_theme_horki2_mobile_normal.
-  $styles['article_breakpoints_theme_horki2_mobile_normal'] = array(
-    'label' => 'article_breakpoints_theme_horki2_mobile_normal',
-    'effects' => array(
-      82 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => 918,
-          'height' => '',
-          'upscale' => 0,
-        ),
-        'weight' => 1,
-      ),
-      128 => array(
-        'name' => 'coloractions_convert',
-        'data' => array(
-          'format' => 'image/webp',
-          'quality' => 75,
-        ),
-        'weight' => 3,
-      ),
-    ),
-  );
-
-  // Exported image style: article_colorbox.
-  $styles['article_colorbox'] = array(
-    'label' => 'article_colorbox',
-    'effects' => array(
-      61 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => 1200,
-          'height' => 800,
-          'upscale' => 0,
-        ),
-        'weight' => 1,
       ),
     ),
   );
@@ -220,9 +119,86 @@ function image_styles_article_image_default_styles() {
     ),
   );
 
-  // Exported image style: article_with_logo_breakpoints_theme_horki2_desktop_narrow.
-  $styles['article_with_logo_breakpoints_theme_horki2_desktop_narrow'] = array(
-    'label' => 'article_with_logo_breakpoints_theme_horki2_desktop_narrow',
+  // Exported image style: article_mobile.
+  $styles['article_mobile'] = array(
+    'label' => 'article_mobile',
+    'effects' => array(
+      73 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 400,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+      127 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/webp',
+          'quality' => 75,
+        ),
+        'weight' => 3,
+      ),
+    ),
+  );
+
+  // Exported image style: article_wide.
+  $styles['article_wide'] = array(
+    'label' => 'article_wide',
+    'effects' => array(
+      79 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1200,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+      126 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/webp',
+          'quality' => 75,
+        ),
+        'weight' => 3,
+      ),
+    ),
+  );
+
+  // Exported image style: article_wide_fallback.
+  $styles['article_wide_fallback'] = array(
+    'label' => 'article_wide_fallback',
+    'effects' => array(
+      132 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 600,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+      134 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/jpeg',
+          'quality' => 75,
+        ),
+        'weight' => 3,
+      ),
+      135 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
+        'weight' => 3,
+      ),
+    ),
+  );
+
+  // Exported image style: article_with_logo_default.
+  $styles['article_with_logo_default'] = array(
+    'label' => 'article_with_logo_default',
     'effects' => array(
       69 => array(
         'name' => 'image_scale',
@@ -240,7 +216,7 @@ function image_styles_article_image_default_styles() {
           'ypos' => 12,
           'alpha' => 100,
           'scale' => '',
-          'path' => 'private://images/watermark/copyright_desktop_narrow.png',
+          'path' => 'private://images/watermark/copyright_default.png',
         ),
         'weight' => 2,
       ),
@@ -255,49 +231,14 @@ function image_styles_article_image_default_styles() {
     ),
   );
 
-  // Exported image style: article_with_logo_breakpoints_theme_horki2_desktop_normal.
-  $styles['article_with_logo_breakpoints_theme_horki2_desktop_normal'] = array(
-    'label' => 'article_with_logo_breakpoints_theme_horki2_desktop_normal',
-    'effects' => array(
-      68 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => 1200,
-          'height' => '',
-          'upscale' => 0,
-        ),
-        'weight' => 0,
-      ),
-      75 => array(
-        'name' => 'canvasactions_file2canvas',
-        'data' => array(
-          'xpos' => 'right + 20',
-          'ypos' => 17,
-          'alpha' => 100,
-          'scale' => '',
-          'path' => 'private://images/watermark/copyright_desktop_normal.png',
-        ),
-        'weight' => 2,
-      ),
-      137 => array(
-        'name' => 'coloractions_convert',
-        'data' => array(
-          'format' => 'image/webp',
-          'quality' => 75,
-        ),
-        'weight' => 4,
-      ),
-    ),
-  );
-
-  // Exported image style: article_with_logo_breakpoints_theme_horki2_fallback_narrow.
-  $styles['article_with_logo_breakpoints_theme_horki2_fallback_narrow'] = array(
-    'label' => 'article_with_logo_breakpoints_theme_horki2_fallback_narrow',
+  // Exported image style: article_with_logo_default_fallback.
+  $styles['article_with_logo_default_fallback'] = array(
+    'label' => 'article_with_logo_default_fallback',
     'effects' => array(
       140 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 894,
+          'width' => 447,
           'height' => '',
           'upscale' => 0,
         ),
@@ -306,11 +247,11 @@ function image_styles_article_image_default_styles() {
       141 => array(
         'name' => 'canvasactions_file2canvas',
         'data' => array(
-          'xpos' => 'right + 15',
-          'ypos' => 12,
+          'xpos' => 'right + 8',
+          'ypos' => 6,
           'alpha' => 100,
           'scale' => '',
-          'path' => 'private://images/watermark/copyright_desktop_narrow.png',
+          'path' => 'private://images/watermark/copyright_default_fallback.png',
         ),
         'weight' => 2,
       ),
@@ -330,49 +271,9 @@ function image_styles_article_image_default_styles() {
     ),
   );
 
-  // Exported image style: article_with_logo_breakpoints_theme_horki2_fallback_normal.
-  $styles['article_with_logo_breakpoints_theme_horki2_fallback_normal'] = array(
-    'label' => 'article_with_logo_breakpoints_theme_horki2_fallback_normal',
-    'effects' => array(
-      143 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => 1200,
-          'height' => '',
-          'upscale' => 0,
-        ),
-        'weight' => 0,
-      ),
-      144 => array(
-        'name' => 'canvasactions_file2canvas',
-        'data' => array(
-          'xpos' => 'right + 20',
-          'ypos' => 17,
-          'alpha' => 100,
-          'scale' => '',
-          'path' => 'private://images/watermark/copyright_desktop_normal.png',
-        ),
-        'weight' => 2,
-      ),
-      147 => array(
-        'name' => 'coloractions_convert',
-        'data' => array(
-          'format' => 'image/jpeg',
-          'quality' => 75,
-        ),
-        'weight' => 3,
-      ),
-      145 => array(
-        'name' => 'canvasactions_interlace',
-        'data' => array(),
-        'weight' => 4,
-      ),
-    ),
-  );
-
-  // Exported image style: article_with_logo_breakpoints_theme_horki2_mobile_narrow.
-  $styles['article_with_logo_breakpoints_theme_horki2_mobile_narrow'] = array(
-    'label' => 'article_with_logo_breakpoints_theme_horki2_mobile_narrow',
+  // Exported image style: article_with_logo_mobile.
+  $styles['article_with_logo_mobile'] = array(
+    'label' => 'article_with_logo_mobile',
     'effects' => array(
       71 => array(
         'name' => 'image_scale',
@@ -390,7 +291,7 @@ function image_styles_article_image_default_styles() {
           'ypos' => 5,
           'alpha' => 100,
           'scale' => '',
-          'path' => 'private://images/watermark/copyright_mobile_narrow.png',
+          'path' => 'private://images/watermark/copyright_mobile.png',
         ),
         'weight' => 2,
       ),
@@ -405,36 +306,76 @@ function image_styles_article_image_default_styles() {
     ),
   );
 
-  // Exported image style: article_with_logo_breakpoints_theme_horki2_mobile_normal.
-  $styles['article_with_logo_breakpoints_theme_horki2_mobile_normal'] = array(
-    'label' => 'article_with_logo_breakpoints_theme_horki2_mobile_normal',
+  // Exported image style: article_with_logo_wide.
+  $styles['article_with_logo_wide'] = array(
+    'label' => 'article_with_logo_wide',
     'effects' => array(
-      70 => array(
+      68 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 918,
+          'width' => 1200,
           'height' => '',
           'upscale' => 0,
         ),
         'weight' => 0,
       ),
-      76 => array(
+      75 => array(
         'name' => 'canvasactions_file2canvas',
         'data' => array(
-          'xpos' => 'right + 17',
-          'ypos' => 13,
+          'xpos' => 'right + 20',
+          'ypos' => 17,
           'alpha' => 100,
           'scale' => '',
-          'path' => 'private://images/watermark/copyright_mobile_normal.png',
+          'path' => 'private://images/watermark/copyright_wide.png',
         ),
         'weight' => 2,
       ),
-      139 => array(
+      137 => array(
         'name' => 'coloractions_convert',
         'data' => array(
           'format' => 'image/webp',
           'quality' => 75,
         ),
+        'weight' => 4,
+      ),
+    ),
+  );
+
+  // Exported image style: article_with_logo_wide_fallback.
+  $styles['article_with_logo_wide_fallback'] = array(
+    'label' => 'article_with_logo_wide_fallback',
+    'effects' => array(
+      143 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 600,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+      144 => array(
+        'name' => 'canvasactions_file2canvas',
+        'data' => array(
+          'xpos' => 'right + 10',
+          'ypos' => 9,
+          'alpha' => 100,
+          'scale' => '',
+          'path' => 'private://images/watermark/copyright_wide_fallback.png',
+        ),
+        'weight' => 2,
+      ),
+      147 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/jpeg',
+          'quality' => 75,
+        ),
+        'weight' => 3,
+      ),
+      145 => array(
+        'name' => 'canvasactions_interlace',
+        'data' => array(),
         'weight' => 4,
       ),
     ),
