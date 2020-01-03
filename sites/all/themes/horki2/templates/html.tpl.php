@@ -35,9 +35,6 @@
 <!-- Yandex Direct -->
 <script src="/sites/all/themes/horki2/js/adfox_loader.js" crossorigin="anonymous"></script>
 
-<!-- SendPulse -->
-<script charset="UTF-8" src="//cdn.sendpulse.com/js/push/ff43ffd7f1eab9f55eb2b7b70720d4b7_1.js" async></script>
-
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
