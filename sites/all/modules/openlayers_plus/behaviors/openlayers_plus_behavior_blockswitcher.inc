@@ -66,7 +66,7 @@ class openlayers_plus_behavior_blockswitcher extends openlayers_behavior {
     drupal_add_js('misc/jquery.cookie.js','file');
     if ($this->options['enabled']) {
       $block = module_invoke('openlayers_plus', 'block_view', 'blockswitcher');
-      $this->options['block'] = drupal_render($block);
+      $this->options['block'] = drupal_render($block['content']);
     }
     return $this->options;
   }
