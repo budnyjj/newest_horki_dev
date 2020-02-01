@@ -5,6 +5,92 @@
  * General styles
  */
 
+/* Font definitions */
+@font-face {
+  font-family: 'PTSans';
+  src: url('/sites/all/themes/horki2/fonts/PTSans/pts55.eot');
+  src: url('/sites/all/themes/horki2/fonts/PTSans/pts55.eot?#iefix')         format('embedded-opentype'),
+       url('/sites/all/themes/horki2/fonts/PTSans/pts55.woff2')              format('woff2'),
+       url('/sites/all/themes/horki2/fonts/PTSans/pts55.woff')               format('woff'),
+       url('/sites/all/themes/horki2/fonts/PTSans/pts55.ttf')                format('truetype'),
+       url('/sites/all/themes/horki2/fonts/PTSans/pts55.svg#PTSans')         format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('/sites/all/themes/horki2/fonts/PTSans/pts75.eot');
+  src: url('/sites/all/themes/horki2/fonts/PTSans/pts75.eot?#iefix')         format('embedded-opentype'),
+       url('/sites/all/themes/horki2/fonts/PTSans/pts75.woff2')              format('woff2'),
+       url('/sites/all/themes/horki2/fonts/PTSans/pts75.woff')               format('woff'),
+       url('/sites/all/themes/horki2/fonts/PTSans/pts75.ttf')                format('truetype'),
+       url('/sites/all/themes/horki2/fonts/PTSans/pts75.svg#PTSans')         format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'PTSans Caption';
+  src: url('/sites/all/themes/horki2/fonts/PTSans/ptc55.eot');
+  src: url('/sites/all/themes/horki2/fonts/PTSans/ptc55.eot?#iefix')         format('embedded-opentype'),
+       url('/sites/all/themes/horki2/fonts/PTSans/ptc55.woff2')              format('woff2'),
+       url('/sites/all/themes/horki2/fonts/PTSans/ptc55.woff')               format('woff'),
+       url('/sites/all/themes/horki2/fonts/PTSans/ptc55.ttf')                format('truetype'),
+       url('/sites/all/themes/horki2/fonts/PTSans/ptc55.svg#PTSans-Caption') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PTSans Caption';
+  src: url('/sites/all/themes/horki2/fonts/PTSans/ptc75.eot');
+  src: url('/sites/all/themes/horki2/fonts/PTSans/ptc75.eot?#iefix')         format('embedded-opentype'),
+       url('/sites/all/themes/horki2/fonts/PTSans/ptc75.woff2')              format('woff2'),
+       url('/sites/all/themes/horki2/fonts/PTSans/ptc75.woff')               format('woff'),
+       url('/sites/all/themes/horki2/fonts/PTSans/ptc75.ttf')                format('truetype'),
+       url('/sites/all/themes/horki2/fonts/PTSans/ptc75.svg#PTSans-Caption') format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url('/sites/all/themes/horki2/fonts/PTSerif/ptf55.eot');
+  src: url('/sites/all/themes/horki2/fonts/PTSerif/ptf55.eot?#iefix')         format('embedded-opentype'),
+       url('/sites/all/themes/horki2/fonts/PTSerif/ptf55.woff2')              format('woff2'),
+       url('/sites/all/themes/horki2/fonts/PTSerif/ptf55.woff')               format('woff'),
+       url('/sites/all/themes/horki2/fonts/PTSerif/ptf55.ttf')                format('truetype'),
+       url('/sites/all/themes/horki2/fonts/PTSerif/ptf55.svg#PTSerif')        format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url('/sites/all/themes/horki2/fonts/PTSerif/ptf75.eot');
+  src: url('/sites/all/themes/horki2/fonts/PTSerif/ptf75.eot?#iefix')         format('embedded-opentype'),
+       url('/sites/all/themes/horki2/fonts/PTSerif/ptf75.woff2')              format('woff2'),
+       url('/sites/all/themes/horki2/fonts/PTSerif/ptf75.woff')               format('woff'),
+       url('/sites/all/themes/horki2/fonts/PTSerif/ptf75.ttf')                format('truetype'),
+       url('/sites/all/themes/horki2/fonts/PTSerif/ptf75.svg#PTSerif')        format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'UniversCondC';
+  src: url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.eot');
+  src: url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.eot?#iefix')  format('embedded-opentype'),
+       url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.woff2')       format('woff2'),
+       url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.woff')        format('woff'),
+       url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.ttf')         format('truetype'),
+       url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.svg#PTSerif') format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Element styles */
 body {
     font-size: 14px;
     font-family: 'PTSans', sans-serif;
@@ -288,7 +374,7 @@ html body.admin-menu {
 }
 
 .mobile-menu-item-text {
-    list-style: none outside none;    
+    list-style: none outside none;
     margin: 0;
 }
 
@@ -342,7 +428,7 @@ html body.admin-menu {
 
 .mobile-menu-item-viber a {
     content: url('/sites/default/files/icons/social/viber.svg');
-} 
+}
 
 .mobile-menu-item-instagram a {
     content: url('/sites/default/files/icons/social/instagram.svg');
