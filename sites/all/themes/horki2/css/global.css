@@ -78,18 +78,6 @@
   font-weight: bold;
 }
 
-@font-face {
-  font-family: 'UniversCondC';
-  src: url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.eot');
-  src: url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.eot?#iefix')  format('embedded-opentype'),
-       url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.woff2')       format('woff2'),
-       url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.woff')        format('woff'),
-       url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.ttf')         format('truetype'),
-       url('/sites/all/themes/horki2/fonts/UniversCondC/universcondcb.svg#PTSerif') format('svg');
-  font-style: normal;
-  font-weight: bold;
-}
-
 /* Element styles */
 body {
     font-size: 14px;

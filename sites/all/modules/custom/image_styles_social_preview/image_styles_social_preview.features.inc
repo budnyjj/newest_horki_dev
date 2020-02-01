@@ -6,32 +6,6 @@
  */
 
 /**
- * Implements hook_fontyourface_features_default_font().
- */
-function image_styles_social_preview_fontyourface_features_default_font() {
-  return array(
-    'UniversCondC normal bold' => array(
-      'name' => 'UniversCondC normal bold',
-      'enabled' => 1,
-      'url' => 'http://localhost/#613236ddcc610e185923878d03eb7ca3',
-      'provider' => 'local_fonts',
-      'css_selector' => NULL,
-      'css_family' => 'UniversCondC',
-      'css_style' => 'normal',
-      'css_weight' => 'bold',
-      'css_fallbacks' => '',
-      'foundry' => '',
-      'foundry_url' => '',
-      'license' => '',
-      'license_url' => '',
-      'designer' => '',
-      'designer_url' => '',
-      'metadata' => 'a:2:{s:4:"path";s:73:"public://fontyourface/local_fonts/UniversCondC-normal-bold/stylesheet.css";s:8:"font_uri";a:1:{s:8:"truetype";s:76:"public://fontyourface/local_fonts/UniversCondC-normal-bold/universcondcb.ttf";}}',
-    ),
-  );
-}
-
-/**
  * Implements hook_image_default_styles().
  */
 function image_styles_social_preview_image_default_styles() {
@@ -88,7 +62,7 @@ if ($field) {
 }
 ',
           'text_case' => 'none',
-          'fontfile' => 'public://fontyourface/local_fonts/UniversCondC-normal-bold/universcondcb.ttf',
+          'fontfile' => 'sites/all/themes/horki2/fonts/UniversCondC/universcondcb.ttf',
           'size' => 62,
           'RGB' => array(
             'HEX' => '#fcfcfc',
@@ -102,9 +76,12 @@ if ($field) {
         ),
         'weight' => 4,
       ),
-      107 => array(
-        'name' => 'canvasactions_interlace',
-        'data' => array(),
+      148 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/webp',
+          'quality' => 75,
+        ),
         'weight' => 5,
       ),
     ),
@@ -161,7 +138,7 @@ if ($field) {
 }
 ',
           'text_case' => 'none',
-          'fontfile' => 'public://fontyourface/local_fonts/UniversCondC-normal-bold/universcondcb.ttf',
+          'fontfile' => 'sites/all/themes/horki2/fonts/UniversCondC/universcondcb.ttf',
           'size' => 33,
           'RGB' => array(
             'HEX' => '#fcfcfc',
@@ -175,9 +152,12 @@ if ($field) {
         ),
         'weight' => 4,
       ),
-      108 => array(
-        'name' => 'canvasactions_interlace',
-        'data' => array(),
+      149 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/jpeg',
+          'quality' => 75,
+        ),
         'weight' => 5,
       ),
     ),
@@ -234,7 +214,7 @@ if ($field) {
 }
 ',
           'text_case' => 'none',
-          'fontfile' => 'public://fontyourface/local_fonts/UniversCondC-normal-bold/universcondcb.ttf',
+          'fontfile' => 'sites/all/themes/horki2/fonts/UniversCondC/universcondcb.ttf',
           'size' => 54,
           'RGB' => array(
             'HEX' => '#fcfcfc',
@@ -248,9 +228,12 @@ if ($field) {
         ),
         'weight' => 4,
       ),
-      109 => array(
-        'name' => 'canvasactions_interlace',
-        'data' => array(),
+      150 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/webp',
+          'quality' => 75,
+        ),
         'weight' => 5,
       ),
     ),
@@ -307,7 +290,7 @@ if ($field) {
 }
 ',
           'text_case' => 'none',
-          'fontfile' => 'public://fontyourface/local_fonts/UniversCondC-normal-bold/universcondcb.ttf',
+          'fontfile' => 'sites/all/themes/horki2/fonts/UniversCondC/universcondcb.ttf',
           'size' => 29,
           'RGB' => array(
             'HEX' => '#fcfcfc',
@@ -321,10 +304,81 @@ if ($field) {
         ),
         'weight' => 4,
       ),
-      110 => array(
-        'name' => 'canvasactions_interlace',
-        'data' => array(),
+      151 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/webp',
+          'quality' => 75,
+        ),
         'weight' => 5,
+      ),
+    ),
+  );
+
+  // Exported image style: term_social_preview.
+  $styles['term_social_preview'] = array(
+    'label' => 'term_social_preview',
+    'effects' => array(
+      60 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 968,
+          'height' => 504,
+        ),
+        'weight' => 1,
+      ),
+      61 => array(
+        'name' => 'canvasactions_file2canvas',
+        'data' => array(
+          'xpos' => 0,
+          'ypos' => 0,
+          'alpha' => 50,
+          'scale' => '',
+          'path' => 'private://images/social_preview/overlay/default.png',
+        ),
+        'weight' => 2,
+      ),
+      62 => array(
+        'name' => 'canvasactions_file2canvas',
+        'data' => array(
+          'xpos' => 45,
+          'ypos' => 36,
+          'alpha' => 100,
+          'scale' => '',
+          'path' => 'private://images/social_preview/logo/default.png',
+        ),
+        'weight' => 3,
+      ),
+      63 => array(
+        'name' => 'image_effects_text',
+        'data' => array(
+          'text_source' => 'text',
+          'text' => '[term:name]',
+          'php' => 'if (!$image_context[\'entity\']) {
+  return \'No referring entity\';
+}
+$entity_type = \'node\';
+$field_name = \'my_field\';
+$entity = $image_context[\'entity\'];
+$field = field_get_items($entity_type, $entity, $field_name);
+if ($field) {
+  return isset($field[0][\'value\']) ? $field[0][\'value\'] : \'No field value\';
+}
+',
+          'text_case' => 'none',
+          'fontfile' => 'sites/all/themes/horki2/fonts/UniversCondC/universcondcb.ttf',
+          'size' => 56,
+          'RGB' => array(
+            'HEX' => '#fcfcfc',
+          ),
+          'alpha' => 100,
+          'xpos' => 45,
+          'ypos' => 135,
+          'halign' => 'left',
+          'valign' => 'top',
+          'angle' => 0,
+        ),
+        'weight' => 4,
       ),
     ),
   );
