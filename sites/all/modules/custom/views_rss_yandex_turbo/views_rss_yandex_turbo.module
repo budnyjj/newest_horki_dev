@@ -65,6 +65,12 @@ function views_rss_yandex_turbo_preprocess_item_turbo_content(&$variables) {
       $img->src = explode(' ', $img->srcset, 2)[0];
       $img->srcset = NULL;
     }
+    // Drop ?itok=... suffix from src
+    $img_src_itok_pos = strrpos($img->src, '?itok=');
+    if ($img_src_itok_pos) {
+      $img->src = substr($img->src, 0, $img_src_itok_pos);
+    }
+    // Fixup title
     if (isset($img->title)) {
       $title = $img->title;
       $img->title = NULL;
