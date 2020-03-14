@@ -10,11 +10,13 @@
  */
 function views_rss_custom_views_rss_item_elements() {
   $elements['custom:author'] = array(
-    'key' => 'author',
     'description' => t('An HTML with h3 class="text-signature" element to extract the author name from.'),
     'preprocess functions' => array('views_rss_custom_preprocess_item_custom_author'),
   );
-
+  $elements['custom:description'] = array(
+    'description' => t('A trimmed text or summary to extract the description from.'),
+    'preprocess functions' => array('views_rss_custom_preprocess_item_custom_description'),
+  );
   return $elements;
 }
 
@@ -27,6 +29,8 @@ function views_rss_custom_preprocess_item_custom_author(&$variables) {
     return;
   }
 
+  $max_length = 60;
+
   // Process content
   $html = new simple_html_dom();
   $html->load($variables['elements'][0]['value']);
@@ -37,13 +41,46 @@ function views_rss_custom_preprocess_item_custom_author(&$variables) {
     return;
   }
   $author = $author_html->plaintext;
-  if (mb_strlen($author) > 40) {
+  if (mb_strlen($author) > $max_length) {
     // Seems like not an author name
     $variables['elements'][0]['value'] = NULL;
     return;
   }
   $variables['elements'][0]['key'] = 'author';
   $variables['elements'][0]['value'] = $author;
+}
+
+/**
+ * Preprocess function for item <description> element.
+ */
+function views_rss_custom_preprocess_item_custom_description(&$variables) {
+  // No value = no preprocessing.
+  if (empty($variables['elements'][0]['value'])) {
+    return;
+  }
+
+  $min_length = 120;
+
+  // Process content
+  $value = $variables['elements'][0]['value'];
+  $processed_value = NULL;
+  if (mb_strlen($value) < $min_length) {
+    $processed_value = $value;
+  }
+
+  $pos = mb_strpos($value, '.', $min_length);
+  if ($pos) {
+    $processed_value = mb_substr($value, 0, $pos + 1);
+  }
+
+  $pos = mb_strrpos($value, '.');
+  if ($pos) {
+    $processed_value = mb_substr($value, 0, $pos + 1);
+  }
+
+  $variables['elements'][0]['key'] = 'description';
+  $variables['elements'][0]['value'] = '<![CDATA[' . $processed_value . ']]>';
+  $variables['elements'][0]['encoded'] = TRUE;
 }
 
 /**

@@ -9,23 +9,30 @@
  * Implements hook_views_rss_item_elements().
  */
 function views_rss_google_discover_views_rss_item_elements() {
-  $elements['discover:description'] = array(
-     'description' => t('Encoded item synopsis. Required by RSS specification.'),
+  $elements['discover:content:encoded'] = array(
+     'description' => t('Encoded item synopsis.'),
      'help' => 'https://support.google.com/news/publisher-center/answer/9545420?hl=en&ref_topic=9606804',
      'preprocess functions' => array(
-        'views_rss_google_discover_preprocess_item_discover_description_slideshow',
-        'views_rss_google_discover_preprocess_item_discover_description',
-     //   'views_rss_yandex_turbo_rewrite_absolute_paths',
+        'views_rss_google_discover_preprocess_item_discover_content_encoded_slideshow',
+        'views_rss_google_discover_preprocess_item_discover_content_encoded',
         'views_rss_custom_rewrite_absolute_paths',
      ),
+  );
+  $elements['discover:author'] = array(
+    'key' => 'author',
+    'description' => t('An HTML with h3 class="text-signature" element to extract the author name from.'),
+    'preprocess functions' => array(
+       'views_rss_custom_preprocess_item_custom_author',
+       'views_rss_google_discover_preprocess_item_discover_author',
+    ),
   );
   return $elements;
 }
 
 /**
- * Preprocess function for item <description> element.
+ * Preprocess function for item <content:encoded> element.
  */
-function views_rss_google_discover_preprocess_item_discover_description(&$variables) {
+function views_rss_google_discover_preprocess_item_discover_content_encoded(&$variables) {
   // No value = no preprocessing.
   if (empty($variables['elements'][0]['value'])) {
     return;
@@ -74,15 +81,15 @@ function views_rss_google_discover_preprocess_item_discover_description(&$variab
 
   $processed_value = $html->save();
 
-  $variables['elements'][0]['key'] = 'description';
+  $variables['elements'][0]['key'] = 'content:encoded';
   $variables['elements'][0]['value'] = '<![CDATA[' . $processed_value . ']]>';
   $variables['elements'][0]['encoded'] = TRUE;
 }
 
 /**
- * Preprocess function for item <description> element with the big number of images.
+ * Preprocess function for item <content:encoded> element with the big number of images.
  */
-function views_rss_google_discover_preprocess_item_discover_description_slideshow(&$variables) {
+function views_rss_google_discover_preprocess_item_discover_content_encoded_slideshow(&$variables) {
   // No value = no preprocessing.
   if (empty($variables['elements'][0]['value'])) {
     return;
@@ -152,7 +159,22 @@ function views_rss_google_discover_preprocess_item_discover_description_slidesho
 
   $processed_value = $html->save();
 
-  $variables['elements'][0]['key'] = 'description';
+  $variables['elements'][0]['key'] = 'content:encoded';
   $variables['elements'][0]['value'] = $processed_value;
   $variables['elements'][0]['encoded'] = TRUE;
+}
+
+/**
+ * Preprocess function for item <content:encoded> element.
+ */
+function views_rss_google_discover_preprocess_item_discover_author(&$variables) {
+  // No value = no preprocessing.
+  if (empty($variables['elements'][0]['value'])) {
+    return;
+  }
+
+  $processed_value = 'admin@horki.info (' . $variables['elements'][0]['value'] . ')';
+
+  $variables['elements'][0]['key'] = 'author';
+  $variables['elements'][0]['value'] = $processed_value;
 }
