@@ -32,6 +32,9 @@
   });
 </script>
 
+<!-- SendPulse -->
+<script charset="UTF-8" src="//web.webpushs.com/js/push/2d160ca9896cdd7e019723312a219d56_1.js" async></script>
+
 </head>
 <body<?php print $attributes;?>>
   <div id="skip-link">
