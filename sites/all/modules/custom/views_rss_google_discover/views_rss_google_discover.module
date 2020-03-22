@@ -10,29 +10,31 @@
  */
 function views_rss_google_discover_views_rss_item_elements() {
   $elements['discover:content:encoded'] = array(
-     'description' => t('Encoded item synopsis.'),
-     'help' => 'https://support.google.com/news/publisher-center/answer/9545420?hl=en&ref_topic=9606804',
-     'preprocess functions' => array(
-        'views_rss_google_discover_preprocess_item_discover_content_encoded_slideshow',
-        'views_rss_google_discover_preprocess_item_discover_content_encoded',
-        'views_rss_custom_rewrite_absolute_paths',
-     ),
+    'description' => t('Encoded item synopsis.'),
+    'help' => 'https://support.google.com/news/publisher-center/answer/9545420?hl=en&ref_topic=9606804',
+    'preprocess functions' => array(
+      'views_rss_google_discover_preprocess_item_discover_content_encoded_primary_image',
+      'views_rss_google_discover_preprocess_item_discover_content_encoded_slideshow',
+      'views_rss_google_discover_preprocess_item_discover_content_encoded',
+      'views_rss_custom_rewrite_absolute_paths',
+      'views_rss_custom_encode',
+    ),
   );
   $elements['discover:author'] = array(
     'key' => 'author',
     'description' => t('An HTML with h3 class="text-signature" element to extract the author name from.'),
     'preprocess functions' => array(
-       'views_rss_custom_preprocess_item_custom_author',
-       'views_rss_google_discover_preprocess_item_discover_author',
+      'views_rss_custom_preprocess_item_custom_author',
+      // 'views_rss_google_discover_preprocess_item_discover_author',
     ),
   );
   return $elements;
 }
 
 /**
- * Preprocess function for item <content:encoded> element.
+ * Preprocess function for item <content:encoded> element with the big number of images.
  */
-function views_rss_google_discover_preprocess_item_discover_content_encoded(&$variables) {
+function views_rss_google_discover_preprocess_item_discover_content_encoded_primary_image(&$variables) {
   // No value = no preprocessing.
   if (empty($variables['elements'][0]['value'])) {
     return;
@@ -41,55 +43,29 @@ function views_rss_google_discover_preprocess_item_discover_content_encoded(&$va
   // Process content
   $html = new simple_html_dom();
   $html->load($variables['elements'][0]['value']);
-  // Process images
-  foreach ($html->find('img') as $idx => $img) {
-    $img->width = NULL;
-    $img->height = NULL;
-    $img->alt = NULL;
-    $img->style = NULL;
-    $img->removeAttribute('data-picture-mapping');
-    // Replace src with srcset, if not set
-    if (isset($img->srcset) && !isset($img->src)) {
-      $img->src = explode(' ', $img->srcset, 2)[0];
-      $img->srcset = NULL;
-    }
-    // Drop ?itok=... suffix from src
-    $img_src_itok_pos = strrpos($img->src, '?itok=');
-    if ($img_src_itok_pos) {
-      $img->src = substr($img->src, 0, $img_src_itok_pos);
-    }
-    // Fixup title
-    if (isset($img->title)) {
-      $title = $img->title;
-      $img->title = NULL;
-      if (!empty($title)) {
-    	$img->outertext = '<figure>' . $img->outertext . '<figcaption>' . $title . '</figcaption>' . '</figure>';
+  // Setup primary image
+  $aux_img = $html->find('img', 0);
+  if (isset($aux_img)) {
+    // Setup and extract auxiliary image markup
+    $aux_img->class = 'type:primaryImage';
+    $aux_img_markup = '<p>' . $aux_img->outertext . '</p>';
+    $aux_img->outertext = '';
+
+    $native_img = $html->find('img', 1);
+    if (isset($native_img)) {
+      // There is already at least one native image in material
+      $native_img->class = 'type:primaryImage';
+    } else {
+      // Put auxiliary image after the first paragraph
+      $header = $html->find('p', 0);
+      if (isset($header)) {
+  	$header->outertext = $header->outertext . $aux_img_markup;
       }
     }
   }
-  // Remove author signature
-  $author = $html->find('h3[class=text-signature]', -1);
-  if (isset($author)) {
-    $author->outertext = '';
-  }
-  // Remove all unneeded attributes
-  foreach ($html->find('[id]') as $e) {
-    $e->id = NULL;
-  }
-  foreach ($html->find('[class]') as $e) {
-    if ($e->class != 'type:slideshow') {
-      $e->class = NULL;
-    }
-  }
-  foreach ($html->find('[style]') as $e) {
-    $e->style = NULL;
-  }
 
   $processed_value = $html->save();
-
-  $variables['elements'][0]['key'] = 'content:encoded';
-  $variables['elements'][0]['value'] = '<![CDATA[' . $processed_value . ']]>';
-  $variables['elements'][0]['encoded'] = TRUE;
+  $variables['elements'][0]['value'] = $processed_value;
 }
 
 /**
@@ -164,10 +140,69 @@ function views_rss_google_discover_preprocess_item_discover_content_encoded_slid
   }
 
   $processed_value = $html->save();
+  $variables['elements'][0]['value'] = $processed_value;
+}
 
+/**
+ * Preprocess function for item <content:encoded> element.
+ */
+function views_rss_google_discover_preprocess_item_discover_content_encoded(&$variables) {
+  // No value = no preprocessing.
+  if (empty($variables['elements'][0]['value'])) {
+    return;
+  }
+
+  // Process content
+  $html = new simple_html_dom();
+  $html->load($variables['elements'][0]['value']);
+  // Process images
+  foreach ($html->find('img') as $idx => $img) {
+    $img->width = NULL;
+    $img->height = NULL;
+    $img->alt = NULL;
+    $img->style = NULL;
+    $img->removeAttribute('data-picture-mapping');
+    // Replace src with srcset, if not set
+    if (isset($img->srcset) && !isset($img->src)) {
+      $img->src = explode(' ', $img->srcset, 2)[0];
+      $img->srcset = NULL;
+    }
+    // Drop ?itok=... suffix from src
+    $img_src_itok_pos = strrpos($img->src, '?itok=');
+    if ($img_src_itok_pos) {
+      $img->src = substr($img->src, 0, $img_src_itok_pos);
+    }
+    // Fixup title
+    if (isset($img->title)) {
+      $title = $img->title;
+      $img->title = NULL;
+      if (!empty($title)) {
+    	$img->outertext = '<figure>' . $img->outertext . '<figcaption>' . $title . '</figcaption>' . '</figure>';
+      }
+    }
+  }
+  // Remove author signature
+  $author = $html->find('h3[class=text-signature]', -1);
+  if (isset($author)) {
+    $author->outertext = '';
+  }
+  // Remove all unneeded attributes
+  foreach ($html->find('[id]') as $e) {
+    $e->id = NULL;
+  }
+  foreach ($html->find('[class]') as $e) {
+    if ($e->class != 'type:slideshow' 
+	&& $e->class != 'type:primaryImage') {
+      $e->class = NULL;
+    }
+  }
+  foreach ($html->find('[style]') as $e) {
+    $e->style = NULL;
+  }
+
+  $processed_value = $html->save();
   $variables['elements'][0]['key'] = 'content:encoded';
   $variables['elements'][0]['value'] = $processed_value;
-  $variables['elements'][0]['encoded'] = TRUE;
 }
 
 /**
@@ -180,7 +215,6 @@ function views_rss_google_discover_preprocess_item_discover_author(&$variables) 
   }
 
   $processed_value = 'admin@horki.info (' . $variables['elements'][0]['value'] . ')';
-
   $variables['elements'][0]['key'] = 'author';
   $variables['elements'][0]['value'] = $processed_value;
 }

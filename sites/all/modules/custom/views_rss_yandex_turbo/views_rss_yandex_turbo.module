@@ -36,81 +36,10 @@ function views_rss_yandex_turbo_views_rss_item_elements() {
       'views_rss_yandex_turbo_preprocess_item_turbo_content_gallery',
       'views_rss_yandex_turbo_preprocess_item_turbo_content',
       'views_rss_custom_rewrite_absolute_paths',
+      'views_rss_custom_encode',
     ),
   );
   return $elements;
-}
-
-/**
- * Preprocess function for item <turbo:content> element.
- */
-function views_rss_yandex_turbo_preprocess_item_turbo_content(&$variables) {
-  // No value = no preprocessing.
-  if (empty($variables['elements'][0]['value'])) {
-    return;
-  }
-
-  // Process content
-  $html = new simple_html_dom();
-  $html->load($variables['elements'][0]['value']);
-  // Process images
-  foreach ($html->find('img') as $idx => $img) {
-    $img->width = NULL;
-    $img->height = NULL;
-    $img->alt = NULL;
-    $img->style = NULL;
-    $img->removeAttribute('data-picture-mapping');
-    // Replace src with srcset, if not set
-    if (isset($img->srcset) && !isset($img->src)) {
-      $img->src = explode(' ', $img->srcset, 2)[0];
-      $img->srcset = NULL;
-    }
-    // Drop ?itok=... suffix from src
-    $img_src_itok_pos = strrpos($img->src, '?itok=');
-    if ($img_src_itok_pos) {
-      $img->src = substr($img->src, 0, $img_src_itok_pos);
-    }
-    // Fixup title
-    if (isset($img->title)) {
-      $title = $img->title;
-      $img->title = NULL;
-      if (!empty($title)) {
-	$img->outertext = '<figure>' . $img->outertext . '<figcaption>' . $title . '</figcaption>' . '</figure>';
-      }
-    }
-  }
-  // Remove author signature
-  $author = $html->find('h3[class=text-signature]', -1);
-  if (isset($author)) {
-    $author->outertext = '';
-  }
-  // Remove all unneeded attributes
-  foreach ($html->find('[id]') as $e) {
-    $e->id = NULL;
-  }
-  foreach ($html->find('[class]') as $e) {
-    $e->class = NULL;
-  }
-  foreach ($html->find('[style]') as $e) {
-    $e->style = NULL;
-  }
-
-  // setup banners
-  $top_banner = '<figure data-turbo-ad-id="content-top"></figure>';
-  $bottom_banner = '<figure data-turbo-ad-id="content-bottom"></figure>';
-  $header = $html->find('header', 0);
-  if (isset($header)) {
-    // put content banner after header
-    $header->outertext = $header->outertext . $top_banner;
-  } else {
-    // put content banner on top of content
-    $html->outertext = $top_banner . $html->outertext;
-  }
-  $processed_value = $html->save() . $bottom_banner;
-
-  $variables['elements'][0]['key'] = 'turbo:content';
-  $variables['elements'][0]['value'] = '<![CDATA[' . $processed_value . ']]>';
-  $variables['elements'][0]['encoded'] = TRUE;
 }
 
 /**
@@ -202,8 +131,76 @@ function views_rss_yandex_turbo_preprocess_item_turbo_content_gallery(&$variable
   }
 
   $processed_value = $html->save();
+  $variables['elements'][0]['value'] = $processed_value;
+}
+
+/**
+ * Preprocess function for item <turbo:content> element.
+ */
+function views_rss_yandex_turbo_preprocess_item_turbo_content(&$variables) {
+  // No value = no preprocessing.
+  if (empty($variables['elements'][0]['value'])) {
+    return;
+  }
+
+  // Process content
+  $html = new simple_html_dom();
+  $html->load($variables['elements'][0]['value']);
+  // Process images
+  foreach ($html->find('img') as $idx => $img) {
+    $img->width = NULL;
+    $img->height = NULL;
+    $img->alt = NULL;
+    $img->style = NULL;
+    $img->removeAttribute('data-picture-mapping');
+    // Replace src with srcset, if not set
+    if (isset($img->srcset) && !isset($img->src)) {
+      $img->src = explode(' ', $img->srcset, 2)[0];
+      $img->srcset = NULL;
+    }
+    // Drop ?itok=... suffix from src
+    $img_src_itok_pos = strrpos($img->src, '?itok=');
+    if ($img_src_itok_pos) {
+      $img->src = substr($img->src, 0, $img_src_itok_pos);
+    }
+    // Fixup title
+    if (isset($img->title)) {
+      $title = $img->title;
+      $img->title = NULL;
+      if (!empty($title)) {
+	$img->outertext = '<figure>' . $img->outertext . '<figcaption>' . $title . '</figcaption>' . '</figure>';
+      }
+    }
+  }
+  // Remove author signature
+  $author = $html->find('h3[class=text-signature]', -1);
+  if (isset($author)) {
+    $author->outertext = '';
+  }
+  // Remove all unneeded attributes
+  foreach ($html->find('[id]') as $e) {
+    $e->id = NULL;
+  }
+  foreach ($html->find('[class]') as $e) {
+    $e->class = NULL;
+  }
+  foreach ($html->find('[style]') as $e) {
+    $e->style = NULL;
+  }
+
+  // setup banners
+  $top_banner = '<figure data-turbo-ad-id="content-top"></figure>';
+  $bottom_banner = '<figure data-turbo-ad-id="content-bottom"></figure>';
+  $header = $html->find('header', 0);
+  if (isset($header)) {
+    // put content banner after header
+    $header->outertext = $header->outertext . $top_banner;
+  } else {
+    // put content banner on top of content
+    $html->outertext = $top_banner . $html->outertext;
+  }
+  $processed_value = $html->save() . $bottom_banner;
 
   $variables['elements'][0]['key'] = 'turbo:content';
   $variables['elements'][0]['value'] = $processed_value;
-  $variables['elements'][0]['encoded'] = TRUE;
 }

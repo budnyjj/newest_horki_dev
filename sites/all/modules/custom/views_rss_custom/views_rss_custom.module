@@ -15,7 +15,10 @@ function views_rss_custom_views_rss_item_elements() {
   );
   $elements['custom:description'] = array(
     'description' => t('A trimmed text or summary to extract the description from.'),
-    'preprocess functions' => array('views_rss_custom_preprocess_item_custom_description'),
+    'preprocess functions' => array(
+      'views_rss_custom_preprocess_item_custom_description',
+      'views_rss_custom_encode',
+    ),
   );
   return $elements;
 }
@@ -79,7 +82,16 @@ function views_rss_custom_preprocess_item_custom_description(&$variables) {
   }
 
   $variables['elements'][0]['key'] = 'description';
-  $variables['elements'][0]['value'] = '<![CDATA[' . $processed_value . ']]>';
+  $variables['elements'][0]['value'] = $processed_value;
+}
+
+function views_rss_custom_encode(&$variables) {
+  // No value = no preprocessing.
+  if (empty($variables['elements'][0]['value'])) {
+    return;
+  }
+
+  $variables['elements'][0]['value'] = '<![CDATA[' . $variables['elements'][0]['value'] . ']]>';
   $variables['elements'][0]['encoded'] = TRUE;
 }
 
