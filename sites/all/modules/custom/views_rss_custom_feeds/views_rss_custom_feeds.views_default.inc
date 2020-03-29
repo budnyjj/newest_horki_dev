@@ -1101,7 +1101,7 @@ function views_rss_custom_feeds_views_default_views() {
   /* Display: Навіны */
   $handler = $view->new_display('feed', 'Навіны', 'feed_discover_news');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'horki.info: апошнія навіны';
+  $handler->display->display_options['title'] = 'horki.info: навіны';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
@@ -1258,7 +1258,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'image_style' => 'article_default_fallback',
+    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'image_link' => '',
   );
   /* Поле: Змест: Тэкст */
@@ -1481,7 +1481,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'image_style' => 'article_default_fallback',
+    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'image_link' => '',
   );
   /* Поле: Змест: Тэкст */
@@ -1538,10 +1538,10 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['path'] = 'discover/afisha.xml';
   $handler->display->display_options['sitename_title'] = 0;
 
-  /* Display: Даведка */
-  $handler = $view->new_display('feed', 'Даведка', 'feed_discover_guide');
+  /* Display: Фоты */
+  $handler = $view->new_display('feed', 'Фоты', 'feed_discover_photos');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'horki.info: даведка';
+  $handler->display->display_options['title'] = 'horki.info: фоты';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
@@ -1603,7 +1603,7 @@ function views_rss_custom_feeds_views_default_views() {
     ),
     'discover' => array(
       'views_rss_google_discover' => array(
-        'content' => 'field_text',
+        'content' => 'nothing',
         'author' => 'field_text',
       ),
     ),
@@ -1690,13 +1690,6 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text_1']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Поле: Змест: Тэкст */
-  $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
-  $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
-  $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
-  $handler->display->display_options['fields']['field_text']['label'] = '';
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
-  $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
@@ -1705,9 +1698,17 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'image_style' => 'article_default_fallback',
+    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'image_link' => '',
   );
+  /* Поле: Змест: Тэкст */
+  $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
+  $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
+  $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
+  $handler->display->display_options['fields']['field_text']['label'] = '';
+  $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Фотаздымак і тэкст */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -1715,15 +1716,15 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фотаздымак і тэкст';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_pics]
-[field_text]
-';
+[field_text]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Node statistics: Recent count */
-  $handler->display->display_options['sorts']['recentcount']['id'] = 'recentcount';
-  $handler->display->display_options['sorts']['recentcount']['table'] = 'jstats_node';
-  $handler->display->display_options['sorts']['recentcount']['field'] = 'recentcount';
-  $handler->display->display_options['sorts']['recentcount']['order'] = 'DESC';
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
@@ -1740,10 +1741,517 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'info' => 'info',
+    'news' => 'news',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  $handler->display->display_options['path'] = 'discover/guide.xml';
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
+    0 => '56',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
+  /* Filter criterion: Змест: Экспарт у RSS для Яндэкса ды Google (field_export_rss_yandex_google) */
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['id'] = 'field_export_rss_yandex_google_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['table'] = 'field_data_field_export_rss_yandex_google';
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['field'] = 'field_export_rss_yandex_google_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['group'] = 1;
+  /* Filter criterion: Вузел: Published at */
+  $handler->display->display_options['filters']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['operator'] = '>=';
+  $handler->display->display_options['filters']['published_at']['value']['value'] = '-180 days';
+  $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
+  $handler->display->display_options['filters']['published_at']['group'] = 1;
+  $handler->display->display_options['path'] = 'discover/photos.xml';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Здарэнні */
+  $handler = $view->new_display('feed', 'Здарэнні', 'feed_discover_zdarenni');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'horki.info: здарэнні';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['namespaces'] = array(
+    'views_rss_custom' => array(
+      'custom' => '',
+    ),
+    'views_rss_google_discover' => array(
+      'discover' => '',
+    ),
+    'views_rss_yandex_zen' => array(
+      'zen' => '',
+    ),
+  );
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Свежие новости из Горок, Дрибина, Мстиславля, БГСХА. Апошнія навіны з Горак, Дрыбіна, Мсціслава, БДСГА.',
+        'language' => 'ru',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+    'yandex' => array(
+      'views_rss_yandex' => array(
+        'logo' => '',
+        'logo type=square' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => '',
+        'author' => '',
+        'category' => '',
+        'comments' => '',
+        'enclosure' => '',
+        'guid' => 'title',
+        'pubDate' => '',
+      ),
+    ),
+    'custom' => array(
+      'views_rss_custom' => array(
+        'author' => '',
+        'description' => 'field_text_1',
+      ),
+    ),
+    'discover' => array(
+      'views_rss_google_discover' => array(
+        'content' => 'nothing',
+        'author' => 'field_text',
+      ),
+    ),
+    'media' => array(
+      'views_rss_media' => array(
+        'content' => '',
+        'title' => '',
+        'description' => '',
+        'keywords' => '',
+        'thumbnail' => '',
+        'category' => '',
+      ),
+    ),
+    'yandex' => array(
+      'views_rss_yandex' => array(
+        'full-text' => '',
+        'genre' => '',
+        'tags' => '',
+        'online' => '',
+        'enclosure' => '',
+        'pdalink' => '',
+      ),
+    ),
+    'turbo' => array(
+      'views_rss_yandex_turbo' => array(
+        'source' => '',
+        'topic' => '',
+        'content' => '',
+      ),
+    ),
+    'zen' => array(
+      'views_rss_yandex_zen' => array(
+        'enclosure' => '',
+        'content' => '',
+      ),
+    ),
+    'content' => array(
+      'views_rss_content' => array(
+        'encoded' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Поле: Змест: Шлях */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Поле: Змест: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'r';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Змест: Апісанне */
+  $handler->display->display_options['fields']['field_text_1']['id'] = 'field_text_1';
+  $handler->display->display_options['fields']['field_text_1']['table'] = 'field_data_field_text';
+  $handler->display->display_options['fields']['field_text_1']['field'] = 'field_text';
+  $handler->display->display_options['fields']['field_text_1']['ui_name'] = 'Змест: Апісанне';
+  $handler->display->display_options['fields']['field_text_1']['label'] = '';
+  $handler->display->display_options['fields']['field_text_1']['alter']['max_length'] = '300';
+  $handler->display->display_options['fields']['field_text_1']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['field_text_1']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_text_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_text_1']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['field_text_1']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Поле: Змест: Галоўны фотаздымак */
+  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
+  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['settings'] = array(
+    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'image_link' => '',
+  );
+  /* Поле: Змест: Тэкст */
+  $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
+  $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
+  $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
+  $handler->display->display_options['fields']['field_text']['label'] = '';
+  $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
+  /* Поле: Фотаздымак і тэкст */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фотаздымак і тэкст';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_pics]
+[field_text]';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
+    0 => '3',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['operator_id'] = 'field_rubric_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['label'] = 'Рубрыкі (field_rubric_by_taxonomy)';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['operator'] = 'field_rubric_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['identifier'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
+  /* Filter criterion: Змест: Экспарт у RSS для Яндэкса ды Google (field_export_rss_yandex_google) */
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['id'] = 'field_export_rss_yandex_google_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['table'] = 'field_data_field_export_rss_yandex_google';
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['field'] = 'field_export_rss_yandex_google_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['group'] = 1;
+  /* Filter criterion: Вузел: Published at */
+  $handler->display->display_options['filters']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['operator'] = '>=';
+  $handler->display->display_options['filters']['published_at']['value']['value'] = '-180 days';
+  $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
+  $handler->display->display_options['filters']['published_at']['group'] = 1;
+  $handler->display->display_options['path'] = 'discover/incidents.xml';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Меркаванні */
+  $handler = $view->new_display('feed', 'Меркаванні', 'feed_discover_merkavanni');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'horki.info: здарэнні';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['namespaces'] = array(
+    'views_rss_custom' => array(
+      'custom' => '',
+    ),
+    'views_rss_google_discover' => array(
+      'discover' => '',
+    ),
+    'views_rss_yandex_zen' => array(
+      'zen' => '',
+    ),
+  );
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Свежие новости из Горок, Дрибина, Мстиславля, БГСХА. Апошнія навіны з Горак, Дрыбіна, Мсціслава, БДСГА.',
+        'language' => 'ru',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+    'yandex' => array(
+      'views_rss_yandex' => array(
+        'logo' => '',
+        'logo type=square' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => '',
+        'author' => '',
+        'category' => '',
+        'comments' => '',
+        'enclosure' => '',
+        'guid' => 'title',
+        'pubDate' => '',
+      ),
+    ),
+    'custom' => array(
+      'views_rss_custom' => array(
+        'author' => '',
+        'description' => 'field_text_1',
+      ),
+    ),
+    'discover' => array(
+      'views_rss_google_discover' => array(
+        'content' => 'nothing',
+        'author' => 'field_text',
+      ),
+    ),
+    'media' => array(
+      'views_rss_media' => array(
+        'content' => '',
+        'title' => '',
+        'description' => '',
+        'keywords' => '',
+        'thumbnail' => '',
+        'category' => '',
+      ),
+    ),
+    'yandex' => array(
+      'views_rss_yandex' => array(
+        'full-text' => '',
+        'genre' => '',
+        'tags' => '',
+        'online' => '',
+        'enclosure' => '',
+        'pdalink' => '',
+      ),
+    ),
+    'turbo' => array(
+      'views_rss_yandex_turbo' => array(
+        'source' => '',
+        'topic' => '',
+        'content' => '',
+      ),
+    ),
+    'zen' => array(
+      'views_rss_yandex_zen' => array(
+        'enclosure' => '',
+        'content' => '',
+      ),
+    ),
+    'content' => array(
+      'views_rss_content' => array(
+        'encoded' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Поле: Змест: Шлях */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Поле: Змест: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'r';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Змест: Апісанне */
+  $handler->display->display_options['fields']['field_text_1']['id'] = 'field_text_1';
+  $handler->display->display_options['fields']['field_text_1']['table'] = 'field_data_field_text';
+  $handler->display->display_options['fields']['field_text_1']['field'] = 'field_text';
+  $handler->display->display_options['fields']['field_text_1']['ui_name'] = 'Змест: Апісанне';
+  $handler->display->display_options['fields']['field_text_1']['label'] = '';
+  $handler->display->display_options['fields']['field_text_1']['alter']['max_length'] = '300';
+  $handler->display->display_options['fields']['field_text_1']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['field_text_1']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_text_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_text_1']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['field_text_1']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Поле: Змест: Галоўны фотаздымак */
+  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
+  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['settings'] = array(
+    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'image_link' => '',
+  );
+  /* Поле: Змест: Тэкст */
+  $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
+  $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
+  $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
+  $handler->display->display_options['fields']['field_text']['label'] = '';
+  $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
+  /* Поле: Фотаздымак і тэкст */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фотаздымак і тэкст';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_pics]
+[field_text]';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
+    0 => '5',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['operator_id'] = 'field_rubric_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['label'] = 'Рубрыкі (field_rubric_by_taxonomy)';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['operator'] = 'field_rubric_by_taxonomy_tid_op';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['identifier'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
+  /* Filter criterion: Змест: Экспарт у RSS для Яндэкса ды Google (field_export_rss_yandex_google) */
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['id'] = 'field_export_rss_yandex_google_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['table'] = 'field_data_field_export_rss_yandex_google';
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['field'] = 'field_export_rss_yandex_google_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['group'] = 1;
+  /* Filter criterion: Вузел: Published at */
+  $handler->display->display_options['filters']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['operator'] = '>=';
+  $handler->display->display_options['filters']['published_at']['value']['value'] = '-180 days';
+  $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
+  $handler->display->display_options['filters']['published_at']['group'] = 1;
+  $handler->display->display_options['path'] = 'discover/opinions.xml';
   $handler->display->display_options['sitename_title'] = 0;
   $translatables['rss_google_discover'] = array(
     t('Master'),
@@ -1755,7 +2263,7 @@ function views_rss_custom_feeds_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Навіны'),
-    t('horki.info: апошнія навіны'),
+    t('horki.info: навіны'),
     t('[field_pics]
 [field_text]'),
     t('Афіша'),
@@ -1763,8 +2271,12 @@ function views_rss_custom_feeds_views_default_views() {
     t('[field_pics]
 [field_text]
 '),
-    t('Даведка'),
-    t('horki.info: даведка'),
+    t('Фоты'),
+    t('horki.info: фоты'),
+    t('Здарэнні'),
+    t('horki.info: здарэнні'),
+    t('Рубрыкі (field_rubric_by_taxonomy)'),
+    t('Меркаванні'),
   );
   $export['rss_google_discover'] = $view;
 
