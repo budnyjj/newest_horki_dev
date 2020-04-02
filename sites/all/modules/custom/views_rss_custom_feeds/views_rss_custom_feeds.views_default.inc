@@ -1152,7 +1152,7 @@ function views_rss_custom_feeds_views_default_views() {
         'comments' => '',
         'enclosure' => '',
         'guid' => 'title',
-        'pubDate' => '',
+        'pubDate' => 'changed',
       ),
     ),
     'custom' => array(
@@ -1226,16 +1226,15 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Поле: Змест: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'r';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Змест: Абноўленая дата */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['label'] = '';
+  $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['changed']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['changed']['custom_date_format'] = 'r';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
   /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['field_text_1']['id'] = 'field_text_1';
   $handler->display->display_options['fields']['field_text_1']['table'] = 'field_data_field_text';
@@ -1267,7 +1266,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Фотаздымак і тэкст */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -1375,7 +1374,7 @@ function views_rss_custom_feeds_views_default_views() {
         'comments' => '',
         'enclosure' => '',
         'guid' => 'title',
-        'pubDate' => '',
+        'pubDate' => 'changed',
       ),
     ),
     'custom' => array(
@@ -1449,16 +1448,15 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Поле: Змест: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'r';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Змест: Абноўленая дата */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['label'] = '';
+  $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['changed']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['changed']['custom_date_format'] = 'r';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
   /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['field_text_1']['id'] = 'field_text_1';
   $handler->display->display_options['fields']['field_text_1']['table'] = 'field_data_field_text';
@@ -1490,7 +1488,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Фотаздымак і тэкст */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -1592,7 +1590,7 @@ function views_rss_custom_feeds_views_default_views() {
         'comments' => '',
         'enclosure' => '',
         'guid' => 'title',
-        'pubDate' => '',
+        'pubDate' => 'changed',
       ),
     ),
     'custom' => array(
@@ -1666,16 +1664,15 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Поле: Змест: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'r';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Змест: Абноўленая дата */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['label'] = '';
+  $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['changed']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['changed']['custom_date_format'] = 'r';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
   /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['field_text_1']['id'] = 'field_text_1';
   $handler->display->display_options['fields']['field_text_1']['table'] = 'field_data_field_text';
@@ -1707,7 +1704,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Фотаздымак і тэкст */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -1826,7 +1823,7 @@ function views_rss_custom_feeds_views_default_views() {
         'comments' => '',
         'enclosure' => '',
         'guid' => 'title',
-        'pubDate' => '',
+        'pubDate' => 'changed',
       ),
     ),
     'custom' => array(
@@ -1900,16 +1897,15 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Поле: Змест: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'r';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Змест: Абноўленая дата */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['label'] = '';
+  $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['changed']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['changed']['custom_date_format'] = 'r';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
   /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['field_text_1']['id'] = 'field_text_1';
   $handler->display->display_options['fields']['field_text_1']['table'] = 'field_data_field_text';
@@ -1941,7 +1937,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Фотаздымак і тэкст */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -2067,7 +2063,7 @@ function views_rss_custom_feeds_views_default_views() {
         'comments' => '',
         'enclosure' => '',
         'guid' => 'title',
-        'pubDate' => '',
+        'pubDate' => 'changed',
       ),
     ),
     'custom' => array(
@@ -2141,16 +2137,15 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Поле: Змест: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'r';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Поле: Змест: Абноўленая дата */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['label'] = '';
+  $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['changed']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['changed']['custom_date_format'] = 'r';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
   /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['field_text_1']['id'] = 'field_text_1';
   $handler->display->display_options['fields']['field_text_1']['table'] = 'field_data_field_text';
@@ -2182,7 +2177,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Фотаздымак і тэкст */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -2495,7 +2490,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Змест: Месцы */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
@@ -2713,7 +2708,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Змест: Месцы */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
@@ -2937,7 +2932,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Змест: Месцы */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
@@ -3144,7 +3139,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <br> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Поле: Змест: Месцы */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
