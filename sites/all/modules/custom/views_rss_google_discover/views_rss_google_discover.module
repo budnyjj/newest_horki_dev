@@ -184,7 +184,7 @@ function views_rss_google_discover_preprocess_item_discover_content_encoded(&$va
   // Process iframes
   foreach ($html->find('iframe') as $idx => $iframe) {
     $iframe->width = 560;
-    $iframe->height = 320;
+    $iframe->height = 315;
     // remove url parameters from src
     $iframe->src = strtok($iframe->src, '?');
     $iframe->removeAttribute('allowfullscreen');
