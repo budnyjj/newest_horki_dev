@@ -174,11 +174,12 @@ function views_rss_yandex_turbo_preprocess_item_turbo_content(&$variables) {
   }
   // Process iframes
   foreach ($html->find('iframe') as $idx => $iframe) {
-    $iframe->width = '100%';
-    $iframe->height = 320;
+    $iframe->width = 560;
+    $iframe->height = 315;
     // remove url parameters from src
     $iframe->src = strtok($iframe->src, '?');
     $iframe->setAttribute('allowfullscreen', '"true"');
+    $iframe->setAttribute('referrerpolicy', 'origin');
   }
   // Remove author signature
   $author = $html->find('h3[class=text-signature]', -1);
