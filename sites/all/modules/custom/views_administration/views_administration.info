@@ -1,0 +1,10 @@
+name = Views: administration
+core = 7.x
+package = Custom
+version = 7.x-1.0
+dependencies[] = field_group
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = admin_views_taxonomy
+features_exclude[dependencies][ctools] = ctools

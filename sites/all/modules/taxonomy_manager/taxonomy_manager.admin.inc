@@ -2212,9 +2212,10 @@ function taxonomy_manager_switch($tids, $from_voc, $to_voc, $parents = array()) 
     $children = taxonomy_get_tree($from_voc, $tid);
     $terms_to_switch = array();
     foreach ($children as $child) {
-      $terms_to_switch[] = $child->tid;
+      // Use tid as key to avoid duplicate terms from multiple-parent hierarchies.
+      $terms_to_switch[$child->tid] = $child->tid;
     }
-    $terms_to_switch[] = $tid;
+    $terms_to_switch[$tid] = $tid;
 
     db_update('taxonomy_term_data')
       ->fields(array('vid' => $to_voc))
@@ -2242,6 +2243,7 @@ function taxonomy_manager_switch($tids, $from_voc, $to_voc, $parents = array()) 
     }
     taxonomy_manager_move($parents, array($tid));
     taxonomy_manager_update_voc($to_voc, $parents);
+    taxonomy_manager_update_fields($terms_to_switch, $from_voc, $to_voc);
   }
   //TODO invoke update hook!!
   taxonomy_terms_static_reset();
@@ -2689,6 +2691,122 @@ function taxonomy_manager_autocomplete_load($vid, $tags_typed = '') {
   drupal_json_output($matches);
 }
 
+/**
+ * Finds what fields are refering to terms that are being moved across
+ * vocabularies, and updates those fields accordingly.
+ */
+function taxonomy_manager_update_fields($tids, $source_vid, $dest_vid) {
+  // Find affected field instances.
+  $source_fields = _taxonomy_manager_get_field_map($source_vid);
+  $dest_fields = _taxonomy_manager_get_field_map($dest_vid);
+
+  // Map each source field with one or more destination fields.
+  $map = array();
+  foreach ($source_fields as $source_field_name => $source_field_info) {
+    foreach ($source_field_info['bundles'] as $entity_type => $bundles) {
+      foreach ($bundles as $bundle) {
+        // Empty array will indicate that no destination field was found.
+        $map[$entity_type][$bundle][$source_field_name] = array(); 
+        foreach ($dest_fields as $dest_field_name => $dest_field_info) {
+          if (isset($dest_field_info['bundles'][$entity_type]) && in_array($bundle, $dest_field_info['bundles'][$entity_type])) {
+            // Found a field that is associated with the destination vocabulary
+            // in the same bundle as the source field.
+            $map[$entity_type][$bundle][$source_field_name][] = $dest_field_name;
+          }
+        }
+      }
+    }
+  }
+
+  // Find the entities that are using the moved terms.
+  foreach ($tids as $tid) {
+    foreach (array_keys($source_fields) as $source_field_name) {
+      $query = new EntityFieldQuery();
+      $query->fieldCondition($source_field_name, 'tid', $tid);
+      $result = $query->execute();
+      foreach ($result as $entity_type => $entities) {
+        foreach (array_keys($entities) as $entity_id) {
+          _taxonomy_manager_update_entity_fields($entity_type, $entity_id, $map, $tid);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Moves $tids from their source field in the specified entity to their
+ * destination field(s).
+ *
+ * WARNING: If there are no destination fields for a given source field, the
+ * term gets deleted from the source field.
+ *
+ * @param $entity_type
+ *   Type of the entity to modify.
+ * @param $entity_id
+ *   Id of the entity to modify.
+ * @param $map
+ *   Map of source fields to destination fields. 
+ * @param $tid
+ *   Term to move.
+ */
+function _taxonomy_manager_update_entity_fields($entity_type, $entity_id, $map, $tid) {
+  $updated = FALSE;
+  $entity = entity_load_single($entity_type, $entity_id);
+  list(, , $bundle) = entity_extract_ids($entity_type, $entity);
+  if (isset($map[$entity_type][$bundle])) {
+    // For each destination field associated with a source field.
+    foreach ($map[$entity_type][$bundle] as $source_field_name => $dest_fields) {
+      if (isset($entity->$source_field_name)) {
+        // And for each language.
+        foreach ($entity->$source_field_name as $language => $items) {
+          foreach ($entity->{$source_field_name}[$language] as $delta => $item) {
+            if ($item['tid'] == $tid) {
+              // Add term to destination field(s).
+              foreach ($dest_fields as $dest_field_name) {
+                if ($dest_field_name) {
+                  $entity->{$dest_field_name}[$language][] = $item;
+                }
+              }
+              // Remove term from source field.
+              unset($entity->{$source_field_name}[$language][$delta]);
+              $updated = TRUE;
+            }
+          }
+        }
+      }
+    }
+    if ($updated) {
+      entity_save($entity_type, $entity);
+    }
+  }
+}
+  
+/**
+ * Returns a map of all taxonomy fields that are configured for the specified
+ * vocabulary.
+ *
+ * @return An array that follows the same structure as returned by
+ * field_info_field_map().
+ */
+function _taxonomy_manager_get_field_map($vid) {
+  $all_fields_map = field_info_field_map();
+  $vocabulary = taxonomy_vocabulary_load($vid);
+  $taxonomy_fields = field_read_fields(array('type' => 'taxonomy_term_reference'));
+
+  $map = array();
+  foreach ($taxonomy_fields as $field_name => $field_info) {
+    foreach ($field_info['settings']['allowed_values'] as $allowed_value) {
+      if ($allowed_value['vocabulary'] == $vocabulary->machine_name) {
+        // Found a field that is using our vocabulary.
+        if (isset($all_fields_map[$field_name])) {
+          $map[$field_name] = $all_fields_map[$field_name];
+        }
+      }
+    }
+  }
+
+  return $map;
+}
 
 /**
  * theme function for taxonomy manager form
