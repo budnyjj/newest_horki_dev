@@ -513,16 +513,13 @@ ul.tabs li.active a {
 }
 
 .page-node .block-61,
-.page-taxonomy .block-61 {
+.page-taxonomy .block-61,
+.page-newshtml .block-61,
+.page-photoshtml .block-61,
+.page-afishahtml .block-61 {
     padding-top: 20px;
     margin-top: 20px;
     border-top: 1px solid #DBDBDB;
-}
-
-.context-peoplehtml .block-61 {
-    padding-top: 0;
-    margin-top: 0;
-    border-top: none;
 }
 
 /* sidebar banner #1 */
@@ -2509,7 +2506,6 @@ ul.tabs li.active a {
 }
 
 /* main guide node */
-.context-guidehtml #page-title,
 .context-guidehtml .field-name-field-text {
     display: none;
 }
