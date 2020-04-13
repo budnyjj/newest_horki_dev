@@ -333,7 +333,7 @@ function content_type_afisha_field_default_field_instances() {
     'bundle' => 'afisha',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Напрыклад, інтэрв\'ю, здарэнні, культура, фотаблог, відэаблог...',
+    'description' => 'Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -765,7 +765,7 @@ function content_type_afisha_field_default_field_instances() {
   t('Дзе');
   t('Калi');
   t('Месца');
-  t('Напрыклад, інтэрв\'ю, здарэнні, культура, фотаблог, відэаблог...');
+  t('Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...');
   t('Неабавязковыя тэгі, напрыклад, карупцыя, выбары-2012...');
   t('Падзяліцца');
   t('Рубрыкі');

@@ -74,6 +74,7 @@ function views_news_lists_views_default_views() {
   /* Display: Афіша */
   $handler = $view->new_display('page', 'Афіша', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Афіша';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
   $handler->display->display_options['display_description'] = 'Афiша';
@@ -1700,6 +1701,7 @@ function views_news_lists_views_default_views() {
   /* Display: Старонка */
   $handler = $view->new_display('page', 'Старонка', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Фотаблог';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;

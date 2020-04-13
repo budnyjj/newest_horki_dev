@@ -588,7 +588,7 @@ function content_type_news_from_readers_field_default_field_instances() {
     'bundle' => 'news_from_readers',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -627,9 +627,7 @@ function content_type_news_from_readers_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'maxlength_js_label' => 'Тэкст будзе абрэзаны да @limit сімвалаў, засталося <strong>@remaining</strong>.',
-      ),
+      'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 10,
     ),
@@ -883,6 +881,7 @@ function content_type_news_from_readers_field_default_field_instances() {
   t('Дэфолтны здымак на старонцы рубрыкі');
   t('Малюнак');
   t('Месцы');
+  t('Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...');
   t('Падзяліцца');
   t('Рубрыкі');
   t('Тэкст');

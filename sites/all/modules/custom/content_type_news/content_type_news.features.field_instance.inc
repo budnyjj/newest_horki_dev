@@ -174,6 +174,7 @@ function content_type_news_field_default_field_instances() {
           'slideshow_colorbox_slideshow_speed' => 4000,
           'slideshow_colorbox_speed' => 350,
           'slideshow_colorbox_transition' => 'elastic',
+          'slideshow_content_type' => 'image',
           'slideshow_controls' => 1,
           'slideshow_controls_pause' => 0,
           'slideshow_controls_position' => 'after',
@@ -189,6 +190,7 @@ function content_type_news_field_default_field_instances() {
           'slideshow_speed' => 1000,
           'slideshow_start_on_hover' => 0,
           'slideshow_timeout' => 4000,
+          'slideshow_view_mode' => 'full',
         ),
         'type' => 'slideshow',
         'weight' => 3,
@@ -212,6 +214,7 @@ function content_type_news_field_default_field_instances() {
           'slideshow_colorbox_slideshow_speed' => 4000,
           'slideshow_colorbox_speed' => 350,
           'slideshow_colorbox_transition' => 'elastic',
+          'slideshow_content_type' => 'image',
           'slideshow_controls' => 0,
           'slideshow_controls_pause' => 0,
           'slideshow_controls_position' => 'after',
@@ -227,6 +230,7 @@ function content_type_news_field_default_field_instances() {
           'slideshow_speed' => 1000,
           'slideshow_start_on_hover' => 0,
           'slideshow_timeout' => 0,
+          'slideshow_view_mode' => 'full',
         ),
         'type' => 'slideshow',
         'weight' => 1,
@@ -538,7 +542,7 @@ function content_type_news_field_default_field_instances() {
     'bundle' => 'news',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Напрыклад, інтэрв\'ю, здарэнні, культура, фотаблог, відэаблог...',
+    'description' => 'Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -762,7 +766,7 @@ function content_type_news_field_default_field_instances() {
   t('Дадатковыя тэгі');
   t('Месцы');
   t('Напрыклад, Горкі, Дрыбін, БДСГА...');
-  t('Напрыклад, інтэрв\'ю, здарэнні, культура, фотаблог, відэаблог...');
+  t('Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...');
   t('Неабавязковыя тэгі, напрыклад, карупцыя, выбары-2012...');
   t('Падзяліцца');
   t('Рубрыкі');

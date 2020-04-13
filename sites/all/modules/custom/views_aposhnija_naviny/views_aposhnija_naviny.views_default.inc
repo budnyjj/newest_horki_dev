@@ -93,6 +93,7 @@ function views_aposhnija_naviny_views_default_views() {
   /* Display: Старонка */
   $handler = $view->new_display('page', 'Старонка', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Апошнія навіны';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
@@ -1006,6 +1007,7 @@ function views_aposhnija_naviny_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Старонка'),
+    t('Апошнія навіны'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),

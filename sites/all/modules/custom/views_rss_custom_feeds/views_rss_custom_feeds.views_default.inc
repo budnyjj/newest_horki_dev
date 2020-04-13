@@ -2009,10 +2009,10 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['path'] = 'discover/incidents.xml';
   $handler->display->display_options['sitename_title'] = 0;
 
-  /* Display: Меркаванні */
-  $handler = $view->new_display('feed', 'Меркаванні', 'feed_discover_merkavanni');
+  /* Display: Людзі */
+  $handler = $view->new_display('feed', 'Людзі', 'feed_discover_merkavanni');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'horki.info: здарэнні';
+  $handler->display->display_options['title'] = 'horki.info: людзі';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
@@ -2219,7 +2219,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
-    0 => '5',
+    0 => '180',
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['expose']['operator_id'] = 'field_rubric_by_taxonomy_tid_op';
@@ -2246,7 +2246,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['published_at']['value']['value'] = '-180 days';
   $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
   $handler->display->display_options['filters']['published_at']['group'] = 1;
-  $handler->display->display_options['path'] = 'discover/opinions.xml';
+  $handler->display->display_options['path'] = 'discover/people.xml';
   $handler->display->display_options['sitename_title'] = 0;
   $translatables['rss_google_discover'] = array(
     t('Master'),
@@ -2271,7 +2271,8 @@ function views_rss_custom_feeds_views_default_views() {
     t('Здарэнні'),
     t('horki.info: здарэнні'),
     t('Рубрыкі (field_rubric_by_taxonomy)'),
-    t('Меркаванні'),
+    t('Людзі'),
+    t('horki.info: людзі'),
   );
   $export['rss_google_discover'] = $view;
 
