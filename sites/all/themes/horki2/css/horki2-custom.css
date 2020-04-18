@@ -227,8 +227,7 @@ html body.admin-menu {
     display: block;
 }
 
-.block-menu-mobile-anonymous-mobile,
-.block-menu-mobile-registered-mobile {
+.block-menu-main-mobile {
     display: none;
 }
 
@@ -268,12 +267,11 @@ html body.admin-menu .stickynav-active {
     color: #FFFFFF;
 }
 
-.main-menu li.first > a {
-    padding-left: 0;
-}
-
-.main-menu li.last > a {
-    padding-right: 0;
+.main-menu .menu-4062,
+.main-menu .menu-4318,
+.main-menu .menu-4317,
+.main-menu .menu-4311 {
+    display: none;
 }
 
 .main-menu li > a:hover,
