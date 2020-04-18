@@ -278,9 +278,13 @@ html body.admin-menu .stickynav-active {
 
 .main-menu li > a:hover,
 .main-menu li > a:active,
-.main-menu .active-trail a {
+.main-menu li > a.active {
     text-decoration: none;
     color: #AEAEAE;
+}
+
+.page-main .main-menu li > a.active {
+    color: #FFFFFF;
 }
 
 

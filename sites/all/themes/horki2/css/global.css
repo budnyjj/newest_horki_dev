@@ -377,9 +377,14 @@ html body.admin-menu {
 }
 
 .mobile-menu-item-text a:hover,
-.mobile-menu-item-text a:active {
+.mobile-menu-item-text a:active,
+.mobile-menu-item-text a.active {
     text-decoration: none;
     color: #AEAEAE;
+}
+
+.page-main .mobile-menu-item-text a.active {
+    color: #FFFFFF;
 }
 
 .mobile-menu-item-text-first {
