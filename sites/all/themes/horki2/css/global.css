@@ -396,10 +396,6 @@ html body.admin-menu {
     color: #AEAEAE;
 }
 
-.page-main .mobile-menu-body > .leaf a.active {
-    color: #FFFFFF;
-}
-
 .mobile-menu-container-icons {
     position: absolute;
     left: 0;
