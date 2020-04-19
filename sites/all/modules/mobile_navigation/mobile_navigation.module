@@ -142,9 +142,10 @@ function mobile_navigation_page_build(&$page) {
       $display_name = get_display_name_from_id($display_id);
       // Render Menu
       $menu_tree = menu_tree_output(menu_tree_all_data($menu_name));
-	  $menu_tree['#cache'] = array(
-        'cid' => 'mobile_navigation_'.$menu_name,
+      $menu_tree['#cache'] = array(
+        'keys' => array('mobile_navigation', $menu_name),
         'bin' => 'cache',
+        'granularity' => DRUPAL_CACHE_PER_PAGE,
       );
       $menu = drupal_render($menu_tree);
       $id = $menu_name . '_' . $display_name;
