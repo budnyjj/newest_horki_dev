@@ -338,6 +338,10 @@ html body.admin-menu {
     height: 0;
 }
 
+.main-menu-item-highlight {
+    background-color: #505050;
+}
+
 .block-menu-main-mobile {
     position: absolute;
     top: 0;

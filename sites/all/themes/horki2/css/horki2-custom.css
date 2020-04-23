@@ -300,7 +300,8 @@ html body.admin-menu .stickynav-active {
 .page-afishahtml #page-title,
 .context-incidentshtml #page-title,
 .context-peoplehtml #page-title,
-.context-guidehtml #page-title {
+.context-guidehtml #page-title,
+.context-antivirushtml #page-title {
     display: none;
 }
 
@@ -309,7 +310,8 @@ html body.admin-menu .stickynav-active {
 .page-photoshtml .block-61,
 .page-afishahtml .block-61,
 .context-incidentshtml .block-61,
-.context-peoplehtml .block-61 {
+.context-peoplehtml .block-61,
+.context-antivirushtml .block-61 {
     padding-top: 0;
     margin-top: 0;
     border-top: none;

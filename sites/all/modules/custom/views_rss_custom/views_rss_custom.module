@@ -57,32 +57,33 @@ function views_rss_custom_preprocess_item_custom_author(&$variables) {
  * Preprocess function for item <description> element.
  */
 function views_rss_custom_preprocess_item_custom_description(&$variables) {
+  $variables['elements'][0]['key'] = 'description';
+
   // No value = no preprocessing.
-  if (empty($variables['elements'][0]['value'])) {
+  $value = $variables['elements'][0]['value'];
+  if (empty($value)) {
     return;
   }
 
   $min_length = 120;
-
-  // Process content
-  $value = $variables['elements'][0]['value'];
-  $processed_value = NULL;
-  if (mb_strlen($value) < $min_length) {
-    $processed_value = $value;
+  if (mb_strlen($value) <= $min_length) {
+    // nothing to do, it's already short enough
+    return;
   }
 
   $pos = mb_strpos($value, '.', $min_length);
   if ($pos) {
-    $processed_value = mb_substr($value, 0, $pos + 1);
+    $variables['elements'][0]['value'] = mb_substr($value, 0, $pos + 1);
+    return;
   }
 
   $pos = mb_strrpos($value, '.');
   if ($pos) {
-    $processed_value = mb_substr($value, 0, $pos + 1);
+    $variables['elements'][0]['value'] = mb_substr($value, 0, $pos + 1);
+    return;
   }
 
-  $variables['elements'][0]['key'] = 'description';
-  $variables['elements'][0]['value'] = $processed_value;
+  $variables['elements'][0]['value'] = NULL;
 }
 
 function views_rss_custom_encode(&$variables) {
@@ -117,11 +118,11 @@ function views_rss_custom_rewrite_absolute_paths(&$variables) {
         // Value is a string, so just process it.
         else {
 	  $quoted_slash = preg_quote($base_path, '/');
-          $pattern = '/(src|href)=(\'|")' 
+          $pattern = '/(src|href)=(\'|")'
 	      . $quoted_slash
 	      . '([^' . $quoted_slash . '])'
               . '/';
-          $replacement = '$1=$2' 
+          $replacement = '$1=$2'
               . url('<front>', array('absolute' => TRUE))
 	      . '$3';
           $variables['elements'][$delta]['value'] = preg_replace($pattern, $replacement, $element['value']);
