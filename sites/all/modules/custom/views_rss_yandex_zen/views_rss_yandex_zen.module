@@ -9,18 +9,60 @@
  * Implements hook_views_rss_item_elements().
  */
 function views_rss_yandex_zen_views_rss_item_elements() {
+  $elements['zen:author'] = array(
+    'description' => t('An HTML with h3 class="text-signature" element to extract the author name from.'),
+    'preprocess functions' => array('views_rss_yandex_zen_preprocess_item_custom_author'),
+  );
   $elements['zen:enclosure'] = array(
     'description' => t('The node content to extract enclosures from.'),
     'help' => 'https://yandex.ru/support/zen/website/rss-modify.html',
-    'preprocess functions' => array('views_rss_yandex_zen_preprocess_item_zen_enclosure'),
+    'preprocess functions' => array(
+      'views_rss_custom_rewrite_absolute_paths',
+      'views_rss_yandex_zen_preprocess_item_zen_enclosure',
+    ),
   );
   $elements['zen:content:encoded'] = array(
     'description' => t('The node content to extract enclosures from.'),
     'help' => 'https://yandex.ru/support/zen/website/rss-modify.html',
-    'preprocess functions' => array('views_rss_yandex_zen_preprocess_item_zen_content_encoded'),
+    'preprocess functions' => array(
+      'views_rss_yandex_zen_preprocess_item_zen_content_encoded',
+      'views_rss_custom_rewrite_absolute_paths',
+      'views_rss_custom_encode',
+    ),
   );
 
   return $elements;
+}
+
+/**
+ * Preprocess function for item <author> element.
+ */
+function views_rss_yandex_zen_preprocess_item_custom_author(&$variables) {
+  // No value = no preprocessing.
+  if (empty($variables['elements'][0]['value'])) {
+    return;
+  }
+
+  $variables['elements'][0]['key'] = 'author';
+  $default_author = 'horki.info';
+  $max_length = 60;
+
+  // Process content
+  $html = new simple_html_dom();
+  $html->load($variables['elements'][0]['value']);
+  // Extract author name from content
+  $author_html = $html->find('h3[class=text-signature]', -1);
+  if (!isset($author_html)) {
+    $variables['elements'][0]['value'] = $default_author;
+    return;
+  }
+  $author = $author_html->plaintext;
+  if (mb_strlen($author) > $max_length) {
+    // Seems like not an author name
+    $variables['elements'][0]['value'] = $default_author;
+    return;
+  }
+  $variables['elements'][0]['value'] = $author;
 }
 
 /**
@@ -41,16 +83,23 @@ function views_rss_yandex_zen_preprocess_item_zen_enclosure(&$variables) {
     $variables['elements'][0]['value'] = NULL;
     return;
   }
+  $img_urls = array();
   foreach ($imgs as $idx => $img) {
     $img_url = NULL;
     // Locate image URL
     if (isset($img->src)) {
-      $img_url = $img->srcset;
+      $img_url = $img->src;
     } else if (isset($img->srcset)) {
       $img_url = $img->srcset;
     } else {
       continue;
     }
+    // Remove url parameters from src
+    $img_urls[] = strtok($img_url, '?');
+  }
+  // Remove duplicates
+  $unique_img_urls = array_unique($img_urls);
+  foreach ($unique_img_urls as $idx => $img_url) {
     $variables['elements'][$idx]['key'] = 'enclosure';
     $variables['elements'][$idx]['attributes']['url'] = $img_url;
     $variables['elements'][$idx]['attributes']['type'] = 'image/jpeg';
@@ -69,13 +118,19 @@ function views_rss_yandex_zen_preprocess_item_zen_content_encoded(&$variables) {
   $html->load($variables['elements'][0]['value']);
   // Process images
   foreach ($html->find('img') as $img) {
+    $img->width = NULL;
+    $img->height = NULL;
     $img->alt = NULL;
+    $img->style = NULL;
     $img->removeAttribute('data-picture-mapping');
     // Replace src with srcset, if not set
     if (isset($img->srcset) && !isset($img->src)) {
       $img->src = $img->srcset;
     }
     $img->srcset = NULL;
+    // Remove url parameters from src
+    $img->src = strtok($img->src, '?');
+    // Set title if needed
     if (isset($img->title)) {
       $title = $img->title;
       $img->title = NULL;
@@ -97,6 +152,5 @@ function views_rss_yandex_zen_preprocess_item_zen_content_encoded(&$variables) {
   $processed_value = $html->save();
 
   $variables['elements'][0]['key'] = 'content:encoded';
-  $variables['elements'][0]['value'] = '<![CDATA[' . $processed_value . ']]>';
-  $variables['elements'][0]['encoded'] = TRUE;
+  $variables['elements'][0]['value'] = $processed_value;
 }
