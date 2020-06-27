@@ -105,7 +105,7 @@ Disallow: /node/*
 Disallow: /taxonomy/term/*
 Disallow: /user/* 
 
-# Disallow all URL variables except for page
+# Disallow all URL variables except for page and images
 Disallow: /*?
 Allow: /*?page=
 Disallow: /*?page=*&*

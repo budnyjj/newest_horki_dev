@@ -1092,12 +1092,12 @@ ul.tabs li.active a {
     padding: 20px;
 }
 
-#block-views-aposhnija-naviny-block-3 .block-inner {
+#block-views-aposhnija-naviny-block-popular .block-inner {
 	border: 1px solid #dbdbdb;
 	padding: 20px
 }
 
-#block-views-aposhnija-naviny-block-3{
+#block-views-aposhnija-naviny-block-popular {
 	margin-bottom: 20px;
 }
 
@@ -1495,12 +1495,12 @@ ul.tabs li.active a {
 
 /* news blocks */
 .block-aposhnija-naviny-block-1,
-.block-aposhnija-naviny-block-3 {
+.block-aposhnija-naviny-block-popular {
     margin-bottom: 20px;
 }
 
 .block-aposhnija-naviny-block-1 .block-inner,
-.block-aposhnija-naviny-block-3 .block-inner {
+.block-aposhnija-naviny-block-popular .block-inner {
     border: 1px solid #DBDBDB;
     padding: 20px;
 }
