@@ -306,6 +306,10 @@ html body.admin-menu .stickynav-active {
 }
 
 /* content banner */
+.block-block-61 {
+    height: 120px;
+}
+
 .page-newshtml .block-61,
 .page-photoshtml .block-61,
 .page-afishahtml .block-61,
@@ -319,12 +323,14 @@ html body.admin-menu .stickynav-active {
 
 /* sidebar banner #1 */
 .block-42 .block-inner {
+    height: 760px;
     border: 1px solid #DBDBDB;
     padding: 20px;
 }
 
 /* sidebar banner #2 */
 .block-41 .block-inner {
+    height: 400px;
     border: 1px solid #DBDBDB;
     padding: 20px;
 }
@@ -453,6 +459,7 @@ html body.admin-menu .stickynav-active {
 .block-block-57 {
     display: block;
     border-bottom: 1px solid #DBDBDB;
+    height: 120px;
     padding-bottom: 20px;    
     margin-bottom: 20px;    
 }
@@ -703,6 +710,11 @@ html body.admin-menu .stickynav-active {
 
 .node .group-tags {
     width: 50%;
+}
+
+/* inner node banners */
+.block-block-59 {
+    height: 293px;
 }
 
 
