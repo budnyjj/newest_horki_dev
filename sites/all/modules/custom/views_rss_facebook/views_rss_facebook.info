@@ -1,0 +1,8 @@
+name = "Views RSS: Facebook Elements"
+description = "Provides Facebook item elements for Views RSS."
+package = Views
+dependencies[] = views_rss
+dependencies[] = views_rss_core
+dependencies[] = views_rss_custom
+dependencies[] = simplehtmldom
+core = 7.x
