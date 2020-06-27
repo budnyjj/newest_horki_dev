@@ -15,6 +15,7 @@
 <meta name="google-site-verification" content="mc_80mJ1g2ulo7wFCZyPg9_tfUYANmS7OCbKrLypEKg" />
 <meta name="yandex-verification" content="d4b6a64cdf423497" />
 <meta name='wmail-verification' content='08158243dc3a0fa9' />
+<meta property="fb:pages" content="140208249349033" />
 
 <?php print $styles; ?>
 
