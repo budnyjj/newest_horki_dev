@@ -511,7 +511,7 @@ ul.tabs li.active a {
 
 /* content banner */
 .block-block-61 {
-    height: 350px;
+    min-height: 248px;
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid #DBDBDB;
