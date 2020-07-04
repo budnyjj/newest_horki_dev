@@ -852,10 +852,10 @@ function advagg_menu() {
       'file' => 'advagg.missing.inc',
     );
     $items[$external_js] = array(
-      'title' => "Generate CSS Aggregate",
+      'title' => "Generate JS Aggregate",
       'page callback' => 'advagg_missing_aggregate',
       'type' => MENU_CALLBACK,
-      // Allow anyone to access these public css files.
+      // Allow anyone to access these public js files.
       'access callback' => TRUE,
       'file path' => $file_path,
       'file' => 'advagg.missing.inc',
@@ -882,6 +882,23 @@ function advagg_menu() {
       'file path' => $file_path,
       'file' => 'advagg.missing.inc',
     );
+  }
+
+  // If mutiple paths are symlinked to the same location; allow advagg to handle
+  // those addtional locations.
+  $advagg_additional_generate_paths = variable_get('advagg_additional_generate_paths', array());
+  if (!empty($advagg_additional_generate_paths)) {
+    foreach ($advagg_additional_generate_paths as $path) {
+      $items[$path] = array(
+        'title' => "Generate CSS/JS Aggregate",
+        'page callback' => 'advagg_missing_aggregate',
+        'type' => MENU_CALLBACK,
+        // Allow anyone to access these public css files.
+        'access callback' => TRUE,
+        'file path' => $file_path,
+        'file' => 'advagg.missing.inc',
+      );
+    }
   }
 
   $items[$config_path . '/default'] = array(
@@ -1534,7 +1551,7 @@ function advagg_modify_css_pre_render(array $elements) {
   // Put children elements into a reference array.
   $children = array();
   foreach ($elements as $key => &$value) {
-    if ($key !== '' && $key[0] === '#') {
+    if ($key !== '' && is_string($key) && $key[0] === '#') {
       continue;
     }
     $children[$key] = &$value;
@@ -3192,7 +3209,7 @@ function advagg_merge_plans(array $css_js_groups, array $plans) {
 
         // Insert a unique key.
         do {
-          $key = '' . floatval($key) + 0.01;
+          $key = '' . (floatval($key) + 0.01);
         } while (array_key_exists((string) $key, $css_js_groups) || array_key_exists((string) $key, $used_keys));
         $used_keys[(string) $key] = TRUE;
         $css_js_groups[(string) $key] = $plan;
@@ -5723,7 +5740,8 @@ function advagg_get_remote_libraries_version($name, array $library, $use_cache =
         // Use vendor url if it's a github one.
         if (strpos($library['vendor url'], 'https://github.com/') === 0) {
           $parsed_vendor = @parse_url($library['vendor url']);
-          $library['remote']['url'] = "https://rawgit.com{$parsed_vendor['path']}/master/{$library['version arguments']['file']}";
+          //Previously: https://rawgit.com{$parsed_vendor['path']}/master/{$library['version arguments']['file']} .
+          $library['remote']['url'] = "https://cdn.jsdelivr.net/gh{$parsed_vendor['path']}@master/{$library['version arguments']['file']}";
         }
       }
       if (empty($library['remote']['url']) && !empty($library['download url'])) {
@@ -5732,7 +5750,8 @@ function advagg_get_remote_libraries_version($name, array $library, $use_cache =
           $parsed_download = @parse_url($library['download url']);
           $paths = explode('/', $parsed_download['path']);
           $parsed_download['path'] = "/{$paths[1]}/{$paths[2]}";
-          $library['remote']['url'] = "https://rawgit.com{$parsed_download['path']}/master/{$library['version arguments']['file']}";
+          // Previously: https://rawgit.com{$parsed_download['path']}/master/{$library['version arguments']['file']} .
+          $library['remote']['url'] = "https://cdn.jsdelivr.net/gh{$parsed_download['path']}@master/{$library['version arguments']['file']}";
         }
       }
     }

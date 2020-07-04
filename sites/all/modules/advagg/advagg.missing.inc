@@ -45,7 +45,7 @@ function advagg_missing_aggregate($input = '') {
             $trueversion = '2.1.4';
             break;
         }
-        $url = "https://cdn.rawgit.com/jquery/jquery/$trueversion/jquery.min.map";
+        $url = "https://cdn.jsdelivr.net/gh/jquery/jquery@$trueversion/jquery.min.map";
         drupal_goto($url, array('external' => TRUE), 301);
       }
     }
@@ -1440,17 +1440,15 @@ function advagg_rename($source, $destination) {
   $real_destination = drupal_realpath($destination);
   $real_destination = $real_destination ? $real_destination : $destination;
 
-  // The use of drupal_realpath() is discouraged, because it does not work for remote URIs.
-  if (module_exists('s3fs')) {
-    $scheme = file_uri_scheme($source);
-    // s3fs public function rename() includes call to waitUntilFileExists().
-    if(!file_stream_wrapper_get_instance_by_scheme($scheme)->rename($source, $destination)) {
-      return FALSE;
-    };
-  }
-  elseif (!@rename($real_source, $real_destination)) {
+  // Try php rename.
+  if (!@rename($real_source, $real_destination)) {
+    // Try drupal move.
     if (!file_unmanaged_move($source, $destination)) {
-      return FALSE;
+      // Try file scheme's rename method if it exists.
+      $fs_wrapper = file_stream_wrapper_get_instance_by_scheme(file_uri_scheme($source));
+      if (!$fs_wrapper || !method_exists($fs_wrapper, 'rename') || !$fs_wrapper->rename($source, $destination)) {
+        return FALSE;
+      }
     }
   }
 
