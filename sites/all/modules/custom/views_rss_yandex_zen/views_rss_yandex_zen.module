@@ -91,6 +91,8 @@ function views_rss_yandex_zen_preprocess_item_zen_enclosure(&$variables) {
       $img_url = $img->src;
     } else if (isset($img->srcset)) {
       $img_url = $img->srcset;
+    } else if ($img->hasAttribute('data-srcset')) {
+      $img_url = $img->getAttribute('data-srcset');
     } else {
       continue;
     }
@@ -121,8 +123,15 @@ function views_rss_yandex_zen_preprocess_item_zen_content_encoded(&$variables) {
     $img->width = NULL;
     $img->height = NULL;
     $img->alt = NULL;
+    $img->class = NULL;
     $img->style = NULL;
     $img->removeAttribute('data-picture-mapping');
+    $img->removeAttribute('data-aspectratio');
+    // Replace src with data-srcset, if not set
+    if ($img->hasAttribute('data-srcset') != null && !isset($img->src)) {
+      $img->src = explode(' ', $img->getAttribute('data-srcset'), 2)[0];
+      $img->removeAttribute('data-srcset');
+    }
     // Replace src with srcset, if not set
     if (isset($img->srcset) && !isset($img->src)) {
       $img->src = $img->srcset;
