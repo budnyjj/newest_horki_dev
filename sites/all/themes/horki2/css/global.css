@@ -2059,7 +2059,7 @@ ul.tabs li.active a {
 
 /* inner node banners */
 .block-block-59 {
-    height: 350px;
+    min-height: 248px;
     padding-top: 20px;
     margin-bottom: 20px;
     border-top: 1px solid #DBDBDB;
