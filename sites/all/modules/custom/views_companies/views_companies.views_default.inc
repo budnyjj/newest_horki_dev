@@ -228,8 +228,8 @@ function views_companies_views_default_views() {
   $handler->display->display_options['fields']['field_company_photo']['settings'] = array(
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',

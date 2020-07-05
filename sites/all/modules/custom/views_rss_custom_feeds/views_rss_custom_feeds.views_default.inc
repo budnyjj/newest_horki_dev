@@ -29,9 +29,9 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['link_display'] = 'page_1';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['results_lifespan'] = '3600';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -89,6 +89,13 @@ function views_rss_custom_feeds_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
   );
+  /* Filter criterion: Вузел: Published at */
+  $handler->display->display_options['filters']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['operator'] = '>=';
+  $handler->display->display_options['filters']['published_at']['value']['value'] = '-7 days';
+  $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
 
   /* Display: Навіны */
   $handler = $view->new_display('feed', 'Навіны', 'feed_news');
@@ -431,6 +438,290 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   $handler->display->display_options['path'] = 'vk.xml';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Facebook */
+  $handler = $view->new_display('feed', 'Facebook', 'feed_facebook');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'horki.info';
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '15';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['namespaces'] = array(
+    'views_rss_custom' => array(
+      'custom' => '',
+    ),
+    'views_rss_facebook' => array(
+      'facebook' => '',
+    ),
+    'views_rss_google_discover' => array(
+      'discover' => '',
+    ),
+    'views_rss_yandex_zen' => array(
+      'zen' => '',
+    ),
+  );
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Свежие новости из Горок, Дрибина, Мстиславля, БГСХА. Апошнія навіны з Горак, Дрыбіна, Мсціслава, БДСГА.',
+        'language' => '',
+        'category' => '',
+        'image' => 'sites/default/files/logo/logo_horki_small.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+    'yandex' => array(
+      'views_rss_yandex' => array(
+        'logo' => '',
+        'logo type=square' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_text',
+        'author' => '',
+        'category' => '',
+        'comments' => '',
+        'enclosure' => '',
+        'guid' => 'path',
+        'pubDate' => 'published_at',
+      ),
+    ),
+    'custom' => array(
+      'views_rss_custom' => array(
+        'author' => '',
+        'description' => '',
+      ),
+    ),
+    'facebook' => array(
+      'views_rss_facebook' => array(
+        'content' => 'nothing',
+        'author' => 'field_text_1',
+      ),
+    ),
+    'discover' => array(
+      'views_rss_google_discover' => array(
+        'content' => '',
+        'author' => '',
+      ),
+    ),
+    'media' => array(
+      'views_rss_media' => array(
+        'content' => '',
+        'title' => '',
+        'description' => '',
+        'keywords' => '',
+        'thumbnail' => '',
+        'category' => '',
+      ),
+    ),
+    'yandex' => array(
+      'views_rss_yandex' => array(
+        'full-text' => '',
+        'genre' => '',
+        'tags' => '',
+        'online' => '',
+        'enclosure' => '',
+        'pdalink' => '',
+      ),
+    ),
+    'turbo' => array(
+      'views_rss_yandex_turbo' => array(
+        'source' => '',
+        'topic' => '',
+        'content' => '',
+      ),
+    ),
+    'zen' => array(
+      'views_rss_yandex_zen' => array(
+        'author' => '',
+        'enclosure' => '',
+        'content' => '',
+      ),
+    ),
+    'content' => array(
+      'views_rss_content' => array(
+        'encoded' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Змест: Content author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Поле: Published at: ISO 8601 */
+  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['ui_name'] = 'Published at: ISO 8601';
+  $handler->display->display_options['fields']['published_at']['label'] = '';
+  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['published_at']['date_format'] = 'iso_8601_datetime';
+  $handler->display->display_options['fields']['published_at']['custom_date_format'] = 'r';
+  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
+  /* Поле: Published at: human-readable */
+  $handler->display->display_options['fields']['published_at_1']['id'] = 'published_at_1';
+  $handler->display->display_options['fields']['published_at_1']['table'] = 'publication_date';
+  $handler->display->display_options['fields']['published_at_1']['field'] = 'published_at';
+  $handler->display->display_options['fields']['published_at_1']['ui_name'] = 'Published at: human-readable';
+  $handler->display->display_options['fields']['published_at_1']['label'] = '';
+  $handler->display->display_options['fields']['published_at_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['published_at_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['published_at_1']['date_format'] = 'medium';
+  $handler->display->display_options['fields']['published_at_1']['second_date_format'] = 'long';
+  /* Поле: Modified at: ISO 8601 */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['ui_name'] = 'Modified at: ISO 8601';
+  $handler->display->display_options['fields']['changed']['label'] = '';
+  $handler->display->display_options['fields']['changed']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['changed']['date_format'] = 'iso_8601_datetime';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
+  /* Поле: Modified at: human-readable */
+  $handler->display->display_options['fields']['changed_1']['id'] = 'changed_1';
+  $handler->display->display_options['fields']['changed_1']['table'] = 'node';
+  $handler->display->display_options['fields']['changed_1']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed_1']['ui_name'] = 'Modified at: human-readable';
+  $handler->display->display_options['fields']['changed_1']['label'] = '';
+  $handler->display->display_options['fields']['changed_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['changed_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['changed_1']['date_format'] = 'medium';
+  $handler->display->display_options['fields']['changed_1']['second_date_format'] = 'long';
+  /* Поле: Змест: Шлях */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Поле: Змест: Галоўны фотаздымак */
+  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
+  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'image_url';
+  $handler->display->display_options['fields']['field_pics']['settings'] = array(
+    'url_type' => '0',
+    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'image_link' => '',
+  );
+  /* Поле: Змест: Тэкст */
+  $handler->display->display_options['fields']['field_text_1']['id'] = 'field_text_1';
+  $handler->display->display_options['fields']['field_text_1']['table'] = 'field_data_field_text';
+  $handler->display->display_options['fields']['field_text_1']['field'] = 'field_text';
+  $handler->display->display_options['fields']['field_text_1']['label'] = '';
+  $handler->display->display_options['fields']['field_text_1']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_text_1']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
+  $handler->display->display_options['fields']['field_text_1']['element_label_colon'] = FALSE;
+  /* Поле: Апісанне */
+  $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
+  $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
+  $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
+  $handler->display->display_options['fields']['field_text']['ui_name'] = 'Апісанне';
+  $handler->display->display_options['fields']['field_text']['label'] = '';
+  $handler->display->display_options['fields']['field_text']['alter']['max_length'] = '300';
+  $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_text']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_text']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_text']['settings'] = array(
+    'trim_length' => '160',
+  );
+  /* Поле: Фарматаваны HTML */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фарматаваны HTML';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<!doctype html>
+<html lang="en" prefix="op: http://media.facebook.com/op#">
+  <head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="[path]">
+    <meta property="op:markup_version" content="v1.0">
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>[title]</h1>
+        <time class="op-published" datetime="[published_at]">[published_at_1]</time>
+        <time class="op-modified" dateTime="[changed]">[changed_1]</time>
+        <figure>
+          <img src="[field_pics]" />
+        </figure>
+      </header>
+[field_text_1]
+    </article>
+  </body>
+</html>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Тып */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'afisha' => 'afisha',
+    'news' => 'news',
+    'news_from_readers' => 'news_from_readers',
+  );
+  /* Filter criterion: Вузел: Published at */
+  $handler->display->display_options['filters']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['operator'] = '>=';
+  $handler->display->display_options['filters']['published_at']['value']['value'] = '-1 day';
+  $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
+  $handler->display->display_options['path'] = 'facebook.xml';
   $handler->display->display_options['sitename_title'] = 0;
 
   /* Display: Twitter */
@@ -810,13 +1101,15 @@ function views_rss_custom_feeds_views_default_views() {
   $handler = $view->new_display('feed', 'Яндекс.Дзен', 'feed_zen');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'horki.info';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
   $handler->display->display_options['style_options']['namespaces'] = array(
     'views_rss_custom' => array(
       'custom' => '',
+    ),
+    'views_rss_google_discover' => array(
+      'discover' => '',
     ),
     'views_rss_yandex_zen' => array(
       'zen' => '',
@@ -856,14 +1149,21 @@ function views_rss_custom_feeds_views_default_views() {
         'author' => '',
         'category' => '',
         'comments' => '',
-        'enclosure' => 'field_pics',
-        'guid' => '',
+        'enclosure' => '',
+        'guid' => 'path',
         'pubDate' => 'created',
       ),
     ),
     'custom' => array(
       'views_rss_custom' => array(
-        'author' => 'field_text',
+        'author' => '',
+        'description' => '',
+      ),
+    ),
+    'discover' => array(
+      'views_rss_google_discover' => array(
+        'content' => '',
+        'author' => '',
       ),
     ),
     'media' => array(
@@ -895,7 +1195,8 @@ function views_rss_custom_feeds_views_default_views() {
     ),
     'zen' => array(
       'views_rss_yandex_zen' => array(
-        'enclosure' => 'field_text',
+        'author' => 'field_text',
+        'enclosure' => 'nothing',
         'content' => 'field_text',
       ),
     ),
@@ -938,17 +1239,16 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Поле: Галоўнае фота: enclosure */
+  /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
-  $handler->display->display_options['fields']['field_pics']['ui_name'] = 'Галоўнае фота: enclosure';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_pics']['type'] = 'enclosure';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'image_style' => 'main_pic_preview',
+    'image_style' => '',
+    'image_link' => '',
   );
   /* Поле: Скарочаны тэкст */
   $handler->display->display_options['fields']['field_text_1']['id'] = 'field_text_1';
@@ -968,8 +1268,17 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = ' <h1> <h2> <h3> <h4> <h5> <h6> <p> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td>';
+  $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
+  /* Поле: Тэкст з галоўным фотаздымкам */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Тэкст з галоўным фотаздымкам';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_pics]
+[field_text]';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Published status */
@@ -993,6 +1302,13 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['value'] = array(
     1 => '1',
   );
+  /* Filter criterion: Вузел: Published at */
+  $handler->display->display_options['filters']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['filters']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['filters']['published_at']['operator'] = '>=';
+  $handler->display->display_options['filters']['published_at']['value']['value'] = '-5 days';
+  $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
   $handler->display->display_options['path'] = 'zen.xml';
   $handler->display->display_options['sitename_title'] = 0;
   $translatables['rss'] = array(
@@ -1012,8 +1328,30 @@ function views_rss_custom_feeds_views_default_views() {
 [field_text] 
 '),
     t('VK'),
-    t('Twitter'),
+    t('Facebook'),
     t('author'),
+    t('<!doctype html>
+<html lang="en" prefix="op: http://media.facebook.com/op#">
+  <head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="[path]">
+    <meta property="op:markup_version" content="v1.0">
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>[title]</h1>
+        <time class="op-published" datetime="[published_at]">[published_at_1]</time>
+        <time class="op-modified" dateTime="[changed]">[changed_1]</time>
+        <figure>
+          <img src="[field_pics]" />
+        </figure>
+      </header>
+[field_text_1]
+    </article>
+  </body>
+</html>'),
+    t('Twitter'),
     t('Яндекс.Новости'),
     t('Яндекс.Дзен'),
   );
@@ -2366,6 +2704,12 @@ function views_rss_custom_feeds_views_default_views() {
     'views_rss_custom' => array(
       'custom' => '',
     ),
+    'views_rss_google_discover' => array(
+      'discover' => '',
+    ),
+    'views_rss_yandex_zen' => array(
+      'zen' => '',
+    ),
   );
   $handler->display->display_options['style_options']['channel'] = array(
     'core' => array(
@@ -2409,6 +2753,13 @@ function views_rss_custom_feeds_views_default_views() {
     'custom' => array(
       'views_rss_custom' => array(
         'author' => 'field_text',
+        'description' => '',
+      ),
+    ),
+    'discover' => array(
+      'views_rss_google_discover' => array(
+        'content' => '',
+        'author' => '',
       ),
     ),
     'media' => array(
@@ -2436,6 +2787,12 @@ function views_rss_custom_feeds_views_default_views() {
         'source' => 'path',
         'topic' => 'title',
         'content' => 'nothing_1',
+      ),
+    ),
+    'zen' => array(
+      'views_rss_yandex_zen' => array(
+        'enclosure' => '',
+        'content' => '',
       ),
     ),
     'content' => array(

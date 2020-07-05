@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * menus.features.menu_custom.inc
@@ -40,18 +41,6 @@ function menus_menu_default_menu_custom() {
     'title' => 'Галоўнае меню',
     'description' => 'Галоўнае меню сайта',
   );
-  // Exported menu: menu-mobile-anonymous.
-  $menus['menu-mobile-anonymous'] = array(
-    'menu_name' => 'menu-mobile-anonymous',
-    'title' => 'Мабільнае меню (ананім) ',
-    'description' => 'Мабільнае меню для ананімнага карыстальніка',
-  );
-  // Exported menu: menu-mobile-registered.
-  $menus['menu-mobile-registered'] = array(
-    'menu_name' => 'menu-mobile-registered',
-    'title' => 'Мабільнае меню (для зарэгістраваных)',
-    'description' => 'Мабільнае меню для зарэгістраваных карыстальнікаў.',
-  );
   // Exported menu: menu-old.
   $menus['menu-old'] = array(
     'menu_name' => 'menu-old',
@@ -80,10 +69,6 @@ function menus_menu_default_menu_custom() {
   t('Геаграфiчнае меню');
   t('Геаграфiчнае меню нашага сайта');
   t('Дадатковае меню');
-  t('Мабільнае меню (ананім) ');
-  t('Мабільнае меню (для зарэгістраваных)');
-  t('Мабільнае меню для ананімнага карыстальніка');
-  t('Мабільнае меню для зарэгістраваных карыстальнікаў.');
   t('Меню са спасылкамі з розных крыніц');
   t('Навігацыя');
   t('Распрацоўка');

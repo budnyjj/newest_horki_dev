@@ -244,8 +244,8 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => '',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -268,8 +268,8 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -327,6 +327,1179 @@ function views_rubrics_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
     'old_place' => 'old_place',
+  );
+  $handler->display->display_options['metatags'] = array(
+    'und' => array(
+      'title' => array(
+        'value' => '',
+        'default' => '[view:title] | [site:name]',
+      ),
+      'description' => array(
+        'value' => '',
+        'default' => '[view:description]',
+      ),
+      'abstract' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'keywords' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'author' => array(
+        'value' => '',
+      ),
+      'robots' => array(
+        'value' => array(
+          'index' => 0,
+          'follow' => 0,
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+          'noimageindex' => 0,
+          'notranslate' => 0,
+        ),
+        'default' => array(),
+      ),
+      'news_keywords' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'standout' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rating' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'referrer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rights' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'image_src' => array(
+        'value' => 'sites/default/files/social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
+      ),
+      'canonical' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'set_cookie' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'shortlink' => array(
+        'value' => '[current-page:url:unaliased]',
+        'default' => '[current-page:url:unaliased]',
+      ),
+      'original-source' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'prev' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'next' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'content-language' => array(
+        'value' => 'ru',
+        'default' => 'ru',
+      ),
+      'geo.position' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.placename' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'icbm' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'refresh' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'revisit-after' => array(
+        'value' => '',
+        'period' => '',
+        'default' => '',
+      ),
+      'pragma' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'cache-control' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'expires' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'google' => array(
+        'value' => '',
+      ),
+      'fb:admins' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:app_id' => array(
+        'value' => '1404750383092736',
+        'default' => '1404750383092736',
+      ),
+      'fb:pages' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:type' => array(
+        'value' => 'website',
+        'default' => 'website',
+      ),
+      'og:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'og:title' => array(
+        'value' => '[view:title]',
+        'default' => '[view:title]',
+      ),
+      'og:determiner' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:updated_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:see_also' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image' => array(
+        'value' => 'sites/default/files/social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
+      ),
+      'og:image:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:alt' => array(
+        'value' => '',
+      ),
+      'og:image:type' => array(
+        'value' => 'image/png',
+        'default' => 'image/png',
+      ),
+      'og:image:width' => array(
+        'value' => '968',
+        'default' => '968',
+      ),
+      'og:image:height' => array(
+        'value' => '504',
+        'default' => '504',
+      ),
+      'og:latitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:longitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:street_address' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locality' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:postal_code' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:country_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:email' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:phone_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:fax_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locale' => array(
+        'value' => 'ru_RU',
+        'default' => 'ru_RU',
+      ),
+      'og:locale:alternate' => array(
+        'value' => 'be_BY',
+        'default' => 'be_BY',
+      ),
+      'article:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:publisher' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:section' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:published_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:modified_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:expiration_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:first_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:last_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:username' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:gender' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:isbn' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor:role' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:director' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:writer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:duration' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:series' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:card' => array(
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
+      ),
+      'twitter:creator' => array(
+        'value' => '@horki_info',
+        'default' => '@horki_info',
+      ),
+      'twitter:creator:id' => array(
+        'value' => '120533731',
+        'default' => '120533731',
+      ),
+      'twitter:url' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'twitter:title' => array(
+        'value' => '[view:title]',
+        'default' => '[view:title]',
+      ),
+      'twitter:description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:dnt' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image' => array(
+        'value' => 'sites/default/files/social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
+      ),
+      'twitter:image:width' => array(
+        'value' => '968',
+        'default' => '968',
+      ),
+      'twitter:image:height' => array(
+        'value' => '504',
+        'default' => '504',
+      ),
+      'twitter:image:alt' => array(
+        'value' => '[current-page:title]',
+        'default' => '[current-page:title]',
+      ),
+      'twitter:image0' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image3' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream:content_type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:country' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.@type' => array(
+        'value' => '',
+      ),
+      'schema_article.headline' => array(
+        'value' => '',
+      ),
+      'schema_article.name' => array(
+        'value' => '',
+      ),
+      'schema_article.description' => array(
+        'value' => '',
+      ),
+      'schema_article.author' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+      ),
+      'schema_article.publisher' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+      ),
+      'schema_article.datePublished' => array(
+        'value' => '',
+      ),
+      'schema_article.dateModified' => array(
+        'value' => '',
+      ),
+      'schema_article.image' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+      ),
+      'schema_article.mainEntityOfPage' => array(
+        'value' => '',
+      ),
+      'schema_article.hasPart' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'description' => '',
+          'timeRequired' => '',
+          'potentialAction' => array(
+            'actionType' => '',
+            'pivot' => '',
+            'ConsumeAction' => array(
+              '@type' => '',
+              'target' => array(
+                'pivot' => '',
+                '@type' => '',
+                'urlTemplate' => '',
+                'actionPlatform' => '',
+                'inLanguage' => '',
+              ),
+              'expectsAcceptanceOf' => array(
+                'pivot' => '',
+                '@type' => '',
+                '@id' => '',
+                'price' => '',
+                'priceCurrency' => '',
+                'url' => '',
+                'itemCondition' => '',
+                'availability' => '',
+                'availabilityStarts' => '',
+                'availabilityEnds' => '',
+                'validFrom' => '',
+                'category' => '',
+                'eligibleRegion' => array(
+                  'pivot' => '',
+                  '@type' => '',
+                  'name' => '',
+                ),
+                'ineligibleRegion' => array(
+                  'pivot' => '',
+                  '@type' => '',
+                  'name' => '',
+                ),
+              ),
+            ),
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+            'expectsAcceptanceOf' => array(
+              'pivot' => '',
+              '@type' => '',
+              '@id' => '',
+              'price' => '',
+              'priceCurrency' => '',
+              'url' => '',
+              'itemCondition' => '',
+              'availability' => '',
+              'availabilityStarts' => '',
+              'availabilityEnds' => '',
+              'validFrom' => '',
+              'category' => '',
+              'eligibleRegion' => array(
+                'pivot' => '',
+                '@type' => '',
+                'name' => '',
+              ),
+              'ineligibleRegion' => array(
+                'pivot' => '',
+                '@type' => '',
+                'name' => '',
+              ),
+            ),
+            '@type' => '',
+          ),
+          'isAccessibleForFree' => '',
+          'cssSelector' => '',
+        ),
+      ),
+      'schema_article.isAccessibleForFree' => array(
+        'value' => '',
+      ),
+      'schema_article.speakable' => array(
+        'value' => array(
+          '@type' => '',
+          'xpath' => '',
+          'cssSelector' => '',
+        ),
+      ),
+      'schema_article.about' => array(
+        'value' => '',
+      ),
+      'schema_article.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+      ),
+      'schema_article.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+      ),
+      'schema_item_list.@type' => array(
+        'value' => 'ItemList',
+      ),
+      'schema_item_list.@id' => array(
+        'value' => '',
+      ),
+      'schema_item_list.itemListElement' => array(
+        'value' => 'rubrics:page:[view:url:unaliased:args:last]',
+      ),
+      'schema_item_list.mainEntityOfPage' => array(
+        'value' => '',
+      ),
+      'schema_organization.@type' => array(
+        'value' => '',
+      ),
+      'schema_organization.additionalType' => array(
+        'value' => '',
+      ),
+      'schema_organization.@id' => array(
+        'value' => '',
+      ),
+      'schema_organization.name' => array(
+        'value' => '',
+      ),
+      'schema_organization.address' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'streetAddress' => '',
+          'addressLocality' => '',
+          'addressRegion' => '',
+          'postalCode' => '',
+          'addressCountry' => '',
+        ),
+      ),
+      'schema_organization.geo' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'latitude' => '',
+          'longitude' => '',
+        ),
+      ),
+      'schema_organization.telephone' => array(
+        'value' => '',
+      ),
+      'schema_organization.contactPoint' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'telephone' => '',
+          'url' => '',
+          'availableLanguage' => '',
+          'contactType' => '',
+          'contactOption' => '',
+          'areaServed' => array(
+            'pivot' => '',
+            '@type' => '',
+            'name' => '',
+            'url' => '',
+            'address' => array(
+              'pivot' => '',
+              '@type' => '',
+              'streetAddress' => '',
+              'addressLocality' => '',
+              'addressRegion' => '',
+              'postalCode' => '',
+              'addressCountry' => '',
+            ),
+            'geo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'latitude' => '',
+              'longitude' => '',
+            ),
+            'country' => array(
+              'pivot' => '',
+              '@type' => '',
+              'name' => '',
+            ),
+          ),
+          'email' => '',
+          'faxnumber' => '',
+          'productSupported' => '',
+        ),
+      ),
+      'schema_organization.url' => array(
+        'value' => '',
+      ),
+      'schema_organization.sameAs' => array(
+        'value' => '',
+      ),
+      'schema_organization.description' => array(
+        'value' => '',
+      ),
+      'schema_organization.brand' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'description' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+      ),
+      'schema_organization.acceptsReservations' => array(
+        'value' => '',
+      ),
+      'schema_organization.menu' => array(
+        'value' => '',
+      ),
+      'schema_organization.openingHoursSpecification' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'dayOfWeek' => '',
+          'opens' => '',
+          'closes' => '',
+          'validFrom' => '',
+          'validThrough' => '',
+        ),
+      ),
+      'schema_organization.image' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+      ),
+      'schema_organization.logo' => array(
+        'value' => array(
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+      ),
+      'schema_organization.potentialAction' => array(
+        'value' => array(
+          'actionType' => '',
+          'TradeAction' => array(
+            '@type' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+          ),
+          'OrganizeAction' => array(
+            '@type' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+            'result' => array(
+              'pivot' => '',
+              '@type' => '',
+              '@id' => '',
+              'name' => '',
+              'url' => '',
+            ),
+          ),
+          'target' => array(
+            'pivot' => '',
+            '@type' => '',
+            'urlTemplate' => '',
+            'actionPlatform' => '',
+            'inLanguage' => '',
+          ),
+          '@type' => '',
+          'result' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+          ),
+        ),
+      ),
+      'schema_organization.priceRange' => array(
+        'value' => '',
+      ),
+      'schema_organization.memberOf' => array(
+        'value' => array(
+          '@type' => '',
+          'name' => '',
+          'programName' => '',
+          'alternateName' => '',
+          'hostingOrganization' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'member' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'membershipNumber' => '',
+          'identifier' => '',
+          'additionalType' => '',
+          'description' => '',
+          'disambiguatingDescription' => '',
+          'image' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+          'mainEntityOfPage' => '',
+          'url' => '',
+          'sameAs' => '',
+        ),
+      ),
+      'schema_organization.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+      ),
+      'schema_organization.starRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+      ),
+      'schema_organization.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+      ),
+      'schema_video_object.@type' => array(
+        'value' => '',
+      ),
+      'schema_video_object.@id' => array(
+        'value' => '',
+      ),
+      'schema_video_object.name' => array(
+        'value' => '',
+      ),
+      'schema_video_object.description' => array(
+        'value' => '',
+      ),
+      'schema_video_object.uploadDate' => array(
+        'value' => '',
+      ),
+      'schema_video_object.expires' => array(
+        'value' => '',
+      ),
+      'schema_video_object.thumbnailUrl' => array(
+        'value' => array(
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+      ),
+      'schema_video_object.contentUrl' => array(
+        'value' => '',
+      ),
+      'schema_video_object.embedUrl' => array(
+        'value' => '',
+      ),
+      'schema_video_object.duration' => array(
+        'value' => '',
+      ),
+      'schema_video_object.interactionCount' => array(
+        'value' => '',
+      ),
+      'schema_video_object.transcript' => array(
+        'value' => '',
+      ),
+      'schema_video_object.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+      ),
+      'schema_video_object.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+      ),
+      'schema_web_site.@type' => array(
+        'value' => '',
+      ),
+      'schema_web_site.@id' => array(
+        'value' => '',
+      ),
+      'schema_web_site.name' => array(
+        'value' => '',
+      ),
+      'schema_web_site.url' => array(
+        'value' => '',
+      ),
+      'schema_web_site.sameAs' => array(
+        'value' => '',
+      ),
+      'schema_web_site.publisher' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+      ),
+      'schema_web_site.potentialAction' => array(
+        'value' => array(
+          'actionType' => '',
+          'pivot' => '',
+          'SearchAction' => array(
+            '@type' => '',
+            'query' => '',
+            'query-input' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+          ),
+          'query' => '',
+          'query-input' => '',
+          'target' => array(
+            'pivot' => '',
+            '@type' => '',
+            'urlTemplate' => '',
+            'actionPlatform' => '',
+            'inLanguage' => '',
+          ),
+          '@type' => '',
+        ),
+      ),
+      'schema_web_site.inLanguage' => array(
+        'value' => '',
+      ),
+      'schema_web_site.translationOfWork' => array(
+        'value' => array(
+          '@id' => '',
+        ),
+      ),
+      'schema_web_site.workTranslation' => array(
+        'value' => array(
+          'pivot' => '',
+          '@id' => '',
+        ),
+      ),
+    ),
   );
   $handler->display->display_options['path'] = 'taxonomy/term/%';
   $translatables['rubrics'] = array(

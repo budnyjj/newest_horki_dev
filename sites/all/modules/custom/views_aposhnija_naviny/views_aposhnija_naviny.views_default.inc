@@ -91,7 +91,7 @@ function views_aposhnija_naviny_views_default_views() {
   );
 
   /* Display: Старонка */
-  $handler = $view->new_display('page', 'Старонка', 'page_1');
+  $handler = $view->new_display('page', 'Старонка', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Апошнія навіны';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -169,11 +169,11 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => '',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => '',
     'colorbox_settings' => array(
-      'colorbox_group' => 'davedka',
+      'colorbox_group' => 'article',
       'colorbox_gallery' => 'post',
       'colorbox_gallery_custom' => '',
       'colorbox_caption' => 'auto',
@@ -193,8 +193,8 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -250,6 +250,9 @@ function views_aposhnija_naviny_views_default_views() {
         'value' => 'Горки, Дрибин, Мстиславль, БГСХА, Горецкий район, Дрибинский район, Мстиславский район, горецкая академия',
         'default' => '',
       ),
+      'author' => array(
+        'value' => '',
+      ),
       'robots' => array(
         'value' => array(
           'index' => 0,
@@ -287,7 +290,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'image_src' => array(
         'value' => '/sites/default/files//social_preview/default.png',
-        'default' => '/sites/default/files//social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
       ),
       'canonical' => array(
         'value' => '[view:url]',
@@ -315,7 +318,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'content-language' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'ru',
       ),
       'geo.position' => array(
         'value' => '',
@@ -353,6 +356,9 @@ function views_aposhnija_naviny_views_default_views() {
       'expires' => array(
         'value' => '',
         'default' => '',
+      ),
+      'google' => array(
+        'value' => '',
       ),
       'fb:admins' => array(
         'value' => '',
@@ -396,7 +402,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'og:image' => array(
         'value' => '/sites/default/files//social_preview/default.png',
-        'default' => '/sites/default/files//social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
       ),
       'og:image:url' => array(
         'value' => '',
@@ -405,6 +411,9 @@ function views_aposhnija_naviny_views_default_views() {
       'og:image:secure_url' => array(
         'value' => '',
         'default' => '',
+      ),
+      'og:image:alt' => array(
+        'value' => '',
       ),
       'og:image:type' => array(
         'value' => 'image/png',
@@ -620,7 +629,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'twitter:image' => array(
         'value' => '/sites/default/files//social_preview/default.png',
-        'default' => '/sites/default/files//social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
       ),
       'twitter:image:width' => array(
         'value' => '968',
@@ -725,6 +734,590 @@ function views_aposhnija_naviny_views_default_views() {
       'twitter:data2' => array(
         'value' => '',
         'default' => '',
+      ),
+      'schema_article.@type' => array(
+        'value' => '',
+      ),
+      'schema_article.headline' => array(
+        'value' => '',
+      ),
+      'schema_article.name' => array(
+        'value' => '',
+      ),
+      'schema_article.description' => array(
+        'value' => '',
+      ),
+      'schema_article.author' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+      ),
+      'schema_article.publisher' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+      ),
+      'schema_article.datePublished' => array(
+        'value' => '',
+      ),
+      'schema_article.dateModified' => array(
+        'value' => '',
+      ),
+      'schema_article.image' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+      ),
+      'schema_article.mainEntityOfPage' => array(
+        'value' => '',
+      ),
+      'schema_article.hasPart' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'description' => '',
+          'timeRequired' => '',
+          'potentialAction' => array(
+            'actionType' => '',
+            'pivot' => '',
+            'ConsumeAction' => array(
+              '@type' => '',
+              'target' => array(
+                'pivot' => '',
+                '@type' => '',
+                'urlTemplate' => '',
+                'actionPlatform' => '',
+                'inLanguage' => '',
+              ),
+              'expectsAcceptanceOf' => array(
+                'pivot' => '',
+                '@type' => '',
+                '@id' => '',
+                'price' => '',
+                'priceCurrency' => '',
+                'url' => '',
+                'itemCondition' => '',
+                'availability' => '',
+                'availabilityStarts' => '',
+                'availabilityEnds' => '',
+                'validFrom' => '',
+                'category' => '',
+                'eligibleRegion' => array(
+                  'pivot' => '',
+                  '@type' => '',
+                  'name' => '',
+                ),
+                'ineligibleRegion' => array(
+                  'pivot' => '',
+                  '@type' => '',
+                  'name' => '',
+                ),
+              ),
+            ),
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+            'expectsAcceptanceOf' => array(
+              'pivot' => '',
+              '@type' => '',
+              '@id' => '',
+              'price' => '',
+              'priceCurrency' => '',
+              'url' => '',
+              'itemCondition' => '',
+              'availability' => '',
+              'availabilityStarts' => '',
+              'availabilityEnds' => '',
+              'validFrom' => '',
+              'category' => '',
+              'eligibleRegion' => array(
+                'pivot' => '',
+                '@type' => '',
+                'name' => '',
+              ),
+              'ineligibleRegion' => array(
+                'pivot' => '',
+                '@type' => '',
+                'name' => '',
+              ),
+            ),
+            '@type' => '',
+          ),
+          'isAccessibleForFree' => '',
+          'cssSelector' => '',
+        ),
+      ),
+      'schema_article.isAccessibleForFree' => array(
+        'value' => '',
+      ),
+      'schema_article.speakable' => array(
+        'value' => array(
+          '@type' => '',
+          'xpath' => '',
+          'cssSelector' => '',
+        ),
+      ),
+      'schema_article.about' => array(
+        'value' => '',
+      ),
+      'schema_article.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+      ),
+      'schema_article.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+      ),
+      'schema_item_list.@type' => array(
+        'value' => 'ItemList',
+      ),
+      'schema_item_list.@id' => array(
+        'value' => '',
+      ),
+      'schema_item_list.itemListElement' => array(
+        'value' => 'aposhnija_naviny:page',
+      ),
+      'schema_item_list.mainEntityOfPage' => array(
+        'value' => '',
+      ),
+      'schema_organization.@type' => array(
+        'value' => '',
+      ),
+      'schema_organization.additionalType' => array(
+        'value' => '',
+      ),
+      'schema_organization.@id' => array(
+        'value' => '',
+      ),
+      'schema_organization.name' => array(
+        'value' => '',
+      ),
+      'schema_organization.address' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'streetAddress' => '',
+          'addressLocality' => '',
+          'addressRegion' => '',
+          'postalCode' => '',
+          'addressCountry' => '',
+        ),
+      ),
+      'schema_organization.geo' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'latitude' => '',
+          'longitude' => '',
+        ),
+      ),
+      'schema_organization.telephone' => array(
+        'value' => '',
+      ),
+      'schema_organization.contactPoint' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'telephone' => '',
+          'url' => '',
+          'availableLanguage' => '',
+          'contactType' => '',
+          'contactOption' => '',
+          'areaServed' => array(
+            'pivot' => '',
+            '@type' => '',
+            'name' => '',
+            'url' => '',
+            'address' => array(
+              'pivot' => '',
+              '@type' => '',
+              'streetAddress' => '',
+              'addressLocality' => '',
+              'addressRegion' => '',
+              'postalCode' => '',
+              'addressCountry' => '',
+            ),
+            'geo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'latitude' => '',
+              'longitude' => '',
+            ),
+            'country' => array(
+              'pivot' => '',
+              '@type' => '',
+              'name' => '',
+            ),
+          ),
+          'email' => '',
+          'faxnumber' => '',
+          'productSupported' => '',
+        ),
+      ),
+      'schema_organization.url' => array(
+        'value' => '',
+      ),
+      'schema_organization.sameAs' => array(
+        'value' => '',
+      ),
+      'schema_organization.description' => array(
+        'value' => '',
+      ),
+      'schema_organization.brand' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'description' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+      ),
+      'schema_organization.acceptsReservations' => array(
+        'value' => '',
+      ),
+      'schema_organization.menu' => array(
+        'value' => '',
+      ),
+      'schema_organization.openingHoursSpecification' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'dayOfWeek' => '',
+          'opens' => '',
+          'closes' => '',
+          'validFrom' => '',
+          'validThrough' => '',
+        ),
+      ),
+      'schema_organization.image' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+      ),
+      'schema_organization.logo' => array(
+        'value' => array(
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+      ),
+      'schema_organization.potentialAction' => array(
+        'value' => array(
+          'actionType' => '',
+          'TradeAction' => array(
+            '@type' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+          ),
+          'OrganizeAction' => array(
+            '@type' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+            'result' => array(
+              'pivot' => '',
+              '@type' => '',
+              '@id' => '',
+              'name' => '',
+              'url' => '',
+            ),
+          ),
+          'target' => array(
+            'pivot' => '',
+            '@type' => '',
+            'urlTemplate' => '',
+            'actionPlatform' => '',
+            'inLanguage' => '',
+          ),
+          '@type' => '',
+          'result' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+          ),
+        ),
+      ),
+      'schema_organization.priceRange' => array(
+        'value' => '',
+      ),
+      'schema_organization.memberOf' => array(
+        'value' => array(
+          '@type' => '',
+          'name' => '',
+          'programName' => '',
+          'alternateName' => '',
+          'hostingOrganization' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'member' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'membershipNumber' => '',
+          'identifier' => '',
+          'additionalType' => '',
+          'description' => '',
+          'disambiguatingDescription' => '',
+          'image' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+          'mainEntityOfPage' => '',
+          'url' => '',
+          'sameAs' => '',
+        ),
+      ),
+      'schema_organization.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+      ),
+      'schema_organization.starRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+      ),
+      'schema_organization.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+      ),
+      'schema_web_site.@type' => array(
+        'value' => '',
+      ),
+      'schema_web_site.@id' => array(
+        'value' => '',
+      ),
+      'schema_web_site.name' => array(
+        'value' => '',
+      ),
+      'schema_web_site.url' => array(
+        'value' => '',
+      ),
+      'schema_web_site.sameAs' => array(
+        'value' => '',
+      ),
+      'schema_web_site.publisher' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+      ),
+      'schema_web_site.potentialAction' => array(
+        'value' => array(
+          'actionType' => '',
+          'pivot' => '',
+          'SearchAction' => array(
+            '@type' => '',
+            'query' => '',
+            'query-input' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+          ),
+          'query' => '',
+          'query-input' => '',
+          'target' => array(
+            'pivot' => '',
+            '@type' => '',
+            'urlTemplate' => '',
+            'actionPlatform' => '',
+            'inLanguage' => '',
+          ),
+          '@type' => '',
+        ),
+      ),
+      'schema_web_site.inLanguage' => array(
+        'value' => '',
+      ),
+      'schema_web_site.translationOfWork' => array(
+        'value' => array(
+          '@id' => '',
+        ),
+      ),
+      'schema_web_site.workTranslation' => array(
+        'value' => array(
+          'pivot' => '',
+          '@id' => '',
+        ),
       ),
     ),
   );
@@ -899,7 +1492,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Папулярнае за тыдзень */
-  $handler = $view->new_display('block', 'Папулярнае за тыдзень', 'block_3');
+  $handler = $view->new_display('block', 'Папулярнае за тыдзень', 'block_popular');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Папулярнае за тыдзень';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
