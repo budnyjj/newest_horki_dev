@@ -323,14 +323,14 @@ html body.admin-menu .stickynav-active {
 
 /* sidebar banner #1 */
 .block-42 .block-inner {
-    height: 760px;
+    min-height: 760px;
     border: 1px solid #DBDBDB;
     padding: 20px;
 }
 
 /* sidebar banner #2 */
 .block-41 .block-inner {
-    height: 400px;
+    min-height: 400px;
     border: 1px solid #DBDBDB;
     padding: 20px;
 }
