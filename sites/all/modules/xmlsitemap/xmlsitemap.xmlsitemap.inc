@@ -193,7 +193,17 @@ class XMLSitemapWriter extends XMLWriter {
   public function writeElement($name, $content = NULL) {
     if (is_array($content)) {
       $this->startElement($name);
-      $xml_content = format_xml_elements($content);
+      // If XMLSitemap Image module is enabled and we have image elements
+      // we need execute custom writer which can handle the multiple
+      // image:image tags without overwriting the previous values during
+      // the iteration. It generates the necessary xml output at all.
+
+      if (module_exists('xmlsitemap_image') && array_key_exists('images', $content) && !empty($content['images'])) {
+        $xml_content = xmlsitemap_image_write_images_records_to_xml($content);
+      }
+      else {
+        $xml_content = format_xml_elements($content);
+      }
       // Remove additional spaces from the output.
       $xml_content = str_replace(array(" <", ">\n"), array("<", ">"), $xml_content);
       $this->writeRaw($xml_content);

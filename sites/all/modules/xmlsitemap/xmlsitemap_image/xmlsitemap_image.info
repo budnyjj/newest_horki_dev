@@ -1,0 +1,5 @@
+name = XML sitemap for images
+description = Allow xmlsitemap module to get images tag on sitemap
+package = XML sitemap
+core = 7.x
+dependencies[] = xmlsitemap

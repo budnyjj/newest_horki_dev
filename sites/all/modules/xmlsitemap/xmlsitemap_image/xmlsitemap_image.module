@@ -1,0 +1,384 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function xmlsitemap_image_menu() {
+  $items                                            = [];
+  $items[ 'admin/config/search/xmlsitemap/images' ] = [
+    'title'            => 'Image settings',
+    'description'      => 'settings for the image sitemap',
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => ['xmlsitemap_image_admin'],
+    'access arguments' => ['administer site configuration'],
+    'type'             => MENU_LOCAL_TASK,
+  ];
+  return $items;
+}
+
+/**
+ * Alter the content added to an XML sitemap for an individual element.
+ *
+ * This hooks is called when the module is generating the XML content for the
+ * sitemap and allows other modules to alter existing or add additional XML data
+ * for any element by adding additional key value pairs to the $element array.
+ *
+ * @param array  $element
+ *   The element that will be converted to XML for the link.
+ * @param array  $link
+ *   An array of properties providing context about the link that we are
+ *   generating an XML element for.
+ * @param object $sitemap
+ *   The sitemap that is currently being generated.
+ */
+function xmlsitemap_image_xmlsitemap_element_alter(array &$element, array $link, $sitemap) {
+  $allowed_content_types = array_filter(variable_get('xmlsitemap_image_content_types', ''));
+  $image_count           = 0;
+  // If the subtype is in the $allowed_content_types array, load the node.
+  if (!empty($link[ 'subtype' ]) && in_array($link[ 'subtype' ], $allowed_content_types)) {
+    // Load the node.
+    $current_node = node_load($link[ 'id' ]);
+    // Here we collect the field names for checking.
+    $checking_fields = [];
+    // Let's get the available image fields of the content type.
+    $image_fields = _xmlsitemap_image_get_imagefield_by_node_type($link[ 'subtype' ]);
+    // Handle the allowed image fields.
+    $allowed_image_fields = variable_get('xmlsitemap_image_image_fields', '');
+    if (!empty($allowed_image_fields)) {
+      $allowed_image_fields = array_map('trim', explode(',', $allowed_image_fields));
+      $checking_fields      = $allowed_image_fields;
+    }
+    // If allowed image fields not provided, use the image fields of content type.
+    // @todo: remove duplicates.
+    if (!empty($image_fields)) {
+      $checking_fields += $image_fields;
+    }
+    // Handle the excluded fields.
+    $excluded_image_fields = variable_get('xmlsitemap_image_excluded_image_fields', '');
+    // If excluded field are provided, remove thme from checking array.
+    if (!empty($excluded_image_fields)) {
+      $excluded_image_fields = array_map('trim', explode(',', $excluded_image_fields));
+      $checking_fields       = array_filter($checking_fields,
+        function ($a) use ($excluded_image_fields) {
+          return !in_array($a, $excluded_image_fields);
+        }
+      );
+    }
+    $imgtypes = ['image/png', 'image/jpg', 'image/gif', 'image/jpeg'];
+    // If we still have field to be checked, start the process.
+    if (!empty($checking_fields)) {
+      foreach ($checking_fields as $field_name) {
+        if (!empty($current_node->$field_name)) {
+          $image_field_name = $current_node->$field_name;
+          if (!empty($image_field_name[ $current_node->language ])) {
+            $images = $image_field_name[ $current_node->language ];
+          }
+          elseif (!empty($image_field_name[ LANGUAGE_NONE ])) {
+            $images = $image_field_name[ LANGUAGE_NONE ];
+          }
+          else {
+            $images = [];
+          }
+          foreach ($images as $image) {
+            if (!empty($image[ "filemime" ]) && in_array($image[ "filemime" ], $imgtypes)) {
+              $element[] = _xmlsitemap_image_handle_imagefield($image);
+              $image_count++;
+            }
+            if (!empty($image[ 'value' ])) {
+              $items = _xmlsitemap_image_handle_textfield($image);
+              if (!empty($items)) {
+                $image_count = count($items);
+                foreach ($items as $item) {
+                  $element[] = $item;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  $element[ 'images' ] = $image_count;
+}
+
+/**
+ * Helper function to build output from image fields.
+ *
+ * @param array $image
+ *
+ * @return array
+ */
+function _xmlsitemap_image_handle_imagefield(array $image) {
+  $title   = !empty($image[ 'field_file_image_title_text' ]) ? $image[ 'field_file_image_title_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ] : (!empty($image[ 'title' ]) ? $image[ 'title' ] : $image[ 'filename' ]);
+  $caption = !empty($image[ 'field_file_image_caption_text' ]) ? $image[ 'field_file_image_caption_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ] : (!empty($image[ 'alt' ]) ? $image[ 'alt' ] : $image[ 'filename' ]);
+  return [
+    "image:image" => [
+      "image:loc"     => file_create_url($image[ "uri" ]),
+      "image:title"   => $title,
+      "image:caption" => $caption,
+    ],
+  ];
+}
+
+/**
+ * Helper function to build output from textfields.
+ *
+ * @param array $image
+ *
+ * @return array
+ */
+function _xmlsitemap_image_handle_textfield(array $image) {
+  $images            = [];
+  $checking_contents = [];
+  // The site uses a Drupal-core provided textfield.
+  if (array_key_exists('safe_value', $image)) {
+    $checking_contents[] = $image[ 'value' ];
+  }
+  // The site uses somewhat custom textfield.
+  if (array_key_exists('revision_id', $image)) {
+    // Cooperation with Paragraphs module.
+    if (module_exists('paragraphs')) {
+      $y = paragraphs_item_load($image[ 'value' ]);
+    }
+    // Cooperation with Field collection module.
+    if (module_exists('field_collection_items')) {
+      $y = field_collection_item_load($image[ 'value' ]);
+    }
+    if (!empty($y)) {
+      foreach ((array) $y as $key => $value) {
+        if (is_array($value) && !empty($value) && array_key_exists($y->langcode(), $value)) {
+          foreach ($value[ $y->langcode() ] as $item) {
+            if (array_key_exists('value', $item)) {
+              $checking_contents[] = $item[ 'value' ];
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Let's go through the contents.
+  if (!empty($checking_contents)) {
+    /*
+     * The regex pattern will look for an image tag and create individual capture groups
+     * for 'class'(1), 'src'(2), 'alt'(3), 'title'(4), 'width'(5) and 'height'(6).
+     * The numbers within the brackets stand for the capture group number
+     * respectively the key within the PHP array. The array key 0 will contain
+     * the whole <img> tag with all attributes (the full img link)
+     * Original: https://www.lexo.ch/blog/2014/05/fetch-img-tags-with-all-attributes-from-a-php-string-using-a-regex-pattern-and-capture-groups/
+     * Extended by title option.
+    */
+    $pattern          = '/<img\s*(?:class\s*\=\s*[\'\"](.*?)[\'\"].*?\s*|src\s*\=\s*[\'\"](.*?)[\'\"].*?\s*|alt\s*\=\s*[\'\"](.*?)[\'\"].*?\s*|title\s*\=\s*[\'\"](.*?)[\'\"].*?\s*|width\s*\=\s*[\'\"](.*?)[\'\"].*?\s*|height\s*\=\s*[\'\"](.*?)[\'\"].*?\s*)+.*?>/si';
+    $excluded_classes = variable_get('xmlsitemap_image_excluded_image_classes', '');
+    if (!empty($excluded_classes)) {
+      $excluded_classes = array_map('trim', explode(',', $excluded_classes));
+    }
+    foreach ($checking_contents as $content) {
+      preg_match_all($pattern, $content, $matches);
+      if (!empty($matches)) {
+        $current_host = $_SERVER[ 'REQUEST_SCHEME' ] . '://' . $_SERVER[ 'SERVER_NAME' ];
+        foreach ($matches[ 0 ] as $key => $match) {
+          $skip = FALSE;
+          // If it's not fully qualified URL, we extend it.
+          if (!preg_match('/^(http:|https)/', $matches[ 2 ][ $key ])) {
+            $matches[ 2 ][ $key ] = $current_host . $matches[ 2 ][ $key ];
+          }
+          else {
+            // If the given URL is not came from the current site.
+            if (strstr($matches[ 2 ][ $key ], $current_host) === FALSE) {
+              $skip = TRUE;
+            }
+            // Let's give a chance for developers on dev enviroments.
+            if (module_exists('stage_file_proxy') && $skip) {
+              $origin_host = variable_get('stage_file_proxy_origin', '');
+              if (strstr($matches[ 2 ][ $key ], $origin_host) != FALSE) {
+                $skip = FALSE;
+              }
+            }
+          }
+          // Check excluded classes.
+          if (!$skip && !empty($excluded_classes) && !empty($matches[ 1 ][ $key ])) {
+            $current_image_classes = array_map('trim', explode(' ', $matches[ 1 ][ $key ]));
+            $same                  = array_intersect($excluded_classes, $current_image_classes);
+            if (!empty($same)) {
+              $skip = TRUE;
+            }
+          }
+          // And finally check the availability of image URL.
+          if (!$skip) {
+            $file_headers = @get_headers($matches[ 2 ][ $key ]);
+            // Only the available images can be in the sitemap.
+            if ($file_headers[ 0 ] !== 'HTTP/1.1 200 OK') {
+              $skip = TRUE;
+            }
+          }
+          if ($skip) {
+            continue;
+          }
+
+          $images[] = [
+            "image:image" => [
+              "image:loc"     => $matches[ 2 ][ $key ],
+              "image:title"   => $matches[ 3 ][ $key ],
+              "image:caption" => $matches[ 4 ][ $key ],
+            ],
+          ];
+        }
+      }
+    }
+  }
+  return $images;
+}
+
+/**
+ * Alter the attributes used for the root element of the XML sitemap.
+ *
+ * For example add an xmlns:image attribute:
+ * <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+ * xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+ *
+ * @param array  $attributes
+ *   An associative array of attributes to use in the root element of an XML
+ *   sitemap.
+ * @param object $sitemap
+ *   The sitemap that is currently being generated.
+ */
+function xmlsitemap_image_xmlsitemap_root_attributes_alter(&$attributes, $sitemap) {
+  $attributes[ 'xmlns:image' ] = 'http://www.google.com/schemas/sitemap-image/1.1';
+}
+
+/**
+ * Implements hook_admin_settings() for module settings configuration.
+ */
+function xmlsitemap_image_admin() {
+  $form              = [];
+  $types             = node_type_get_types();
+  $node_type_options = [];
+  foreach ($types as $type) {
+    $imagefields = '';
+    // Provides availabe image fields for admin.
+    $fields = _xmlsitemap_image_get_imagefield_by_node_type($type->type);
+    if (!empty($fields)) {
+      $imagefields = ' (' . implode(', ', $fields) . ')';
+    }
+    $node_type_options[ $type->type ] = $type->name . $imagefields;
+  }
+
+  $form[ 'xmlsitemap_image_content_types' ] = [
+    '#type'          => 'checkboxes',
+    '#title'         => t("Add content types to be checked for images"),
+    '#options'       => $node_type_options,
+    '#default_value' => variable_get('xmlsitemap_image_content_types', []),
+    '#required'      => TRUE,
+    '#description'   => t('You can find the name of available image fields next to the name of content type in parenthesis.'),
+  ];
+
+  $form[ 'xmlsitemap_image_image_fields' ] = [
+    '#type'          => 'textfield',
+    '#title'         => t("Include additional fields"),
+    '#description'   => t("Add comma separated list of image field names you want to INCLUDE in the sitemap eg.: field_article_image. If the field is empty all image field will be checked in the allowed content type(s). Text fields can be added too, the &lt;img&gt; tags will be processed from the content."),
+    '#default_value' => variable_get('xmlsitemap_image_image_fields', ''),
+  ];
+
+  $form[ 'xmlsitemap_image_excluded_image_fields' ] = [
+    '#type'          => 'textfield',
+    '#title'         => t("Exclude image fields"),
+    '#description'   => t("Add comma separated list of image field names you want to EXCLUDE from the sitemap. eg.: field_notimportant_image, field_excludable_image"),
+    '#default_value' => variable_get('xmlsitemap_image_excluded_image_fields', ''),
+  ];
+
+  $form[ 'xmlsitemap_image_excluded_image_classes' ] = [
+    '#type'          => 'textfield',
+    '#title'         => t("Excluded image classes"),
+    '#description'   => t("Add comma separated list of image classes you want to EXCLUDE from the sitemap."),
+    '#default_value' => variable_get('xmlsitemap_image_excluded_image_classes', 'hidden'),
+  ];
+  // We only have to define form elements for the actual settings elements.
+  // The system_settings_form() function will take care of creating the form
+  // page, adding a submit button, and saving the settings.
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function xmlsitemap_image_menu_alter(&$items) {
+  $items[ 'sitemap.xsl' ] = [
+    'page callback'   => 'xmlsitemap_image_xmlsitemap_output_xsl',
+    'access callback' => TRUE,
+    'type'            => MENU_CALLBACK,
+  ];
+}
+
+/**
+ * Alter the output of xmlsitemap.xsl
+ */
+function xmlsitemap_image_xmlsitemap_output_xsl() {
+  // Read the XSL content from the file.
+  $module_path = drupal_get_path('module', 'xmlsitemap');
+  $xsl_content = file_get_contents(drupal_get_path('module', 'xmlsitemap') . '/xsl/xmlsitemap.xsl');
+
+  // Make sure the strings in the XSL content are translated properly.
+  $replacements = [
+    'Sitemap file'                                                                                   => t('Sitemap file'),
+    'Generated by the <a href="http://drupal.org/project/xmlsitemap">Drupal XML sitemap module</a>.' => t('Generated by the <a href="@link-xmlsitemap">Drupal XML sitemap module</a>.', ['@link-xmlsitemap' => 'http://drupal.org/project/xmlsitemap']),
+    'Number of sitemaps in this index'                                                               => t('Number of sitemaps in this index'),
+    'Click on the table headers to change sorting.'                                                  => t('Click on the table headers to change sorting.'),
+    'Sitemap URL'                                                                                    => t('Sitemap URL'),
+    'Last modification date'                                                                         => t('Last modification date'),
+    'Number of URLs in this sitemap'                                                                 => t('Number of URLs in this sitemap'),
+    'URL location'                                                                                   => t('URL location'),
+    'Change frequency'                                                                               => t('Change frequency'),
+    'Priority'                                                                                       => t('Priority'),
+    '[jquery]'                                                                                       => base_path() . 'misc/jquery.js',
+    '[jquery-tablesort]'                                                                             => base_path() . $module_path . '/xsl/jquery.tablesorter.min.js',
+    '[xsl-js]'                                                                                       => base_path() . $module_path . '/xsl/xmlsitemap.xsl.js',
+    '[xsl-css]'                                                                                      => base_path() . $module_path . '/xsl/xmlsitemap.xsl.css',
+  ];
+  $xsl_content  = strtr($xsl_content, $replacements);
+
+  // Output the XSL content.
+  drupal_add_http_header('Content-type', 'application/xml; charset=utf-8');
+  drupal_add_http_header('X-Robots-Tag', 'noindex, follow');
+  print $xsl_content;
+}
+
+/**
+ * Helper function to get image fields by node types.
+ *
+ * @param string $node_type
+ *
+ * @return mixed
+ */
+function _xmlsitemap_image_get_imagefield_by_node_type($node_type) {
+  $query = db_select('field_config', 'fc');
+  $query->join('field_config_instance', 'fci', 'fc.id = fci.field_id');
+  $query->fields('fc', ['field_name'])
+        ->condition('fc.type', 'image')
+        ->condition('fc.module', 'image')
+        ->condition('fci.bundle', $node_type);
+  $fields = $query->execute()->fetchAllKeyed(0, 0);
+  return $fields;
+}
+
+/**
+ * Write the images xml elements into xml content.
+ *
+ * @param $content
+ * @param $xml_content
+ */
+function xmlsitemap_image_write_images_records_to_xml($content) {
+  $multiimgstr = "";
+  foreach ($content as $key => $content_value) {
+    if (is_array($content_value)) {
+      $multiimgstr .= format_xml_elements($content_value);
+      unset($content[ $key ]);
+    }
+  }
+  // We have to regenerate the original $xml_content value.
+  $xml_content = format_xml_elements($content);
+  if (!empty($multiimgstr)) {
+    $xml_content .= $multiimgstr;
+  }
+  return $xml_content;
+}
