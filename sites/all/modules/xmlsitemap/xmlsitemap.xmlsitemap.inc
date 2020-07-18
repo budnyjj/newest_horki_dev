@@ -197,9 +197,15 @@ class XMLSitemapWriter extends XMLWriter {
       // we need execute custom writer which can handle the multiple
       // image:image tags without overwriting the previous values during
       // the iteration. It generates the necessary xml output at all.
-
-      if (module_exists('xmlsitemap_image') && array_key_exists('images', $content) && !empty($content['images'])) {
-        $xml_content = xmlsitemap_image_write_images_records_to_xml($content);
+      if (module_exists('xmlsitemap_image') && array_key_exists('images', $content)) {
+        $num_images = $content['images'];
+        unset($content['images']);
+        if (empty($num_images)) {
+          $xml_content = format_xml_elements($content);
+        }
+        else {
+          $xml_content = xmlsitemap_image_write_images_records_to_xml($content);
+        }
       }
       else {
         $xml_content = format_xml_elements($content);

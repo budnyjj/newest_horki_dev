@@ -93,7 +93,6 @@
           <th>URL location</th>
           <th>Last modification date</th>
           <th>Change frequency</th>
-          <th>Images</th>
           <th>Priority</th>
         </tr>
       </thead>
@@ -114,7 +113,6 @@
       </td>
       <td><xsl:value-of select="sitemap:lastmod"/></td>
       <td><xsl:value-of select="sitemap:changefreq"/></td>
-      <td><xsl:value-of select="sitemap:images"/></td>
       <td>
         <xsl:choose>
           <!-- If priority is not defined, show the default value of 0.5 -->
