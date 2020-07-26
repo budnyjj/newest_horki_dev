@@ -2996,8 +2996,8 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'article',
@@ -4496,8 +4496,8 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'mediagrid',

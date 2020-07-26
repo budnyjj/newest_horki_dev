@@ -213,25 +213,6 @@ function content_type_ads_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_ads_topics';
   $strongarm->value = array(
-    'entity' => 'taxonomy_term',
-    'bundle' => 'ads',
-    'info' => array(
-      'label' => 'Тэмы абвестак',
-      'admin' => array(
-        'path' => 'admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/edit',
-        'real path' => 'admin/structure/taxonomy/ads/edit',
-        'bundle argument' => 3,
-        'access arguments' => array(
-          0 => 'administer taxonomy',
-        ),
-      ),
-      'xmlsitemap' => array(
-        'entity' => 'taxonomy_term',
-        'bundle' => 'ads',
-        'status' => '0',
-        'priority' => '0.5',
-      ),
-    ),
     'status' => '0',
     'priority' => '0.5',
   );
