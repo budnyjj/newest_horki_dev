@@ -30,9 +30,9 @@ function views_companies_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['results_lifespan'] = '3600';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
@@ -198,6 +198,13 @@ function views_companies_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Скінуць';
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -221,13 +228,15 @@ function views_companies_views_default_views() {
   $handler->display->display_options['fields']['field_company_photo']['table'] = 'field_data_field_company_photo';
   $handler->display->display_options['fields']['field_company_photo']['field'] = 'field_company_photo';
   $handler->display->display_options['fields']['field_company_photo']['label'] = '';
-  $handler->display->display_options['fields']['field_company_photo']['element_class'] = 'list-photo';
+  $handler->display->display_options['fields']['field_company_photo']['element_type'] = '0';
   $handler->display->display_options['fields']['field_company_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_company_photo']['element_wrapper_class'] = 'list-photo list-media-photo';
+  $handler->display->display_options['fields']['field_company_photo']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_company_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_company_photo']['type'] = 'picture';
   $handler->display->display_options['fields']['field_company_photo']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
     'lazyload' => 1,
     'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
@@ -245,8 +254,11 @@ function views_companies_views_default_views() {
   $handler->display->display_options['fields']['value']['field'] = 'value';
   $handler->display->display_options['fields']['value']['relationship'] = 'votingapi_cache';
   $handler->display->display_options['fields']['value']['label'] = '';
-  $handler->display->display_options['fields']['value']['element_class'] = 'company-rate';
+  $handler->display->display_options['fields']['value']['element_type'] = '0';
   $handler->display->display_options['fields']['value']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['value']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['value']['element_wrapper_class'] = 'company-rate';
+  $handler->display->display_options['fields']['value']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['value']['set_precision'] = TRUE;
   $handler->display->display_options['fields']['value']['precision'] = '0';
   $handler->display->display_options['fields']['value']['separator'] = '';
@@ -256,22 +268,21 @@ function views_companies_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'list-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Поле: Змест: Апісанне */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<p>';
   $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_class'] = 'list-description';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'smart_trim_format';
   $handler->display->display_options['fields']['body']['settings'] = array(
@@ -287,6 +298,17 @@ function views_companies_views_default_views() {
     ),
     'trim_preserve_tags' => '',
   );
+  /* Поле: Загаловак і апісанне */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Загаловак і апісанне';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h2 class="list-title">[title]</h2>
+<div class="list-description">[body]</div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'list-title-and-description';
   /* Поле: Пошук: web-сайт */
   $handler->display->display_options['fields']['field_company_web_site']['id'] = 'field_company_web_site';
   $handler->display->display_options['fields']['field_company_web_site']['table'] = 'field_data_field_company_web_site';
@@ -311,6 +333,7 @@ function views_companies_views_default_views() {
   $handler->display->display_options['fields']['field_company_full_name']['field'] = 'field_company_full_name';
   $handler->display->display_options['fields']['field_company_full_name']['ui_name'] = 'Пошук: поўная назва прадпрыемства';
   $handler->display->display_options['fields']['field_company_full_name']['label'] = '';
+  $handler->display->display_options['fields']['field_company_full_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_company_full_name']['element_label_colon'] = FALSE;
   /* Поле: Пошук: раздзел каталога */
   $handler->display->display_options['fields']['field_company_section']['id'] = 'field_company_section';
@@ -958,6 +981,8 @@ function views_companies_views_default_views() {
     t('Пошук'),
     t('<p>На жаль, па вашым запыце не знойдзена ніводнага прадпрыемства.</p>
 <p>Вы можаце <a href="/companies.html">скінуць наладкі фільтра</a>, або <a href="http://horki.info/static/1374.html">дадаць сваё прадпрыемства</a>.</p>'),
+    t('<h2 class="list-title">[title]</h2>
+<div class="list-description">[body]</div>'),
     t('Месца'),
   );
   $export['catalog_company'] = $view;

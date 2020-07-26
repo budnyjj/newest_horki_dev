@@ -95,7 +95,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Апошнія навіны';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'page-media-grid';
+  $handler->display->display_options['css_class'] = 'page-media-grid-list';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -112,6 +112,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -185,7 +186,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '[field_default_image]';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
@@ -204,17 +205,23 @@ function views_aposhnija_naviny_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Статыстыка */
+  /* Поле: Фота са статыстыкай */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фота са статыстыкай';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-statistics">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-photo">
+[field_pics]
+</div>
+<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'media-photo-with-statistics';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -222,9 +229,11 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Вузел: Published at */
   $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
@@ -1616,7 +1625,10 @@ function views_aposhnija_naviny_views_default_views() {
     t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>'),
     t('[field_default_image]'),
-    t('<div class="media-statistics">
+    t('<div class="media-photo">
+[field_pics]
+</div>
+<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>'),
