@@ -1,0 +1,14 @@
+name = Image styles: printed
+description = Набор стыляў малюнкаў для друкаванай прадукцыі
+core = 7.x
+package = Custom
+version = 7.x-1.1
+dependencies[] = ctools
+dependencies[] = image
+dependencies[] = picture
+features[ctools][] = picture:default_picture_mapping:2
+features[features_api][] = api:2
+features[image][] = printed_desktop
+features[image][] = printed_fallback
+features[image][] = printed_mobile
+features[picture_mapping][] = printed
