@@ -1,0 +1,14 @@
+name = Image styles: mediagridlist
+description = Набор стыляў малюнкаў для mediagridlist
+core = 7.x
+package = Custom
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = image
+dependencies[] = picture
+features[ctools][] = picture:default_picture_mapping:2
+features[features_api][] = api:2
+features[image][] = mediagridlist_desktop
+features[image][] = mediagridlist_fallback
+features[image][] = mediagridlist_mobile
+features[picture_mapping][] = mediagridlist
