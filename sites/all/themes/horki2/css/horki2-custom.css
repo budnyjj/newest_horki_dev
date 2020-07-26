@@ -350,6 +350,41 @@ html body.admin-menu .stickynav-active {
  * General Views styles
  */
 
+/* media grid list page */
+.page-media-grid-list .views-row {
+    width: 282px;
+    float: left;
+    margin: 0 24px 35px 0;
+}
+
+.page-media-grid-list .views-row:nth-of-type(3n) {
+    margin: 0 0 35px 0;
+}
+
+.page-media-grid-list .views-row:nth-of-type(3n+1) {
+    clear: both;
+}
+
+.page-media-grid-list .media-photo-with-statistics {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.page-media-grid-list .media-photo {
+    margin-bottom: 15px;
+}
+
+.page-media-grid-list .media-photo img {
+    width: 282px;
+    height: 200px;
+}
+
+.page-media-grid-list .media-title {
+    top: 0;
+    font-size: 1.5em;
+}
+
 /* media grid block */
 .block-media-grid .views-row {
     width: 282px;

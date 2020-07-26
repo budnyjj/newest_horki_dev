@@ -599,6 +599,78 @@ ul.tabs li.active a {
  * General Views styles
  */
 
+/* media grid list page */
+.page-media-grid-list {
+    margin-bottom: 50px;
+}
+
+.page-media-grid-list .views-row {
+    margin-bottom: 35px;
+    overflow: auto;
+}
+
+.page-media-grid-list .media-photo-with-statistics {
+    float: left;
+    margin-right: 15px;
+}
+
+.page-media-grid-list .media-photo {
+    margin-bottom: 10px;
+}
+
+.page-media-grid-list .media-photo img {
+    width: 100px;
+    height: 72px;
+}
+
+.page-media-grid-list .media-statistics {
+    font-size: 0.85em;
+    color: #8B9298;
+}
+
+.page-media-grid-list .media-statistics img {
+    margin-right: 0.3em;
+    vertical-align: middle;
+}
+
+.page-media-grid-list .media-statistics .views-count {
+    margin-right: 1em;
+}
+
+.page-media-grid-list .media-title {
+    position: relative;
+    top: -5px;
+    overflow: auto;
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    font-size: 1.35em;
+    letter-spacing: 0.02em;
+}
+
+.page-media-grid-list .media-title a {
+    color: #000000;
+}
+
+.page-media-grid-list .media-title a:hover {
+    text-decoration: none;
+    color: #555555;
+}
+
+.page-media-grid-list .media-field {
+    margin-bottom: 5px;
+    font-size: 1.15em;
+}
+
+.page-media-grid-list .media-label {
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+}
+
+.page-media-grid-list .item-list .pager-next {
+    margin: 0;
+    padding: 0;
+}
+
 /* media grid block */
 .block-media-grid .view-header {
     margin-bottom: 15px;
