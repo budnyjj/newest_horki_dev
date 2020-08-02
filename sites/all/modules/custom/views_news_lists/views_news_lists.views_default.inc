@@ -145,7 +145,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_when']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_when']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_when']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Месцы */
+  /* Поле: Змест: Месца */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
@@ -3003,6 +3003,12 @@ function views_news_lists_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'block-preview';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
@@ -3018,15 +3024,17 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'preview-photo';
+  $handler->display->display_options['fields']['field_pics']['element_type'] = '0';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['element_wrapper_class'] = 'preview-photo';
+  $handler->display->display_options['fields']['field_pics']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'article',
@@ -4516,7 +4524,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
   $handler->display->display_options['fields']['field_video']['type'] = 'video_embed_field_thumbnail';
   $handler->display->display_options['fields']['field_video']['settings'] = array(
-    'image_style' => 'mediagrid_breakpoints_theme_horki2_desktop_normal_1x',
+    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'image_link' => 'content',
   );
   /* Поле: Змест: Галоўны фотаздымак */
@@ -4524,16 +4532,18 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'preview-photo';
+  $handler->display->display_options['fields']['field_pics']['element_type'] = '0';
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['element_wrapper_class'] = 'preview-photo';
+  $handler->display->display_options['fields']['field_pics']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '[field_video]';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'mediagrid',
