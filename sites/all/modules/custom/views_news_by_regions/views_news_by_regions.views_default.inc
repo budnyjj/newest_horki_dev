@@ -24,7 +24,7 @@ function views_news_by_regions_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Горкі';
-  $handler->display->display_options['css_class'] = 'block-main-news-by-regions block-media-grid';
+  $handler->display->display_options['css_class'] = 'block-main-news-by-regions block-media-grid-list';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'болей';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -40,6 +40,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Ніжні калантытул: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
@@ -48,7 +49,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['footer']['area']['label'] = 'Больш навінаў';
   $handler->display->display_options['footer']['area']['content'] = '<a class="bold-text black-text" href="/gorki.html">больш навінаў</a>';
   $handler->display->display_options['footer']['area']['format'] = 'author_text';
-  /* Relationship: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Relationship: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -162,7 +163,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -249,9 +250,20 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_default_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
-    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'article',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Змест: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -265,16 +277,16 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]">[field_default_image]</a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -284,17 +296,23 @@ function views_news_by_regions_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Статыстыка */
+  /* Поле: Фота са статыстыкай */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фота са статыстыкай';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-statistics">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-photo">
+[field_pics]
+</div>
+<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'media-photo-with-statistics';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -302,9 +320,11 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Published status */
@@ -314,7 +334,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -404,9 +424,20 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_default_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
-    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'article',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Змест: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -420,16 +451,16 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]">[field_default_image]</a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
+    'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -439,17 +470,23 @@ function views_news_by_regions_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Статыстыка */
+  /* Поле: Фота са статыстыкай */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фота са статыстыкай';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-statistics">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-photo">
+[field_pics]
+</div>
+<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'media-photo-with-statistics';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -457,9 +494,11 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Published status */
@@ -469,7 +508,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -552,9 +591,20 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_default_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
-    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => '',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'article',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Змест: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -568,16 +618,16 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]">[field_default_image]</a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -587,17 +637,23 @@ function views_news_by_regions_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Статыстыка */
+  /* Поле: Фота са статыстыкай */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фота са статыстыкай';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-statistics">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-photo">
+[field_pics]
+</div>
+<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'media-photo-with-statistics';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -605,9 +661,11 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Published status */
@@ -617,7 +675,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -696,9 +754,20 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_default_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
-    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => '',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'article',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Змест: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -712,16 +781,16 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]">[field_default_image]</a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -731,17 +800,23 @@ function views_news_by_regions_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Статыстыка */
+  /* Поле: Фота са статыстыкай */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фота са статыстыкай';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-statistics">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-photo">
+[field_pics]
+</div>
+<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'media-photo-with-statistics';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -749,9 +824,10 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Published status */
@@ -761,7 +837,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -840,9 +916,20 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_default_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
-    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'picture_mapping' => 'article',
+    'fallback_image_style' => 'mediagridlist_fallback',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'article',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Змест: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -856,16 +943,16 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]">[field_default_image]</a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -875,17 +962,23 @@ function views_news_by_regions_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Статыстыка */
+  /* Поле: Фота са статыстыкай */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фота са статыстыкай';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-statistics">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-photo">
+[field_pics]
+</div>
+<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'media-photo-with-statistics';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -893,9 +986,11 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Published status */
@@ -905,7 +1000,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -994,9 +1089,20 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_default_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
-    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'picture_mapping' => 'article',
+    'fallback_image_style' => 'mediagridlist_fallback',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'article',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   /* Поле: Змест: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -1010,16 +1116,16 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
   $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
   $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_class'] = 'media-photo';
+  $handler->display->display_options['fields']['field_pics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pics']['empty'] = '<a href="[path]">[field_default_image]</a>';
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
+    'lazyload' => 1,
+    'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -1029,17 +1135,23 @@ function views_news_by_regions_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Статыстыка */
+  /* Поле: Фота са статыстыкай */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фота са статыстыкай';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-statistics">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-photo">
+[field_pics]
+</div>
+<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'media-photo-with-statistics';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Поле: Змест: Загаловак */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -1047,9 +1159,11 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'media-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Змест: Published status */
@@ -1059,7 +1173,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -1112,7 +1226,10 @@ function views_news_by_regions_views_default_views() {
     t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
     t(' '),
     t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
-    t('<div class="media-statistics">
+    t('<div class="media-photo">
+[field_pics]
+</div>
+<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>'),

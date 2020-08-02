@@ -599,6 +599,76 @@ ul.tabs li.active a {
  * General Views styles
  */
 
+/* media grid list block */
+.block-media-grid-list .view-header {
+    margin-bottom: 15px;
+}
+
+.block-media-grid-list .header-title {
+    margin-right: 1em;
+    text-transform: uppercase;
+    font-family: 'PTSans Caption', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    color: #671A1D;
+}
+
+.block-media-grid-list .header-more {
+    letter-spacing: 0.01em;
+}
+
+.block-media-grid-list .views-row {
+    margin-bottom: 35px;
+    overflow: auto;
+}
+
+.block-media-grid-list .media-photo-with-statistics {
+    float: left;
+    margin-right: 15px;
+}
+
+.block-media-grid-list .media-photo {
+    margin-bottom: 10px;
+}
+
+.block-media-grid-list .media-photo img {
+    width: 100px;
+    height: 72px;
+}
+
+.block-media-grid-list .media-statistics {
+    font-size: 0.85em;
+    color: #8B9298;
+}
+
+.block-media-grid-list .media-statistics img {
+    margin-right: 0.3em;
+    vertical-align: middle;
+}
+
+.block-media-grid-list .media-statistics .views-count {
+    margin-right: 1em;
+}
+
+.block-media-grid-list .media-title {
+    position: relative;
+    top: -5px;
+    overflow: auto;
+    font-family: 'PTSans', sans-serif;
+    font-weight: bold;
+    font-size: 1.35em;
+    letter-spacing: 0.02em;
+}
+
+.block-media-grid-list .media-title a {
+    color: #000000;
+}
+
+.block-media-grid-list .media-title a:hover {
+    text-decoration: none;
+    color: #555555;
+}
+
 /* media grid list page */
 .page-media-grid-list {
     margin-bottom: 50px;
