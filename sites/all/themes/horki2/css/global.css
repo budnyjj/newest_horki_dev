@@ -548,7 +548,7 @@ ul.tabs li.active a {
 }
 
 .zone-preview {
-    padding: 15px 0;
+    padding-top: 15px;
 }
 
 .zone-preview a {
@@ -562,7 +562,7 @@ ul.tabs li.active a {
 
 /* preview blocks */
 .block-preview .views-row {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .block-preview .view-header {
@@ -571,7 +571,7 @@ ul.tabs li.active a {
 }
 
 .block-preview .preview-photo {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .block-preview .preview-photo img {

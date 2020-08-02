@@ -280,11 +280,11 @@ function views_rubrics_views_default_views() {
       'colorbox_caption_custom' => '',
     ),
   );
-  /* Поле: Статыстыка */
+  /* Поле: Фота са статыстыкай */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Статыстыка';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Фота са статыстыкай';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-photo">
 [field_pics]
