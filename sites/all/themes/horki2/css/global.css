@@ -2275,6 +2275,14 @@ ul.tabs li.active a {
     border-top: 1px solid #DBDBDB;
 }
 
+.banner-telegram {
+    margin-bottom: 20px;
+}
+
+.banner-telegram img {
+    width: 100%;
+}
+
 /* similar terms blocks */
 .block-similarterms-similar-news,
 .block-similarterms-similar-afisha,

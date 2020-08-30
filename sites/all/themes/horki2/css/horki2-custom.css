@@ -822,6 +822,11 @@ html body.admin-menu .stickynav-active {
     min-height: 293px;
 }
 
+.banner-telegram img {
+    width: 894px;
+    height: 262px;
+}
+
 
 /**
  * Custom Inner nodes styles

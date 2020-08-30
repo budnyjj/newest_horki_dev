@@ -145,7 +145,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_when']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_when']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_when']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Месца */
+  /* Поле: Змест: Месцы */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
@@ -3034,7 +3034,7 @@ function views_news_lists_views_default_views() {
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'article',
@@ -4543,7 +4543,7 @@ function views_news_lists_views_default_views() {
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'mediagrid',
