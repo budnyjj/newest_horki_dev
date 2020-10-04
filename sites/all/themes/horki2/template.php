@@ -118,3 +118,17 @@ function horki2_menu_link(&$vars) {
  
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Adds Honepot integration to 'Contact Us' webform.
+ */
+function horki2_form_webform_client_form_83_alter(&$form, &$form_state) {
+  honeypot_add_form_protection($form, $form_state, array('honeypot', 'time_restriction'));
+}
+
+/**
+ * Adds Honepot integration to 'Report a mistake' webform.
+ */
+function horki2_form_webform_client_form_12286_alter(&$form, &$form_state) {
+  honeypot_add_form_protection($form, $form_state, array('honeypot'));
+}

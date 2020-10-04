@@ -352,4 +352,5 @@ css[mobile-navigation.css][options][weight] = '11'
 css[addthis.css][name] = 'Custom styles for addthis module'
 css[addthis.css][description] = 'This file holds style for addthis module.'
 css[addthis.css][options][weight] = '12'
+scripts[] = js/report_mistake.js
 version = '1.0'

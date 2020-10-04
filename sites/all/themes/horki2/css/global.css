@@ -2830,3 +2830,19 @@ ul.tabs li.active a {
 .node-local_problem-form .vertical-tabs {
     display: none;
 }
+
+/**
+ * Custom webform styles
+ */
+
+/* 'report a mistake' webform*/
+.webform-component--mistake-destination,
+.webform-component--mistake,
+.webform-component--mistake-context {
+    display: none;
+}
+
+.text-mistake {
+    font-weight: bold;
+    color: #D11F26;
+}
