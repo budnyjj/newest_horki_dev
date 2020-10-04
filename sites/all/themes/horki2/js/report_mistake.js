@@ -27,7 +27,7 @@ function reportMistake() {
         .slice(0, Math.min(SURROUNDING_SIZE, afterWords.length))
         .join(' ');
     var mistake = range.toString();
-    var destinationUrl = '/report-mistake.html'
+    var destinationUrl = '/node/15600'
         + '?destination=' + window.location.pathname
         + '&mistake=' + mistake
         + '&prefix=' + prefix

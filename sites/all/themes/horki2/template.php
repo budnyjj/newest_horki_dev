@@ -129,6 +129,6 @@ function horki2_form_webform_client_form_83_alter(&$form, &$form_state) {
 /**
  * Adds Honepot integration to 'Report a mistake' webform.
  */
-function horki2_form_webform_client_form_12286_alter(&$form, &$form_state) {
+function horki2_form_webform_client_form_15600_alter(&$form, &$form_state) {
   honeypot_add_form_protection($form, $form_state, array('honeypot'));
 }
