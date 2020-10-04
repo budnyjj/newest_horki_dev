@@ -1,6 +1,23 @@
 <?php print $doctype; ?>
 <html xmlns:og="https://ogp.me/ns#" lang="ru" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?>>
 <head<?php print $rdf->profile; ?>>
+
+<link rel="preload" as="font" type="font/woff2" href="/sites/all/themes/horki2/fonts/PTSans/ptc55.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/sites/all/themes/horki2/fonts/PTSans/ptc75.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/sites/all/themes/horki2/fonts/PTSans/pts55.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/sites/all/themes/horki2/fonts/PTSans/pts75.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/sites/all/themes/horki2/fonts/PTSerif/ptf55.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/sites/all/themes/horki2/fonts/PTSerif/ptf75.woff2" crossorigin>
+
+<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/viber.svg">
+<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/instagram.svg">
+<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/ok.svg">
+<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/vk.svg">
+<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/twitter.svg">
+<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/facebook.svg">
+<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/rss.svg">
+<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/mail.svg">
+
 <?php print $head; ?>
 <title><?php print $head_title; ?></title>  
 
