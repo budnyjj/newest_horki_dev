@@ -16,6 +16,7 @@
        url('/sites/all/themes/horki2/fonts/PTSans/pts55.svg#PTSans')         format('svg');
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -28,6 +29,7 @@
        url('/sites/all/themes/horki2/fonts/PTSans/pts75.svg#PTSans')         format('svg');
   font-style: normal;
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
@@ -40,6 +42,7 @@
        url('/sites/all/themes/horki2/fonts/PTSans/ptc55.svg#PTSans-Caption') format('svg');
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -52,6 +55,7 @@
        url('/sites/all/themes/horki2/fonts/PTSans/ptc75.svg#PTSans-Caption') format('svg');
   font-style: normal;
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
@@ -64,6 +68,7 @@
        url('/sites/all/themes/horki2/fonts/PTSerif/ptf55.svg#PTSerif')        format('svg');
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -76,6 +81,7 @@
        url('/sites/all/themes/horki2/fonts/PTSerif/ptf75.svg#PTSerif')        format('svg');
   font-style: normal;
   font-weight: bold;
+  font-display: swap;
 }
 
 /* Element styles */

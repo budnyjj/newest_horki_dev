@@ -168,8 +168,8 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_default_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => '',
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
     'lazyload' => 1,
     'lazyload_aspect_ratio' => 1,
     'image_link' => '',
@@ -192,8 +192,8 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'picture_mapping' => 'mediagridlist',
+    'fallback_image_style' => 'mediagridlist_fallback',
     'lazyload' => 1,
     'lazyload_aspect_ratio' => 1,
     'image_link' => 'content',

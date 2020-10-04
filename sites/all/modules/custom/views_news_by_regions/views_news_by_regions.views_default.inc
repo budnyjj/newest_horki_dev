@@ -254,7 +254,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagridlist_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => '',
     'colorbox_settings' => array(
@@ -285,7 +285,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagridlist_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
@@ -428,7 +428,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagridlist_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => '',
     'colorbox_settings' => array(
@@ -459,7 +459,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
@@ -595,7 +595,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => '',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => '',
     'colorbox_settings' => array(
@@ -626,7 +626,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagridlist_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
@@ -758,7 +758,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => '',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => '',
     'colorbox_settings' => array(
@@ -789,7 +789,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagridlist_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
@@ -920,7 +920,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
     'picture_mapping' => 'article',
     'fallback_image_style' => 'mediagridlist_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => '',
     'colorbox_settings' => array(
@@ -951,7 +951,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagridlist_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
@@ -1093,7 +1093,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_default_image']['settings'] = array(
     'picture_mapping' => 'article',
     'fallback_image_style' => 'mediagridlist_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => '',
     'colorbox_settings' => array(
@@ -1124,7 +1124,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['field_pics']['settings'] = array(
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagridlist_fallback',
-    'lazyload' => 1,
+    'lazyload' => 0,
     'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(

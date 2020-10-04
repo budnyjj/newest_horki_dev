@@ -59,7 +59,8 @@ function text_formats_ckeditor_profile_defaults() {
         'html_entities' => 't',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => 'config.allowedContent = true;',
+        'js_conf' => 'config.allowedContent = true;
+config.disableNativeSpellChecker = false;',
         'loadPlugins' => array(
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
@@ -152,7 +153,8 @@ function text_formats_ckeditor_profile_defaults() {
         'html_entities' => 't',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => 'config.allowedContent = true;',
+        'js_conf' => 'config.allowedContent = true;
+config.disableNativeSpellChecker = false;',
         'loadPlugins' => array(
           'counter' => array(
             'name' => 'counter',
@@ -213,7 +215,7 @@ function text_formats_ckeditor_profile_defaults() {
     'CKEditor Global Profile' => array(
       'name' => 'CKEditor Global Profile',
       'settings' => array(
-        'skin' => 'moono',
+        'skin' => 'moono-lisa',
         'ckeditor_path' => '%l/ckeditor',
         'ckeditor_local_path' => '',
         'ckeditor_plugins_path' => '%m/plugins',
