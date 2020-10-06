@@ -39,10 +39,10 @@
 <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <!-- Yandex Direct -->
-<script src="/sites/all/themes/horki2/js/adfox_loader.js" crossorigin="anonymous"></script>
+<script async src="//yastatic.net/pcode/adfox/loader.js" crossorigin="anonymous"></script>
 
 <!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-7674021519504941",
@@ -51,7 +51,7 @@
 </script>
 
 <!-- SendPulse -->
-<script charset="UTF-8" src="//web.webpushs.com/js/push/2d160ca9896cdd7e019723312a219d56_1.js" async></script>
+<script async charset="UTF-8" src="//web.webpushs.com/js/push/2d160ca9896cdd7e019723312a219d56_1.js"></script>
 
 </head>
 <body<?php print $attributes;?>>
