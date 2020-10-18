@@ -2174,6 +2174,13 @@ ul.tabs li.active a {
     color: #671A1D;
 }
 
+.node .field-name-body .text-signature,
+.node .field-name-field-text .text-signature {
+    font-family: 'PTSans Caption', sans-serif;
+    font-weight: bold;
+    color: #8B9298;
+}
+
 .node .field-name-body .text-box-gray,
 .node .field-name-field-text .text-box-gray {
     padding: 20px 10px;
@@ -2185,9 +2192,19 @@ ul.tabs li.active a {
 }
 
 .node .field-name-body .text-box-gray p,
-.node .field-name-field-text .text-box-gray p {
+.node .field-name-field-text .text-box-gray p,
+.node .field-name-body .text-box-gray ol,
+.node .field-name-field-text .text-box-gray ol,
+.node .field-name-body .text-box-gray ul,
+.node .field-name-field-text .text-box-gray ul {
+    margin-bottom: 15px;
     font-family: 'PTSans Caption', sans-serif;
     font-size: 1em;
+}
+
+.node .field-name-body .text-box-gray li,
+.node .field-name-field-text .text-box-gray li {
+    margin-bottom: 15px;
 }
 
 .node .field-name-body .text-box-gray p:last-child,
@@ -2195,11 +2212,9 @@ ul.tabs li.active a {
     margin-bottom: 0;
 }
 
-.node .field-name-body .text-signature,
-.node .field-name-field-text .text-signature {
-    font-family: 'PTSans Caption', sans-serif;
-    font-weight: bold;
-    color: #8B9298;
+.node .field-name-body .text-box-gray .text-chapter,
+.node .field-name-field-text .text-box-gray .text-chapter {
+    margin: 0 0 20px;
 }
 
 .node .field-name-field-author {
