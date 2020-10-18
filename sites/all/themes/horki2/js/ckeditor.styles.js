@@ -14,7 +14,7 @@ if (typeof(CKEDITOR) !== 'undefined') {
 	    {
 		name: 'Тэкст', 
 		element : 'p',
-		attributes: {}
+		attributes: {'class': null}
 	    },
 	    {
 		name: 'Падраздзел', 
