@@ -804,6 +804,12 @@ html body.admin-menu .stickynav-active {
     margin: 65px 100px;
 }
 
+.node .field-name-body .text-box-gray,
+.node .field-name-field-text .text-box-gray {
+    padding: 20px 40px;
+    margin-bottom: 25px;
+}
+
 .node .field-name-field-author {
     margin: -25px 50px 50px 50px;
 }

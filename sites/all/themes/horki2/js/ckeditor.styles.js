@@ -14,7 +14,7 @@ if (typeof(CKEDITOR) !== 'undefined') {
 	    {
 		name: 'Тэкст', 
 		element : 'p',
-		attributes: {'class' : '' } 
+		attributes: {}
 	    },
 	    {
 		name: 'Падраздзел', 
@@ -26,11 +26,16 @@ if (typeof(CKEDITOR) !== 'undefined') {
 		element : 'p', 
 		attributes: {'class' : 'text-accent'} 
 	    },
+            {
+                name: 'Шэры блок',
+		element: 'div',
+		attributes: {'class' : 'text-box-gray'}
+            },
 	    {
 		name: 'Подпіс',
 		element : 'h3', 
 		attributes: {'class' : 'text-signature'}
-	    }
+	    },
 	]
     );
 }
