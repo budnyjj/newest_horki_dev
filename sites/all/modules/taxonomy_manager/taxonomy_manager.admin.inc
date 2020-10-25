@@ -23,7 +23,15 @@ function taxonomy_manager_voc_list() {
   $voc_list = array();
 
   foreach ($vocabularies as $vocabulary) {
-    $voc_list[] = l($vocabulary->name, 'admin/structure/taxonomy_manager/voc/' . $vocabulary->machine_name);
+    $voc_list[] = l($vocabulary->name,
+      'admin/structure/taxonomy_manager/voc/' . $vocabulary->machine_name,
+      array(
+        'attributes' => array(
+          'title' => $vocabulary->description,
+          'alt' => $vocabulary->description,
+        ),
+      )
+    );
   }
   if (!count($voc_list)) {
     $voc_list[] = t('No Vocabularies available');
@@ -228,7 +236,7 @@ function taxonomy_manager_double_tree_form($form, &$form_state, $voc1, $voc2, $t
   $form = taxonomy_manager_form($form, $form_state, $voc1, $tid, $filter);
 
   $form['disable'] = array(
-    '#markup' => l(t('Disable Double Tree'), 'admin/structure/taxonomy_manager/voc/ ' . $voc1->machine_name),
+    '#markup' => l(t('Disable Double Tree'), 'admin/structure/taxonomy_manager/voc/' . $voc1->machine_name),
     '#weight' => -100,
   );
 
@@ -403,7 +411,7 @@ function taxonomy_manager_search_form(&$form, $voc) {
     '#theme' => 'no_submit_button',
   );
 
-  $search_description = t("You can search directly for exisiting terms.
+  $search_description = t("You can search directly for existing terms.
       If your input doesn't match an existing term, it will be used for filtering root level terms (useful for non-hierarchical vocabularies).");
 
   $form['search'] = array(
@@ -937,6 +945,10 @@ function taxonomy_manager_term_data_form(&$form, &$form_state, $tid = 0, $vid1, 
         );
       }
     }
+
+    // Entity translation and title field integration.
+    taxonomy_manager_term_data_form_entity_translation($form, $term);
+
     _taxonomy_manager_term_data_form_filter_file_fields($form);
   }
 
@@ -1126,6 +1138,67 @@ function _taxonomy_manager_form_term_data_translations($term) {
   );
 
   return $form;
+}
+
+/**
+ * Entity translation and title field integration for terms.
+ */
+function taxonomy_manager_term_data_form_entity_translation(&$form, $term) {
+  if (module_exists('title') &&
+    module_exists('entity_translation') &&
+    entity_translation_enabled('taxonomy_term', $term) &&
+    title_field_replacement_enabled('taxonomy_term', $term->vocabulary_machine_name, 'name') &&
+    !empty($term->name_field)) {
+
+    $languages = language_list();
+    $source_language = $term->translations->original;
+
+    // Disable the original name_field forms.
+    $form['term_data']['name_field']['#access'] = FALSE;
+    // Create an own temporary form.
+    $name_field_form = array(
+      '#tree' => TRUE,
+      '#weight' => -100,
+    );
+    foreach ($languages as $language) {
+      $translation = isset($term->translations->data[$language->language]) ? $term->translations->data[$language->language] : FALSE;
+
+      // Determine the access for each translation.
+      if ($translation) {
+        $access = entity_translation_access('taxonomy_term', $translation);
+      }
+      else {
+        $access = (user_access('translate any entity') || user_access('translate taxonomy_term entities'));
+      }
+      if (entity_translation_workflow_enabled() && $source_language == $language->language) {
+        $access = user_access('edit original values');
+      }
+
+      $default_value = isset($term->name_field[$language->language][0]['value']) ? $term->name_field[$language->language][0]['value'] : '';
+      $name_field_form['name'][$language->language] = array(
+        '#type' => 'textfield',
+        '#default_value' => !empty($default_value) ? $default_value : '',
+        '#title' => t('Name (@language)', array('@language' => $language->name)),
+        '#required' => !empty($translation) ? TRUE : FALSE,
+        '#access' => $access,
+      );
+
+      if ($source_language == $language->language) {
+        $name_field_form['name'][$language->language]['#title'] .= ' - ' . t('Source language');
+        $name_field_form['name'][$language->language]['#weight'] = -1;
+      }
+      if (module_exists('pathauto')) {
+        // Option to generate path aliases.
+        $name_field_form['pathauto'] = array(
+          '#type' => 'checkbox',
+          '#title' => t('Update path aliases for translations.'),
+          '#default_value' => TRUE,
+          '#weight' => 10,
+        );
+      }
+    }
+    $form['term_data']['name_field_form'] = $name_field_form;
+  }
 }
 
 /**
@@ -1579,7 +1652,7 @@ function taxonomy_manager_form_term_merge_validate($form, &$form_state) {
   }
 
   if (count($selected_tids) < 1) {
-    form_set_error('term_merge', t("Please selecte terms you want to merge"));
+    form_set_error('term_merge', t("Please select terms you want to merge"));
     $form_state['rebuild'] = TRUE;
   }
   elseif (_taxonomy_manager_check_duplicates($form_state['values']['voc']->vid, $form_state['values']['term_merge']['dest_term'], $error_msg)) {
@@ -1603,7 +1676,7 @@ function taxonomy_manager_form_term_merge_submit($form, $form_state) {
     $term = taxonomy_term_load($selected_tid);
     $term_names_array[] = $term->name;
   }
-  $term_names = implode($term_names_array, ', ');
+  $term_names = implode(', ', $term_names_array);
   if (module_exists('term_merge')) {
     term_merge($selected_tids, $dest_term->tid, $form_state['values']['term_merge']['options']['keep_merged']);
     drupal_set_message(t("Terms %term_names merged into %dest_term", array('%term_names' => $term_names, '%dest_term' => $dest_term->name)));
@@ -1688,8 +1761,13 @@ function taxonomy_manager_term_data_form_ajax_callback($form, $form_state) {
 
 
 function taxonomy_manager_term_data_form_submit($form, &$form_state) {
+  unset($form_state['values']['parents']);
   $old_term = taxonomy_term_load($form_state['values']['tid']);
   $term = taxonomy_form_term_submit_build_taxonomy_term($form, $form_state);
+
+  // Submit handler for entity translations.
+  taxonomy_manager_term_data_form_entity_translation_submit($form_state, $term);
+
   if ($term->weight != $old_term->weight) {
     form_set_value(array('#parents' => array('tree-update')), array('update' => TRUE), $form_state);
   }
@@ -1705,7 +1783,70 @@ function taxonomy_manager_term_data_form_submit($form, &$form_state) {
   $form_state['rebuild'] = TRUE;
 }
 
+/**
+ * Helper function that submit entity translations from the the title field.
+ */
+function taxonomy_manager_term_data_form_entity_translation_submit(&$form_state, &$term) {
+  if (module_exists('entity_translation') && module_exists('title') &&
+    title_field_replacement_enabled('taxonomy_term', $term->vocabulary_machine_name, 'name') &&
+    !empty($form_state['values']['name_field_form'])) {
 
+    unset($term->name_field_form);
+    unset($term->name_field);
+
+    $handler = entity_translation_get_handler('taxonomy_term', $term);
+    $source_language = $term->translations->original;
+
+    foreach ($form_state['values']['name_field_form']['name'] as $language => $value) {
+      if (!empty($value)) {
+        $term->name_field[$language][0] = array(
+          'value' => $value,
+          'format' => NULL,
+        );
+        $term->name = $value;
+
+        // Create a new translation if it does not exsist yet.
+        if (!isset($term->translations->data[$language])) {
+          $translation = array('source' => $source_language, 'language' => $language, 'status' => 1);
+          $handler->setTranslation($translation);
+        }
+
+        // Pathauto handling - update aliases for each language, except the
+        // source language - this happens automatically.
+        if ($source_language != $language && $form_state['values']['name_field_form']['pathauto']) {
+          require_once drupal_get_path('module', 'pathauto') . '/pathauto.inc';
+
+          $source_url = 'taxonomy/term/' . $term->tid;
+          $pathauto_options = array(
+            'alias' => '',
+            'pid' => NULL,
+            'source' => $source_url,
+            'language' => $language,
+            'pathauto' => 1,
+          );
+          $existing_alias =_pathauto_existing_alias_data($source_url, $language);
+          $op = 'insert';
+          if ($existing_alias) {
+            $op = 'update';
+            $pathauto_options['original'] = $existing_alias;
+            $pathauto_options['pid'] = $existing_alias['pid'];
+            $pathauto_options['alias'] = $existing_alias['alias'];
+          }
+
+          $term->path = array(
+            'pathauto' => $pathauto_options,
+          );
+          $options = array(
+            'language' => $language,
+          );
+          pathauto_taxonomy_term_update_alias($term, $op, $options);
+        }
+      }
+    }
+    // Reset the name property to the title field value from the original value.
+    $term->name = $term->name_original = $form_state['values']['name_field_form']['name'][$source_language];
+  }
+}
 
 function taxonomy_manager_term_data_form_validate_parents_add($form, &$form_state) {
   $term_data = $form_state['values'];
@@ -1747,26 +1888,46 @@ function taxonomy_manager_term_data_form_submit_parents_add($form, &$form_state)
   $parent_names = $term_data['parents']['op']['add'];
 
   $typed_terms = taxonomy_manager_autocomplete_tags_get_tids($parent_names, $term->vid, TRUE); //insert terms
+  foreach ($typed_terms as $parent_info) {
+    $new_tid = $parent_info['tid'];
+  }
 
   if (!isset($term->parent)) {
     $term->parent = array();
   }
 
-  foreach ($typed_terms as $parent_info) {
-    $term->parent[] = $parent_info['tid'];
+  // get the current parents first
+  $flag = FALSE;
+  $current_parents = taxonomy_get_parents($term->tid);
+  foreach ($current_parents as $key => $value) {
+    $term->parent[] = $key;
+    if ($key == $new_tid) {
+      $flag = TRUE;
+    }
   }
 
-  //remove root level entry
-  db_delete('taxonomy_term_hierarchy')
-    ->condition('tid', $term->tid)
-    ->condition('parent', 0)
-    ->execute();
-
-  taxonomy_term_save($term); //executes hooks and clears caches
-  taxonomy_manager_update_voc($term->vid, taxonomy_get_parents($term->tid)); // update hierarchy settings, if necessary
-  drupal_set_message(t('Updated hierarchy'));
-  $form_state['rebuild'] = TRUE;
-  form_set_value(array('#parents' => array('tree-update')), array('update' => TRUE), $form_state);
+  // Add on the new parent if it did not already exist.
+  if (!$flag) {
+    // If the current term's parent is only root, delete it.
+    $i = 0;
+    foreach ($term->parent as $p) {
+      if (is_array($p)) {
+        if ($p[0] == 0) {
+          unset($term->parent[$i]);
+        }
+      }
+      $i++;
+    }
+    $term->parent[] = $new_tid;
+    taxonomy_term_save($term); //executes hooks and clears caches
+    taxonomy_manager_update_voc($term->vid, taxonomy_get_parents($term->tid)); // update hierarchy settings, if necessary
+    drupal_set_message(t('Updated hierarchy'));
+    $form_state['rebuild'] = TRUE;
+    form_set_value(array('#parents' => array('tree-update')), array('update' => TRUE), $form_state);
+  }
+  else {
+    form_set_error('parents][op][add', t("Parent already exists."));
+  }
 }
 
 
@@ -2212,10 +2373,9 @@ function taxonomy_manager_switch($tids, $from_voc, $to_voc, $parents = array()) 
     $children = taxonomy_get_tree($from_voc, $tid);
     $terms_to_switch = array();
     foreach ($children as $child) {
-      // Use tid as key to avoid duplicate terms from multiple-parent hierarchies.
-      $terms_to_switch[$child->tid] = $child->tid;
+      $terms_to_switch[] = $child->tid;
     }
-    $terms_to_switch[$tid] = $tid;
+    $terms_to_switch[] = $tid;
 
     db_update('taxonomy_term_data')
       ->fields(array('vid' => $to_voc))
@@ -2243,7 +2403,6 @@ function taxonomy_manager_switch($tids, $from_voc, $to_voc, $parents = array()) 
     }
     taxonomy_manager_move($parents, array($tid));
     taxonomy_manager_update_voc($to_voc, $parents);
-    taxonomy_manager_update_fields($terms_to_switch, $from_voc, $to_voc);
   }
   //TODO invoke update hook!!
   taxonomy_terms_static_reset();
@@ -2691,122 +2850,6 @@ function taxonomy_manager_autocomplete_load($vid, $tags_typed = '') {
   drupal_json_output($matches);
 }
 
-/**
- * Finds what fields are refering to terms that are being moved across
- * vocabularies, and updates those fields accordingly.
- */
-function taxonomy_manager_update_fields($tids, $source_vid, $dest_vid) {
-  // Find affected field instances.
-  $source_fields = _taxonomy_manager_get_field_map($source_vid);
-  $dest_fields = _taxonomy_manager_get_field_map($dest_vid);
-
-  // Map each source field with one or more destination fields.
-  $map = array();
-  foreach ($source_fields as $source_field_name => $source_field_info) {
-    foreach ($source_field_info['bundles'] as $entity_type => $bundles) {
-      foreach ($bundles as $bundle) {
-        // Empty array will indicate that no destination field was found.
-        $map[$entity_type][$bundle][$source_field_name] = array(); 
-        foreach ($dest_fields as $dest_field_name => $dest_field_info) {
-          if (isset($dest_field_info['bundles'][$entity_type]) && in_array($bundle, $dest_field_info['bundles'][$entity_type])) {
-            // Found a field that is associated with the destination vocabulary
-            // in the same bundle as the source field.
-            $map[$entity_type][$bundle][$source_field_name][] = $dest_field_name;
-          }
-        }
-      }
-    }
-  }
-
-  // Find the entities that are using the moved terms.
-  foreach ($tids as $tid) {
-    foreach (array_keys($source_fields) as $source_field_name) {
-      $query = new EntityFieldQuery();
-      $query->fieldCondition($source_field_name, 'tid', $tid);
-      $result = $query->execute();
-      foreach ($result as $entity_type => $entities) {
-        foreach (array_keys($entities) as $entity_id) {
-          _taxonomy_manager_update_entity_fields($entity_type, $entity_id, $map, $tid);
-        }
-      }
-    }
-  }
-}
-
-/**
- * Moves $tids from their source field in the specified entity to their
- * destination field(s).
- *
- * WARNING: If there are no destination fields for a given source field, the
- * term gets deleted from the source field.
- *
- * @param $entity_type
- *   Type of the entity to modify.
- * @param $entity_id
- *   Id of the entity to modify.
- * @param $map
- *   Map of source fields to destination fields. 
- * @param $tid
- *   Term to move.
- */
-function _taxonomy_manager_update_entity_fields($entity_type, $entity_id, $map, $tid) {
-  $updated = FALSE;
-  $entity = entity_load_single($entity_type, $entity_id);
-  list(, , $bundle) = entity_extract_ids($entity_type, $entity);
-  if (isset($map[$entity_type][$bundle])) {
-    // For each destination field associated with a source field.
-    foreach ($map[$entity_type][$bundle] as $source_field_name => $dest_fields) {
-      if (isset($entity->$source_field_name)) {
-        // And for each language.
-        foreach ($entity->$source_field_name as $language => $items) {
-          foreach ($entity->{$source_field_name}[$language] as $delta => $item) {
-            if ($item['tid'] == $tid) {
-              // Add term to destination field(s).
-              foreach ($dest_fields as $dest_field_name) {
-                if ($dest_field_name) {
-                  $entity->{$dest_field_name}[$language][] = $item;
-                }
-              }
-              // Remove term from source field.
-              unset($entity->{$source_field_name}[$language][$delta]);
-              $updated = TRUE;
-            }
-          }
-        }
-      }
-    }
-    if ($updated) {
-      entity_save($entity_type, $entity);
-    }
-  }
-}
-  
-/**
- * Returns a map of all taxonomy fields that are configured for the specified
- * vocabulary.
- *
- * @return An array that follows the same structure as returned by
- * field_info_field_map().
- */
-function _taxonomy_manager_get_field_map($vid) {
-  $all_fields_map = field_info_field_map();
-  $vocabulary = taxonomy_vocabulary_load($vid);
-  $taxonomy_fields = field_read_fields(array('type' => 'taxonomy_term_reference'));
-
-  $map = array();
-  foreach ($taxonomy_fields as $field_name => $field_info) {
-    foreach ($field_info['settings']['allowed_values'] as $allowed_value) {
-      if ($allowed_value['vocabulary'] == $vocabulary->machine_name) {
-        // Found a field that is using our vocabulary.
-        if (isset($all_fields_map[$field_name])) {
-          $map[$field_name] = $all_fields_map[$field_name];
-        }
-      }
-    }
-  }
-
-  return $map;
-}
 
 /**
  * theme function for taxonomy manager form

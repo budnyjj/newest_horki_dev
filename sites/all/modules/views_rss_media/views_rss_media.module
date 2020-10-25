@@ -21,6 +21,24 @@ include_once VIEWS_RSS_MEDIA_PATH .'/views_rss_media.field.inc';
 include_once VIEWS_RSS_MEDIA_PATH .'/views_rss_media.inc';
 
 /**
+ * Implements hook_help().
+ */
+function views_rss_media_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#views_rss_media':
+      $output = '<p>' . t('This project provides media elements for the <strong>Views RSS</strong> project.') . '</p>';
+      if (function_exists('advanced_help_hint_docs')) {
+        $output .= '<p>' . advanced_help_hint_docs('views_rss_media', 'https://www.drupal.org/docs/7/modules/views-rss-media-mrss-elements', TRUE) . '</p>';
+      }
+      else {
+        $output .= '<p>' .t('If you install and enable the module <strong>!url</strong>, you will get more help for <strong>Views RSS: Media Elements</strong>.',
+          array('!url' => l('Advanced Help Hint', 'https://www.drupal.org/project/advanced_help_hint'))) . '</p>';
+      }
+      return $output;
+  }
+}
+          
+/**
  * Implements hook_views_rss_namespaces().
  */
 function views_rss_media_views_rss_namespaces() {

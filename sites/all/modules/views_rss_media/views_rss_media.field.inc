@@ -173,6 +173,10 @@ function views_rss_media_field_formatter_view($entity_type, $entity, $field, $in
 
   foreach ($items as $delta => $item) {
 
+    if (empty($item['type'])) {
+      $item['type'] = 'NONE';
+    }
+
     if ($field['type'] == 'video_embed_field') {
       $url = $item['video_url'];
       $item['video_data'] = unserialize($item['video_data']);
@@ -180,7 +184,7 @@ function views_rss_media_field_formatter_view($entity_type, $entity, $field, $in
 
     // When generating a thumbnail for a video file,
     // let's process only thumbnail image details.
-    if ($item['type'] == 'video' && $display['type'] == 'media_thumbnail') {
+    if ($display['type'] == 'media_thumbnail' && $item['type'] == 'video') {
       $item = (array) $item['thumbnailfile'];
     }
 

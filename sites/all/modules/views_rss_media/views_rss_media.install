@@ -16,6 +16,8 @@ define('VIEWS_RSS_MEDIA_REQUIRED_BUILD', '7.x-2.x-dev-20120314');
 function views_rss_media_requirements($phase) {
   $requirements = array();
   $t = get_t();
+  $vrb_array = explode('-', VIEWS_RSS_BUILD);
+  $vrmrb_array = explode('-', VIEWS_RSS_MEDIA_REQUIRED_BUILD);
   if (!defined('VIEWS_RSS_BUILD')) {
     $requirements['views_rss_media'] = array(
       'title' => $t('Views RSS: Media (MRSS) Elements'),
@@ -26,7 +28,7 @@ function views_rss_media_requirements($phase) {
       'value' => NULL,
     );
   }
-  elseif (array_pop(explode('-', VIEWS_RSS_BUILD)) < array_pop(explode('-', VIEWS_RSS_MEDIA_REQUIRED_BUILD))) {
+  elseif (array_pop($vrb_array) < array_pop($vrmrb_array)) {
     $requirements['views_rss_media'] = array(
       'title' => $t('Views RSS: Media (MRSS) Elements'),
       'description' => $t('Your current build of <a href="@views_rss_url">Views RSS</a> module (!views_rss_build) is too old for this version of <em>Views RSS: Media (MRSS) Elements</em> module to work properly. Minimum version required is <strong>!views_rss_required</strong>. Please upgrade.', array(
