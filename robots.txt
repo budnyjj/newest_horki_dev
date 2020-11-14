@@ -68,11 +68,6 @@ Disallow: /MAINTAINERS.txt
 Disallow: /update.php
 Disallow: /UPGRADE.txt
 Disallow: /xmlrpc.php
-
-#
-# Custom settings
-#
-
 # Paths (clean URLs)
 Disallow: /admin
 Disallow: /comment/reply
@@ -94,34 +89,42 @@ Disallow: /?q=user/register
 Disallow: /?q=user/login
 Disallow: /?q=user/logout
 
+#
+# Custom settings
+#
+
 # RSS pages
-Allow: /google.xml
-Allow: /naviny.xml
+Allow: /news.xml
+Allow: /vk.xml
+Allow: /facebook.xml
+Allow: /twitter.xml
 Allow: /yandex.xml
 Allow: /zen.xml
+Allow: /discover/news.xml
+Allow: /discover/incidents.xml
+Allow: /discover/people.xml
+Allow: /discover/photos.xml
+Allow: /discover/afisha.xml
+Allow: /turbo/news/last.xml
+Allow: /turbo/news/popular.xml
+Allow: /turbo/afisha.xml
+Allow: /turbo/guide.xml
 
 # Disallow non-clean url access
+Disallow: /node
 Disallow: /node/*
-Disallow: /taxonomy/term/*
+Disallow: /taxonomy/*
 Disallow: /user/* 
-
-# Disallow all URL variables except for page and images
-Disallow: /*?
-Allow: /*?page=
-Disallow: /*?page=*&*
-Disallow: /*?page=0*
-
-# Allow qt-davedka URL variable
-Allow: /davedka.html?qt-davedka=
 
 # Disallow hybridauth
 Disallow: /hybridauth
 
+# Disallow page URL variable
+Disallow: /*?page=*
+Disallow: /*&page=*
+
+# Allow qt-davedka URL variable
+Allow: /davedka.html?qt-davedka=
+
 # Sitemap settings
 Sitemap: https://horki.info/sitemap.xml
-
-# Twitter Crawler settings (need to support Cards)
-User-agent: Twitterbot
-Disallow: *
-
-Allow: /sites/default/files
