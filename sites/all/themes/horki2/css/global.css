@@ -1313,7 +1313,7 @@ ul.tabs li.active a {
 }
 
 .block-block-58 {
-    height: 248px;
+    min-height: 248px;
     margin-bottom: 20px;
 }
 
