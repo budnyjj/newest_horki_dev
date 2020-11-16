@@ -16,10 +16,9 @@ function text_formats_ckeditor_profile_defaults() {
         'ss' => 2,
         'toolbar' => '[
     [\'Styles\'],
-    [\'Bold\',\'Italic\',\'Underline\',\'Strike\'],
+    [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'RemoveFormat\'],
     [\'BulletedList\',\'NumberedList\'],
-    [\'Image\'],
-    [\'RemoveFormat\']
+    [\'Image\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -104,16 +103,15 @@ config.disableNativeSpellChecker = false;',
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Styles\'],
-    [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'Superscript\'],
+    [\'Styles\',\'CreateDiv\'],
+    [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'Superscript\',\'RemoveFormat\'],
     [\'BGColor\',\'TextColor\'],
     [\'Link\',\'Unlink\'],
     [\'BulletedList\',\'NumberedList\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\'],
     [\'Image\',\'IMCE\'],
     [\'Table\'],
-    [\'Maximize\'],
-    [\'RemoveFormat\']
+    [\'Maximize\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -153,7 +151,8 @@ config.disableNativeSpellChecker = false;',
         'html_entities' => 't',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => 'config.allowedContent = true;
+        'js_conf' => 'config.extraPlugins = \'div\';
+config.allowedContent = true;
 config.disableNativeSpellChecker = false;',
         'loadPlugins' => array(
           'counter' => array(

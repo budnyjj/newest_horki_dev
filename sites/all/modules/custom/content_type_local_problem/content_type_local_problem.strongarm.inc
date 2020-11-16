@@ -135,7 +135,9 @@ function content_type_local_problem_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_local_problem';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'revision',
+  );
   $export['node_options_local_problem'] = $strongarm;
 
   $strongarm = new stdClass();

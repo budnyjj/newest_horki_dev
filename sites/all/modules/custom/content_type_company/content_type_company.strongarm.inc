@@ -88,6 +88,7 @@ function content_type_company_strongarm() {
   $strongarm->name = 'node_options_company';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_company'] = $strongarm;
 

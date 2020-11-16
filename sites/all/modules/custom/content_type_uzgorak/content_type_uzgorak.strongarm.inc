@@ -140,6 +140,7 @@ function content_type_uzgorak_strongarm() {
   $strongarm->name = 'node_options_uzgorak';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_uzgorak'] = $strongarm;
 
