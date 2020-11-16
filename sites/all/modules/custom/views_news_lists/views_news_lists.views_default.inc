@@ -169,7 +169,7 @@ function views_news_lists_views_default_views() {
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -1641,7 +1641,7 @@ function views_news_lists_views_default_views() {
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -3156,7 +3156,7 @@ function views_news_lists_views_default_views() {
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -4678,7 +4678,7 @@ function views_news_lists_views_default_views() {
     'picture_mapping' => 'mediagrid',
     'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
     'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',

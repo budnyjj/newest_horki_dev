@@ -408,6 +408,8 @@ html body.admin-menu .stickynav-active {
 
 .page-media-grid-list .media-photo {
     margin-bottom: 15px;
+    width: 282px;
+    height: 200px;
 }
 
 .page-media-grid-list .media-photo img {
@@ -450,6 +452,12 @@ html body.admin-menu .stickynav-active {
     clear: both;
 }
 
+.page-media-grid .media-photo {
+    width: 282px;
+    height: 200px;
+    overflow: hidden;
+}
+
 .page-media-grid .media-photo img {
     width: 282px;
     height: 200px;
@@ -479,6 +487,8 @@ html body.admin-menu .stickynav-active {
 
 .page-list .list-printed-photo {
     width: 170px;
+    height: 240px;
+    overflow: hidden;
 }
 
 .page-list .list-printed-photo img {
@@ -488,6 +498,7 @@ html body.admin-menu .stickynav-active {
 
 .page-list .list-media-photo {
     width: 282px;
+    height: 200px;
 }
 
 .page-list .list-media-photo img {
@@ -660,11 +671,12 @@ html body.admin-menu .stickynav-active {
     margin-left: 50px;
     margin-right: 50px;
     width: 170px;
+    height: 240px;
 }
 
 .page-uzgorak > .view-content .uzgorak-photo img {
-     width: 170px;
-     height: 240px;
+    width: 170px;
+    height: 240px;
 }
 
 .page-uzgorak > .view-content .uzgorak-title {

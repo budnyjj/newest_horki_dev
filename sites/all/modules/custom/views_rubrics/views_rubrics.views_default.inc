@@ -246,7 +246,7 @@ function views_rubrics_views_default_views() {
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagridlist_fallback',
     'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => '',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',
@@ -270,7 +270,7 @@ function views_rubrics_views_default_views() {
     'picture_mapping' => 'mediagridlist',
     'fallback_image_style' => 'mediagridlist_fallback',
     'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'highlight',

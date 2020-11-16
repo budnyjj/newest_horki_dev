@@ -142,7 +142,7 @@ function views_library_views_default_views() {
     'picture_mapping' => 'printed',
     'fallback_image_style' => 'printed_fallback',
     'lazyload' => 1,
-    'lazyload_aspect_ratio' => 1,
+    'lazyload_aspect_ratio' => 0,
     'image_link' => 'content',
     'colorbox_settings' => array(
       'colorbox_group' => 'article',

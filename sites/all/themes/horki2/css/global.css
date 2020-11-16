@@ -732,6 +732,9 @@ ul.tabs li.active a {
 
 .page-media-grid-list .media-photo {
     margin-bottom: 10px;
+    width: 100px;
+    height: 72px;
+    overflow: hidden;
 }
 
 .page-media-grid-list .media-photo img {
@@ -860,6 +863,7 @@ ul.tabs li.active a {
 
 .page-media-grid .media-photo {
     margin-bottom: 15px;
+    min-height: 200px;
 }
 
 .page-media-grid .media-photo img {
@@ -1066,6 +1070,8 @@ ul.tabs li.active a {
 
 .page-list .list-media-photo {
     width: 100px;
+    height: 72px;
+    overflow: hidden;
 }
 
 .page-list .list-media-photo img {
@@ -1075,6 +1081,8 @@ ul.tabs li.active a {
 
 .page-list .list-printed-photo {
     width: 100px;
+    height: 140px;
+    overflow: hidden;
 }
 
 .page-list .list-printed-photo img {
@@ -1658,9 +1666,11 @@ ul.tabs li.active a {
 }
 
 .page-uzgorak > .view-content .uzgorak-photo {
+    float: left;
     margin-right: 15px;
     width: 100px;
-    float: left;
+    height: 140px;
+    overflow: hidden;
 }
 
 .page-uzgorak > .view-content .uzgorak-photo img {
