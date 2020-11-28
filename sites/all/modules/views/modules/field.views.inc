@@ -120,49 +120,52 @@ function field_views_field_default_views_data($field) {
   // Build the relationships between the field table and the entity tables.
   foreach ($field['bundles'] as $entity => $bundles) {
     $entity_info = entity_get_info($entity);
-    $groups[$entity] = $entity_info['label'];
 
-    // Override Node to Content.
-    if ($groups[$entity] == $translations['node']) {
-      $groups[$entity] = $translations['content'];
-    }
+    if (!empty($entity_info)) {
+      $groups[$entity] = $entity_info['label'];
 
-    // If only one bundle use this as the default name.
-    if (empty($group_name)) {
-      $group_name = $groups[$entity];
-    }
+      // Override Node to Content.
+      if ($groups[$entity] == $translations['node']) {
+        $groups[$entity] = $translations['content'];
+      }
 
-    $entity_tables[$entity_info['base table']] = $entity;
-    $current_tables[$entity] = $entity_info['base table'];
-    if (isset($entity_info['revision table'])) {
-      $entity_tables[$entity_info['revision table']] = $entity;
-      $revision_tables[$entity] = $entity_info['revision table'];
-    }
+      // If only one bundle use this as the default name.
+      if (empty($group_name)) {
+        $group_name = $groups[$entity];
+      }
 
-    $data[$current_table]['table']['join'][$entity_info['base table']] = array(
-      'left_field' => $entity_info['entity keys']['id'],
-      'field' => 'entity_id',
-      'extra' => array(
-        array('field' => 'entity_type', 'value' => $entity),
-        array('field' => 'deleted', 'value' => 0, 'numeric' => TRUE),
-      ),
-    );
+      $entity_tables[$entity_info['base table']] = $entity;
+      $current_tables[$entity] = $entity_info['base table'];
+      if (isset($entity_info['revision table'])) {
+        $entity_tables[$entity_info['revision table']] = $entity;
+        $revision_tables[$entity] = $entity_info['revision table'];
+      }
 
-    if (!empty($entity_info['entity keys']['revision']) && !empty($entity_info['revision table'])) {
-      $data[$revision_table]['table']['join'][$entity_info['revision table']] = array(
-        'left_field' => $entity_info['entity keys']['revision'],
-        'field' => 'revision_id',
+      $data[$current_table]['table']['join'][$entity_info['base table']] = array(
+        'left_field' => $entity_info['entity keys']['id'],
+        'field' => 'entity_id',
         'extra' => array(
           array('field' => 'entity_type', 'value' => $entity),
           array('field' => 'deleted', 'value' => 0, 'numeric' => TRUE),
         ),
       );
 
-      $supports_revisions = TRUE;
-    }
+      if (!empty($entity_info['entity keys']['revision']) && !empty($entity_info['revision table'])) {
+        $data[$revision_table]['table']['join'][$entity_info['revision table']] = array(
+          'left_field' => $entity_info['entity keys']['revision'],
+          'field' => 'revision_id',
+          'extra' => array(
+            array('field' => 'entity_type', 'value' => $entity),
+            array('field' => 'deleted', 'value' => 0, 'numeric' => TRUE),
+          ),
+        );
 
-    foreach ($bundles as $bundle) {
-      $bundles_names[] = t('@entity:@bundle', array('@entity' => $entity, '@bundle' => $bundle));
+        $supports_revisions = TRUE;
+      }
+
+      foreach ($bundles as $bundle) {
+        $bundles_names[] = t('@entity:@bundle', array('@entity' => $entity, '@bundle' => $bundle));
+      }
     }
   }
 
