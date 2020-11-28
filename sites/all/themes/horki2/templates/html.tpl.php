@@ -15,7 +15,6 @@
 <link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/vk.svg">
 <link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/twitter.svg">
 <link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/facebook.svg">
-<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/rss.svg">
 <link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/mail.svg">
 
 <?php print $head; ?>
@@ -31,7 +30,7 @@
 
 <meta name="google-site-verification" content="mc_80mJ1g2ulo7wFCZyPg9_tfUYANmS7OCbKrLypEKg" />
 <meta name="yandex-verification" content="d4b6a64cdf423497" />
-<meta name='wmail-verification' content='08158243dc3a0fa9' />
+<meta name='wmail-verification' content='88f1db5a9ded957fc2182fc09c649234' />
 <meta property="fb:pages" content="140208249349033" />
 
 <?php print $styles; ?>
