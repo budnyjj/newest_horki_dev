@@ -54,7 +54,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
       if (text) {
         this.insertHtml('<a href="' + document.location.protocol + '//'+ document.location.host +  file.url + '">' + text + '</a>');
       } else {
-        this.insertHtml('<img src="' + file.url +'" />');
+        this.insertHtml('<img alt="" data-picture-mapping="article" src="' + file.url +'" />');
       }
     } else {
       if (text) {
