@@ -329,6 +329,10 @@ html body.admin-menu .stickynav-active {
 }
 
 /* sidebar banner #2 */
+.block-41 {
+    display: none;
+}
+
 .block-41 .block-inner {
     min-height: 400px;
     border: 1px solid #DBDBDB;
