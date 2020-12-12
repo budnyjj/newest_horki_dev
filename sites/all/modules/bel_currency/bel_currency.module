@@ -78,7 +78,7 @@ function bel_currency_block_view($delta = '') {
 	cache_set('bel_currency_info', $result, 'cache', 43200);
       }
       if (empty($result)) {
-	$block['content'] = t('Unable to download currency data.');
+	$block['content'] = '';
       } else {
 	$block['content'] = $result;
       }
