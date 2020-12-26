@@ -247,6 +247,12 @@ input[type="submit"]:active {
 }
 
 
+/* banner styles */
+.ads-desktop {
+    display: none;
+}
+
+
 /*
  * General Header styles
  */
@@ -517,7 +523,7 @@ ul.tabs li.active a {
 
 /* content banner */
 .block-block-61 {
-    min-height: 248px;
+    /*min-height: 248px;*/
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid #DBDBDB;

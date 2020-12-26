@@ -28,6 +28,7 @@
 <meta name="msapplication-TileColor" content="#505050">
 <meta name="theme-color" content="#ffffff">
 
+<meta name="google-site-verification" content="I50q2z2FdQZMKZ_SPHbi7dyjnjn7FD4wLkfEWkks0ZI" />
 <meta name="google-site-verification" content="mc_80mJ1g2ulo7wFCZyPg9_tfUYANmS7OCbKrLypEKg" />
 <meta name="yandex-verification" content="d4b6a64cdf423497" />
 <meta name='wmail-verification' content='88f1db5a9ded957fc2182fc09c649234' />

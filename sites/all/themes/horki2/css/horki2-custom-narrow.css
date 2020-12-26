@@ -12,6 +12,16 @@ body {
 }
 
 
+/* banner styles */
+.ads-mobile {
+    display: none;
+}
+
+.ads-desktop {
+    display: block;
+}
+
+
 /*
  * General Header styles
  */
