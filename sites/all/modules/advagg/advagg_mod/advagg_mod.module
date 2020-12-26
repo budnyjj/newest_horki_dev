@@ -1178,7 +1178,7 @@ function advagg_mod_libraries_info() {
     'version arguments' => array(
       'file' => 'package.json',
       'pattern' => '/"version":\\s+"([0-9\.]+)"/',
-      'lines' => 10,
+      'lines' => 100,
     ),
     // Called before the library is loaded.
     'callbacks' => array(
@@ -2248,15 +2248,15 @@ function advagg_mod_js_move_to_footer(array &$js) {
       if (isset($js[$key])) {
         foreach ($js as $name => &$values) {
           foreach ($search_strings as $string) {
-            if (strpos($name, $string) !== FALSE) {
+            if (!empty($string) && strpos($name, (string) $string) !== FALSE) {
               $values['scope_lock'] = TRUE;
               break;
             }
-            if (is_string($values['data']) && strpos($values['data'], $string) !== FALSE) {
+            if (is_string($values['data']) && !empty($string) && strpos($values['data'], (string) $string) !== FALSE) {
               $values['scope_lock'] = TRUE;
               break;
             }
-            if (!empty($values['pre_relocate_data']) && is_string($values['pre_relocate_data']) && strpos($values['pre_relocate_data'], $string) !== FALSE) {
+            if (!empty($values['pre_relocate_data']) && is_string($values['pre_relocate_data']) && !empty($string) && strpos($values['pre_relocate_data'], (string) $string) !== FALSE) {
               $values['scope_lock'] = TRUE;
               break;
             }
