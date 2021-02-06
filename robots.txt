@@ -119,12 +119,32 @@ Disallow: /user/*
 # Disallow hybridauth
 Disallow: /hybridauth
 
-# Disallow page URL variable
+# Disallow some URL variables
+Disallow: /*?from=*
+Disallow: /*&from=*
+Disallow: /*?ggep_is_embeddable
+Disallow: /*&ggep_is_embeddable
+Disallow: /*?lite=*
+Disallow: /*&lite=*
+Disallow: /*?nsukey=*
+Disallow: /*&nsukey=*
+Disallow: /*?nw=*
+Disallow: /*&nw=*
 Disallow: /*?page=*
 Disallow: /*&page=*
+Disallow: /*?post=*
+Disallow: /*&post=*
+Disallow: /*?utf=*
+Disallow: /*&utf=*
 
 # Allow qt-davedka URL variable
-Allow: /davedka.html?qt-davedka=
+Allow: /davedka.html?qt-davedka=*
+
+# Disallow paths with "nested" html pages
+Disallow: /*.html/*.html
+
+# Disallow PDF file indexation
+Disallow: /*.pdf
 
 # Sitemap settings
 Sitemap: https://horki.info/sitemap.xml
