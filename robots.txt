@@ -120,6 +120,8 @@ Disallow: /user/*
 Disallow: /hybridauth
 
 # Disallow some URL variables
+Disallow: /*?cshid=*
+Disallow: /*&cshid=*
 Disallow: /*?from=*
 Disallow: /*&from=*
 Disallow: /*?ggep_is_embeddable
@@ -134,8 +136,12 @@ Disallow: /*?page=*
 Disallow: /*&page=*
 Disallow: /*?post=*
 Disallow: /*&post=*
+Disallow: /*?usg=*
+Disallow: /*&usg=*
 Disallow: /*?utf=*
 Disallow: /*&utf=*
+Disallow: /*?ved=*
+Disallow: /*&ved=*
 
 # Allow qt-davedka URL variable
 Allow: /davedka.html?qt-davedka=*
