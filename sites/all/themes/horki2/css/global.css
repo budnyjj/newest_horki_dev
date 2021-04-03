@@ -549,6 +549,10 @@ ul.tabs li.active a {
     margin-bottom: 20px;
 }
 
+.block-41 .block-inner {
+    min-height: 400px;
+}
+
 
 /**
  * General Preview styles
@@ -2327,7 +2331,7 @@ ul.tabs li.active a {
 
 /* inner node banners */
 .block-block-59 {
-    min-height: 248px;
+    min-height: 400px;
     padding-top: 20px;
     margin-bottom: 20px;
     border-top: 1px solid #DBDBDB;

@@ -358,7 +358,6 @@ html body.admin-menu .stickynav-active {
 }
 
 .block-41 .block-inner {
-    min-height: 400px;
     border: 1px solid #DBDBDB;
     padding: 20px;
 }
@@ -901,7 +900,7 @@ html body.admin-menu .stickynav-active {
 
 /* inner node banners */
 .block-block-59 {
-    min-height: 293px;
+    min-height: 250px;
 }
 
 .banner-telegram img {
