@@ -142,6 +142,8 @@ Disallow: /*?utf=*
 Disallow: /*&utf=*
 Disallow: /*?ved=*
 Disallow: /*&ved=*
+Disallow: /*?yhid=*
+Disallow: /*&yhid=*
 
 # Allow qt-davedka URL variable
 Allow: /davedka.html?qt-davedka=*
