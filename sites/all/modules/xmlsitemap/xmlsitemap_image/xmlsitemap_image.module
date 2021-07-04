@@ -109,15 +109,46 @@ function xmlsitemap_image_xmlsitemap_element_alter(array &$element, array $link,
  * @return array
  */
 function _xmlsitemap_image_handle_imagefield(array $image) {
-  $title   = !empty($image[ 'field_file_image_title_text' ]) ? $image[ 'field_file_image_title_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ] : (!empty($image[ 'title' ]) ? $image[ 'title' ] : $image[ 'filename' ]);
-  $caption = !empty($image[ 'field_file_image_caption_text' ]) ? $image[ 'field_file_image_caption_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ] : (!empty($image[ 'alt' ]) ? $image[ 'alt' ] : $image[ 'filename' ]);
-  return [
-    "image:image" => [
-      "image:loc"     => file_create_url($image[ "uri" ]),
-      "image:title"   => $title,
-      "image:caption" => $caption,
-    ],
-  ];
+  $image_attrs = ["image:loc"     => file_create_url($image[ "uri" ])];
+  // fill optional title
+  if (!empty($image[ 'field_file_image_title_text' ])) {
+    $title = $image[ 'field_file_image_title_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ];
+  } elseif (!empty($image[ 'title' ])) {
+    $title = $image[ 'title' ];
+  } else {
+    $title = NULL;
+  }
+  if ($title != NULL) {
+    $image_attrs["image:title"] = $title;
+  }
+  // fill optional caption if it is short enough
+  if (!empty($image[ 'field_file_image_caption_text' ])) {
+    $caption = $image[ 'field_file_image_caption_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ];
+  } elseif (!empty($image[ 'alt' ])) {
+    $caption = $image[ 'alt' ];
+  } else {
+    $caption = NULL;
+  }
+  if ($caption != NULL) {
+    $caption = str_replace(array("\r\n", "\r", "\n"), "", $caption);
+    $caption = str_replace("\t", " ", $caption);
+    $min_length = 120;
+    $max_length = 160;
+    if (mb_strlen($caption) < $min_length) {
+      $image_attrs["image:caption"] = $caption;
+    } else {
+      $pos = mb_strpos($caption, '.', $min_length);
+      if ($pos < $max_length) {
+        $image_attrs["image:caption"] = mb_substr($caption, 0, $pos + 1);
+      } else {
+        $pos = mb_strpos($caption, ' ', $max_length);
+	if ($pos) {
+          $image_attrs["image:caption"] = mb_substr($caption, 0, $pos) . "...";
+        }
+      }
+    }
+  }
+  return ["image:image" => $image_attrs];
 }
 
 /**
