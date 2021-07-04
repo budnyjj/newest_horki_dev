@@ -120,6 +120,8 @@ Disallow: /user/*
 Disallow: /hybridauth
 
 # Disallow some URL variables
+Disallow: /*?baobab_event_id=*
+Disallow: /*&baobab_event_id=*
 Disallow: /*?cshid=*
 Disallow: /*&cshid=*
 Disallow: /*?from=*
@@ -134,6 +136,8 @@ Disallow: /*?nw=*
 Disallow: /*&nw=*
 Disallow: /*?page=*
 Disallow: /*&page=*
+Disallow: /*?pb_traffic_source=*
+Disallow: /*&pb_traffic_source=*
 Disallow: /*?post=*
 Disallow: /*&post=*
 Disallow: /*?usg=*
@@ -142,6 +146,8 @@ Disallow: /*?utf=*
 Disallow: /*&utf=*
 Disallow: /*?ved=*
 Disallow: /*&ved=*
+Disallow: /*?wprid=*
+Disallow: /*&wprid=*
 Disallow: /*?yhid=*
 Disallow: /*&yhid=*
 
